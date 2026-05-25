@@ -84,21 +84,29 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: rails_watch_list_development
+
+test:
+  <<: *default
+  database: rails_watch_list_test
+
 production:
-  primary: &primary_production
+  primary:
     <<: *default
-    database: lodgi_production
-    username: lodgi
-    password: <%= ENV["LODGI_DATABASE_PASSWORD"] %>
+    url: <%= ENV["DATABASE_URL"] %>
   cache:
-    <<: *primary_production
-    database: lodgi_production_cache
-    migrations_paths: db/cache_migrate
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
   queue:
-    <<: *primary_production
-    database: lodgi_production_queue
-    migrations_paths: db/queue_migrate
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
   cable:
-    <<: *primary_production
-    database: lodgi_production_cable
-    migrations_paths: db/cable_migrate
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
