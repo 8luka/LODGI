@@ -22,12 +22,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_JS_API']}&callback=initMap",
+                            async: true,
+                            defer: true,
+                            "data-turbolinks-eval": false %>
   </head>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcfQcUhWNAoQPXpP0-Bt1xm7ZmdL27Mvc&callback=initMap"
-  async
-  defer>
-</script>
   <body><%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
 
