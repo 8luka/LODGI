@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-puts "Ending it all..."
+puts "Seeding..."
 User.destroy_all
 Neighborhood.destroy_all
 Property.destroy_all
@@ -212,17 +212,17 @@ property.save
 
 amenity = Amenity.new(
   name: "Bike Parking",
-  specs: "mingcute:bike-fill",
+  icon: "mingcute:bike-fill",
 )
 amenity.save
 amenity = Amenity.new(
   name: "Hair Dryer",
-  specs: "mdi:hair-dryer",
+  icon: "mdi:hair-dryer",
 )
 amenity.save
 amenity = Amenity.new(
   name: "Kettle",
-  specs: "material-symbols:kettle",
+  icon: "material-symbols:kettle",
 )
 amenity.save
 amenity = Amenity.new(
@@ -276,34 +276,34 @@ amenity = Amenity.new(
 )
 amenity.save
 
-property = Property.new(
-  name: Faker::Locations::Australia.animal,
-  address: Faker::Address.street_address,
-  description: Faker::String.random(length: 90..138),
-  phone_number: Faker::PhoneNumber.phone_number,
-  price_per_night: Faker::Number.between(from: 40, to: 200),
-  capacity: Faker::Number.between(from: 1, to: 12),
-  amenities: Flat::AMENITIES.sample,
-)
+# property = Property.new(
+#   name: Faker::Locations::Australia.animal,
+#   address: Faker::Address.street_address,
+#   description: Faker::String.random(length: 90..138),
+#   phone_number: Faker::PhoneNumber.phone_number,
+#   price_per_night: Faker::Number.between(from: 40, to: 200),
+#   capacity: Faker::Number.between(from: 1, to: 12),
+#   amenities: Flat::AMENITIES.sample,
+# )
 
 
 
-puts "Creating flats..."
-30.times do
-  property = Property.new(
-    # interior: Faker::LoremFlickr.image(size: "300x300", search_terms: [ 'appartment', 'interior' ]),
-    name: Faker::Locations::Australia.animal,
-    address: Faker::Address.street_address,
-    description: Faker::String.random(length: 90..138),
-    price: Faker::PhoneNumber.phone_number,
-    price_per_night: Faker::Number.between(from: 40, to: 200),
-    capacity: Faker::Number.between(from: 1, to: 12),
-    amenities: Flat::AMENITIES.sample,
-  )
+# puts "Creating flats..."
+# 30.times do
+#   property = Property.new(
+#     # interior: Faker::LoremFlickr.image(size: "300x300", search_terms: [ 'appartment', 'interior' ]),
+#     name: Faker::Locations::Australia.animal,
+#     address: Faker::Address.street_address,
+#     description: Faker::String.random(length: 90..138),
+#     price: Faker::PhoneNumber.phone_number,
+#     price_per_night: Faker::Number.between(from: 40, to: 200),
+#     capacity: Faker::Number.between(from: 1, to: 12),
+#     amenities: Flat::AMENITIES.sample,
+#   )
 
-  url = Faker::LoremFlickr.image(size: "300x300", search_terms: [ 'apartment', 'interior' ])
-  file = URI.open(url)
-  flat.interior.attach(io: file, filename: File.basename(URI.parse(url).path), content_type: "image/jpeg")
+#   url = Faker::LoremFlickr.image(size: "300x300", search_terms: [ 'apartment', 'interior' ])
+#   file = URI.open(url)
+#   flat.interior.attach(io: file, filename: File.basename(URI.parse(url).path), content_type: "image/jpeg")
 
-  flat.save
-end
+#   flat.save
+# end
