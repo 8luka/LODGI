@@ -12,5 +12,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root to: "pages#home"
+  root to: 'pages#home'
+  get "/map", to: "maps#map", as: :map
+  resources :properties, only: [ :index, :show ] do
+    resources :inquiries, only: [ :create ]
+  end
+
+  resources :neighbohoods, only: [ :index, :show ]
 end
