@@ -91,11 +91,11 @@ default: &default
 
 development:
   <<: *default
-  database: rails_watch_list_development
+  database: lodgi_development
 
 test:
   <<: *default
-  database: rails_watch_list_test
+  database: lodgi_test
 
 production:
   primary:
