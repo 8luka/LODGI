@@ -22,7 +22,7 @@ export default class extends Controller {
     // Initialize viewport state
     this.currentViewport = {}
     const center = { lat: 35.675739, lng: 139.754037 };
-    this.map = new google.maps.Map(this.element, {
+    this.map = new google.maps.Map(this.mapTarget, {
       center,
       zoom: 12,
       mapId: "DEMO_MAP_ID",
@@ -92,13 +92,59 @@ selectCategory(event) {
       return
     }
 
-    console.log("SEARCH AREA CLICKED")
+    // Clear old POI markers
+    this.clearPoiMarkers()
 
-    console.log("Selected category:")
-    console.log(this.selectedCategory)
+    const response = fetch("/places/search", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-Token":
+          document.querySelector('meta[name="csrf-token"]').content
+      },
+      body: JSON.stringify({
+        category: this.selectedCategory,
+        center_lat: this.currentViewport.centerLat,
+        center_lng: this.currentViewport.centerLng,
+        radius: 2000
+      })
+    })
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      console.log(data);
+      const places = data;
+      console.log("Places:")
+      // console.log(places)
+      this.renderPoiMarkers(places)
+    })
 
-    console.log("Current viewport:")
-    console.log(this.currentViewport)
+
+
   }
 
+  renderPoiMarkers(places) {
+    places.forEach((place) => {
+
+      const marker = new google.maps.marker.AdvancedMarkerElement({
+          map: this.map,
+          position: {
+            lat: place.latitude,
+            lng: place.longitude
+          },
+          title: place.name
+        })
+
+      this.poiMarkers.push(marker)
+    })
+  }
+
+  clearPoiMarkers() {
+    this.poiMarkers.forEach((marker) => {
+      marker.map = null
+    })
+
+    this.poiMarkers = []
+  }
 }
