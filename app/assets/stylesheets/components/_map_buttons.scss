@@ -1,0 +1,16 @@
+.map-controls {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.map-controls button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.map-controls button.active-category {
+  background-color: black;
+  color: white;
+}
