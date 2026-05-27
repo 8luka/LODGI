@@ -1,12 +1,106 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  min-height: 64px;
+  background: rgba(250, 247, 242, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0 40px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-lewagon .container-fluid {
+  padding: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-logo-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+
+.nav-logo-text span {
+  color: var(--terra);
+}
+
+.nav-links {
+  gap: 2px;
+}
+
+.nav-links .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-links .nav-link:hover {
+  background: var(--cream-dark);
+  color: var(--ink);
+}
+
+.nav-links .nav-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.nav-avatar {
+  position: relative;
+  margin-left: 12px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-dropdown {
+  background: var(--cream);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  min-width: 170px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.avatar-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  transition: background 0.12s;
+}
+
+.avatar-dropdown .dropdown-item:hover {
+  background: var(--cream-dark);
+  color: var(--ink);
+}
+
+.avatar-dropdown .dropdown-item svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.avatar-dropdown .dropdown-item.signout {
+  color: var(--terra);
 }
