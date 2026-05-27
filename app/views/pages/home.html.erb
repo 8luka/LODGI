@@ -25,15 +25,19 @@
   </div>
 
   <div class="google-map-wrapper">
-    <div id="map"></div>
+    <div
+      data-controller="maps"
+      id="map"
+      data-maps-properties-value="<%= @properties %>">
+    </div>
   </div>
 </section>
 
-<div data-controller="maps" id="map" data-maps-properties-value="<%= @properties %>"></div>
-
 <div class="scroll-cta">
-    <a href="#neighbourhoods" class="scroll-btn">
-      Explore neighbourhoods
-      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-    </a>
+  <a href="#neighbourhoods" class="scroll-btn">
+    Explore neighbourhoods
+    <svg viewBox="0 0 24 24">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </a>
 </div>
