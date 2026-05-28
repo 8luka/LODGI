@@ -8,12 +8,11 @@ export default class extends Controller {
   static targets = [
     "map",
     "categoryButton",
-    "searchButton"
+    "searchButton",
+    "transitToggle"
   ]
 
   connect() {
-    this.activeInfoWindow = null
-    this.selectedMarkerElement = null
     // Selected category
     this.selectedCategory = null
     // Store POI markers
@@ -22,6 +21,10 @@ export default class extends Controller {
     this.propertyMarkers = []
     // Initialize viewport state
     this.currentViewport = {}
+    this.activeInfoWindow = null
+    this.selectedMarkerElement = null
+    this.transitVisible = false
+    this.transitLayer = new google.maps.TransitLayer()
     const center = { lat: 35.675739, lng: 139.754037 };
     this.map = new google.maps.Map(this.mapTarget, {
       center,
@@ -39,10 +42,14 @@ export default class extends Controller {
           "#c2584a"
         )
       })
+      marker.addListener("click", () => {
+        const content =
+        this.createPropertyPopupContent(property)
+        this.openInfoWindow(marker, content)
+      })
     // Save marker reference
     this.propertyMarkers.push(marker)
     })
-
     // Listen for map movement finishing
     this.map.addListener("idle", () => {
       this.updateViewportState()
@@ -158,6 +165,86 @@ export default class extends Controller {
     `
   }
 
+  createPoiPopupContent(place) {
+
+    let image = null
+
+    if (place.photo_reference) {
+      image =
+        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${place.photo_reference}&key=${window.googleMapsApiKey}`
+    }
+
+    return `
+      <div class="poi-popup">
+
+        ${image ? `
+          <img
+            src="${image}"
+            class="popup-image"
+          />
+        ` : ""}
+
+        <div class="popup-content">
+
+          <h3 class="popup-title">
+            ${place.name}
+          </h3>
+
+          <div class="popup-row">
+            ⭐ ${place.rating || "No rating"}
+          </div>
+
+        </div>
+
+      </div>
+    `
+  }
+
+  openInfoWindow(marker, content) {
+
+    // Close previous popup
+    if (this.activeInfoWindow) {
+      this.activeInfoWindow.close()
+    }
+
+    // Remove previous selected state
+    if (this.selectedMarkerElement) {
+      this.selectedMarkerElement.classList.remove(
+        "selected-marker"
+      )
+    }
+
+    const infoWindow =
+      new google.maps.InfoWindow({
+        content
+      })
+
+    infoWindow.open({
+      anchor: marker,
+      map: this.map
+    })
+
+    this.activeInfoWindow = infoWindow
+
+    // Add selected state
+    const markerElement =
+      marker.content.firstElementChild
+
+    markerElement.classList.add(
+      "selected-marker"
+    )
+
+    this.selectedMarkerElement =
+      markerElement
+
+    // Remove selected state when popup closes
+    infoWindow.addListener("closeclick", () => {
+      markerElement.classList.remove(
+        "selected-marker"
+      )
+    })
+  }
+
   selectCategory(event) {
     // Remove active class from all buttons
     this.categoryButtonTargets.forEach((button) => {
@@ -226,6 +313,13 @@ export default class extends Controller {
           "#556ea3"
         )
         })
+        marker.addListener("click", () => {
+
+          const content =
+            this.createPoiPopupContent(place)
+
+          this.openInfoWindow(marker, content)
+        })
       this.poiMarkers.push(marker)
     })
   }
@@ -236,5 +330,19 @@ export default class extends Controller {
     })
 
     this.poiMarkers = []
+  }
+
+  toggleTransit(event) {
+    this.transitVisible = event.currentTarget.checked
+
+    if (this.transitVisible) {
+
+      this.transitLayer.setMap(this.map)
+
+    } else {
+
+      this.transitLayer.setMap(null)
+
+    }
   }
 }

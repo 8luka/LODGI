@@ -24,9 +24,14 @@
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_JS_API']}&libraries=marker,maps" %>
   </head>
+
   <body><%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
 
     <%= yield %>
+    <script>
+  window.googleMapsApiKey =
+    "<%= ENV['MAPS_JS_API'] %>"
+</script>
   </body>
 </html>
