@@ -1,3 +1,6 @@
+# For organization, property and amenity seeds are now in their own files
+# Later in this file they are loaded and seed when seeds.rb is ran
+
 puts "Seeding..."
 User.destroy_all
 Neighborhood.destroy_all
@@ -12,7 +15,7 @@ user.save
 ### BASIC NEIGHBORHOOD SEEDS ### BASIC NEIGHBORHOOD SEEDS ### BASIC NEIGHBORHOOD SEEDS ### BASIC NEIGHBORHOOD SEEDS
 
 neighborhood = Neighborhood.new(
-  name: "Meguro City",
+  name: "Meguro",
   description: "A relaxed, upscale residential district that balances quiet tree-lined streets with a buzzing dining and café scene. The Meguro River serves as its scenic backbone, and the area has a distinctly local, unhurried character compared to its flashier neighbors.",
   features: "Meguro River walks, independent cafés, antique shops, Meguro Fudoson temple, family-friendly parks, low-key izakayas",
   ward: "Meguro-ku",
@@ -42,7 +45,7 @@ neighborhood = Neighborhood.new(
 neighborhood.save
 
 neighborhood = Neighborhood.new(
-  name: "Shibuya City",
+  name: "Shibuya",
   description: "One of Tokyo's most iconic and energetic districts, Shibuya is famous worldwide for its scramble crossing and serves as a major commercial and entertainment hub. Its streets pulse day and night with shoppers, commuters, tourists, and nightlife seekers.",
   features: "Shibuya Scramble Crossing, Shibuya 109, Center-gai, major department stores, live music venues, rooftop bars, Hachiko statue",
   ward: "Shibuya-ku",
@@ -73,7 +76,7 @@ neighborhood.save
 
 neighborhood = Neighborhood.new(
   name: "Roppongi",
-  description: "An internationally minded district best known for its nightlife and world-class art institutions. By day, Roppongi is home to major embassies, sleek office towers, and three premier art museums; by night it transforms into one of Tokyo's most vibrant entertainment hubs.",
+  description: "A district best known for its nightlife and world-class art institutions. By day, Roppongi is home to major embassies, sleek office towers, and three premier art museums; by night it transforms into one of Tokyo's most vibrant entertainment hubs.",
   features: "Mori Art Museum, National Art Center, 21_21 Design Sight, Roppongi Hills complex, international restaurants, rooftop city views, upscale nightclubs, gallery hopping",
   ward: "Minato-ku",
   latitude: "35.6628",
@@ -101,88 +104,35 @@ neighborhood = Neighborhood.new(
 )
 neighborhood.save
 
-### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ###
+# Seeding properties and amenities from a different file
 
-properties = ScrapePropertiesService.call([
-  "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
-])
+load Rails.root.join("db/property_seeds.rb")
+load Rails.root.join("db/amenity_seeds.rb")
+
+### DO NOT DELETE THE BELOW !!! ### DO NOT DELETE THE BELOW !!! ### DO NOT DELETE THE BELOW !!! ###
+
+# This is a property scraper that will get hashes of property info that must then be added to property_seeds
+# Could automate this flow in the future.
+
+# properties = ScrapePropertiesService.call([
+#   "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924"
+# ])
 
 # properties = ScrapePropertiesService.call([
 #   "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
 #   "https://e-housing.jp/short-term/e-housing-exclusive/tokyo/meguro/nakameguro-claire-higashiyama/604?wards=4&wname=Meguro+Ward&location_point=139.6370344470951%2C35.60107634539&location_point=139.6370344470951%2C35.6759139893914&location_point=139.7764485489898%2C35.6759139893914&location_point=139.7764485489898%2C35.60107634539",
 #   "https://e-housing.jp/short-term/blueground-japan/tokyo/meguro/tyo-180-blueground-japan-the-parkhabio-meguro-place/2?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
-#   "https://e-housing.jp/short-term/hmlet-japan/tokyo/shibuya/hmlet-nishi-shinjuku/405?search=Shibuya&location_point=139.70210363698453%2C35.65484912628266&location_point=139.70210363698453%2C35.65787886624186&location_point=139.7077489630155%2C35.65787886624186&location_point=139.7077489630155%2C35.65484912628266"
+#   "https://e-housing.jp/short-term/hmlet-japan/tokyo/shibuya/hmlet-nishi-shinjuku/405?search=Shibuya&location_point=139.70210363698453%2C35.65484912628266&location_point=139.70210363698453%2C35.65787886624186&location_point=139.7077489630155%2C35.65787886624186&location_point=139.7077489630155%2C35.65484912628266",
+#   "https://e-housing.jp/short-term/sumyca/tokyo/meguro/stylish-designers-with-furniture-and-appliances-palace-studio-shibuya-west/207?search=Shibuya&location_point=139.6820930092275%2C35.61706184412018&location_point=139.6820930092275%2C35.647084981494615&location_point=139.72696889342538%2C35.647084981494615&location_point=139.72696889342538%2C35.61706184412018",
+#   "https://e-housing.jp/short-term/the-apartment-hotel/tokyo/shibuya/the-apartment-hotel-ebisu-1/102?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+#   "https://e-housing.jp/short-term/hmlet-japan/tokyo/meguro/hmlet-shibuyaohashi/203?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+#   "https://e-housing.jp/short-term/the-apartment-hotel/tokyo/shibuya/the-apartment-hotel-shibuya-1/701?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+#   "https://e-housing.jp/short-term/blueground-japan/tokyo/meguro/the-parkhabio-shibuya-cross-1004-tyo8/2?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+#   "https://e-housing.jp/short-term/sumyca/tokyo/shibuya/t-s-heim/201?location_point=139.70456453898925%2C35.6401014390662&location_point=139.70456453898925%2C35.65541426923116&location_point=139.72745727198006%2C35.65541426923116&location_point=139.72745727198006%2C35.6401014390662",
+#   "https://e-housing.jp/short-term/sumyca/tokyo/shibuya/oakrest-ebisu-503/503?location_point=139.70456453898925%2C35.6401014390662&location_point=139.70456453898925%2C35.65541426923116&location_point=139.72745727198006%2C35.65541426923116&location_point=139.72745727198006%2C35.6401014390662"
 # ])
 
-properties.each do |property_data|
-  neighborhood = Neighborhood.find_by(name: property_data.delete(:neighborhood))
-  Property.create!(property_data.merge(neighborhood: neighborhood))
-end
-
-### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS
-
-amenity = Amenity.new(
-  name: "Bike Parking",
-  icon: "mingcute:bike-fill",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Hair Dryer",
-  icon: "mdi:hair-dryer",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Kettle",
-  icon: "material-symbols:kettle",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Iron",
-  icon: "material-symbols:iron",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Microwave",
-  icon: "material-symbols:microwave",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Washing Machine",
-  icon: "boxicons:washer-filled",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Shower Dryer",
-  icon: "material-symbols:iron",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Stovetop",
-  icon: "fluent:stove-16-regular",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Utilities Included",
-  icon: "pinhead:utility-shutoff-with-bolt",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Air Conditioning",
-  icon: "icon-park-outline:air-conditioning",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Bedding",
-  icon: "boxicons:blanket-filled",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "Towels",
-  icon: "lucide-lab:towel-folded",
-)
-amenity.save
-amenity = Amenity.new(
-  name: "English Support",
-  icon: "icon-park-solid:english",
-)
-amenity.save
+# properties.each do |property_data|
+#   neighborhood = Neighborhood.find_by(name: property_data.delete(:neighborhood))
+#   Property.create!(property_data.merge(neighborhood: neighborhood))
+# end

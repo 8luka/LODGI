@@ -22,10 +22,25 @@ class ScrapePropertiesService
   private
 
   def browser
-    @browser ||= Ferrum::Browser.new(
-      headless: true,
-      browser_path: "/usr/bin/brave-browser"
-    )
+    @browser ||= begin
+      b = Ferrum::Browser.new(
+        headless: true,
+        browser_path: "/usr/bin/brave-browser",
+        timeout: 60,
+        pending_connection_errors: false
+      )
+
+      b.network.intercept
+      b.on(:request) do |request|
+        if request.url.match?(/posthog\.com|googletagmanager\.com|hotjar\.com|google-analytics\.com|maps\.googleapis\.com|gstatic\.com/)
+          request.abort
+        else
+          request.continue
+        end
+      end
+
+      b
+    end
   end
 
   def scrape(url)
@@ -52,7 +67,8 @@ class ScrapePropertiesService
       features: extract_features(doc),
       all_amenities: extract_amenities(doc),
       matterport_url: extract_matterport_url(doc),
-      images: extract_images(doc)
+      images: extract_images(doc),
+      stations: extract_stations(doc)
     }
   end
 
@@ -134,15 +150,29 @@ class ScrapePropertiesService
     vendor_section(doc)&.at_css("img[alt='profile']")&.[]("src")
   end
 
-  def extract_tag_list(doc, heading)
+  # def extract_tag_list(doc, heading)
+  #   doc.css("h3")
+  #      .find { |element| element.text.strip == heading }
+  #      &.next_element
+  #      &.css("span")
+  #      &.map { |span| span.text.strip } || []
+  # end
+
+  # def extract_features(doc)  = extract_tag_list(doc, "Property features")
+  # def extract_amenities(doc) = extract_tag_list(doc, "Property appliances")
+
+  EXCLUDED_FEATURES = ["Maisonette", "Designer apartment", "Auto lock", "LGBT Friendly"].freeze
+
+  def extract_tag_list(doc, heading, exclude: [])
     doc.css("h3")
        .find { |element| element.text.strip == heading }
        &.next_element
        &.css("span")
-       &.map { |span| span.text.strip } || []
+       &.map { |span| span.text.strip }
+       &.reject { |tag| exclude.include?(tag) } || []
   end
 
-  def extract_features(doc)  = extract_tag_list(doc, "Property features")
+  def extract_features(doc)  = extract_tag_list(doc, "Property features", exclude: EXCLUDED_FEATURES)
   def extract_amenities(doc) = extract_tag_list(doc, "Property appliances")
 
   def extract_matterport_url(doc)
@@ -158,5 +188,11 @@ class ScrapePropertiesService
        .select { |a| a.at_css("img[alt='Banner']") }
        .first(8)
        .map { |a| a["href"] }
+  end
+
+  def extract_stations(doc)
+    doc.css(".space-y-1\\.5 .flex.items-start.gap-2")
+       .map { |row| row.css("div").last&.text&.gsub(/[[:space:]]+/, " ")&.strip }
+       .compact
   end
 end
