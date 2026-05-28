@@ -21,7 +21,8 @@ class PlacesController < ApplicationController
         name: place["name"],
         latitude: place["geometry"]["location"]["lat"],
         longitude: place["geometry"]["location"]["lng"],
-        rating: place["rating"]
+        rating: place["rating"],
+        photo_reference: place["photos"]&.first&.dig("photo_reference")
       }
     end
     render json: places

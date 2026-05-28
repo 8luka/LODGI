@@ -25,9 +25,14 @@
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_JS_API']}&libraries=marker,maps" %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   </head>
+
   <body><%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
 
     <%= yield %>
+    <script>
+  window.googleMapsApiKey =
+    "<%= ENV['MAPS_JS_API'] %>"
+</script>
   </body>
 </html>
