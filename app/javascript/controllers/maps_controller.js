@@ -12,7 +12,8 @@ export default class extends Controller {
   ]
 
   connect() {
-
+    this.activeInfoWindow = null
+    this.selectedMarkerElement = null
     // Selected category
     this.selectedCategory = null
     // Store POI markers
@@ -32,7 +33,11 @@ export default class extends Controller {
     this.propertiesValue.forEach((property) => {
       const marker = new google.maps.marker.AdvancedMarkerElement({
         map: this.map,
-        position: { lat: property.latitude, lng: property.longitude }
+        position: { lat: property.latitude, lng: property.longitude },
+        content: this.createMarkerContent(
+          "material-symbols-light:home-outline",
+          "#c2584a"
+        )
       })
     // Save marker reference
     this.propertyMarkers.push(marker)
@@ -68,8 +73,92 @@ export default class extends Controller {
     console.log("Current viewport:")
     console.log(this.currentViewport)
   }
+  createMarkerContent(icon, color) {
+    const container = document.createElement("div")
 
-selectCategory(event) {
+    container.innerHTML = `
+      <div
+        class="custom-marker"
+        style="background-color: ${color};"
+      >
+        <iconify-icon
+          icon="${icon}"
+          style="
+            color: white;
+            font-size: 20px;
+          "
+        ></iconify-icon>
+      </div>
+    `
+
+    return container
+  }
+
+  getPoiIcon(category) {
+    const icons = {
+      restaurant: "material-symbols-light:restaurant",
+      cafe: "material-symbols-light:coffee-outline",
+      bar: "mdi:glass-cocktail",
+      supermarket: "mdi-light:cart",
+      convenience_store: "mdi:shopping-outline",
+      gym: "mdi:dumbbell",
+      train_station: "mdi:train",
+      bus_station: "mdi:bus",
+      parking: "mdi:parking",
+      park: "tabler:tree",
+      tourist_attraction: "maki:attraction"
+    }
+
+    return icons[category] || "mdi:map-marker"
+  }
+
+  createPropertyPopupContent(property) {
+    const image =
+      property.images?.[0]
+
+    const stations =
+      property.stations?.join(", ") || "No stations nearby"
+
+    return `
+      <div class="property-popup">
+
+        <img
+          src="${image}"
+          class="popup-image"
+        />
+
+        <div class="popup-content">
+
+          <h3 class="popup-title">
+            ${property.name}
+          </h3>
+
+          <div class="popup-row">
+            ${property.layout}
+          </div>
+
+          <div class="popup-row">
+            ¥${property.price}
+          </div>
+
+          <div class="popup-row">
+            🚉 ${stations}
+          </div>
+
+          <a
+            href="/properties/${property.id}"
+            class="popup-button"
+          >
+            View Property
+          </a>
+
+        </div>
+
+      </div>
+    `
+  }
+
+  selectCategory(event) {
     // Remove active class from all buttons
     this.categoryButtonTargets.forEach((button) => {
       button.classList.remove("active-category")
@@ -120,8 +209,6 @@ selectCategory(event) {
       this.renderPoiMarkers(places)
     })
 
-
-
   }
 
   renderPoiMarkers(places) {
@@ -133,9 +220,12 @@ selectCategory(event) {
             lat: place.latitude,
             lng: place.longitude
           },
-          title: place.name
+          title: place.name,
+          content: this.createMarkerContent(
+          this.getPoiIcon(this.selectedCategory),
+          "#556ea3"
+        )
         })
-
       this.poiMarkers.push(marker)
     })
   }
