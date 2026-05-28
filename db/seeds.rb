@@ -115,9 +115,7 @@ properties = ScrapePropertiesService.call([
 # ])
 
 properties.each do |property_data|
-  p property_data
   neighborhood = Neighborhood.find_by(name: property_data.delete(:neighborhood))
-  p neighborhood
   Property.create!(property_data.merge(neighborhood: neighborhood))
 end
 
