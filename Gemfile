@@ -72,3 +72,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+### CUSTOM GEMS ### CUSTOM GEMS ### CUSTOM GEMS ### CUSTOM GEMS ### CUSTOM GEMS
+gem 'httparty'
+gem "ferrum"

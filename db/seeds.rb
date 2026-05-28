@@ -1,13 +1,3 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
 puts "Seeding..."
 User.destroy_all
 Neighborhood.destroy_all
@@ -22,7 +12,7 @@ user.save
 ### BASIC NEIGHBORHOOD SEEDS ### BASIC NEIGHBORHOOD SEEDS ### BASIC NEIGHBORHOOD SEEDS ### BASIC NEIGHBORHOOD SEEDS
 
 neighborhood = Neighborhood.new(
-  name: "Meguro",
+  name: "Meguro City",
   description: "A relaxed, upscale residential district that balances quiet tree-lined streets with a buzzing dining and café scene. The Meguro River serves as its scenic backbone, and the area has a distinctly local, unhurried character compared to its flashier neighbors.",
   features: "Meguro River walks, independent cafés, antique shops, Meguro Fudoson temple, family-friendly parks, low-key izakayas",
   ward: "Meguro-ku",
@@ -52,7 +42,7 @@ neighborhood = Neighborhood.new(
 neighborhood.save
 
 neighborhood = Neighborhood.new(
-  name: "Shibuya",
+  name: "Shibuya City",
   description: "One of Tokyo's most iconic and energetic districts, Shibuya is famous worldwide for its scramble crossing and serves as a major commercial and entertainment hub. Its streets pulse day and night with shoppers, commuters, tourists, and nightlife seekers.",
   features: "Shibuya Scramble Crossing, Shibuya 109, Center-gai, major department stores, live music venues, rooftop bars, Hachiko statue",
   ward: "Shibuya-ku",
@@ -111,169 +101,23 @@ neighborhood = Neighborhood.new(
 )
 neighborhood.save
 
-### BASIC PROPERTY SEEDS ### BASIC PROPERTY SEEDS ### BASIC PROPERTY SEEDS ### BASIC PROPERTY SEEDS
+### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ###
 
-property = Property.new(
-  name: "Hmlet Takadanobaba",
-  neighborhood_id: Neighborhood.find_by(name: "Shinjuku").id,
-  address: nil,
-  price: "218,000",
-  description: "9 minutes from Takadanobaba Station and 7 minutes from Zoshigaya Station, the property has a luxurious appearance and is located in a quiet residential area. In addition to having access to Shinjuku and Ikebukuro in 5 minutes and Otemachi in 13 minutes, it is just a 2-minute walk to the supermarket and drugstore. Convenience and livability are great features of this property with cafes, restaurants, gyms and other items you need for your daily life. The common space of the property has a veranda, so you can spend comfortable days in the pleasant sunlight.",
-  agency: "Hmlet",
-  rating: 4.8,
-  layout: "7F",
-  guests: 3,
-  size: 37,
-  rules: "
-    This rental agreement will be a fixed-term contract, requiring you to vacate the property by the lease expiration date.
+properties = ScrapePropertiesService.call([
+  "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
+])
 
-    Please note that an application screening process is required for all tenants. Upon receiving the estimate and moving forward with your application, you'll need to submit the following documents.
-    1. A copy of your passport or a Japanese driver's license
-    2. A copy of your visa or COE (Not required for visa-exempt or visa-free entries)
-    3. A bank balance certificate for the payer (internet banking screenshots are acceptable) or employment verification document (e.g., employee ID, employment contract)
+# properties = ScrapePropertiesService.call([
+#   "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
+#   "https://e-housing.jp/short-term/e-housing-exclusive/tokyo/meguro/nakameguro-claire-higashiyama/604?wards=4&wname=Meguro+Ward&location_point=139.6370344470951%2C35.60107634539&location_point=139.6370344470951%2C35.6759139893914&location_point=139.7764485489898%2C35.6759139893914&location_point=139.7764485489898%2C35.60107634539",
+#   "https://e-housing.jp/short-term/blueground-japan/tokyo/meguro/tyo-180-blueground-japan-the-parkhabio-meguro-place/2?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
+#   "https://e-housing.jp/short-term/hmlet-japan/tokyo/shibuya/hmlet-nishi-shinjuku/405?search=Shibuya&location_point=139.70210363698453%2C35.65484912628266&location_point=139.70210363698453%2C35.65787886624186&location_point=139.7077489630155%2C35.65787886624186&location_point=139.7077489630155%2C35.65484912628266"
+# ])
 
-    ※If you have co-occupants, they must also provide documents 1 and 2.
-    ※Japanese nationals are exempt from providing document 2.
-    ※For contracts shorter than two months, full upfront payment is required, and only document 1 is necessary.
-
-    Please be aware that early termination of the lease may incur a cancellation fee.
-
-    If you wish to renew your lease beyond the expiration date, renewal in the same unit may not be possible if it is reserved for the next tenant. In such cases, we can offer alternative properties or units based on availability.
-
-    Smoking is prohibited on all premises, including balconies, and applies to electronic cigarettes as well.
-
-    For tenants with pets, a pet deposit of ¥110,000 will be added to the initial fees, in addition to the monthly rent.
-
-    All rooms are furnished, and removal of the furniture is not permitted.
-
-    While we conduct regular cleaning of common areas, room cleaning services are not included in the rent. If desired, we can connect you with our partner cleaning company.
-  ",
-  property_type: "Appartment",
-  available_from: "Aug 4, 2026",
-  available_until: nil,
-  latitude: "35.71531444604038",
-  longitude: "139.7112255609536"
-)
-property.save
-
-property = Property.new(
-  name: "QuinTet Ebisu",
-  neighborhood_id: Neighborhood.find_by(name: "Ebisu").id,
-  address: nil,
-  price: "447,119",
-  description: "Feel at home wherever you choose to live with Blueground. You’ll love this lovely Higashi furnished one bedroom apartment with its modern decor, fully equipped kitchen, and spacious living room. Ideally located, you’re close to all the best that Tokyo has to offer!",
-  agency: "Blueground",
-  rating: 4.8,
-  layout: "1 Bedroom, 1 Bath, 1 WC",
-  guests: 2,
-  size: 45,
-  rules: "
-    After booking, if you request to cancel 15 or more days before move-in, there’s a half month’s rent charge. If you request to cancel fewer than 15 days before, there’s one month’s rent charge. No service/booking or card processing fee refunds.
-    Move in from 4pm to 11pm / Move out by 11am
-    No smoking allowed
-    No parties or events allowed
-    No pets allowed
-    ",
-  property_type: "Appartment",
-  available_from: "July 5, 2026",
-  available_until: nil,
-  latitude: "35.64897783169701",
-  longitude: "139.71006471315619"
-)
-property.save
-
-property = Property.new(
-  name: "Spacious 1LDK Furnished Apartment in Meguro",
-  neighborhood_id: Neighborhood.find_by(name: "Meguro").id,
-  address: nil,
-  price: "260,000",
-  description: "Spacious 1LDK Furnished Apartment in Meguro is a 1 bedroom apartment with a spacious living-dining-kitchen area apartment that can be used as another room. It is fully and tastefully furnished and equipped with everything you might need for a comfortable life. We hope that this apartment will be your home away from home as you enjoy exploring all that Tokyo has to offer.
-    Located very close to a big greenery park as well as a trendy shopping street of Musashi-Koyama and a very traditional Togoshi Ginza. It is also only a 15-minute train ride to Shibuya. Be noted that the apartment is on the 4th floor without an elevator.",
-  agency: "Tokyo Furnished",
-  rating: 4.8,
-  layout: "1LDK",
-  guests: 4,
-  size: 42,
-  rules: "
-    We will follow up by sending you a contract to sign and by requesting documentation, including a copy of the passport picture page, of all persons who will occupy the unit. Please note that a one-month refundable deposit and a utility fee will be added to your invoice.
-    Upon receiving documentation and payment, you will be provided with check in instructions. Our international support staff are available to answer any queries by email, instant message, or phone.
-    ",
-  property_type: "Appartment",
-  available_from: Date.today,
-  available_until: nil,
-  latitude: "35.62637820323294",
-  longitude: "139.70832314920878"
-)
-property.save
-
-property = Property.new(
-  name: "The Parkhabio Azabujuban",
-  neighborhood_id: Neighborhood.find_by(name: "Meguro").id,
-  address: nil,
-  price: "529,889",
-  description: "Discover the best of Tokyo, with this two bedroom apartment in Azabu with balcony views over the city. It’ll be easy to simply show up and start living in this contemporary Blueground furnished apartment with its fully equipped kitchen, lovely living room, and our dedicated, on-the-ground support.",
-  agency: "Blueground",
-  rating: 4.8,
-  layout: "1 Bath , 1 WC",
-  guests: 5,
-  size: 67,
-  rules: "
-    After booking, if you request to cancel 15 or more days before move-in, there’s a half month’s rent charge. If you request to cancel fewer than 15 days before, there’s one month’s rent charge. No service/booking or card processing fee refunds.
-    Move in from 4pm to 11pm / Move out by 11am
-    No smoking allowed
-    No parties or events allowed
-    No pets allowed
-    ",
-  property_type: "Appartment",
-  available_from: "June 15 2026",
-  available_until: nil,
-  latitude: "35.65906935596388",
-  longitude: "139.7362791201715"
-)
-property.save
-
-property = Property.new(
-  name: "Hmlet Premium Azabudai",
-  neighborhood_id: Neighborhood.find_by(name: "Roppongi").id,
-  address: nil,
-  price: "331,000",
-  description: "Hmlet Premium Azabudai, just 7-min walk from Akabanebashi Station (Toei Oedo Line) and Kamiyacho Station (Tokyo Metro Hibiya Line), offers the perfect blend of city convenience and natural beauty. Despite its central location, the neighborhood boasts lush parks and serene gardens, ideal for leisurely strolls and rejuvenating jogs. From the upper-floor balconies, revel in the panoramic view of Tokyo Tower, basking in the serene yet lively ambiance of Azabudai. The property is conveniently located near the Azabu-Juban shopping district, a haven for local and international gourmet dining. Additionally, Azabudai Hills and Roppongi Hills, renowned shopping, dining, and entertainment complexes, are just a stone's throw away. In Minato-ku, home to roughly half of Japan's 150 embassies, international flair permeates the area. Here, vibrant cultural exchanges and a plethora of events await your exploration.",
-  agency: "Hmlet",
-  rating: 4.5,
-  layout: "2F",
-  guests: 1,
-  size: 25.92,
-  rules: "
-    This rental agreement will be a fixed-term contract, requiring you to vacate the property by the lease expiration date.
-
-    Please note that an application screening process is required for all tenants. Upon receiving the estimate and moving forward with your application, you'll need to submit the following documents.
-    1. A copy of your passport or a Japanese driver's license
-    2. A copy of your visa or COE (Not required for visa-exempt or visa-free entries)
-    3. A bank balance certificate for the payer (internet banking screenshots are acceptable) or employment verification document (e.g., employee ID, employment contract)
-
-    ※If you have co-occupants, they must also provide documents 1 and 2.
-    ※Japanese nationals are exempt from providing document 2.
-    ※For contracts shorter than two months, full upfront payment is required, and only document 1 is necessary.
-
-    Please be aware that early termination of the lease may incur a cancellation fee.
-
-    If you wish to renew your lease beyond the expiration date, renewal in the same unit may not be possible if it is reserved for the next tenant. In such cases, we can offer alternative properties or units based on availability.
-
-    Smoking is prohibited on all premises, including balconies, and applies to electronic cigarettes as well.
-
-    For tenants with pets, a pet deposit of ¥110,000 will be added to the initial fees, in addition to the monthly rent.
-
-    All rooms are furnished, and removal of the furniture is not permitted.
-
-    While we conduct regular cleaning of common areas, room cleaning services are not included in the rent. If desired, we can connect you with our partner cleaning company.
-  ",
-  property_type: "Studio Appartment",
-  available_from: "May 31, 2026",
-  available_until: nil,
-  latitude: "35.65861085512208",
-  longitude: "139.74361190505073"
-)
-property.save
+properties.each do |property_data|
+  neighborhood = Neighborhood.find_by(name: property_data.delete(:neighborhood))
+  Property.create!(property_data.merge(neighborhood: neighborhood))
+end
 
 ### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS ### BASIC AMENITY SEEDS
 
@@ -342,35 +186,3 @@ amenity = Amenity.new(
   icon: "icon-park-solid:english",
 )
 amenity.save
-
-# property = Property.new(
-#   name: Faker::Locations::Australia.animal,
-#   address: Faker::Address.street_address,
-#   description: Faker::String.random(length: 90..138),
-#   phone_number: Faker::PhoneNumber.phone_number,
-#   price_per_night: Faker::Number.between(from: 40, to: 200),
-#   capacity: Faker::Number.between(from: 1, to: 12),
-#   amenities: Flat::AMENITIES.sample,
-# )
-
-
-
-# puts "Creating flats..."
-# 30.times do
-#   property = Property.new(
-#     # interior: Faker::LoremFlickr.image(size: "300x300", search_terms: [ 'appartment', 'interior' ]),
-#     name: Faker::Locations::Australia.animal,
-#     address: Faker::Address.street_address,
-#     description: Faker::String.random(length: 90..138),
-#     price: Faker::PhoneNumber.phone_number,
-#     price_per_night: Faker::Number.between(from: 40, to: 200),
-#     capacity: Faker::Number.between(from: 1, to: 12),
-#     amenities: Flat::AMENITIES.sample,
-#   )
-
-#   url = Faker::LoremFlickr.image(size: "300x300", search_terms: [ 'apartment', 'interior' ])
-#   file = URI.open(url)
-#   flat.interior.attach(io: file, filename: File.basename(URI.parse(url).path), content_type: "image/jpeg")
-
-#   flat.save
-# end
