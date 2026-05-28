@@ -19,5 +19,5 @@ Rails.application.routes.draw do
     resources :inquiries, only: [ :create ]
   end
 
-  resources :neighbohoods, only: [ :index, :show ]
+  resources :neighborhoods, only: [ :index, :show ]
 end
