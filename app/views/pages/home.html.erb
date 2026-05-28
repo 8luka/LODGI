@@ -1,3 +1,103 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<div
+  data-controller="maps"
+  data-api-key="<%= ENV['MAPS_JS_API'] %>"
+  id="map-container"
+  data-maps-properties-value="<%= @properties %>">
+
+  <div class="map-controls">
+
+    <button
+      data-category="restaurant"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Restaurants
+    </button>
+
+    <button
+      data-category="cafe"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Cafes
+    </button>
+
+    <button
+      data-category="bar"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Bars
+    </button>
+
+    <button
+      data-category="supermarket"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Supermarkets
+    </button>
+
+    <button
+      data-category="convenience_store"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Convenience Stores
+    </button>
+
+    <button
+      data-category="gym"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Gyms
+    </button>
+
+    <button
+      data-category="train_station"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Train Stations
+    </button>
+
+    <button
+      data-category="bus_station"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Bus Stations
+    </button>
+
+    <button
+      data-category="parking"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Parking
+    </button>
+
+    <button
+      data-category="park"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Parks
+    </button>
+
+    <button
+      data-category="tourist_attraction"
+      data-maps-target="categoryButton"
+      data-action="click->maps#selectCategory">
+      Tourist Attractions
+    </button>
+
+    <button
+      data-maps-target="searchButton"
+      data-action="click->maps#searchArea">
+      Search This Area
+    </button>
+
+  </div>
+
+  <div
+    id="map"
+    data-maps-target="map">
+  </div>
+
 <section class="hero" id="hero">
   <div class="search-bar-wrapper">
     <div class="search-bar">
@@ -21,14 +121,6 @@
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
       </button>
-    </div>
-  </div>
-
-  <div class="google-map-wrapper">
-    <div
-      data-controller="maps"
-      id="map"
-      data-maps-properties-value="<%= @properties %>">
     </div>
   </div>
 </section>
