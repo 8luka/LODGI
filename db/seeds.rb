@@ -103,16 +103,23 @@ neighborhood.save
 
 ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ### PROPERTY SEEDS ###
 
+# properties = ScrapePropertiesService.call([
+#   "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924"
+# ])
+
 properties = ScrapePropertiesService.call([
   "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
+  "https://e-housing.jp/short-term/e-housing-exclusive/tokyo/meguro/nakameguro-claire-higashiyama/604?wards=4&wname=Meguro+Ward&location_point=139.6370344470951%2C35.60107634539&location_point=139.6370344470951%2C35.6759139893914&location_point=139.7764485489898%2C35.6759139893914&location_point=139.7764485489898%2C35.60107634539",
+  "https://e-housing.jp/short-term/blueground-japan/tokyo/meguro/tyo-180-blueground-japan-the-parkhabio-meguro-place/2?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
+  "https://e-housing.jp/short-term/hmlet-japan/tokyo/shibuya/hmlet-nishi-shinjuku/405?search=Shibuya&location_point=139.70210363698453%2C35.65484912628266&location_point=139.70210363698453%2C35.65787886624186&location_point=139.7077489630155%2C35.65787886624186&location_point=139.7077489630155%2C35.65484912628266",
+  "https://e-housing.jp/short-term/sumyca/tokyo/meguro/stylish-designers-with-furniture-and-appliances-palace-studio-shibuya-west/207?search=Shibuya&location_point=139.6820930092275%2C35.61706184412018&location_point=139.6820930092275%2C35.647084981494615&location_point=139.72696889342538%2C35.647084981494615&location_point=139.72696889342538%2C35.61706184412018",
+  "https://e-housing.jp/short-term/the-apartment-hotel/tokyo/shibuya/the-apartment-hotel-ebisu-1/102?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+  "https://e-housing.jp/short-term/hmlet-japan/tokyo/meguro/hmlet-shibuyaohashi/203?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+  "https://e-housing.jp/short-term/the-apartment-hotel/tokyo/shibuya/the-apartment-hotel-shibuya-1/701?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+  "https://e-housing.jp/short-term/blueground-japan/tokyo/meguro/the-parkhabio-shibuya-cross-1004-tyo8/2?location_point=139.66323872820473%2C35.62997130800836&location_point=139.66323872820473%2C35.67854464511375&location_point=139.75374323156873%2C35.67854464511375&location_point=139.75374323156873%2C35.62997130800836",
+  "https://e-housing.jp/short-term/sumyca/tokyo/shibuya/t-s-heim/201?location_point=139.70456453898925%2C35.6401014390662&location_point=139.70456453898925%2C35.65541426923116&location_point=139.72745727198006%2C35.65541426923116&location_point=139.72745727198006%2C35.6401014390662",
+  "https://e-housing.jp/short-term/sumyca/tokyo/shibuya/oakrest-ebisu-503/503?location_point=139.70456453898925%2C35.6401014390662&location_point=139.70456453898925%2C35.65541426923116&location_point=139.72745727198006%2C35.65541426923116&location_point=139.72745727198006%2C35.6401014390662"
 ])
-
-# properties = ScrapePropertiesService.call([
-#   "https://e-housing.jp/short-term/dash-living/tokyo/meguro/estlargo-meguro-studio/302?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
-#   "https://e-housing.jp/short-term/e-housing-exclusive/tokyo/meguro/nakameguro-claire-higashiyama/604?wards=4&wname=Meguro+Ward&location_point=139.6370344470951%2C35.60107634539&location_point=139.6370344470951%2C35.6759139893914&location_point=139.7764485489898%2C35.6759139893914&location_point=139.7764485489898%2C35.60107634539",
-#   "https://e-housing.jp/short-term/blueground-japan/tokyo/meguro/tyo-180-blueground-japan-the-parkhabio-meguro-place/2?bed_rooms=0%2C1&bed_rooms_temp=0%2C1&features=268&price_from=0&price_to=828600&location_point=139.7010341580218%2C35.628422174175924&location_point=139.7010341580218%2C35.63772205341006&location_point=139.7161346919545%2C35.63772205341006&location_point=139.7161346919545%2C35.628422174175924",
-#   "https://e-housing.jp/short-term/hmlet-japan/tokyo/shibuya/hmlet-nishi-shinjuku/405?search=Shibuya&location_point=139.70210363698453%2C35.65484912628266&location_point=139.70210363698453%2C35.65787886624186&location_point=139.7077489630155%2C35.65787886624186&location_point=139.7077489630155%2C35.65484912628266"
-# ])
 
 properties.each do |property_data|
   neighborhood = Neighborhood.find_by(name: property_data.delete(:neighborhood))

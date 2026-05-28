@@ -95,7 +95,7 @@ selectCategory(event) {
     // Clear old POI markers
     this.clearPoiMarkers()
 
-    const response = fetch("/places/search", {
+    fetch("/places/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
