@@ -75,5 +75,4 @@ group :test do
 end
 
 ### CUSTOM GEMS ### CUSTOM GEMS ### CUSTOM GEMS ### CUSTOM GEMS ### CUSTOM GEMS
-gem 'httparty'
 gem "ferrum"

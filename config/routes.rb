@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   end
 
   resources :neighborhoods, only: [ :index, :show ]
+
+  post "set_currency", to: "application#set_currency"
 end

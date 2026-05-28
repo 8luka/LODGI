@@ -9,7 +9,7 @@ properties_data = [
   :size=>24,
   :floors=>3,
   :description=>
-    "Quietly residing just beyond the city’s inner circle, Meguro District attracts commuters, families, and artists who appreciate subtle charms over sonorous environs. Locals tend to visit Meguro District’s most famous local destinations, the hip enclave of Naka Meguro and the canal along the Meguro River. Despite its far-away residential feel, Meguro District never seems out of touch. Organic cafes, famous izakaya, repurposed vintage shops, and must-see bookstores generate enough buzz to sustain this understatedly cool neighborhood.",
+    "Nestled a few minutes south of Meguro Station, this renovated property is well suited for someone looking to explore the area. Just beyond the city’s inner circle, Meguro District attracts commuters, families, and artists who appreciate subtle charms over sonorous environs. Despite its far-away residential feel, Meguro is not short of things to do. Cafes, famous izakaya, repurposed vintage shops, and must-see bookstores generate buzz that brings this area to life.",
   :rules=>
     "1. Room availability is subject to real-time inventory constraints. Discounted rates apply only to designated room types and quantities.2. All promotional discounts are dynamically calculated based on: (i) booking date, and (ii) geographical location of the property.3. Offer cannot be used in conjunction with any other offer until availability is sold out.4. For details on the promotion terms, conditions, and availability, please contact us.5. Dash Living reserves the right to change the Terms and Conditions, and suspend or terminate the offers at any time without prior notice.6. Images are for illustration only, some of decorations shown might not be included in the actual room.7. Subject to room type and availability. Please contact our specialist for further details.",
   :vendor=>"Dash Living",
@@ -27,7 +27,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/t3Nf46yTLb-1766996462109.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/Kos3995cj4-1766996462150.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/9YN1vGHfRh-1766996462192.jpg"],
-  :stations=>["Meguro Sta. - 8 mins walk", "Fudomae Sta. - 8 mins walk"]},
+  :stations=>["Meguro Sta. - 8 min walk", "Fudomae Sta. - 8 min walk"]},
 
   {:name=>"The Parkhabio Meguro Place 2",
   :neighborhood=>"Meguro",
@@ -57,7 +57,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/j2HAFd6jUk-1763646165573.png",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/3Sq-qJ9mXG-1763646165618.png",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/utSsKBJA2v-1763646165673.png"],
-  :stations=>["Meguro Sta. - 5 mins walk"]},
+  :stations=>["Meguro Sta. - 5 min walk"]},
 
   {:name=>"Hmlet Nishi 405",
   :neighborhood=>"Shibuya",
@@ -87,7 +87,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/iV-VPYnFR4-1774321133574.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/XPIHyyA-Fx-1774321108968.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/lDPFTQRIe5-1774321109193.jpg"],
-  :stations=>["Nakano-sakaue Sta. - 10 mins walk", "Nishi-shinjuku-gochome Sta. - 4 mins walk", "Tochōmae Sta. - 12 mins walk"]},
+  :stations=>["Nakano-sakaue Sta. - 10 min walk", "Nishi-shinjuku-gochome Sta. - 4 min walk", "Tochōmae Sta. - 12 min walk"]},
 
   {:name=>"Palace Studio 207",
   :neighborhood=>"Meguro",
@@ -116,7 +116,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/q09qM_zPua-1732266077555.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/d5_Ei0z3aW-1732266077850.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/PztYKWsqL--1732266076218.jpg"],
-  :stations=>["Shibuya Sta. - 12 mins walk", "Ikejiri-Ohashi Sta. - 11 mins walk", "Shinsen Sta. - 7 mins walk"]},
+  :stations=>["Shibuya Sta. - 12 min walk", "Ikejiri-Ohashi Sta. - 11 min walk", "Shinsen Sta. - 7 min walk"]},
 
   {:name=>"The Apartment Hotel Ebisu 1 Large typeA 102",
   :neighborhood=>"Ebisu",
@@ -146,7 +146,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/aRHSIns3gD-1755239852172.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/QIY3RpMkG0-1755239852208.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/fiFl9JofSa-1755239852248.jpg"],
-  :stations=>["Ebisu Sta. - 10 mins walk", "Hiroo Sta. - 8 mins walk"]},
+  :stations=>["Ebisu Sta. - 10 min walk", "Hiroo Sta. - 8 min walk"]},
 
   {:name=>"Hmlet Shibuyaohashi【Spring Special Offer】 203",
   :neighborhood=>"Meguro",
@@ -175,7 +175,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/t4W_cYcmPO-1749629748589.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/KA7uN4gRlv-1749629748712.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/qM441kSDsd-1749629748769.jpg"],
-  :stations=>["Shinsen Sta. - 8 mins walk"]},
+  :stations=>["Shinsen Sta. - 8 min walk"]},
 
   {:name=>"The Apartment Hotel Shibuya 701",
   :neighborhood=>"Shibuya",
@@ -205,7 +205,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/EKKzrFXgeI-1755241574583.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/aIQk7LQk3U-1755241574623.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/ihB28ahbdU-1755241574659.jpg"],
-  :stations=>["Shibuya Sta. - 6 mins walk", "Daikanyama Sta. - 12 mins walk"]},
+  :stations=>["Shibuya Sta. - 6 min walk", "Daikanyama Sta. - 12 min walk"]},
 
   {:name=>"The Parkhabio Cross #1004 2",
   :neighborhood=>"Meguro",
@@ -235,7 +235,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/cMzgMEBHkR-1748771243849.png",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/hCfKYZK604-1748771243967.png",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/jbGpOyWA9L-1748771244051.png"],
-  :stations=>["Shibuya Sta. - 10 mins walk"]},
+  :stations=>["Shibuya Sta. - 10 min walk"]},
 
   {:name=>"T.S. Heim 201 201",
   :neighborhood=>"Shibuya",
@@ -264,7 +264,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/VBLyRoSPpm-1745209969700.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/7cwBe-Xl1X-1745209968082.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/e0-qvfFd14-1745209968636.jpg"],
-  :stations=>["Ebisu Sta. - 5 mins walk", "Hiroo Sta. - 17 mins walk", "Daikanyama Sta. - 15 mins walk"]},
+  :stations=>["Ebisu Sta. - 5 min walk", "Hiroo Sta. - 17 min walk", "Daikanyama Sta. - 15 min walk"]},
 
   {:name=>"Oak Rest Ebisu 503 503",
   :neighborhood=>"Ebisu",
@@ -293,7 +293,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/LqByqUhT3f-1739868727840.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/MKndITS1sV-1739868727892.jpg",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/6o4QkvJk4m-1739868727945.jpg"],
-  :stations=>["Shirokanedai Sta. - 14 mins walk", "Ebisu Sta. - 13 mins walk", "Hiroo Sta. - 10 mins walk"]}
+  :stations=>["Shirokanedai Sta. - 14 min walk", "Ebisu Sta. - 13 min walk", "Hiroo Sta. - 10 min walk"]}
 ]
 
 properties_data.each do |property_data|

@@ -10,6 +10,18 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto align-items-center nav-links">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle currency-selector" href="#" id="currencyDropdown" data-bs-toggle="dropdown">
+            <%= {"JPY" => "¥", "EUR" => "€", "USD" => "$"}[session[:currency]] || "¥" %>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="currencyDropdown">
+            <%= link_to "¥ JPY", set_currency_path(currency: "JPY"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "JPY"}", data: { turbo_method: :post } %>
+            <%= link_to "€ EUR", set_currency_path(currency: "EUR"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "EUR"}", data: { turbo_method: :post } %>
+            <%= link_to "$ USD", set_currency_path(currency: "USD"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "USD"}", data: { turbo_method: :post } %>
+          </div>
+        </li>
+
         <li class="nav-item">
           <%= link_to "#about", class: "nav-link" do %>
             About
@@ -55,6 +67,7 @@
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
+
       </ul>
     </div>
   </div>
