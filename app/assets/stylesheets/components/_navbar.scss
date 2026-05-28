@@ -93,6 +93,11 @@
   color: var(--ink);
 }
 
+.dropdown-item.active {
+  background-color: #f0ebe1 !important;
+  color: #000000 !important;
+}
+
 .avatar-dropdown .dropdown-item svg {
   width: 15px;
   height: 15px;
@@ -103,4 +108,9 @@
 
 .avatar-dropdown .dropdown-item.signout {
   color: var(--terra);
+}
+
+.currency-selector + .dropdown-menu .dropdown-item.active {
+  background-color: var(--cream-dark);
+  color: var(--ink);
 }

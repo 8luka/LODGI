@@ -40,7 +40,7 @@
   .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 230px 168px;
+    grid-template-rows: repeat(2, 200px);
     gap: 8px;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -74,8 +74,25 @@
     box-shadow: var(--shadow-sm);
     transition: background .12s;
   }
-  .photo-all-btn:hover { background: var(--cream); }
   .photo-all-btn i { font-size: 13px; }
+  .photo-all-btn:hover {
+    background: rgba(0, 0, 0, 0.60);
+    color: white;
+    border-color: transparent;
+  }
+
+  .glightbox-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 9999;
+  }
 
   /* ── SECTION LABEL ── */
   .section-label {

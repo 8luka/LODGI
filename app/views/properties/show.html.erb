@@ -10,12 +10,9 @@
   </div>
 
   <!-- TITLE -->
-  <h1 class="apt-title">Shinjuku Studio — Light &amp; fully furnished</h1>
+  <h1 class="apt-title"><%= @property.name %></h1>
   <div class="apt-meta">
-    <span><i class="fa-solid fa-star"></i> 4.92 <span style="color:var(--ink-muted)">(38 reviews)</span></span>
-    <span><i class="fa-solid fa-location-dot"></i> Shinjuku, Tokyo</span>
-    <div class="apt-badge">Entire apartment</div>
-    <div class="apt-badge">Available now</div>
+    <span><i class="fa-solid fa-location-dot"></i> <%= @property.neighborhood.name %>, Tokyo</span>
   </div>
 
   <!-- TWO-COLUMN LAYOUT -->
@@ -25,46 +22,47 @@
     <div class="left">
 
       <!-- GALLERY -->
-      <div class="gallery">
-        <div class="gp">
-          <!-- Replace div with <img src="living-room.jpg" alt="Living room" style="width:100%;height:100%;object-fit:cover"> -->
-          <div class="gp-inner">
-            <i class="fa-regular fa-couch"></i>
-            <span>Living room</span>
+      <div class="gallery" data-controller="gallery">
+        <% @property.images.first(3).each do |image| %>
+          <div class="gp">
+            <a href="<%= image %>" class="glightbox">
+              <img src="<%= image %>" alt="Property image" style="width:100%;height:100%;object-fit:cover">
+            </a>
           </div>
-        </div>
-        <div class="gp">
-          <div class="gp-inner">
-            <i class="fa-regular fa-bed"></i>
-            <span>Bedroom</span>
-          </div>
-        </div>
-        <div class="gp">
-          <div class="gp-inner">
-            <i class="fa-regular fa-bath"></i>
-            <span>Bathroom</span>
-          </div>
-        </div>
-        <div class="gp">
-          <div class="gp-inner">
-            <i class="fa-regular fa-utensils"></i>
-            <span>Kitchen</span>
-          </div>
-          <button class="photo-all-btn">
-            <i class="fa-regular fa-grid-2"></i> Show all 12 photos
+        <% end %>
+        <div class="gp" style="position:relative;">
+          <a href="<%= @property.images[3] %>" class="glightbox">
+            <img src="<%= @property.images[3] %>" alt="Property image" style="width:100%;height:100%;object-fit:cover">
+          </a>
+          <button class="photo-all-btn" data-action="click->gallery#open">
+            <i class="fa-regular fa-grid-2"></i> Show all <%= @property.images.length %> photos
           </button>
         </div>
+
+        <%# Hidden links for remaining images so GLightbox knows about them %>
+        <% @property.images.drop(4).each do |image| %>
+          <a href="<%= image %>" class="glightbox" style="display:none;"></a>
+        <% end %>
       </div>
 
       <!-- DESCRIPTION -->
-      <div class="section-label">About this place</div>
-      <p class="description" id="desc-short">
-        A bright, thoughtfully furnished studio in the heart of Shinjuku — 2 minutes from the station and surrounded by everything Tokyo has to offer. The apartment is fully equipped from day one: no furniture shopping, no waiting. Designed for foreigners settling into Tokyo life.
-      </p>
-      <p class="description" id="desc-long" style="display: none;">
-        The space features floor-to-ceiling windows facing east, a queen bed with a quality mattress, a full kitchen with induction cooker, and an in-unit washing machine. High-speed WiFi (600 Mbps), air conditioning, and underfloor heating are all included in the monthly price. The building has an automated lock system and 24-hour English support via the Lodgi app. No key money, no guarantor required — just your passport and first month's rent.
-      </p>
-      <button class="desc-toggle" id="descBtn" onclick="toggleDesc()">Show more ›</button>
+      <div class="section-label">About this property</div>
+      <div data-controller="property-description">
+        <p class="description" data-property-description-target="short">
+          <%= @property.description.truncate(200, omission: '...', separator: ' ') %>
+        </p>
+        <p class="description" data-property-description-target="long" style="display: none;">
+          <%= @property.description %>
+        </p>
+        <% if @property.description.length > 200 %>
+          <button class="desc-toggle"
+                  data-property-description-target="button"
+                  data-action="click->property-description#toggle">
+            Show more ›
+          </button>
+        <% end %>
+      </div>
+
 
       <div class="divider"></div>
 
@@ -201,18 +199,22 @@
             <i class="fa-solid fa-expand"></i> Expand
           </button>
         </div>
+
         <div class="map-card-body">
-          <div class="map-address">2-14-5 Kabukicho, Shinjuku</div>
-          <div class="map-station">
-            <i class="fa-solid fa-train-subway"></i>
-            2 min walk to Shinjuku Station
-          </div>
+          <% @property.stations.each do |station| %>
+            <div class="map-station">
+              <i class="fa-solid fa-train-subway"></i>
+              <%= station %>
+            </div>
+          <% end %>
           <a href="neighbourhood.html?area=shinjuku" class="nb-link">
             <i class="fa-regular fa-map"></i>
-            Explore the Shinjuku neighbourhood
+            Explore <%= @property.neighborhood.name %>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
+
+
       </div>
 
       <!-- PRICE CARD -->
