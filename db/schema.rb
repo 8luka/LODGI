@@ -55,26 +55,25 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_28_030632) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.string "all_amenities", default: [], array: true
-    t.integer "bedrooms"
+    t.string "address"
+    t.string "agency"
+    t.date "available_from"
+    t.date "available_until"
     t.datetime "created_at", null: false
     t.text "description"
-    t.string "features", default: [], array: true
-    t.integer "floors"
-    t.string "images", default: [], array: true
+    t.integer "guests"
     t.float "latitude"
     t.string "layout"
     t.float "longitude"
-    t.string "matterport_url"
     t.string "name"
     t.bigint "neighborhood_id", null: false
-    t.decimal "price", precision: 10, scale: 2
-    t.text "rules"
+    t.float "price"
+    t.string "property_type"
+    t.float "rating"
+    t.string "rules"
     t.float "size"
     t.string "stations", default: [], array: true
     t.datetime "updated_at", null: false
-    t.string "vendor"
-    t.string "vendor_image"
     t.index ["neighborhood_id"], name: "index_properties_on_neighborhood_id"
   end
 
