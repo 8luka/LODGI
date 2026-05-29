@@ -1,5 +1,5 @@
 <section class="hero" id="hero">
-  <h1>Find furnished appartment stays in Tokyo</h1>
+  <h1>Find furnished apartment stays in Tokyo</h1>
   <div class="search-bar-wrapper">
     <div class="search-bar">
       <div class="search-icon">
@@ -181,7 +181,7 @@
         <% @neighborhoods.each do |neighborhood| %>
           <%= link_to neighborhood_path(neighborhood), class: "card" do %>
             <div class="card-img">
-              <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');">></div>
+              <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');"></div>
               <div class="card-tag">
                 <%= neighborhood.ward %>
               </div>
@@ -238,6 +238,6 @@
     <!-- FOOTER -->
     <footer>
       <div class="footer-logo">Lodgi</div>
-      <div>Tokyo short-term rentals for foreigners · 2025</div>
+      <div>Tokyo short-term rentals for foreigners · 2026</div>
       <div>English support · Privacy · Terms</div>
     </footer>
