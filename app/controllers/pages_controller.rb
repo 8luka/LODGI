@@ -11,6 +11,8 @@ class PagesController < ApplicationController
       :price,
       :stations,
       :images
-    ).as_json(except: [:id]))
+    ).as_json)
+
+    @neighborhoods = Neighborhood.all
   end
 end

@@ -25,13 +25,11 @@ export default class extends Controller {
     this.selectedMarkerElement = null
     this.transitVisible = false
     this.transitLayer = new google.maps.TransitLayer()
-    const center = { lat: 35.675739, lng: 139.754037 };
+
     this.map = new google.maps.Map(this.mapTarget, {
-      center,
-      zoom: 12,
       mapId: "DEMO_MAP_ID",
     });
-
+    this.bounds = new google.maps.LatLngBounds()
 
     this.propertiesValue.forEach((property) => {
       const marker = new google.maps.marker.AdvancedMarkerElement({
@@ -42,6 +40,10 @@ export default class extends Controller {
           "#c2584a"
         )
       })
+      this.bounds.extend({
+        lat: property.latitude,
+        lng: property.longitude
+      })
       marker.addListener("click", () => {
         const content =
         this.createPropertyPopupContent(property)
@@ -50,6 +52,7 @@ export default class extends Controller {
     // Save marker reference
     this.propertyMarkers.push(marker)
     })
+    this.map.fitBounds(this.bounds)
     // Listen for map movement finishing
     this.map.addListener("idle", () => {
       this.updateViewportState()
@@ -124,7 +127,11 @@ export default class extends Controller {
       property.images?.[0]
 
     const stations =
-      property.stations?.join(", ") || "No stations nearby"
+      property.stations?.length
+        ? property.stations
+            .map(station => `🚉 ${station}`)
+            .join("<br>")
+        : "No stations nearby"
 
     return `
       <div class="property-popup">
@@ -149,7 +156,7 @@ export default class extends Controller {
           </div>
 
           <div class="popup-row">
-            🚉 ${stations}
+            ${stations}
           </div>
 
           <a
