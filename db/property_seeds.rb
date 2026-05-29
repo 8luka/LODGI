@@ -500,7 +500,7 @@ properties_data = [
 
   {:name=>"SUMII Meguro Apt",
   :neighborhood=>"Meguro",
-  :availability=>"September 11th",
+  :availability=>"Sep 11th",
   :latitude=>35.6351145,
   :longitude=>139.7128182,
   :price=>448200,
@@ -531,7 +531,7 @@ properties_data = [
 
   {:name=>"SUMII Nishi-Gotanda Apt",
   :neighborhood=>"Gotanda",
-  :availability=>"September 1st",
+  :availability=>"Sep 1st",
   :latitude=>35.6280825,
   :longitude=>139.7145389,
   :price=>575100,
@@ -622,7 +622,7 @@ properties_data = [
 
   {:name=>"Dash Living Osaki - 303",
   :neighborhood=>"Shinagawa",
-  :availability=>"September 25th",
+  :availability=>"Sep 25th",
   :latitude=>35.6170776,
   :longitude=>139.723033,
   :price=>325000,

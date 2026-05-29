@@ -1,0 +1,534 @@
+:root {
+  --cream:       #FAF7F2;
+  --cream-dark:  #F0EBE1;
+  --ink:         #1A1714;
+  --ink-soft:    #4A4540;
+  --ink-muted:   #8A8480;
+  --terra:       #C8553D;
+  --terra-hover: #b34832;
+  --border:      rgba(26, 23, 20, 0.10);
+  --border-md:   rgba(26, 23, 20, 0.18);
+  --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md:   0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius:      12px;
+  --radius-lg:   16px;
+  --serif:       'DM Serif Display', Georgia, serif;
+  --sans:        'DM Sans', system-ui, sans-serif;
+}
+
+// ── Page wrapper ─────────────────────────────────────────────
+.nb-page {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 28px 32px 80px;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+// ── Breadcrumb ───────────────────────────────────────────────
+.nb-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: var(--ink-muted);
+  list-style: none;
+
+  a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    &:hover { color: var(--ink); text-decoration: underline; }
+  }
+
+  .nb-bc-sep { font-size: 11px; }
+}
+
+// ── Shared eyebrow label ─────────────────────────────────────
+.nb-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  color: var(--terra);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+// ── Section label (small caps heading) ──────────────────────
+.nb-section-label {
+  margin-bottom: 14px;
+  color: var(--ink-muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nb-section { margin-bottom: 4px; }
+
+.nb-divider {
+  height: 0.5px;
+  margin: 32px 0;
+  border: none;
+  background: var(--border);
+}
+
+.nb-prose {
+  font-size: 15px;
+  line-height: 1.78;
+  color: var(--ink);
+}
+
+.nb-empty {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+}
+
+// ── Buttons ──────────────────────────────────────────────────
+.nb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 22px;
+  border-radius: 50px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+
+  &:active { transform: scale(0.99); }
+
+  &--primary {
+    background: var(--terra);
+    color: white;
+    font-weight: 500;
+    &:hover { background: var(--terra-hover); }
+  }
+
+  &--secondary {
+    background: white;
+    border: 0.5px solid var(--border-md);
+    color: var(--ink-soft);
+    &:hover { background: var(--cream-dark); color: var(--ink); }
+  }
+
+  &--full { width: 100%; }
+}
+
+// ── Hero ─────────────────────────────────────────────────────
+.nb-hero {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 52px;
+}
+
+.nb-hero-title {
+  margin-bottom: 16px;
+  font-family: var(--serif);
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.nb-hero-lead {
+  max-width: 520px;
+  margin-bottom: 28px;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.nb-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+// Hero map placeholder (replace with real embed)
+.nb-hero-map {
+  height: 320px;
+  overflow: hidden;
+  background: var(--cream-dark);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.nb-map-empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--ink-muted);
+
+  i    { font-size: 40px; }
+  p    { font-size: 14px; color: var(--ink-soft); }
+  small{ font-size: 12px; }
+}
+
+// ── Body layout ──────────────────────────────────────────────
+.nb-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 292px;
+  gap: 32px;
+  align-items: start;
+}
+
+// ── Features grid ────────────────────────────────────────────
+.nb-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.nb-feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: white;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  transition: box-shadow 0.15s;
+
+  &:hover { box-shadow: var(--shadow-sm); }
+}
+
+.nb-feature-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--terra);
+  font-size: 14px;
+}
+
+.nb-feature-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+// ── Properties ───────────────────────────────────────────────
+.nb-properties-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  .nb-section-label { margin-bottom: 0; }
+}
+
+.nb-properties-count {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+// Compact grid: 3 columns, small cards
+.nb-properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.nb-prop-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s, box-shadow 0.18s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+// Compact image — short thumbnail
+.nb-prop-img {
+  width: 100%;
+  height: 110px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--cream-dark);
+
+  &--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-muted);
+    font-size: 22px;
+  }
+}
+
+.nb-prop-body {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nb-prop-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  // clamp to 2 lines
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.nb-prop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  span {
+    font-size: 11px;
+    color: var(--ink-muted);
+    background: var(--cream-dark);
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+}
+
+.nb-prop-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 2px;
+
+  span {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--ink-muted);
+  }
+}
+
+// ── Sidebar ──────────────────────────────────────────────────
+.nb-sidebar {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nb-card {
+  overflow: hidden;
+  background: white;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  &--cta { padding: 20px; }
+}
+
+.nb-card-head {
+  padding: 13px 18px;
+  border-bottom: 0.5px solid var(--border);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+// Quick facts
+.nb-fact-list {
+  list-style: none;
+  padding: 4px 0;
+}
+
+.nb-fact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 18px;
+  border-bottom: 0.5px solid var(--border);
+
+  &:last-child { border-bottom: none; }
+}
+
+.nb-fact-icon {
+  width: 20px;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.nb-fact-label {
+  font-size: 11px;
+  color: var(--ink-muted);
+  margin-bottom: 2px;
+}
+
+.nb-fact-val {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+// Other neighborhoods list
+.nb-other-list { padding: 4px 0; }
+
+.nb-other-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 18px;
+  border-bottom: 0.5px solid var(--border);
+  text-decoration: none;
+  font-size: 13.5px;
+  color: var(--ink);
+  transition: background 0.12s;
+
+  &:last-child { border-bottom: none; }
+  &:hover { background: var(--cream-dark); }
+
+  i { font-size: 11px; color: var(--ink-muted); }
+}
+
+// CTA card
+
+.nb-cta-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.nb-cta-body {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+/* Property card body */
+.nb-prop-body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 150px;
+}
+
+.nb-prop-name {
+  min-height: 36px;
+  margin-bottom: 8px;
+
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.nb-prop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 24px;
+  margin-bottom: 14px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 3px 8px;
+
+    border-radius: 50px;
+    background: var(--cream-dark);
+
+    color: var(--ink-muted);
+    font-size: 11.5px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
+.nb-prop-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  min-height: 24px;
+  padding-top: 10px;
+  border-top: 0.5px solid var(--border);
+}
+
+.nb-prop-price {
+  min-width: 0;
+  white-space: nowrap;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+
+  span {
+    color: var(--ink-muted);
+    font-size: 11px;
+    font-weight: 400;
+  }
+}
+
+
+
+.nb-prop-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 76px;
+  min-height: 22px;
+  padding: 3px 9px;
+
+  border-radius: 50px;
+
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &--available {
+    background: #E8F5EE;
+    color: #2D7A4F;
+  }
+
+  &--unavailable {
+    background: #F5E8E8;
+    color: #A63232;
+  }
+}
+
+// ── Responsive ───────────────────────────────────────────────
+@media (max-width: 900px) {
+  .nb-body { grid-template-columns: 1fr; }
+  .nb-sidebar { position: static; }
+}
+
+@media (max-width: 768px) {
+  .nb-page { padding: 20px 16px 60px; }
+
+  .nb-hero {
+    grid-template-columns: 1fr;
+    margin-bottom: 36px;
+  }
+
+  .nb-hero-title { font-size: 32px; }
+  .nb-hero-map   { height: 220px; }
+
+  .nb-features-grid   { grid-template-columns: 1fr; }
+  .nb-properties-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .nb-properties-grid { grid-template-columns: 1fr; }
+}
