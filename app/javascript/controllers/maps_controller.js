@@ -9,10 +9,18 @@ export default class extends Controller {
     "map",
     "categoryButton",
     "searchButton",
-    "transitToggle"
+    "transitToggle",
+
+    "layoutFilter",
+    "neighborhoodFilter",
+
+    "priceFilter",
+    "priceValue"
   ]
 
   connect() {
+    this.priceValueTarget.textContent ="¥500,000"
+    this.allProperties = [...this.propertiesValue]
     // Selected category
     this.selectedCategory = null
     // Store POI markers
@@ -59,6 +67,7 @@ export default class extends Controller {
     })
     // Run once on initial load
     this.updateViewportState()
+    this.initializeFilters()
   }
   updateViewportState() {
     const bounds = this.map.getBounds()
@@ -83,6 +92,176 @@ export default class extends Controller {
     console.log("Current viewport:")
     console.log(this.currentViewport)
   }
+  initializeFilters() {
+
+    const layouts =
+      [...new Set(
+        this.allProperties.map(
+          property => property.layout
+        )
+      )]
+
+    const neighborhoods =
+      [...new Set(
+        this.allProperties.map(
+          property => property.neighborhood_name
+        )
+      )]
+
+    this.layoutFilterTarget.innerHTML =
+      `
+        <option value="">
+          Any
+        </option>
+      `
+
+    layouts.forEach((layout) => {
+
+      this.layoutFilterTarget.innerHTML += `
+        <option value="${layout}">
+          ${layout}
+        </option>
+      `
+    })
+
+    this.neighborhoodFilterTarget.innerHTML =
+      `
+        <option value="">
+          Any
+        </option>
+      `
+
+    neighborhoods.forEach((neighborhood) => {
+
+      this.neighborhoodFilterTarget.innerHTML += `
+        <option value="${neighborhood}">
+          ${neighborhood}
+        </option>
+      `
+    })
+  }
+  applyFilters() {
+
+    const selectedLayout =
+      this.layoutFilterTarget.value
+
+    const selectedNeighborhood =
+      this.neighborhoodFilterTarget.value
+
+    const maxPrice =
+      Number(
+        this.priceFilterTarget.value
+      )
+
+    this.priceValueTarget.textContent =
+      `¥${maxPrice.toLocaleString()}`
+
+    const filteredProperties =
+      this.allProperties.filter(
+        (property) => {
+
+          const matchesLayout =
+            !selectedLayout ||
+            property.layout === selectedLayout
+
+          const matchesNeighborhood =
+            !selectedNeighborhood ||
+            property.neighborhood_name === selectedNeighborhood
+
+          const matchesPrice =
+            Number(property.price) <= maxPrice
+
+          return (
+            matchesLayout &&
+            matchesNeighborhood &&
+            matchesPrice
+          )
+        }
+      )
+
+    this.renderFilteredProperties(
+      filteredProperties
+    )
+  }
+
+renderFilteredProperties(properties) {
+
+    this.propertyMarkers.forEach(
+      (marker) => {
+        marker.map = null
+      }
+    )
+
+    this.propertyMarkers = []
+
+    const bounds =
+      new google.maps.LatLngBounds()
+
+    properties.forEach(
+      (property) => {
+
+        const marker =
+          new google.maps.marker.AdvancedMarkerElement({
+            map: this.map,
+
+            position: {
+              lat: property.latitude,
+              lng: property.longitude
+            },
+
+            content:
+              this.createMarkerContent(
+                "material-symbols-light:home-outline",
+                "#c2584a"
+              )
+          })
+
+        marker.addListener(
+          "click",
+          () => {
+
+            const content =
+              this.createPropertyPopupContent(
+                property
+              )
+
+            this.openInfoWindow(
+              marker,
+              content
+            )
+          }
+        )
+
+        this.propertyMarkers.push(
+          marker
+        )
+
+        bounds.extend({
+          lat: property.latitude,
+          lng: property.longitude
+        })
+      }
+    )
+
+    if (properties.length > 0) {
+
+      this.map.fitBounds(
+        bounds,
+        100
+      )
+    }
+  }
+
+  clearFilters() {
+    this.layoutFilterTarget.value = ""
+
+    this.neighborhoodFilterTarget.value = ""
+
+    this.priceFilterTarget.value = 500000
+
+    this.applyFilters()
+  }
+
   createMarkerContent(icon, color) {
     const container = document.createElement("div")
 
