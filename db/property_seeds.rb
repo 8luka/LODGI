@@ -1,5 +1,6 @@
 properties_data = [
   {:name=>"EstLargo Meguro - Studio 302",
+  :availability=>"now",
   :neighborhood=>"Meguro",
   :latitude=>35.6311609,
   :longitude=>139.7107435,
@@ -15,7 +16,7 @@ properties_data = [
   :vendor=>"Dash Living",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/S6TxBMTyBw-1765955575782.jpg",
-  :features=>["Elevator", "Free internet", "Furnished"],
+  :features=>["Elevator", "Free internet"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Iron", "Microwave", "Refrigerator", "TV", "Washing machine"],
   :matterport_url=>"https://my.matterport.com/show/?m=gZYMM3kiJXe",
   :images=>
@@ -30,6 +31,7 @@ properties_data = [
   :stations=>["Meguro Sta. - 8 min walk", "Fudomae Sta. - 8 min walk"]},
 
   {:name=>"The Parkhabio Meguro Place 2",
+  :availability=>"June 15th",
   :neighborhood=>"Meguro",
   :latitude=>35.6334663,
   :longitude=>139.712204,
@@ -45,7 +47,7 @@ properties_data = [
   :vendor=>"Blueground Japan",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/WOlgSDyPjI-1728616304184.png",
-  :features=>["Bath & WS separated", "Delivery box", "Elevator", "Furnished", "Students allowed"],
+  :features=>["Bath & WS separated", "Delivery box", "Elevator"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Iron", "LAN ethernet socket", "Microwave", "Refrigerator", "TV", "Washing machine"],
   :matterport_url=>"https://my.matterport.com/show/?m=gEnYRit6gTb",
   :images=>
@@ -60,6 +62,7 @@ properties_data = [
   :stations=>["Meguro Sta. - 5 min walk"]},
 
   {:name=>"Hmlet Nishi 405",
+  :availability=>"August 9th",
   :neighborhood=>"Shibuya",
   :latitude=>35.6563239,
   :longitude=>139.704141,
@@ -75,7 +78,7 @@ properties_data = [
   :vendor=>"Hmlet Japan",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/nQuMexfOpn-1725438035620.jpg",
-  :features=>["Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator", "Free internet", "Furnished", "Students allowed"],
+  :features=>["Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator", "Free internet"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Iron", "LAN ethernet socket", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>"https://my.matterport.com/show/?m=FfgtwARdmJp",
   :images=>
@@ -90,6 +93,7 @@ properties_data = [
   :stations=>["Nakano-sakaue Sta. - 10 min walk", "Nishi-shinjuku-gochome Sta. - 4 min walk", "Tochōmae Sta. - 12 min walk"]},
 
   {:name=>"Palace Studio 207",
+  :availability=>"June 10th",
   :neighborhood=>"Meguro",
   :latitude=>35.6414529,
   :longitude=>139.6980773,
@@ -100,11 +104,11 @@ properties_data = [
   :floors=>2,
   :description=>"Maximum Number of Users2 PersonBedDouble Bed(1)Age of Building19 Year(s)",
   :rules=>
-    "※This propaty has free wi-fi.※This property has an android monitor instead of a TV.　There is no TV tuner installed in the apartment, so you will not be able to watch terrestrial TV.You can watch Netflix, Amazon Prime, etc. with your own account, or you can watch Youtube, etc. for free.",
+    "※This property has free wi-fi.※This property has an android monitor instead of a TV.　There is no TV tuner installed in the apartment, so you will not be able to watch terrestrial TV.You can watch Netflix, Amazon Prime, etc. with your own account, or you can watch Youtube, etc. for free.",
   :vendor=>"Sumyca",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/bjHqg1Wmiq-1729067302615.png",
-  :features=>["Delivery box", "Elevator", "Furnished", "Students allowed"],
+  :features=>["Delivery box", "Elevator"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>nil,
   :images=>
@@ -119,6 +123,7 @@ properties_data = [
   :stations=>["Shibuya Sta. - 12 min walk", "Ikejiri-Ohashi Sta. - 11 min walk", "Shinsen Sta. - 7 min walk"]},
 
   {:name=>"The Apartment Hotel Ebisu 1 Large typeA 102",
+  :availability=>"July 7th",
   :neighborhood=>"Ebisu",
   :latitude=>35.6492576,
   :longitude=>139.717365,
@@ -134,7 +139,7 @@ properties_data = [
   :vendor=>"The Apartment Hotel",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/QDKWgNZwef-1753255036160.jpg",
-  :features=>["Balcony", "Delivery box", "Elevator", "Free internet", "Furnished"],
+  :features=>["Balcony", "Delivery box", "Elevator", "Free internet"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>"https://r15601879.theta360.biz/t/3a931ef0-bb02-11f0-b72e-0ad00fde431f-1",
   :images=>
@@ -148,7 +153,8 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/fiFl9JofSa-1755239852248.jpg"],
   :stations=>["Ebisu Sta. - 10 min walk", "Hiroo Sta. - 8 min walk"]},
 
-  {:name=>"Hmlet Shibuyaohashi【Spring Special Offer】 203",
+  {:name=>"Hmlet Shibuyaohashi 203",
+  :availability=>"now",
   :neighborhood=>"Meguro",
   :latitude=>35.6551771,
   :longitude=>139.6889239,
@@ -164,7 +170,7 @@ properties_data = [
   :vendor=>"Hmlet Japan",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/nQuMexfOpn-1725438035620.jpg",
-  :features=>["Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator", "Free internet", "Furnished", "Pet allowed", "Students allowed"],
+  :features=>["Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator", "Free internet", "Pet allowed"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Iron", "LAN ethernet socket", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>"https://my.matterport.com/show/?m=rexoCpMXyxV&ts=1",
   :images=>
@@ -178,6 +184,7 @@ properties_data = [
   :stations=>["Shinsen Sta. - 8 min walk"]},
 
   {:name=>"The Apartment Hotel Shibuya 701",
+  :availability=>"now",
   :neighborhood=>"Shibuya",
   :latitude=>35.6540092,
   :longitude=>139.6998735,
@@ -193,7 +200,7 @@ properties_data = [
   :vendor=>"The Apartment Hotel",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/QDKWgNZwef-1753255036160.jpg",
-  :features=>["Balcony", "Bath & WS separated", "Delivery box", "Elevator", "Free internet", "Furnished"],
+  :features=>["Balcony", "Bath & WS separated", "Delivery box", "Elevator", "Free internet"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>"https://r15601879.theta360.biz/t/19064d2c-ab42-11f0-b248-0613720b7bf9-1",
   :images=>
@@ -208,6 +215,7 @@ properties_data = [
   :stations=>["Shibuya Sta. - 6 min walk", "Daikanyama Sta. - 12 min walk"]},
 
   {:name=>"The Parkhabio Cross #1004 2",
+  :availability=>"July 1st",
   :neighborhood=>"Meguro",
   :latitude=>35.6534504,
   :longitude=>139.6934806,
@@ -223,7 +231,7 @@ properties_data = [
   :vendor=>"Blueground Japan",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/WOlgSDyPjI-1728616304184.png",
-  :features=>["Balcony", "Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator", "Furnished", "Students allowed"],
+  :features=>["Balcony", "Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Iron", "LAN ethernet socket", "Microwave", "Refrigerator", "TV", "Washing machine"],
   :matterport_url=>"https://my.matterport.com/show/?m=PunYXwWCgkZ",
   :images=>
@@ -239,6 +247,7 @@ properties_data = [
 
   {:name=>"T.S. Heim 201 201",
   :neighborhood=>"Shibuya",
+  :availability=>"July 27th",
   :latitude=>35.6451241144,
   :longitude=>139.7132500994,
   :price=>168600,
@@ -252,7 +261,7 @@ properties_data = [
   :vendor=>"Sumyca",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/bjHqg1Wmiq-1729067302615.png",
-  :features=>["Bath & WS separated", "Free internet", "Furnished", "Students allowed"],
+  :features=>["Bath & WS separated", "Free internet"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>nil,
   :images=>
@@ -268,6 +277,7 @@ properties_data = [
 
   {:name=>"Oak Rest Ebisu 503 503",
   :neighborhood=>"Ebisu",
+  :availability=>"now",
   :latitude=>35.6445351,
   :longitude=>139.7210448,
   :price=>185400,
@@ -281,7 +291,7 @@ properties_data = [
   :vendor=>"Sumyca",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/bjHqg1Wmiq-1729067302615.png",
-  :features=>["Bath & WS separated", "Furnished", "Students allowed"],
+  :features=>["Bath & WS separated"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>nil,
   :images=>
