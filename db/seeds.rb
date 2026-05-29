@@ -20,17 +20,8 @@ neighborhood = Neighborhood.new(
   features: "Meguro River walks, independent cafés, antique shops, Meguro Fudoson temple, family-friendly parks, low-key izakayas",
   ward: "Meguro-ku",
   latitude: "35.6340",
-  longitude: "139.7153"
-)
-neighborhood.save
-
-neighborhood = Neighborhood.new(
-  name: "Naka-Meguro",
-  description: "One of Tokyo's most coveted neighborhoods, Naka-Meguro hugs both banks of the Meguro River and is lined with independent boutiques, specialty coffee roasters, and intimate restaurants. It draws a creative, fashion-forward crowd and explodes with visitors every cherry blossom season.",
-  features: "Cherry blossom-lined Meguro River, concept stores, specialty coffee, vinyl record shops, design studios, moody cocktail bars",
-  ward: "Meguro-ku",
-  latitude: "35.6438",
-  longitude: "139.6993"
+  longitude: "139.7153",
+  photos: []
 )
 neighborhood.save
 
@@ -40,7 +31,8 @@ neighborhood = Neighborhood.new(
   features: "Yebisu Garden Place, Tokyo Metropolitan Museum of Photography, French bistros, craft beer bars, upscale supermarkets, wide pedestrian walkways",
   ward: "Shibuya-ku",
   latitude: "35.6467",
-  longitude: "139.7100"
+  longitude: "139.7100",
+  photos: []
 )
 neighborhood.save
 
@@ -50,7 +42,8 @@ neighborhood = Neighborhood.new(
   features: "Shibuya Scramble Crossing, Shibuya 109, Center-gai, major department stores, live music venues, rooftop bars, Hachiko statue",
   ward: "Shibuya-ku",
   latitude: "35.6598",
-  longitude: "139.7004"
+  longitude: "139.7004",
+  photos: []
 )
 neighborhood.save
 
@@ -60,7 +53,8 @@ neighborhood = Neighborhood.new(
   features: "Takeshita Street, Meiji Shrine, Omotesando boulevard, vintage clothing stores, crepe stands, avant-garde fashion boutiques, Yoyogi Park",
   ward: "Shibuya-ku",
   latitude: "35.6702",
-  longitude: "139.7027"
+  longitude: "139.7027",
+  photos: []
 )
 neighborhood.save
 
@@ -70,7 +64,8 @@ neighborhood = Neighborhood.new(
   features: "Golden Gai, Kabukicho, Shinjuku Gyoen National Garden, Tokyo Metropolitan Government Building observation deck, department stores, memory lane (Omoide Yokocho)",
   ward: "Shinjuku-ku",
   latitude: "35.6938",
-  longitude: "139.7034"
+  longitude: "139.7034",
+  photos: []
 )
 neighborhood.save
 
@@ -80,7 +75,8 @@ neighborhood = Neighborhood.new(
   features: "Mori Art Museum, National Art Center, 21_21 Design Sight, Roppongi Hills complex, international restaurants, rooftop city views, upscale nightclubs, gallery hopping",
   ward: "Minato-ku",
   latitude: "35.6628",
-  longitude: "139.7314"
+  longitude: "139.7314",
+  photos: []
 )
 neighborhood.save
 
@@ -90,7 +86,8 @@ neighborhood = Neighborhood.new(
   features: "La Vita canal shopping district, patisseries and sweet shops, Jiyugaoka Sweets Forest, European-style architecture, independent homeware and interior stores, specialty tea houses, Kumano Shrine",
   ward: "Meguro-ku",
   latitude: "35.6076",
-  longitude: "139.6682"
+  longitude: "139.6682",
+  photos: []
 )
 neighborhood.save
 
@@ -100,7 +97,8 @@ neighborhood = Neighborhood.new(
   features: "Yotsuya Station area, Sophia University, St. Ignatius Church, Shinjuku Gyoen proximity, historic moats and castle walls, quiet sake bars, traditional soba restaurants, Yotsuya Naito-machi greenery",
   ward: "Shinjuku-ku",
   latitude: "35.6863",
-  longitude: "139.7298"
+  longitude: "139.7298",
+  photos: []
 )
 neighborhood.save
 
