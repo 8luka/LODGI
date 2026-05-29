@@ -59,6 +59,28 @@ neighborhood = Neighborhood.new(
 neighborhood.save
 
 neighborhood = Neighborhood.new(
+  name: "Akihabara",
+  description: "The undisputed global capital of anime, manga, and electronics, Akihabara has evolved from a postwar black market for electrical parts into a sensory-overloading shrine to otaku culture. Towering multi-floor shops, flashing neon signage, and costumed maid café staff spilling onto the streets give the district an energy unlike anywhere else in Tokyo — unapologetically loud, niche, and entirely its own world.",
+  features: "Electronics megastores, anime and manga shops, maid cafés, retro gaming arcades, figure and collectible retailers, Yodobashi Akiba, Radio Kaikan building",
+  ward: "Chiyoda-ku",
+  latitude: "35.7023",
+  longitude: "139.7745",
+  photos: ["https://www.datocms-assets.com/101439/1738845251-akihabara.webp?h=640&w=1280&fm=avif"]
+)
+neighborhood.save
+
+neighborhood = Neighborhood.new(
+  name: "Ginza",
+  description: "Tokyo's most storied luxury district, Ginza has been synonymous with wealth, taste, and refinement since the Meiji era. Its broad, tree-lined boulevards are lined with flagship stores from the world's top fashion houses alongside venerable Japanese craft shops, Michelin-starred restaurants, and polished art galleries. On weekends the main Chuo-dori street closes to traffic entirely, transforming into an elegant pedestrian promenade.",
+  features: "Chuo-dori luxury flagships, Itoya stationery, Kabukiza Theatre, Tsukiji Outer Market nearby, high-end sushi counters, art galleries, weekend pedestrian streets, department stores",
+  ward: "Chuo-ku",
+  latitude: "35.6717",
+  longitude: "139.7650",
+  photos: ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.travelingjapan.net%2Fwp-content%2Fuploads%2F2023%2F03%2Fseiko-house-ginza-and-ginza-mitsukoshi-scaled.jpg&f=1&nofb=1&ipt=1b2dacf0ed7b2ca42fb99a885688e13e513dfc875a0daad630a4bb679eb28730"]
+)
+neighborhood.save
+
+neighborhood = Neighborhood.new(
   name: "Shinjuku",
   description: "Tokyo's most multifaceted district — home to the world's busiest train station, towering skyscrapers, the sprawling Golden Gai bar alley, and the lively Kabukicho entertainment zone. Shinjuku never sleeps and caters to everyone from salarymen to tourists to night owls.",
   features: "Golden Gai, Kabukicho, Shinjuku Gyoen National Garden, Tokyo Metropolitan Government Building observation deck, department stores, memory lane (Omoide Yokocho)",

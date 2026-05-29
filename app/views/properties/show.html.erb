@@ -213,9 +213,8 @@
         </div>
         <%
           agent_email = "#properties@#{@property.vendor}.com"
-          subject = ERB::Util.url_encode("Inquiry regarding Estralgo Meguro - Studio 302 / エストラルゴ目黒 - スタジオ302に関するお問い合わせ")
-          body = ERB::Util.url_encode("Hello,\r\n\r\nI am interested in staying at #{@property.name} from June 15th to August 2nd and would like to request more information.\r\n\r\nThank you,\r\n\r\n---\r\n\r\nはじめまして。\r\n\r\nエストラルゴ目黒 - スタジオ302に、6月15日から8月2日までの滞在を検討しており、詳細についてお伺いしたく、ご連絡いたしました。\r\n\r\nご確認のほど、よろしくお願いいたします。")
-        %>
+          subject = ERB::Util.url_encode("Inquiry regarding Prime Urban Meguro Riverfront 301 / プライムアーバン目黒リバーフロント301に関するお問い合わせ")
+          body = ERB::Util.url_encode("Hello,\r\n\r\nI am interested in staying at Prime Urban Meguro Riverfront 301 from June 15th to August 2nd and would like to request more information.\r\n\r\nThank you,\r\n\r\n---\r\n\r\nはじめまして。\r\n\r\nプライムアーバン目黒リバーフロント301に、6月15日から8月2日までの滞在を検討しており、詳細についてお伺いしたく、ご連絡いたしました。\r\n\r\nご確認のほど、よろしくお願いいたします。")        %>
         <a href="mailto:<%= agent_email %>?subject=<%= subject %>&body=<%= body %>"
           class="book-btn"
           style="text-decoration: none;">
