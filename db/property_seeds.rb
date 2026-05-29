@@ -316,7 +316,7 @@ properties_data = [
   :size=>64,
   :floors=>3,
   :description=>
-    "Feel at home wherever you choose to live with Blueground. You’ll love this beautiful Meguro furnished two bedroom apartment with its modern decor, fully equipped kitchen, and cheery living room. Ideally located, you’re close to all the best that Tokyo has to offer! (ID #TYO150)As with any Blueground apartment, you’ll find a thoughtfully designed space complete with beautiful furniture and a fully equipped kitchen in this two bedroom property. And, thanks to our superior quality mattresses, luxury linens, and towels, you can relax knowing you’ll always feel comfortably at home. When you’re ready for some fun, you can take in the Tokyo vibes or bring the entertainment to you with the premium wireless speaker or smart TV.Building amenities unique to this two bedroom apartment include an on-site:ElevatorWashing machineThe entire apartment is yours to enjoy!Throughout your stay, you’ll have access to our Client Experience team through the Blueground App. You can schedule additional cleanings, submit maintenance requests, and view our neighborhood recommendations with just a few taps.We’ll share all details upon confirmation of your stay.This prime location offers the best of Tokyo living, just steps from the famous cherry blossom-lined Meguro River. You'll have easy access to the trendy shops and cafes of Nakameguro, the sophisticated dining and nightlife of Ebisu, and the major transportation hub of Meguro Station. Despite being surrounded by these vibrant areas, your home is a peaceful oasis tucked away on a quiet street. Enjoy the convenience of multiple train lines for effortless city access, while returning to a serene, tranquil environment. It’s the perfect blend of dynamic city life and peaceful sanctuary.This Blueground apartment has flexible lease options, allowing you to book it for one month, a year, or more.",
+    "This prime location offers the best of Tokyo living, just steps from the famous cherry blossom-lined Meguro River. You'll have easy access to the trendy shops and cafes of Nakameguro, the sophisticated dining and nightlife of Ebisu, and the major transportation hub of Meguro Station. Despite being surrounded by these vibrant areas, your home is a peaceful oasis tucked away on a quiet street. Enjoy the convenience of multiple train lines for effortless city access, while returning to a serene, tranquil environment. It’s the perfect blend of dynamic city life and peaceful sanctuary.This Blueground apartment has flexible lease options, allowing you to book it for one month, a year, or more.",
   :rules=>"・One-time booking fee required・1-month refundable deposit・Rent varies by stay duration, season, etc. (dynamic pricing)・For exact rates, please check our website or contact us",
   :vendor=>"Blueground Japan",
   :vendor_image=>"https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/WOlgSDyPjI-1728616304184.png",
@@ -332,7 +332,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/Fod0ae1u0c-1757350157949.png",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/KY69JxWT5D-1757350158040.png",
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/541RvV_iEF-1757350158079.png"],
-    :stations=>["Meguro Sta. - 13 mins walk", "Nakameguro Sta. - 12 mins walk", "Ebisu Sta. - 14 mins walk"]},
+    :stations=>["Meguro Sta. - 13 mins walk", "Nakameguro Sta. - 12 mins walk"]},
 
   {:name=>"The Sanctus 202",
   :neighborhood=>"Ebisu",
@@ -500,7 +500,7 @@ properties_data = [
 
   {:name=>"SUMII Meguro Apt",
   :neighborhood=>"Meguro",
-  :availability=>"September 11th",
+  :availability=>"Sep 11th",
   :latitude=>35.6351145,
   :longitude=>139.7128182,
   :price=>448200,
@@ -531,7 +531,7 @@ properties_data = [
 
   {:name=>"SUMII Nishi-Gotanda Apt",
   :neighborhood=>"Gotanda",
-  :availability=>"September 1st",
+  :availability=>"Sep 1st",
   :latitude=>35.6280825,
   :longitude=>139.7145389,
   :price=>575100,
@@ -622,7 +622,7 @@ properties_data = [
 
   {:name=>"Dash Living Osaki - 303",
   :neighborhood=>"Shinagawa",
-  :availability=>"September 25th",
+  :availability=>"Sep 25th",
   :latitude=>35.6170776,
   :longitude=>139.723033,
   :price=>325000,

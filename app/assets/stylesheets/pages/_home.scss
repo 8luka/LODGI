@@ -6,6 +6,16 @@
   flex-direction: column;
 }
 
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
+  color: var(--ink);
+  text-align: center;
+  padding: 28px 40px 0;
+  margin: 0;
+}
+
 .search-bar-wrapper {
   display: flex;
   justify-content: center;
