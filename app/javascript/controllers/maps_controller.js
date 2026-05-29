@@ -468,7 +468,7 @@ renderFilteredProperties(properties) {
         category: this.selectedCategory,
         center_lat: this.currentViewport.centerLat,
         center_lng: this.currentViewport.centerLng,
-        radius: 2000
+        radius: 500
       })
     })
     .then((response) => {
