@@ -170,7 +170,7 @@ properties_data = [
   :vendor=>"Hmlet Japan",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/nQuMexfOpn-1725438035620.jpg",
-  :features=>["Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator", "Free internet", "Pet allowed"],
+  :features=>["Bath & WS separated", "Bicycle parking", "Delivery box", "Elevator", "Free internet"],
   :all_amenities=>["Air conditioner", "Hair dryer", "Iron", "LAN ethernet socket", "Microwave", "Refrigerator", "Washing machine"],
   :matterport_url=>"https://my.matterport.com/show/?m=rexoCpMXyxV&ts=1",
   :images=>
