@@ -1,43 +1,37 @@
 
 <div class="nb-page">
 
-  <!-- BREADCRUMB -->
-  <div class="nb-breadcrumb">
+  <%# ── BREADCRUMB ── %>
+  <nav class="nb-breadcrumb">
     <%= link_to "Tokyo", root_path %>
-    <span class="nb-bc-sep"><i class="fa-solid fa-chevron-right"></i></span>
+    <span class="nb-bc-sep">›</span>
     <%= link_to "Neighborhoods", neighborhoods_path %>
-    <span class="nb-bc-sep"><i class="fa-solid fa-chevron-right"></i></span>
+    <span class="nb-bc-sep">›</span>
     <span><%= @neighborhood.name %></span>
-  </div>
+  </nav>
 
-  <!-- HERO -->
+  <%# ── HERO ── %>
   <div class="nb-hero">
     <div class="nb-hero-content">
-      <div class="nb-hero-eyebrow">
+      <p class="nb-eyebrow">
         <i class="fa-solid fa-location-dot"></i>
         <%= @neighborhood.ward %> Ward · Tokyo
-      </div>
-
-      <h1 class="nb-hero-title"><%= @neighborhood.name %></h1>
-
-      <p class="nb-hero-lead">
-        <%= @neighborhood.description %>
       </p>
-
+      <h1 class="nb-hero-title"><%= @neighborhood.name %></h1>
+      <p class="nb-hero-lead"><%= @neighborhood.description %></p>
       <div class="nb-hero-actions">
         <%= link_to "View listings in #{@neighborhood.name}",
-            properties_path(neighborhood: @neighborhood.id),
-            class: "nb-btn-primary" %>
-
-        <%= link_to "Back to map",
-            root_path(anchor: "map"),
-            class: "nb-btn-secondary" %>
+              "#properties",
+              class: "nb-btn nb-btn--primary" %>
+        <%= link_to "Back to home",
+              root_path(anchor: "map"),
+              class: "nb-btn nb-btn--secondary" %>
       </div>
     </div>
 
-    <!-- HERO MAP -->
-    <div class="nb-map-placeholder nb-hero-map">
-      <div class="nb-map-inner">
+    <%# Swap this div for a real map embed when API is ready %>
+    <div class="nb-hero-map">
+      <div class="nb-map-empty">
         <i class="fa-regular fa-map"></i>
         <p>Map coming soon</p>
         <small>Connect Google Maps or Mapbox</small>
@@ -45,586 +39,174 @@
     </div>
   </div>
 
-  <!-- BODY -->
+  <%# ── BODY (main + sidebar) ── %>
   <div class="nb-body">
 
-    <!-- MAIN -->
+    <%# ── MAIN ── %>
     <div class="nb-main">
 
-      <!-- ABOUT -->
+      <%# About %>
       <section class="nb-section">
-        <div class="nb-section-label">
-          About the area
-        </div>
-
-        <div class="nb-prose">
-          <%= @neighborhood.description %>
-        </div>
+        <h2 class="nb-section-label">About the area</h2>
+        <p class="nb-prose"><%= @neighborhood.description %></p>
       </section>
 
-      <div class="nb-divider"></div>
+      <hr class="nb-divider">
 
-      <!-- FEATURES -->
+      <%# Features %>
       <section class="nb-section">
-        <div class="nb-section-label">
-          What makes it special
-        </div>
-
+        <h2 class="nb-section-label">What makes it special</h2>
         <div class="nb-features-grid">
           <%
             features = @neighborhood.features.is_a?(Array) ?
               @neighborhood.features :
               @neighborhood.features.to_s.split(",").map(&:strip)
           %>
-
-          <% features.each do |feature| %>
-            <div class="nb-feature-card">
-              <div class="nb-feature-icon">✦</div>
-
-              <div class="nb-feature-text">
-                <%= feature %>
+          <% if features.any? %>
+            <% features.each do |f| %>
+              <div class="nb-feature-card">
+                <span class="nb-feature-icon">✦</span>
+                <span class="nb-feature-text"><%= f %></span>
               </div>
-            </div>
-          <% end %>
-
-          <% if features.empty? %>
-            <p class="nb-empty">
-              No features listed yet.
-            </p>
+            <% end %>
+          <% else %>
+            <p class="nb-empty">No features listed yet.</p>
           <% end %>
         </div>
       </section>
 
-      <div class="nb-divider"></div>
+      <hr class="nb-divider">
 
-      <!-- houses / VISUAL -->
+      <%# Available homes %>
       <section class="nb-section">
-        <div class="nb-section-label">
-          Homes available in <%= @neighborhood.name %>
+        <div class="nb-properties-header">
+          <h2 class="nb-section-label" id="properties">All properties in <%= @neighborhood.name %></h2>
+          <span class="nb-properties-count">
+            <%= @neighborhood.properties.count %> listing<%= @neighborhood.properties.count == 1 ? "" : "s" %>
+          </span>
         </div>
 
-        <div class="nb-hero-visual nb-map-visual">
-          <div class="nb-hero-overlay">
-            <div class="nb-hero-stat">
-              <div class="nb-hero-stat-num">
-                <%= @neighborhood.properties.count rescue "—" %>
-              </div>
+        <% if @neighborhood.properties.any? %>
+          <div class="nb-properties-grid">
+            <% @neighborhood.properties.each do |property| %>
+              <%= link_to property_path(property), class: "nb-prop-card" do %>
 
-              <div class="nb-hero-stat-label">
-                Available homes
-              </div>
-            </div>
+                <%# Image %>
+                <% img = property.images.first if property.respond_to?(:images) %>
+                <div class="nb-prop-img <% unless img.present? %>nb-prop-img--empty<% end %>"
+                     <% if img.present? %>style="background-image:url('<%= img %>')"<% end %>>
+                  <% unless img.present? %>
+                    <i class="fa-regular fa-image"></i>
+                  <% end %>
+                </div>
+
+                <%# Info %>
+                <div class="nb-prop-body">
+                  <div class="nb-prop-name"><%= property.name %></div>
+
+                  <div class="nb-prop-tags">
+                    <% if property.try(:layout).present? %>
+                      <span><%= property.layout %></span>
+                    <% end %>
+                    <% if property.try(:size).present? %>
+                      <span><%= property.size.to_i %>㎡</span>
+                    <% end %>
+                    <% if property.try(:bedrooms).present? %>
+                      <span><%= property.bedrooms %> bed</span>
+                    <% end %>
+                  </div>
+
+
+                  <div class="nb-prop-footer">
+                    <div class="nb-prop-price">
+                      <% if property.try(:price).present? %>
+                        ¥<%= number_with_delimiter(property.price.to_i) %>
+                        <span>/ mo</span>
+                      <% else %>
+                        On request
+                      <% end %>
+                    </div>
+
+                    <% if property.try(:availability).present? %>
+                      <span class="nb-prop-badge nb-prop-badge--available">Available <%= property.availability %></span>
+                    <% else %>
+                      <span class="nb-prop-badge nb-prop-badge--unavailable">Unavailable</span>
+                    <% end %>
+                  </div>
+
+                </div>
+
+              <% end %>
+            <% end %>
           </div>
-        </div>
+        <% else %>
+          <p class="nb-empty">No homes listed in this neighbourhood yet.</p>
+        <% end %>
       </section>
 
-    </div>
+    </div><%# /nb-main %>
 
-    <!-- SIDEBAR -->
-    <div class="nb-sidebar">
+    <%# ── SIDEBAR ── %>
+    <aside class="nb-sidebar">
 
-      <!-- QUICK FACTS -->
+      <%# Quick facts %>
       <div class="nb-card">
-        <div class="nb-card-head">
-          Quick facts
-        </div>
-
-        <div class="nb-fact-list">
-
-          <div class="nb-fact">
-            <span class="nb-fact-icon"><i class="fa-solid fa-city"></i></span>
+        <div class="nb-card-head">Quick facts</div>
+        <ul class="nb-fact-list">
+          <li class="nb-fact">
+            <i class="fa-solid fa-city nb-fact-icon"></i>
             <div>
               <div class="nb-fact-label">Ward</div>
               <div class="nb-fact-val"><%= @neighborhood.ward %></div>
             </div>
-          </div>
-
-          <div class="nb-fact">
-            <span class="nb-fact-icon"><i class="fa-solid fa-house"></i></span>
+          </li>
+          <li class="nb-fact">
+            <i class="fa-solid fa-house nb-fact-icon"></i>
             <div>
               <div class="nb-fact-label">Listings</div>
-              <div class="nb-fact-val">
-                <%= @neighborhood.properties.count rescue "—" %> homes
-              </div>
+              <div class="nb-fact-val"><%= @neighborhood.properties.count rescue "—" %> homes</div>
             </div>
-          </div>
-
-          <div class="nb-fact">
-            <span class="nb-fact-icon"><i class="fa-solid fa-train-subway"></i></span>
+          </li>
+          <li class="nb-fact">
+            <i class="fa-solid fa-train-subway nb-fact-icon"></i>
             <div>
               <div class="nb-fact-label">Transit</div>
               <div class="nb-fact-val">Multiple lines</div>
             </div>
-          </div>
-
-          <div class="nb-fact">
-            <span class="nb-fact-icon"><i class="fa-solid fa-language"></i></span>
+          </li>
+          <li class="nb-fact">
+            <i class="fa-solid fa-language nb-fact-icon"></i>
             <div>
               <div class="nb-fact-label">English support</div>
               <div class="nb-fact-val">Available</div>
             </div>
-          </div>
-
-        </div>
+          </li>
+        </ul>
       </div>
 
-      <!-- OTHER NEIGHBORHOODS -->
+      <%# Other neighborhoods %>
       <div class="nb-card">
-        <div class="nb-card-head">
-          Other neighborhoods
-        </div>
-
-        <div class="nb-nb-list">
+        <div class="nb-card-head">Other neighborhoods</div>
+        <div class="nb-other-list">
           <% Neighborhood.where.not(id: @neighborhood.id).limit(5).each do |nb| %>
-            <%= link_to neighborhood_path(nb), class: "nb-nb-item" do %>
-              <span class="nb-nb-name">
-                <%= nb.name %>
-              </span>
-
-              <i class="fa-solid fa-arrow-right nb-nb-arrow"></i>
+            <%= link_to neighborhood_path(nb), class: "nb-other-item" do %>
+              <span><%= nb.name %></span>
+              <i class="fa-solid fa-arrow-right"></i>
             <% end %>
           <% end %>
         </div>
       </div>
 
-      <!-- CTA -->
-      <div class="nb-card nb-card-cta">
-        <div class="nb-cta-title">
-          Ready to find your home?
-        </div>
-
-        <div class="nb-cta-body">
-          Browse all available furnished apartments in
-          <%= @neighborhood.name %>.
-        </div>
-
+      <%# CTA %>
+      <div class="nb-card nb-card--cta">
+        <p class="nb-cta-title">Ready to find your home?</p>
+        <p class="nb-cta-body">Browse furnished apartments in <%= @neighborhood.name %>.</p>
         <%= link_to "See listings",
-            properties_path(neighborhood: @neighborhood.id),
-            class: "nb-btn-primary nb-btn-full" %>
+              properties_path(neighborhood: @neighborhood.id),
+              class: "nb-btn nb-btn--primary nb-btn--full" %>
       </div>
 
-    </div>
+    </aside>
 
-  </div>
-</div>
-
-<style>
-  :root {
-    --cream: #FAF7F2;
-    --cream-dark: #F0EBE1;
-    --ink: #1A1714;
-    --ink-soft: #4A4540;
-    --ink-muted: #8A8480;
-    --terra: #C8553D;
-    --terra-hover: #b34832;
-    --green: #3D6B4F;
-    --border: rgba(26,23,20,0.10);
-    --border-md: rgba(26,23,20,0.18);
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-    --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
-    --radius: 12px;
-    --radius-lg: 16px;
-  }
-
-  .nb-page {
-    max-width: 1060px;
-    margin: 0 auto;
-    padding: 28px 32px 80px;
-    font-family: 'DM Sans', system-ui, sans-serif;
-    color: var(--ink);
-  }
-
-  .nb-breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 24px;
-    font-size: 13px;
-    color: var(--ink-muted);
-  }
-
-  .nb-breadcrumb a {
-    color: var(--ink-muted);
-    text-decoration: none;
-  }
-
-  .nb-breadcrumb a:hover {
-    color: var(--ink);
-    text-decoration: underline;
-  }
-
-  .nb-bc-sep {
-    font-size: 10px;
-  }
-
-  .nb-hero {
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: 32px;
-    align-items: center;
-    margin-bottom: 52px;
-  }
-
-  .nb-hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 14px;
-    color: var(--terra);
-    font-size: 11.5px;
-    font-weight: 500;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-
-  .nb-hero-title {
-    margin-bottom: 16px;
-    font-family: 'DM Serif Display', Georgia, serif;
-    font-size: 46px;
-    font-weight: 400;
-    line-height: 1.1;
-  }
-
-  .nb-hero-lead {
-    max-width: 520px;
-    margin-bottom: 28px;
-    color: var(--ink-soft);
-    font-size: 15.5px;
-    line-height: 1.75;
-  }
-
-  .nb-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .nb-btn-primary,
-  .nb-btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 11px 22px;
-    border-radius: 50px;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background .15s, color .15s, transform .1s;
-  }
-
-  .nb-btn-primary {
-    background: var(--terra);
-    color: white;
-    font-weight: 500;
-  }
-
-  .nb-btn-primary:hover {
-    background: var(--terra-hover);
-  }
-
-  .nb-btn-secondary {
-    background: white;
-    border: 0.5px solid var(--border-md);
-    color: var(--ink-soft);
-    font-weight: 400;
-  }
-
-  .nb-btn-secondary:hover {
-    background: var(--cream-dark);
-    color: var(--ink);
-  }
-
-  .nb-btn-primary:active,
-  .nb-btn-secondary:active {
-    transform: scale(.99);
-  }
-
-  .nb-btn-full {
-    width: 100%;
-  }
-
-  .nb-body {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 292px;
-    gap: 32px;
-    align-items: start;
-  }
-
-  .nb-section {
-    margin-bottom: 4px;
-  }
-
-  .nb-section-label {
-    margin-bottom: 14px;
-    color: var(--ink-muted);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-
-  .nb-prose {
-    color: var(--ink);
-    font-size: 15px;
-    line-height: 1.78;
-  }
-
-  .nb-divider {
-    height: 0.5px;
-    margin: 32px 0;
-    background: var(--border);
-  }
-
-  .nb-features-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .nb-feature-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 16px;
-    background: white;
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    transition: box-shadow .15s;
-  }
-
-  .nb-feature-card:hover {
-    box-shadow: var(--shadow-sm);
-  }
-
-  .nb-feature-icon {
-    flex-shrink: 0;
-    margin-top: 1px;
-    color: var(--terra);
-    font-size: 14px;
-  }
-
-  .nb-feature-text {
-    color: var(--ink);
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .nb-empty {
-    color: var(--ink-muted);
-    font-size: 13.5px;
-  }
-
-  .nb-map-placeholder {
-    height: 300px;
-    overflow: hidden;
-    background: var(--cream-dark);
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius-lg);
-  }
-
-  .nb-hero-map {
-    height: 320px;
-  }
-
-  .nb-map-inner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--ink-muted);
-  }
-
-  .nb-map-inner i {
-    font-size: 40px;
-  }
-
-  .nb-map-inner p {
-    color: var(--ink-soft);
-    font-size: 14px;
-  }
-
-  .nb-map-inner small {
-    font-size: 12px;
-  }
-
-  .nb-hero-visual {
-    position: relative;
-    height: 320px;
-    overflow: hidden;
-    border-radius: var(--radius-lg);
-    background: linear-gradient(135deg, #2C1810 0%, #8B4513 50%, #C9973A 100%);
-  }
-
-  .nb-map-visual {
-    height: 300px;
-  }
-
-  .nb-hero-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    padding: 22px;
-    background: rgba(0,0,0,0.25);
-  }
-
-  .nb-hero-stat {
-    padding: 14px 20px;
-    color: white;
-    background: rgba(255,255,255,0.15);
-    border: 0.5px solid rgba(255,255,255,0.25);
-    border-radius: var(--radius);
-    backdrop-filter: blur(8px);
-  }
-
-  .nb-hero-stat-num {
-    margin-bottom: 4px;
-    font-family: 'DM Serif Display', Georgia, serif;
-    font-size: 32px;
-    line-height: 1;
-  }
-
-  .nb-hero-stat-label {
-    font-size: 12px;
-    opacity: .85;
-  }
-
-  .nb-sidebar {
-    position: sticky;
-    top: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .nb-card {
-    overflow: hidden;
-    background: white;
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius-lg);
-  }
-
-  .nb-card-head {
-    padding: 14px 18px;
-    border-bottom: 0.5px solid var(--border);
-    color: var(--ink);
-    font-size: 13px;
-    font-weight: 500;
-  }
-
-  .nb-fact-list,
-  .nb-nb-list {
-    padding: 4px 0;
-  }
-
-  .nb-fact {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 11px 18px;
-    border-bottom: 0.5px solid var(--border);
-  }
-
-  .nb-fact:last-child {
-    border-bottom: none;
-  }
-
-  .nb-fact-icon {
-    width: 26px;
-    flex-shrink: 0;
-    color: var(--ink-soft);
-    text-align: center;
-  }
-
-  .nb-fact-icon i {
-    font-size: 15px;
-  }
-
-  .nb-fact-label {
-    margin-bottom: 1px;
-    color: var(--ink-muted);
-    font-size: 11.5px;
-  }
-
-  .nb-fact-val {
-    color: var(--ink);
-    font-size: 13.5px;
-    font-weight: 500;
-  }
-
-  .nb-nb-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 11px 18px;
-    border-bottom: 0.5px solid var(--border);
-    text-decoration: none;
-    transition: background .12s;
-  }
-
-  .nb-nb-item:last-child {
-    border-bottom: none;
-  }
-
-  .nb-nb-item:hover {
-    background: var(--cream-dark);
-  }
-
-  .nb-nb-name {
-    color: var(--ink);
-    font-size: 13.5px;
-  }
-
-  .nb-nb-arrow {
-    color: var(--ink-muted);
-    font-size: 12px;
-  }
-
-  .nb-card-cta {
-    padding: 20px;
-  }
-
-  .nb-cta-title {
-    margin-bottom: 6px;
-    font-family: 'DM Serif Display', Georgia, serif;
-    font-size: 19px;
-  }
-
-  .nb-cta-body {
-    margin-bottom: 16px;
-    color: var(--ink-muted);
-    font-size: 13.5px;
-    line-height: 1.55;
-  }
-
-  @media (max-width: 768px) {
-    .nb-page {
-      padding: 20px 16px 60px;
-    }
-
-    .nb-hero,
-    .nb-body {
-      grid-template-columns: 1fr;
-    }
-
-    .nb-hero-title {
-      font-size: 32px;
-    }
-
-    .nb-hero-map,
-    .nb-map-visual {
-      height: 220px;
-    }
-
-    .nb-sidebar {
-      position: static;
-    }
-
-    .nb-features-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-```
+  </div><%# /nb-body %>
+</div><%# /nb-page %>

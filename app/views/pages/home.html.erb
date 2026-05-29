@@ -1,4 +1,5 @@
 <section class="hero" id="hero">
+  <h1>Find furnished apartment stays in Tokyo</h1>
   <div class="search-bar-wrapper">
     <div class="search-bar">
       <div class="search-icon">
@@ -7,14 +8,11 @@
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
       </div>
-
       <input type="text" placeholder="Search Tokyo neighborhood, station...">
-
       <div class="search-pills">
         <div class="search-pill">Dates</div>
         <div class="search-pill">Guests</div>
       </div>
-
       <button class="search-btn" aria-label="Search">
         <svg viewBox="0 0 24 24">
           <circle cx="11" cy="11" r="8"></circle>
@@ -23,14 +21,11 @@
       </button>
     </div>
   </div>
-
-
   <div
     data-controller="maps"
     data-api-key="<%= ENV['MAPS_JS_API'] %>"
     id="map-container"
     data-maps-properties-value="<%= @properties %>">
-
     <div class="property-filters">
 
       <div class="price-filter">
@@ -71,245 +66,200 @@
       </div>
 
       <div class="filter-group">
-
         <label class="filter-label">
           Layout
         </label>
-
         <select
           data-maps-target="layoutFilter"
           data-action="change->maps#applyFilters">
         </select>
-
       </div>
       <div class="filter-group">
-
         <label class="filter-label">
           Neighborhood
         </label>
-
         <select
           data-maps-target="neighborhoodFilter"
           data-action="change->maps#applyFilters">
         </select>
-
       </div>
 
       <button
         data-action="click->maps#clearFilters">
-        Clear Filters
-      </button>
-
-    </div>
-
-    <div class="map-controls">
-
-      <button
+          Clear Filters
+        </button>
+      </div>
+      <div class="map-controls">
+        <button
         data-category="restaurant"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Restaurants
-      </button>
-
-      <button
+          Restaurants
+        </button>
+        <button
         data-category="cafe"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Cafes
-      </button>
-
-      <button
+          Cafes
+        </button>
+        <button
         data-category="bar"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Bars
-      </button>
-
-      <button
+          Bars
+        </button>
+        <button
         data-category="supermarket"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Supermarkets
-      </button>
-
-      <button
+          Supermarkets
+        </button>
+        <button
         data-category="convenience_store"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Convenience Stores
-      </button>
-
-      <button
+          Convenience Stores
+        </button>
+        <button
         data-category="gym"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Gyms
-      </button>
-
-      <button
+          Gyms
+        </button>
+        <button
         data-category="train_station"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Train Stations
-      </button>
-
-      <button
+          Train Stations
+        </button>
+        <button
         data-category="bus_station"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Bus Stations
-      </button>
-
-      <button
+          Bus Stations
+        </button>
+        <button
         data-category="parking"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Parking
-      </button>
-
-      <button
+          Parking
+        </button>
+        <button
         data-category="park"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Parks
-      </button>
-
-      <button
+          Parks
+        </button>
+        <button
         data-category="tourist_attraction"
         data-maps-target="categoryButton"
         data-action="click->maps#selectCategory">
-        Tourist Attractions
-      </button>
-
-      <button
+          Tourist Attractions
+        </button>
+        <button
         data-maps-target="searchButton"
         data-action="click->maps#searchArea">
-        Search This Area
-      </button>
-
-      <div class="transit-toggle-container">
-      <span class="transit-label">
-        Transit
-      </span>
-
-      <label class="switch">
-        <input
+          Search This Area
+        </button>
+        <div class="transit-toggle-container">
+          <span class="transit-label">
+            Transit
+          </span>
+          <label class="switch">
+            <input
           type="checkbox"
           data-action="change->maps#toggleTransit"
-          data-maps-target="transitToggle"
-        >
-
-        <span class="slider"></span>
-      </label>
-
-    </div>
-    </div>
-
-    <div
+              data-maps-target="transitToggle"
+              >
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div
       id="map"
       data-maps-target="map">
-    </div>
-
-  </div>
-
-
-
-<div class="scroll-cta">
-  <a href="#neighborhoods" class="scroll-btn">
-    Explore neighborhoods
-    <svg viewBox="0 0 24 24">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-  </a>
-</div>
-</section>
-
-
-<!-- ── neighborhoods ── -->
-<section id="neighborhoods">
-  <div class="section-eyebrow">Tokyo's best areas</div>
-
-  <h2 class="section-title">
-    Find your <em>neighborhood</em>
-  </h2>
-
-  <p class="section-sub">
-    From quiet backstreets in Shimokitazawa to the pulse of Shinjuku —
-    every home is fully furnished and ready from day one.
-  </p>
-
-  <div class="grid">
-  <% @neighborhoods.each do |neighborhood| %>
-    <%= link_to neighborhood_path(neighborhood), class: "card" do %>
-      <div class="card-img">
-        <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');">></div>
-
-        <div class="card-tag">
-          <%= neighborhood.ward %>
         </div>
       </div>
-
-      <div class="card-body">
-        <div class="card-name">
-          <%= neighborhood.name %>
+      <div class="scroll-cta">
+        <a href="#neighborhoods" class="scroll-btn">
+          Explore neighborhoods
+          <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <!-- ── neighborhoods ── -->
+    <section id="neighborhoods">
+      <div class="section-eyebrow">Tokyo's best areas</div>
+      <h2 class="section-title">
+        Find your <em>neighborhood</em>
+      </h2>
+      <p class="section-sub">
+        From quiet backstreets in Shimokitazawa to the pulse of Shinjuku —
+        every home is fully furnished and ready from day one.
+      </p>
+      <div class="grid">
+        <% @neighborhoods.each do |neighborhood| %>
+          <%= link_to neighborhood_path(neighborhood), class: "card" do %>
+            <div class="card-img">
+              <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');"></div>
+              <div class="card-tag">
+                <%= neighborhood.ward %>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">
+                <%= neighborhood.name %>
+              </div>
+              <div class="card-desc">
+                <%= neighborhood.description.truncate(85, omission: '...', separator: ' ') %>
+              </div>
+              <div class="card-meta">
+                <div class="card-price">
+                  View area
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about__grid">
+        <div class="about__copy">
+          <div class="about__eyebrow">Why Lodgi</div>
+          <h2 class="about__title">Tokyo, <em>from day one</em></h2>
+          <p class="about__body">
+            Fully furnished homes across Tokyo's most liveable neighborhoods —
+            for foreigners who want to arrive and just live. No guarantors.
+            No key money. English support, always.
+          </p>
+          <%= link_to "Browse homes", properties_path, class: "about__cta" %>
         </div>
-
-        <div class="card-desc">
-          <%= neighborhood.description.truncate(85, omission: '...', separator: ' ') %>
-        </div>
-
-        <div class="card-meta">
-          <div class="card-price">
-            View area
+        <div class="about__stats">
+          <div class="about__stat">
+            <div class="about__stat-number">158</div>
+            <div class="about__stat-label">Furnished homes</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">12</div>
+            <div class="about__stat-label">Neighborhoods</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">4.9</div>
+            <div class="about__stat-label">Average rating</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">0</div>
+            <div class="about__stat-label">Key money required</div>
           </div>
         </div>
       </div>
-    <% end %>
-  <% end %>
-</div>
-</section>
-
-
-<section class="about" id="about">
-  <div class="about__grid">
-
-    <div class="about__copy">
-      <div class="about__eyebrow">Why Lodgi</div>
-      <h2 class="about__title">Tokyo, <em>from day one</em></h2>
-      <p class="about__body">
-        Fully furnished homes across Tokyo's most liveable neighborhoods —
-        for foreigners who want to arrive and just live. No guarantors.
-        No key money. English support, always.
-      </p>
-      <%= link_to "Browse homes", properties_path, class: "about__cta" %>
-    </div>
-
-    <div class="about__stats">
-      <div class="about__stat">
-        <div class="about__stat-number">158</div>
-        <div class="about__stat-label">Furnished homes</div>
-      </div>
-      <div class="about__stat">
-        <div class="about__stat-number">12</div>
-        <div class="about__stat-label">Neighborhoods</div>
-      </div>
-      <div class="about__stat">
-        <div class="about__stat-number">4.9</div>
-        <div class="about__stat-label">Average rating</div>
-      </div>
-      <div class="about__stat">
-        <div class="about__stat-number">0</div>
-        <div class="about__stat-label">Key money required</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Lodgi</div>
-  <div>Tokyo short-term rentals for foreigners · 2025</div>
-  <div>English support · Privacy · Terms</div>
-</footer>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">Lodgi</div>
+      <div>Tokyo short-term rentals for foreigners · 2026</div>
+      <div>English support · Privacy · Terms</div>
+    </footer>

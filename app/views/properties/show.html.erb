@@ -1,5 +1,4 @@
 <div class="page">
-
   <!-- BREADCRUMB -->
   <div class="breadcrumb mt-10">
     <a href="index.html">Tokyo</a>
@@ -8,19 +7,17 @@
     <i class="fa-solid fa-chevron-right"></i>
     <span>Shinjuku Studio</span>
   </div>
-
   <!-- TITLE -->
   <h1 class="apt-title"><%= @property.name %></h1>
   <div class="apt-meta">
-    <span><i class="fa-solid fa-location-dot"></i> <%= @property.neighborhood.name %>, Tokyo</span>
+    <%= link_to neighborhood_path(@property.neighborhood.name), class: "apt-meta-link", style: "text-decoration: none; color: inherit;" do %>
+      <span><i class="fa-solid fa-location-dot"></i> <%= @property.neighborhood.name %>, Tokyo</span>
+    <% end %>
   </div>
-
   <!-- TWO-COLUMN LAYOUT -->
   <div class="content-grid">
-
     <!-- LEFT -->
     <div class="left">
-
       <!-- GALLERY -->
       <div class="gallery" data-controller="gallery">
         <% @property.images.first(3).each do |image| %>
@@ -38,13 +35,11 @@
             <i class="fa-regular fa-grid-2"></i> Show all <%= @property.images.length %> photos
           </button>
         </div>
-
         <%# Hidden links for remaining images so GLightbox knows about them %>
         <% @property.images.drop(4).each do |image| %>
           <a href="<%= image %>" class="glightbox" style="display:none;"></a>
         <% end %>
       </div>
-
       <!-- DESCRIPTION -->
       <div class="section-label">About this property</div>
       <div data-controller="property-description">
@@ -62,116 +57,99 @@
           </button>
         <% end %>
       </div>
-
-
       <div class="divider"></div>
-
       <!-- AMENITIES -->
       <div class="section-label">Amenities</div>
       <div class="amenities-grid">
-
         <div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-soap"></i></div>
-  <div>
-    <div class="am-name">Washing machine</div>
-    <div class="am-sub">In-unit, front-load</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-snowflake"></i></div>
-  <div>
-    <div class="am-name">Air conditioning</div>
-    <div class="am-sub">Hot &amp; cold, all rooms</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-wifi"></i></div>
-  <div>
-    <div class="am-name">High-speed WiFi</div>
-    <div class="am-sub">600 Mbps fibre</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-kitchen-set"></i></div>
-  <div>
-    <div class="am-name">Full kitchen</div>
-    <div class="am-sub">Induction + microwave</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-couch"></i></div>
-  <div>
-    <div class="am-name">Fully furnished</div>
-    <div class="am-sub">Sofa, bed, desk, storage</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-  <div>
-    <div class="am-name">Underfloor heating</div>
-    <div class="am-sub">Bathroom &amp; hallway</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-tv"></i></div>
-  <div>
-    <div class="am-name">Smart TV</div>
-    <div class="am-sub">55", Netflix ready</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-lock"></i></div>
-  <div>
-    <div class="am-name">Smart lock</div>
-    <div class="am-sub">Keyless entry, app access</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-shower"></i></div>
-  <div>
-    <div class="am-name">Shower &amp; bathtub</div>
-    <div class="am-sub">Separate unit</div>
-  </div>
-</div>
-
-<div class="am-item">
-  <div class="am-icon"><i class="fa-solid fa-elevator"></i></div>
-  <div>
-    <div class="am-name">Elevator</div>
-    <div class="am-sub">7-floor building</div>
-  </div>
-</div>
-
-<div class="am-item na">
-  <div class="am-icon"><i class="fa-solid fa-square-parking"></i></div>
-  <div>
-    <div class="am-name">Parking</div>
-    <div class="am-sub">Not included</div>
-  </div>
-</div>
-
-<div class="am-item na">
-  <div class="am-icon"><i class="fa-solid fa-bicycle"></i></div>
-  <div>
-    <div class="am-name">Bike storage</div>
-    <div class="am-sub">Not available</div>
-  </div>
-</div>
-
+          <div class="am-icon"><i class="fa-solid fa-soap"></i></div>
+          <div>
+            <div class="am-name">Washing machine</div>
+            <div class="am-sub">In-unit, front-load</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-snowflake"></i></div>
+          <div>
+            <div class="am-name">Air conditioning</div>
+            <div class="am-sub">Hot &amp; cold, all rooms</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-wifi"></i></div>
+          <div>
+            <div class="am-name">High-speed WiFi</div>
+            <div class="am-sub">600 Mbps fibre</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+          <div>
+            <div class="am-name">Full kitchen</div>
+            <div class="am-sub">Induction + microwave</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-couch"></i></div>
+          <div>
+            <div class="am-name">Fully furnished</div>
+            <div class="am-sub">Sofa, bed, desk, storage</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+          <div>
+            <div class="am-name">Underfloor heating</div>
+            <div class="am-sub">Bathroom &amp; hallway</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-tv"></i></div>
+          <div>
+            <div class="am-name">Smart TV</div>
+            <div class="am-sub">55", Netflix ready</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-lock"></i></div>
+          <div>
+            <div class="am-name">Smart lock</div>
+            <div class="am-sub">Keyless entry, app access</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-shower"></i></div>
+          <div>
+            <div class="am-name">Shower &amp; bathtub</div>
+            <div class="am-sub">Separate unit</div>
+          </div>
+        </div>
+        <div class="am-item">
+          <div class="am-icon"><i class="fa-solid fa-elevator"></i></div>
+          <div>
+            <div class="am-name">Elevator</div>
+            <div class="am-sub">7-floor building</div>
+          </div>
+        </div>
+        <div class="am-item na">
+          <div class="am-icon"><i class="fa-solid fa-square-parking"></i></div>
+          <div>
+            <div class="am-name">Parking</div>
+            <div class="am-sub">Not included</div>
+          </div>
+        </div>
+        <div class="am-item na">
+          <div class="am-icon"><i class="fa-solid fa-bicycle"></i></div>
+          <div>
+            <div class="am-name">Bike storage</div>
+            <div class="am-sub">Not available</div>
+          </div>
+        </div>
       </div>
-    </div><!-- /left -->
-
+    </div>
+    <!-- /left -->
     <!-- RIGHT SIDEBAR -->
     <div class="right">
-
       <!-- MAP CARD -->
       <div class="map-card">
         <div class="map-preview" onclick="openMap()">
@@ -199,7 +177,6 @@
             <i class="fa-solid fa-expand"></i> Expand
           </button>
         </div>
-
         <div class="map-card-body">
           <% @property.stations.each do |station| %>
             <div class="map-station">
@@ -207,23 +184,19 @@
               <%= station %>
             </div>
           <% end %>
-          <a href="neighborhood.html?area=shinjuku" class="nb-link">
+          <%= link_to neighborhood_path(@property.neighborhood.id), class: "nb-link" do %>
             <i class="fa-regular fa-map"></i>
             Explore <%= @property.neighborhood.name %>
             <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <% end %>
         </div>
-
-
       </div>
-
       <!-- PRICE CARD -->
       <div class="price-card">
         <div class="price-main"><%= "¥#{@property.price}" %> <span>/ month</span></div>
         <div class="price-note">
-          Price not exact<br>
+          <%= "Available #{@property.availability}" %><br>
         </div>
-
         <div class="stay-dates" data-controller="date-picker">
           <div class="date-field">
             <label class="date-label" for="start_date">Check-in</label>
@@ -238,18 +211,18 @@
                   data-action="change->date-picker#onChange">
           </div>
         </div>
-
         <%
           agent_email = "#properties@#{@property.vendor}.com"
-          subject = ERB::Util.url_encode("Inquiry regarding Estralgo Meguro - Studio 302 / エストラルゴ目黒 - スタジオ302に関するお問い合わせ")
-          body = ERB::Util.url_encode("Hello,\r\n\r\nI am interested in staying at #{@property.name} from June 15th to August 2nd and would like to request more information.\r\n\r\nThank you,\r\n\r\n---\r\n\r\nはじめまして。\r\n\r\nエストラルゴ目黒 - スタジオ302に、6月15日から8月2日までの滞在を検討しており、詳細についてお伺いしたく、ご連絡いたしました。\r\n\r\nご確認のほど、よろしくお願いいたします。")
-        %>
-
-        <a href="mailto:<%= agent_email %>?subject=<%= subject %>&body=<%= body %>" class="book-btn">
+          subject = ERB::Util.url_encode("Inquiry regarding Prime Urban Meguro Riverfront 301 / プライムアーバン目黒リバーフロント301に関するお問い合わせ")
+          body = ERB::Util.url_encode("Hello,\r\n\r\nI am interested in staying at Prime Urban Meguro Riverfront 301 from June 15th to August 2nd and would like to request more information.\r\n\r\nThank you,\r\n\r\n---\r\n\r\nはじめまして。\r\n\r\nプライムアーバン目黒リバーフロント301に、6月15日から8月2日までの滞在を検討しており、詳細についてお伺いしたく、ご連絡いたしました。\r\n\r\nご確認のほど、よろしくお願いいたします。")        %>
+        <a href="mailto:<%= agent_email %>?subject=<%= subject %>&body=<%= body %>"
+          class="book-btn"
+          style="text-decoration: none;">
           Request to book
         </a>
       </div>
-
-    </div><!-- /right -->
-  </div><!-- /content-grid -->
+    </div>
+    <!-- /right -->
+  </div>
+  <!-- /content-grid -->
 </div>
