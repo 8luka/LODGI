@@ -12,5 +12,7 @@ class PagesController < ApplicationController
       :stations,
       :images
     ).as_json)
+
+    @neighborhoods = Neighborhood.all
   end
 end
