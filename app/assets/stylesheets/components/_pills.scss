@@ -1,0 +1,27 @@
+.availability-pill {
+  display: inline-block;
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+
+  border: 1px solid;
+}
+
+.available-pill {
+  color: #198754;
+  border-color: #198754;
+  background-color: transparent;
+}
+
+.unavailable-pill {
+  color: #6c757d;
+  border-color: #6c757d;
+  background-color: transparent;
+}

@@ -13,7 +13,8 @@ class PagesController < ApplicationController
           price: property.price,
           stations: property.stations,
           images: property.images,
-          neighborhood_name: property.neighborhood.name
+          neighborhood_name: property.neighborhood.name,
+          availability: property.availability
         }
       end
     )
