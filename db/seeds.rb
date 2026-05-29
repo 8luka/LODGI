@@ -26,28 +26,6 @@ neighborhood = Neighborhood.new(
 neighborhood.save
 
 neighborhood = Neighborhood.new(
-  name: "Shinagawa",
-  description: "One of Tokyo's oldest post towns along the historic Tokaido highway, Shinagawa has reinvented itself as a sleek transit hub and business district while retaining pockets of old-town charm. Its waterfront location along Tokyo Bay gives it a spacious, open feel rarely found this close to the city center.",
-  features: "Shinagawa Aquarium, Tennozu Isle art district, Togoshi Ginza shopping street, waterfront promenades, business hotel clusters, historic Tokaido shukuba townscape",
-  ward: "Shinagawa-ku",
-  latitude: "35.6284",
-  longitude: "139.7387",
-  photos: []
-)
-neighborhood.save
-
-neighborhood = Neighborhood.new(
-  name: "Gotanda",
-  description: "A hardworking, unpretentious district that sits at the crossroads of Tokyo's everyday city life. Gotanda hums with salaryman izakayas, ramen shops, and karaoke bars by night, while its riverside areas and quiet backstreets offer a more relaxed side. It lacks the polish of its neighbors but makes up for it with genuine, unfiltered Tokyo energy.",
-  features: "Meguro River riverside walks, dense izakaya alleys, Gotanda Film Center, budget-friendly ramen and yakiniku, lively nightlife strips, easy Yamanote Line access",
-  ward: "Shinagawa-ku",
-  latitude: "35.6263",
-  longitude: "139.7237",
-  photos: []
-)
-neighborhood.save
-
-neighborhood = Neighborhood.new(
   name: "Ebisu",
   description: "Named after the famous brewery that once occupied its grounds, Ebisu is a polished, cosmopolitan neighborhood popular with expats and young professionals. It offers a sophisticated mix of famous restaurants, galleries, and shopping in a relatively calm, walkable setting.",
   features: "Yebisu Garden Place, Tokyo Metropolitan Museum of Photography, French bistros, craft beer bars, upscale supermarkets, wide pedestrian walkways",
@@ -70,13 +48,13 @@ neighborhood = Neighborhood.new(
 neighborhood.save
 
 neighborhood = Neighborhood.new(
-  name: "Harajuku",
-  description: "A neighborhood of delightful contradictions — serene Meiji Shrine sits minutes from the technicolor chaos of Takeshita Street. Harajuku is the birthplace of Tokyo street fashion subcultures and remains the city's most creative and youthful district.",
-  features: "Takeshita Street, Meiji Shrine, Omotesando boulevard, vintage clothing stores, crepe stands, avant-garde fashion boutiques, Yoyogi Park",
-  ward: "Shibuya-ku",
-  latitude: "35.6702",
-  longitude: "139.7027",
-  photos: ["https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2017/07/Takeshita-Crowds-Harajuku-iStock-624490332-aon168-562x421.jpg"]
+  name: "Roppongi",
+  description: "A district best known for its nightlife and world-class art institutions. By day, Roppongi is home to major embassies, sleek office towers, and three premier art museums; by night it transforms into one of Tokyo's most vibrant entertainment hubs.",
+  features: "Mori Art Museum, National Art Center, 21_21 Design Sight, Roppongi Hills complex, international restaurants, rooftop city views, upscale nightclubs, gallery hopping",
+  ward: "Minato-ku",
+  latitude: "35.6628",
+  longitude: "139.7314",
+  photos: ["https://travel.rakuten.com/contents/sites/contents/files/styles/max_1300x1300/public/2023-08/things-to-do-roppongi_3.jpg?itok=JqA0Wxow"]
 )
 neighborhood.save
 
@@ -92,13 +70,35 @@ neighborhood = Neighborhood.new(
 neighborhood.save
 
 neighborhood = Neighborhood.new(
-  name: "Roppongi",
-  description: "A district best known for its nightlife and world-class art institutions. By day, Roppongi is home to major embassies, sleek office towers, and three premier art museums; by night it transforms into one of Tokyo's most vibrant entertainment hubs.",
-  features: "Mori Art Museum, National Art Center, 21_21 Design Sight, Roppongi Hills complex, international restaurants, rooftop city views, upscale nightclubs, gallery hopping",
-  ward: "Minato-ku",
-  latitude: "35.6628",
-  longitude: "139.7314",
-  photos: ["https://travel.rakuten.com/contents/sites/contents/files/styles/max_1300x1300/public/2023-08/things-to-do-roppongi_3.jpg?itok=JqA0Wxow"]
+  name: "Harajuku",
+  description: "A neighborhood of delightful contradictions — serene Meiji Shrine sits minutes from the technicolor chaos of Takeshita Street. Harajuku is the birthplace of Tokyo street fashion subcultures and remains the city's most creative and youthful district.",
+  features: "Takeshita Street, Meiji Shrine, Omotesando boulevard, vintage clothing stores, crepe stands, avant-garde fashion boutiques, Yoyogi Park",
+  ward: "Shibuya-ku",
+  latitude: "35.6702",
+  longitude: "139.7027",
+  photos: ["https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2017/07/Takeshita-Crowds-Harajuku-iStock-624490332-aon168-562x421.jpg"]
+)
+neighborhood.save
+
+neighborhood = Neighborhood.new(
+  name: "Shinagawa",
+  description: "One of Tokyo's oldest post towns along the historic Tokaido highway, Shinagawa has reinvented itself as a sleek transit hub and business district while retaining pockets of old-town charm. Its waterfront location along Tokyo Bay gives it a spacious, open feel rarely found this close to the city center.",
+  features: "Shinagawa Aquarium, Tennozu Isle art district, Togoshi Ginza shopping street, waterfront promenades, business hotel clusters, historic Tokaido shukuba townscape",
+  ward: "Shinagawa-ku",
+  latitude: "35.6284",
+  longitude: "139.7387",
+  photos: ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F35324207%2Fpexels-photo-35324207%2Ffree-photo-of-vibrant-nightlife-in-shinagawa-tokyo-japan.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26w%3D1260%26h%3D750%26dpr%3D1&f=1&nofb=1&ipt=2969a5070aa81c1710ab593c9146d005b0a948cd50e2af02456d25038f3321c1"]
+)
+neighborhood.save
+
+neighborhood = Neighborhood.new(
+  name: "Gotanda",
+  description: "A hardworking, unpretentious district that sits at the crossroads of Tokyo's everyday city life. Gotanda hums with salaryman izakayas, ramen shops, and karaoke bars by night, while its riverside areas and quiet backstreets offer a more relaxed side. It lacks the polish of its neighbors but makes up for it with genuine, unfiltered Tokyo energy.",
+  features: "Meguro River riverside walks, dense izakaya alleys, Gotanda Film Center, budget-friendly ramen and yakiniku, lively nightlife strips, easy Yamanote Line access",
+  ward: "Shinagawa-ku",
+  latitude: "35.6263",
+  longitude: "139.7237",
+  photos: ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fnov-scenery-front-gotanda-station-305833330.jpg&f=1&nofb=1&ipt=ab37ce80cceeaa1c311fcdc9efc6a17fc5eaea84ac3dd56584cf71ac6b0503c2"]
 )
 neighborhood.save
 
