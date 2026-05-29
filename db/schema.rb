@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_05_28_030632) do
+ActiveRecord::Schema[8.1].define(version: 2026_05_29_024615) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -40,6 +40,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_28_030632) do
     t.float "latitude"
     t.float "longitude"
     t.string "name"
+    t.string "photos", default: [], array: true
     t.datetime "updated_at", null: false
     t.string "ward"
   end
@@ -56,6 +57,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_28_030632) do
 
   create_table "properties", force: :cascade do |t|
     t.string "all_amenities", default: [], array: true
+    t.string "availability"
     t.integer "bedrooms"
     t.datetime "created_at", null: false
     t.text "description"

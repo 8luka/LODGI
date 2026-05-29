@@ -17,5 +17,6 @@ class PagesController < ApplicationController
         }
       end
     )
+    @neighborhoods = Neighborhood.all
   end
 end

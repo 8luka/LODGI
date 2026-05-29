@@ -1,10 +1,10 @@
 <div class="page">
 
   <!-- BREADCRUMB -->
-  <div class="breadcrumb">
+  <div class="breadcrumb mt-10">
     <a href="index.html">Tokyo</a>
     <i class="fa-solid fa-chevron-right"></i>
-    <a href="neighbourhood.html?area=shinjuku">Shinjuku</a>
+    <a href="neighborhood.html?area=shinjuku">Shinjuku</a>
     <i class="fa-solid fa-chevron-right"></i>
     <span>Shinjuku Studio</span>
   </div>
@@ -207,7 +207,7 @@
               <%= station %>
             </div>
           <% end %>
-          <a href="neighbourhood.html?area=shinjuku" class="nb-link">
+          <a href="neighborhood.html?area=shinjuku" class="nb-link">
             <i class="fa-regular fa-map"></i>
             Explore <%= @property.neighborhood.name %>
             <i class="fa-solid fa-arrow-right"></i>
@@ -219,38 +219,35 @@
 
       <!-- PRICE CARD -->
       <div class="price-card">
-        <div class="price-main">¥95,000 <span>/ month</span></div>
-        <div class="price-rows">
-          <div class="price-row">
-            <span class="label">Monthly rent</span>
-            <span>¥95,000</span>
-          </div>
-          <div class="price-row">
-            <span class="label">Utilities (avg.)</span>
-            <span>¥8,500</span>
-          </div>
-          <div class="price-row">
-            <span class="label">WiFi &amp; services</span>
-            <span class="green-check">Included ✓</span>
-          </div>
-          <div class="price-row">
-            <span class="label">Key money</span>
-            <span class="green-check">None ✓</span>
-          </div>
-          <div class="price-row">
-            <span class="label">Guarantor</span>
-            <span class="green-check">None ✓</span>
-          </div>
-          <div class="price-row total">
-            <span class="label">Total per month</span>
-            <span>≈ ¥103,500</span>
-          </div>
-        </div>
+        <div class="price-main"><%= "¥#{@property.price}" %> <span>/ month</span></div>
         <div class="price-note">
-          Minimum stay 1 month · Prices in JPY<br>
-          Utilities are estimated — actual may vary
+          Price not exact<br>
         </div>
-        <button class="book-btn">Request to book</button>
+
+        <div class="stay-dates" data-controller="date-picker">
+          <div class="date-field">
+            <label class="date-label" for="start_date">Check-in</label>
+            <input class="date-input" type="date" id="start_date"
+                  data-date-picker-target="startDate"
+                  data-action="change->date-picker#onChange">
+          </div>
+          <div class="date-field">
+            <label class="date-label" for="end_date">Check-out</label>
+            <input class="date-input" type="date" id="end_date"
+                  data-date-picker-target="endDate"
+                  data-action="change->date-picker#onChange">
+          </div>
+        </div>
+
+        <%
+          agent_email = "#properties@#{@property.vendor}.com"
+          subject = ERB::Util.url_encode("Inquiry regarding Estralgo Meguro - Studio 302 / エストラルゴ目黒 - スタジオ302に関するお問い合わせ")
+          body = ERB::Util.url_encode("Hello,\r\n\r\nI am interested in staying at #{@property.name} from June 15th to August 2nd and would like to request more information.\r\n\r\nThank you,\r\n\r\n---\r\n\r\nはじめまして。\r\n\r\nエストラルゴ目黒 - スタジオ302に、6月15日から8月2日までの滞在を検討しており、詳細についてお伺いしたく、ご連絡いたしました。\r\n\r\nご確認のほど、よろしくお願いいたします。")
+        %>
+
+        <a href="mailto:<%= agent_email %>?subject=<%= subject %>&body=<%= body %>" class="book-btn">
+          Request to book
+        </a>
       </div>
 
     </div><!-- /right -->
