@@ -18,3 +18,104 @@
 #map-container {
   height: 600px;
 }
+
+.category-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 48px;
+
+  padding: 0 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  background: white;
+
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+
+  cursor: pointer;
+}
+
+.category-button:hover {
+  border-color: #c2584a;
+
+  transform: translateY(-1px);
+}
+
+.active-category {
+  background: #c2584a;
+
+  border-color: #c2584a;
+
+  color: white;
+}
+
+.search-area-button {
+  height: 52px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #c2584a;
+
+  color: white;
+
+  font-weight: 100;
+
+  transition: all 0.2s ease;
+
+  cursor: pointer;
+}
+
+.search-area-button:hover {
+  filter: brightness(0.95);
+}
+
+.property-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 24px;
+}
+
+.property-filters select {
+  min-width: 180px;
+
+  height: 48px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  padding: 0 14px;
+
+  background: white;
+}
+
+.clear-filters-button {
+  height: 48px;
+
+  padding: 0 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  background: white;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+}
