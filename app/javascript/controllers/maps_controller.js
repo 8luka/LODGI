@@ -15,7 +15,9 @@ export default class extends Controller {
     "neighborhoodFilter",
 
     "priceFilter",
-    "priceValue"
+    "priceValue",
+
+    "availabilityFilter"
   ]
 
   connect() {
@@ -142,16 +144,13 @@ export default class extends Controller {
   }
   applyFilters() {
 
-    const selectedLayout =
-      this.layoutFilterTarget.value
+    const selectedLayout = this.layoutFilterTarget.value
 
-    const selectedNeighborhood =
-      this.neighborhoodFilterTarget.value
+    const selectedNeighborhood = this.neighborhoodFilterTarget.value
 
-    const maxPrice =
-      Number(
-        this.priceFilterTarget.value
-      )
+    const maxPrice = Number(this.priceFilterTarget.value)
+
+    const availableOnly = this.availabilityFilterTarget.checked
 
     this.priceValueTarget.textContent =
       `¥${maxPrice.toLocaleString()}`
@@ -171,10 +170,15 @@ export default class extends Controller {
           const matchesPrice =
             Number(property.price) <= maxPrice
 
+          const matchesAvailability =
+            !availableOnly ||
+            property.availability === "now"
+
           return (
             matchesLayout &&
             matchesNeighborhood &&
-            matchesPrice
+            matchesPrice &&
+            matchesAvailability
           )
         }
       )
@@ -259,6 +263,8 @@ renderFilteredProperties(properties) {
 
     this.priceFilterTarget.value = 500000
 
+    this.availabilityFilterTarget.checked = false
+
     this.applyFilters()
   }
 
@@ -311,7 +317,18 @@ renderFilteredProperties(properties) {
             .map(station => `🚉 ${station}`)
             .join("<br>")
         : "No stations nearby"
+    const isAvailable =
+      property.availability?.toLowerCase() === "now"
 
+    const availabilityClass =
+      isAvailable
+        ? "availability-pill available-pill"
+        : "availability-pill unavailable-pill"
+
+    const availabilityText =
+      isAvailable
+        ? "Available"
+        : "Unavailable"
     return `
       <div class="property-popup">
 
@@ -321,6 +338,10 @@ renderFilteredProperties(properties) {
         />
 
         <div class="popup-content">
+
+          <div class="${availabilityClass}">
+            ${availabilityText}
+          </div>
 
           <h3 class="popup-title">
             ${property.name}
@@ -357,7 +378,7 @@ renderFilteredProperties(properties) {
 
     if (place.photo_reference) {
       image =
-        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${place.photo_reference}&key=${window.googleMapsApiKey}`
+        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${place.photo_reference}&key=${window.googleMapsPlacesKey}`
     }
 
     return `
