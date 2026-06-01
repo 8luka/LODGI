@@ -1,0 +1,229 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e5]
+      - button "Find short-term apartments in Tokyo" [ref=e7] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e11]: Find short-term apartments in Tokyo
+      - list [ref=e13]:
+        - listitem [ref=e14]:
+          - link "¥" [ref=e15] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e16]:
+          - link "Explore neighborhoods" [ref=e17] [cursor=pointer]:
+            - /url: "#neighborhoods"
+            - img [ref=e18]
+            - text: Explore neighborhoods
+        - listitem [ref=e20]:
+          - link "Favorites" [ref=e21] [cursor=pointer]:
+            - /url: "#favourites"
+            - img [ref=e22]
+            - text: Favorites
+        - listitem [ref=e24]:
+          - link "Login" [ref=e25] [cursor=pointer]:
+            - /url: /users/sign_in
+  - generic [ref=e26]:
+    - generic [ref=e27]: Tokyo's best areas
+    - heading "Find your neighborhood" [level=2] [ref=e28]:
+      - text: Find your
+      - emphasis [ref=e29]: neighborhood
+    - paragraph [ref=e30]: From quiet backstreets in Shimokitazawa to the pulse of Shinjuku — every home is fully furnished and ready from day one.
+    - generic [ref=e31]:
+      - link "Meguro-ku Meguro A relaxed, upscale residential district that balances quiet tree-lined streets... View area" [ref=e32] [cursor=pointer]:
+        - /url: /neighborhoods/374
+        - generic [ref=e35]: Meguro-ku
+        - generic [ref=e36]:
+          - generic [ref=e37]: Meguro
+          - generic [ref=e38]: A relaxed, upscale residential district that balances quiet tree-lined streets...
+          - generic [ref=e40]: View area
+      - link "Shibuya-ku Ebisu Named after the famous brewery that once occupied its grounds, Ebisu is a... View area" [ref=e41] [cursor=pointer]:
+        - /url: /neighborhoods/375
+        - generic [ref=e44]: Shibuya-ku
+        - generic [ref=e45]:
+          - generic [ref=e46]: Ebisu
+          - generic [ref=e47]: Named after the famous brewery that once occupied its grounds, Ebisu is a...
+          - generic [ref=e49]: View area
+      - link "Shibuya-ku Shibuya One of Tokyo's most iconic and energetic districts, Shibuya is famous worldwide... View area" [ref=e50] [cursor=pointer]:
+        - /url: /neighborhoods/376
+        - generic [ref=e53]: Shibuya-ku
+        - generic [ref=e54]:
+          - generic [ref=e55]: Shibuya
+          - generic [ref=e56]: One of Tokyo's most iconic and energetic districts, Shibuya is famous worldwide...
+          - generic [ref=e58]: View area
+      - link "Minato-ku Roppongi A district best known for its nightlife and world-class art institutions. By day,... View area" [ref=e59] [cursor=pointer]:
+        - /url: /neighborhoods/377
+        - generic [ref=e62]: Minato-ku
+        - generic [ref=e63]:
+          - generic [ref=e64]: Roppongi
+          - generic [ref=e65]: A district best known for its nightlife and world-class art institutions. By day,...
+          - generic [ref=e67]: View area
+      - link "Chiyoda-ku Akihabara The undisputed global capital of anime, manga, and electronics, Akihabara has... View area" [ref=e68] [cursor=pointer]:
+        - /url: /neighborhoods/378
+        - generic [ref=e71]: Chiyoda-ku
+        - generic [ref=e72]:
+          - generic [ref=e73]: Akihabara
+          - generic [ref=e74]: The undisputed global capital of anime, manga, and electronics, Akihabara has...
+          - generic [ref=e76]: View area
+      - link "Chuo-ku Ginza Tokyo's most storied luxury district, Ginza has been synonymous with wealth,... View area" [ref=e77] [cursor=pointer]:
+        - /url: /neighborhoods/379
+        - generic [ref=e80]: Chuo-ku
+        - generic [ref=e81]:
+          - generic [ref=e82]: Ginza
+          - generic [ref=e83]: Tokyo's most storied luxury district, Ginza has been synonymous with wealth,...
+          - generic [ref=e85]: View area
+      - link "Shinjuku-ku Shinjuku Tokyo's most multifaceted district — home to the world's busiest train station,... View area" [ref=e86] [cursor=pointer]:
+        - /url: /neighborhoods/380
+        - generic [ref=e89]: Shinjuku-ku
+        - generic [ref=e90]:
+          - generic [ref=e91]: Shinjuku
+          - generic [ref=e92]: Tokyo's most multifaceted district — home to the world's busiest train station,...
+          - generic [ref=e94]: View area
+      - link "Shibuya-ku Harajuku A neighborhood of delightful contradictions — serene Meiji Shrine sits minutes... View area" [ref=e95] [cursor=pointer]:
+        - /url: /neighborhoods/381
+        - generic [ref=e98]: Shibuya-ku
+        - generic [ref=e99]:
+          - generic [ref=e100]: Harajuku
+          - generic [ref=e101]: A neighborhood of delightful contradictions — serene Meiji Shrine sits minutes...
+          - generic [ref=e103]: View area
+      - link "Shinagawa-ku Shinagawa One of Tokyo's oldest post towns along the historic Tokaido highway, Shinagawa has... View area" [ref=e104] [cursor=pointer]:
+        - /url: /neighborhoods/382
+        - generic [ref=e107]: Shinagawa-ku
+        - generic [ref=e108]:
+          - generic [ref=e109]: Shinagawa
+          - generic [ref=e110]: One of Tokyo's oldest post towns along the historic Tokaido highway, Shinagawa has...
+          - generic [ref=e112]: View area
+      - link "Shinagawa-ku Gotanda/Osaki A hardworking, unpretentious area that sits at the crossroads of Tokyo's everyday... View area" [ref=e113] [cursor=pointer]:
+        - /url: /neighborhoods/383
+        - generic [ref=e116]: Shinagawa-ku
+        - generic [ref=e117]:
+          - generic [ref=e118]: Gotanda/Osaki
+          - generic [ref=e119]: A hardworking, unpretentious area that sits at the crossroads of Tokyo's everyday...
+          - generic [ref=e121]: View area
+      - link "Meguro-ku Jiyugaoka A charming, village-like neighborhood in southwest Tokyo that has earned a... View area" [ref=e122] [cursor=pointer]:
+        - /url: /neighborhoods/384
+        - generic [ref=e125]: Meguro-ku
+        - generic [ref=e126]:
+          - generic [ref=e127]: Jiyugaoka
+          - generic [ref=e128]: A charming, village-like neighborhood in southwest Tokyo that has earned a...
+          - generic [ref=e130]: View area
+      - link "Shinjuku-ku Yotsuya A dignified, understated district where old Tokyo atmosphere lingers alongside... View area" [ref=e131] [cursor=pointer]:
+        - /url: /neighborhoods/385
+        - generic [ref=e134]: Shinjuku-ku
+        - generic [ref=e135]:
+          - generic [ref=e136]: Yotsuya
+          - generic [ref=e137]: A dignified, understated district where old Tokyo atmosphere lingers alongside...
+          - generic [ref=e139]: View area
+      - link "Toshima-ku Ikebukuro A sprawling north-Tokyo hub defined by towering department stores and one of the... View area" [ref=e140] [cursor=pointer]:
+        - /url: /neighborhoods/386
+        - generic [ref=e143]: Toshima-ku
+        - generic [ref=e144]:
+          - generic [ref=e145]: Ikebukuro
+          - generic [ref=e146]: A sprawling north-Tokyo hub defined by towering department stores and one of the...
+          - generic [ref=e148]: View area
+      - link "Taito-ku Ueno Home to one of Tokyo's finest concentrations of museums and a beloved public park,... View area" [ref=e149] [cursor=pointer]:
+        - /url: /neighborhoods/387
+        - generic [ref=e152]: Taito-ku
+        - generic [ref=e153]:
+          - generic [ref=e154]: Ueno
+          - generic [ref=e155]: Home to one of Tokyo's finest concentrations of museums and a beloved public park,...
+          - generic [ref=e157]: View area
+      - link "Nakano-ku Nakano A laid-back residential neighborhood with a cult following among anime and manga... View area" [ref=e158] [cursor=pointer]:
+        - /url: /neighborhoods/388
+        - generic [ref=e161]: Nakano-ku
+        - generic [ref=e162]:
+          - generic [ref=e163]: Nakano
+          - generic [ref=e164]: A laid-back residential neighborhood with a cult following among anime and manga...
+          - generic [ref=e166]: View area
+      - link "Taito-ku Asakusa (Senso-ji) Tokyo's most iconic traditional district, built around the great Senso-ji temple... View area" [ref=e167] [cursor=pointer]:
+        - /url: /neighborhoods/389
+        - generic [ref=e170]: Taito-ku
+        - generic [ref=e171]:
+          - generic [ref=e172]: Asakusa (Senso-ji)
+          - generic [ref=e173]: Tokyo's most iconic traditional district, built around the great Senso-ji temple...
+          - generic [ref=e175]: View area
+      - link "Koto-ku Odaiba A futuristic island built on reclaimed land in Tokyo Bay, Odaiba feels... View area" [ref=e176] [cursor=pointer]:
+        - /url: /neighborhoods/390
+        - generic [ref=e179]: Koto-ku
+        - generic [ref=e180]:
+          - generic [ref=e181]: Odaiba
+          - generic [ref=e182]: A futuristic island built on reclaimed land in Tokyo Bay, Odaiba feels...
+          - generic [ref=e184]: View area
+      - link "Minato-ku Akasaka An established business district that doubles as one of Tokyo's most refined... View area" [ref=e185] [cursor=pointer]:
+        - /url: /neighborhoods/391
+        - generic [ref=e188]: Minato-ku
+        - generic [ref=e189]:
+          - generic [ref=e190]: Akasaka
+          - generic [ref=e191]: An established business district that doubles as one of Tokyo's most refined...
+          - generic [ref=e193]: View area
+      - link "Chiyoda-ku Marunouchi Tokyo's most prestigious business address, occupying the prime strip between Tokyo... View area" [ref=e194] [cursor=pointer]:
+        - /url: /neighborhoods/392
+        - generic [ref=e197]: Chiyoda-ku
+        - generic [ref=e198]:
+          - generic [ref=e199]: Marunouchi
+          - generic [ref=e200]: Tokyo's most prestigious business address, occupying the prime strip between Tokyo...
+          - generic [ref=e202]: View area
+      - link "Chiyoda-ku Otemachi Japan's densest concentration of major corporate headquarters, sitting directly... View area" [ref=e203] [cursor=pointer]:
+        - /url: /neighborhoods/393
+        - generic [ref=e206]: Chiyoda-ku
+        - generic [ref=e207]:
+          - generic [ref=e208]: Otemachi
+          - generic [ref=e209]: Japan's densest concentration of major corporate headquarters, sitting directly...
+          - generic [ref=e211]: View area
+      - link "Minato-ku Toranomon A government quarter that has rapidly reinvented itself as Tokyo's startup and... View area" [ref=e212] [cursor=pointer]:
+        - /url: /neighborhoods/394
+        - generic [ref=e215]: Minato-ku
+        - generic [ref=e216]:
+          - generic [ref=e217]: Toranomon
+          - generic [ref=e218]: A government quarter that has rapidly reinvented itself as Tokyo's startup and...
+          - generic [ref=e220]: View area
+      - link "Minato-ku Shiodome A compact cluster of skyscrapers built on reclaimed railway yards at the edge of... View area" [ref=e221] [cursor=pointer]:
+        - /url: /neighborhoods/395
+        - generic [ref=e224]: Minato-ku
+        - generic [ref=e225]:
+          - generic [ref=e226]: Shiodome
+          - generic [ref=e227]: A compact cluster of skyscrapers built on reclaimed railway yards at the edge of...
+          - generic [ref=e229]: View area
+      - link "Chuo-ku Nihonbashi The mercantile heart of Tokyo since the Edo period, Nihonbashi has been Japan's... View area" [ref=e230] [cursor=pointer]:
+        - /url: /neighborhoods/396
+        - generic [ref=e233]: Chuo-ku
+        - generic [ref=e234]:
+          - generic [ref=e235]: Nihonbashi
+          - generic [ref=e236]: The mercantile heart of Tokyo since the Edo period, Nihonbashi has been Japan's...
+          - generic [ref=e238]: View area
+      - link "Minato-ku Tamachi A practical business district that has been quietly upgraded by the msb Tamachi... View area" [ref=e239] [cursor=pointer]:
+        - /url: /neighborhoods/397
+        - generic [ref=e242]: Minato-ku
+        - generic [ref=e243]:
+          - generic [ref=e244]: Tamachi
+          - generic [ref=e245]: A practical business district that has been quietly upgraded by the msb Tamachi...
+          - generic [ref=e247]: View area
+  - generic [ref=e248]:
+    - text: Lodgi
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]: Why Lodgi
+        - heading "Tokyo, from day one" [level=2] [ref=e252]:
+          - text: Tokyo,
+          - emphasis [ref=e253]: from day one
+        - paragraph [ref=e254]: Fully furnished homes across Tokyo's most liveable neighborhoods — for foreigners who want to arrive and just live. No guarantors. No key money. English support, always.
+        - link "Browse homes" [ref=e255] [cursor=pointer]:
+          - /url: /properties
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - generic [ref=e258]: "158"
+          - generic [ref=e259]: Furnished homes
+        - generic [ref=e260]:
+          - generic [ref=e261]: "12"
+          - generic [ref=e262]: Neighborhoods
+        - generic [ref=e263]:
+          - generic [ref=e264]: "4.9"
+          - generic [ref=e265]: Average rating
+        - generic [ref=e266]:
+          - generic [ref=e267]: "0"
+          - generic [ref=e268]: Key money required
+  - contentinfo [ref=e269]:
+    - generic [ref=e270]: Lodgi
+    - generic [ref=e271]: Tokyo short-term rentals for foreigners · 2026
+    - generic [ref=e272]: English support · Privacy · Terms

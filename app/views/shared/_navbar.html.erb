@@ -9,16 +9,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto align-items-center nav-links">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle currency-selector" href="#" id="currencyDropdown" data-bs-toggle="dropdown">
-            <%= {"JPY" => "¥", "EUR" => "€", "USD" => "$"}[session[:currency]] || "¥" %>
-          </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="currencyDropdown">
-            <%= link_to "¥ JPY", set_currency_path(currency: "JPY"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "JPY"}", data: { turbo_method: :post } %>
-            <%= link_to "€ EUR", set_currency_path(currency: "EUR"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "EUR"}", data: { turbo_method: :post } %>
-            <%= link_to "$ USD", set_currency_path(currency: "USD"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "USD"}", data: { turbo_method: :post } %>
-          </div>
-        </li>
         <li class="nav-item">
           <%= link_to "#neighborhoods", class: "nav-link" do %>
             <svg viewBox="0 0 24 24"><path d="M1,21 L1,16 L3,16 L3,12 L6,12 L6,14 L8,14 L8,9 L10,9 L10,13 L11,13 L11,6 L12,4 L13,6 L13,13 L14,13 L14,10 L17,10 L17,13 L19,13 L19,15 L21,15 L21,17 L23,17 L23,21 Z"/></svg>
@@ -41,6 +31,11 @@
                 <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 My account
               <% end %>
+              <div class="dropdown-divider"></div>
+              <span class="dropdown-item-text text-muted small px-3 py-1">Currency</span>
+              <%= link_to "¥ JPY", set_currency_path(currency: "JPY"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "JPY"}", data: { turbo_method: :post } %>
+              <%= link_to "€ EUR", set_currency_path(currency: "EUR"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "EUR"}", data: { turbo_method: :post } %>
+              <%= link_to "$ USD", set_currency_path(currency: "USD"), class: "dropdown-item #{"active" if (session[:currency] || "JPY") == "USD"}", data: { turbo_method: :post } %>
               <div class="dropdown-divider"></div>
               <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item signout" do %>
                 <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>

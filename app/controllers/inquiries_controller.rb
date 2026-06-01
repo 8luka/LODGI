@@ -4,7 +4,7 @@ class InquiriesController < ApplicationController
       Inquiry.find_by(id: session[:inquiry_id])&.destroy
       session.delete(:inquiry_id)
     end
-    redirect_to root_path
+    redirect_to map_path
   end
 
   def create
@@ -22,7 +22,7 @@ class InquiriesController < ApplicationController
     inquiry.save
     session[:inquiry_id] = inquiry.id
 
-    redirect_to root_path
+    redirect_to map_path
   end
 
   private

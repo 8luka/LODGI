@@ -1,5 +1,5 @@
 <%# Global navbar trip search. Submits POST to inquiries_path; controller saves/updates
-    the inquiry and redirects to plain root_path. State is loaded from session inquiry. %>
+    the inquiry and redirects to map_path. State is loaded from session inquiry. %>
 <% current_trip_type = @trip_type || "visiting" %>
 <% current_anchor = @selected_anchor %>
 <% summary = if current_anchor

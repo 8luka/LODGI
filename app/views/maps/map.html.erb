@@ -1,1 +1,26 @@
-<h1>Tokyo Map</h1>
+<%# Opt this Google-Maps-heavy page out of Turbo's snapshot cache so back-navigation
+    re-renders fresh and the maps controller's connect() runs cleanly. %>
+<% content_for :head do %>
+  <meta name="turbo-cache-control" content="no-cache">
+<% end %>
+<%# ── Map workspace: search bar on top, ranked listings (left) · map (middle) · priorities (right) ── %>
+<section class="workspace" id="search"
+         data-controller="maps"
+         data-api-key="<%= ENV['MAPS_JS_API'] %>"
+         data-maps-properties-value="<%= @properties %>"
+         data-maps-checkin-value="<%= @checkin %>">
+
+  <div class="workspace-grid">
+    <%= render "pages/listings_rail",
+               properties: @properties_records.first(20),
+               total: @properties_records.size %>
+
+    <div class="workspace-map">
+      <%= render "pages/filter_chips" %>
+      <div id="map" data-maps-target="map"></div>
+    </div>
+
+    <%= render "pages/priorities_panel" %>
+  </div>
+
+</section>

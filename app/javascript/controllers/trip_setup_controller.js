@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // The whole navbar trip-setup form dropdown open/close,
 // trip-type tiles that reframe the anchor section, and the multi-category anchor picker
 // (one anchor can live in several tabs; search matches across all). Submits a
-// GET form to root_path, so a search from any page lands on the home map.
+// POST form to inquiries_path, which saves the inquiry and redirects to /map.
 // Connects to data-controller="trip-setup"
 export default class extends Controller {
   static targets = [
