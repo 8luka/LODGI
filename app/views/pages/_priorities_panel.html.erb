@@ -1,0 +1,106 @@
+<%# Right rail: importance-weight sliders + category toggles %>
+<%# Rule: sliders = qualities you can't pin; toggles = pinnable categories that show on map %>
+<%# later both will effect listing scores  %>
+<%# sliders are wired UI but don't re-score yet (scoring engine deferred). %>
+<aside class="rail rail--right"
+       data-controller="rail priorities-panel"
+       data-rail-side-value="right"
+       data-priorities-panel-anchored-value="<%= @selected_anchor.present? %>"
+       data-action="anchor:changed@window->priorities-panel#setAnchored">
+  <button type="button" class="rail__tab" data-action="rail#toggle" aria-label="Toggle priorities">
+    <iconify-icon icon="tabler:chevron-right" data-rail-target="chevron"></iconify-icon>
+  </button>
+  <div class="rail__inner">
+    <div class="rail__head">
+      <div class="rail__title">
+        Your priorities
+        <span class="info-tip" data-controller="tooltip"
+              data-tooltip-text-value="Select what you care about in the menus below. We will use them to score each potential listing."
+              data-action="mouseenter->tooltip#show mouseleave->tooltip#hide">
+          <iconify-icon icon="tabler:info-circle"></iconify-icon>
+        </span>
+      </div>
+    </div>
+    <div class="rail__body" data-rail-target="body">
+      <%# ── Sliders (importance weights, 0–3) ── %>
+      <div class="prio-section">
+        <div class="prio-section__head">What matters most?</div>
+        <datalist id="prio-range-ticks">
+          <option value="0"></option>
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3"></option>
+        </datalist>
+        <div class="prio-slider">
+          <div class="prio-slider__head">
+            <span class="prio-slider__label"><iconify-icon icon="tabler:clock-hour-4"></iconify-icon> Easy commute<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="The degree that travel time to your chosen anchor should be factored into scoring, if at all." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
+            <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Important</span>
+          </div>
+          <input type="range" min="0" max="3" step="1" value="2" data-key="commute"
+               list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
+        </div>
+        <div class="prio-slider">
+          <div class="prio-slider__head">
+            <span class="prio-slider__label"><iconify-icon icon="tabler:zzz"></iconify-icon> Peace &amp; quiet<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Do find staying in a quieter residential area important, or do you want to be where the action is?" data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
+            <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Nice to have</span>
+          </div>
+          <input type="range" min="0" max="3" step="1" value="1" data-key="quiet"
+               list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
+        </div>
+        <div class="prio-slider">
+          <div class="prio-slider__head">
+            <span class="prio-slider__label"><iconify-icon icon="tabler:walk"></iconify-icon> Walkability<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Rewards listings close to stations, shops, and daily amenities on foot." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
+            <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Nice to have</span>
+          </div>
+          <input type="range" min="0" max="3" step="1" value="1" data-key="walkability"
+               list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
+        </div>
+        <div class="prio-slider">
+          <div class="prio-slider__head">
+            <span class="prio-slider__label"><iconify-icon icon="tabler:plane"></iconify-icon> Airport access<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Scores listings by estimated travel time from Haneda or Narita with luggage." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
+            <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Nice to have</span>
+          </div>
+          <input type="range" min="0" max="3" step="1" value="1" data-key="airport"
+               list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
+        </div>
+      </div>
+      <%# ── Toggles (pinnable categories: show pins + feed score) ── %>
+      <div class="prio-section">
+        <div class="prio-section__head">Show and score nearby places<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Toggle specific amenities you care about to show pins on the map and include the proximity to them in property fit score." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></div>
+        <% toggle_groups = {
+           "Daily essentials" => [
+             ["convenience_store", "Convenience stores", "tabler:building-store"],
+             ["supermarket",       "Supermarkets",       "tabler:shopping-cart"],
+             ["atm",               "ATMs",               "tabler:building-bank"]
+           ],
+           "Food & drink" => [
+             ["cafe",       "Cafés",       "tabler:coffee"],
+             ["restaurant", "Restaurants", "tabler:tools-kitchen-2"],
+             ["bar",        "Bars",        "tabler:glass-full"]
+           ],
+           "Lifestyle" => [
+             ["park",               "Parks",          "tabler:tree"],
+             ["gym",                "Gyms",           "tabler:barbell"],
+             ["tourist_attraction", "Tourist spots",  "tabler:camera"]
+           ]
+         } %>
+        <% toggle_groups.each do |group_name, items| %>
+          <div class="prio-group">
+            <div class="prio-group__head"><%= group_name %></div>
+            <div class="prio-btn-group">
+              <% items.each do |category, label, icon| %>
+                <label class="prio-btn">
+                  <input type="checkbox" data-category="<%= category %>"
+                       data-priorities-panel-target="toggleInput"
+                       data-action="change->priorities-panel#onToggle change->maps#toggleCategory">
+                  <iconify-icon icon="<%= icon %>"></iconify-icon>
+                  <span class="prio-btn__text"><%= label %></span>
+                </label>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</aside>

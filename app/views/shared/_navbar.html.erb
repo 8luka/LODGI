@@ -3,6 +3,7 @@
     <%= link_to root_path, class: "navbar-brand d-flex align-items-center gap-2" do %>
       <%= image_tag "/icon.png", width: 100 %>
     <% end %>
+    <%= render "shared/search" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,14 +20,9 @@
           </div>
         </li>
         <li class="nav-item">
-          <%= link_to "#about", class: "nav-link" do %>
-            About
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "#hero", class: "nav-link" do %>
-            <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-            Map
+          <%= link_to "#neighborhoods", class: "nav-link" do %>
+            <svg viewBox="0 0 24 24"><path d="M1,21 L1,16 L3,16 L3,12 L6,12 L6,14 L8,14 L8,9 L10,9 L10,13 L11,13 L11,6 L12,4 L13,6 L13,13 L14,13 L14,10 L17,10 L17,13 L19,13 L19,15 L21,15 L21,17 L23,17 L23,21 Z"/></svg>
+            Explore neighborhoods
           <% end %>
         </li>
         <li class="nav-item">

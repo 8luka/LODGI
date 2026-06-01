@@ -39,3 +39,11 @@
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
+CLAUDE.md
+anchor_picker.md
+config/anchors.yml
+home_page_layout.md
+lodgi_purpose_and_vibe_panel.html
+raw.html
+right_side_panel.md
+trip_setup_form_spec.md

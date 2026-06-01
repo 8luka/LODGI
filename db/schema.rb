@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_05_29_024615) do
+ActiveRecord::Schema[8.1].define(version: 2026_05_31_153917) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -22,13 +22,17 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_29_024615) do
   end
 
   create_table "inquiries", force: :cascade do |t|
+    t.bigint "anchor_id"
+    t.string "anchor_type"
     t.date "check_in"
     t.date "check_out"
-    t.text "content"
     t.datetime "created_at", null: false
-    t.bigint "property_id", null: false
+    t.integer "guests"
+    t.bigint "property_id"
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
+    t.string "why_visit"
+    t.index ["anchor_type", "anchor_id"], name: "index_inquiries_on_anchor"
     t.index ["property_id"], name: "index_inquiries_on_property_id"
     t.index ["user_id"], name: "index_inquiries_on_user_id"
   end
@@ -37,6 +41,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_29_024615) do
     t.datetime "created_at", null: false
     t.text "description"
     t.text "features"
+    t.boolean "is_landmark"
+    t.boolean "is_workplace"
     t.float "latitude"
     t.float "longitude"
     t.string "name"
@@ -52,7 +58,10 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_29_024615) do
     t.float "latitude"
     t.float "longitude"
     t.string "name"
+    t.bigint "neighborhood_id"
+    t.string "photos", default: [], array: true
     t.datetime "updated_at", null: false
+    t.index ["neighborhood_id"], name: "index_places_on_neighborhood_id"
   end
 
   create_table "properties", force: :cascade do |t|
@@ -112,11 +121,23 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_29_024615) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "workplaces", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "name"
+    t.bigint "neighborhood_id", null: false
+    t.datetime "updated_at", null: false
+    t.index ["neighborhood_id"], name: "index_workplaces_on_neighborhood_id"
+  end
+
   add_foreign_key "inquiries", "properties"
   add_foreign_key "inquiries", "users"
+  add_foreign_key "places", "neighborhoods"
   add_foreign_key "properties", "neighborhoods"
   add_foreign_key "property_amenities", "amenities"
   add_foreign_key "property_amenities", "properties"
   add_foreign_key "reviews", "properties"
   add_foreign_key "reviews", "users"
+  add_foreign_key "workplaces", "neighborhoods"
 end

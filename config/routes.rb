@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   post "/places/search", to: "places#search"
   get "/map", to: "maps#map", as: :map
+  resources :inquiries, only: [ :create ]
+  get '/inquiry/clear', to: 'inquiries#clear', as: :clear_inquiry
   resources :properties, only: [ :index, :show ] do
     resources :inquiries, only: [ :create ]
   end

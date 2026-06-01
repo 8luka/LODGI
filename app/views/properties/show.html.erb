@@ -201,12 +201,14 @@
           <div class="date-field">
             <label class="date-label" for="start_date">Check-in</label>
             <input class="date-input" type="date" id="start_date"
+                  value="<%= @checkin %>"
                   data-date-picker-target="startDate"
                   data-action="change->date-picker#onChange">
           </div>
           <div class="date-field">
             <label class="date-label" for="end_date">Check-out</label>
             <input class="date-input" type="date" id="end_date"
+                  value="<%= @checkout %>"
                   data-date-picker-target="endDate"
                   data-action="change->date-picker#onChange">
           </div>
@@ -215,11 +217,23 @@
           agent_email = "#properties@#{@property.vendor}.com"
           subject = ERB::Util.url_encode("Inquiry regarding Prime Urban Meguro Riverfront 301 / プライムアーバン目黒リバーフロント301に関するお問い合わせ")
           body = ERB::Util.url_encode("Hello,\r\n\r\nI am interested in staying at Prime Urban Meguro Riverfront 301 from June 15th to August 2nd and would like to request more information.\r\n\r\nThank you,\r\n\r\n---\r\n\r\nはじめまして。\r\n\r\nプライムアーバン目黒リバーフロント301に、6月15日から8月2日までの滞在を検討しており、詳細についてお伺いしたく、ご連絡いたしました。\r\n\r\nご確認のほど、よろしくお願いいたします。")        %>
-        <a href="mailto:<%= agent_email %>?subject=<%= subject %>&body=<%= body %>"
-          class="book-btn"
-          style="text-decoration: none;">
-          Request to book
-        </a>
+        <% checkin_date = @checkin.present? ? Date.parse(@checkin) : nil %>
+        <% available = available_for_checkin?(@property.availability, checkin_date) %>
+        <% if checkin_date && !available %>
+          <a href="/" class="book-btn book-btn--muted" style="text-decoration: none;">
+            Change dates to book
+          </a>
+        <% elsif user_signed_in? %>
+          <a href="mailto:<%= agent_email %>?subject=<%= subject %>&body=<%= body %>"
+            class="book-btn"
+            style="text-decoration: none;">
+            Request to book
+          </a>
+        <% else %>
+          <%= link_to "Sign in to book", new_user_session_path(redirect_to: request.fullpath),
+                class: "book-btn",
+                style: "text-decoration: none;" %>
+        <% end %>
       </div>
     </div>
     <!-- /right -->

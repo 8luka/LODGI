@@ -3,16 +3,16 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="maps"
 export default class extends Controller {
   static values = {
-    properties: Array
+    properties: Array,
+    checkin: { type: String, default: "" }
   }
   static targets = [
     "map",
-    "categoryButton",
-    "searchButton",
     "transitToggle",
 
     "layoutFilter",
     "neighborhoodFilter",
+    // neighborhood filter is not used currently but may be in the future
 
     "priceFilter",
     "priceValue",
@@ -23,10 +23,8 @@ export default class extends Controller {
   connect() {
     this.priceValueTarget.textContent ="¥500,000"
     this.allProperties = [...this.propertiesValue]
-    // Selected category
-    this.selectedCategory = null
-    // Store POI markers
-    this.poiMarkers = []
+    // POI markers, keyed by category so each right-rail toggle is independent
+    this.poiMarkersByCategory = {}
     // Store property markers
     this.propertyMarkers = []
     // Initialize viewport state
@@ -39,37 +37,16 @@ export default class extends Controller {
     this.map = new google.maps.Map(this.mapTarget, {
       mapId: "DEMO_MAP_ID",
     });
-    this.bounds = new google.maps.LatLngBounds()
 
-    this.propertiesValue.forEach((property) => {
-      const marker = new google.maps.marker.AdvancedMarkerElement({
-        map: this.map,
-        position: { lat: property.latitude, lng: property.longitude },
-        content: this.createMarkerContent(
-          "material-symbols-light:home-outline",
-          "#c2584a"
-        )
-      })
-      this.bounds.extend({
-        lat: property.latitude,
-        lng: property.longitude
-      })
-      marker.addListener("click", () => {
-        const content =
-        this.createPropertyPopupContent(property)
-        this.openInfoWindow(marker, content)
-      })
-    // Save marker reference
-    this.propertyMarkers.push(marker)
-    })
-    this.map.fitBounds(this.bounds)
-    // Listen for map movement finishing
+    // Re-fit + viewport tracking after the filtered render settles.
     this.map.addListener("idle", () => {
       this.updateViewportState()
     })
-    // Run once on initial load
-    this.updateViewportState()
     this.initializeFilters()
+
+    // This checks if a user defined a check-in date and will end with only rendering the available for it
+    this.availabilityFilterTarget.checked = Boolean(this.checkinValue)
+    this.applyFilters()
   }
   updateViewportState() {
     const bounds = this.map.getBounds()
@@ -103,13 +80,6 @@ export default class extends Controller {
         )
       )]
 
-    const neighborhoods =
-      [...new Set(
-        this.allProperties.map(
-          property => property.neighborhood_name
-        )
-      )]
-
     this.layoutFilterTarget.innerHTML =
       `
         <option value="">
@@ -126,27 +96,38 @@ export default class extends Controller {
       `
     })
 
-    this.neighborhoodFilterTarget.innerHTML =
-      `
-        <option value="">
-          Any
-        </option>
-      `
+    // The neighborhood select is currently commented out in the view, so guard
+    // its target before populating it.
+    if (this.hasNeighborhoodFilterTarget) {
+      const neighborhoods =
+        [...new Set(
+          this.allProperties.map(
+            property => property.neighborhood_name
+          )
+        )]
 
-    neighborhoods.forEach((neighborhood) => {
+      this.neighborhoodFilterTarget.innerHTML =
+        `
+          <option value="">
+            Any
+          </option>
+        `
 
-      this.neighborhoodFilterTarget.innerHTML += `
-        <option value="${neighborhood}">
-          ${neighborhood}
-        </option>
-      `
-    })
+      neighborhoods.forEach((neighborhood) => {
+
+        this.neighborhoodFilterTarget.innerHTML += `
+          <option value="${neighborhood}">
+            ${neighborhood}
+          </option>
+        `
+      })
+    }
   }
   applyFilters() {
 
     const selectedLayout = this.layoutFilterTarget.value
 
-    const selectedNeighborhood = this.neighborhoodFilterTarget.value
+    const selectedNeighborhood = this.hasNeighborhoodFilterTarget ? this.neighborhoodFilterTarget.value : ""
 
     const maxPrice = Number(this.priceFilterTarget.value)
 
@@ -172,7 +153,7 @@ export default class extends Controller {
 
           const matchesAvailability =
             !availableOnly ||
-            property.availability === "now"
+            this.isAvailableForCheckin(property.availability)
 
           return (
             matchesLayout &&
@@ -188,7 +169,23 @@ export default class extends Controller {
     )
   }
 
-renderFilteredProperties(properties) {
+  isAvailableForCheckin(availability) {
+    if (availability === "now") return true
+    const checkin = this.checkinValue
+    if (!checkin) return false  // manual check with no dates → only "now" passes
+
+    // checkin is "YYYY-MM-DD" — build a local date to avoid UTC-vs-local skew.
+    const [y, m, d] = checkin.split("-").map(Number)
+    const checkinDate = new Date(y, m - 1, d)
+
+    const clean = availability.replace(/(\d+)(st|nd|rd|th)/i, "$1") // "15th" → "15"
+    const avDate = new Date(`${clean} ${y}`)                        // local midnight
+    if (isNaN(avDate.getTime())) return false
+
+    return avDate <= checkinDate  // available by the time the user arrives
+  }
+
+  renderFilteredProperties(properties) {
 
     this.propertyMarkers.forEach(
       (marker) => {
@@ -259,7 +256,9 @@ renderFilteredProperties(properties) {
   clearFilters() {
     this.layoutFilterTarget.value = ""
 
-    this.neighborhoodFilterTarget.value = ""
+    if (this.hasNeighborhoodFilterTarget) {
+      this.neighborhoodFilterTarget.value = ""
+    }
 
     this.priceFilterTarget.value = 500000
 
@@ -296,6 +295,7 @@ renderFilteredProperties(properties) {
       bar: "mdi:glass-cocktail",
       supermarket: "mdi-light:cart",
       convenience_store: "mdi:shopping-outline",
+      pharmacy: "mdi:medical-bag",
       gym: "mdi:dumbbell",
       train_station: "mdi:train",
       bus_station: "mdi:bus",
@@ -317,18 +317,23 @@ renderFilteredProperties(properties) {
             .map(station => `🚉 ${station}`)
             .join("<br>")
         : "No stations nearby"
-    const isAvailable =
+    // Green when the listing is actually usable for the trip (consistent with the
+    // "only show available" filter); otherwise show the move-in date as-is.
+    const isNow =
       property.availability?.toLowerCase() === "now"
 
+    const availableForTrip =
+      this.isAvailableForCheckin(property.availability)
+
     const availabilityClass =
-      isAvailable
+      availableForTrip
         ? "availability-pill available-pill"
         : "availability-pill unavailable-pill"
 
     const availabilityText =
-      isAvailable
-        ? "Available"
-        : "Unavailable"
+      isNow
+        ? "Available now"
+        : `Available ${property.availability}`
     return `
       <div class="property-popup">
 
@@ -452,32 +457,17 @@ renderFilteredProperties(properties) {
     })
   }
 
-  selectCategory(event) {
-    // Remove active class from all buttons
-    this.categoryButtonTargets.forEach((button) => {
-      button.classList.remove("active-category")
-    })
-
-    // Activate clicked button
-    event.currentTarget.classList.add("active-category")
-
-    // Store selected category
-    this.selectedCategory =
-      event.currentTarget.dataset.category
-
-    console.log("Selected category:")
-    console.log(this.selectedCategory)
+  // Right-rail category toggle: on = fetch + show that category's pins, off = remove them.
+  toggleCategory(event) {
+    const category = event.currentTarget.dataset.category
+    if (event.currentTarget.checked) {
+      this.fetchCategory(category)
+    } else {
+      this.clearCategory(category)
+    }
   }
 
-  searchArea() {
-    if (!this.selectedCategory) {
-      alert("Please select a category first.")
-      return
-    }
-
-    // Clear old POI markers
-    this.clearPoiMarkers()
-
+  fetchCategory(category) {
     fetch("/places/search", {
       method: "POST",
       headers: {
@@ -486,57 +476,38 @@ renderFilteredProperties(properties) {
           document.querySelector('meta[name="csrf-token"]').content
       },
       body: JSON.stringify({
-        category: this.selectedCategory,
+        category: category,
         center_lat: this.currentViewport.centerLat,
         center_lng: this.currentViewport.centerLng,
         radius: 2000
       })
     })
-    .then((response) => {
-      return response.json()
-    })
-    .then((data) => {
-      console.log(data);
-      const places = data;
-      console.log("Places:")
-      // console.log(places)
-      this.renderPoiMarkers(places)
-    })
-
+      .then((response) => response.json())
+      .then((places) => this.renderCategoryMarkers(category, places))
   }
 
-  renderPoiMarkers(places) {
-    places.forEach((place) => {
-
+  renderCategoryMarkers(category, places) {
+    // Replace any existing markers for this category
+    this.clearCategory(category)
+    const markers = places.map((place) => {
       const marker = new google.maps.marker.AdvancedMarkerElement({
-          map: this.map,
-          position: {
-            lat: place.latitude,
-            lng: place.longitude
-          },
-          title: place.name,
-          content: this.createMarkerContent(
-          this.getPoiIcon(this.selectedCategory),
-          "#556ea3"
-        )
-        })
-        marker.addListener("click", () => {
-
-          const content =
-            this.createPoiPopupContent(place)
-
-          this.openInfoWindow(marker, content)
-        })
-      this.poiMarkers.push(marker)
+        map: this.map,
+        position: { lat: place.latitude, lng: place.longitude },
+        title: place.name,
+        content: this.createMarkerContent(this.getPoiIcon(category), "#556ea3")
+      })
+      marker.addListener("click", () => {
+        this.openInfoWindow(marker, this.createPoiPopupContent(place))
+      })
+      return marker
     })
+    this.poiMarkersByCategory[category] = markers
   }
 
-  clearPoiMarkers() {
-    this.poiMarkers.forEach((marker) => {
-      marker.map = null
-    })
-
-    this.poiMarkers = []
+  clearCategory(category) {
+    const markers = this.poiMarkersByCategory[category] || []
+    markers.forEach((marker) => { marker.map = null })
+    this.poiMarkersByCategory[category] = []
   }
 
   toggleTransit(event) {
