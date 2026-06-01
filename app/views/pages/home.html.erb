@@ -1,74 +1,74 @@
     <!-- ── neighborhoods ── -->
-    <section id="neighborhoods">
-      <div class="section-eyebrow">Tokyo's best areas</div>
-      <h2 class="section-title">
-        Find your <em>neighborhood</em>
-      </h2>
-      <p class="section-sub">
-        From quiet backstreets in Shimokitazawa to the pulse of Shinjuku —
-        every home is fully furnished and ready from day one.
+<section id="neighborhoods">
+  <div class="section-eyebrow">Tokyo's best areas</div>
+  <h2 class="section-title">
+    Find your neighborhood
+  </h2>
+  <p class="section-sub">
+    From quiet backstreets in Shimokitazawa to the pulse of Shinjuku —
+    every home is fully furnished and ready from day one.
+  </p>
+  <div class="grid">
+    <% @neighborhoods.each do |neighborhood| %>
+      <%= link_to neighborhood_path(neighborhood), class: "card" do %>
+        <div class="card-img">
+          <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');"></div>
+          <div class="card-tag">
+            <%= neighborhood.ward %>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">
+            <%= neighborhood.name %>
+          </div>
+          <div class="card-desc">
+            <%= neighborhood.description.truncate(85, omission: '...', separator: ' ') %>
+          </div>
+          <div class="card-meta">
+            <div class="card-price">
+              View area
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="about__grid">
+    <div class="about__copy">
+      <div class="about__eyebrow">Why Lodgi</div>
+      <h2 class="about__title">Tokyo, <em>from day one</em></h2>
+      <p class="about__body">
+        Fully furnished homes across Tokyo's most liveable neighborhoods —
+        for foreigners who want to arrive and just live. No guarantors.
+        No key money. English support, always.
       </p>
-      <div class="grid">
-        <% @neighborhoods.each do |neighborhood| %>
-          <%= link_to neighborhood_path(neighborhood), class: "card" do %>
-            <div class="card-img">
-              <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');"></div>
-              <div class="card-tag">
-                <%= neighborhood.ward %>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="card-name">
-                <%= neighborhood.name %>
-              </div>
-              <div class="card-desc">
-                <%= neighborhood.description.truncate(85, omission: '...', separator: ' ') %>
-              </div>
-              <div class="card-meta">
-                <div class="card-price">
-                  View area
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+      <%= link_to "Browse homes", properties_path, class: "about__cta" %>
+    </div>
+    <div class="about__stats">
+      <div class="about__stat">
+        <div class="about__stat-number">158</div>
+        <div class="about__stat-label">Furnished homes</div>
       </div>
-    </section>
-    <section class="about" id="about">
-      <div class="about__grid">
-        <div class="about__copy">
-          <div class="about__eyebrow">Why Lodgi</div>
-          <h2 class="about__title">Tokyo, <em>from day one</em></h2>
-          <p class="about__body">
-            Fully furnished homes across Tokyo's most liveable neighborhoods —
-            for foreigners who want to arrive and just live. No guarantors.
-            No key money. English support, always.
-          </p>
-          <%= link_to "Browse homes", properties_path, class: "about__cta" %>
-        </div>
-        <div class="about__stats">
-          <div class="about__stat">
-            <div class="about__stat-number">158</div>
-            <div class="about__stat-label">Furnished homes</div>
-          </div>
-          <div class="about__stat">
-            <div class="about__stat-number">12</div>
-            <div class="about__stat-label">Neighborhoods</div>
-          </div>
-          <div class="about__stat">
-            <div class="about__stat-number">4.9</div>
-            <div class="about__stat-label">Average rating</div>
-          </div>
-          <div class="about__stat">
-            <div class="about__stat-number">0</div>
-            <div class="about__stat-label">Key money required</div>
-          </div>
-        </div>
+      <div class="about__stat">
+        <div class="about__stat-number">12</div>
+        <div class="about__stat-label">Neighborhoods</div>
       </div>
-    </section>
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-logo">Lodgi</div>
-      <div>Tokyo short-term rentals for foreigners · 2026</div>
-      <div>English support · Privacy · Terms</div>
-    </footer>
+      <div class="about__stat">
+        <div class="about__stat-number">4.9</div>
+        <div class="about__stat-label">Average rating</div>
+      </div>
+      <div class="about__stat">
+        <div class="about__stat-number">0</div>
+        <div class="about__stat-label">Key money required</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Lodgi</div>
+  <div>Tokyo short-term rentals for foreigners · 2026</div>
+  <div>English support · Privacy · Terms</div>
+</footer>

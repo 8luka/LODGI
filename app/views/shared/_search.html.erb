@@ -2,11 +2,13 @@
     the inquiry and redirects to map_path. State is loaded from session inquiry. %>
 <% current_trip_type = @trip_type || "visiting" %>
 <% current_anchor = @selected_anchor %>
-<% summary = if current_anchor
-                "#{current_anchor['name']} · #{current_trip_type.capitalize}"
-              elsif @checkin.present?
-                "#{current_trip_type.capitalize} trip"
-              end %>
+<%
+  _checkin_d  = @checkin.present?  ? (Date.parse(@checkin)  rescue nil) : nil
+  _checkout_d = @checkout.present? ? (Date.parse(@checkout) rescue nil) : nil
+  _date_str   = if _checkin_d && _checkout_d
+                  "#{_checkin_d.strftime('%-d %b')} – #{_checkout_d.strftime('%-d %b')}"
+                end
+%>
 <div class="trip-search"
      data-controller="trip-setup"
      data-trip-setup-anchors-value="<%= trip_anchors.to_json %>"
@@ -15,7 +17,39 @@
      data-trip-setup-selected-id-value="<%= current_anchor&.dig('id') %>">
   <button type="button" class="trip-search__bar" data-trip-setup-target="toggle" data-action="trip-setup#toggle">
     <iconify-icon icon="tabler:search"></iconify-icon>
-    <span class="trip-search__summary" data-trip-setup-target="summary"><%= summary %></span>
+    <span class="trip-search__summary" data-trip-setup-target="summary">
+      <% if current_anchor || @checkin.present? %>
+        <%
+          _trip_icon = case current_trip_type
+                       when "business"  then "tabler:briefcase"
+                       when "education" then "tabler:book"
+                       else                  "tabler:map-pin"
+                       end
+        %>
+        <span class="summary-right">
+          <% if current_anchor %>
+            <span class="summary-part">
+              <iconify-icon icon="<%= _trip_icon %>" class="summary-icon"></iconify-icon>
+              <%= current_anchor['name'] %>
+            </span>
+          <% end %>
+          <% if _date_str %>
+            <span class="summary-divider"></span>
+            <span class="summary-part">
+              <iconify-icon icon="tabler:calendar" class="summary-icon"></iconify-icon>
+              <%= _date_str %>
+            </span>
+          <% end %>
+          <% if @guests.present? && @guests.to_i > 0 %>
+            <span class="summary-divider"></span>
+            <span class="summary-part">
+              <iconify-icon icon="tabler:user" class="summary-icon"></iconify-icon>
+              <%= @guests %>
+            </span>
+          <% end %>
+        </span>
+      <% end %>
+    </span>
   </button>
   <div class="trip-search__dropdown" data-trip-setup-target="panel" hidden>
     <%= form_with url: inquiries_path, method: :post, data: { turbo: false } do %>
