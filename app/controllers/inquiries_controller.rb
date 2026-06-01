@@ -4,7 +4,7 @@ class InquiriesController < ApplicationController
       Inquiry.find_by(id: session[:inquiry_id])&.destroy
       session.delete(:inquiry_id)
     end
-    redirect_to map_path
+    redirect_back(fallback_location: map_path)
   end
 
   def create

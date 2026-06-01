@@ -1,4 +1,41 @@
-    <!-- ── neighborhoods ── -->
+<section class="hero" data-controller="landing">
+  <div class="hero__inner">
+    <div class="hero__left">
+      <div class="hero__eyebrow">Tokyo Short-Stay</div>
+      <h1 class="hero__title">
+        Find your place in
+        <span class="hero__title-accent">Tokyo</span>
+      </h1>
+      <p class="hero__sub">Tell us about your trip. We'll score every listing for how well it fits your priorities.</p>
+      <%= render "shared/search", hero: true %>
+      <%= link_to map_path, class: "hero__skip" do %>Skip — just show me the map<% end %>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number"><%= @properties_count %></span>
+          <span class="hero__stat-label">Listings</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number"><%= @neighborhoods.count %></span>
+          <span class="hero__stat-label">Neighbourhoods</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">EN</span>
+          <span class="hero__stat-label">English</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__right">
+      <div class="hero__map" data-landing-target="map"></div>
+      <div class="hero__map-legend">
+        <span class="hero__legend-dot hero__legend-dot--green"></span> Great fit
+        <span class="hero__legend-dot hero__legend-dot--amber"></span> Decent
+        <span class="hero__legend-dot hero__legend-dot--gray"></span> Off-priority
+      </div>
+    </div>
+  </div>
+</section>
 <section id="neighborhoods">
   <div class="section-eyebrow">Tokyo's best areas</div>
   <h2 class="section-title">
