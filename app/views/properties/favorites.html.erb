@@ -1,0 +1,99 @@
+
+<div class="fav-page">
+
+  <%# ── HEADER ── %>
+  <div class="fav-header">
+    <div>
+      <p class="fav-eyebrow">
+        <i class="fa-regular fa-heart"></i>
+        Your saved homes
+      </p>
+      <h1 class="fav-title">Favorites</h1>
+      <p class="fav-sub">
+        <%= @favorite_properties.count %> saved home<%= @favorite_properties.count == 1 ? "" : "s" %> in Tokyo
+      </p>
+    </div>
+    <%= link_to root_path(anchor: "map"), class: "fav-back-btn" do %>
+      <i class="fa-regular fa-map"></i> Back to map
+    <% end %>
+  </div>
+
+  <%# ── EMPTY STATE ── %>
+  <% if @favorite_properties.empty? %>
+    <div class="fav-empty">
+      <div class="fav-empty-icon">
+        <i class="fa-regular fa-heart"></i>
+      </div>
+      <h2 class="fav-empty-title">No saved homes yet</h2>
+      <p class="fav-empty-body">
+        Browse the map and tap the <i class="fa-regular fa-heart"></i> on any listing to save it here.
+      </p>
+      <%= link_to "Explore listings", root_path(anchor: "map"), class: "nb-btn nb-btn--primary" %>
+    </div>
+
+  <%# ── GRID ── %>
+  <% else %>
+    <div class="fav-grid">
+      <% @favorite_properties.each do |property| %>
+
+        <div class="nb-prop-card">
+
+<% img = property.images.first if property.respond_to?(:images) && property.images.present? %>
+
+<div class="nb-prop-img <%= 'nb-prop-img--empty' unless img.present? %>"
+     style="<%= "background-image: url('#{img}');" if img.present? %>">
+
+  <%= link_to toggle_favorite_property_path(property),
+      class: "nb-favorite-btn is-favorited",
+      data: { turbo_method: :get },
+      aria: { label: "Remove from favorites" } do %>
+    <i class="fa-solid fa-heart"></i>
+  <% end %>
+
+  <% unless img.present? %>
+    <i class="fa-regular fa-image"></i>
+  <% end %>
+</div>
+
+          <%# Info — identical structure to neighborhood show card %>
+          <div class="nb-prop-body">
+            <div class="nb-prop-name"><%= property.name %></div>
+
+            <div class="nb-prop-tags">
+              <% if property.try(:layout).present? %>
+                <span><%= property.layout %></span>
+              <% end %>
+              <% if property.try(:size).present? %>
+                <span><%= property.size.to_i %>㎡</span>
+              <% end %>
+              <% if property.try(:bedrooms).present? %>
+                <span><%= property.bedrooms %> bed</span>
+              <% end %>
+            </div>
+
+            <div class="nb-prop-footer">
+              <div class="nb-prop-price">
+                <% if property.try(:price).present? %>
+                  ¥<%= number_with_delimiter(property.price.to_i) %>
+                  <span>/ mo</span>
+                <% else %>
+                  On request
+                <% end %>
+              </div>
+
+              <% if property.try(:availability).present? %>
+                <span class="nb-prop-badge nb-prop-badge--available">Available <%= property.availability %></span>
+              <% else %>
+                <span class="nb-prop-badge nb-prop-badge--unavailable">Unavailable</span>
+              <% end %>
+            </div>
+          </div>
+
+          <%= link_to '', property_path(property), class: "nb-prop-card-link" %>
+        </div>
+
+      <% end %>
+    </div>
+  <% end %>
+
+</div>

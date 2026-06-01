@@ -18,10 +18,18 @@ Rails.application.routes.draw do
   resources :inquiries, only: [ :create ]
   get '/inquiry/clear', to: 'inquiries#clear', as: :clear_inquiry
   resources :properties, only: [ :index, :show ] do
+     member do
+      get 'toggle_favorite'
+    end
+    collection do
+       get 'favorites'
+    end
     resources :inquiries, only: [ :create ]
   end
 
   resources :neighborhoods, only: [ :index, :show ]
 
   post "set_currency", to: "application#set_currency"
+
+  get "favorites", to: "properties#favorites", as: :favorites
 end
