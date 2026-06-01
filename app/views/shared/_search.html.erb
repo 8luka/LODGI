@@ -1,5 +1,6 @@
 <%# Global navbar trip search. Submits POST to inquiries_path; controller saves/updates
     the inquiry and redirects to map_path. State is loaded from session inquiry. %>
+<% hero ||= false %>
 <% current_trip_type = @trip_type || "visiting" %>
 <% current_anchor = @selected_anchor %>
 <%
@@ -9,7 +10,7 @@
                   "#{_checkin_d.strftime('%-d %b')} – #{_checkout_d.strftime('%-d %b')}"
                 end
 %>
-<div class="trip-search"
+<div class="trip-search <%= 'trip-search--hero' if hero %>"
      data-controller="trip-setup"
      data-trip-setup-anchors-value="<%= trip_anchors.to_json %>"
      data-trip-setup-trip-type-value="<%= current_trip_type %>"

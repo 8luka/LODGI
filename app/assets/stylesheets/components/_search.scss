@@ -98,6 +98,10 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   padding: 24px 20px 20px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
   z-index: 1040;
   opacity: 0;
   visibility: hidden;
@@ -231,6 +235,7 @@
 // While searching, tabs de-emphasize (grid is no longer category-filtered).
 .trip-search.is-searching .anchor-tab { opacity: 0.45; }
 
+
 .anchor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -288,6 +293,32 @@
 }
 
 .trip-form__actions { display: flex; align-items: center; gap: 8px; }
+
+// Hero variant: overrides navbar absolute positioning and bumps the bar size.
+.trip-search--hero {
+  position: relative;
+  left: auto;
+  transform: none;
+  max-width: 460px;
+  margin: 0 0 20px;
+
+  .trip-search__bar {
+    padding: 13px 22px;
+    font-size: 15px;
+
+    > iconify-icon { font-size: 19px; }
+  }
+
+  // Keep the bar visible when the dropdown is open, but show it blank.
+  &.is-open .trip-search__bar {
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  &.is-open .trip-search__summary {
+    opacity: 0;
+  }
+}
 
 // Keep the searchbar usable when the navbar collapses on small screens.
 @media (max-width: 600px) {

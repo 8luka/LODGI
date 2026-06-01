@@ -132,9 +132,14 @@ export default class extends Controller {
   filter() { this.render() }
 
   selectAnchor(event) {
-    this.selectedIdValue = event.currentTarget.dataset.id
-    this.anchorIdFieldTarget.value = this.selectedIdValue
-    this.updateSelectedLabel()
+    const id = event.currentTarget.dataset.id
+    if (id === this.selectedIdValue) {
+      this.clearSelection()
+    } else {
+      this.selectedIdValue = id
+      this.anchorIdFieldTarget.value = id
+      this.updateSelectedLabel()
+    }
     this.render()
   }
 
