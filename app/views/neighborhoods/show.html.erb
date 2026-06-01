@@ -89,16 +89,24 @@
         <% if @neighborhood.properties.any? %>
           <div class="nb-properties-grid">
             <% @neighborhood.properties.each do |property| %>
-              <%= link_to property_path(property), class: "nb-prop-card" do %>
+              <div class="nb-prop-card">
 
                 <%# Image %>
                 <% img = property.images.first if property.respond_to?(:images) %>
-                <div class="nb-prop-img <% unless img.present? %>nb-prop-img--empty<% end %>"
-                     <% if img.present? %>style="background-image:url('<%= img %>')"<% end %>>
+                <div class="nb-prop-img <% img.present? ? '': 'nb-prop-img--empty' %>" style="<%= property.respond_to?(:images) ?
+                "background-image:url(#{img})" : '' %>">
+                     <%= link_to toggle_favorite_property_path(property), class: "nb-favorite-btn" do %>
+                        <% if current_user && current_user.favorited?(property) %>
+                          <i class="fa-solid fa-heart"></i>
+                        <% else %>
+                          <i class="fa-regular fa-heart"></i>
+                        <% end %>
+                     <% end %>
                   <% unless img.present? %>
                     <i class="fa-regular fa-image"></i>
                   <% end %>
                 </div>
+
 
                 <%# Info %>
                 <div class="nb-prop-body">
@@ -135,8 +143,9 @@
                   </div>
 
                 </div>
+              <%= link_to '', property_path(property), class:"nb-prop-card-link" %>
+                </div>
 
-              <% end %>
             <% end %>
           </div>
         <% else %>

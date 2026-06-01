@@ -235,6 +235,18 @@
   gap: 12px;
 }
 
+.nb-prop-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+
+
 .nb-prop-card {
   display: flex;
   flex-direction: column;
@@ -244,6 +256,7 @@
   overflow: hidden;
   text-decoration: none;
   color: inherit;
+  position: relative;
   transition: transform 0.18s, box-shadow 0.18s;
 
   &:hover {
