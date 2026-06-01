@@ -1,0 +1,39 @@
+<%# Left rail: ranked shortlist UI shell — listings render %>
+<%# by a placeholder of price; the fit-score chip is another %>
+<%# placeholder until the scoring engine is done. Cards carry data-listing-id for %>
+<%# future card<->pin linking. Collapsible via the shared rail controller. %>
+<aside class="rail rail--left" data-controller="rail" data-rail-side-value="left">
+  <button type="button" class="rail__tab" data-action="rail#toggle" aria-label="Toggle shortlist">
+    <iconify-icon icon="tabler:chevron-left" data-rail-target="chevron"></iconify-icon>
+  </button>
+  <div class="rail__inner">
+    <div class="rail__head">
+      <div class="rail__title">Recommended <span class="rail__count">· <%= total %></span></div>
+      <button type="button" class="rail__expand" aria-label="See all listings">
+        <iconify-icon icon="tabler:arrows-maximize"></iconify-icon>
+      </button>
+    </div>
+    <div class="rail__body" data-rail-target="body">
+      <div class="listings">
+        <% properties.each_with_index do |property, index| %>
+          <%= link_to property_path(property), class: "listing-card", data: { listing_id: property.id } do %>
+            <span class="listing-card__rank <%= "is-top" if index < 3 %>"><%= index + 1 %></span>
+            <div class="listing-card__thumb"
+               style="background-image: url('<%= property.images&.first %>');"></div>
+            <div class="listing-card__body">
+              <div class="listing-card__name"><%= property.name %></div>
+              <div class="listing-card__metric">
+                <iconify-icon icon="tabler:train"></iconify-icon>
+                <%= property.stations&.first || property.neighborhood&.name %>
+              </div>
+              <div class="listing-card__foot">
+                <span class="listing-card__price">¥<%= number_with_delimiter(property.price.to_i) %></span>
+                <span class="fit-chip fit-chip--placeholder" title="Fit score coming soon">Fit —</span>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</aside>

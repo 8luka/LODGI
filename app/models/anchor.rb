@@ -1,0 +1,2 @@
+class Anchor < ApplicationRecord
+end

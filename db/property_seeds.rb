@@ -470,7 +470,7 @@ properties_data = [
   :stations=>["Gotanda Sta. - 4 mins walk"]},
 
   {:name=>"Nishi 412",
-  :neighborhood=>"Gotanda",
+  :neighborhood=>"Gotanda/Osaki",
   :availability=>"now",
   :latitude=>35.628587,
   :longitude=>139.719541,
@@ -530,7 +530,7 @@ properties_data = [
   :stations=>["Meguro Sta. - 5 mins walk"]},
 
   {:name=>"SUMII Nishi-Gotanda Apt",
-  :neighborhood=>"Gotanda",
+  :neighborhood=>"Gotanda/Osaki",
   :availability=>"Sep 1st",
   :latitude=>35.6280825,
   :longitude=>139.7145389,
@@ -560,7 +560,7 @@ properties_data = [
   :stations=>["Meguro Sta. - 11 mins walk", "Fudomae Sta. - 5 mins walk"]},
 
   {:name=>"MAISON MIYASHITA",
-  :neighborhood=>"Gotanda",
+  :neighborhood=>"Gotanda/Osaki",
   :availability=>"now",
   :latitude=>35.6224538576,
   :longitude=>139.7195005116,
@@ -590,7 +590,7 @@ properties_data = [
   :stations=>["Gotanda Sta. - 9 mins walk", "Fudomae Sta. - 11 mins walk", "Osaki-Hirokoji Sta. - 8 mins walk"]},
 
   {:name=>"La Sante Ikedayama 1202",
-  :neighborhood=>"Gotanda",
+  :neighborhood=>"Gotanda/Osaki",
   :availability=>"June 25th",
   :latitude=>35.6281505,
   :longitude=>139.7222414,

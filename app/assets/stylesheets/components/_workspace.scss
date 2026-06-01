@@ -1,0 +1,145 @@
+// Three-zone map workspace: ranked listings (left) · map (middle) · priorities (right).
+// Sits beneath the fixed navbar; the map is the flex-growing hero, rails are fixed-width
+// and collapse to a thin tab. Desktop-first (mobile is a later pass).
+
+.workspace {
+  height: 100vh;
+  padding-top: 64px; // clears the fixed navbar
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  padding: 10px 16px 12px;
+}
+
+.workspace-map {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+}
+
+// ─────────────── Rails (shared shell for left + right) ───────────────
+.rail {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  transition: width 0.18s ease;
+}
+
+.rail--left  { width: 320px; }
+.rail--right { width: 286px; }
+
+.rail.is-collapsed { width: 0; }
+
+// Inner wrapper clips collapsing content; tab lives outside so it stays visible.
+.rail__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  transition: opacity 0.15s ease;
+}
+
+.rail.is-collapsed .rail__inner {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rail__tab {
+  position: absolute;
+  top: 14px;
+  z-index: 20;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 0.5px solid var(--border);
+  background: white;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink-soft);
+
+  iconify-icon { font-size: 16px; }
+  &:hover { background: var(--cream-dark); }
+}
+
+.rail--left  .rail__tab { right: -14px; }
+.rail--right .rail__tab { left: -14px; }
+
+.rail__body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 14px;
+  transition: opacity 0.15s ease;
+}
+
+// Move left-rail scrollbar to the outer-left edge of the screen.
+.rail--left .rail__body {
+  direction: rtl;
+  padding-left: 0;
+}
+
+.rail--left .rail__body > * {
+  direction: ltr;
+}
+
+.rail__head {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 18px 10px;
+  transition: opacity 0.15s ease;
+}
+
+.rail__title {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.rail__count { color: var(--ink-muted); font-family: var(--sans); font-size: 13px; }
+
+.rail__expand {
+  border: none;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  display: flex;
+  iconify-icon { font-size: 18px; }
+  &:hover { color: var(--ink); }
+}
+
+// On small screens, stack the rails under the map rather than break the row.
+@media (max-width: 980px) {
+  .workspace { height: auto; }
+  .workspace-grid {
+    flex-direction: column;
+    flex: none;
+  }
+  .rail--left, .rail--right { width: 100%; }
+  .rail__tab { display: none; }
+  .workspace-map { height: 60vh; }
+}

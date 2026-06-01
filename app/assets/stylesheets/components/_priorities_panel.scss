@@ -1,0 +1,161 @@
+// Right rail: importance-weight sliders + category toggles.
+
+.prio-section {
+  margin-bottom: 18px;
+  &__head {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 600;
+    margin: 4px 0 12px;
+  }
+}
+
+// ─────────────── Sliders ───────────────
+.prio-slider {
+  margin-bottom: 15px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--ink);
+    iconify-icon { font-size: 15px; color: var(--ink-soft); }
+  }
+  &__val {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--terra);
+    min-width: 16px;
+    text-align: right;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--terra);
+    cursor: pointer;
+  }
+}
+
+// ─────────────── Toggle buttons ───────────────
+.prio-group {
+  margin-bottom: 14px;
+  &__head {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+  }
+}
+
+.prio-btn-group {
+  display: flex;
+  gap: 5px;
+}
+
+.prio-btn {
+  flex: 1;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  overflow: hidden;
+  padding: 8px 6px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--terra);
+  border: 1.5px solid var(--terra);
+  cursor: pointer;
+  transition: flex 0.22s ease, background 0.12s, color 0.12s;
+
+  input[type="checkbox"] { display: none; }
+
+  iconify-icon {
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-size: 11.5px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.22s ease, opacity 0.15s ease;
+  }
+
+  &:hover {
+    flex: 4;
+    background: color-mix(in srgb, var(--terra) 8%, #fff);
+
+    .prio-btn__text {
+      max-width: 110px;
+      opacity: 1;
+    }
+  }
+
+  &:has(input:checked) {
+    background: var(--terra);
+    color: #fff;
+
+    iconify-icon { color: #fff; }
+  }
+}
+
+// ─────────────── Info icon ───────────────
+.info-tip {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  vertical-align: middle;
+  cursor: help;
+
+  iconify-icon {
+    font-size: 13px;
+    color: var(--ink-muted);
+    opacity: 0.55;
+    transition: opacity 0.12s;
+  }
+
+  &:hover iconify-icon { opacity: 1; }
+}
+
+.tooltip-popup {
+  position: fixed;
+  z-index: 9999;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: var(--sans);
+  line-height: 1.55;
+  padding: 8px 11px;
+  border-radius: 7px;
+  width: 200px;
+  pointer-events: none;
+  opacity: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: opacity 0.15s;
+
+  &.is-visible { opacity: 1; }
+}
+
+.prio-footer { padding: 6px 4px 16px; }
+.prio-reset {
+  border: none;
+  background: transparent;
+  color: var(--terra);
+  font-size: 12px;
+  cursor: pointer;
+  &:hover { text-decoration: underline; }
+}

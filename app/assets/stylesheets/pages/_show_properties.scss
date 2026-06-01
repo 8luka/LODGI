@@ -304,6 +304,15 @@
   outline-offset: 3px;
 }
 
+.book-btn--muted {
+  background: var(--bg-subtle, #f5f4f2);
+  border-color: var(--border, #ddd);
+  color: var(--ink-muted, #888);
+  box-shadow: none;
+  cursor: default;
+  &:hover { background: var(--bg-subtle, #f5f4f2); border-color: var(--border, #ddd); box-shadow: none; transform: none; }
+}
+
   /* ── MAP MODAL ── */
   .modal-overlay {
     display: none; position: fixed; inset: 0;
