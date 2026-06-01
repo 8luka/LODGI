@@ -14,6 +14,7 @@ load Rails.root.join("db/neighborhood_seeds.rb")
 load Rails.root.join("db/property_seeds.rb")
 load Rails.root.join("db/amenity_seeds.rb")
 load Rails.root.join("db/place_seeds.rb")
+load Rails.root.join("db/google_places_seeds.rb")
 
 ### DO NOT DELETE THE BELOW !!! ### DO NOT DELETE THE BELOW !!! ### DO NOT DELETE THE BELOW !!! ###
 

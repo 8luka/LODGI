@@ -381,9 +381,9 @@ export default class extends Controller {
 
     let image = null
 
-    if (place.photo_reference) {
+    if (place.photos?.[0]) {
       image =
-        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${place.photo_reference}&key=${window.googleMapsPlacesKey}`
+        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${place.photos[0]}&key=${window.googleMapsPlacesKey}`
     }
 
     return `
@@ -477,9 +477,10 @@ export default class extends Controller {
       },
       body: JSON.stringify({
         category: category,
-        center_lat: this.currentViewport.centerLat,
-        center_lng: this.currentViewport.centerLng,
-        radius: 2000
+        north: this.currentViewport.north,
+        south: this.currentViewport.south,
+        east: this.currentViewport.east,
+        west: this.currentViewport.west
       })
     })
       .then((response) => response.json())
