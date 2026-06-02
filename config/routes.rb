@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get "/map", to: "maps#map", as: :map
   resources :inquiries, only: [ :create ]
   get '/inquiry/clear', to: 'inquiries#clear', as: :clear_inquiry
+  patch '/inquiry/weights', to: 'inquiries#update_weights', as: :inquiry_weights
+  patch '/inquiry/selected_places', to: 'inquiries#update_selected_places', as: :inquiry_selected_places
   resources :properties, only: [ :index, :show ] do
      member do
       get 'toggle_favorite'

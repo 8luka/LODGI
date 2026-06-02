@@ -95,6 +95,11 @@
   transition: opacity 0.15s ease;
 }
 
+// Right rail never scrolls — content is sized to fit.
+.rail--right .rail__body {
+  overflow: hidden;
+}
+
 // Move left-rail scrollbar to the outer-left edge of the screen.
 .rail--left .rail__body {
   direction: rtl;
@@ -110,7 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 18px 10px;
+  padding: 2px 18px 10px;
   transition: opacity 0.15s ease;
 }
 

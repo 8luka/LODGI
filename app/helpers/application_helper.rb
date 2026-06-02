@@ -16,7 +16,7 @@ module ApplicationHelper
         }
       end
 
-      place_anchors = Place.all.map do |p|
+      place_anchors = Place.where(category: %w[landmark campus]).map do |p|
         {
           "id" => p.name.parameterize,
           "name" => p.name,
