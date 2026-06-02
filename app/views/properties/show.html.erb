@@ -8,12 +8,20 @@
     <span>Shinjuku Studio</span>
   </div>
   <!-- TITLE -->
-  <h1 class="apt-title"><%= @property.name %></h1>
+<div class="apt-title-row">
+    <h1 class="apt-title"><%= @property.name %></h1>
+    <%= render "properties/favorite_button", property: @property %>
+  </div>
+
   <div class="apt-meta">
-    <%= link_to neighborhood_path(@property.neighborhood.name), class: "apt-meta-link", style: "text-decoration: none; color: inherit;" do %>
-      <span><i class="fa-solid fa-location-dot"></i> <%= @property.neighborhood.name %>, Tokyo</span>
+    <%= link_to neighborhood_path(@property.neighborhood.id), class: "apt-meta-link", style: "text-decoration: none; color: inherit;" do %>
+      <span>
+        <i class="fa-solid fa-location-dot"></i>
+        <%= @property.neighborhood.name %>, Tokyo
+      </span>
     <% end %>
   </div>
+
   <!-- TWO-COLUMN LAYOUT -->
   <div class="content-grid">
     <!-- LEFT -->
@@ -193,7 +201,10 @@
       </div>
       <!-- PRICE CARD -->
       <div class="price-card">
-        <div class="price-main"><%= "¥#{@property.price}" %> <span>/ month</span></div>
+        <div class="price-main">
+          ¥<%= number_with_delimiter(@property.price.to_i) %>
+          <span>/ month</span>
+        </div>
         <div class="price-note">
           <%= "Available #{@property.availability}" %><br>
         </div>
