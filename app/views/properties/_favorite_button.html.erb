@@ -1,0 +1,21 @@
+<div id="favorite_<%= property.id %>">
+  <% if user_signed_in? %>
+
+    <% favorited = current_user.favorited?(property) %>
+
+    <%= button_to toggle_favorite_property_path(
+          property,
+          source: local_assigns[:source]
+        ),
+        class: "nb-favorite-btn #{'is-favorited' if favorited}",
+        form: { style: "display: contents" },
+        aria: {
+          label: favorited ? "Remove from favorites" : "Add to favorites"
+        } do %>
+
+      <i class="fa-<%= favorited ? 'solid' : 'regular' %> fa-heart"></i>
+
+    <% end %>
+
+  <% end %>
+</div>

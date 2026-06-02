@@ -8,19 +8,19 @@
          data-controller="maps"
          data-api-key="<%= ENV['MAPS_JS_API'] %>"
          data-maps-properties-value="<%= @properties %>"
-         data-maps-checkin-value="<%= @checkin %>">
-
+         data-maps-checkin-value="<%= @checkin %>"
+         data-maps-anchor-value="<%= @anchor.to_json %>">
   <div class="workspace-grid">
     <%= render "pages/listings_rail",
                properties: @properties_records.first(20),
                total: @properties_records.size %>
 
-    <div class="workspace-map">
-      <%= render "pages/filter_chips" %>
-      <div id="map" data-maps-target="map"></div>
-    </div>
+      <div class="workspace-map">
+        <%= render "pages/filter_chips" %>
+        <div id="map" data-maps-target="map"></div>
+      </div>
+        <%= render "pages/priorities_panel" %>
 
-    <%= render "pages/priorities_panel" %>
   </div>
 
 </section>

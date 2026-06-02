@@ -95,13 +95,7 @@
                 <% img = property.images.first if property.respond_to?(:images) %>
                 <div class="nb-prop-img <% img.present? ? '': 'nb-prop-img--empty' %>" style="<%= property.respond_to?(:images) ?
                 "background-image:url(#{img})" : '' %>">
-                     <%= link_to toggle_favorite_property_path(property), class: "nb-favorite-btn" do %>
-                        <% if current_user && current_user.favorited?(property) %>
-                          <i class="fa-solid fa-heart"></i>
-                        <% else %>
-                          <i class="fa-regular fa-heart"></i>
-                        <% end %>
-                     <% end %>
+                     <%= render "properties/favorite_button", property: property %>
                   <% unless img.present? %>
                     <i class="fa-regular fa-image"></i>
                   <% end %>

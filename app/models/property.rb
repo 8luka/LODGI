@@ -5,4 +5,5 @@ class Property < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :inquiries
   has_many :places
+  acts_as_favoritable
 end
