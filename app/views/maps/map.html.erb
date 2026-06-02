@@ -17,8 +17,14 @@
                total: @properties_records.size %>
 
       <div class="workspace-map">
-        <%= render "pages/filter_chips" %>
-        <div id="map" data-maps-target="map"></div>
+<div class="map-container">
+          <div id="map" data-maps-target="map"></div>
+          <label class="map-transit-toggle">
+            <input type="checkbox" data-maps-target="transitToggle" data-action="change->maps#toggleTransit">
+            <iconify-icon icon="tabler:train"></iconify-icon>
+            <span>Transit Map</span>
+          </label>
+        </div>
       </div>
         <%= render "pages/priorities_panel" %>
 
