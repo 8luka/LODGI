@@ -24,9 +24,12 @@
     <% end %>
 
     <div class="popup-actions">
-      <%= render "properties/favorite_button", property: @property %>
+      <div class="popup-favorite">
+        <%= render "properties/favorite_button", property: @property %>
+      </div>
+
       <%= link_to "View Property", property_path(@property), class: "popup-button" %>
-    </div>
+  </div>
 
   </div>
 
