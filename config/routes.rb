@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   patch '/inquiry/selected_places', to: 'inquiries#update_selected_places', as: :inquiry_selected_places
   resources :properties, only: [ :index, :show ] do
      member do
-      get 'toggle_favorite'
+      post 'toggle_favorite'
+      get 'popup'
     end
     collection do
        get 'favorites'
@@ -34,4 +35,5 @@ Rails.application.routes.draw do
   post "set_currency", to: "application#set_currency"
 
   get "favorites", to: "properties#favorites", as: :favorites
+
 end

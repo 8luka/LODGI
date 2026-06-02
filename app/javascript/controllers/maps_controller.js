@@ -221,21 +221,14 @@ export default class extends Controller {
               )
           })
 
-        marker.addListener(
-          "click",
-          () => {
-
-            const content =
-              this.createPropertyPopupContent(
-                property
-              )
-
-            this.openInfoWindow(
-              marker,
-              content
+            marker.addListener(
+              "click",
+              async () => {
+                const response = await fetch(`/properties/${property.id}/popup`)
+                const html = await response.text()
+                this.openInfoWindow(marker, html)
+              }
             )
-          }
-        )
 
         this.propertyMarkers.push(
           marker
