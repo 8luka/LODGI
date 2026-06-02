@@ -1,6 +1,16 @@
 class MapsController < ApplicationController
   def map
     # Ordered by price as the stable placeholder ranking until the fit-score
+    inquiry = session[:inquiry_id] && Inquiry.find_by(id: session[:inquiry_id])
+    @anchor = nil
+    if inquiry&.anchor.present?
+      @anchor = {
+        id: inquiry.anchor.id,
+        name: inquiry.anchor.name,
+        latitude: inquiry.anchor.latitude,
+        longitude: inquiry.anchor.longitude
+      }
+    end
     @properties_records = Property.includes(:neighborhood).order(:price)
     @properties = JSON.generate(
       @properties_records.map do |property|
@@ -19,6 +29,5 @@ class MapsController < ApplicationController
       end
     )
     @neighborhoods = Neighborhood.all
-
   end
 end

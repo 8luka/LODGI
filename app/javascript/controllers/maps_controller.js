@@ -4,7 +4,13 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static values = {
     properties: Array,
-    checkin: { type: String, default: "" }
+
+    checkin: {
+      type: String,
+      default: ""
+    },
+
+    anchor: Object
   }
   static targets = [
     "map",
@@ -17,7 +23,9 @@ export default class extends Controller {
     "priceFilter",
     "priceValue",
 
-    "availabilityFilter"
+    "availabilityFilter",
+
+    "transitControl",
   ]
 
   connect() {
@@ -36,8 +44,11 @@ export default class extends Controller {
 
     this.map = new google.maps.Map(this.mapTarget, {
       mapId: "DEMO_MAP_ID",
-    });
+      mapTypeControl: false,
+      fullscreenControl: false,
+      cameraControl: false
 
+    });
     // Re-fit + viewport tracking after the filtered render settles.
     this.map.addListener("idle", () => {
       this.updateViewportState()
@@ -240,7 +251,9 @@ export default class extends Controller {
         })
       }
     )
-
+      this.renderAnchorMarker(
+        bounds
+      )
     if (properties.length > 0) {
 
       this.map.fitBounds(
@@ -408,7 +421,63 @@ export default class extends Controller {
       </div>
     `
   }
+  renderAnchorMarker(bounds) {
 
+    if (!this.anchorValue?.latitude) {
+      return
+    }
+    const content =
+      this.createMarkerContent(
+        "mdi:anchor",
+        "#000000"
+      )
+
+    content
+      .querySelector(".custom-marker")
+      .classList
+      .add("anchor-marker")
+    const marker =
+      new google.maps.marker.AdvancedMarkerElement({
+
+        map: this.map,
+
+        position: {
+          lat: this.anchorValue.latitude,
+          lng: this.anchorValue.longitude
+        },
+
+        content: content
+
+      })
+
+    bounds.extend({
+      lat: this.anchorValue.latitude,
+      lng: this.anchorValue.longitude
+    })
+
+    marker.addListener(
+      "click",
+      () => {
+
+        this.openInfoWindow(
+          marker,
+          `
+            <div class="poi-popup">
+              <div class="popup-content">
+                <h3 class="popup-title">
+                  ${this.anchorValue.name}
+                </h3>
+
+                <div class="popup-row">
+                  Trip Destination
+                </div>
+              </div>
+            </div>
+          `
+        )
+      }
+    )
+  }
   openInfoWindow(marker, content) {
 
     // Close previous popup
@@ -440,7 +509,7 @@ export default class extends Controller {
       marker.content.firstElementChild
 
     markerElement.classList.add(
-      "selected-marker"
+      "selected-marker",
     )
 
     this.selectedMarkerElement =
