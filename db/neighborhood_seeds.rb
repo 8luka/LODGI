@@ -164,7 +164,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7109",
   is_workplace: false,
   is_landmark: false,
-  photos: []
+  photos: ["https://static.gltjp.com/glt/data/article/21000/20300/20230426_120439_fd9c889e_w1920.webp"]
 )
 neighborhood.save
 
@@ -177,7 +177,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7774",
   is_workplace: false,
   is_landmark: true,
-  photos: []
+  photos: ["https://travel.rakuten.com/contents/sites/contents/files/styles/max_1300x1300/public/2023-01/things-to-do-ueno_2.jpg?itok=X0p3YH4y"]
 )
 neighborhood.save
 
@@ -190,7 +190,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.6657",
   is_workplace: false,
   is_landmark: false,
-  photos: []
+  photos: ["https://www.gotokyo.org/shared/images/pages/destinations/western-tokyo/nakano/images/sub_004.webp"]
 )
 neighborhood.save
 
@@ -203,7 +203,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7967",
   is_workplace: false,
   is_landmark: true,
-  photos: []
+  photos: ["https://www.planmyjapan.com/wp-content/uploads/2024/05/asakusa-28.jpg"]
 )
 neighborhood.save
 
@@ -216,7 +216,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7763",
   is_workplace: false,
   is_landmark: true,
-  photos: []
+  photos: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RdtJ82qObBt8SJI9Ib_w-ctvGIAVBxgp8Q&s"]
 )
 neighborhood.save
 
@@ -229,7 +229,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7370",
   is_workplace: true,
   is_landmark: false,
-  photos: []
+  photos: ["https://www.gotokyo.org/shared/images/pages/destinations/central-tokyo/akasaka/images/akasaka_sacas.jpg"]
 )
 neighborhood.save
 
@@ -242,20 +242,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7649",
   is_workplace: true,
   is_landmark: false,
-  photos: []
-)
-neighborhood.save
-
-neighborhood = Neighborhood.new(
-  name: "Otemachi",
-  description: "Japan's densest concentration of major corporate headquarters, sitting directly beside the Imperial Palace. The district is built for business — a labyrinthine underground city connects its towers to multiple subway lines, and a quiet, purposeful energy replaces the bustle of more commercial neighbors.",
-  features: "Otemachi Financial City, underground dining and shopping concourse, Imperial Palace East Gardens access, multiple subway interchanges, high-end business hotels, conference venues",
-  ward: "Chiyoda-ku",
-  latitude: "35.6876",
-  longitude: "139.7665",
-  is_workplace: true,
-  is_landmark: false,
-  photos: []
+  photos: ["https://www.rethinktokyo.com/sites/default/files/styles/article-full/public/marunouchi_taichiro_ueki.jpg"]
 )
 neighborhood.save
 
@@ -268,7 +255,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7497",
   is_workplace: true,
   is_landmark: false,
-  photos: []
+  photos: ["https://www.japan-guide.com/blog/raina/g/231002_02.jpg"]
 )
 neighborhood.save
 
@@ -281,7 +268,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7626",
   is_workplace: true,
   is_landmark: false,
-  photos: []
+  photos: ["https://www.gotokyo.org/en/destinations/central-tokyo/shiodome-and-shimbashi/images/34_0116_5.jpg"]
 )
 neighborhood.save
 
@@ -294,7 +281,7 @@ neighborhood = Neighborhood.new(
   longitude: "139.7745",
   is_workplace: true,
   is_landmark: false,
-  photos: []
+  photos: ["https://cdn.gaijinpot.com/app/uploads/sites/6/2018/08/Naka-Dori-1-by-Joshua-Meyer.jpg"]
 )
 neighborhood.save
 
@@ -307,6 +294,6 @@ neighborhood = Neighborhood.new(
   longitude: "139.7475",
   is_workplace: true,
   is_landmark: false,
-  photos: []
+  photos: ["https://images.trvl-media.com/place/6340542/64abcf61-2c69-4d8c-b605-6a984fd9d126.jpg"]
 )
 neighborhood.save

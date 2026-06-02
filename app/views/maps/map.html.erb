@@ -16,12 +16,12 @@
                properties: @properties_records.first(20),
                total: @properties_records.size %>
 
-    <div class="workspace-map">
-      <%= render "pages/filter_chips" %>
-      <div id="map" data-maps-target="map"></div>
-    </div>
+      <div class="workspace-map">
+        <%= render "pages/filter_chips" %>
+        <div id="map" data-maps-target="map"></div>
+      </div>
+        <%= render "pages/priorities_panel" %>
 
-    <%= render "pages/priorities_panel" %>
   </div>
 
 </section>
