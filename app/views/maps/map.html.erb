@@ -8,7 +8,8 @@
          data-controller="maps"
          data-api-key="<%= ENV['MAPS_JS_API'] %>"
          data-maps-properties-value="<%= @properties %>"
-         data-maps-checkin-value="<%= @checkin %>">
+         data-maps-checkin-value="<%= @checkin %>"
+         data-maps-anchor-value="<%= @anchor.present? ? json_escape(@anchor.to_json) : '{}' %>">
 
   <div class="workspace-grid">
     <%= render "pages/listings_rail",
