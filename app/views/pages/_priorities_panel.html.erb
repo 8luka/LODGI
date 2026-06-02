@@ -6,6 +6,9 @@
        data-controller="rail priorities-panel"
        data-rail-side-value="right"
        data-priorities-panel-anchored-value="<%= @selected_anchor.present? %>"
+       data-priorities-panel-update-url-value="<%= inquiry_weights_path %>"
+       data-priorities-panel-selected-places-value="<%= @selected_places.to_json %>"
+       data-priorities-panel-places-url-value="<%= inquiry_selected_places_path %>"
        data-action="anchor:changed@window->priorities-panel#setAnchored">
   <button type="button" class="rail__tab" data-action="rail#toggle" aria-label="Toggle priorities">
     <iconify-icon icon="tabler:chevron-right" data-rail-target="chevron"></iconify-icon>
@@ -31,36 +34,28 @@
           <option value="2"></option>
           <option value="3"></option>
         </datalist>
-        <div class="prio-slider">
+        <div class="prio-slider"<%= ' style="display:none"'.html_safe if @commute_weight.to_i.zero? %>>
           <div class="prio-slider__head">
             <span class="prio-slider__label"><iconify-icon icon="tabler:clock-hour-4"></iconify-icon> Easy commute<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="The degree that travel time to your chosen anchor should be factored into scoring, if at all." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
             <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Important</span>
           </div>
-          <input type="range" min="0" max="3" step="1" value="2" data-key="commute"
+          <input type="range" min="0" max="3" step="1" value="<%= @commute_weight %>" data-key="commute"
                list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
         </div>
         <div class="prio-slider">
           <div class="prio-slider__head">
-            <span class="prio-slider__label"><iconify-icon icon="tabler:zzz"></iconify-icon> Peace &amp; quiet<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Do find staying in a quieter residential area important, or do you want to be where the action is?" data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
+            <span class="prio-slider__label"><iconify-icon icon="tabler:zzz"></iconify-icon> Peace &amp; quiet<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Do you find staying in a quieter residential area important, or do you want to be where the action is?" data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
             <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Nice to have</span>
           </div>
-          <input type="range" min="0" max="3" step="1" value="1" data-key="quiet"
+          <input type="range" min="0" max="3" step="1" value="<%= @quiet_weight %>" data-key="quiet"
                list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
         </div>
         <div class="prio-slider">
           <div class="prio-slider__head">
-            <span class="prio-slider__label"><iconify-icon icon="tabler:walk"></iconify-icon> Walkability<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Rewards listings close to stations, shops, and daily amenities on foot." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
+            <span class="prio-slider__label"><iconify-icon icon="tabler:train"></iconify-icon> Near a station<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Rewards listings closer to stations in Tokyo's train network." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
             <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Nice to have</span>
           </div>
-          <input type="range" min="0" max="3" step="1" value="1" data-key="walkability"
-               list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
-        </div>
-        <div class="prio-slider">
-          <div class="prio-slider__head">
-            <span class="prio-slider__label"><iconify-icon icon="tabler:plane"></iconify-icon> Airport access<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Scores listings by estimated travel time from Haneda or Narita with luggage." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></span>
-            <span class="prio-slider__val" data-priorities-panel-target="sliderVal">Nice to have</span>
-          </div>
-          <input type="range" min="0" max="3" step="1" value="1" data-key="airport"
+          <input type="range" min="0" max="3" step="1" value="<%= @station_weight %>" data-key="station"
                list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
         </div>
       </div>
@@ -69,28 +64,29 @@
         <div class="prio-section__head">Show and score nearby places<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Toggle specific amenities you care about to show pins on the map and include the proximity to them in property fit score." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></div>
         <% toggle_groups = {
            "Daily essentials" => [
-             ["convenience_store", "Convenience stores", "tabler:building-store"],
-             ["supermarket",       "Supermarkets",       "tabler:shopping-cart"],
-             ["atm",               "ATMs",               "tabler:building-bank"]
+             ["convenience_store", "Convenience stores", "tabler:building-store", "convenience stores"],
+             ["supermarket",       "Supermarkets",       "tabler:shopping-cart",  "supermarkets"],
+             ["atm",               "ATMs",               "tabler:building-bank",  "ATMs"]
            ],
            "Food & drink" => [
-             ["cafe",       "Cafés",       "tabler:coffee"],
-             ["restaurant", "Restaurants", "tabler:tools-kitchen-2"],
-             ["bar",        "Bars",        "tabler:glass-full"]
+             ["cafe",       "Cafés",       "tabler:coffee",          "cafes"],
+             ["restaurant", "Restaurants", "tabler:tools-kitchen-2", "restaurants"],
+             ["bar",        "Bars",        "tabler:glass-full",      "bars"]
            ],
            "Lifestyle" => [
-             ["park",               "Parks",          "tabler:tree"],
-             ["gym",                "Gyms",           "tabler:barbell"],
-             ["tourist_attraction", "Tourist spots",  "tabler:camera"]
+             ["park",               "Parks",         "tabler:tree",    "parks"],
+             ["gym",                "Gyms",          "tabler:barbell", "gyms"],
+             ["tourist_attraction", "Tourist spots", "tabler:camera",  "tourist spots"]
            ]
          } %>
         <% toggle_groups.each do |group_name, items| %>
           <div class="prio-group">
             <div class="prio-group__head"><%= group_name %></div>
             <div class="prio-btn-group">
-              <% items.each do |category, label, icon| %>
+              <% items.each do |category, label, icon, place_label| %>
                 <label class="prio-btn">
                   <input type="checkbox" data-category="<%= category %>"
+                       data-place-label="<%= place_label %>"
                        data-priorities-panel-target="toggleInput"
                        data-action="change->priorities-panel#onToggle change->maps#toggleCategory">
                   <iconify-icon icon="<%= icon %>"></iconify-icon>
@@ -100,6 +96,24 @@
             </div>
           </div>
         <% end %>
+      </div>
+      <div class="rail__hard-filters">
+        <div class="prio-section__head">Hard filters</div>
+        <div class="hard-filter-price">
+          <span class="hard-filter-price__label">
+            <iconify-icon icon="tabler:currency-yen"></iconify-icon>
+            Max price
+          </span>
+          <span class="hard-filter-price__val" data-maps-target="priceValue">¥500,000</span>
+        </div>
+        <input type="range" min="0" max="500000" step="10000" value="500000"
+               class="hard-filter-slider"
+               data-maps-target="priceFilter" data-action="input->maps#applyFilters">
+        <label class="hard-filter-check">
+          <input type="checkbox" data-maps-target="availabilityFilter" data-action="change->maps#applyFilters">
+          <iconify-icon icon="tabler:calendar-check"></iconify-icon>
+          <span><%= @checkin.present? ? "Available only for your dates" : "Available now only" %></span>
+        </label>
       </div>
     </div>
   </div>

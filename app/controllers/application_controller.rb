@@ -14,9 +14,21 @@ class ApplicationController < ActionController::Base
       @checkout        = inquiry.check_out&.strftime("%Y-%m-%d")
       @guests          = inquiry.guests
       @trip_type       = inquiry.why_visit
+      @commute_weight  = inquiry.commute_weight&.to_i
+      @quiet_weight    = inquiry.quiet_weight&.to_i
+      @station_weight  = inquiry.station_weight&.to_i
+      @selected_places = inquiry.selected_places || []
       @selected_anchor = anchor_record_to_hash(inquiry.anchor) if inquiry.anchor
     end
     @trip_type ||= "visiting"
+
+    # Fall back to trip-type defaults when no inquiry / legacy nil weights.
+    # (||= preserves a real 0, since 0 is truthy in Ruby.)
+    defaults = Inquiry.default_weights(@trip_type)
+    @commute_weight  ||= defaults[:commute_weight]
+    @quiet_weight    ||= defaults[:quiet_weight]
+    @station_weight  ||= defaults[:station_weight]
+    @selected_places ||= []
   end
 
   def anchor_record_to_hash(record)

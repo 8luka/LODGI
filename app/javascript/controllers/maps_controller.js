@@ -21,7 +21,7 @@ export default class extends Controller {
   ]
 
   connect() {
-    this.priceValueTarget.textContent ="¥500,000"
+    this.priceValueTargets.forEach(t => t.textContent = "¥500,000")
     this.allProperties = [...this.propertiesValue]
     // POI markers, keyed by category so each right-rail toggle is independent
     this.poiMarkersByCategory = {}
@@ -45,7 +45,7 @@ export default class extends Controller {
     this.initializeFilters()
 
     // This checks if a user defined a check-in date and will end with only rendering the available for it
-    this.availabilityFilterTarget.checked = Boolean(this.checkinValue)
+    this.availabilityFilterTargets.forEach(t => t.checked = Boolean(this.checkinValue))
     this.applyFilters()
   }
   updateViewportState() {
@@ -123,18 +123,22 @@ export default class extends Controller {
       })
     }
   }
-  applyFilters() {
+  applyFilters(event) {
 
     const selectedLayout = this.layoutFilterTarget.value
 
     const selectedNeighborhood = this.hasNeighborhoodFilterTarget ? this.neighborhoodFilterTarget.value : ""
 
-    const maxPrice = Number(this.priceFilterTarget.value)
+    // Whichever price slider fired is authoritative; sync all others to it.
+    const priceSource = this.priceFilterTargets.find(t => t === event?.target) || this.priceFilterTargets[0]
+    const maxPrice = Number(priceSource.value)
+    this.priceFilterTargets.forEach(t => t.value = maxPrice)
+    this.priceValueTargets.forEach(t => t.textContent = `¥${maxPrice.toLocaleString()}`)
 
-    const availableOnly = this.availabilityFilterTarget.checked
-
-    this.priceValueTarget.textContent =
-      `¥${maxPrice.toLocaleString()}`
+    // Same for availability checkbox.
+    const availSource = this.availabilityFilterTargets.find(t => t === event?.target) || this.availabilityFilterTargets[0]
+    const availableOnly = availSource.checked
+    this.availabilityFilterTargets.forEach(t => t.checked = availableOnly)
 
     const filteredProperties =
       this.allProperties.filter(
@@ -260,9 +264,9 @@ export default class extends Controller {
       this.neighborhoodFilterTarget.value = ""
     }
 
-    this.priceFilterTarget.value = 500000
+    this.priceFilterTargets.forEach(t => t.value = 500000)
 
-    this.availabilityFilterTarget.checked = false
+    this.availabilityFilterTargets.forEach(t => t.checked = false)
 
     this.applyFilters()
   }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_01_064001) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -44,9 +44,13 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_064001) do
     t.string "anchor_type"
     t.date "check_in"
     t.date "check_out"
+    t.float "commute_weight"
     t.datetime "created_at", null: false
     t.integer "guests"
     t.bigint "property_id"
+    t.float "quiet_weight"
+    t.text "selected_places", default: [], array: true
+    t.float "station_weight"
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.string "why_visit"
