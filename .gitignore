@@ -39,7 +39,7 @@
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
-CLAUDE.md
+*.md
 anchor_picker.md
 config/anchors.yml
 home_page_layout.md

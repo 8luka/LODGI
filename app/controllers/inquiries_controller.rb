@@ -39,13 +39,22 @@ class InquiriesController < ApplicationController
     # On first form submit why_visit changes from nil → type, so defaults always apply then.
     inquiry.assign_attributes(Inquiry.default_weights(inquiry.why_visit)) if inquiry.why_visit_changed?
 
-    # Easy-commute weight scores travel time to the anchor; with no anchor it is
-    # meaningless. Force it to 0 (which also hides the Easy-commute slider on /map)
-    # regardless of trip type.
-    inquiry.commute_weight = 0 if inquiry.anchor.blank?
+    # Easy-commute weight scores travel time to the anchor, so it is recomputed on every
+    # submit from anchor presence (independent of why_visit_changed?, so adding/removing an
+    # anchor without switching trip type is handled):
+    #   anchor set → trip-type default (visiting 1, business/education 2)
+    #   no anchor  → 0 (also hides the Easy-commute slider on /map)
+    inquiry.commute_weight =
+      inquiry.anchor.present? ? Inquiry.default_weights(inquiry.why_visit)[:commute_weight] : 0
 
     inquiry.selected_places = []
     inquiry.save
+
+    # Cache transit travel time from the anchor to every property. Enqueued on every
+    # submit-with-anchor (not only when the anchor changes): the service's cache check makes
+    # a repeat anchor a no-op, and running unconditionally fills the gap for any properties
+    # added since last time.
+    AnchorTravelTimesJob.perform_later(inquiry.anchor) if inquiry.anchor.present?
 
     redirect_to map_path
   end

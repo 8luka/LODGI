@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_02_100002) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_03_004604) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -138,6 +138,18 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_02_100002) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
+  create_table "travel_to_anchors", force: :cascade do |t|
+    t.bigint "anchor_id", null: false
+    t.string "anchor_type", null: false
+    t.datetime "created_at", null: false
+    t.bigint "property_id", null: false
+    t.integer "travel_time"
+    t.datetime "updated_at", null: false
+    t.index ["anchor_type", "anchor_id", "property_id"], name: "idx_travel_to_anchors_unique", unique: true
+    t.index ["anchor_type", "anchor_id"], name: "index_travel_to_anchors_on_anchor"
+    t.index ["property_id"], name: "index_travel_to_anchors_on_property_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email", default: "", null: false
@@ -169,5 +181,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_02_100002) do
   add_foreign_key "property_amenities", "properties"
   add_foreign_key "reviews", "properties"
   add_foreign_key "reviews", "users"
+  add_foreign_key "travel_to_anchors", "properties"
   add_foreign_key "workplaces", "neighborhoods"
 end
