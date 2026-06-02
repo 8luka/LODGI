@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_02_100002) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -77,16 +77,19 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
     t.string "category"
     t.datetime "created_at", null: false
     t.text "description"
+    t.integer "distance_meters"
     t.float "latitude"
     t.float "longitude"
     t.string "name"
     t.bigint "neighborhood_id"
     t.string "photos", default: [], array: true
     t.string "place_id"
+    t.bigint "property_id"
     t.float "rating"
     t.datetime "updated_at", null: false
     t.index ["neighborhood_id"], name: "index_places_on_neighborhood_id"
-    t.index ["place_id"], name: "index_places_on_place_id", unique: true
+    t.index ["place_id"], name: "index_places_on_place_id"
+    t.index ["property_id", "category"], name: "index_places_on_property_id_and_category"
   end
 
   create_table "properties", force: :cascade do |t|
@@ -106,6 +109,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
     t.bigint "neighborhood_id", null: false
     t.decimal "price", precision: 10, scale: 2
     t.text "rules"
+    t.jsonb "score_inputs", default: {}, null: false
     t.float "size"
     t.string "stations", default: [], array: true
     t.datetime "updated_at", null: false
@@ -159,6 +163,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
   add_foreign_key "inquiries", "properties"
   add_foreign_key "inquiries", "users"
   add_foreign_key "places", "neighborhoods"
+  add_foreign_key "places", "properties"
   add_foreign_key "properties", "neighborhoods"
   add_foreign_key "property_amenities", "amenities"
   add_foreign_key "property_amenities", "properties"
