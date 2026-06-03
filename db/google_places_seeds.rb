@@ -1,3 +1,5 @@
+# old calls before we were getting score info but saved if needed
+
 places = [
 {
   place_id: nil,

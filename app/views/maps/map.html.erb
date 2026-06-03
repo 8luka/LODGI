@@ -13,24 +13,45 @@
          data-maps-normalized-inputs-value="<%= json_escape(@normalized_inputs.to_json) %>"
          data-maps-scoring-v2-value="<%= @scoring_v2 %>"
          data-action="priorities:changed@window->maps#rescore">
-
   <div class="workspace-grid">
     <%= render "pages/listings_rail",
                properties: @properties_records.first(20),
                total: @properties_records.size %>
-
-      <div class="workspace-map">
-<div class="map-container">
-          <div id="map" data-maps-target="map"></div>
-          <label class="map-transit-toggle">
-            <input type="checkbox" data-maps-target="transitToggle" data-action="change->maps#toggleTransit">
-            <iconify-icon icon="tabler:train"></iconify-icon>
-            <span>Transit Map</span>
-          </label>
+    <div class="workspace-map">
+      <div class="map-container">
+        <div id="map" data-maps-target="map"></div>
+        <label class="map-transit-toggle">
+          <input type="checkbox" data-maps-target="transitToggle" data-action="change->maps#toggleTransit">
+          <iconify-icon icon="tabler:train"></iconify-icon>
+          <span>Transit Map</span>
+        </label>
+        <%# Pin-an-anchor: drop a custom point on the map to use as the trip anchor. %>
+        <button type="button" class="map-pin-toggle" data-maps-target="pinButton" data-action="maps#togglePinMode">
+          <iconify-icon icon="mdi:map-marker-plus"></iconify-icon>
+          <span data-maps-target="pinButtonLabel">Custom pin</span>
+        </button>
+        <div class="map-pin-bar" data-maps-target="pinBar" hidden>
+          <span class="map-pin-bar__hint" data-maps-target="pinHint">Click the map to set your anchor</span>
+          <button type="button" class="map-pin-bar__confirm" data-maps-target="pinConfirm" data-action="maps#confirmPin" disabled>Set anchor</button>
+          <button type="button" class="map-pin-bar__cancel" data-action="maps#cancelPin">Cancel</button>
+        </div>
+        <%# Opens instantly on "Set anchor" while travel times cache in the background. %>
+        <div class="map-pin-name" data-maps-target="pinNameForm" hidden>
+          <form data-action="submit->maps#savePinName">
+            <label class="map-pin-name__label">
+              Anchor Name:
+              <input type="text" class="map-pin-name__input" data-maps-target="pinNameInput"
+                     value="Pinned location" maxlength="60" autocomplete="off">
+            </label>
+            <p class="map-pin-name__hint">Optional — name it whatever helps you.</p>
+            <div class="map-pin-name__actions">
+              <button type="button" class="map-pin-name__cancel" data-action="maps#cancelPin">Cancel</button>
+              <button type="submit" class="map-pin-name__save" data-maps-target="pinNameSave">Save anchor</button>
+            </div>
+          </form>
         </div>
       </div>
-        <%= render @scoring_v2 ? "pages/priorities_panel_v2" : "pages/priorities_panel" %>
-
+    </div>
+    <%= render @scoring_v2 ? "pages/priorities_panel_v2" : "pages/priorities_panel" %>
   </div>
-
 </section>

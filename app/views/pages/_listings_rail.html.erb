@@ -16,7 +16,7 @@
     <div class="rail__body" data-rail-target="body">
       <%# Server-renders an initial price-ordered shortlist; the maps controller replaces
           this with the live fit-score ranking on connect (and on every slider/toggle change). %>
-      <div class="listings" data-maps-target="listings">
+      <div class="listings" data-maps-target="listings" data-action="click->maps#focusListing">
         <% properties.each_with_index do |property, index| %>
           <%= link_to property_path(property), class: "listing-card", data: { listing_id: property.id } do %>
             <span class="listing-card__rank <%= "is-top" if index < 3 %>"><%= index + 1 %></span>

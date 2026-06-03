@@ -104,15 +104,15 @@ places_data = [
     neighborhood_name: "Tamachi",
     photos: []
   },
-  {
-    name: "Le Wagon Tokyo",
-    description: "Tokyo's outpost of the famous international coding bootcamp, tucked into the quiet backstreets of Meguro. The curriculum is intensive and project-based, drawing career-changers and entrepreneurs seeking fast entry into web development and data science in one of Asia's most active startup scenes.",
-    category: "campus",
-    latitude: "35.6339",
-    longitude: "139.7081",
-    neighborhood_name: "Meguro",
-    photos: []
-  },
+  # {
+  #   name: "Le Wagon Tokyo",
+  #   description: "Tokyo's outpost of the famous international coding bootcamp, tucked into the quiet backstreets of Meguro. The curriculum is intensive and project-based, drawing career-changers and entrepreneurs seeking fast entry into web development and data science in one of Asia's most active startup scenes.",
+  #   category: "campus",
+  #   latitude: "35.6339",
+  #   longitude: "139.7081",
+  #   neighborhood_name: "Meguro",
+  #   photos: []
+  # },
   {
     name: "Sophia University",
     description: "A Jesuit university with a strong international reputation, particularly for foreign-language and international relations programs, set directly alongside Yotsuya Station. The campus blends older stone buildings with modern facilities, and its notably international student body gives it a cosmopolitan character rare in Japanese higher education.",

@@ -40,16 +40,14 @@ const POI_ROWS = {
   tourist_attraction:{ icon: "tabler:camera",           label: "Tourist spot" },
 };
 
-const MAX_AMENITY_ROWS = 4; // keep the card from getting busy
-
 // ──────────────────────────────────────────────────────────────────────────────────────
 // Pure helpers
 // ──────────────────────────────────────────────────────────────────────────────────────
 
-// metres → "N min walk" (min 1). Returns null when distance is missing.
+// metres → "N min walk" (min 1), rounded UP so the figure never understates the walk.
 function walkMinutes(metres) {
   if (metres == null) return null;
-  return Math.max(1, Math.round(metres / WALK_M_PER_MIN));
+  return Math.max(1, Math.ceil(metres / WALK_M_PER_MIN));
 }
 
 // peace_quiet_score (0..1) → label, or null when unknown / bands disabled.
@@ -115,11 +113,10 @@ function buildPopupSections({ property, priorities, hasAnchor, anchorName }) {
     if (label) rows.push(primaryRow("tabler:moon", label, "amber"));
   }
 
-  // ── Amenity panel (toggle-driven) — first 3 active categories with known distance ───
+  // ── Amenity panel (toggle-driven) — every active category with known distance; chips wrap ───
   const nearest = property.nearest_poi_m || {};
   const chips = [];
   for (const cat of categories) {
-    if (chips.length >= MAX_AMENITY_ROWS) break;
     const cfg = POI_ROWS[cat];
     const mins = walkMinutes(nearest[cat]);
     if (!cfg || mins == null) continue;
@@ -130,7 +127,14 @@ function buildPopupSections({ property, priorities, hasAnchor, anchorName }) {
     <div class="popup-amenities__label">Nearby places you're tracking</div>
     <div class="popup-amenities__items">${chips.join("")}</div>`;
 
-  return { primary: rows.join(""), amenities };
+  // Nothing configured yet → invite the user to set priorities instead of an empty card.
+  const primary = rows.length > 0
+    ? rows.join("")
+    : (chips.length === 0
+        ? `<div class="popup-empty">Set your preferences in the right bar to see how this property stacks up.</div>`
+        : "");
+
+  return { primary, amenities };
 }
 
 export { buildPopupSections, walkMinutes, quietLabel };

@@ -34,8 +34,13 @@ function collectTerms({ normalizedInputs, sliders, toggles, hasAnchor }) {
   const n = normalizedInputs || {};
 
   // Slider terms
-  if (sliders.commute > 0 && hasAnchor) {
-    terms.push({ label: "Commute", weight: sliders.commute / 3.0, subscore: n.commute ?? 0 });
+  // Commute needs an anchor AND cached travel times. n.commute is absent (undefined) until the
+  // anchor's times are cached — for a brand-new anchor (e.g. a fresh map pin) that lags the page.
+  // Skip the term while it's absent so the slider stays inert instead of scoring every property
+  // against a 0 subscore (which would drag all scores down uniformly). A property with no route
+  // normalizes to 0, not undefined, so genuinely-unreachable listings still count.
+  if (sliders.commute > 0 && hasAnchor && n.commute != null) {
+    terms.push({ label: "Commute", weight: sliders.commute / 3.0, subscore: n.commute });
   }
   if (sliders.peace_quiet > 0) {
     terms.push({ label: "Peace & quiet", weight: sliders.peace_quiet / 3.0, subscore: n.peace_quiet ?? 0.5 });

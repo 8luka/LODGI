@@ -204,6 +204,15 @@
 .popup-info-row.is-teal  iconify-icon { color: #2d7a4f; }
 .popup-info-row.is-amber iconify-icon { color: #e0982f; }
 
+// Empty state — shown when no slider/toggle is active yet.
+.popup-empty {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #9a9a9a;
+  font-style: italic;
+  padding: 2px 0;
+}
+
 // ── Amenity panel: "Nearby places you're tracking" — distinct box, horizontal chips ──
 .popup-amenities {
   margin-top: 12px;

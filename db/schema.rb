@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_03_004604) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_03_150000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -19,6 +19,15 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_03_004604) do
     t.string "icon"
     t.string "name"
     t.datetime "updated_at", null: false
+  end
+
+  create_table "custom_anchors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "label"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "updated_at", null: false
+    t.index ["latitude", "longitude"], name: "index_custom_anchors_on_latitude_and_longitude", unique: true
   end
 
   create_table "favorites", force: :cascade do |t|
