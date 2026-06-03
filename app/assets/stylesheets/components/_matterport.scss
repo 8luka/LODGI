@@ -1,0 +1,47 @@
+.matterport-section {
+  margin-top: 16px;
+}
+
+.matterport-button {
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: fit-content;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  background: #E8E3D8;
+
+  border: 1px solid #e5e5e5;
+
+  color: inherit;
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: all .2s ease;
+}
+
+.matterport-button:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+  background: #E8E3D8;
+}
+
+.matterport-button iconify-icon {
+
+  font-size: 24px;
+}
+
+.matterport-unavailable {
+
+  color: #999;
+}
