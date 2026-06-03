@@ -1,12 +1,22 @@
 <div class="page">
   <!-- BREADCRUMB -->
   <div class="breadcrumb mt-10">
-    <a href="index.html">Tokyo</a>
+    <%= link_to "Tokyo", root_path %>
+
     <i class="fa-solid fa-chevron-right"></i>
-    <a href="neighborhood.html?area=shinjuku">Shinjuku</a>
+
+    <span><%= @property.neighborhood.ward %></span>
+
     <i class="fa-solid fa-chevron-right"></i>
-    <span>Shinjuku Studio</span>
+
+    <%= link_to @property.neighborhood.name,
+        neighborhood_path(@property.neighborhood) %>
+
+    <i class="fa-solid fa-chevron-right"></i>
+
+    <span><%= @property.name %></span>
   </div>
+
   <!-- TITLE -->
 <div class="apt-title-row">
     <h1 class="apt-title"><%= @property.name %></h1>
