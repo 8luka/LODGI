@@ -9,14 +9,14 @@ class InquiriesController < ApplicationController
   def clear
     if session[:inquiry_id] && (inquiry = Inquiry.find_by(id: session[:inquiry_id]))
       inquiry.update(
-        check_in:        nil,
-        check_out:       nil,
-        guests:          nil,
-        why_visit:       nil,
-        anchor:          nil,
-        commute_weight:  nil,
-        quiet_weight:    nil,
-        station_weight:  nil,
+        check_in: nil,
+        check_out: nil,
+        guests: nil,
+        why_visit: nil,
+        anchor: nil,
+        commute_weight: nil,
+        quiet_weight: nil,
+        station_weight: nil,
         selected_places: []
       )
     end
@@ -28,11 +28,11 @@ class InquiriesController < ApplicationController
 
     inquiry.assign_attributes(
       user: current_user,
-      check_in:  params[:checkin],
+      check_in: params[:checkin],
       check_out: params[:checkout],
-      guests:    params[:guests].presence&.to_i,
+      guests: params[:guests].presence&.to_i,
       why_visit: params[:trip_type].presence,
-      anchor:    resolve_anchor(params[:anchor])
+      anchor: resolve_anchor(params[:anchor])
     )
 
     # Apply trip-type weight defaults when the trip type changes.
@@ -63,9 +63,26 @@ class InquiriesController < ApplicationController
   # Persist a single slider move (data-key + position) onto the session inquiry.
   def update_weights
     inquiry = session[:inquiry_id] && Inquiry.find_by(id: session[:inquiry_id])
-    if inquiry && WEIGHT_KEYS.include?(params[:key])
-      inquiry.update("#{params[:key]}_weight" => params[:value].to_i)
+    inquiry.update("#{params[:key]}_weight" => params[:value].to_i) if inquiry && WEIGHT_KEYS.include?(params[:key])
+    head :no_content
+  end
+
+  def update_dates
+    inquiry =
+      session[:inquiry_id] &&
+      Inquiry.find_by(
+        id: session[:inquiry_id]
+      )
+
+    if inquiry
+
+      inquiry.update(
+        check_in: params[:check_in],
+        check_out: params[:check_out]
+      )
+
     end
+
     head :no_content
   end
 

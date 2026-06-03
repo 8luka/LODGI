@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/inquiry/clear', to: 'inquiries#clear', as: :clear_inquiry
   patch '/inquiry/weights', to: 'inquiries#update_weights', as: :inquiry_weights
   patch '/inquiry/selected_places', to: 'inquiries#update_selected_places', as: :inquiry_selected_places
+  patch '/inquiry/dates', to: 'inquiries#update_dates', as: :inquiry_dates
   resources :properties, only: [ :index, :show ] do
      member do
       post 'toggle_favorite'
