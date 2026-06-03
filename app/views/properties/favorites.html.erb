@@ -13,7 +13,7 @@
         <%= @favorite_properties.count %> saved home<%= @favorite_properties.count == 1 ? "" : "s" %> in Tokyo
       </p>
     </div>
-    <%= link_to root_path(anchor: "map"), class: "fav-back-btn" do %>
+    <%= link_to map_path, class: "fav-back-btn" do %>
       <i class="fa-regular fa-map"></i> Back to map
     <% end %>
   </div>
@@ -36,19 +36,14 @@
     <div class="fav-grid">
       <% @favorite_properties.each do |property| %>
 
-        <div class="nb-prop-card">
+        <div id="property_<%= property.id %>" class="nb-prop-card">
 
 <% img = property.images.first if property.respond_to?(:images) && property.images.present? %>
 
 <div class="nb-prop-img <%= 'nb-prop-img--empty' unless img.present? %>"
      style="<%= "background-image: url('#{img}');" if img.present? %>">
 
-  <%= link_to toggle_favorite_property_path(property),
-      class: "nb-favorite-btn is-favorited",
-      data: { turbo_method: :get },
-      aria: { label: "Remove from favorites" } do %>
-    <i class="fa-solid fa-heart"></i>
-  <% end %>
+  <%= render "properties/favorite_button", property: property, source: "favorites" %>
 
   <% unless img.present? %>
     <i class="fa-regular fa-image"></i>

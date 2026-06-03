@@ -4,24 +4,25 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static values = {
     properties: Array,
-    checkin: { type: String, default: "" }
+
+    checkin: {
+      type: String,
+      default: ""
+    },
+
+    anchor: Object
   }
   static targets = [
     "map",
     "transitToggle",
 
-    "layoutFilter",
-    "neighborhoodFilter",
-    // neighborhood filter is not used currently but may be in the future
-
     "priceFilter",
     "priceValue",
 
-    "availabilityFilter"
+    "availabilityFilter",
   ]
 
   connect() {
-    this.priceValueTargets.forEach(t => t.textContent = "¥500,000")
     this.allProperties = [...this.propertiesValue]
     // POI markers, keyed by category so each right-rail toggle is independent
     this.poiMarkersByCategory = {}
@@ -36,14 +37,15 @@ export default class extends Controller {
 
     this.map = new google.maps.Map(this.mapTarget, {
       mapId: "DEMO_MAP_ID",
-    });
+      mapTypeControl: false,
+      fullscreenControl: false,
+      cameraControl: false
 
+    });
     // Re-fit + viewport tracking after the filtered render settles.
     this.map.addListener("idle", () => {
       this.updateViewportState()
     })
-    this.initializeFilters()
-
     // This checks if a user defined a check-in date and will end with only rendering the available for it
     this.availabilityFilterTargets.forEach(t => t.checked = Boolean(this.checkinValue))
     this.applyFilters()
@@ -71,106 +73,24 @@ export default class extends Controller {
     console.log("Current viewport:")
     console.log(this.currentViewport)
   }
-  initializeFilters() {
-
-    const layouts =
-      [...new Set(
-        this.allProperties.map(
-          property => property.layout
-        )
-      )]
-
-    this.layoutFilterTarget.innerHTML =
-      `
-        <option value="">
-          Any
-        </option>
-      `
-
-    layouts.forEach((layout) => {
-
-      this.layoutFilterTarget.innerHTML += `
-        <option value="${layout}">
-          ${layout}
-        </option>
-      `
-    })
-
-    // The neighborhood select is currently commented out in the view, so guard
-    // its target before populating it.
-    if (this.hasNeighborhoodFilterTarget) {
-      const neighborhoods =
-        [...new Set(
-          this.allProperties.map(
-            property => property.neighborhood_name
-          )
-        )]
-
-      this.neighborhoodFilterTarget.innerHTML =
-        `
-          <option value="">
-            Any
-          </option>
-        `
-
-      neighborhoods.forEach((neighborhood) => {
-
-        this.neighborhoodFilterTarget.innerHTML += `
-          <option value="${neighborhood}">
-            ${neighborhood}
-          </option>
-        `
-      })
-    }
-  }
   applyFilters(event) {
-
-    const selectedLayout = this.layoutFilterTarget.value
-
-    const selectedNeighborhood = this.hasNeighborhoodFilterTarget ? this.neighborhoodFilterTarget.value : ""
-
     // Whichever price slider fired is authoritative; sync all others to it.
     const priceSource = this.priceFilterTargets.find(t => t === event?.target) || this.priceFilterTargets[0]
     const maxPrice = Number(priceSource.value)
     this.priceFilterTargets.forEach(t => t.value = maxPrice)
     this.priceValueTargets.forEach(t => t.textContent = `¥${maxPrice.toLocaleString()}`)
 
-    // Same for availability checkbox.
     const availSource = this.availabilityFilterTargets.find(t => t === event?.target) || this.availabilityFilterTargets[0]
     const availableOnly = availSource.checked
     this.availabilityFilterTargets.forEach(t => t.checked = availableOnly)
 
-    const filteredProperties =
-      this.allProperties.filter(
-        (property) => {
+    const filteredProperties = this.allProperties.filter((property) => {
+      const matchesPrice = Number(property.price) <= maxPrice
+      const matchesAvailability = !availableOnly || this.isAvailableForCheckin(property.availability)
+      return matchesPrice && matchesAvailability
+    })
 
-          const matchesLayout =
-            !selectedLayout ||
-            property.layout === selectedLayout
-
-          const matchesNeighborhood =
-            !selectedNeighborhood ||
-            property.neighborhood_name === selectedNeighborhood
-
-          const matchesPrice =
-            Number(property.price) <= maxPrice
-
-          const matchesAvailability =
-            !availableOnly ||
-            this.isAvailableForCheckin(property.availability)
-
-          return (
-            matchesLayout &&
-            matchesNeighborhood &&
-            matchesPrice &&
-            matchesAvailability
-          )
-        }
-      )
-
-    this.renderFilteredProperties(
-      filteredProperties
-    )
+    this.renderFilteredProperties(filteredProperties)
   }
 
   isAvailableForCheckin(availability) {
@@ -221,21 +141,14 @@ export default class extends Controller {
               )
           })
 
-        marker.addListener(
-          "click",
-          () => {
-
-            const content =
-              this.createPropertyPopupContent(
-                property
-              )
-
-            this.openInfoWindow(
-              marker,
-              content
+            marker.addListener(
+              "click",
+              async () => {
+                const response = await fetch(`/properties/${property.id}/popup`)
+                const html = await response.text()
+                this.openInfoWindow(marker, html)
+              }
             )
-          }
-        )
 
         this.propertyMarkers.push(
           marker
@@ -247,7 +160,9 @@ export default class extends Controller {
         })
       }
     )
-
+      this.renderAnchorMarker(
+        bounds
+      )
     if (properties.length > 0) {
 
       this.map.fitBounds(
@@ -258,16 +173,8 @@ export default class extends Controller {
   }
 
   clearFilters() {
-    this.layoutFilterTarget.value = ""
-
-    if (this.hasNeighborhoodFilterTarget) {
-      this.neighborhoodFilterTarget.value = ""
-    }
-
     this.priceFilterTargets.forEach(t => t.value = 500000)
-
     this.availabilityFilterTargets.forEach(t => t.checked = false)
-
     this.applyFilters()
   }
 
@@ -415,7 +322,63 @@ export default class extends Controller {
       </div>
     `
   }
+  renderAnchorMarker(bounds) {
 
+    if (!this.anchorValue?.latitude) {
+      return
+    }
+    const content =
+      this.createMarkerContent(
+        "mdi:anchor",
+        "#000000"
+      )
+
+    content
+      .querySelector(".custom-marker")
+      .classList
+      .add("anchor-marker")
+    const marker =
+      new google.maps.marker.AdvancedMarkerElement({
+
+        map: this.map,
+
+        position: {
+          lat: this.anchorValue.latitude,
+          lng: this.anchorValue.longitude
+        },
+
+        content: content
+
+      })
+
+    bounds.extend({
+      lat: this.anchorValue.latitude,
+      lng: this.anchorValue.longitude
+    })
+
+    marker.addListener(
+      "click",
+      () => {
+
+        this.openInfoWindow(
+          marker,
+          `
+            <div class="poi-popup">
+              <div class="popup-content">
+                <h3 class="popup-title">
+                  ${this.anchorValue.name}
+                </h3>
+
+                <div class="popup-row">
+                  Trip Destination
+                </div>
+              </div>
+            </div>
+          `
+        )
+      }
+    )
+  }
   openInfoWindow(marker, content) {
 
     // Close previous popup
@@ -447,7 +410,7 @@ export default class extends Controller {
       marker.content.firstElementChild
 
     markerElement.classList.add(
-      "selected-marker"
+      "selected-marker",
     )
 
     this.selectedMarkerElement =

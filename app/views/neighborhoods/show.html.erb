@@ -30,13 +30,16 @@
     </div>
 
     <%# Swap this div for a real map embed when API is ready %>
-    <div class="nb-hero-map">
-      <div class="nb-map-empty">
-        <i class="fa-regular fa-map"></i>
-        <p>Map coming soon</p>
-        <small>Connect Google Maps or Mapbox</small>
-      </div>
-    </div>
+   <div class="nb-hero-map">
+    <iframe
+      width="100%"
+      height="100%"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      src="https://maps.google.com/maps?q=<%= CGI.escape(@neighborhood.name + ', Tokyo') %>&z=15&output=embed">
+    </iframe>
+</div>
   </div>
 
   <%# ── BODY (main + sidebar) ── %>
@@ -95,13 +98,7 @@
                 <% img = property.images.first if property.respond_to?(:images) %>
                 <div class="nb-prop-img <% img.present? ? '': 'nb-prop-img--empty' %>" style="<%= property.respond_to?(:images) ?
                 "background-image:url(#{img})" : '' %>">
-                     <%= link_to toggle_favorite_property_path(property), class: "nb-favorite-btn" do %>
-                        <% if current_user && current_user.favorited?(property) %>
-                          <i class="fa-solid fa-heart"></i>
-                        <% else %>
-                          <i class="fa-regular fa-heart"></i>
-                        <% end %>
-                     <% end %>
+                     <%= render "properties/favorite_button", property: property %>
                   <% unless img.present? %>
                     <i class="fa-regular fa-image"></i>
                   <% end %>

@@ -4,4 +4,5 @@ class Property < ApplicationRecord
   has_many :amenities, through: :property_amenities
   has_many :reviews, dependent: :destroy
   has_many :inquiries
+  acts_as_favoritable
 end

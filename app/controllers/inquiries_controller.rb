@@ -7,37 +7,45 @@ class InquiriesController < ApplicationController
                           "restaurants", "bars", "parks", "gyms", "tourist spots"].freeze
 
   def clear
-    if session[:inquiry_id]
-      Inquiry.find_by(id: session[:inquiry_id])&.destroy
-      session.delete(:inquiry_id)
+    if session[:inquiry_id] && (inquiry = Inquiry.find_by(id: session[:inquiry_id]))
+      inquiry.update(
+        check_in:        nil,
+        check_out:       nil,
+        guests:          nil,
+        why_visit:       nil,
+        anchor:          nil,
+        commute_weight:  nil,
+        quiet_weight:    nil,
+        station_weight:  nil,
+        selected_places: []
+      )
     end
     redirect_back(fallback_location: map_path)
   end
 
   def create
-    inquiry = session[:inquiry_id] ? Inquiry.find_by(id: session[:inquiry_id]) : nil
-    inquiry ||= Inquiry.new
-
-    weights_unset = inquiry.commute_weight.nil?
+    inquiry = Inquiry.find_by(id: session[:inquiry_id])
 
     inquiry.assign_attributes(
       user: current_user,
-      check_in: params[:checkin],
+      check_in:  params[:checkin],
       check_out: params[:checkout],
-      guests: params[:guests].presence&.to_i,
+      guests:    params[:guests].presence&.to_i,
       why_visit: params[:trip_type].presence,
-      anchor: resolve_anchor(params[:anchor])
+      anchor:    resolve_anchor(params[:anchor])
     )
 
-    # Reset weights to the trip-type defaults only when the trip type changed
-    # (or was never set) — so date-only re-searches keep the user's slider tweaks.
-    if weights_unset || inquiry.why_visit_changed?
-      inquiry.assign_attributes(Inquiry.default_weights(inquiry.why_visit))
-    end
+    # Apply trip-type weight defaults when the trip type changes.
+    # On first form submit why_visit changes from nil → type, so defaults always apply then.
+    inquiry.assign_attributes(Inquiry.default_weights(inquiry.why_visit)) if inquiry.why_visit_changed?
+
+    # Easy-commute weight scores travel time to the anchor; with no anchor it is
+    # meaningless. Force it to 0 (which also hides the Easy-commute slider on /map)
+    # regardless of trip type.
+    inquiry.commute_weight = 0 if inquiry.anchor.blank?
 
     inquiry.selected_places = []
     inquiry.save
-    session[:inquiry_id] = inquiry.id
 
     redirect_to map_path
   end

@@ -1,0 +1,42 @@
+<div class="property-popup">
+
+  <div class="popup-image-wrapper">
+
+    <% img = @property.images&.first %>
+    <% if img.present? %>
+      <img src="<%= img %>" class="popup-image" alt="<%= @property.name %>" />
+    <% end %>
+
+    <div class="popup-favorite">
+      <%= render "properties/favorite_button", property: @property %>
+    </div>
+
+  </div>
+
+  <div class="popup-content">
+
+    <h3 class="popup-title"><%= @property.name %></h3>
+
+    <% if @property.layout.present? %>
+      <div class="popup-row"><%= @property.layout %></div>
+    <% end %>
+
+    <% if @property.price.present? %>
+      <div class="popup-row">
+        ¥<%= number_with_delimiter(@property.price.to_i) %> / mo
+      </div>
+    <% end %>
+
+    <% if @property.availability.present? %>
+      <div class="availability-pill <%= @property.availability == 'now' ? 'available-pill' : 'unavailable-pill' %>">
+        <%= @property.availability == 'now' ? 'Available now' : "Available #{@property.availability}" %>
+      </div>
+    <% end %>
+
+    <%= link_to "View Property",
+      property_path(@property),
+      class: "popup-button" %>
+
+  </div>
+
+</div>

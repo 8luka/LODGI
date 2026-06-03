@@ -20,7 +20,7 @@
 .nb-page {
   max-width: 1060px;
   margin: 0 auto;
-  padding: 28px 32px 80px;
+  padding: 80px 32px 80px;
   font-family: var(--sans);
   color: var(--ink);
 }
@@ -167,9 +167,9 @@
   gap: 8px;
   color: var(--ink-muted);
 
-  i    { font-size: 40px; }
-  p    { font-size: 14px; color: var(--ink-soft); }
-  small{ font-size: 12px; }
+  .nb-hero-map canvas {
+  border-radius: var(--radius-lg);
+  }
 }
 
 // ── Body layout ──────────────────────────────────────────────
