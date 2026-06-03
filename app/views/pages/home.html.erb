@@ -9,6 +9,22 @@
       <p class="hero__sub">Tell us about your trip. We'll score every listing for how well it fits your priorities.</p>
       <%= render "shared/search", hero: true %>
       <%= link_to map_path, class: "hero__skip" do %>Skip — just show me the map<% end %>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number"><%= @properties_count %></span>
+          <span class="hero__stat-label">Listings</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number"><%= @neighborhoods.count %></span>
+          <span class="hero__stat-label">Neighbourhoods</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">EN</span>
+          <span class="hero__stat-label">English</span>
+        </div>
+      </div>
     </div>
     <div class="hero__right">
       <div class="hero__map" data-landing-target="map"></div>

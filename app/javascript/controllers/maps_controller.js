@@ -65,8 +65,13 @@ export default class extends Controller {
 
     });
     // Re-fit + viewport tracking after the filtered render settles.
+    this.poisRestored = false
     this.map.addListener("idle", () => {
       this.updateViewportState()
+      if (!this.poisRestored) {
+        this.poisRestored = true
+        this.restoreCheckedCategories()
+      }
     })
     // This checks if a user defined a check-in date and will end with only rendering the available for it
     this.availabilityFilterTargets.forEach(t => t.checked = Boolean(this.checkinValue))
@@ -538,6 +543,14 @@ export default class extends Controller {
     const markers = this.poiMarkersByCategory[category] || []
     markers.forEach((marker) => { marker.map = null })
     this.poiMarkersByCategory[category] = []
+  }
+
+  restoreCheckedCategories() {
+    document.querySelectorAll('[data-priorities-panel-target="toggleInput"]').forEach((t) => {
+      if (t.checked && t.dataset.category) {
+        this.fetchCategory(t.dataset.category)
+      }
+    })
   }
 
   toggleTransit(event) {
