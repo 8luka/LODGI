@@ -8,10 +8,15 @@ CATEGORIES_V2 = {
   "cafe" => { max: 10, score: :density },
   "restaurant" => { max: 10, score: :density },
   "bar" => { max: 10, score: :density },
-  "park" => { max: 5, score: :park_hybrid },
+  "park" => { max: 5, score: :park_hybrid, primary: true }, # primary-type only: excludes smoking areas / squares
   "gym" => { max: 5, score: :proximity },
   "tourist_attraction" => { max: 10, score: :density },
-  "transit_station" => { max: 1, score: :station }
+  # transit_station is Google's GENERIC transit type — it also returns bus stops, which in Japan are
+  # named after nearby landmarks (e.g. a "Otori-jinja Shrine" bus stop ranks above the real station).
+  # `types` overrides the API query to rail-only; the stored category + score_inputs key stay
+  # "transit_station" so the scorer/verify/spec are unaffected.
+  # photo: false — stations don't carry a useful photo (and the user only wants photos for the 9 POIs).
+  "transit_station" => { max: 1, score: :station, types: %w[subway_station train_station], photo: false }
 }.freeze
 
 SEARCH_NEARBY_URL = "https://places.googleapis.com/v1/places:searchNearby".freeze
@@ -38,7 +43,7 @@ namespace :places do
       # property.places.destroy_all
       # rake places:import_v2[property_id]
   DESC
-  task :import_v2, [:property_id, :category] => :environment do |_t, args|
+  task :import_v2, %i[property_id category] => :environment do |_t, args|
     places_key = ENV.fetch("PLACES_API_V2") do
       abort "PLACES_API_V2 is not set. Export your Google Places API (New) key first."
     end
@@ -56,31 +61,34 @@ namespace :places do
       end
 
     scope.find_each do |property|
-      begin
-        fetched = 0
+      fetched = 0
 
-        ActiveRecord::Base.transaction do
-          categories.each do |category, config|
-            fetched += fetch_and_persist_category(property, category, config, places_key)
-            sleep 0.15
-          end
-
-          station = property.places.where(category: "transit_station").order(:distance_meters).first
-          walking_minutes = resolve_walking_minutes(property, station, routes_key)
-          property.update!(score_inputs: build_score_inputs_v2(property, walking_minutes))
+      ActiveRecord::Base.transaction do
+        categories.each do |category, config|
+          fetched += fetch_and_persist_category(property, category, config, places_key)
+          sleep 0.15
         end
 
-        puts "Property #{property.id} (#{property.name}): #{categories.size} categories, #{fetched} places fetched."
-      rescue StandardError => e
-        warn "!! Property #{property.id} (#{property.name}) FAILED: #{e.class}: #{e.message}"
-        next
+        station = property.places.where(category: "transit_station").order(:distance_meters).first
+        walking_minutes = resolve_walking_minutes(property, station, routes_key)
+        property.update!(score_inputs: build_score_inputs_v2(property, walking_minutes))
       end
+
+      puts "Property #{property.id} (#{property.name}): #{categories.size} categories, #{fetched} places fetched."
+    rescue StandardError => e
+      warn "!! Property #{property.id} (#{property.name}) FAILED: #{e.class}: #{e.message}"
+      next
     end
   end
 
   def fetch_and_persist_category(property, category, config, places_key)
+    types = config[:types] || [category] # per-category API-type override (see transit_station)
+    # config[:primary] uses includedPrimaryTypes — matches only places whose MAIN type is the category
+    # (so a square / smoking area that merely also carries "park" is excluded). Default is the looser
+    # includedTypes, which we WANT for e.g. restaurants (primary is a cuisine type) and ATMs (often
+    # primarily a bank/convenience_store).
     body = {
-      includedTypes: [category],
+      (config[:primary] ? :includedPrimaryTypes : :includedTypes) => types,
       maxResultCount: config[:max],
       rankPreference: "DISTANCE",
       locationRestriction: {
@@ -91,12 +99,17 @@ namespace :places do
       }
     }
 
+    # Request one photo reference for every category except those flagged photo: false (stations).
+    # places.photos returns a photo *resource name*, not the image — stored now, resolved to a media
+    # URL at display time. rating already elevates the mask's billing tier, so photos rarely bumps it.
+    field_mask = config[:photo] == false ? PLACES_FIELD_MASK : "#{PLACES_FIELD_MASK},places.photos"
+
     response = HTTParty.post(
       SEARCH_NEARBY_URL,
       headers: {
         "Content-Type" => "application/json",
         "X-Goog-Api-Key" => places_key,
-        "X-Goog-FieldMask" => PLACES_FIELD_MASK
+        "X-Goog-FieldMask" => field_mask
       },
       body: body.to_json
     )
@@ -117,6 +130,7 @@ namespace :places do
         latitude: lat,
         longitude: lng,
         rating: pl["rating"],
+        photos: Array(pl.dig("photos", 0, "name")), # [] when none, else [first photo resource name]
         distance_meters: DistanceHelperV2New.haversine_meters(
           property.latitude, property.longitude, lat, lng
         )
@@ -170,6 +184,25 @@ namespace :places do
   # a single-category run (un-fetched categories produce nil values, which is expected).
   # peace_quiet_score is a derived scalar (no API) appended as one more key, computed
   # from the bar/restaurant/tourist_attraction densities just built.
+  #
+  # Example of a completed score_inputs (string keys, exactly as stored in the jsonb column):
+  #
+  #   {
+  #     "convenience_store"  => { "nearest_m" => 120 },                 # proximity: nearest of category (metres)
+  #     "supermarket"        => { "nearest_m" => 340 },
+  #     "atm"                => { "nearest_m" => 70 },
+  #     "cafe"               => { "tenth_m" => 480 },                   # density: distance to the 10th-nearest (metres)
+  #     "restaurant"         => { "tenth_m" => 310 },
+  #     "bar"                => { "tenth_m" => 620 },
+  #     "park"               => { "nearest_m" => 200, "fifth_m" => 890 }, # hybrid: nearest + 5th-nearest (metres)
+  #     "gym"                => { "nearest_m" => 550 },
+  #     "tourist_attraction" => { "tenth_m" => 740 },
+  #     "transit_station"    => { "time_to_station" => 7, "station_name" => "Meguro" }, # walk mins (Routes API) + name
+  #     "peace_quiet_score"  => 0.62                                    # derived 0..1 (0 = lively, 1 = calm)
+  #   }
+  #
+  # Any metric is nil when the data is missing (e.g. a category returned fewer than N results, or
+  # time_to_station before ROUTES_API is set). The shape always has all 11 keys.
   def build_score_inputs_v2(property, walking_minutes = nil)
     result = CATEGORIES_V2.each_with_object({}) do |(category, config), acc|
       rows = property.places.where(category: category).order(:distance_meters)

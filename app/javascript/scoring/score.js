@@ -23,11 +23,15 @@ const TOGGLE_TERMS = [
 
 // ── Sub-score functions — all return [0, 1], all null-safe ──────────────────────────
 
+// RETUNED 2026-06-03 (was 15→1.0 / 60→0.0, transit-calibrated). Google provides no transit routing
+// in Japan, so the anchor travel time is now a walk (near) / drive (far) hybrid — both far shorter
+// than train times. The old curve left almost every central-Tokyo property pinned at 1.0 (no spread).
+// 5→1.0 / 30→0.0 gives meaningful spread across realistic ~7–25 min walk/drive times. Tunable.
 function f_commute(time_minutes) {
   if (time_minutes == null) return 0.0;
-  if (time_minutes <= 15) return 1.0;
-  if (time_minutes >= 60) return 0.0;
-  return 1.0 - (time_minutes - 15) / 45.0;
+  if (time_minutes <= 5) return 1.0;
+  if (time_minutes >= 30) return 0.0;
+  return 1.0 - (time_minutes - 5) / 25.0;
 }
 
 // Peace & quiet is precomputed at seed time; read it straight through (neutral 0.5 if absent).

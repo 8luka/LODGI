@@ -428,12 +428,7 @@ export default class extends Controller {
 
   createPoiPopupContent(place) {
 
-    let image = null
-
-    if (place.photos?.[0]) {
-      image =
-        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${place.photos[0]}&key=${window.googleMapsPlacesKey}`
-    }
+    const image = this.placePhotoUrl(place.photos?.[0])
 
     return `
       <div class="poi-popup">
@@ -460,6 +455,18 @@ export default class extends Controller {
       </div>
     `
   }
+  // Build an <img> URL from a stored photo reference, handling both pipelines:
+  //  • v2 (Places API New) refs look like "places/<id>/photos/<id>" → New media endpoint + MAPS_JS_API key
+  //  • v1 (legacy) refs are opaque strings → classic Place Photo URL + PLACES_API key
+  // Returns null when there's no photo (popup then renders without an image).
+  placePhotoUrl(ref) {
+    if (!ref) return null
+    if (ref.startsWith("places/")) {
+      return `https://places.googleapis.com/v1/${ref}/media?maxHeightPx=400&key=${window.googleMapsApiKey}`
+    }
+    return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${ref}&key=${window.googleMapsPlacesKey}`
+  }
+
   renderAnchorMarker(bounds) {
 
     if (!this.anchorValue?.latitude) {

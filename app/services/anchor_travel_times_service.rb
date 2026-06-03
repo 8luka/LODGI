@@ -1,19 +1,30 @@
-# Computes and caches transit (train) travel time FROM an anchor TO each property,
-# using Google's Routes API computeRouteMatrix in TRANSIT mode.
+require Rails.root.join("lib/distance_helper_v2_new")
+
+# Computes and caches travel time FROM an anchor TO each property, using Google's Routes API
+# computeRouteMatrix.
 #
-# Gap-filling cache: only properties without a cached row for this anchor are fetched,
-# so re-selecting the same anchor costs no API call, and adding new properties later only
-# fetches the new ones. Results live in the travel_to_anchors table.
+# Mode is a radius hybrid (Google's APIs do NOT provide transit/train routing in Japan, so transit
+# is not an option here — confirmed: drive/walk work, transit returns ZERO_RESULTS nationwide):
+#   • within WALK_RADIUS_M of the anchor → WALK time  (realistic; you'd walk, not take a train)
+#   • beyond it                          → DRIVE time (a stand-in for the train ride we can't get)
+# travel_time is stored in whole minutes either way; the score's commute term consumes it directly.
 #
-# Anchor is polymorphic — a Place (landmark/campus) or a Neighborhood; both carry
-# latitude/longitude. Never raises into the caller: a missing key or API failure is logged
-# and skipped so the user's inquiry submit always succeeds.
+# Gap-filling cache: only properties without a cached row for this anchor are fetched, so re-selecting
+# the same anchor costs no API call, and adding new properties later only fetches the new ones.
+# Results live in the travel_to_anchors table.
+#
+# Anchor is polymorphic — a Place (landmark/campus) or a Neighborhood; both carry latitude/longitude.
+# Never raises into the caller: a missing key or API failure is logged and skipped so the user's
+# inquiry submit always succeeds.
 class AnchorTravelTimesService
   COMPUTE_ROUTE_MATRIX_URL = "https://routes.googleapis.com/distanceMatrix/v2:computeRouteMatrix".freeze
   FIELD_MASK = "originIndex,destinationIndex,duration,condition".freeze
-  # computeRouteMatrix caps a TRANSIT request at 100 elements (origins x destinations).
-  # With one origin (the anchor) that means at most 100 destinations per call.
+  # One origin (the anchor) × up to 100 destinations per call stays within the matrix element cap
+  # for every travel mode.
   MAX_DESTINATIONS_PER_CALL = 100
+  # Walk for anchors within this straight-line distance; drive beyond. Tunable — ~1.2 km ≈ a 15-min
+  # walk, the point where f_commute stops treating a walk as an "effortless" commute.
+  WALK_RADIUS_M = 1200
 
   def self.call(anchor)
     new(anchor).call
@@ -38,10 +49,10 @@ class AnchorTravelTimesService
       return
     end
 
-    missing.each_slice(MAX_DESTINATIONS_PER_CALL) do |batch|
-      fetch_and_persist_batch(batch, routes_key)
-      sleep 0.15 # be courteous to the API between batches
-    end
+    # Near properties get a walking time, far ones a driving time (transit isn't available in Japan).
+    walk_props, drive_props = missing.partition { |property| within_walk_radius?(property) }
+    process_group(walk_props, "WALK", routes_key)
+    process_group(drive_props, "DRIVE", routes_key)
   end
 
   private
@@ -54,7 +65,22 @@ class AnchorTravelTimesService
             .to_a
   end
 
-  def fetch_and_persist_batch(batch, routes_key)
+  def within_walk_radius?(property)
+    DistanceHelperV2New.haversine_meters(
+      @anchor.latitude, @anchor.longitude, property.latitude, property.longitude
+    ) < WALK_RADIUS_M
+  end
+
+  def process_group(properties, mode, routes_key)
+    return if properties.empty?
+
+    properties.each_slice(MAX_DESTINATIONS_PER_CALL) do |batch|
+      fetch_and_persist_batch(batch, mode, routes_key)
+      sleep 0.15 # be courteous to the API between batches
+    end
+  end
+
+  def fetch_and_persist_batch(batch, mode, routes_key)
     response = HTTParty.post(
       COMPUTE_ROUTE_MATRIX_URL,
       headers: {
@@ -62,11 +88,11 @@ class AnchorTravelTimesService
         "X-Goog-Api-Key" => routes_key,
         "X-Goog-FieldMask" => FIELD_MASK
       },
-      body: request_body(batch).to_json
+      body: request_body(batch, mode).to_json
     )
 
     unless response.success?
-      Rails.logger.warn("[AnchorTravelTimes] #{anchor_label}: HTTP #{response.code} — " \
+      Rails.logger.warn("[AnchorTravelTimes] #{anchor_label} (#{mode}): HTTP #{response.code} — " \
                         "#{response.parsed_response.inspect[0, 300]} (batch skipped)")
       return
     end
@@ -74,14 +100,16 @@ class AnchorTravelTimesService
     persist_results(batch, Array(response.parsed_response))
   end
 
-  def request_body(batch)
-    {
+  def request_body(batch, mode)
+    body = {
       origins: [{ waypoint: { location: { latLng: latlng(@anchor) } } }],
       destinations: batch.map { |property| { waypoint: { location: { latLng: latlng(property) } } } },
-      travelMode: "TRANSIT"
-      # departureTime omitted → the API uses "now". A future refinement could pin a
-      # representative weekday-morning time for stable, comparable transit numbers.
+      travelMode: mode
     }
+    # Traffic-unaware keeps driving numbers stable/comparable across runs (no time-of-day variance);
+    # WALK ignores this field.
+    body[:routingPreference] = "TRAFFIC_UNAWARE" if mode == "DRIVE"
+    body
   end
 
   # Insert one row per destination — including a nil travel_time when no route exists, so a

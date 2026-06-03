@@ -31,6 +31,7 @@ namespace :places do
               latitude: #{place.latitude},
               longitude: #{place.longitude},
               rating: #{place.rating.inspect},
+              photos: #{place.photos.inspect},
               distance_meters: #{place.distance_meters.inspect}
             },
           RUBY
