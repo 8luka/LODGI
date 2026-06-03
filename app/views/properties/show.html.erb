@@ -120,6 +120,41 @@
         <% end %>
 
       </div>
+      <div class="divider"></div>
+      <div class="section-label">
+  3D Tour
+</div>
+
+<div class="matterport-section">
+
+  <% if @property.matterport_url.present? %>
+
+    <a
+      href="<%= @property.matterport_url %>"
+      target="_blank"
+      rel="noopener"
+      class="matterport-button"
+    >
+
+      <iconify-icon
+        icon="mdi:cube-scan"
+      ></iconify-icon>
+
+      <span>
+        Explore 3D Property Layout
+      </span>
+
+    </a>
+
+  <% else %>
+
+    <div class="matterport-unavailable">
+      3D tour unavailable
+    </div>
+
+  <% end %>
+
+</div>
     </div>
     <!-- /left -->
 

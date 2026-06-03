@@ -125,7 +125,7 @@
   .am-item {
     display: flex; align-items: center; gap: 13px;
     padding: 12px 0;
-    border-bottom: 0.5px solid var(--border);
+  ;
   }
   .am-item:nth-last-child(-n+2) { border-bottom: none; }
   .am-emoji { font-size: 22px; width: 34px; text-align: center; flex-shrink: 0; }
