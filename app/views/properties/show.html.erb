@@ -116,35 +116,31 @@
       </div>
     </div>
     <!-- /left -->
+
     <!-- RIGHT SIDEBAR -->
     <div class="right">
+
       <!-- MAP CARD -->
       <div class="map-card">
-        <div class="map-preview" onclick="openMap()">
-          <!-- Placeholder map SVG — replace with Google Maps / Mapbox embed -->
-          <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <rect width="280" height="160" fill="#E2DDD6"></rect>
-            <rect x="0" y="68" width="280" height="6" fill="#F0EBE1"></rect>
-            <rect x="0" y="103" width="220" height="5" fill="#F0EBE1"></rect>
-            <rect x="78" y="0" width="5" height="160" fill="#F0EBE1"></rect>
-            <rect x="158" y="0" width="4" height="160" fill="#F0EBE1"></rect>
-            <rect x="0" y="0" width="76" height="66" rx="3" fill="#D5D0C6" opacity=".8"></rect>
-            <rect x="85" y="0" width="71" height="66" rx="3" fill="#D5D0C6" opacity=".8"></rect>
-            <rect x="0" y="75" width="76" height="50" rx="3" fill="#D5D0C6" opacity=".8"></rect>
-            <rect x="85" y="75" width="53" height="50" rx="3" fill="#D5D0C6" opacity=".8"></rect>
-            <rect x="163" y="0" width="117" height="66" rx="3" fill="#D5D0C6" opacity=".8"></rect>
-            <rect x="163" y="75" width="117" height="80" rx="3" fill="#D5D0C6" opacity=".8"></rect>
-            <ellipse cx="108" cy="40" rx="14" ry="11" fill="#3D6B4F" opacity=".28"></ellipse>
-            <circle cx="140" cy="71" r="3.5" fill="white" stroke="#C8553D" stroke-width="1.5"></circle>
-          </svg>
-          <div class="map-pin">
-            <div class="map-pin-dot"></div>
-            <div class="map-pin-tail"></div>
+        <div class="map-preview">
+          <div
+            id="property-map"
+            data-controller="property-map"
+            data-lat="<%= @property.latitude %>"
+            data-lng="<%= @property.longitude %>">
           </div>
+
+          <button
+            class="map-expand-btn"
+            onclick="event.stopPropagation(); openMap()">
+            <i class="fa-solid fa-expand"></i> Expand
+          </button>
+
+        </div>
           <button class="map-expand-btn" onclick="event.stopPropagation(); openMap()">
             <i class="fa-solid fa-expand"></i> Expand
           </button>
-        </div>
+
         <div class="map-card-body">
           <% @property.stations.each do |station| %>
             <div class="map-station">
