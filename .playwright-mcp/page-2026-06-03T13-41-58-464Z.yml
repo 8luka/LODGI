@@ -1,0 +1,49 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e5]
+      - button "Find short-term apartments in Tokyo" [ref=e7] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e11]: Find short-term apartments in Tokyo
+      - list [ref=e13]:
+        - listitem [ref=e14]:
+          - link "Map" [ref=e15] [cursor=pointer]:
+            - /url: /map
+            - img [ref=e16]
+            - text: Map
+        - listitem [ref=e18]:
+          - link "Explore neighborhoods" [ref=e19] [cursor=pointer]:
+            - /url: /#neighborhoods
+            - img [ref=e20]
+            - text: Explore neighborhoods
+        - listitem [ref=e22]:
+          - link "Favorites" [ref=e23] [cursor=pointer]:
+            - /url: /favorites
+            - img [ref=e24]
+            - text: Favorites
+        - listitem [ref=e26]:
+          - link "dropdown menu" [ref=e27] [cursor=pointer]:
+            - /url: "#"
+            - img "dropdown menu" [ref=e28]
+  - heading "Log in" [level=2] [ref=e29]
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: Email
+        - textbox "Email" [active] [ref=e34]
+      - generic [ref=e35]:
+        - generic [ref=e36]: Password
+        - textbox "Password" [ref=e37]
+      - group [ref=e38]:
+        - generic [ref=e39]:
+          - checkbox "Remember me" [ref=e40]
+          - generic [ref=e41]: Remember me
+    - button "Log in" [ref=e43] [cursor=pointer]
+  - paragraph [ref=e44]:
+    - link "Sign up" [ref=e45] [cursor=pointer]:
+      - /url: /users/sign_up
+  - paragraph [ref=e46]:
+    - link "Forgot your password?" [ref=e47] [cursor=pointer]:
+      - /url: /users/password/new

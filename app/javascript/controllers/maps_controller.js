@@ -1,5 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import { computeScore, describeScore } from "scoring/score"
+import { computeScore as computeScoreV2, describeScore as describeScoreV2 } from "scoring/score_simplified"
+import { buildPopupSections } from "scoring/popup_content"
 // import { Loader } from "@googlemaps/js-api-loader"
 // Connects to data-controller="maps"
 
@@ -23,7 +25,18 @@ export default class extends Controller {
       default: ""
     },
 
-    anchor: Object
+    anchor: Object,
+
+    normalizedInputs: {
+      type: Object,
+      default: {}
+    },
+
+    // Switches scoring + filtering to the simplified v2 system (simplified_scoring_spec.md).
+    scoringV2: {
+      type: Boolean,
+      default: false
+    }
   }
   static targets = [
     "map",
@@ -33,6 +46,10 @@ export default class extends Controller {
     "priceValue",
 
     "availabilityFilter",
+
+    // v2 hard-filter time buckets (radio groups; commute only rendered when an anchor is set)
+    "commuteFilter",
+    "stationFilter",
 
     "listings",
   ]
@@ -111,10 +128,19 @@ export default class extends Controller {
     const availableOnly = availSource.checked
     this.availabilityFilterTargets.forEach(t => t.checked = availableOnly)
 
+    // v2 only: commute + walk-to-station time buckets cut listings (they no longer score).
+    const commuteMax = this.scoringV2Value ? this.selectedBucketMinutes(this.commuteFilterTargets) : null
+    const stationMax = this.scoringV2Value ? this.selectedBucketMinutes(this.stationFilterTargets) : null
+
     const filteredProperties = this.allProperties.filter((property) => {
       const matchesPrice = Number(property.price) <= maxPrice
       const matchesAvailability = !availableOnly || this.isAvailableForCheckin(property.availability)
-      return matchesPrice && matchesAvailability
+      // null bucket ("Any") passes all; a numeric bucket requires a known time within it.
+      const matchesCommute = commuteMax == null ||
+        (property.travel_time_to_anchor != null && property.travel_time_to_anchor <= commuteMax)
+      const matchesStation = stationMax == null ||
+        (this.stationMinutes(property) != null && this.stationMinutes(property) <= stationMax)
+      return matchesPrice && matchesAvailability && matchesCommute && matchesStation
     })
 
     this.filteredProperties = filteredProperties
@@ -192,7 +218,7 @@ export default class extends Controller {
               async () => {
                 const response = await fetch(`/properties/${property.id}/popup`)
                 const html = await response.text()
-                this.openInfoWindow(marker, html)
+                this.openInfoWindow(marker, this.decoratePopup(html, property))
               }
             )
 
@@ -264,74 +290,35 @@ export default class extends Controller {
     return icons[category] || "mdi:map-marker"
   }
 
-  createPropertyPopupContent(property) {
-    const image =
-      property.images?.[0]
+  // Fill the fetched popup shell's dynamic slots from the live client state: the score-driven
+  // info rows ([data-popup-info]) and the fit badge ([data-popup-fit]). The shell itself
+  // (image, favorite heart, name, availability, price, CTA) is rendered server-side so the
+  // favorite button keeps its current_user state. Returns the populated HTML string.
+  decoratePopup(html, property) {
+    const doc = new DOMParser().parseFromString(html, "text/html")
 
-    const stations =
-      property.stations?.length
-        ? property.stations
-            .map(station => `🚉 ${station}`)
-            .join("<br>")
-        : "No stations nearby"
-    // Green when the listing is actually usable for the trip (consistent with the
-    // "only show available" filter); otherwise show the move-in date as-is.
-    const isNow =
-      property.availability?.toLowerCase() === "now"
+    const { primary, amenities } = buildPopupSections({
+      property,
+      priorities: this.priorities,
+      hasAnchor: !!(this.anchorValue?.id),
+      anchorName: this.anchorValue?.name,
+    })
 
-    const availableForTrip =
-      this.isAvailableForCheckin(property.availability)
+    const info = doc.querySelector("[data-popup-info]")
+    if (info) info.innerHTML = primary
 
-    const availabilityClass =
-      availableForTrip
-        ? "availability-pill available-pill"
-        : "availability-pill unavailable-pill"
+    const amenitiesEl = doc.querySelector("[data-popup-amenities]")
+    if (amenitiesEl) amenitiesEl.innerHTML = amenities
 
-    const availabilityText =
-      isNow
-        ? "Available now"
-        : `Available ${property.availability}`
-    return `
-      <div class="property-popup">
+    const fit = doc.querySelector("[data-popup-fit]")
+    if (fit) {
+      const score = this.scoresById[property.id]
+      fit.textContent = score == null ? "—" : score
+      fit.style.color = this.colorForScore(score)
+    }
 
-        <img
-          src="${image}"
-          class="popup-image"
-        />
-
-        <div class="popup-content">
-
-          <div class="${availabilityClass}">
-            ${availabilityText}
-          </div>
-
-          <h3 class="popup-title">
-            ${property.name}
-          </h3>
-
-          <div class="popup-row">
-            ${property.layout}
-          </div>
-
-          <div class="popup-row">
-            ¥${property.price}
-          </div>
-
-          <div class="popup-row">
-            ${stations}
-          </div>
-
-          <a
-            href="/properties/${property.id}"
-            class="popup-button"
-          >
-            View Property
-          </a>
-
-        </div>
-
-      </div>
-    `
+    const wrapper = doc.querySelector(".property-popup")
+    return wrapper ? wrapper.outerHTML : html
   }
 
   createPoiPopupContent(place) {
@@ -582,16 +569,25 @@ export default class extends Controller {
     return { weights, categories }
   }
 
-  // Build the computeScore() input object for one property from the current priorities.
-  // Maps the rail's slider keys (commute/quiet/station) to the formula's names.
+  // The active scoring engine: simplified v2 or the original multi-slider one.
+  get scoreFn() { return this.scoringV2Value ? computeScoreV2 : computeScore }
+  get describeFn() { return this.scoringV2Value ? describeScoreV2 : describeScore }
+
+  // Build the score-engine input object for one property from the current priorities.
+  // v2 keeps only the Peace & Quiet slider + toggles (commute/station are filters now).
   scoreArgs(property) {
     const w = this.priorities.weights
     const active = this.priorities.categories || []
     const toggles = {}
     TOGGLE_CATEGORIES.forEach((c) => { toggles[c] = active.includes(c) })
+    const normalizedInputs = this.normalizedInputsValue[property.id] || {}
+
+    if (this.scoringV2Value) {
+      return { normalizedInputs, peaceQuietSlider: w.quiet || 0, toggles }
+    }
     return {
-      scoreInputs: property.score_inputs || {},
-      travelTimeToAnchor: property.travel_time_to_anchor ?? null,
+      normalizedInputs,
+      hasAnchor: !!(this.anchorValue?.id),
       sliders: { commute: w.commute || 0, peace_quiet: w.quiet || 0, near_station: w.station || 0 },
       toggles,
     }
@@ -599,7 +595,19 @@ export default class extends Controller {
 
   computeScores(properties) {
     this.scoresById = {}
-    properties.forEach((p) => { this.scoresById[p.id] = computeScore(this.scoreArgs(p)) })
+    properties.forEach((p) => { this.scoresById[p.id] = this.scoreFn(this.scoreArgs(p)) })
+  }
+
+  // Selected minutes from a time-bucket radio group; null for "Any" or an empty group.
+  selectedBucketMinutes(targets) {
+    const checked = targets.find((t) => t.checked)
+    if (!checked) return null
+    const m = checked.dataset.minutes
+    return m === "any" ? null : Number(m)
+  }
+
+  stationMinutes(property) {
+    return property.score_inputs?.transit_station?.time_to_station ?? null
   }
 
   colorForScore(score) {
@@ -642,7 +650,7 @@ export default class extends Controller {
 
   // §7.4 debug breakdown: each active term's weight × subscore = contribution. Only with ?debug=1.
   debugBreakdownHtml(property) {
-    const { terms } = describeScore(this.scoreArgs(property))
+    const { terms } = this.describeFn(this.scoreArgs(property))
     const line = terms
       .map((t) => `${t.label}: w=${t.weight.toFixed(2)}×s=${t.subscore.toFixed(2)}=${t.contribution.toFixed(2)}`)
       .join(" | ")

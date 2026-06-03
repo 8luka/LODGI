@@ -158,6 +158,12 @@
   color: var(--ink);
 }
 
+.rail__subtitle {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 2px;
+}
+
 .rail__count { color: var(--ink-muted); font-family: var(--sans); font-size: 13px; }
 
 .rail__expand {

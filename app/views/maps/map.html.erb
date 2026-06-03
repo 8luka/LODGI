@@ -10,6 +10,8 @@
          data-maps-properties-value="<%= @properties %>"
          data-maps-checkin-value="<%= @checkin %>"
          data-maps-anchor-value="<%= @anchor.present? ? json_escape(@anchor.to_json) : '{}' %>"
+         data-maps-normalized-inputs-value="<%= json_escape(@normalized_inputs.to_json) %>"
+         data-maps-scoring-v2-value="<%= @scoring_v2 %>"
          data-action="priorities:changed@window->maps#rescore">
 
   <div class="workspace-grid">
@@ -27,7 +29,7 @@
           </label>
         </div>
       </div>
-        <%= render "pages/priorities_panel" %>
+        <%= render @scoring_v2 ? "pages/priorities_panel_v2" : "pages/priorities_panel" %>
 
   </div>
 

@@ -1,14 +1,14 @@
-// app/javascript/scoring/score.js
+// app/javascript/scoring/score_simplified.js
 //
-// The fit-score formula (specs: score_formula_spec.md + score_normalization_spec.md).
-// Pure functions — no DOM access, no async, no side effects.
+// The SIMPLIFIED fit-score engine (spec: simplified_scoring_spec.md). Parallel to score.js
+// so the old multi-slider system stays switchable behind the SCORING_V2 flag.
 //
-// Normalization now happens SERVER-SIDE (score_normalization_spec.md): the engine receives
-// `normalizedInputs`, a map of pre-normalized [0, 1] values where higher is always better.
-// It runs a plain weighted average over the active terms — it never sees raw distances/times,
-// so the old f_* sub-score functions are gone. Drives the live re-rank entirely in the browser.
+// The split: commute and near-station are now HARD FILTERS (handled in maps_controller.js),
+// not score terms. The score is driven by exactly two things — the single Peace & Quiet
+// slider plus the 9 category toggles — over the same server-side relative normalization.
+// Pure functions: no DOM access, no async, no side effects.
 
-const TOGGLE_WEIGHT = 0.5; // Tunable: see §7. Fixed weight each active toggle contributes.
+const TOGGLE_WEIGHT = 0.5; // Fixed weight each active toggle contributes. Tunable.
 
 // The 9 toggle categories, each mapped to the normalizedInputs field it reads.
 // `field(n)` returns the [0, 1] sub-score for that category (or null when data is absent).
@@ -26,22 +26,15 @@ const TOGGLE_TERMS = [
 
 // ── Term collection ─────────────────────────────────────────────────────────────────
 // Returns the array of active { label, weight, subscore } terms for the given inputs.
-// A term is active iff its slider is non-zero / its toggle is on (commute also requires an anchor).
 // All sub-scores come straight from `normalizedInputs` — already in [0, 1], higher = better.
 
-function collectTerms({ normalizedInputs, sliders, toggles, hasAnchor }) {
+function collectTerms({ normalizedInputs, peaceQuietSlider, toggles }) {
   const terms = [];
   const n = normalizedInputs || {};
 
-  // Slider terms
-  if (sliders.commute > 0 && hasAnchor) {
-    terms.push({ label: "Commute", weight: sliders.commute / 3.0, subscore: n.commute ?? 0 });
-  }
-  if (sliders.peace_quiet > 0) {
-    terms.push({ label: "Peace & quiet", weight: sliders.peace_quiet / 3.0, subscore: n.peace_quiet ?? 0.5 });
-  }
-  if (sliders.near_station > 0) {
-    terms.push({ label: "Near station", weight: sliders.near_station / 3.0, subscore: n.station ?? 0 });
+  // The one remaining slider — keeps the old weight curve: slider_value / 3.0.
+  if (peaceQuietSlider > 0) {
+    terms.push({ label: "Peace & quiet", weight: peaceQuietSlider / 3.0, subscore: n.peace_quiet ?? 0.5 });
   }
 
   // Toggle terms — each active toggle adds one term with the fixed TOGGLE_WEIGHT.
@@ -71,7 +64,7 @@ function computeScore(inputs) {
 }
 
 // describeScore(inputs) → { score, terms: [{ label, weight, subscore, contribution }] }
-// Used by the §7.4 debug breakdown. contribution = weight × subscore (pre-normalization).
+// Used by the ?debug=1 breakdown. contribution = weight × subscore.
 function describeScore(inputs) {
   const terms = collectTerms(inputs).map((t) => ({
     ...t,
