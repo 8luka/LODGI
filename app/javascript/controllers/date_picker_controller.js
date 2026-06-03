@@ -11,6 +11,7 @@ export default class extends Controller {
   }
 
   onChange(event) {
+
     const input = event.target
 
     if (this.disabledDates.includes(input.value)) {
@@ -19,10 +20,42 @@ export default class extends Controller {
     }
 
     if (input === this.startDateTarget) {
+
       this.endDateTarget.min = input.value
-      if (!this.endDateTarget.value || this.endDateTarget.value <= input.value) {
-        this.endDateTarget.value = input.value
+
+      if (
+        !this.endDateTarget.value ||
+        this.endDateTarget.value <= input.value
+      ) {
+
+        this.endDateTarget.value =
+          input.value
       }
     }
+
+    this.updateInquiryDates()
+  }
+
+  updateInquiryDates() {
+
+    fetch("/inquiry/dates", {
+    method: "PATCH",
+
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRF-Token":
+        document.querySelector(
+          'meta[name="csrf-token"]'
+        ).content
+    },
+
+    body: JSON.stringify({
+      check_in: this.startDateTarget.value,
+      check_out: this.endDateTarget.value
+    })
+  })
+  .then(() => {
+    window.location.reload()
+  })
   }
 }

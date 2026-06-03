@@ -200,9 +200,9 @@
         <% checkin_date = @checkin.present? ? Date.parse(@checkin) : nil %>
         <% available = available_for_checkin?(@property.availability, checkin_date) %>
         <% if checkin_date && !available %>
-          <a href="/" class="book-btn book-btn--muted" style="text-decoration: none;">
+          <div class="book-btn book-btn--muted" style="text-decoration: none;">
             Change dates to book
-          </a>
+          </div>
         <% elsif user_signed_in? %>
           <a href="mailto:<%= agent_email %>?subject=<%= subject %>&body=<%= body %>"
             class="book-btn"
