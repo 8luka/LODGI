@@ -193,7 +193,23 @@
       </div>
       <!-- PRICE CARD -->
       <div class="price-card">
+<<<<<<< Updated upstream
         <div class="price-main"><%= "¥#{@property.price}" %> <span>/ month</span></div>
+=======
+        <div class="price-main">
+          ¥<%= number_with_delimiter(@property.price.to_i) %>
+          <span>/ month</span>
+            <div
+              class="vendor-avatar"
+              title="Managed by <%= @property.vendor %>"
+            >
+              <img
+                src="<%= @property.vendor_image %>"
+                alt="<%= @property.vendor %>"
+              >
+            </div>
+        </div>
+>>>>>>> Stashed changes
         <div class="price-note">
           <%= "Available #{@property.availability}" %><br>
         </div>
