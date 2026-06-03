@@ -164,6 +164,15 @@
         <div class="price-main">
           ¥<%= number_with_delimiter(@property.price.to_i) %>
           <span>/ month</span>
+            <div
+              class="vendor-avatar"
+              title="Managed by <%= @property.vendor %>"
+            >
+              <img
+                src="<%= @property.vendor_image %>"
+                alt="<%= @property.vendor %>"
+              >
+            </div>
         </div>
         <div class="price-note">
           <%= "Available #{@property.availability}" %><br>
