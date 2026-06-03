@@ -3,40 +3,127 @@
   width: 240px;
 }
 
+// ========================
+// Image
+// ========================
+
+.popup-image-wrapper {
+  position: relative;
+}
+
 .popup-image {
   width: 100%;
   height: 140px;
   object-fit: cover;
   border-radius: 10px;
+  display: block;
 }
 
-.popup-content {
-  padding-top: 10px;
+// ========================
+// Favorite Button
+// ========================
+
+.popup-favorite {
+  position: absolute;
+  top: -5px;
+  bottom: 10px;     // was 10px
+  left: 20px;     // was 10px
+  z-index: 9999;
 }
 
-.popup-title {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
+.popup-favorite .nb-favorite-btn {
+  position: relative;
+  z-index: 9999;
 
-.popup-row {
-  margin-bottom: 6px;
-}
+  width: 38px;
+  height: 38px;
 
-.popup-actions {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.popup-button {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  text-decoration: none;
+  pointer-events: auto;
+
+}
+
+.popup-favorite .nb-favorite-btn:hover,
+.popup-favorite .nb-favorite-btn:focus,
+.popup-favorite .nb-favorite-btn:active,
+.popup-favorite .nb-favorite-btn:visited {
+  text-decoration: none;
+}
+
+// ========================
+// Content
+// ========================
+
+.popup-content {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.popup-row {
+  font-size: 14px;
+  color: #555;
+}
+
+// ========================
+// Availability
+// ========================
+
+.availability-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.available-pill {
+  background: #e8f5ee;
+  color: #2d7a4f;
+}
+
+.unavailable-pill {
+  background: #f5e8e8;
+  color: #a63232;
+}
+
+// ========================
+// CTA Button
+// ========================
+
+.popup-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 12px;
+  margin-top: 4px;
+
   background: #c2584a;
   color: white;
 
@@ -54,31 +141,4 @@
 
 .popup-button:active {
   transform: scale(0.98);
-}
-
-.property-popup .popup-favorite,
-.property-popup .popup-favorite > div {
-  position: static;
-  flex-shrink: 0;
-}
-
-.property-popup .nb-favorite-btn {
-  position: static;
-  z-index: auto;
-
-  width: 38px;
-  height: 38px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-}
-
-.property-popup .nb-favorite-btn:hover,
-.property-popup .nb-favorite-btn:focus,
-.property-popup .nb-favorite-btn:active,
-.property-popup .nb-favorite-btn:visited {
-  text-decoration: none;
 }
