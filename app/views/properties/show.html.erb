@@ -69,90 +69,50 @@
       <!-- AMENITIES -->
       <div class="section-label">Amenities</div>
       <div class="amenities-grid">
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-soap"></i></div>
-          <div>
-            <div class="am-name">Washing machine</div>
-            <div class="am-sub">In-unit, front-load</div>
+
+        <% @property.all_amenities.each do |amenity_name| %>
+
+          <% amenity =
+              Amenity.find_by(
+                "LOWER(TRIM(name)) = ?",
+                amenity_name.strip.downcase
+              )
+          %>
+
+          <% Rails.logger.debug(
+              "AMENITY LOOKUP => '#{amenity_name}' -> '#{amenity&.name || "NOT FOUND"}'"
+            )
+          %>
+          <div class="am-item">
+
+            <div class="am-icon">
+
+              <% if amenity&.icon.present? %>
+
+                <iconify-icon
+                  icon="<%= amenity.icon %>">
+                </iconify-icon>
+
+              <% else %>
+
+                <i class="fa-solid fa-circle-check"></i>
+
+              <% end %>
+
+            </div>
+
+            <div>
+
+              <div class="am-name">
+                <%= amenity_name %>
+              </div>
+
+            </div>
+
           </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-snowflake"></i></div>
-          <div>
-            <div class="am-name">Air conditioning</div>
-            <div class="am-sub">Hot &amp; cold, all rooms</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-wifi"></i></div>
-          <div>
-            <div class="am-name">High-speed WiFi</div>
-            <div class="am-sub">600 Mbps fibre</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-kitchen-set"></i></div>
-          <div>
-            <div class="am-name">Full kitchen</div>
-            <div class="am-sub">Induction + microwave</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-couch"></i></div>
-          <div>
-            <div class="am-name">Fully furnished</div>
-            <div class="am-sub">Sofa, bed, desk, storage</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-          <div>
-            <div class="am-name">Underfloor heating</div>
-            <div class="am-sub">Bathroom &amp; hallway</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-tv"></i></div>
-          <div>
-            <div class="am-name">Smart TV</div>
-            <div class="am-sub">55", Netflix ready</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-lock"></i></div>
-          <div>
-            <div class="am-name">Smart lock</div>
-            <div class="am-sub">Keyless entry, app access</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-shower"></i></div>
-          <div>
-            <div class="am-name">Shower &amp; bathtub</div>
-            <div class="am-sub">Separate unit</div>
-          </div>
-        </div>
-        <div class="am-item">
-          <div class="am-icon"><i class="fa-solid fa-elevator"></i></div>
-          <div>
-            <div class="am-name">Elevator</div>
-            <div class="am-sub">7-floor building</div>
-          </div>
-        </div>
-        <div class="am-item na">
-          <div class="am-icon"><i class="fa-solid fa-square-parking"></i></div>
-          <div>
-            <div class="am-name">Parking</div>
-            <div class="am-sub">Not included</div>
-          </div>
-        </div>
-        <div class="am-item na">
-          <div class="am-icon"><i class="fa-solid fa-bicycle"></i></div>
-          <div>
-            <div class="am-name">Bike storage</div>
-            <div class="am-sub">Not available</div>
-          </div>
-        </div>
+
+        <% end %>
+
       </div>
     </div>
     <!-- /left -->
