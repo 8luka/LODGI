@@ -38,6 +38,7 @@ export default class extends Controller {
   ]
 
   connect() {
+    this.filterTimeout = null
     this.allProperties = [...this.propertiesValue]
     // Fit-score state: current priorities (read from the rail DOM), per-property scores,
     // and the last filtered set. Live re-rank reads priorities:changed (see rescore()).
@@ -469,6 +470,20 @@ export default class extends Controller {
         "selected-marker"
       )
     })
+  }
+  debouncedApplyFilters(event) {
+
+    clearTimeout(
+      this.filterTimeout
+    )
+
+    this.filterTimeout =
+      setTimeout(
+        () => {
+          this.applyFilters(event)
+        },
+        300
+      )
   }
 
   // Right-rail category toggle: on = fetch + show that category's pins, off = remove them.

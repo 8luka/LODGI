@@ -108,7 +108,7 @@
         </div>
         <input type="range" min="0" max="<%= @max_price %>" step="10000" value="<%= @max_price %>"
                class="hard-filter-slider"
-               data-maps-target="priceFilter" data-action="input->maps#applyFilters">
+               data-maps-target="priceFilter" data-action="input->maps#debouncedApplyFilters">
         <label class="hard-filter-check">
           <input type="checkbox" data-maps-target="availabilityFilter" data-action="change->maps#applyFilters">
           <iconify-icon icon="tabler:calendar-check"></iconify-icon>
