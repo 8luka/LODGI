@@ -5,8 +5,9 @@
   <nav class="nb-breadcrumb">
     <%= link_to "Tokyo", root_path %>
     <span class="nb-bc-sep">›</span>
-    <%= link_to "Neighborhoods", neighborhoods_path %>
+    <%= link_to "Neighborhoods", root_path(anchor: "neighborhoods") %>
     <span class="nb-bc-sep">›</span>
+
     <span><%= @neighborhood.name %></span>
   </nav>
 
