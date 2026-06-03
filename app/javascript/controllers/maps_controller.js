@@ -23,6 +23,7 @@ export default class extends Controller {
   ]
 
   connect() {
+    this.filterTimeout = null
     this.allProperties = [...this.propertiesValue]
     // POI markers, keyed by category so each right-rail toggle is independent
     this.poiMarkersByCategory = {}
@@ -422,6 +423,20 @@ export default class extends Controller {
         "selected-marker"
       )
     })
+  }
+  debouncedApplyFilters(event) {
+
+    clearTimeout(
+      this.filterTimeout
+    )
+
+    this.filterTimeout =
+      setTimeout(
+        () => {
+          this.applyFilters(event)
+        },
+        300
+      )
   }
 
   // Right-rail category toggle: on = fetch + show that category's pins, off = remove them.
