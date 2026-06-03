@@ -1,6 +1,19 @@
 import { Controller } from "@hotwired/stimulus"
+import { computeScore, describeScore } from "scoring/score"
 // import { Loader } from "@googlemaps/js-api-loader"
 // Connects to data-controller="maps"
+
+// Fit-score → pin/chip color. Buckets are tunable (spec §7): green → amber → gray.
+const SCORE_COLORS = [
+  { min: 70, color: "#2e7d32" }, // strong fit  → green
+  { min: 40, color: "#f5a623" }, // medium fit  → amber
+  { min: 0,  color: "#9e9e9e" }, // weak / no-data → gray
+]
+const TOGGLE_CATEGORIES = [
+  "convenience_store", "supermarket", "atm", "cafe", "restaurant",
+  "bar", "park", "gym", "tourist_attraction",
+]
+
 export default class extends Controller {
   static values = {
     properties: Array,
@@ -20,10 +33,18 @@ export default class extends Controller {
     "priceValue",
 
     "availabilityFilter",
+
+    "listings",
   ]
 
   connect() {
     this.allProperties = [...this.propertiesValue]
+    // Fit-score state: current priorities (read from the rail DOM), per-property scores,
+    // and the last filtered set. Live re-rank reads priorities:changed (see rescore()).
+    this.scoresById = {}
+    this.priorities = this.readPriorities()
+    this.filteredProperties = this.allProperties
+    this.debug = new URLSearchParams(window.location.search).get("debug") === "1"
     // POI markers, keyed by category so each right-rail toggle is independent
     this.poiMarkersByCategory = {}
     // Store property markers
@@ -90,7 +111,26 @@ export default class extends Controller {
       return matchesPrice && matchesAvailability
     })
 
-    this.renderFilteredProperties(filteredProperties)
+    this.filteredProperties = filteredProperties
+    // Filters changed → re-fit the map to the new set.
+    this.render({ fit: true })
+  }
+
+  // Re-score the current filtered set and repaint pins + the ranked rail.
+  // fit:true re-fits the map (filter change); fit:false leaves the viewport (slider/toggle change).
+  render({ fit = false } = {}) {
+    this.computeScores(this.filteredProperties)
+    this.renderFilteredProperties(this.filteredProperties, fit)
+    this.renderRail(this.filteredProperties)
+  }
+
+  // Live re-rank entry point: the priorities panel emits priorities:changed on every
+  // slider/toggle move. Re-score in place without re-fitting the map.
+  rescore(event) {
+    this.priorities = event?.detail?.weights
+      ? { weights: event.detail.weights, categories: event.detail.categories || [] }
+      : this.readPriorities()
+    this.render({ fit: false })
   }
 
   isAvailableForCheckin(availability) {
@@ -109,7 +149,7 @@ export default class extends Controller {
     return avDate <= checkinDate  // available by the time the user arrives
   }
 
-  renderFilteredProperties(properties) {
+  renderFilteredProperties(properties, fit = true) {
 
     this.propertyMarkers.forEach(
       (marker) => {
@@ -137,7 +177,7 @@ export default class extends Controller {
             content:
               this.createMarkerContent(
                 "material-symbols-light:home-outline",
-                "#c2584a"
+                this.colorForScore(this.scoresById[property.id])
               )
           })
 
@@ -163,7 +203,7 @@ export default class extends Controller {
       this.renderAnchorMarker(
         bounds
       )
-    if (properties.length > 0) {
+    if (fit && properties.length > 0) {
 
       this.map.fitBounds(
         bounds,
@@ -173,7 +213,7 @@ export default class extends Controller {
   }
 
   clearFilters() {
-    this.priceFilterTargets.forEach(t => t.value = 500000)
+    this.priceFilterTargets.forEach(t => t.value = t.max)
     this.availabilityFilterTargets.forEach(t => t.checked = false)
     this.applyFilters()
   }
@@ -290,12 +330,7 @@ export default class extends Controller {
 
   createPoiPopupContent(place) {
 
-    let image = null
-
-    if (place.photos?.[0]) {
-      image =
-        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${place.photos[0]}&key=${window.googleMapsPlacesKey}`
-    }
+    const image = this.placePhotoUrl(place.photos?.[0])
 
     return `
       <div class="poi-popup">
@@ -322,6 +357,18 @@ export default class extends Controller {
       </div>
     `
   }
+  // Build an <img> URL from a stored photo reference, handling both pipelines:
+  //  • v2 (Places API New) refs look like "places/<id>/photos/<id>" → New media endpoint + MAPS_JS_API key
+  //  • v1 (legacy) refs are opaque strings → classic Place Photo URL + PLACES_API key
+  // Returns null when there's no photo (popup then renders without an image).
+  placePhotoUrl(ref) {
+    if (!ref) return null
+    if (ref.startsWith("places/")) {
+      return `https://places.googleapis.com/v1/${ref}/media?maxHeightPx=400&key=${window.googleMapsApiKey}`
+    }
+    return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${ref}&key=${window.googleMapsPlacesKey}`
+  }
+
   renderAnchorMarker(bounds) {
 
     if (!this.anchorValue?.latitude) {
@@ -490,5 +537,87 @@ export default class extends Controller {
       this.transitLayer.setMap(null)
 
     }
+  }
+
+  // ── Fit scoring (live re-rank) ───────────────────────────────────────────────────
+
+  // Read current slider weights + active toggle categories from the rail DOM. Used for the
+  // initial paint on connect; live updates thereafter arrive via the priorities:changed event.
+  readPriorities() {
+    const weights = { commute: 0, quiet: 0, station: 0 }
+    document.querySelectorAll('[data-priorities-panel-target="sliderInput"]').forEach((s) => {
+      if (s.dataset.key in weights) weights[s.dataset.key] = Number(s.value)
+    })
+    const categories = [...document.querySelectorAll('[data-priorities-panel-target="toggleInput"]')]
+      .filter((t) => t.checked)
+      .map((t) => t.dataset.category)
+    return { weights, categories }
+  }
+
+  // Build the computeScore() input object for one property from the current priorities.
+  // Maps the rail's slider keys (commute/quiet/station) to the formula's names.
+  scoreArgs(property) {
+    const w = this.priorities.weights
+    const active = this.priorities.categories || []
+    const toggles = {}
+    TOGGLE_CATEGORIES.forEach((c) => { toggles[c] = active.includes(c) })
+    return {
+      scoreInputs: property.score_inputs || {},
+      travelTimeToAnchor: property.travel_time_to_anchor ?? null,
+      sliders: { commute: w.commute || 0, peace_quiet: w.quiet || 0, near_station: w.station || 0 },
+      toggles,
+    }
+  }
+
+  computeScores(properties) {
+    this.scoresById = {}
+    properties.forEach((p) => { this.scoresById[p.id] = computeScore(this.scoreArgs(p)) })
+  }
+
+  colorForScore(score) {
+    if (score == null) return "#9e9e9e"
+    return (SCORE_COLORS.find((b) => score >= b.min) || SCORE_COLORS[SCORE_COLORS.length - 1]).color
+  }
+
+  // Rebuild the left rail: filtered properties sorted by fit score (desc), top 20, live fit chips.
+  renderRail(properties) {
+    if (!this.hasListingsTarget) return
+    const ranked = [...properties].sort(
+      (a, b) => (this.scoresById[b.id] ?? -1) - (this.scoresById[a.id] ?? -1)
+    )
+    this.listingsTarget.innerHTML = ranked.slice(0, 20).map((p, i) => this.listingCardHtml(p, i)).join("")
+  }
+
+  listingCardHtml(property, index) {
+    const score = this.scoresById[property.id]
+    const metric = property.stations?.[0] || property.neighborhood_name || ""
+    const price = Number(property.price).toLocaleString()
+    const fit = score == null ? "—" : score
+    return `
+      <a href="/properties/${property.id}" class="listing-card" data-listing-id="${property.id}">
+        <span class="listing-card__rank ${index < 3 ? "is-top" : ""}">${index + 1}</span>
+        <div class="listing-card__thumb" style="background-image: url('${property.images?.[0] || ""}');"></div>
+        <div class="listing-card__body">
+          <div class="listing-card__name">${property.name}</div>
+          <div class="listing-card__metric">
+            <iconify-icon icon="tabler:train"></iconify-icon> ${metric}
+          </div>
+          <div class="listing-card__foot">
+            <span class="listing-card__price">¥${price}</span>
+            <span class="fit-chip" style="background:${this.colorForScore(score)}; color:#fff;">Fit ${fit}</span>
+          </div>
+          ${this.debug ? this.debugBreakdownHtml(property) : ""}
+        </div>
+      </a>
+    `
+  }
+
+  // §7.4 debug breakdown: each active term's weight × subscore = contribution. Only with ?debug=1.
+  debugBreakdownHtml(property) {
+    const { terms } = describeScore(this.scoreArgs(property))
+    const line = terms
+      .map((t) => `${t.label}: w=${t.weight.toFixed(2)}×s=${t.subscore.toFixed(2)}=${t.contribution.toFixed(2)}`)
+      .join(" | ")
+    return `<div class="listing-card__debug" style="font-size:10px; color:#666; margin-top:4px; line-height:1.35;">${line || "no active terms → 50"}</div>`
   }
 }

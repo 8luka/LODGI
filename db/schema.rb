@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_03_004604) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -77,16 +77,19 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
     t.string "category"
     t.datetime "created_at", null: false
     t.text "description"
+    t.integer "distance_meters"
     t.float "latitude"
     t.float "longitude"
     t.string "name"
     t.bigint "neighborhood_id"
     t.string "photos", default: [], array: true
     t.string "place_id"
+    t.bigint "property_id"
     t.float "rating"
     t.datetime "updated_at", null: false
     t.index ["neighborhood_id"], name: "index_places_on_neighborhood_id"
-    t.index ["place_id"], name: "index_places_on_place_id", unique: true
+    t.index ["place_id"], name: "index_places_on_place_id"
+    t.index ["property_id", "category"], name: "index_places_on_property_id_and_category"
   end
 
   create_table "properties", force: :cascade do |t|
@@ -106,6 +109,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
     t.bigint "neighborhood_id", null: false
     t.decimal "price", precision: 10, scale: 2
     t.text "rules"
+    t.jsonb "score_inputs", default: {}, null: false
     t.float "size"
     t.string "stations", default: [], array: true
     t.datetime "updated_at", null: false
@@ -134,6 +138,18 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
+  create_table "travel_to_anchors", force: :cascade do |t|
+    t.bigint "anchor_id", null: false
+    t.string "anchor_type", null: false
+    t.datetime "created_at", null: false
+    t.bigint "property_id", null: false
+    t.integer "travel_time"
+    t.datetime "updated_at", null: false
+    t.index ["anchor_type", "anchor_id", "property_id"], name: "idx_travel_to_anchors_unique", unique: true
+    t.index ["anchor_type", "anchor_id"], name: "index_travel_to_anchors_on_anchor"
+    t.index ["property_id"], name: "index_travel_to_anchors_on_property_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email", default: "", null: false
@@ -159,10 +175,12 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_01_150056) do
   add_foreign_key "inquiries", "properties"
   add_foreign_key "inquiries", "users"
   add_foreign_key "places", "neighborhoods"
+  add_foreign_key "places", "properties"
   add_foreign_key "properties", "neighborhoods"
   add_foreign_key "property_amenities", "amenities"
   add_foreign_key "property_amenities", "properties"
   add_foreign_key "reviews", "properties"
   add_foreign_key "reviews", "users"
+  add_foreign_key "travel_to_anchors", "properties"
   add_foreign_key "workplaces", "neighborhoods"
 end

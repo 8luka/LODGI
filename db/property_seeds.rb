@@ -122,7 +122,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/PztYKWsqL--1732266076218.jpg"],
   :stations=>["Shibuya Sta. - 7 min walk"]},
 
-  {:name=>"The Apartment Hotel Ebisu 1 Large typeA 102",
+  {:name=>"The Apartment Hotel Ebisu 102",
   :availability=>"July 7th",
   :neighborhood=>"Ebisu",
   :latitude=>35.6492576,
@@ -275,7 +275,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/e0-qvfFd14-1745209968636.jpg"],
   :stations=>["Ebisu Sta. - 5 min walk", "Hiroo Sta. - 17 min walk", "Daikanyama Sta. - 15 min walk"]},
 
-  {:name=>"Oak Rest Ebisu 503 503",
+  {:name=>"Oak Rest Ebisu 503",
   :neighborhood=>"Ebisu",
   :availability=>"now",
   :latitude=>35.6445351,
@@ -422,8 +422,8 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/VaVCpr-tS6-1750298039037.jpg"],
   :stations=>["Shirokanedai Sta. - 10 mins walk", "Shirokane-takanawa Sta. - 5 mins walk", "Sengakuji Sta. - 13 mins walk"]},
 
-  {:name=>"Hmlet Higashi Gotanda 1201",
-  :neighborhood=>"Shinagawa",
+  {:name=>"Hmlet Higashi 1201",
+  :neighborhood=>"Gotanda/Osaki",
   :availability=>"June 10th",
   :latitude=>35.6264101,
   :longitude=>139.7248988,
@@ -650,7 +650,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/W3gt5kEnlT-1767064947368.jpg"],
   :stations=>["Osaki Sta. - 9 mins walk"]},
 
-  {:name=>"Shibuya, Shoto  (3 months minimum) 702",
+  {:name=>"Shibuya, Shoto 702",
   :neighborhood=>"Shibuya",
   :availability=>"October 7th",
   :latitude=>35.656833,
@@ -662,7 +662,7 @@ properties_data = [
   :floors=>0,
   :description=>
     "Modern Japanese Apartment in Prime Shibuya Location. This beautifully designed 2-bedroom, 1-bathroom apartment exemplifies contemporary Japanese living with its thoughtful layout and premium finishes. Located in the heart of Shibuya's sought-after Shinsencho district, this residence offers approximately 60m²  of meticulously planned living space.LAUNCHING SOON - Check-in Available from Early July 2025Interior Features:Open-concept living and dining room with abundant natural lightSpacious private balcony with city viewsBoth rooms feature ample closet space and clean, minimalist designSleek white cabinetry with integrated storage solutionsModern fixtures and finishes throughoutPeninsula-style counter perfect for casual diningSeparate laundry area with washer/dryer hookupsAdditional powder room for convenienceBuilding Amenities:Secure entry systemWell-maintained common areasProfessional building management / conciergeUnbeatable Shibuya Access:One of the most convenient locations for accessing Shibuya's business and entertainment districtsMultiple transportation options within walking distanceDirect connectivity to major JR and subway linesQuick access to Shibuya Crossing, shopping centers, and nightlifePeaceful Residential Haven:Located in quiet Shinsencho - near the action yet tranquilly removed from the crowdsTree-lined streets providing a serene atmosphereResidential neighborhood feel while maintaining urban conveniencePerfect escape from the bustling city centerClose proximity to shopping, dining, and entertainmentThe rare combination of central location with peaceful, quiet livingEasy access to parks and recreational facilitiesBest of both worlds: urban connectivity with residential tranquilityPerfect ForYoung professionals seeking modern urban living with easy Shibuya accessCouples looking for a stylish Tokyo residence in an ideal locationAnyone desiring the perfect balance of contemporary design and traditional Japanese aestheticsThose who want to be close to the excitement but value a quiet home environmentSample visualizations show furniture digitally designed for reference purposes.",
-  :rules=>nil,
+  :rules=>"Three months minumum contract",
   :vendor=>"E-Housing",
   :vendor_image=>
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/companies/Mgy20jjSVl-1732084321369.jpg",
@@ -680,7 +680,7 @@ properties_data = [
     "https://cdn.shortpixel.ai/client/to_webp,w_1500,q_lossless,ret_wait/https://ehousing-dev.s3.ap-northeast-1.amazonaws.com/properties/eMXBAi6VYF-1749284421444.png"],
   :stations=>["Shibuya Sta. - 11 mins walk", "Shinsen Sta. - 5 mins walk"]},
 
-  {:name=>"The Parkhabio Shibuya Cross #1103 3",
+  {:name=>"The Parkhabio Shibuya Cross #1103",
   :neighborhood=>"Shibuya",
   :availability=>"now",
   :latitude=>35.6534504,

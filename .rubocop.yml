@@ -40,3 +40,14 @@ Style/EmptyMethod:
   Enabled: false
 Bundler/OrderedGems:
   Enabled: false
+
+# Rake task blocks and their helper methods are inherently long — suppress length cops.
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/tasks/**/*.rake'
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/tasks/**/*.rake'
+Metrics/PerceivedComplexity:
+  Exclude:
+    - 'lib/tasks/**/*.rake'

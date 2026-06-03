@@ -104,9 +104,9 @@
             <iconify-icon icon="tabler:currency-yen"></iconify-icon>
             Max price
           </span>
-          <span class="hard-filter-price__val" data-maps-target="priceValue">¥500,000</span>
+          <span class="hard-filter-price__val" data-maps-target="priceValue">¥<%= number_with_delimiter(@max_price) %></span>
         </div>
-        <input type="range" min="0" max="500000" step="10000" value="500000"
+        <input type="range" min="0" max="<%= @max_price %>" step="10000" value="<%= @max_price %>"
                class="hard-filter-slider"
                data-maps-target="priceFilter" data-action="input->maps#applyFilters">
         <label class="hard-filter-check">

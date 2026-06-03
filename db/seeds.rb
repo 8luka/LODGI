@@ -1,7 +1,10 @@
 puts "Seeding..."
+# Destroy order must respect foreign keys: dependents before parents.
+# places references properties (v2 property_id FK) and neighborhoods.
+# property_amenities references properties.
+Place.destroy_all
 User.destroy_all
 Property.destroy_all
-Place.destroy_all
 Neighborhood.destroy_all
 
 user = User.new(
@@ -14,7 +17,8 @@ load Rails.root.join("db/neighborhood_seeds.rb")
 load Rails.root.join("db/property_seeds.rb")
 load Rails.root.join("db/amenity_seeds.rb")
 load Rails.root.join("db/place_seeds.rb")
-load Rails.root.join("db/google_places_seeds.rb")
+load Rails.root.join("db/google_places_seeds_v2.rb")
+# load Rails.root.join("db/google_places_seeds.rb") original place calls. Not needed but saved.
 
 ### DO NOT DELETE THE BELOW !!! ### DO NOT DELETE THE BELOW !!! ### DO NOT DELETE THE BELOW !!! ###
 
