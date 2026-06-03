@@ -9,16 +9,23 @@
          data-api-key="<%= ENV['MAPS_JS_API'] %>"
          data-maps-properties-value="<%= @properties %>"
          data-maps-checkin-value="<%= @checkin %>"
-         data-maps-anchor-value="<%= (@anchor || {}).to_json %>"
+         data-maps-anchor-value="<%= @anchor.present? ? json_escape(@anchor.to_json) : '{}' %>"
          data-action="priorities:changed@window->maps#rescore">
+
   <div class="workspace-grid">
     <%= render "pages/listings_rail",
                properties: @properties_records.first(20),
                total: @properties_records.size %>
 
       <div class="workspace-map">
-        <%= render "pages/filter_chips" %>
-        <div id="map" data-maps-target="map"></div>
+<div class="map-container">
+          <div id="map" data-maps-target="map"></div>
+          <label class="map-transit-toggle">
+            <input type="checkbox" data-maps-target="transitToggle" data-action="change->maps#toggleTransit">
+            <iconify-icon icon="tabler:train"></iconify-icon>
+            <span>Transit Map</span>
+          </label>
+        </div>
       </div>
         <%= render "pages/priorities_panel" %>
 

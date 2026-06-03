@@ -1,17 +1,19 @@
 <div class="property-popup">
 
-  <% img = @property.images&.first %>
-  <% if img.present? %>
-    <img src="<%= img %>" class="popup-image" alt="<%= @property.name %>" />
-  <% end %>
+  <div class="popup-image-wrapper">
+
+    <% img = @property.images&.first %>
+    <% if img.present? %>
+      <img src="<%= img %>" class="popup-image" alt="<%= @property.name %>" />
+    <% end %>
+
+    <div class="popup-favorite">
+      <%= render "properties/favorite_button", property: @property %>
+    </div>
+
+  </div>
 
   <div class="popup-content">
-
-    <% if @property.availability.present? %>
-      <div class="availability-pill <%= @property.availability == 'now' ? 'available-pill' : 'unavailable-pill' %>">
-        <%= @property.availability == 'now' ? 'Available now' : "Available #{@property.availability}" %>
-      </div>
-    <% end %>
 
     <h3 class="popup-title"><%= @property.name %></h3>
 
@@ -20,13 +22,20 @@
     <% end %>
 
     <% if @property.price.present? %>
-      <div class="popup-row">¥<%= number_with_delimiter(@property.price.to_i) %> / mo</div>
+      <div class="popup-row">
+        ¥<%= number_with_delimiter(@property.price.to_i) %> / mo
+      </div>
     <% end %>
 
-    <div class="popup-actions">
-      <%= render "properties/favorite_button", property: @property %>
-      <%= link_to "View Property", property_path(@property), class: "popup-button" %>
-    </div>
+    <% if @property.availability.present? %>
+      <div class="availability-pill <%= @property.availability == 'now' ? 'available-pill' : 'unavailable-pill' %>">
+        <%= @property.availability == 'now' ? 'Available now' : "Available #{@property.availability}" %>
+      </div>
+    <% end %>
+
+    <%= link_to "View Property",
+      property_path(@property),
+      class: "popup-button" %>
 
   </div>
 

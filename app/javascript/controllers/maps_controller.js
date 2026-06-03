@@ -29,23 +29,15 @@ export default class extends Controller {
     "map",
     "transitToggle",
 
-    "layoutFilter",
-    "neighborhoodFilter",
-    // neighborhood filter is not used currently but may be in the future
-
     "priceFilter",
     "priceValue",
 
     "availabilityFilter",
 
-    "transitControl",
-
     "listings",
   ]
 
   connect() {
-    // Price label/value are server-rendered from the data-derived max and kept in sync by
-    // applyFilters() (called at the end of connect), so no hard-coded default is needed here.
     this.allProperties = [...this.propertiesValue]
     // Fit-score state: current priorities (read from the rail DOM), per-property scores,
     // and the last filtered set. Live re-rank reads priorities:changed (see rescore()).
@@ -75,8 +67,6 @@ export default class extends Controller {
     this.map.addListener("idle", () => {
       this.updateViewportState()
     })
-    this.initializeFilters()
-
     // This checks if a user defined a check-in date and will end with only rendering the available for it
     this.availabilityFilterTargets.forEach(t => t.checked = Boolean(this.checkinValue))
     this.applyFilters()
@@ -104,102 +94,22 @@ export default class extends Controller {
     console.log("Current viewport:")
     console.log(this.currentViewport)
   }
-  initializeFilters() {
-
-    const layouts =
-      [...new Set(
-        this.allProperties.map(
-          property => property.layout
-        )
-      )]
-
-    this.layoutFilterTarget.innerHTML =
-      `
-        <option value="">
-          Any
-        </option>
-      `
-
-    layouts.forEach((layout) => {
-
-      this.layoutFilterTarget.innerHTML += `
-        <option value="${layout}">
-          ${layout}
-        </option>
-      `
-    })
-
-    // The neighborhood select is currently commented out in the view, so guard
-    // its target before populating it.
-    if (this.hasNeighborhoodFilterTarget) {
-      const neighborhoods =
-        [...new Set(
-          this.allProperties.map(
-            property => property.neighborhood_name
-          )
-        )]
-
-      this.neighborhoodFilterTarget.innerHTML =
-        `
-          <option value="">
-            Any
-          </option>
-        `
-
-      neighborhoods.forEach((neighborhood) => {
-
-        this.neighborhoodFilterTarget.innerHTML += `
-          <option value="${neighborhood}">
-            ${neighborhood}
-          </option>
-        `
-      })
-    }
-  }
   applyFilters(event) {
-
-    const selectedLayout = this.layoutFilterTarget.value
-
-    const selectedNeighborhood = this.hasNeighborhoodFilterTarget ? this.neighborhoodFilterTarget.value : ""
-
     // Whichever price slider fired is authoritative; sync all others to it.
     const priceSource = this.priceFilterTargets.find(t => t === event?.target) || this.priceFilterTargets[0]
     const maxPrice = Number(priceSource.value)
     this.priceFilterTargets.forEach(t => t.value = maxPrice)
     this.priceValueTargets.forEach(t => t.textContent = `¥${maxPrice.toLocaleString()}`)
 
-    // Same for availability checkbox.
     const availSource = this.availabilityFilterTargets.find(t => t === event?.target) || this.availabilityFilterTargets[0]
     const availableOnly = availSource.checked
     this.availabilityFilterTargets.forEach(t => t.checked = availableOnly)
 
-    const filteredProperties =
-      this.allProperties.filter(
-        (property) => {
-
-          const matchesLayout =
-            !selectedLayout ||
-            property.layout === selectedLayout
-
-          const matchesNeighborhood =
-            !selectedNeighborhood ||
-            property.neighborhood_name === selectedNeighborhood
-
-          const matchesPrice =
-            Number(property.price) <= maxPrice
-
-          const matchesAvailability =
-            !availableOnly ||
-            this.isAvailableForCheckin(property.availability)
-
-          return (
-            matchesLayout &&
-            matchesNeighborhood &&
-            matchesPrice &&
-            matchesAvailability
-          )
-        }
-      )
+    const filteredProperties = this.allProperties.filter((property) => {
+      const matchesPrice = Number(property.price) <= maxPrice
+      const matchesAvailability = !availableOnly || this.isAvailableForCheckin(property.availability)
+      return matchesPrice && matchesAvailability
+    })
 
     this.filteredProperties = filteredProperties
     // Filters changed → re-fit the map to the new set.
@@ -303,16 +213,8 @@ export default class extends Controller {
   }
 
   clearFilters() {
-    this.layoutFilterTarget.value = ""
-
-    if (this.hasNeighborhoodFilterTarget) {
-      this.neighborhoodFilterTarget.value = ""
-    }
-
     this.priceFilterTargets.forEach(t => t.value = t.max)
-
     this.availabilityFilterTargets.forEach(t => t.checked = false)
-
     this.applyFilters()
   }
 

@@ -64,3 +64,28 @@ amenity = Amenity.new(
   icon: "icon-park-solid:english",
 )
 amenity.save
+amenity = Amenity.new(
+  name: "Air conditioner",
+  icon: "mynaui:air-conditioner",
+)
+amenity.save
+amenity = Amenity.new(
+  name: "LAN ethernet socket",
+  icon: "gg:ethernet",
+)
+amenity.save
+amenity = Amenity.new(
+  name: "Refrigerator",
+  icon: "hugeicons:refrigerator",
+)
+amenity.save
+amenity = Amenity.new(
+  name: "TV",
+  icon: "material-symbols-light:tv-outline",
+)
+amenity.save
+amenity = Amenity.new(
+  name: "Dishwasher",
+  icon: "material-symbols-light:dishwasher-outline-rounded",
+)
+amenity.save

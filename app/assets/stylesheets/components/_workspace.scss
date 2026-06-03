@@ -15,7 +15,7 @@
   gap: 0;
   flex: 1;
   min-height: 0;
-  padding: 10px 16px 12px;
+  padding: 16px 16px 8px;
 }
 
 .workspace-map {
@@ -25,10 +25,43 @@
   flex-direction: column;
 }
 
-#map {
+.map-container {
   flex: 1;
   min-height: 0;
-  width: 100%;
+  position: relative;
+}
+
+.map-transit-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  user-select: none;
+
+  input[type="checkbox"] {
+    accent-color: var(--terra);
+  }
+
+  iconify-icon {
+    font-size: 1rem;
+    color: var(--ink-muted);
+  }
+}
+
+#map {
+  position: absolute;
+  inset: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 0.5px solid var(--border);
