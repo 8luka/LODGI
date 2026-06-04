@@ -59,6 +59,167 @@
   }
 }
 
+// Pin-an-anchor toggle — sits just below the transit toggle, same pill styling.
+.map-pin-toggle {
+  position: absolute;
+  top: 52px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  user-select: none;
+
+  iconify-icon {
+    font-size: 1rem;
+    color: var(--ink-muted);
+  }
+}
+
+// While pinning, highlight the active toggle and hint the map is "armed" for a click.
+.pin-mode {
+  .map-pin-toggle {
+    border-color: var(--terra);
+    color: var(--terra);
+
+    iconify-icon { color: var(--terra); }
+  }
+
+  #map { cursor: crosshair; }
+}
+
+// Confirm/cancel bar, centered along the top of the map while pinning.
+.map-pin-bar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px 6px 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  font-size: 0.85rem;
+
+  &__hint {
+    color: var(--ink-muted);
+  }
+
+  &__confirm,
+  &__cancel {
+    padding: 5px 12px;
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  &__confirm {
+    background: var(--terra);
+    color: #fff;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
+  &__cancel {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--ink-muted);
+  }
+}
+
+// Name-the-anchor card — opens on "Set anchor" while travel times cache in the background.
+.map-pin-name {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  width: 320px;
+  max-width: calc(100% - 20px);
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  &__input {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    &:focus {
+      outline: none;
+      border-color: var(--terra);
+    }
+  }
+
+  &__hint {
+    margin: 6px 0 12px;
+    font-size: 0.74rem;
+    color: var(--ink-muted);
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  &__save,
+  &__cancel {
+    padding: 6px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  &__save {
+    background: var(--terra);
+    color: #fff;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
+  &__cancel {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--ink-muted);
+  }
+}
+
 #map {
   position: absolute;
   inset: 0;
@@ -156,6 +317,12 @@
   font-family: var(--serif);
   font-size: 18px;
   color: var(--ink);
+}
+
+.rail__subtitle {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 2px;
 }
 
 .rail__count { color: var(--ink-muted); font-family: var(--sans); font-size: 13px; }

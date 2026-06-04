@@ -23,6 +23,12 @@ export default class extends Controller {
       }
     })
     this.setAnchored({ detail: { anchored: this.anchoredValue } })
+    // Broadcast the restored slider/toggle state so the maps controller (an ancestor that
+    // connected — and started listening — before us) re-scores with the saved toggles applied.
+    // Without this, its initial readPriorities() ran before the boxes above were checked, so
+    // saved toggles were missing from scoring and the popup's tracked-place rows. (No persist:
+    // this only mirrors what's already saved on the inquiry.)
+    this.emitChange()
   }
 
   onSlider(event) {

@@ -53,6 +53,9 @@ class ApplicationController < ActionController::Base
     when Place
       { "id" => record.name.parameterize, "name" => record.name,
         "categories" => [record.category], "lat" => record.latitude, "lng" => record.longitude }
+    when CustomAnchor
+      { "id" => "pinned-#{record.id}", "name" => record.name,
+        "categories" => ["pinned"], "lat" => record.latitude, "lng" => record.longitude }
     end
   end
 end

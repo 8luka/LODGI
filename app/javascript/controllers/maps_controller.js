@@ -1,5 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import { computeScore, describeScore } from "scoring/score"
+import { computeScore as computeScoreV2, describeScore as describeScoreV2 } from "scoring/score_simplified"
+import { buildPopupSections } from "scoring/popup_content"
 // import { Loader } from "@googlemaps/js-api-loader"
 // Connects to data-controller="maps"
 
@@ -23,7 +25,18 @@ export default class extends Controller {
       default: ""
     },
 
-    anchor: Object
+    anchor: Object,
+
+    normalizedInputs: {
+      type: Object,
+      default: {}
+    },
+
+    // Switches scoring + filtering to the simplified v2 system (simplified_scoring_spec.md).
+    scoringV2: {
+      type: Boolean,
+      default: false
+    }
   }
   static targets = [
     "map",
@@ -34,7 +47,21 @@ export default class extends Controller {
 
     "availabilityFilter",
 
+    // v2 hard-filter time buckets (radio groups; commute only rendered when an anchor is set)
+    "commuteFilter",
+    "stationFilter",
+
     "listings",
+
+    // Pin-an-anchor mode (drop a custom point on the map as the trip anchor)
+    "pinButton",
+    "pinButtonLabel",
+    "pinBar",
+    "pinHint",
+    "pinConfirm",
+    "pinNameForm",
+    "pinNameInput",
+    "pinNameSave",
   ]
 
   connect() {
@@ -53,6 +80,7 @@ export default class extends Controller {
     // Initialize viewport state
     this.currentViewport = {}
     this.activeInfoWindow = null
+    this.activeProperty = null
     this.selectedMarkerElement = null
     this.transitVisible = false
     this.transitLayer = new google.maps.TransitLayer()
@@ -73,6 +101,22 @@ export default class extends Controller {
         this.restoreCheckedCategories()
       }
     })
+
+    // Pin-an-anchor: map clicks drop the anchor only while pin mode is active (and not while the
+    // name form is open), so normal map interaction is unaffected.
+    this.pinMode = false
+    this.pinNaming = false
+    this.pinTempMarker = null
+    this.pinPosition = null
+    this.pinCreatePromise = null
+    this.map.addListener("click", (e) => {
+      if (!this.pinMode || this.pinNaming || !e.latLng) return
+      this.placePinMarker(e.latLng.lat(), e.latLng.lng())
+    })
+    // Hand-off from the trip-setup form: /map?pin=1 opens straight into pin mode.
+    if (new URLSearchParams(window.location.search).get("pin") === "1") {
+      this.enterPinMode()
+    }
     // This checks if a user defined a check-in date and will end with only rendering the available for it
     this.availabilityFilterTargets.forEach(t => t.checked = Boolean(this.checkinValue))
     this.applyFilters()
@@ -111,10 +155,19 @@ export default class extends Controller {
     const availableOnly = availSource.checked
     this.availabilityFilterTargets.forEach(t => t.checked = availableOnly)
 
+    // v2 only: commute + walk-to-station time buckets cut listings (they no longer score).
+    const commuteMax = this.scoringV2Value ? this.selectedBucketMinutes(this.commuteFilterTargets) : null
+    const stationMax = this.scoringV2Value ? this.selectedBucketMinutes(this.stationFilterTargets) : null
+
     const filteredProperties = this.allProperties.filter((property) => {
       const matchesPrice = Number(property.price) <= maxPrice
       const matchesAvailability = !availableOnly || this.isAvailableForCheckin(property.availability)
-      return matchesPrice && matchesAvailability
+      // null bucket ("Any") passes all; a numeric bucket requires a known time within it.
+      const matchesCommute = commuteMax == null ||
+        (property.travel_time_to_anchor != null && property.travel_time_to_anchor <= commuteMax)
+      const matchesStation = stationMax == null ||
+        (this.stationMinutes(property) != null && this.stationMinutes(property) <= stationMax)
+      return matchesPrice && matchesAvailability && matchesCommute && matchesStation
     })
 
     this.filteredProperties = filteredProperties
@@ -123,11 +176,82 @@ export default class extends Controller {
   }
 
   // Re-score the current filtered set and repaint pins + the ranked rail.
-  // fit:true re-fits the map (filter change); fit:false leaves the viewport (slider/toggle change).
+  // fit:true (filter change / initial) rebuilds the marker set and re-fits the map.
+  // fit:false (slider/toggle re-rank) keeps the markers — only their color changes — so an
+  // open popup stays anchored; we recolor pins in place and live-update the open popup instead.
   render({ fit = false } = {}) {
     this.computeScores(this.filteredProperties)
-    this.renderFilteredProperties(this.filteredProperties, fit)
+    if (fit) {
+      this.renderFilteredProperties(this.filteredProperties, true)
+    } else {
+      this.recolorPropertyMarkers()
+      this.updateActivePopup()
+    }
     this.renderRail(this.filteredProperties)
+  }
+
+  // Slider/toggle re-rank: update each existing pin's color from the new scores without
+  // recreating markers (recreation would destroy the marker an open InfoWindow is anchored to).
+  recolorPropertyMarkers() {
+    Object.entries(this.propertyMarkersById || {}).forEach(([id, marker]) => {
+      const dot = marker.content?.querySelector(".custom-marker")
+      if (dot) dot.style.backgroundColor = this.colorForScore(this.scoresById[id])
+    })
+  }
+
+  // Refresh the open property popup's dynamic slots in place (fit badge + info rows + amenity
+  // chips) from the live priorities, reusing the same logic as decoratePopup(). No-op unless a
+  // property popup is open. Mutating only these slots leaves the server-rendered shell intact.
+  updateActivePopup() {
+    if (!this.activeInfoWindow || !this.activeProperty) return
+    const root = document.querySelector(".gm-style-iw-d .property-popup")
+    if (!root) return
+
+    const { primary, amenities } = buildPopupSections({
+      property: this.activeProperty,
+      priorities: this.priorities,
+      hasAnchor: !!(this.anchorValue?.id),
+      anchorName: this.anchorValue?.name,
+    })
+
+    const info = root.querySelector("[data-popup-info]")
+    if (info) info.innerHTML = primary
+
+    const amenitiesEl = root.querySelector("[data-popup-amenities]")
+    if (amenitiesEl) amenitiesEl.innerHTML = amenities
+
+    const fit = root.querySelector("[data-popup-fit]")
+    if (fit) {
+      const score = this.scoresById[this.activeProperty.id]
+      fit.textContent = score == null ? "—" : score
+      fit.style.color = this.colorForScore(score)
+    }
+
+    // The popup may have grown (rows/chips added) and spilled past the map edges — nudge the
+    // map so the whole card is visible again. (Google only auto-pans on open, not on content change.)
+    this.ensureActivePopupVisible()
+  }
+
+  // Pan the map by the minimum amount needed to bring the open InfoWindow fully back inside the
+  // map viewport (with a small padding). No-op when it already fits. The popup is anchored to its
+  // marker, so panning moves both together — the card slides into view.
+  ensureActivePopupVisible() {
+    const iw = document.querySelector(".gm-style-iw-c")
+    if (!iw || !this.hasMapTarget) return
+
+    const card = iw.getBoundingClientRect()
+    const map = this.mapTarget.getBoundingClientRect()
+    const pad = 14
+
+    let dx = 0
+    if (card.left < map.left + pad) dx = card.left - (map.left + pad)
+    else if (card.right > map.right - pad) dx = card.right - (map.right - pad)
+
+    let dy = 0
+    if (card.top < map.top + pad) dy = card.top - (map.top + pad)
+    else if (card.bottom > map.bottom - pad) dy = card.bottom - (map.bottom - pad)
+
+    if (dx !== 0 || dy !== 0) this.map.panBy(dx, dy)
   }
 
   // Live re-rank entry point: the priorities panel emits priorities:changed on every
@@ -164,6 +288,9 @@ export default class extends Controller {
     )
 
     this.propertyMarkers = []
+    // id → marker / property lookups so a card click can focus the matching pin (focusListing).
+    this.propertyMarkersById = {}
+    this.propertiesById = {}
 
     const bounds =
       new google.maps.LatLngBounds()
@@ -189,16 +316,14 @@ export default class extends Controller {
 
             marker.addListener(
               "click",
-              async () => {
-                const response = await fetch(`/properties/${property.id}/popup`)
-                const html = await response.text()
-                this.openInfoWindow(marker, html)
-              }
+              () => this.openPropertyPopup(property, marker)
             )
 
         this.propertyMarkers.push(
           marker
         )
+        this.propertyMarkersById[property.id] = marker
+        this.propertiesById[property.id] = property
 
         bounds.extend({
           lat: property.latitude,
@@ -216,6 +341,30 @@ export default class extends Controller {
         100
       )
     }
+  }
+
+  // Fetch + open a property's popup on its pin. Shared by pin clicks and card clicks.
+  async openPropertyPopup(property, marker) {
+    const response = await fetch(`/properties/${property.id}/popup`)
+    const html = await response.text()
+    this.openInfoWindow(marker, this.decoratePopup(html, property))
+    // Mark this as the active property popup so slider/toggle moves live-update it.
+    this.activeProperty = property
+  }
+
+  // Left-rail card click: instead of navigating to the show page, fly the map to the
+  // property's pin (neighborhood zoom) and open its popup. The popup CTA still links through.
+  focusListing(event) {
+    const card = event.target.closest(".listing-card")
+    if (!card) return
+    event.preventDefault()
+    const id = Number(card.dataset.listingId)
+    const marker = this.propertyMarkersById?.[id]
+    const property = this.propertiesById?.[id]
+    if (!marker || !property) return  // pin filtered out → leave navigation suppressed, do nothing
+    this.map.panTo(marker.position)
+    this.map.setZoom(15)              // neighborhood-level: close but not too close
+    this.openPropertyPopup(property, marker)
   }
 
   clearFilters() {
@@ -264,74 +413,35 @@ export default class extends Controller {
     return icons[category] || "mdi:map-marker"
   }
 
-  createPropertyPopupContent(property) {
-    const image =
-      property.images?.[0]
+  // Fill the fetched popup shell's dynamic slots from the live client state: the score-driven
+  // info rows ([data-popup-info]) and the fit badge ([data-popup-fit]). The shell itself
+  // (image, favorite heart, name, availability, price, CTA) is rendered server-side so the
+  // favorite button keeps its current_user state. Returns the populated HTML string.
+  decoratePopup(html, property) {
+    const doc = new DOMParser().parseFromString(html, "text/html")
 
-    const stations =
-      property.stations?.length
-        ? property.stations
-            .map(station => `🚉 ${station}`)
-            .join("<br>")
-        : "No stations nearby"
-    // Green when the listing is actually usable for the trip (consistent with the
-    // "only show available" filter); otherwise show the move-in date as-is.
-    const isNow =
-      property.availability?.toLowerCase() === "now"
+    const { primary, amenities } = buildPopupSections({
+      property,
+      priorities: this.priorities,
+      hasAnchor: !!(this.anchorValue?.id),
+      anchorName: this.anchorValue?.name,
+    })
 
-    const availableForTrip =
-      this.isAvailableForCheckin(property.availability)
+    const info = doc.querySelector("[data-popup-info]")
+    if (info) info.innerHTML = primary
 
-    const availabilityClass =
-      availableForTrip
-        ? "availability-pill available-pill"
-        : "availability-pill unavailable-pill"
+    const amenitiesEl = doc.querySelector("[data-popup-amenities]")
+    if (amenitiesEl) amenitiesEl.innerHTML = amenities
 
-    const availabilityText =
-      isNow
-        ? "Available now"
-        : `Available ${property.availability}`
-    return `
-      <div class="property-popup">
+    const fit = doc.querySelector("[data-popup-fit]")
+    if (fit) {
+      const score = this.scoresById[property.id]
+      fit.textContent = score == null ? "—" : score
+      fit.style.color = this.colorForScore(score)
+    }
 
-        <img
-          src="${image}"
-          class="popup-image"
-        />
-
-        <div class="popup-content">
-
-          <div class="${availabilityClass}">
-            ${availabilityText}
-          </div>
-
-          <h3 class="popup-title">
-            ${property.name}
-          </h3>
-
-          <div class="popup-row">
-            ${property.layout}
-          </div>
-
-          <div class="popup-row">
-            ¥${property.price}
-          </div>
-
-          <div class="popup-row">
-            ${stations}
-          </div>
-
-          <a
-            href="/properties/${property.id}"
-            class="popup-button"
-          >
-            View Property
-          </a>
-
-        </div>
-
-      </div>
-    `
+    const wrapper = doc.querySelector(".property-popup")
+    return wrapper ? wrapper.outerHTML : html
   }
 
   createPoiPopupContent(place) {
@@ -423,7 +533,7 @@ export default class extends Controller {
                 </h3>
 
                 <div class="popup-row">
-                  Trip Destination
+                  Your Anchor
                 </div>
               </div>
             </div>
@@ -432,7 +542,129 @@ export default class extends Controller {
       }
     )
   }
+
+  // ── Pin-an-anchor mode ──────────────────────────────────────────────────
+  // Toggle button → enter/exit. In pin mode a map click drops a draggable anchor marker;
+  // Confirm POSTs the point to /inquiry/pin and reloads so the server recomputes scoring.
+
+  togglePinMode() {
+    this.pinMode ? this.exitPinMode() : this.enterPinMode()
+  }
+
+  enterPinMode() {
+    this.pinMode = true
+    this.element.classList.add("pin-mode")
+    if (this.hasPinBarTarget) this.pinBarTarget.hidden = false
+    if (this.hasPinButtonLabelTarget) this.pinButtonLabelTarget.textContent = "Pinning…"
+    if (this.hasPinConfirmTarget) this.pinConfirmTarget.disabled = true
+    if (this.hasPinHintTarget) this.pinHintTarget.textContent = "Click the map to set your anchor"
+  }
+
+  exitPinMode() {
+    this.pinMode = false
+    this.pinNaming = false
+    this.pinCreatePromise = null
+    this.element.classList.remove("pin-mode")
+    if (this.hasPinBarTarget) this.pinBarTarget.hidden = true
+    if (this.hasPinNameFormTarget) this.pinNameFormTarget.hidden = true
+    if (this.hasPinButtonLabelTarget) this.pinButtonLabelTarget.textContent = "Custom pin"
+    this.clearPinMarker()
+  }
+
+  clearPinMarker() {
+    if (this.pinTempMarker) {
+      this.pinTempMarker.map = null
+      this.pinTempMarker = null
+    }
+    this.pinPosition = null
+  }
+
+  placePinMarker(lat, lng) {
+    this.clearPinMarker()
+    this.pinPosition = { lat, lng }
+
+    const content = this.createMarkerContent("mdi:anchor", "#000000")
+    content.querySelector(".custom-marker").classList.add("anchor-marker")
+
+    const marker = new google.maps.marker.AdvancedMarkerElement({
+      map: this.map,
+      position: { lat, lng },
+      content,
+      gmpDraggable: true
+    })
+    // Drag to fine-tune the dropped point.
+    marker.addListener("dragend", (e) => {
+      if (e.latLng) this.pinPosition = { lat: e.latLng.lat(), lng: e.latLng.lng() }
+    })
+    this.pinTempMarker = marker
+
+    if (this.hasPinConfirmTarget) this.pinConfirmTarget.disabled = false
+    if (this.hasPinHintTarget) this.pinHintTarget.textContent = "Drag to adjust, then set your anchor"
+  }
+
+  // Set anchor: fire the create+cache request and immediately open the name form — we do NOT await
+  // the request, so the ~2s travel-time caching runs server-side while the user types a name and is
+  // done by the time they save. Saving the name (savePinName) awaits this before reloading.
+  confirmPin() {
+    if (!this.pinPosition) return
+
+    this.pinCreatePromise = fetch("/inquiry/pin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content
+      },
+      body: JSON.stringify({ lat: this.pinPosition.lat, lng: this.pinPosition.lng })
+    }).then((response) => response.ok).catch(() => false)
+
+    // Switch from the confirm bar to the name form. pinNaming freezes map clicks so a stray click
+    // behind the form doesn't move the pin.
+    this.pinNaming = true
+    if (this.hasPinBarTarget) this.pinBarTarget.hidden = true
+    if (this.hasPinNameFormTarget) this.pinNameFormTarget.hidden = false
+    if (this.hasPinNameInputTarget) {
+      this.pinNameInputTarget.focus()
+      this.pinNameInputTarget.select()
+    }
+  }
+
+  // Persist the (optional) name, then reload so the new name + commute scores show everywhere.
+  async savePinName(event) {
+    event.preventDefault()
+    if (this.hasPinNameSaveTarget) this.pinNameSaveTarget.disabled = true
+
+    // Make sure the anchor exists (and its times are cached) before naming / reloading.
+    const created = await (this.pinCreatePromise || Promise.resolve(false))
+    if (!created) {
+      if (this.hasPinNameSaveTarget) this.pinNameSaveTarget.disabled = false
+      return
+    }
+
+    const name = this.hasPinNameInputTarget ? this.pinNameInputTarget.value : ""
+    await fetch("/inquiry/pin/name", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content
+      },
+      body: JSON.stringify({ name })
+    }).catch(() => {})
+
+    // Navigate to the clean /map path so ?pin=1 isn't preserved — if it were,
+    // connect() would call enterPinMode() on the reload and the button would
+    // stay stuck on "Pinning…" with the pin bar re-opening.
+    window.location.href = window.location.pathname
+  }
+
+  cancelPin() {
+    this.exitPinMode()
+  }
+
   openInfoWindow(marker, content) {
+
+    // Default to "not a property popup"; openPropertyPopup re-sets activeProperty after this.
+    // (POI/anchor popups reuse openInfoWindow and must not be live-updated as property popups.)
+    this.activeProperty = null
 
     // Close previous popup
     if (this.activeInfoWindow) {
@@ -474,6 +706,7 @@ export default class extends Controller {
       markerElement.classList.remove(
         "selected-marker"
       )
+      this.activeProperty = null
     })
   }
   debouncedApplyFilters(event) {
@@ -582,16 +815,25 @@ export default class extends Controller {
     return { weights, categories }
   }
 
-  // Build the computeScore() input object for one property from the current priorities.
-  // Maps the rail's slider keys (commute/quiet/station) to the formula's names.
+  // The active scoring engine: simplified v2 or the original multi-slider one.
+  get scoreFn() { return this.scoringV2Value ? computeScoreV2 : computeScore }
+  get describeFn() { return this.scoringV2Value ? describeScoreV2 : describeScore }
+
+  // Build the score-engine input object for one property from the current priorities.
+  // v2 keeps only the Peace & Quiet slider + toggles (commute/station are filters now).
   scoreArgs(property) {
     const w = this.priorities.weights
     const active = this.priorities.categories || []
     const toggles = {}
     TOGGLE_CATEGORIES.forEach((c) => { toggles[c] = active.includes(c) })
+    const normalizedInputs = this.normalizedInputsValue[property.id] || {}
+
+    if (this.scoringV2Value) {
+      return { normalizedInputs, peaceQuietSlider: w.quiet || 0, toggles }
+    }
     return {
-      scoreInputs: property.score_inputs || {},
-      travelTimeToAnchor: property.travel_time_to_anchor ?? null,
+      normalizedInputs,
+      hasAnchor: !!(this.anchorValue?.id),
       sliders: { commute: w.commute || 0, peace_quiet: w.quiet || 0, near_station: w.station || 0 },
       toggles,
     }
@@ -599,7 +841,19 @@ export default class extends Controller {
 
   computeScores(properties) {
     this.scoresById = {}
-    properties.forEach((p) => { this.scoresById[p.id] = computeScore(this.scoreArgs(p)) })
+    properties.forEach((p) => { this.scoresById[p.id] = this.scoreFn(this.scoreArgs(p)) })
+  }
+
+  // Selected minutes from a time-bucket radio group; null for "Any" or an empty group.
+  selectedBucketMinutes(targets) {
+    const checked = targets.find((t) => t.checked)
+    if (!checked) return null
+    const m = checked.dataset.minutes
+    return m === "any" ? null : Number(m)
+  }
+
+  stationMinutes(property) {
+    return property.score_inputs?.transit_station?.time_to_station ?? null
   }
 
   colorForScore(score) {
@@ -642,7 +896,7 @@ export default class extends Controller {
 
   // §7.4 debug breakdown: each active term's weight × subscore = contribution. Only with ?debug=1.
   debugBreakdownHtml(property) {
-    const { terms } = describeScore(this.scoreArgs(property))
+    const { terms } = this.describeFn(this.scoreArgs(property))
     const line = terms
       .map((t) => `${t.label}: w=${t.weight.toFixed(2)}×s=${t.subscore.toFixed(2)}=${t.contribution.toFixed(2)}`)
       .join(" | ")

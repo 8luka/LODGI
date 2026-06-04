@@ -1,28 +1,32 @@
 <section class="hero" data-controller="landing">
   <div class="hero__inner">
     <div class="hero__left">
-      <div class="hero__eyebrow">Tokyo Short-Stay</div>
+      <%# <div class="hero__eyebrow">Tokyo Short-Stay</div> %>
       <h1 class="hero__title">
         Find your place in
         <span class="hero__title-accent">Tokyo</span>
       </h1>
       <p class="hero__sub">Tell us about your trip. We'll score every listing for how well it fits your priorities.</p>
       <%= render "shared/search", hero: true %>
-      <%= link_to map_path, class: "hero__skip" do %>Skip — just show me the map<% end %>
       <div class="hero__stats">
         <div class="hero__stat">
-          <span class="hero__stat-number"><%= @properties_count %></span>
-          <span class="hero__stat-label">Listings</span>
+          <span class="hero__stat-number"><%= "100%" %></span>
+          <span class="hero__stat-label"></span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
-          <span class="hero__stat-number"><%= @neighborhoods.count %></span>
-          <span class="hero__stat-label">Neighbourhoods</span>
+          <span class="hero__stat-number"><%=%></span>
+          <span class="hero__stat-label">Furnished</span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
-          <span class="hero__stat-number">EN</span>
-          <span class="hero__stat-label">English</span>
+          <span class="hero__stat-number"></span>
+          <span class="hero__stat-label">Agency Verified</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number"></span>
+          <span class="hero__stat-label">English Support</span>
         </div>
       </div>
     </div>

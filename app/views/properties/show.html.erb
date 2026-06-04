@@ -13,19 +13,34 @@
     <span><%= @property.name %></span>
   </div>
 
-  <!-- TITLE -->
-<div class="apt-title-row">
-    <h1 class="apt-title"><%= @property.name %></h1>
-    <%= render "properties/favorite_button", property: @property %>
-  </div>
+  <!-- TITLE + FIT SUMMARY -->
+  <div class="apt-header">
+    <div class="apt-header__top">
+      <div class="apt-title-row">
+        <h1 class="apt-title"><%= @property.name %></h1>
+        <%= render "properties/favorite_button", property: @property %>
+      </div>
 
-  <div class="apt-meta">
-    <%= link_to neighborhood_path(@property.neighborhood.id), class: "apt-meta-link", style: "text-decoration: none; color: inherit;" do %>
-      <span>
-        <i class="fa-solid fa-location-dot"></i>
-        <%= @property.neighborhood.name %>, Tokyo
-      </span>
-    <% end %>
+      <%# Fit summary — score + commute/station/quiet rows for the current inquiry. Rendered
+          client-side by fit_summary_controller (reuses the map's scoring engine). %>
+      <div class="fit-summary"
+           data-controller="fit-summary"
+           data-fit-summary-normalized-inputs-value="<%= json_escape(@fit_normalized.to_json) %>"
+           data-fit-summary-weights-value="<%= json_escape({ commute: @commute_weight, quiet: @quiet_weight, station: @station_weight }.to_json) %>"
+           data-fit-summary-has-anchor-value="<%= @selected_anchor.present? %>"
+           data-fit-summary-anchor-name-value="<%= @selected_anchor&.dig('name') %>"
+           data-fit-summary-score-inputs-value="<%= json_escape(@property.score_inputs.to_json) %>"
+           data-fit-summary-travel-time-value="<%= @fit_travel_time || -1 %>"></div>
+    </div>
+
+    <div class="apt-meta">
+      <%= link_to neighborhood_path(@property.neighborhood.id), class: "apt-meta-link", style: "text-decoration: none; color: inherit;" do %>
+        <span>
+          <i class="fa-solid fa-location-dot"></i>
+          <%= @property.neighborhood.name %>, Tokyo
+        </span>
+      <% end %>
+    </div>
   </div>
 
   <!-- TWO-COLUMN LAYOUT -->
@@ -55,23 +70,25 @@
         <% end %>
       </div>
       <!-- DESCRIPTION -->
-      <div class="section-label">About this property</div>
-      <div data-controller="property-description">
-        <p class="description" data-property-description-target="short">
-          <%= @property.description.truncate(200, omission: '...', separator: ' ') %>
-        </p>
-        <p class="description" data-property-description-target="long" style="display: none;">
-          <%= @property.description %>
-        </p>
-        <% if @property.description.length > 200 %>
-          <button class="desc-toggle"
-                  data-property-description-target="button"
-                  data-action="click->property-description#toggle">
-            Show more ›
-          </button>
-        <% end %>
-      </div>
-      <div class="divider"></div>
+      <% if @property.description.present? %>
+        <div class="section-label">About this property</div>
+        <div data-controller="property-description">
+          <p class="description" data-property-description-target="short">
+            <%= @property.description.truncate(200, omission: '...', separator: ' ') %>
+          </p>
+          <p class="description" data-property-description-target="long" style="display: none;">
+            <%= @property.description %>
+          </p>
+          <% if @property.description.length > 200 %>
+            <button class="desc-toggle"
+                    data-property-description-target="button"
+                    data-action="click->property-description#toggle">
+              Show more ›
+            </button>
+          <% end %>
+        </div>
+        <div class="divider"></div>
+      <% end %>
       <!-- AMENITIES -->
       <div class="section-label">Amenities</div>
       <div class="amenities-grid">

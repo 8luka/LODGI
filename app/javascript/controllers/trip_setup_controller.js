@@ -24,7 +24,8 @@ export default class extends Controller {
     anchors: Array,
     tripType: { type: String, default: "visiting" },
     currentTab: { type: String, default: "neighborhood" },
-    selectedId: { type: String, default: "" }
+    selectedId: { type: String, default: "" },
+    selectedName: { type: String, default: "" }
   }
 
   static FRAMING = {
@@ -156,7 +157,8 @@ export default class extends Controller {
 
   updateSelectedLabel() {
     const anchor = this.anchorsValue.find((a) => a.id === this.selectedIdValue)
-    this.selectedLabelTarget.textContent = anchor ? anchor.name : "none"
+    // Fall back to selectedNameValue for anchors not in the curated list (e.g. custom map pins).
+    this.selectedLabelTarget.textContent = anchor?.name || this.selectedNameValue || "none"
   }
 
   render() {

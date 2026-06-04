@@ -25,6 +25,10 @@ class AnchorTravelTimesService
   # Walk for anchors within this straight-line distance; drive beyond. Tunable — ~1.2 km ≈ a 15-min
   # walk, the point where f_commute stops treating a walk as an "effortless" commute.
   WALK_RADIUS_M = 1200
+  # If a CustomAnchor within this radius already has full travel-time coverage, copy its rows
+  # rather than hitting the Routes API. 300 m keeps you within the same city block in Tokyo —
+  # travel-time differences are ≤ 1-2 min, score ranking is effectively unchanged.
+  NEARBY_BORROW_RADIUS_M = 300
 
   def self.call(anchor)
     new(anchor).call
@@ -43,6 +47,11 @@ class AnchorTravelTimesService
       return
     end
 
+    # If a nearby fully-covered CustomAnchor exists, copy its rows — no API call needed.
+    # Exits before refresh_seed_file, so borrowed anchors are intentionally not seeded:
+    # the donor is already in the seed and the borrow logic re-fires after any DB reset.
+    return if borrow_from_nearby?
+
     missing = missing_properties
     if missing.empty?
       Rails.logger.info("[AnchorTravelTimes] #{anchor_label}: 0 missing — no API call")
@@ -53,9 +62,56 @@ class AnchorTravelTimesService
     walk_props, drive_props = missing.partition { |property| within_walk_radius?(property) }
     process_group(walk_props, "WALK", routes_key)
     process_group(drive_props, "DRIVE", routes_key)
+
+    # Persist the freshly-cached times to the seed file so a first-time anchor (e.g. a user's map
+    # pin) is captured without manually running the rake. Only reached when there was missing work.
+    refresh_seed_file
   end
 
   private
+
+  # Best-effort full re-dump of the travel_to_anchors table to its seed file. Never raises into the
+  # caller — a read-only FS or any write error is logged and skipped so the user's inquiry succeeds.
+  def refresh_seed_file
+    TravelToAnchorsSeedWriter.call
+  rescue => e
+    Rails.logger.warn("[AnchorTravelTimes] seed refresh failed for #{anchor_label}: #{e.message}")
+  end
+
+  # If another CustomAnchor within NEARBY_BORROW_RADIUS_M has full travel-time coverage for all
+  # current properties, copy its rows to @anchor and return true (skipping the Routes API).
+  # Only borrows if coverage is complete — partial donors are ignored and the API fills gaps.
+  def borrow_from_nearby?
+    return false unless @anchor.is_a?(CustomAnchor)
+
+    property_ids = Property.where.not(latitude: nil, longitude: nil).pluck(:id).to_set
+    return false if property_ids.empty?
+
+    donor = CustomAnchor.where.not(id: @anchor.id).find do |ca|
+      next false if DistanceHelperV2New.haversine_meters(
+        @anchor.latitude, @anchor.longitude, ca.latitude, ca.longitude
+      ) > NEARBY_BORROW_RADIUS_M
+
+      covered = TravelToAnchor.where(anchor: ca).pluck(:property_id).to_set
+      property_ids.subset?(covered)
+    end
+
+    return false unless donor
+
+    have = TravelToAnchor.where(anchor: @anchor).pluck(:property_id).to_set
+    rows = TravelToAnchor.where(anchor: donor)
+                         .where.not(property_id: have.to_a)
+                         .map do |r|
+      { anchor_type: "CustomAnchor", anchor_id: @anchor.id,
+        property_id: r.property_id, travel_time: r.travel_time,
+        created_at: Time.current, updated_at: Time.current }
+    end
+
+    TravelToAnchor.insert_all(rows) if rows.any?
+    Rails.logger.info("[AnchorTravelTimes] #{anchor_label}: borrowed #{rows.size} rows " \
+                      "from CustomAnchor##{donor.id} (within #{NEARBY_BORROW_RADIUS_M}m)")
+    true
+  end
 
   # Properties that have coordinates but no cached travel time for this anchor yet.
   def missing_properties

@@ -1,42 +1,53 @@
+<%# Horizontal map popup: photo (left) + heading/fit/info (right), with a price + CTA footer.
+    The score-driven info rows ([data-popup-info]) and the fit number ([data-popup-fit]) are
+    filled client-side by maps_controller#decoratePopup from the live slider/toggle/anchor state. %>
 <div class="property-popup">
 
-  <div class="popup-image-wrapper">
+  <div class="popup-header">
 
-    <% img = @property.images&.first %>
-    <% if img.present? %>
-      <img src="<%= img %>" class="popup-image" alt="<%= @property.name %>" />
-    <% end %>
+    <div class="popup-photo">
+      <% img = @property.images&.first %>
+      <% if img.present? %>
+        <img src="<%= img %>" class="popup-image" alt="<%= @property.name %>" />
+      <% end %>
 
-    <div class="popup-favorite">
-      <%= render "properties/favorite_button", property: @property %>
+      <div class="popup-favorite">
+        <%= render "properties/favorite_button", property: @property %>
+      </div>
+    </div>
+
+    <div class="popup-main">
+
+      <div class="popup-titlebar">
+        <div class="popup-heading">
+          <h3 class="popup-title"><%= @property.name %></h3>
+          <% if @property.availability.present? %>
+            <div class="popup-availability">
+              <%= @property.availability == "now" ? "Available now" : "Available #{@property.availability}" %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="popup-fit">
+          <span class="popup-fit__num" data-popup-fit>&mdash;</span>
+          <span class="popup-fit__label">FIT</span>
+        </div>
+      </div>
+
+      <div class="popup-info" data-popup-info></div>
+
     </div>
 
   </div>
 
-  <div class="popup-content">
+  <%# Filled client-side (maps#decoratePopup); stays empty when no toggle is active. %>
+  <div class="popup-amenities" data-popup-amenities></div>
 
-    <h3 class="popup-title"><%= @property.name %></h3>
-
-    <% if @property.layout.present? %>
-      <div class="popup-row"><%= @property.layout %></div>
-    <% end %>
-
+  <div class="popup-footer">
     <% if @property.price.present? %>
-      <div class="popup-row">
-        ¥<%= number_with_delimiter(@property.price.to_i) %> / mo
-      </div>
+      <span class="popup-price">¥<%= number_with_delimiter(@property.price.to_i) %> / mo</span>
     <% end %>
-
-    <% if @property.availability.present? %>
-      <div class="availability-pill <%= @property.availability == 'now' ? 'available-pill' : 'unavailable-pill' %>">
-        <%= @property.availability == 'now' ? 'Available now' : "Available #{@property.availability}" %>
-      </div>
-    <% end %>
-
-    <%= link_to "View Property",
-      property_path(@property),
-      class: "popup-button" %>
-
+    <%= link_to "View property →", property_path(@property), class: "popup-button" %>
   </div>
 
 </div>
