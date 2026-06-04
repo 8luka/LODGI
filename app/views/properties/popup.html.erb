@@ -2,22 +2,17 @@
     The score-driven info rows ([data-popup-info]) and the fit number ([data-popup-fit]) are
     filled client-side by maps_controller#decoratePopup from the live slider/toggle/anchor state. %>
 <div class="property-popup">
-
   <div class="popup-header">
-
     <div class="popup-photo">
       <% img = @property.images&.first %>
       <% if img.present? %>
         <img src="<%= img %>" class="popup-image" alt="<%= @property.name %>" />
       <% end %>
-
       <div class="popup-favorite">
         <%= render "properties/favorite_button", property: @property %>
       </div>
     </div>
-
     <div class="popup-main">
-
       <div class="popup-titlebar">
         <div class="popup-heading">
           <h3 class="popup-title"><%= @property.name %></h3>
@@ -27,27 +22,20 @@
             </div>
           <% end %>
         </div>
-
         <div class="popup-fit">
           <span class="popup-fit__num" data-popup-fit>&mdash;</span>
-          <span class="popup-fit__label">FIT</span>
+          <span class="popup-fit__label">FIT SCORE</span>
         </div>
       </div>
-
       <div class="popup-info" data-popup-info></div>
-
     </div>
-
   </div>
-
   <%# Filled client-side (maps#decoratePopup); stays empty when no toggle is active. %>
   <div class="popup-amenities" data-popup-amenities></div>
-
   <div class="popup-footer">
     <% if @property.price.present? %>
       <span class="popup-price">¥<%= number_with_delimiter(@property.price.to_i) %> / mo</span>
     <% end %>
     <%= link_to "View property →", property_path(@property), class: "popup-button" %>
   </div>
-
 </div>
