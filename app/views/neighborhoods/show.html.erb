@@ -75,7 +75,12 @@
           </span>
         </div>
         <% if @neighborhood.properties.any? %>
-          <div class="nb-properties-grid">
+          <div class="nb-properties-grid"
+               data-controller="nb-scores"
+               data-nb-scores-normalized-inputs-value="<%= json_escape(@nb_normalized_inputs.to_json) %>"
+               data-nb-scores-has-anchor-value="<%= @selected_anchor.present? %>"
+               data-nb-scores-weights-value="<%= json_escape({ commute: @commute_weight, quiet: @quiet_weight, station: @station_weight }.to_json) %>"
+               data-nb-scores-categories-value="<%= json_escape(score_toggle_categories(@selected_places).to_json) %>">
             <% @neighborhood.properties.each do |property| %>
               <div class="nb-prop-card">
                 <%# Image %>
@@ -89,7 +94,11 @@
                 </div>
                 <%# Info %>
                 <div class="nb-prop-body">
-                  <div class="nb-prop-name"><%= property.name %></div>
+                  <div class="nb-prop-name-row">
+                    <div class="nb-prop-name"><%= property.name %></div>
+                    <span class="fit-chip nb-prop-fit" data-nb-scores-target="score"
+                          data-property-id="<%= property.id %>" hidden></span>
+                  </div>
                   <div class="nb-prop-tags">
                     <% if property.try(:layout).present? %>
                       <span><%= property.layout %></span>
