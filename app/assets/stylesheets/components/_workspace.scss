@@ -84,8 +84,8 @@
   }
 }
 
-// While pinning, highlight the active toggle and hint the map is "armed" for a click.
-.pin-mode {
+// While pinning, highlight the active toggle, arm the cursor, and blur the sidebars.
+.workspace.pin-mode {
   .map-pin-toggle {
     border-color: var(--terra);
     color: var(--terra);
@@ -94,6 +94,22 @@
   }
 
   #map { cursor: crosshair; }
+
+  .rail--left,
+  .rail--right {
+    filter: blur(4px);
+    opacity: 0.5;
+    pointer-events: none;
+    transition: filter 0.25s ease, opacity 0.25s ease;
+  }
+}
+
+// Navbar blur — body class used because the navbar lives outside .workspace in the layout.
+body.pin-mode-active nav.navbar-lewagon {
+  filter: blur(4px);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: filter 0.25s ease, opacity 0.25s ease;
 }
 
 // Confirm/cancel bar, centered along the top of the map while pinning.

@@ -113,13 +113,14 @@ export default class extends Controller {
       if (!this.pinMode || this.pinNaming || !e.latLng) return
       this.placePinMarker(e.latLng.lat(), e.latLng.lng())
     })
-    // Hand-off from the trip-setup form: /map?pin=1 opens straight into pin mode.
-    if (new URLSearchParams(window.location.search).get("pin") === "1") {
-      this.enterPinMode()
-    }
     // This checks if a user defined a check-in date and will end with only rendering the available for it
     this.availabilityFilterTargets.forEach(t => t.checked = Boolean(this.checkinValue))
     this.applyFilters()
+    // Hand-off from the trip-setup form: enter pin mode AFTER applyFilters so that the property
+    // markers exist in this.propertyMarkers before enterPinMode() hides them.
+    if (new URLSearchParams(window.location.search).get("pin") === "1") {
+      this.enterPinMode()
+    }
   }
   updateViewportState() {
     const bounds = this.map.getBounds()
@@ -552,8 +553,11 @@ export default class extends Controller {
   }
 
   enterPinMode() {
+    this.pinEntrySource = new URLSearchParams(window.location.search).get("pin") === "1" ? "form" : "map"
     this.pinMode = true
     this.element.classList.add("pin-mode")
+    document.body.classList.add("pin-mode-active")
+    this.propertyMarkers.forEach((m) => { m.map = null })
     if (this.hasPinBarTarget) this.pinBarTarget.hidden = false
     if (this.hasPinButtonLabelTarget) this.pinButtonLabelTarget.textContent = "Pinning…"
     if (this.hasPinConfirmTarget) this.pinConfirmTarget.disabled = true
@@ -565,6 +569,8 @@ export default class extends Controller {
     this.pinNaming = false
     this.pinCreatePromise = null
     this.element.classList.remove("pin-mode")
+    document.body.classList.remove("pin-mode-active")
+    this.propertyMarkers.forEach((m) => { m.map = this.map })
     if (this.hasPinBarTarget) this.pinBarTarget.hidden = true
     if (this.hasPinNameFormTarget) this.pinNameFormTarget.hidden = true
     if (this.hasPinButtonLabelTarget) this.pinButtonLabelTarget.textContent = "Custom pin"
@@ -657,7 +663,17 @@ export default class extends Controller {
   }
 
   cancelPin() {
+    const wasFromForm = this.pinEntrySource === "form"
     this.exitPinMode()
+    if (wasFromForm) {
+      history.replaceState(null, "", window.location.pathname)
+      // Defer the click to the next event loop so the current Cancel click finishes propagating
+      // first. If we clicked synchronously, the trip-setup _outside listener (added by open())
+      // would catch the still-propagating Cancel click and immediately close the form again.
+      setTimeout(() => {
+        document.querySelector('[data-trip-setup-target="toggle"]')?.click()
+      }, 0)
+    }
   }
 
   openInfoWindow(marker, content) {
