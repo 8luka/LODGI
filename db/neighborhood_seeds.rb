@@ -297,3 +297,15 @@ neighborhood = Neighborhood.new(
   photos: ["https://images.trvl-media.com/place/6340542/64abcf61-2c69-4d8c-b605-6a984fd9d126.jpg"]
 )
 neighborhood.save
+
+neighborhood = Neighborhood.new(
+  name: "Setagaya",
+  description: "Tokyo's most populous ward, Setagaya is a sprawling, leafy residential area beloved for its relaxed pace and strong sense of community. It blends historic temples and castle ruins with vibrant subculture districts like Shimokitazawa and Sangenjaya, making it one of the city's most desirable places to live for families.",
+  features: "Gotokuji Temple (birthplace of the maneki-neko lucky cat), Shimokitazawa vintage shops and live music venues, Komazawa Olympic Park, Setagaya Art Museum, Carrot Tower observation deck, Boroichi Flea Market, Todoroki Valley gorge, Setagaya Castle Ruins, quiet tree-lined residential streets",
+  ward: "Setagaya-ku",
+  latitude: "35.6466",
+  longitude: "139.6532",
+  is_workplace: false,
+  is_landmark: false,
+  photos: ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F34631830%2Fpexels-photo-34631830%2Ffree-photo-of-scenic-walkway-in-setagaya-tokyo.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26w%3D1260%26h%3D750%26dpr%3D2&f=1&nofb=1&ipt=eb02ed94330e14855c7a398fa2bf506959cfe8d47cef8f520bab30e0ed8475fa"]
+)

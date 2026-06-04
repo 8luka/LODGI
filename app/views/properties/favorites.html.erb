@@ -1,25 +1,16 @@
-
-<div class="fav-page">
-
-  <%# ── HEADER ── %>
-  <div class="fav-header">
-    <div>
-      <p class="fav-eyebrow">
-        <i class="fa-regular fa-heart"></i>
-        Your saved homes
-      </p>
-      <h1 class="fav-title">Favorites</h1>
-      <p class="fav-sub">
-        <%= @favorite_properties.count %> saved home<%= @favorite_properties.count == 1 ? "" : "s" %> in Tokyo
-      </p>
+<% if @favorite_properties.empty? %>
+  <%# ── EMPTY STATE (unchanged) ── %>
+  <div class="fav-page">
+    <div class="fav-header">
+      <div>
+        <p class="fav-eyebrow">
+          <i class="fa-regular fa-heart"></i>
+          Your saved stays
+        </p>
+        <h1 class="fav-title">Favorites</h1>
+        <p class="fav-sub">0 saved homes in Tokyo</p>
+      </div>
     </div>
-    <%= link_to map_path, class: "fav-back-btn" do %>
-      <i class="fa-regular fa-map"></i> Back to map
-    <% end %>
-  </div>
-
-  <%# ── EMPTY STATE ── %>
-  <% if @favorite_properties.empty? %>
     <div class="fav-empty">
       <div class="fav-empty-icon">
         <i class="fa-regular fa-heart"></i>
@@ -30,65 +21,40 @@
       </p>
       <%= link_to "Explore listings", root_path(anchor: "map"), class: "nb-btn nb-btn--primary" %>
     </div>
-
-  <%# ── GRID ── %>
-  <% else %>
-    <div class="fav-grid">
-      <% @favorite_properties.each do |property| %>
-
-        <div id="property_<%= property.id %>" class="nb-prop-card">
-
-<% img = property.images.first if property.respond_to?(:images) && property.images.present? %>
-
-<div class="nb-prop-img <%= 'nb-prop-img--empty' unless img.present? %>"
-     style="<%= "background-image: url('#{img}');" if img.present? %>">
-
-  <%= render "properties/favorite_button", property: property, source: "favorites" %>
-
-  <% unless img.present? %>
-    <i class="fa-regular fa-image"></i>
-  <% end %>
-</div>
-
-          <%# Info — identical structure to neighborhood show card %>
-          <div class="nb-prop-body">
-            <div class="nb-prop-name"><%= property.name %></div>
-
-            <div class="nb-prop-tags">
-              <% if property.try(:layout).present? %>
-                <span><%= property.layout %></span>
-              <% end %>
-              <% if property.try(:size).present? %>
-                <span><%= property.size.to_i %>㎡</span>
-              <% end %>
-              <% if property.try(:bedrooms).present? %>
-                <span><%= property.bedrooms %> bed</span>
-              <% end %>
-            </div>
-
-            <div class="nb-prop-footer">
-              <div class="nb-prop-price">
-                <% if property.try(:price).present? %>
-                  ¥<%= number_with_delimiter(property.price.to_i) %>
-                  <span>/ mo</span>
-                <% else %>
-                  On request
-                <% end %>
-              </div>
-
-              <% if property.try(:availability).present? %>
-                <span class="nb-prop-badge nb-prop-badge--available">Available <%= property.availability %></span>
-              <% else %>
-                <span class="nb-prop-badge nb-prop-badge--unavailable">Unavailable</span>
-              <% end %>
-            </div>
-          </div>
-
-          <%= link_to '', property_path(property), class: "nb-prop-card-link" %>
+  </div>
+<% else %>
+  <%# ── COMPARISON WORKSPACE: cards (left) · priorities panel (right, shared with the map) ──
+      The favorites controller live-scores the cards from the same engine + priorities:changed
+      event the map uses; the panel's price/availability filters also drive it (wired additively
+      in _priorities_panel.html.erb). %>
+  <section class="fav-workspace"
+           data-controller="favorites"
+           data-favorites-properties-value="<%= @favorites_payload %>"
+           data-favorites-anchor-value="<%= @anchor.present? ? json_escape(@anchor.to_json) : '{}' %>"
+           data-favorites-normalized-inputs-value="<%= json_escape(@normalized_inputs.to_json) %>"
+           data-favorites-checkin-value="<%= @checkin %>"
+           data-action="priorities:changed@window->favorites#rescore">
+    <div class="fav-main">
+      <div class="fav-header">
+        <div>
+          <p class="fav-eyebrow">
+            <i class="fa-regular fa-heart"></i>
+            Your saved stays
+          </p>
+          <h1 class="fav-title">Favorites</h1>
+          <p class="fav-sub" data-favorites-target="count">
+            <%= @favorite_properties.count %> saved home<%= @favorite_properties.count == 1 ? "" : "s" %> in Tokyo
+          </p>
         </div>
-
-      <% end %>
+      </div>
+      <div class="compare-grid" data-favorites-target="grid">
+        <% @favorite_properties.each do |property| %>
+          <%= render "properties/compare_card", property: property %>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-
-</div>
+    <div class="fav-rail-dock">
+      <%= render "pages/priorities_panel" %>
+    </div>
+  </section>
+<% end %>

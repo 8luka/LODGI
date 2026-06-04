@@ -184,3 +184,213 @@
 @media (max-width: 480px) {
   .fav-grid { grid-template-columns: 1fr; }
 }
+
+// ════════════════════════════════════════════════════════════════════════════
+//  Comparison workspace — saved listings (left) + the shared priorities panel (right)
+// ════════════════════════════════════════════════════════════════════════════
+.fav-workspace {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 88px 32px 60px; // 88px clears the fixed navbar
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+.fav-main { flex: 1; min-width: 0; }
+
+// Sticky dock for the reused right rail (.rail--right keeps its own 286px width).
+.fav-rail-dock {
+  position: sticky;
+  top: 88px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+// 3-up (→ 2 → 1 as width shrinks). Cards are taller than the old grid's.
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+// ── Card ──────────────────────────────────────────────────────
+.compare-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.14s ease;
+
+  &:hover { box-shadow: var(--shadow-md); }
+}
+
+.compare-card__img {
+  position: relative;
+  height: 150px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--cream-dark);
+}
+
+.compare-card__img--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i { font-size: 28px; color: var(--ink-muted); }
+}
+
+.compare-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 14px 16px 16px;
+  flex: 1;
+}
+
+.compare-card__name {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+  text-decoration: none;
+
+  &:hover, &:focus { color: var(--terra); text-decoration: none; }
+}
+
+// ── Scored summary (fit + commute/station/lively) ─────────────
+.compare-card__scored {
+  display: flex;
+  align-items: center; // fit number sits on the section's mid horizontal axis
+  gap: 14px;
+  padding: 12px;
+  background: var(--cream);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.compare-card__fit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 44px;
+}
+
+.compare-card__fit-num {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: #9e9e9e; // overridden inline by JS once scored
+}
+
+.compare-card__fit-label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-top: 3px;
+}
+
+.compare-card__metrics {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.compare-card__msg {
+  margin: -2px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+// Shared row shape for scored metrics, "your life" rows, and expandable rows.
+.compare-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+
+  iconify-icon { font-size: 15px; flex: 0 0 auto; color: var(--ink-muted); }
+  span { min-width: 0; }
+
+  &.is-teal  iconify-icon { color: #2d7a4f; }
+  &.is-amber iconify-icon { color: #e0982f; }
+}
+
+// ── "Your life from here" + expandable ────────────────────────
+.compare-card__section-label {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+
+[data-fav-life], [data-fav-extra] {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.compare-more {
+  border-top: 1px solid var(--border);
+  padding-top: 11px;
+}
+
+.compare-more__toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+
+  iconify-icon { font-size: 15px; transition: transform 0.15s ease; }
+  &.is-open iconify-icon { transform: rotate(180deg); }
+  &:hover { color: var(--ink); }
+}
+
+.compare-more__body { margin-top: 11px; }
+
+// ── Footer (price + availability) ─────────────────────────────
+.compare-card__footer {
+  margin-top: auto;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.compare-card__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  span { font-size: 12px; font-weight: 400; color: var(--ink-muted); }
+}
+
+// ── Responsive: stack the panel under the cards ───────────────
+@media (max-width: 980px) {
+  .fav-workspace { flex-direction: column; padding: 80px 16px 40px; gap: 16px; }
+  .fav-rail-dock { position: static; width: 100%; }
+  .fav-rail-dock .rail--right { width: 100%; }
+}

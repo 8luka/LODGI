@@ -1,0 +1,66 @@
+<%# Favorites comparison card. Static shell + empty slots that favorites_controller.js fills on
+    connect and re-fills on every priorities change (mirrors the map popup's server-shell + JS-fill).
+    Keeps id="property_<id>" so the unfavorite Turbo-Stream removal (PropertiesController#toggle_favorite)
+    still drops the card. %>
+<div id="property_<%= property.id %>" class="compare-card"
+     data-favorites-target="card" data-property-id="<%= property.id %>">
+  <% img = property.images.first if property.respond_to?(:images) && property.images.present? %>
+  <div class="compare-card__img <%= 'compare-card__img--empty' unless img.present? %>"
+       style="<%= "background-image: url('#{img}');" if img.present? %>">
+    <%= render "properties/favorite_button", property: property, source: "favorites" %>
+    <% unless img.present? %><i class="fa-regular fa-image"></i><% end %>
+  </div>
+
+  <div class="compare-card__body">
+    <%= link_to property.name, property_path(property), class: "compare-card__name" %>
+
+    <div class="nb-prop-tags compare-card__pills">
+      <% if property.try(:layout).present? %><span><%= property.layout %></span><% end %>
+      <% if property.try(:size).present? %><span><%= property.size.to_i %>㎡</span><% end %>
+      <% if property.try(:floors).present? %><span>Floor: <%= property.floors %></span><% end %>
+    </div>
+
+    <%# ── Scored summary: fit score + commute/station/lively (filled by JS) ── %>
+    <div class="compare-card__scored">
+      <div class="compare-card__fit">
+        <span class="compare-card__fit-num" data-fav-fit>—</span>
+        <span class="compare-card__fit-label">FIT</span>
+      </div>
+      <div class="compare-card__metrics" data-fav-scored></div>
+    </div>
+    <p class="compare-card__msg" data-fav-message hidden>
+      Set your priorities on the right to see how this place fits.
+    </p>
+
+    <%# ── Your life from here: surfaced toggles / default trio (filled by JS) ── %>
+    <div class="compare-card__life" data-fav-life-wrap hidden>
+      <div class="compare-card__section-label">Your life from here</div>
+      <div data-fav-life></div>
+    </div>
+
+    <%# ── Expandable: everything not currently in the score (filled by JS, hidden when empty) ── %>
+    <div class="compare-more" data-fav-extra-wrap hidden>
+      <button type="button" class="compare-more__toggle" aria-expanded="false"
+              data-action="favorites#toggleExtra">
+        <span data-fav-more-label>Show more</span>
+        <iconify-icon icon="tabler:chevron-down"></iconify-icon>
+      </button>
+      <div class="compare-more__body" data-fav-extra hidden></div>
+    </div>
+
+    <div class="compare-card__footer">
+      <div class="compare-card__price">
+        <% if property.try(:price).present? %>
+          ¥<%= number_with_delimiter(property.price.to_i) %> <span>/ mo</span>
+        <% else %>
+          On request
+        <% end %>
+      </div>
+      <% if property.try(:availability).present? %>
+        <span class="nb-prop-badge nb-prop-badge--available">Available <%= property.availability %></span>
+      <% else %>
+        <span class="nb-prop-badge nb-prop-badge--unavailable">Unavailable</span>
+      <% end %>
+    </div>
+  </div>
+</div>
