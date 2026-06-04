@@ -1,0 +1,8 @@
+<%# "Your life from here" — nearest/nearby amenities for the categories the visitor toggled (or a
+    sensible default set). Rows are built by PropertiesHelper#life_from_here_rows from seeded places. %>
+<% life_from_here_rows(property, selected_places).each do |row| %>
+  <div class="map-station">
+    <iconify-icon icon="<%= row[:icon] %>"></iconify-icon>
+    <%= row[:text] %>
+  </div>
+<% end %>

@@ -2,24 +2,10 @@
 // the title (wraps below on narrow screens). Light theme to match the page. Rendered client-side
 // by fit_summary_controller.js.
 
-// Title row + fit summary share one line (vertically centered); the location meta sits below.
-.apt-header__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.apt-header .apt-title-row {
-  flex: 1 1 320px;
-  min-width: 0;
-}
 
 .fit-summary {
-  position: relative; // anchors the foot below the card
-  flex: 0 1 auto;
   max-width: 100%;
+  margin-bottom: 24px;
 }
 
 // ── Configured state: score + horizontal metrics ───────────────────────────
@@ -90,13 +76,9 @@
   color: #888;
 }
 
-// Out of flow so the CARD (not card + foot) is what centers with the title row; sits a fixed
-// gap below the card.
 .fit-summary__foot {
-  position: absolute;
-  top: 100%;
-  left: 4px;
   margin-top: 8px;
+  padding-left: 4px;
   white-space: nowrap;
   font-size: 12px;
   color: #999;

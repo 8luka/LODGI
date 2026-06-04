@@ -23,6 +23,7 @@ export default class extends Controller {
     anchorName: { type: String, default: "" },
     scoreInputs: { type: Object, default: {} },
     travelTime: { type: Number, default: -1 },        // minutes to anchor; -1 = unknown/none
+    toggles: { type: Array, default: [] },            // active toggle categories (match the map's score)
   }
 
   connect() {
@@ -78,7 +79,8 @@ export default class extends Controller {
         peace_quiet: this.weightsValue.quiet || 0,
         near_station: this.weightsValue.station || 0,
       },
-      toggles: {},
+      // Each active toggle category contributes a term, exactly like the map's score.
+      toggles: this.togglesValue.reduce((acc, key) => ({ ...acc, [key]: true }), {}),
     })
 
     return `

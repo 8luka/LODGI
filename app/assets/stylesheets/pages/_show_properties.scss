@@ -200,19 +200,35 @@
   .map-expand-btn i { font-size: 12px; }
   .map-card-body { padding: 14px 16px; }
   .map-address { font-size: 13.5px; font-weight: 500; margin-bottom: 4px; }
-  .map-station { font-size: 12.5px; color: var(--ink-muted); display: flex; align-items: center; gap: 5px; }
+  .map-station { font-size: 12.5px; color: var(--ink-muted); display: flex; align-items: center; gap: 6px; }
+  .map-station + .map-station { margin-top: 7px; }
   .map-station i { font-size: 13px; }
-  .nb-link {
-    display: flex; align-items: center; gap: 8px;
-    margin-top: 12px; padding-top: 12px;
-    border-top: 0.5px solid var(--border);
-    font-size: 13px; color: var(--ink-soft);
+  .map-station iconify-icon { font-size: 15px; flex: 0 0 auto; color: var(--ink-soft); }
+  /* Explore-neighborhood card: image background, title overlay, ~as tall as the map preview. */
+  .map-divider { height: 0; border-top: 1px solid var(--border); margin: 14px 0; }
+  .nb-explore-card {
+    display: block; position: relative;
+    height: 160px;
+    border-radius: var(--radius); overflow: hidden;
+    background-size: cover; background-position: center;
+    background-color: var(--cream-dark);
     text-decoration: none;
-    transition: color .14s;
+    transition: transform .16s ease, box-shadow .16s ease;
   }
-  .nb-link:hover { color: var(--ink); }
-  .nb-link i:last-child { margin-left: auto; font-size: 13px; }
-  .nb-link i { font-size: 14px; }
+  .nb-explore-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md, 0 6px 18px rgba(0,0,0,.18)); }
+  .nb-explore-card--empty { background: linear-gradient(135deg, var(--cream-dark), var(--terra)); }
+  .nb-explore-scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,.62) 0%, rgba(0,0,0,.5) 22%, rgba(0,0,0,.12) 55%, rgba(0,0,0,0) 80%);
+  }
+  .nb-explore-head {
+    position: absolute; left: 14px; right: 14px; top: 13px;
+    display: flex; align-items: center; gap: 8px;
+    color: #fff; font-size: 15px; font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0,0,0,.45);
+  }
+  .nb-explore-head i { margin-left: auto; font-size: 14px; transition: transform .16s ease; }
+  .nb-explore-card:hover .nb-explore-head i { transform: translateX(3px); }
 
   /* PRICE CARD */
   .price-card {
@@ -265,46 +281,37 @@
   justify-content: center;
   gap: 8px;
 
-  border: 0.5px solid #f59c7d;
+  border: none;
   border-radius: 10px;
-  background: linear-gradient(180deg, #ff7e57, #df3900);
+  background: var(--terra);
 
-  color: #1a1714;
+  color: #fff;
   font-family: 'DM Sans', sans-serif;
   font-size: 14.5px;
   font-weight: 600;
   line-height: 1;
 
   cursor: pointer;
-  box-shadow:
-    0 1px 0 rgba(255,255,255,.55) inset,
-    0 10px 22px rgba(255,179,153,.35);
+  box-shadow: 0 2px 8px rgba(200,85,61,.18);
 
   transition:
     background .16s ease,
-    border-color .16s ease,
     box-shadow .16s ease,
     transform .1s ease;
 }
 
 .book-btn:hover {
-  background: linear-gradient(180deg, #ffd0c2, #ffa98b);
-  border-color: #f28f6b;
-  box-shadow:
-    0 1px 0 rgba(255,255,255,.6) inset,
-    0 12px 26px rgba(255,179,153,.45);
-  transform: translateY(-1px);
+  background: var(--terra-hover);
+  box-shadow: 0 4px 12px rgba(200,85,61,.24);
 }
 
 .book-btn:active {
-  transform: translateY(0) scale(.99);
-  box-shadow:
-    0 1px 0 rgba(255,255,255,.4) inset,
-    0 6px 14px rgba(255,179,153,.28);
+  transform: scale(.99);
+  box-shadow: 0 2px 6px rgba(200,85,61,.2);
 }
 
 .book-btn:focus-visible {
-  outline: 2px solid rgba(255,179,153,.55);
+  outline: 2px solid var(--terra);
   outline-offset: 3px;
 }
 
