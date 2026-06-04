@@ -94,7 +94,7 @@ properties_data = [
 
   {:name=>"Palace Studio 207",
   :availability=>"June 10th",
-  :neighborhood=>"Meguro",
+  :neighborhood=>"Shibuya",
   :latitude=>35.6638217,
   :longitude=>139.6951181,
   :price=>185400,
@@ -155,7 +155,7 @@ properties_data = [
 
   {:name=>"Hmlet Shibuyaohashi 203",
   :availability=>"now",
-  :neighborhood=>"Meguro",
+  :neighborhood=>"Shibuya",
   :latitude=>35.6551771,
   :longitude=>139.6889239,
   :price=>186180,
@@ -216,7 +216,7 @@ properties_data = [
 
   {:name=>"The Parkhabio Cross #1004 2",
   :availability=>"July 1st",
-  :neighborhood=>"Meguro",
+  :neighborhood=>"Shibuya",
   :latitude=>35.6534504,
   :longitude=>139.6934806,
   :price=>337000,
@@ -774,7 +774,7 @@ properties_data = [
 
  {:name=>"HJ PLACE 101",
  :availability=>"now",
- :neighborhood=>"Shibuya",
+ :neighborhood=>"Ebisu",
  :latitude=>35.6501068,
  :longitude=>139.7089981,
  :price=>271500,
@@ -958,7 +958,7 @@ properties_data = [
 
  {:name=>"Top Hiroo 206 ",
  :availability=>"now",
- :neighborhood=>"Shibuya",
+ :neighborhood=>"Ebisu",
  :latitude=>35.648715,
  :longitude=>139.714728,
  :price=>168606,

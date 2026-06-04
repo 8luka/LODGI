@@ -34,10 +34,13 @@ namespace :places do
     Walking time to station requires ROUTES_API to be set in .env. If absent, the station Place
     row is still saved but time_to_station in score_inputs will be nil.
 
-    WARNING: This task creates new place rows on each run. Running it twice for the same property
-    doubles its place rows. score_inputs will be computed from all current rows, which may give
-    incorrect (over-saturated) density signals after a re-run. To get clean data, delete the
-    property's places before re-running.
+    A bare `rake places:import_v2` (no args) is GAP-FILL: it skips properties that already have v2
+    places, so it is safe to re-run and only imports newly-added properties. A specific property_id
+    (or a category) always imports — so to refresh an existing property, destroy its places first.
+
+    WARNING: Targeting a property that already has v2 places creates duplicate rows. score_inputs is
+    computed from all current rows, so duplicates over-saturate density signals. Delete the
+    property's places before re-importing it.
 
       # To re-import for a single property cleanly:
       # property.places.destroy_all
@@ -51,6 +54,12 @@ namespace :places do
 
     scope = args[:property_id].present? ? Property.where(id: args[:property_id]) : Property.all
 
+    # Gap-fill: a bare bulk run (no property_id and no category) skips properties that already have
+    # v2 places — so it never duplicates and only imports newly-added properties. A targeted run
+    # always imports (destroy a property's places first to refresh it).
+    gap_fill = args[:property_id].blank? && args[:category].blank?
+    skipped = 0
+
     categories =
       if args[:category].present?
         filtered = CATEGORIES_V2.slice(args[:category])
@@ -61,6 +70,11 @@ namespace :places do
       end
 
     scope.find_each do |property|
+      if gap_fill && property.places.exists?
+        skipped += 1
+        next
+      end
+
       fetched = 0
 
       ActiveRecord::Base.transaction do
@@ -79,6 +93,8 @@ namespace :places do
       warn "!! Property #{property.id} (#{property.name}) FAILED: #{e.class}: #{e.message}"
       next
     end
+
+    puts "Skipped #{skipped} property(ies) that already had v2 places (gap-fill)." if gap_fill && skipped.positive?
   end
 
   def fetch_and_persist_category(property, category, config, places_key)
