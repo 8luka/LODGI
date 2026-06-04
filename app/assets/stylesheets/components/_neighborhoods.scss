@@ -59,7 +59,8 @@
 
 // ── Section label (small caps heading) ──────────────────────
 .nb-section-label {
-  margin-bottom: 14px;
+  margin-top: 0px;
+  margin-bottom: 20px;
   color: var(--ink-muted);
   font-size: 11px;
   font-weight: 500;
@@ -67,11 +68,11 @@
   text-transform: uppercase;
 }
 
-.nb-section { margin-bottom: 4px; }
+.nb-section { margin-top: -85px; }
 
 .nb-divider {
   height: 0.5px;
-  margin: 32px 0;
+  margin: 40px 0;
   border: none;
   background: var(--border);
 }
@@ -123,7 +124,7 @@
   grid-template-columns: 1fr 340px;
   gap: 32px;
   align-items: center;
-  margin-bottom: 52px;
+  margin-bottom: 72px;
 }
 
 .nb-hero-title {
@@ -184,7 +185,7 @@
 .nb-features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 
 .nb-feature-card {
@@ -218,14 +219,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  gap: 16px;
 
-  .nb-section-label { margin-bottom: 0; }
+  .nb-section-label { margin: 0; }
 }
 
 .nb-properties-count {
+  margin: 0;
   font-size: 13px;
   color: var(--ink-muted);
+  white-space: nowrap;
 }
 
 // Compact grid: 3 columns, small cards
@@ -284,7 +289,7 @@
 
 .nb-prop-body {
   padding: 10px 12px 12px;
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 5px;
 }
@@ -358,6 +363,7 @@
 .nb-fact-list {
   list-style: none;
   padding: 4px 0;
+  margin: auto;
 }
 
 .nb-fact {
@@ -423,13 +429,6 @@
   color: var(--ink-muted);
   line-height: 1.55;
   margin-bottom: 16px;
-}
-
-/* Property card body */
-.nb-prop-body {
-  display: grid;
-  grid-template-rows: auto auto 1fr auto;
-  min-height: 150px;
 }
 
 .nb-prop-name {

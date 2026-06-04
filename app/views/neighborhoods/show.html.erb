@@ -31,15 +31,19 @@
     </div>
 
     <%# Swap this div for a real map embed when API is ready %>
-   <div class="nb-hero-map">
-    <iframe
-      width="100%"
-      height="100%"
-      style="border:0"
-      loading="lazy"
-      allowfullscreen
-      src="https://maps.google.com/maps?q=<%= CGI.escape(@neighborhood.name + ', Tokyo') %>&z=15&output=embed">
-    </iframe>
+<div
+  class="nb-hero-map"
+  data-controller="neighborhood-map"
+  data-neighborhood-map-properties-value="<%= @neighborhood.properties
+    .select(:id, :name, :latitude, :longitude)
+    .map { |p|
+      {
+        id: p.id,
+        name: p.name,
+        latitude: p.latitude,
+        longitude: p.longitude
+      }
+    }.to_json %>">
 </div>
   </div>
 
@@ -48,12 +52,6 @@
 
     <%# ── MAIN ── %>
     <div class="nb-main">
-
-      <%# About %>
-      <section class="nb-section">
-        <h2 class="nb-section-label">About the area</h2>
-        <p class="nb-prose"><%= @neighborhood.description %></p>
-      </section>
 
       <hr class="nb-divider">
 
