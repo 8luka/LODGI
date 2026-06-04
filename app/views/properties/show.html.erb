@@ -97,30 +97,51 @@
         <% end %>
       </div>
       <div class="divider"></div>
-      <div class="section-label">
-        3D Tour
-      </div>
-      <div class="matterport-section">
-        <% if @property.matterport_url.present? %>
-          <a
-      href="<%= @property.matterport_url %>"
-      target="_blank"
-      rel="noopener"
-      class="matterport-button"
-    >
-            <iconify-icon
-        icon="mdi:cube-scan"
-      ></iconify-icon>
-            <span>
-              Explore 3D Property Layout
-            </span>
-          </a>
-        <% else %>
-          <div class="matterport-unavailable">
-            3D tour unavailable
-          </div>
-        <% end %>
-      </div>
+      <% if @property.matterport_url.present? %>
+        <div class="section-label">
+          3D Tour
+        </div>
+        <div class="matterport-section">
+          <% if @property.matterport_url.present? %>
+            <a
+        href="<%= @property.matterport_url %>"
+        target="_blank"
+        rel="noopener"
+        class="matterport-button"
+      >
+              <iconify-icon
+          icon="mdi:cube-scan"
+        ></iconify-icon>
+              <span>
+                Explore 3D Property Layout
+              </span>
+            </a>
+          <% else %>
+            <div class="matterport-unavailable">
+              3D tour unavailable
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      <!-- DESCRIPTION -->
+      <% if @property.rules.present? %>
+        <div class="section-label">Rules for this property</div>
+        <div data-controller="property-description">
+          <p class="description" data-property-description-target="short">
+            <%= @property.rules.truncate(200, omission: '...', separator: ' ') %>
+          </p>
+          <p class="description" data-property-description-target="long" style="display: none;">
+            <%= @property.rules %>
+          </p>
+          <% if @property.rules.length > 200 %>
+            <button class="desc-toggle"
+                    data-property-description-target="button"
+                    data-action="click->property-description#toggle">
+              Show more ›
+            </button>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <!-- /left -->
     <!-- RIGHT SIDEBAR -->
