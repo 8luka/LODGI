@@ -39,9 +39,17 @@ class InquiriesController < ApplicationController
     inquiry.assign_attributes(Inquiry.default_weights(inquiry.why_visit)) if inquiry.why_visit_changed?
 
     inquiry.selected_places = []
-    assign_anchor!(inquiry, resolve_anchor(params[:anchor]))
 
-    redirect_to map_path
+    # pin_mode: the user clicked "Drop a pin" in the form rather than picking a curated anchor.
+    # Save dates/trip_type as usual but leave any existing anchor untouched — the user will set
+    # it by dropping a pin on the map. Redirect to pin mode instead of the normal map.
+    if params[:pin_mode].present?
+      inquiry.save
+      redirect_to map_path(pin: 1)
+    else
+      assign_anchor!(inquiry, resolve_anchor(params[:anchor]))
+      redirect_to map_path
+    end
   end
 
   # Set the anchor to a user-pinned point on the map (lat/lng) instead of a curated Place/

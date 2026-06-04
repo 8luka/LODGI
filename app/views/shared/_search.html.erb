@@ -95,6 +95,7 @@
             <% end %>
           </div>
           <input type="hidden" name="trip_type" value="<%= current_trip_type %>" data-trip-setup-target="tripTypeField">
+          <input type="hidden" name="pin_mode" value="" data-trip-setup-target="pinModeField">
           <%# Anchor section %>
           <div class="anchor-section">
             <div class="anchor-section__header">
@@ -114,10 +115,10 @@
                 <button type="button" class="anchor-tab" data-category="<%= cat %>"
                     data-trip-setup-target="anchorTab" data-action="trip-setup#selectTab"><%= label %></button>
               <% end %>
-              <%= link_to map_path(pin: 1), class: "anchor-tab anchor-tab--pin" do %>
+              <button type="button" class="anchor-tab anchor-tab--pin" data-action="trip-setup#submitForPin">
                 <iconify-icon icon="mdi:map-marker-plus"></iconify-icon>
                 Drop a pin
-              <% end %>
+              </button>
             </div>
             <div class="anchor-grid" data-trip-setup-target="anchorGrid"></div>
             <div class="anchor-empty" data-trip-setup-target="emptyState" hidden>No match.</div>

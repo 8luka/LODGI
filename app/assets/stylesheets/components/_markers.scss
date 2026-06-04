@@ -42,6 +42,15 @@
 
 }
 
+.marker-score {
+  transform: rotate(45deg);
+
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .custom-marker:hover {
   transform:
     rotate(-45deg);

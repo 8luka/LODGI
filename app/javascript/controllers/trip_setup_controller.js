@@ -11,7 +11,8 @@ export default class extends Controller {
     "tripTypeTile", "tripTypeField",
     "anchorPrompt", "anchorHelp", "anchorTab", "anchorSearch", "anchorGrid",
     "emptyState", "selectedLabel", "anchorIdField",
-    "submitBtn", "checkin", "checkout"
+    "submitBtn", "checkin", "checkout",
+    "pinModeField"
   ]
 
   static TAGLINES = [
@@ -146,6 +147,13 @@ export default class extends Controller {
 
   skip() {
     this.clearSelection()
+    this.element.querySelector("form").requestSubmit()
+  }
+
+  // Submit the form with pin_mode=1 so the controller saves dates/trip_type then redirects
+  // to /map?pin=1. The anchor is intentionally left blank — the user will drop it on the map.
+  submitForPin() {
+    if (this.hasPinModeFieldTarget) this.pinModeFieldTarget.value = "1"
     this.element.querySelector("form").requestSubmit()
   }
 

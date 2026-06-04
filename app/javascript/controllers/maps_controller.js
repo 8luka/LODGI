@@ -195,8 +195,11 @@ export default class extends Controller {
   // recreating markers (recreation would destroy the marker an open InfoWindow is anchored to).
   recolorPropertyMarkers() {
     Object.entries(this.propertyMarkersById || {}).forEach(([id, marker]) => {
+      const score = this.scoresById[id]
       const dot = marker.content?.querySelector(".custom-marker")
-      if (dot) dot.style.backgroundColor = this.colorForScore(this.scoresById[id])
+      if (dot) dot.style.backgroundColor = this.colorForScore(score)
+      const label = marker.content?.querySelector(".marker-score")
+      if (label) label.textContent = score == null ? "—" : score
     })
   }
 
@@ -309,8 +312,8 @@ export default class extends Controller {
             },
 
             content:
-              this.createMarkerContent(
-                "material-symbols-light:home-outline",
+              this.createScoreMarkerContent(
+                this.scoresById[property.id],
                 this.colorForScore(this.scoresById[property.id])
               )
           })
@@ -389,6 +392,24 @@ export default class extends Controller {
             font-size: 20px;
           "
         ></iconify-icon>
+      </div>
+    `
+
+    return container
+  }
+
+  // Property pins show the listing's fit score (0–100) instead of an icon. Color still
+  // tracks the score bucket (see colorForScore). The number is counter-rotated to read
+  // upright inside the rotated teardrop, same trick as the icon markers.
+  createScoreMarkerContent(score, color) {
+    const container = document.createElement("div")
+
+    container.innerHTML = `
+      <div
+        class="custom-marker custom-marker--score"
+        style="background-color: ${color};"
+      >
+        <span class="marker-score">${score == null ? "—" : score}</span>
       </div>
     `
 
