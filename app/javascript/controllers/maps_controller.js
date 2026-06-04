@@ -398,6 +398,31 @@ export default class extends Controller {
     return container
   }
 
+  createPoiMarkerContent(icon, color) {
+
+    const container = document.createElement("div")
+
+    container.innerHTML = `
+      <div
+        class="custom-marker custom-marker--poi"
+        style="
+          background-color: white;
+          border: 2px solid ${color};
+        "
+      >
+        <iconify-icon
+          icon="${icon}"
+          style="
+            color: ${color};
+            font-size: 14px;
+          "
+        ></iconify-icon>
+      </div>
+    `
+
+    return container
+  }
+
   // Property pins show the listing's fit score (0–100) instead of an icon. Color still
   // tracks the score bucket (see colorForScore). The number is counter-rotated to read
   // upright inside the rotated teardrop, same trick as the icon markers.
@@ -418,18 +443,19 @@ export default class extends Controller {
 
   getPoiIcon(category) {
     const icons = {
-      restaurant: "material-symbols-light:restaurant",
-      cafe: "material-symbols-light:coffee-outline",
-      bar: "mdi:glass-cocktail",
-      supermarket: "mdi-light:cart",
-      convenience_store: "mdi:shopping-outline",
+      restaurant: "tabler:tools-kitchen-2",
+      cafe: "tabler:coffee",
+      bar: "tabler:glass-full",
+      supermarket: "tabler:shopping-cart",
+      convenience_store: "tabler:building-store",
       pharmacy: "mdi:medical-bag",
-      gym: "mdi:dumbbell",
+      gym: "tabler:barbell",
       train_station: "mdi:train",
       bus_station: "mdi:bus",
       parking: "mdi:parking",
       park: "tabler:tree",
-      tourist_attraction: "maki:attraction"
+      tourist_attraction: "tabler:camera",
+      atm: "tabler:building-bank"
     }
 
     return icons[category] || "mdi:map-marker"
@@ -799,7 +825,7 @@ export default class extends Controller {
         map: this.map,
         position: { lat: place.latitude, lng: place.longitude },
         title: place.name,
-        content: this.createMarkerContent(this.getPoiIcon(category), "#556ea3")
+        content: this.createPoiMarkerContent(this.getPoiIcon(category), "#556ea3")
       })
       marker.addListener("click", () => {
         this.openInfoWindow(marker, this.createPoiPopupContent(place))
