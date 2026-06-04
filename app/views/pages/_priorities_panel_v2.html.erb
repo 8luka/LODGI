@@ -45,7 +45,6 @@
                list="prio-range-ticks" data-priorities-panel-target="sliderInput" data-action="input->priorities-panel#onSlider">
         </div>
       </div>
-
       <%# ── Toggles (pinnable categories: show pins + feed score) — unchanged ── %>
       <div class="prio-section">
         <div class="prio-section__head">Show and score nearby places<span class="info-tip" data-controller="tooltip" data-tooltip-text-value="Toggle specific amenities you care about to show pins on the map and include the proximity to them in property fit score." data-action="mouseenter->tooltip#show mouseleave->tooltip#hide"><iconify-icon icon="tabler:info-circle"></iconify-icon></span></div>
@@ -84,14 +83,11 @@
           </div>
         <% end %>
       </div>
-
       <%# ── Hard filters: cut listings, do not score ── %>
       <div class="rail__hard-filters">
         <div class="prio-section__head">Filters · hide places that don't fit</div>
-
         <% commute_buckets = [["15", "15m"], ["30", "30m"], ["45", "45m"], ["any", "Any"]] %>
         <% station_buckets = [["5", "5m"], ["10", "10m"], ["15", "15m"], ["any", "Any"]] %>
-
         <% if @selected_anchor.present? %>
           <div class="filter-bucket">
             <div class="filter-bucket__label">
@@ -104,14 +100,13 @@
                   <input type="radio" name="commute-bucket" data-minutes="<%= val %>"
                          data-maps-target="commuteFilter"
                          data-action="change->maps#applyFilters"
-                         <%= "checked" if val == (@commute_bucket_default&.to_s || "any") %>>
+                  <%= "checked" if val == (@commute_bucket_default&.to_s || "any") %>>
                   <span><%= label %></span>
                 </label>
               <% end %>
             </div>
           </div>
         <% end %>
-
         <div class="filter-bucket">
           <div class="filter-bucket__label">
             <iconify-icon icon="tabler:walk"></iconify-icon>
@@ -123,24 +118,22 @@
                 <input type="radio" name="station-bucket" data-minutes="<%= val %>"
                        data-maps-target="stationFilter"
                        data-action="change->maps#applyFilters"
-                       <%= "checked" if val == "any" %>>
+                <%= "checked" if val == "any" %>>
                 <span><%= label %></span>
               </label>
             <% end %>
           </div>
         </div>
-
         <div class="hard-filter-price">
           <span class="hard-filter-price__label">
             <iconify-icon icon="tabler:currency-yen"></iconify-icon>
-            Max price
+            Max price /mo
           </span>
           <span class="hard-filter-price__val" data-maps-target="priceValue">¥<%= number_with_delimiter(@max_price) %></span>
         </div>
         <input type="range" min="0" max="<%= @max_price %>" step="10000" value="<%= @max_price %>"
                class="hard-filter-slider"
                data-maps-target="priceFilter" data-action="input->maps#debouncedApplyFilters">
-
         <label class="hard-filter-check">
           <input type="checkbox" data-maps-target="availabilityFilter" data-action="change->maps#applyFilters">
           <iconify-icon icon="tabler:calendar-check"></iconify-icon>
