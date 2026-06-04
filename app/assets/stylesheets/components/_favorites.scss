@@ -152,6 +152,8 @@
   gap: 16px;
   margin-bottom: 8px;
 
+  .apt-title { margin-bottom: 0; }   // row owns the spacing; its own margin offset-centered the heart
+
   .nb-favorite-btn {
     position: relative;   // ← overrides absolute from above
     top: auto;
