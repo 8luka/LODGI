@@ -35,7 +35,7 @@
   font-size: 56px;
   line-height: 1.05;
   color: var(--ink);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .hero__title-accent {
@@ -47,7 +47,7 @@
   font-size: 16px;
   color: var(--ink-muted);
   line-height: 1.65;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   max-width: 440px;
 }
 
@@ -285,3 +285,57 @@
   z-index: 999; white-space: nowrap;
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.hidden-neighborhood {
+  display: none;
+}
+
+.show-neighborhoods-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border: 1px solid #d8d2c7;
+  border-radius: 999px;
+
+  background: white;
+
+  color: #4f4943;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  gap: 10px;
+
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.show-neighborhoods-btn:hover {
+
+  background: #f7f3ed;
+
+  border-color: #c8c0b4;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.show-neighborhoods-btn:active {
+
+  transform: translateY(0);
+}
+
+.neighborhoods-footer {
+
+  margin-top: 36px;
+
+  display: flex;
+  justify-content: center;
+}
