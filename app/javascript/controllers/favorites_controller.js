@@ -37,6 +37,12 @@ export default class extends Controller {
     this.applyFilters()
   }
 
+  // A card left the DOM (the heart was un-favorited → Turbo Stream removed it). this.cardTargets
+  // already excludes it by the time this fires, so just refresh the saved-homes count.
+  cardTargetDisconnected() {
+    this.updateCount()
+  }
+
   // Live re-rank: the priorities panel emits priorities:changed on every slider/toggle move.
   // We re-score + reflow rows, then re-apply the hard filters so the visible set + order stay right.
   rescore(event) {
