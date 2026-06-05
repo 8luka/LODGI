@@ -1,143 +1,130 @@
 <div data-controller="landing">
-
   <section class="hero">
     <div class="hero__inner">
       <div class="hero__left">
-        <%# <div class="hero__eyebrow">Tokyo Short-Stay</div> %>
+        <div class="hero__eyebrow">Tokyo short-mid term stay</div>
         <h1 class="hero__title">
           Find your place in
           <span class="hero__title-accent">Tokyo</span>
         </h1>
-        <p class="hero__sub">Tell us about your trip. We'll score every listing for how well it fits your priorities.</p>
+        <p class="hero__sub">Tell us about your trip. We'll score every listing for how well it fits your preferences.</p>
         <%= render "shared/search", hero: true %>
-
         <div class="hero-vendors">
-
           <div class="hero-vendors__label">
-            Verified properties from:
+            Furnished & verified properties from:
           </div>
-
           <div class="hero-vendors__list">
-
             <% @vendors.each do |vendor| %>
-
               <div class="hero-vendor">
-
                 <div class="hero-vendor__image">
-
                   <img
                     src="<%= vendor.vendor_image %>"
                     alt="<%= vendor.vendor %>"
                   >
-
+                  </div>
+                  <span class="hero-vendor__tooltip">
+                    <%= vendor.vendor %>
+                  </span>
                 </div>
-
-                <span class="hero-vendor__tooltip">
-                  <%= vendor.vendor %>
-                </span>
-
-              </div>
-
-            <% end %>
-
+              <% end %>
+              <span class="hero-vendors__more">
+                and more...
+              </span>
+            </div>
           </div>
-
+        </div>
+        <div class="hero__right">
+          <div class="hero__map">
+            <div class="hero__map-canvas" data-landing-target="map"></div>
+            <%= render "pages/hero_map_mockup" %>
+          </div>
+          <div class="hero__map-legend">
+            <span class="hero__legend-dot hero__legend-dot--green"></span> Great fit
+            <span class="hero__legend-dot hero__legend-dot--amber"></span> Decent
+            <span class="hero__legend-dot hero__legend-dot--gray"></span> Off-priority
+          </div>
         </div>
       </div>
-      <div class="hero__right">
-        <div class="hero__map" data-landing-target="map"></div>
-        <div class="hero__map-legend">
-          <span class="hero__legend-dot hero__legend-dot--green"></span> Great fit
-          <span class="hero__legend-dot hero__legend-dot--amber"></span> Decent
-          <span class="hero__legend-dot hero__legend-dot--gray"></span> Off-priority
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="neighborhoods">
-    <div class="section-eyebrow">Tokyo's best areas</div>
-    <h2 class="section-title">
-      Find your neighborhood
-    </h2>
-    <p class="section-sub">
-      From quiet backstreets in Shimokitazawa to the pulse of Shinjuku —
-      every home is fully furnished and ready from day one.
-    </p>
-    <div class="grid">
-      <% @neighborhoods.each_with_index do |neighborhood, index| %>
-        <%= link_to neighborhood_path(neighborhood),
+    </section>
+    <section id="neighborhoods">
+      <div class="section-eyebrow">Tokyo's best areas</div>
+      <h2 class="section-title">
+        Find your neighborhood
+      </h2>
+      <p class="section-sub">
+        From quiet backstreets in Shimokitazawa to the pulse of Shinjuku —
+        every home is fully furnished and ready from day one.
+      </p>
+      <div class="grid">
+        <% @neighborhoods.each_with_index do |neighborhood, index| %>
+          <%= link_to neighborhood_path(neighborhood),
         class: "card #{'hidden-neighborhood' if index >= 8}",
         data: (index >= 8 ? { landing_target: "hiddenNeighborhood" } : {})do %>
-          <div class="card-img">
-            <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');"></div>
-            <div class="card-tag">
-              <%= neighborhood.ward %>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-name">
-              <%= neighborhood.name %>
-            </div>
-            <div class="card-desc">
-              <%= neighborhood.description.truncate(85, omission: '...', separator: ' ') %>
-            </div>
-            <div class="card-meta">
-              <div class="card-price">
-                View area
+            <div class="card-img">
+              <div class="card-img-bg"  style="background-image: url('<%= neighborhood.photos.first %>');"></div>
+              <div class="card-tag">
+                <%= neighborhood.ward %>
               </div>
             </div>
-          </div>
+            <div class="card-body">
+              <div class="card-name">
+                <%= neighborhood.name %>
+              </div>
+              <div class="card-desc">
+                <%= neighborhood.description.truncate(85, omission: '...', separator: ' ') %>
+              </div>
+              <div class="card-meta">
+                <div class="card-price">
+                  View area
+                </div>
+              </div>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-    <div class="neighborhoods-footer">
-
-      <% if @neighborhoods.size > 8 %>
-
-        <button
+      </div>
+      <div class="neighborhoods-footer">
+        <% if @neighborhoods.size > 8 %>
+          <button
           class="show-neighborhoods-btn"
           data-action="click->landing#showAllNeighborhoods"
-          data-landing-target="showButton">
-
-          Show all neighborhoods
-          <i class="fa-solid fa-arrow-down"></i>
-        </button>
-
-      <% end %>
-
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="about__grid">
-      <div class="about__copy">
-        <div class="about__eyebrow">Why Lodgi</div>
-        <h2 class="about__title">Tokyo, <em>from day one</em></h2>
-        <p class="about__body">
-          Fully furnished homes across Tokyo's most liveable neighborhoods —
-          for foreigners who want to arrive and just live. No guarantors.
-          No key money. English support, always.
-        </p>
-        <%= link_to "Browse homes", map_path, class: "about__cta" %>
+            data-landing-target="showButton">
+            Show all neighborhoods
+            <i class="fa-solid fa-arrow-down"></i>
+          </button>
+        <% end %>
       </div>
-      <div class="about__stats">
-        <div class="about__stat">
-          <div class="about__stat-number">85</div>
-          <div class="about__stat-label">Furnished homes</div>
+    </section>
+    <section class="about" id="about">
+      <div class="about__grid">
+        <div class="about__copy">
+          <div class="about__eyebrow">Why Lodgi</div>
+          <h2 class="about__title">Tokyo, <em>from day one</em></h2>
+          <p class="about__body">
+            Fully furnished homes across Tokyo's most liveable neighborhoods —
+            for foreigners who want to arrive and just live. No guarantors.
+            No key money. English support, always.
+          </p>
+          <%= link_to "Browse homes", map_path, class: "about__cta" %>
         </div>
-        <div class="about__stat">
-          <div class="about__stat-number">23</div>
-          <div class="about__stat-label">Neighborhoods</div>
-        </div>
-        <div class="about__stat">
-          <div class="about__stat-number">4.9</div>
-          <div class="about__stat-label">Average rating</div>
-        </div>
-        <div class="about__stat">
-          <div class="about__stat-number">0</div>
-          <div class="about__stat-label">Key money required</div>
+        <div class="about__stats">
+          <div class="about__stat">
+            <div class="about__stat-number">85</div>
+            <div class="about__stat-label">Furnished homes</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">23</div>
+            <div class="about__stat-label">Neighborhoods</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">4.9</div>
+            <div class="about__stat-label">Average rating</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">0</div>
+            <div class="about__stat-label">Key money required</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- FOOTER -->
-</div>
+    </section>
+    <!-- FOOTER -->
+  </div>

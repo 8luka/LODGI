@@ -306,6 +306,23 @@
   overflow: hidden;
 }
 
+// Name + fit-score badge row (badge fills in client-side, only when priorities are set).
+.nb-prop-name-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+
+  .nb-prop-name { flex: 1; min-width: 0; }
+}
+
+.nb-prop-fit {
+  flex-shrink: 0;
+  align-self: flex-start;
+  white-space: nowrap;
+  color: #fff; // background + color set inline by nb_scores_controller per score bucket
+}
+
 .nb-prop-tags {
   display: flex;
   flex-wrap: wrap;

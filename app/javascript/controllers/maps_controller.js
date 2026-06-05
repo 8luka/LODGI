@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import { computeScore, describeScore } from "scoring/score"
 import { computeScore as computeScoreV2, describeScore as describeScoreV2 } from "scoring/score_simplified"
 import { buildPopupSections } from "scoring/popup_content"
+import { isAvailableForCheckin } from "scoring/availability"
 // import { Loader } from "@googlemaps/js-api-loader"
 // Connects to data-controller="maps"
 
@@ -15,6 +16,11 @@ const TOGGLE_CATEGORIES = [
   "convenience_store", "supermarket", "atm", "cafe", "restaurant",
   "bar", "park", "gym", "tourist_attraction",
 ]
+
+// Marker stacking order. AdvancedMarkers without an explicit zIndex stack by latitude
+// (further-south paints on top), so score pins would randomly hide behind POI pins.
+// Fixed order keeps score pins above POIs; anchor + dropped pin sit above everything.
+const MARKER_Z = { poi: 1, property: 10, anchor: 20, pin: 30 }
 
 export default class extends Controller {
   static values = {
@@ -162,7 +168,7 @@ export default class extends Controller {
 
     const filteredProperties = this.allProperties.filter((property) => {
       const matchesPrice = Number(property.price) <= maxPrice
-      const matchesAvailability = !availableOnly || this.isAvailableForCheckin(property.availability)
+      const matchesAvailability = !availableOnly || isAvailableForCheckin(property.availability, this.checkinValue)
       // null bucket ("Any") passes all; a numeric bucket requires a known time within it.
       const matchesCommute = commuteMax == null ||
         (property.travel_time_to_anchor != null && property.travel_time_to_anchor <= commuteMax)
@@ -267,22 +273,6 @@ export default class extends Controller {
     this.render({ fit: false })
   }
 
-  isAvailableForCheckin(availability) {
-    if (availability === "now") return true
-    const checkin = this.checkinValue
-    if (!checkin) return false  // manual check with no dates → only "now" passes
-
-    // checkin is "YYYY-MM-DD" — build a local date to avoid UTC-vs-local skew.
-    const [y, m, d] = checkin.split("-").map(Number)
-    const checkinDate = new Date(y, m - 1, d)
-
-    const clean = availability.replace(/(\d+)(st|nd|rd|th)/i, "$1") // "15th" → "15"
-    const avDate = new Date(`${clean} ${y}`)                        // local midnight
-    if (isNaN(avDate.getTime())) return false
-
-    return avDate <= checkinDate  // available by the time the user arrives
-  }
-
   renderFilteredProperties(properties, fit = true) {
 
     this.propertyMarkers.forEach(
@@ -305,6 +295,8 @@ export default class extends Controller {
         const marker =
           new google.maps.marker.AdvancedMarkerElement({
             map: this.map,
+
+            zIndex: MARKER_Z.property,
 
             position: {
               lat: property.latitude,
@@ -540,7 +532,7 @@ export default class extends Controller {
     }
     const content =
       this.createMarkerContent(
-        "mdi:anchor",
+        "si:pin-line",
         "#000000"
       )
 
@@ -552,6 +544,8 @@ export default class extends Controller {
       new google.maps.marker.AdvancedMarkerElement({
 
         map: this.map,
+
+        zIndex: MARKER_Z.anchor,
 
         position: {
           lat: this.anchorValue.latitude,
@@ -636,11 +630,12 @@ export default class extends Controller {
     this.clearPinMarker()
     this.pinPosition = { lat, lng }
 
-    const content = this.createMarkerContent("mdi:anchor", "#000000")
+    const content = this.createMarkerContent("si:pin-line", "#000000")
     content.querySelector(".custom-marker").classList.add("anchor-marker")
 
     const marker = new google.maps.marker.AdvancedMarkerElement({
       map: this.map,
+      zIndex: MARKER_Z.pin,
       position: { lat, lng },
       content,
       gmpDraggable: true
@@ -823,6 +818,7 @@ export default class extends Controller {
     const markers = places.map((place) => {
       const marker = new google.maps.marker.AdvancedMarkerElement({
         map: this.map,
+        zIndex: MARKER_Z.poi,
         position: { lat: place.latitude, lng: place.longitude },
         title: place.name,
         content: this.createPoiMarkerContent(this.getPoiIcon(category), "#556ea3")
@@ -933,9 +929,34 @@ export default class extends Controller {
     this.listingsTarget.innerHTML = ranked.slice(0, 20).map((p, i) => this.listingCardHtml(p, i)).join("")
   }
 
+  // The card's metric line, mirroring the pin popup: distance from the trip anchor when one is
+  // set (and its time is cached), otherwise distance from the nearest station. Falls back to the
+  // neighborhood name when there's no station data. Returns { icon, text }.
+  cardMetric(property) {
+    const hasAnchor = !!(this.anchorValue?.id)
+    const anchorTime = property.travel_time_to_anchor
+
+    // Anchor set and we have a cached time → distance from the anchor.
+    if (hasAnchor && anchorTime != null) {
+      const name = this.anchorValue?.name || "your anchor"
+      return { icon: "tabler:briefcase", text: `${anchorTime} min from ${name}` }
+    }
+
+    // No anchor (or no cached time) → distance from the nearest station.
+    const station = property.score_inputs?.transit_station
+    if (station?.station_name) {
+      const mins = station.time_to_station
+      const tail = mins != null ? `${mins} min from ` : ""
+      return { icon: "tabler:train", text: `${tail}${station.station_name}` }
+    }
+
+    // Last-resort fallback (no station data): neighborhood name, as before.
+    return { icon: "tabler:train", text: property.neighborhood_name || "" }
+  }
+
   listingCardHtml(property, index) {
     const score = this.scoresById[property.id]
-    const metric = property.stations?.[0] || property.neighborhood_name || ""
+    const { icon, text } = this.cardMetric(property)
     const price = Number(property.price).toLocaleString()
     const fit = score == null ? "—" : score
     return `
@@ -945,7 +966,7 @@ export default class extends Controller {
         <div class="listing-card__body">
           <div class="listing-card__name">${property.name}</div>
           <div class="listing-card__metric">
-            <iconify-icon icon="tabler:train"></iconify-icon> ${metric}
+            <iconify-icon icon="${icon}"></iconify-icon> ${text}
           </div>
           <div class="listing-card__foot">
             <span class="listing-card__price">¥${price}</span>

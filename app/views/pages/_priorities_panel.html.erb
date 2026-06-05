@@ -104,13 +104,15 @@
             <iconify-icon icon="tabler:currency-yen"></iconify-icon>
             Max price / month
           </span>
-          <span class="hard-filter-price__val" data-maps-target="priceValue">¥<%= number_with_delimiter(@max_price) %></span>
+          <span class="hard-filter-price__val" data-maps-target="priceValue" data-favorites-target="priceValue">¥<%= number_with_delimiter(@max_price) %></span>
         </div>
         <input type="range" min="0" max="<%= @max_price %>" step="10000" value="<%= @max_price %>"
                class="hard-filter-slider"
-               data-maps-target="priceFilter" data-action="input->maps#debouncedApplyFilters">
+               data-maps-target="priceFilter" data-favorites-target="priceFilter"
+               data-action="input->maps#debouncedApplyFilters input->favorites#debouncedApplyFilters">
         <label class="hard-filter-check">
-          <input type="checkbox" data-maps-target="availabilityFilter" data-action="change->maps#applyFilters">
+          <input type="checkbox" data-maps-target="availabilityFilter" data-favorites-target="availabilityFilter"
+                 data-action="change->maps#applyFilters change->favorites#applyFilters">
           <iconify-icon icon="tabler:calendar-check"></iconify-icon>
           <span><%= @checkin.present? ? "Available only for your dates" : "Available now only" %></span>
         </label>

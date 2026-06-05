@@ -104,14 +104,48 @@
   /* ── DESCRIPTION ── */
   .description { font-size: 14.5px; line-height: 1.78; color: var(--ink); }
   #desc-long { display: none; margin-top: 10px; }
+  .desc-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    margin-bottom: 26px;
+  }
+  .info-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .info-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .info-pill__label {
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  a.info-pill--link {
+    text-decoration: none;
+    gap: 5px;
+    &:hover { background: var(--border); }
+    i { color: var(--ink-soft); }
+  }
   .desc-toggle {
     background: none; border: none;
     font-size: 13.5px; color: var(--ink-soft);
     cursor: pointer; padding: 0;
     font-family: 'DM Sans', sans-serif;
     text-decoration: underline;
-    margin-top: 8px; margin-bottom: 26px;
-    display: block;
   }
   .desc-toggle:hover { color: var(--ink); }
 

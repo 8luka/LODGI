@@ -1,16 +1,10 @@
-
 <div class="nb-page">
-
   <%# ── BREADCRUMB ── %>
   <nav class="nb-breadcrumb">
-    <%= link_to "Tokyo", root_path %>
-    <span class="nb-bc-sep">›</span>
     <%= link_to "Neighborhoods", root_path(anchor: "neighborhoods") %>
     <span class="nb-bc-sep">›</span>
-
     <span><%= @neighborhood.name %></span>
   </nav>
-
   <%# ── HERO ── %>
   <div class="nb-hero">
     <div class="nb-hero-content">
@@ -29,9 +23,8 @@
               class: "nb-btn nb-btn--secondary" %>
       </div>
     </div>
-
     <%# Swap this div for a real map embed when API is ready %>
-<div
+    <div
   class="nb-hero-map"
   data-controller="neighborhood-map"
   data-neighborhood-map-properties-value="<%= @neighborhood.properties
@@ -44,17 +37,13 @@
         longitude: p.longitude
       }
     }.to_json %>">
-</div>
+    </div>
   </div>
-
   <%# ── BODY (main + sidebar) ── %>
   <div class="nb-body">
-
     <%# ── MAIN ── %>
     <div class="nb-main">
-
       <hr class="nb-divider">
-
       <%# Features %>
       <section class="nb-section">
         <h2 class="nb-section-label">What makes it special</h2>
@@ -76,9 +65,7 @@
           <% end %>
         </div>
       </section>
-
       <hr class="nb-divider">
-
       <%# Available homes %>
       <section class="nb-section">
         <div class="nb-properties-header">
@@ -87,27 +74,31 @@
             <%= @neighborhood.properties.count %> listing<%= @neighborhood.properties.count == 1 ? "" : "s" %>
           </span>
         </div>
-
         <% if @neighborhood.properties.any? %>
-          <div class="nb-properties-grid">
+          <div class="nb-properties-grid"
+               data-controller="nb-scores"
+               data-nb-scores-normalized-inputs-value="<%= json_escape(@nb_normalized_inputs.to_json) %>"
+               data-nb-scores-has-anchor-value="<%= @selected_anchor.present? %>"
+               data-nb-scores-weights-value="<%= json_escape({ commute: @commute_weight, quiet: @quiet_weight, station: @station_weight }.to_json) %>"
+               data-nb-scores-categories-value="<%= json_escape(score_toggle_categories(@selected_places).to_json) %>">
             <% @neighborhood.properties.each do |property| %>
               <div class="nb-prop-card">
-
                 <%# Image %>
                 <% img = property.images.first if property.respond_to?(:images) %>
                 <div class="nb-prop-img <% img.present? ? '': 'nb-prop-img--empty' %>" style="<%= property.respond_to?(:images) ?
                 "background-image:url(#{img})" : '' %>">
-                     <%= render "properties/favorite_button", property: property %>
+                  <%= render "properties/favorite_button", property: property %>
                   <% unless img.present? %>
                     <i class="fa-regular fa-image"></i>
                   <% end %>
                 </div>
-
-
                 <%# Info %>
                 <div class="nb-prop-body">
-                  <div class="nb-prop-name"><%= property.name %></div>
-
+                  <div class="nb-prop-name-row">
+                    <div class="nb-prop-name"><%= property.name %></div>
+                    <span class="fit-chip nb-prop-fit" data-nb-scores-target="score"
+                          data-property-id="<%= property.id %>" hidden></span>
+                  </div>
                   <div class="nb-prop-tags">
                     <% if property.try(:layout).present? %>
                       <span><%= property.layout %></span>
@@ -119,8 +110,6 @@
                       <span><%= property.bedrooms %> bed</span>
                     <% end %>
                   </div>
-
-
                   <div class="nb-prop-footer">
                     <div class="nb-prop-price">
                       <% if property.try(:price).present? %>
@@ -130,30 +119,25 @@
                         On request
                       <% end %>
                     </div>
-
                     <% if property.try(:availability).present? %>
                       <span class="nb-prop-badge nb-prop-badge--available">Available <%= property.availability %></span>
                     <% else %>
                       <span class="nb-prop-badge nb-prop-badge--unavailable">Unavailable</span>
                     <% end %>
                   </div>
-
                 </div>
-              <%= link_to '', property_path(property), class:"nb-prop-card-link" %>
-                </div>
-
+                <%= link_to '', property_path(property), class:"nb-prop-card-link" %>
+              </div>
             <% end %>
           </div>
         <% else %>
           <p class="nb-empty">No homes listed in this neighbourhood yet.</p>
         <% end %>
       </section>
-
-    </div><%# /nb-main %>
-
+    </div>
+    <%# /nb-main %>
     <%# ── SIDEBAR ── %>
     <aside class="nb-sidebar">
-
       <%# Quick facts %>
       <div class="nb-card">
         <div class="nb-card-head">Quick facts</div>
@@ -188,7 +172,6 @@
           </li>
         </ul>
       </div>
-
       <%# Other neighborhoods %>
       <div class="nb-card">
         <div class="nb-card-head">Other neighborhoods</div>
@@ -201,7 +184,6 @@
           <% end %>
         </div>
       </div>
-
       <%# CTA %>
       <div class="nb-card nb-card--cta">
         <p class="nb-cta-title">Ready to find your home?</p>
@@ -210,8 +192,8 @@
               properties_path(neighborhood: @neighborhood.id),
               class: "nb-btn nb-btn--primary nb-btn--full" %>
       </div>
-
     </aside>
-
-  </div><%# /nb-body %>
-</div><%# /nb-page %>
+  </div>
+  <%# /nb-body %>
+</div>
+<%# /nb-page %>

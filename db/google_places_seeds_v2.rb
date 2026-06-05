@@ -4,7 +4,7 @@
 # including fresh ones where auto-increment ids differ from when data was fetched.
 #
 # WARNING: Running this seed creates new Place rows. To re-seed cleanly:
-#   Place.where.not(property_id: nil).destroy_all OR place.destroy_all in seeds.rb
+#   Place.where.not(property_id: nil).destroy_all
 #   load 'db/google_places_seeds_v2.rb'
 
 PROPERTY_PLACES_V2 = {
@@ -15925,6 +15925,7321 @@ PROPERTY_PLACES_V2 = {
         rating: 3.8,
         photos: [],
         distance_meters: 479
+      },
+    ]
+  },
+  "Blueground Japan -U Residence 2" => {
+    score_inputs: {"atm"=>{"nearest_m"=>154}, "bar"=>{"tenth_m"=>382}, "gym"=>{"nearest_m"=>255}, "cafe"=>{"tenth_m"=>368}, "park"=>{"fifth_m"=>308, "nearest_m"=>119}, "restaurant"=>{"tenth_m"=>334}, "supermarket"=>{"nearest_m"=>358}, "transit_station"=>{"station_name"=>"Ikejiri-ōhashi Station", "time_to_station"=>10}, "convenience_store"=>{"nearest_m"=>154}, "peace_quiet_score"=>0.402, "tourist_attraction"=>{"tenth_m"=>556}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJ7Y1F7a30GGAReftWL9SKVsk",
+        name: "Ministop",
+        latitude: 35.6457568,
+        longitude: 139.6873301,
+        rating: 3.2,
+        photos: ["places/ChIJ7Y1F7a30GGAReftWL9SKVsk/photos/Ab43m-vQc16F-rZuCLXRT51iQKg2aifuoTCMwiLIs98wlKx0mIOK7E17aFltmKIinQZKu5oEKRpZbHxdwgkB8LGGg4U_BzSI0P8rE5Yb_QNLrF915iHmYXsSl9QTx4J28ogaee6HKM59ts5tI9Nzq0t7Z5ViWdK3V2XCYuxx47xaLC7xsyQ-l9TgEMq34aTQZJIril73UE5YdBqpA1K20-V8nEkPdHmR07lnCKj9U8f1fqPY7KS7zBO0w0NZ4zUKMKacZZMkKnm-8M29NECI7103uENq5Jq-By9dkA-4NTu_EFnQJkSsU0sFudnIF25f_yVdN4je5CGF0etZX7FbOTBxCu5m7SdiocheUa1NYwskfTMykSMeFgAXU0yYxf_vMawwCkYnCQRLyAlNc0h2tpqWQVp6Pk-fxQsx_rtj9sJmJQuzC4sC"],
+        distance_meters: 154
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJE8qkVcn1GGARz57faui8pHE",
+        name: "目黒区東山",
+        latitude: 35.6445376,
+        longitude: 139.6895467,
+        rating: nil,
+        photos: [],
+        distance_meters: 233
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJWbYX6bL0GGARo2Mc3-2DwG4",
+        name: "7-Eleven",
+        latitude: 35.6445376,
+        longitude: 139.6895467,
+        rating: 2.7,
+        photos: ["places/ChIJWbYX6bL0GGARo2Mc3-2DwG4/photos/Ab43m-vT3aH29wDnl00RpNj7FHVoAIOWWaluGRu6gILsu1nEM0ndB57B7GF1f_T_9ezxjblZ3pL86dWCIyiEL6NCIqTCUy31LTdZWESBInWekTOGfYdQZdGBjdg3WTSTPrc4YyPgJ8-T2CQZLp3VwuP4WcUbSOM5yw2YqPy0f0VR-dxrxckBKgjKenEjYNlv2AczutTwPILS5iJKvxtvBR9EJsBKVz7Y_sCNm5AdBzj49PgYvLIdPeNHqcMXRsPGcKy8_7X63wHim3HC2GU7xqbltA-QnQuxPve_4WCqEERtxT678saCkLtX4mwpsBdooxPPG14Uva7xYLGFIyhantlhmrK-jo2uJIXUlMPAL4LM1yi3yi-KhiqFDURHtzOVnZt2MtosP5izAahXLKKN0zQXPBDTqMiYFwitOBf9Tr6bbkn-F7la"],
+        distance_meters: 233
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJQ9o5dKz0GGAR7QdgKIBRwVE",
+        name: "7-Eleven",
+        latitude: 35.6496585,
+        longitude: 139.68781049999998,
+        rating: 3.8,
+        photos: ["places/ChIJQ9o5dKz0GGAR7QdgKIBRwVE/photos/Ab43m-tp858G_-9BeDZyLDev3pDlz5VK2SLPSSrQIJl39EcHs8A2ORwZNBtPLh0b9fBEJsanEytLnrRsWvMImkgIpbDfDbjcOuCjcIBQFr-KizAhnsf2yopas8XU8Wh-a_126HQ4NuhTw0AIjqZxsX7kFVq3dN3HVtuXMsHO8YyLdxFk_v35xgd3fI0ZSTl7zACDwqkztucYa9se14XUqEsqzAX0_MU1TEsWlpbtKbbNW8P6gt4cGzLx4kSGjIntrJ6Gr0ecdLEpJCMZ8ES77kbxP5uKNUyqYuGrcsLmp6cfALIWroo1gT2xlt7WVn_sXPI-HLiF7TlR-KOvbQgagehavJoAku35mAtsvVhnn7_MLrkWR2fVPEi9qUrssF-2NhZnoJSyx4NgqqsvZxFvnvkSwcsWLkojJGLXGhbjN7nfGsA"],
+        distance_meters: 358
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJy0y_8Kv0GGAR1bXA34OlC14",
+        name: "FamilyMart",
+        latitude: 35.6498413,
+        longitude: 139.6867068,
+        rating: 3.2,
+        photos: ["places/ChIJy0y_8Kv0GGAR1bXA34OlC14/photos/Ab43m-tkft12WeoU93B9MykUz8XNkFNgzv3GndqnV_YG_s1vyMnc5xK6e2Gj4LWMDsaHUVFvjBfPLJpr3Fqy2CexqayeLnVGukNGsWxP9_j6Ct3TWPR8tCQGI_CB8f1nLDlhjFEz50bqmG5LpPYQ2kcJC8bKwYfsgwGI73v5iKQkZwze0kqg5rX1DucRTCdmeZ9io1Zlc9k2uhpOJ_wR5tOwA2Q1Uk1TeI-nKdLTHLb2ThDCPCKyzy7aLyhGjyHuMy6sbSVwPt21pz9Fe5lFAPHMyPhXTWavbJ3jbBahR1OtxIndoFwp71U5ZVcLlKYtU5wueMS0IyyqL1tv_vDr162qmEyi1DJIZgeHI4or30rlMvrOKrg3XBoyHMmV4QceG3z0oHbd8xznN8Wbe20See1WMp8LWZdeZehVbl9T2sr6pXpBdoK4"],
+        distance_meters: 412
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJl4OITrL0GGARCWqXESPvHDw",
+        name: "Rico's",
+        latitude: 35.6434037,
+        longitude: 139.68777559999998,
+        rating: 3.6,
+        photos: ["places/ChIJl4OITrL0GGARCWqXESPvHDw/photos/Ab43m-vpnC57r2RfslY-H5klV_4477sQ2xgI7B5EGrG1sFk3fD_KYs-VZ_uc-bPMhryTRxbbv11-Fp3nV4PUxe48-9-SyGoEcfuQiD6kGKeWjgEccJRc4NWrhEROHlELOxLknZzMv2MTFhhjpGgyD9GLYu2xtkLnrtjNcI3_4QdZT_VKTXVvbPms4RWem7wJasATR_vOOgt6OXU5DlXLcCiCxA--p9pY7N8GEJtzT-unX39Q5PhzABk5drpA8SzXip1vOIkmo70pUY5JPbdfX3E9-XTlevP8K26YkIVPAznJ9Dvur3XMAr4p4Ho-_nAbzI5-RddpSdaAG_zlFf-j3IHPYZv0F1NL39AdwVoekdlY2HAocODewpKwbLTCh720tzm18PsjgPOX_jCSbLdVOYbXttdOnrIO4rpQ2tQRxnHWRGBaLg"],
+        distance_meters: 358
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJqSUzlz71GGARu6gnti_85FY",
+        name: "Super Mirabelle",
+        latitude: 35.6509907,
+        longitude: 139.68933479999998,
+        rating: 3.7,
+        photos: ["places/ChIJqSUzlz71GGARu6gnti_85FY/photos/Ab43m-t5hXolvODpYFolGE_R5JKJHk7nmOM7ZtlkV9JYrCKD1yWyj8R-QoUe0JchzB3YCa5QaPVdqozBYQMUj2XC2GAOR1qK-nsT5ZeX91-jOPO_Sy9Uegsdy-AFaxf-kmGkTXmutEcmqnx_LLWdY96ax2bBbo8rIWtqktYbbGe0h4L0dIGKu3xw8hsja68JDOD2OMh5fCyNzRd99A3HPlrUxzEm5gSVqdPrEu5_FRWPtRJHA7_kh5mNOQNMHPmvMSXAcbMcvr-K1R8iEU3PCmxr32kZ09AqXan3YyZn3DGt0DzjfYZw6OuvDYvXxVs1k4xh-s-XDkdnCkHNecU86fdQ2p8OVEVheuJvzavjNN7GfBIbq-NHxfYe4mRkyNWqbZgjrAwYkQMcL2MJLp9t4VYXrzgwhXt5vk9j4bkoJbw0g3n-eu4"],
+        distance_meters: 499
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJsyLLvwD1GGARhXZ2gq0_K68",
+        name: "OHSAWA JAPAN",
+        latitude: 35.650587099999996,
+        longitude: 139.68615100000002,
+        rating: 4.0,
+        photos: ["places/ChIJsyLLvwD1GGARhXZ2gq0_K68/photos/Ab43m-uqKgGVi7Wsc5VXTodslgeYciOCpPtg8gY01o26BYR1wJJIoYCkggLdAXCoAryEZUdID5BTYqVQcvTXFmNdHnzsgAunodV6aV2A6bND5gZ_2njp_4nyAU580Dig92BZl8MVp4m02Z-_u5T3RPP5hbssm-y_6k0IL_DhBpdghZ9x967QW8XBfoIVzLaBtSZ7m8MTK1qoRpezovROl2ApQw-59kntTw_Aq7TmXVVu5IcmGWUpmz0Xo_1mhXe5fgMsxI3KfcwtfBf3rMuS1jxoTdRJgfOhBot1qhAESyrE9lve-OgThlJN9yYVMm8XpycDZDdPtFHDjSLVOgjoaqgFYTlzRlEdI2mh7Otqrz5gk8A-DVM0XQFHW7CcPZACzqJ0s22nuACSeZmi_lnHlGiSFSR-2opkDQjEuE9YbwnYFlzNfA"],
+        distance_meters: 508
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJqRC5gan0GGAR80YK6KDJ_60",
+        name: "Seijo Ishii Supermarket",
+        latitude: 35.651705799999995,
+        longitude: 139.68585969999998,
+        rating: 3.8,
+        photos: ["places/ChIJqRC5gan0GGAR80YK6KDJ_60/photos/Ab43m-uSZmv0qsCQnS1UScjxuK3YKjzB531YS8OoUZApfHdiQ8F6Zc2JUO7sPtA_hTEgKzj04KeVK_J0eU9Bbjvn96nwV0yCyRmBqtH3cUSGwqHytytHFLPSzwtduiii1mBIXd-6GQJAkmv3SqZo407lyXkC9kRlhm3k3EZnnVnpsgaG5nQxZiiNj0PKrhS4hD89GkDw7-Qdsjp1cD1BgDvbPkM7-vnVIRrjehuD4AqXgqSdBMTAYqCKnjH08jLGcIj3nLJ7QsZYrqozFqg3Z65ewT7Uia2EDxiqpyYLgxtuy-3it6u6MmI21LTCtit8JF283g9dM8Kup-7cL9iMskCOtP1CPTHQTSqBTOfuTTuAnDKGCc37LBdVNskj35L3ECC8PDXemFz_uMaw1icSjRP0zDMO7qiBtPOGTp2VpH5OXNY"],
+        distance_meters: 632
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJpS7WKgCLGGARYXN0EyJCERc",
+        name: "リカーベースONE中目黒店",
+        latitude: 35.6459718,
+        longitude: 139.6973397,
+        rating: 2.7,
+        photos: ["places/ChIJpS7WKgCLGGARYXN0EyJCERc/photos/Ab43m-tkMbu2HVOh560H4T8jAIZlRCJVrXSCHBDM48ko-9nSehPZZC3iEPNZAhbgL_H2zEsnJV72L4KPzTqguE3VkGGVQRXk3jygxPu0VnY83q6uo671NSwCN702IXD45EJMOlfPpnitfv8R7SBsz7n9SKJn6ppzDrT6NBzrQAd74FAchEhNfrpDsDn0Bq8RvxTn3CSHOzFzBNZdlTll_vw0WAJf0yDpdc0l46YNrPUhjPqL6wwCR4nIareO8CIYYu7k3Tu8VK856lEpjvDrUQ7cpWOzPNuU-qO4LRuyMpMHKR2_cFXoA1zXVZLc19e6mK9cyT1PF5ZDMI1MJzLOqCFRcjc8Ejh_NR5271oZb5F2rL47DyMZKiG-nnk4G5MoCrZIsjMlFTlvfo0tHqrgXniwUTnAFltGB9ZIBa8iH0u3vMYqvB6Ij6_FkNAPoL7XBa-k"],
+        distance_meters: 779
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ7Y1F7a30GGAReftWL9SKVsk",
+        name: "Ministop",
+        latitude: 35.6457568,
+        longitude: 139.6873301,
+        rating: 3.2,
+        photos: ["places/ChIJ7Y1F7a30GGAReftWL9SKVsk/photos/Ab43m-sCnAzhGOufoMT8ix56nkL257CPXukWoifJ0HpOtBbmoIfOl32BTJ-PPKDBFGoD7UdjYHQfEtStnUeGupoabF381j6Q2vYSPkXdGEx_rjNzBZw9JjqF9UqpVogsy9gOw8Q0qvW-ODMZNXYtVenjLsUw2aIprcZNhsK1uLSkfeX7LBXHIoSw_T_RVf6vWpXz28D-Wm0Itq7GegSJwUxnmYospkb8pvoB3Iv2JMOXGEk9x7Fxi_sdZUGYCccFMHsCC8Q5GvB2wJxjdxm_FWa16ALaWiyfTTjwKevoco0sm4UItZu_qtS5V461greggxu3nVRxYQcZAPnXwIF_pnJe7SayhqTmR8xIynz8OF0feFBwQsNdRj94iUWZ0hfDzbk0CYdQxhjGT37fvQakrMnshqksYb6E7m44YTHBxd1QEtxEViMZ"],
+        distance_meters: 154
+      },
+      {
+        category: "atm",
+        place_id: "ChIJqWqdQKz0GGARMzNimAyEZ1k",
+        name: "Meguro Higashiyama 2 Post Office",
+        latitude: 35.648448099999996,
+        longitude: 139.6873167,
+        rating: 4.8,
+        photos: ["places/ChIJqWqdQKz0GGARMzNimAyEZ1k/photos/Ab43m-uIj9r6D6iHxonLBVLrE4uiRehguOoBgqMfdr14vupBvgE6y_LecRHXsMsBm9Tt_KCgN6ACMPZeEQi_jJ8LbD0p_1CGou785EOp0zvMwKoWb8rJRD8xYcpmp5AfshBna-dqkQroBMZh44f8TwpbtrBaVKqUgLXA4GPrBVcGtDfrJXfVI-XcLx0_CpLIZWb_q5v3n6qsSsO65EBXfAHaKlb91dTLcDM5g3do0ofpBKLD_iY_o3M1wXaIUaIDTQ4J59LDH35GtuVVpZnI2ZM3ZMx412j3pqfGCzylwkviuNAjphfP_qiR3Elz_QFsDsYwP58BTCujFp-JBiIei5tTTptNl3YaRnBJz-020CeL7t0ENSIs--cbAh6rDpBOPQEE-2qODSKjGvbd5ZiTGJ2opymohJzqDR1RAoq6OqnDkNrm3s-H"],
+        distance_meters: 249
+      },
+      {
+        category: "atm",
+        place_id: "ChIJHW-VP6z0GGAR-Gpm5ZDAGYE",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6485032,
+        longitude: 139.68724179999998,
+        rating: nil,
+        photos: ["places/ChIJHW-VP6z0GGAR-Gpm5ZDAGYE/photos/Ab43m-saXdIpX7vjh8ddeurH_VAT3Z4Dg4VkLdUc1etTjPDDhhH49FtMEOgwj-n__SmkkdOiWtRkYaghLGG1GHAKJ-WJVonPol6KtXrQaZxx_NzhJs2b3BND4NibD-ZAeaCRpk1XwxRY5P_tf-gYKhILFxujoGG7GXSr0kHra8qVSFUINfn9eMR5FDQVMQ_Kr_RqjXWF9ROAPI8ZrY-QWCG6wjnFfKREw5dPC_ZPgtSC28RNLhY7pdgX-eFSmxyHl1X9ITj6USgnu1IhcIMjrR9TU4b05fqHIi0xkR2uI1V3ypzkoJkqQ85psYksAcFTAll7qh6P-qw3_GWG8ZAHgc4cP-kbZunwSS2NNn8xfZl4ojnwIbYNeiCVHDf5FgcDu0kcCiqPVdK-2dd7KJWtEc9624hRrB1FYtHjkNRAKKzGuXn3TQ"],
+        distance_meters: 258
+      },
+      {
+        category: "atm",
+        place_id: "ChIJOafc9qb0GGARsR7X5sxK2_E",
+        name: "Jonan Shinkin Bank Mishuku Branch",
+        latitude: 35.6497285,
+        longitude: 139.6887046,
+        rating: 3.5,
+        photos: ["places/ChIJOafc9qb0GGARsR7X5sxK2_E/photos/Ab43m-tfTNRko0bciw5fBUkMqZOzJk4V60g9PEVPx57DkFnh-cuKCwpRw3IGOl_3dCITMtk8HQe3d2LP548e6qHieCQkot86TW9N2RWt2xK9USqOmlL42j9TdNCcaA6DjMPr4u5rncrTIjXDj0rBzFew7X6TE0HXb9-U1x5HSldsGXv5nOcmDo5-kKxqFWdj4TC2PIFe7pRmRmt4d5p7uN7tNxlLpDf2TVQk_C3R6G7xt14j8ImBEbOA-5tIf4gyZzvJUWbeg1oWsNADRiuiZik1wiTwQOnqEVB-Rsqu8R_89DyggUL4UcPE2HKFkejCyl-BJ8SMHMeVeenUbUG__hrY456Sk_3PYwU4oBMyCUq-ikw6MTnv1F8MDGdQZoJ0fT1DwzkRYKCmya-leMD7OUIClTW7bl_C_--CDUfTytENL6g"],
+        distance_meters: 356
+      },
+      {
+        category: "atm",
+        place_id: "ChIJQ9o5dKz0GGAR7QdgKIBRwVE",
+        name: "7-Eleven",
+        latitude: 35.6496585,
+        longitude: 139.68781049999998,
+        rating: 3.8,
+        photos: ["places/ChIJQ9o5dKz0GGAR7QdgKIBRwVE/photos/Ab43m-ugxDR7V0T38hRqJL7dd8Q-7QaISyxjwOTF-F-rYFYyFayl2wua5bkViXN4XBhpCJ3WiZQFVUIKzFJSj0Ia0o108826O1UilkJ3DjGEBd3P1Qya6iJ8r3D27g8QFUdwgkZx5NJS_Sr57XIvXmbWcB3pWIRcao__DQn4WlRcc3PEBJvuwy95_xtPxLS8E6WzIf2Y0k14Y8yJbCRiYHDv15_Hs-Bq4WD6L9s0k3lfS0xmM1Mtg-M1eDFejxTwWUqyYUvbwvnu8V6x-DyrJUm_wZpphVPFCGR3EIrKYciwBZw1E6WoSSF8LwPynjdUMT78X7WAoigU5eK36ZXwATwDPvs1X9k9e_SpN9qpHYdvpOSnF3uGREiTxxWmEBMWTYkj7vRxI3idif_s2MlkleNtjzocS4mMvmConADETS7IHnU"],
+        distance_meters: 358
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJz_2q77L0GGARfie7BqUWSjw",
+        name: "The Condition Green",
+        latitude: 35.6444109,
+        longitude: 139.6893825,
+        rating: 4.9,
+        photos: ["places/ChIJz_2q77L0GGARfie7BqUWSjw/photos/Ab43m-sfxhnzd1KvB9z9U2lDmpOHbAObw8Z6ebQ1G2oAqXgfmYV6SN_A5AqD6U1bigjVeRLK68svqkMJ7RU6VTohYQ5q8NVh6je7gWykxVSVG4Hxk1YZtUBCwAVOoTwgz5srbPQGi5kTbA9zxovnd5cQv-5pGfm3fk-32SfTLiLS1VYXqGLlxFVCYIogWr2CeNLd48Rzdku-XVnJkphOf-qKaXIxCOpNKisALJTLMxdPVxQD4_Jp1YZ2dNb7e8nl1Kzw5Ken9Ytlt5wZ7uLEUOf0EKCUuAce_h5JskFVkjulV4MhBGx3D72HTPYMtky3j8BjPm75IkF4-aRA6tOYzwW8A8H6VdLi7vnS2yF85oIwbKKuXO3bkLMpzMQpdwwbzdfyszTe20H_B_t0VULsKZxPEU0rK-xfNjix0IJl9GV-JzrkXg"],
+        distance_meters: 242
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJlf_lS9j1GGARBSuTEfHIH0w",
+        name: "ｍｆｔ株式会社",
+        latitude: 35.6442732,
+        longitude: 139.6890738,
+        rating: nil,
+        photos: ["places/ChIJlf_lS9j1GGARBSuTEfHIH0w/photos/Ab43m-u6Dttcxq81zk8dwfhaO-6SD2WmioXxbnc9zNlTNKNmEEhOKFBrAWFEXIkF_ZNbScukFBqxPz-XDZtUmARJ7vf3DS199znJ91Gr6EjmnQGGX5Vb2I-GrSLh8c-pKRsddz_M3ASLr-BkWcVFMIJJYQ7sOii2YAsCBhAMMb5cBl_AQ7ZcX20ZsBpYYchNeh-9GuYCirJpSlUnd8MLkAEiGMHDSY91EVdfra-_6N6TGTWT3I26lEWog2TPBb2UpTzUkixbvTTUdgGfJ0ErFJqt2l9WUM3CXBMR177T4-RfuhJRH3p_HKhxotxKFP5dQCPZIfcQfHnn_vssQTZngAgGcpJMi42UH9-gvL1P8xX3KvHE7wocp9yHw-Z5oy2YmiEe42eOt7MmiO-ZJwIgdA0cgXd4sKGVLp0QPy4hThmqnMpB0QCo"],
+        distance_meters: 253
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJO_b72qn1GGARnBaisk179r0",
+        name: "Rong Namcha Chiangmai",
+        latitude: 35.644247799999995,
+        longitude: 139.68910599999998,
+        rating: 4.7,
+        photos: ["places/ChIJO_b72qn1GGARnBaisk179r0/photos/Ab43m-vtZaGBB4MDgHvVINL9Gg2MxKrcVCKfmSEpAcE9gi2kMCcufoF6El96gy0qkliJzuf5-4rwtxBOQ6xXjZfonoBuP4aVcnrc0XZUENByj0rv1ozlISktOGopP-MWph8pKctbLiw0P3eqw6BYrXN9j6llPqAj4CTluoHNL7bMNXOh1sm46_OStWilue4aKVR81Om-YWdk3G0GJsUeRHIl0wK7zUU6UdqswjhwEH4FrUhCVohjrXezrw6dW1-uUaNcfioDwvzY89hEMHlAn5yCChkeZn-AsYw-h4tchJsYN4bwA0-ATC2mUTSoQGiMSeRaGW5Hm1DS619mx2hNsOXj5WRScJQ_sO9LTg2nDkIGucUx25hk19-Eip6clNLsY5pC-eTB-YkRb2j64KvwGLNZP9F_aBHd40vsWqzSgm5KtSQ8aWZA"],
+        distance_meters: 256
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJv94IPgD1GGARW2H4Jg-kSZs",
+        name: "小森茶房",
+        latitude: 35.644009499999996,
+        longitude: 139.6898213,
+        rating: nil,
+        photos: [],
+        distance_meters: 297
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJB-utD7v1GGARNrsiqnqBlSg",
+        name: "MAG_ COFFEE POINT (コーヒーとモーニング、ときどきかき氷。)",
+        latitude: 35.6487838,
+        longitude: 139.6867105,
+        rating: 4.7,
+        photos: ["places/ChIJB-utD7v1GGARNrsiqnqBlSg/photos/Ab43m-sAMIvPbEP4PyK6ErH0aCCxoWJ39XcOaqG-wGhgx9NkF2ktenfChBp0Ps9_31YTEj7w8BTT_snrWvsso2BOBUf74ymoomHZyXWIiCQc32-cESv7fRsfcgkgwBYlTqELlWoIhuSPneUevXlcEfy3dDv34Z0l0lBg-WTVuWLjSfUL82XUCYAxOuUwEjWQHQenDc8r63viWJt2uNqvVlsfsu4L3K1KcMeKHumBOuhO4aO0dXZ06DPIpGxQScgIf2JGGnWhDp5yaQumda3DSwnfU1YEqmJKYvA5OMEk34Yw_ISn6DgPuzmTlZZaE4WX9T8K18LZCfBk2WlfYO4n466Jmct77gn1oC77Gi4XWhPXhsJryxiAeW_qsIuTda_U5g0Z5EygxvnzyZP3jeo0xpGyauhctNJR_MSECAy3yAYAgymVXw"],
+        distance_meters: 311
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJMWYSwAuLGGARTpA17bmyhjM",
+        name: "Cafe de Pepe",
+        latitude: 35.648746800000005,
+        longitude: 139.6911474,
+        rating: 4.3,
+        photos: ["places/ChIJMWYSwAuLGGARTpA17bmyhjM/photos/Ab43m-vyqmlVvS0Wgl32LDAiQ0U_TlhfgNbEErAdddcfIjacq5736tM3NnMnXffoQTT2KRzaqQoDjPQuroi3RWsH6QE6pgfKd26NgJk8SXusAAtYfAvYVnleFSkiOjQsrcy26QF-aivSeoeZ7sPENgCncVWtqTTImtcJOiJ5h3NWjwLc0oJpTAbaQhxmnr8mIlB787DXxAoMrbHYrnPT4zLNzbSTDwd9IjfOUiyxndK-H0wfhsS5G1GHmATVFJo6i3j_VXCmV4SWFCeYopJA9P7RdKwc-AZMHAr7BoBSJfbwYB7pNsIAjAbeIWOLPGZpJNa7lMJLXxG0Z3yz8agZQnaOgBcxRPHxewFYiDtFPdBzzYFGKj4u9rNNiSSsYBSqNoTjqePfAnyiEQae3C9Z8FAaYpuoyxGMaRJfCBOtiLGH34I"],
+        distance_meters: 329
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJLTT2q-CLGGARhstKKMSUB6E",
+        name: "mute Cafe",
+        latitude: 35.648538599999995,
+        longitude: 139.69144269999998,
+        rating: 4.9,
+        photos: ["places/ChIJLTT2q-CLGGARhstKKMSUB6E/photos/Ab43m-u9iAfk82FZt-dcTKiclDDCkQNqfzty5XArB_WRpSuqDtlmnjMxRnysanaswVu0mSXBb1llAtJj2SMPpjkb_l0fqRdKVmjXR7Mo3uOmy-aMTao_VmAD9sf0VcYNgpPzOvL-8dnbwtfFH5cK7t1iP4bbbGGAODJRjHbXwZKP9yXG9XoKFQ4u0d2abkN3YwxQUyS--x4KcwcmSNSoqDItm0eVa3YdsMlM6zp7n6xTxLSbEzqbXkkPNWe-7HxOHFgykBYGzqLsHkClmwD_Ch4FNlsOa7Ry6D1uUnhH-BBbLviAkNueWktudSJQAzrodlbIq32XzzpD_1IRq8tjEs-IvNjl1TtOJXpFmYo2LZoGIuonUGEYU7aiHMIWdlOLTYfOEMHc-uq99IgdelfJj8aYOGGcibWlRst-9pxPsbuO6Mo"],
+        distance_meters: 331
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJt9uiKq30GGARH8g8SRBywEs",
+        name: "Alaska zwei",
+        latitude: 35.6489507,
+        longitude: 139.6910605,
+        rating: 4.5,
+        photos: ["places/ChIJt9uiKq30GGARH8g8SRBywEs/photos/Ab43m-vOXZXxSpDQfNdDxxpFdYptqwnaw71e8ckSantnV7R4nKVEfSBiPF4eERRWhHz-oE48sUwHRjJdOqbiqkFJQJG2rL32_ZIuFip-MnyXlUID2xBWdDCbxBU3Hp7Dyr7nRLGiOZWmXcdD0Yar6Vl7pUjCcZjeJiUSE6O1r38TPI2rUh_OXaYioaGGnJ2YDx6z5181Zc_lMb4HwdV9Gy55Nf-IrLGTmROAy0oTsagKlRMwr1109_M2CFxOFaYvfIV6BCg3k8xDOyAONsB-rnHZxnxMS_sU3VDsTa5qIqPZrmLckRRr8nGu-LywXs46Y17iDZcK8duc7U8jxq6UP8Lb8UAwrGjrwbF4yQnsCXJEotetCVBFUGtg436ZRgUuKe974SeoIYO_tFduanGCKwVCNd8v1xs4-mg8s-8XnnYNEZaRxA"],
+        distance_meters: 341
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ1Xk20VKLGGARQnyxBLYosyA",
+        name: "パラダイス トウキョウ",
+        latitude: 35.648878499999995,
+        longitude: 139.6915438,
+        rating: 2.3,
+        photos: ["places/ChIJ1Xk20VKLGGARQnyxBLYosyA/photos/Ab43m-vJrNtSzVWGj2LcyFkT5nexntDkfVqVRB3fxDa8bicbPWAFc5cGxXkRwp-02K5XMI_fvRJrWk4hoOZFXiY88gS9Ghzu2VotKVJWSEFjwWwbXZR3IrGHWbzDfC-8YiM5KqV979fG2TbR6GmohhHjx3xVWps_n4IjP7NCUr8MiecJIAnZoyU20Q7Yy9BRMqoe1o5v7rncRh7HmnpbEF_yVaqMbzfq-7DSkILlu1sxgM6zn2wFsp0SLrahGbzPlS-61CfoG4ExIpisNWCvT-ru_Rnw28LGObdljl2BBKjecpoEQYe8gx75tsnxZFoUyYHmdOlO7xYr6F7O3mz-vzgOWijP7x7fxozHW1qX5MmQgeNjeZgezR8YcVPNfmUOuMIDT59_hNc-AzcPBsNvDjlrpJZXMjnDZ3WGy4QOPRp7xQAVPvM"],
+        distance_meters: 364
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJT3w2O_j1GGAR8o-woiPTP3k",
+        name: "Massif",
+        latitude: 35.6497008,
+        longitude: 139.6875958,
+        rating: 4.3,
+        photos: ["places/ChIJT3w2O_j1GGAR8o-woiPTP3k/photos/Ab43m-uPohGRa-5B3h5Tkdic9UFCal2t9vALFBMLBOU89RMKMP-e7q6Fm4sy2E13f0PyGD5E3jtXOC2U3o0Yc_iJ56iFyUnQvzWtLcTz2duFZc-H2ikxLSKVr45X7g2sM_dT4e80NwiULQxyJH3Fpomp1QcSvG8-r2ra0xcjGhv0HrEdU27Tg3r1Kzzj6hlgSmA96oVwtuUpCPMs9QeX-ohLspS3cnF34evkIuDjGIrrqSyGv08CBjA1kdiTyvmtqEvxuGfjjB0Gb-U_lORi_iwEfsp76wllNHW35m3-Uzpb-DWScz5m3UfZTH3t8xwYihqsFtupRNUzcB2SOCIszsZEKEzd_QsJVuMKxoUfFZrFbki1fCb9ZNty_usSDHxalsfnlkxqX6kEkrsx8jBDLgI9lXhDAKovT782OcIuKbVXThnnyg"],
+        distance_meters: 368
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJzauR67L0GGAR2Xe-O2fUMFI",
+        name: "Gin Mon",
+        latitude: 35.6448125,
+        longitude: 139.6895366,
+        rating: 4.5,
+        photos: ["places/ChIJzauR67L0GGAR2Xe-O2fUMFI/photos/Ab43m-sXIkayXsJhvQUBc7yt9iXeNwP4EVakxiNHaUGNtq4NkmlzZo3KPu3iPGvDQQSLkkqG80TpDsYV4NS7jZI6GLvQhT_V_GVfAz8bdDeLGamEgIvUeelVUoW9Qe_0GRoKwEapvRzWaKCfIw610Z9TXKuPSWdYZ0ZY-HwjNBOlZwuOZtsVVLnXja0djtQV541VUOi-xY3hj5LYFJL7QNxpj7rgWydBCsXLleLSkrJlSCd-iHnv99ewYngo-icSH_HVjFoX_yU5rXG7ow_yteD_oK5_qgRXBV-Pobe7ZRtu6uec8kYalBRMdE1fpUk2X3Zi-Z9DjgD9SCjOLSN98ukkM2P82r6VJZdoIonTTrOnf5P-lMQaIlX5YrIH1rl7C2k8iACbsfs7458OujMJjn8HxDzeHs81U6_gxnTvJLNgX72GCw"],
+        distance_meters: 204
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ79HV5Q_1GGAR1JhA4O2em6s",
+        name: "5 quinto",
+        latitude: 35.6447875,
+        longitude: 139.689578,
+        rating: 4.8,
+        photos: ["places/ChIJ79HV5Q_1GGAR1JhA4O2em6s/photos/Ab43m-tYIPKm85a4o1k6ktJW6n0GhCF2bt8-Lj0qfOuqZ5wJPvl9AVBq49fnEaoAkjUlKpQZxjDMWnbK9CQntaN5qDAc0B1niICLWwk8NVcmyk3YcuDMbvM4yeyKQxr0tUaACpuh57pW_VPLGzNvgm5AgiK7iK82Dl96R4_LV9GyqkxROnP03KHRDyMT1CfJ5YfWq-1BMH-THHJ0h0guunFedmQNVw6ZkBOEelwILvqOfuwT0V6Fh8jLgx5_pMtI5EcXmOIHSS4yoO64kLr2rxQOuaQmFecKaGqUtBTrh1ElRQ4bM-COuPOxnDRL2vnVOTR_cCH9jupwdJrO8aO914OTtZkQCuA4Cp_a59c9MeNAX_fR_BiCnVndN6hWgVpra4M4Qh6FHJgL1wPgzT0-CYczT9rIT5Up3WXqtp42ld6SWXLX3sxfaBHxXtanrgYrpA"],
+        distance_meters: 208
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJe7b61Uj1GGARONQ9sE1UZb8",
+        name: "料理や、小料理や",
+        latitude: 35.644446599999995,
+        longitude: 139.6894341,
+        rating: 4.9,
+        photos: ["places/ChIJe7b61Uj1GGARONQ9sE1UZb8/photos/Ab43m-uvCtolCGpW3r8EtnwzKDstbzi1TVHlPVsxJQorWLNwS0Na9Xk-BYzUjDMJT_N1s7kqHVRlpZBW87cJhtw0oBXAQpJptx_84-SjSW151riF7bzC2cSu2uIKRTUyFxVu5O9Sdh-TXnIBA1FkSrHAkD9eLkvF2wMQNSCmT7m7aE1SQwkMMoyCel6or72Oc4_JFkInRar4w3YxvKlhoTdX_Py7PcXz-o6ZjPPOYibpZufYTZ7SVvDtBy6yLbULaw61z7mgslhwByTiUQ_ykk1omA1PBg5rNPh6sVZWObH2EjoNy345jOyoMp_yMJE_qwWOr0DUGSE3SM9I_-8-KFAQyt3l6CsLmFbWuvSxc1XFoTysz1dFRgKvyptypoUfFAQxWgBMH48LmylglMwCpKGnhcTOOYZ5qQNyDUcNccAVYNSxRg"],
+        distance_meters: 240
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJkaHo57L0GGARELiB2peXRn8",
+        name: "Japanese restaurant Hisanorihisa(izakaya)|Nakameguro",
+        latitude: 35.6444404,
+        longitude: 139.6897708,
+        rating: 4.5,
+        photos: ["places/ChIJkaHo57L0GGARELiB2peXRn8/photos/Ab43m-vPmqxk8_TRI2dc8JsgYlLz4UNpiqzTyJTWT8YjbgEF06aHFXksQM7rV5X2nhf0qnt1_tarQM3bWrcPq1Hd181cbOQDwBeLxP_Rl7M65O7mWzvf-bPaW0Mv1Gk46riZqZngXl4qcsuFv5FzLD5lM2XKIM9fw83MSBjVfsrM0eoVwx8shKP9L97c04PcTzGyk3npu_jgnRuTJ6qmhCp2Dim03bS509mwmt1LScC6e-PSSNdaCPdpW38HASBKU5t5ss6-R2NxYxtXsolop--WsSowGF3n0ykoT6WF2OERnNbP23KXZ2R2zfFO4snnxZY588QPno32qOu1vzTf99shB2RRQUmdewfDniMXSfZ2NVQ8lNA3K3NTMpj6wzodA7QGZwQMu79RFcdO4sPrfvMjnoRUFYv3AuLQ1gRqmZyAVmzdOmo"],
+        distance_meters: 250
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJwdviaQD1GGARGNy8PQhIjcc",
+        name: "日本東京都目黒区上目黒5-5-1コーポkl 1F",
+        latitude: 35.6444101,
+        longitude: 139.68975509999999,
+        rating: nil,
+        photos: [],
+        distance_meters: 253
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJAQD_-7L0GGARi-EXQpEYi4g",
+        name: "Commeden",
+        latitude: 35.6438212,
+        longitude: 139.68896089999998,
+        rating: 4.0,
+        photos: ["places/ChIJAQD_-7L0GGARi-EXQpEYi4g/photos/Ab43m-sekJXhhGW8bhIVZ3UtJ_GNGgiJV0c3-5hT_nAxO_iXvzl-75TrDA7WVqTHxiOE6Ny7iJCpaSOZ7K7CKzPxNYuAjRP-G-fCxcT8tep0bWZkKqguDheJcojsEcgcT7d_03iUT4uPSE4VUITFYgyIjxkjSsKHzfOnX4kQN5Of_5W4s29dy824c7gjiFJIPBpS00fGXTRwsXmTCG_oaiPY76rFGxjyPhtGp2jCiztAm14meUoJIcRE_glssfSJa--td6-42ZtTH9daBSPW-gFL1aTA3DHgpb8bHSF3qdwkaKzHze6AkxcEkhNeAK2LEyjxJKcS4EQf2AzrzcF4RonQTi66fobrET0pAUGQXRXmc25xLr_XNp9-PVqLACnAkROwSQzL7bnhYNvohXR6ldmZfxeR9azh1fIb9OJ5dQfyklzeYvva"],
+        distance_meters: 302
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJB-utD7v1GGARNrsiqnqBlSg",
+        name: "MAG_ COFFEE POINT (コーヒーとモーニング、ときどきかき氷。)",
+        latitude: 35.6487838,
+        longitude: 139.6867105,
+        rating: 4.7,
+        photos: ["places/ChIJB-utD7v1GGARNrsiqnqBlSg/photos/Ab43m-veo4nJ8KzGTLDLzricwZ6fnviPY2Nptec_rZ1cPC_5KljRh6l_kJuV6D8W-qlwQnkb5e6P6csviMdMiMklU8ZELkNCPGZC1jLwzZsPUYwW9Pj6nAJZH3Ctw3KEIUz-RdTVCTkI5UerBT556Xv88Z5t3Fa6UtkBBYiONu04JH8FT7HgfGQNduNJ8k8gpNns_4pbFnbbRC7VOnlakEglERFJgW7wC31JaOoSpXlxieVwAXtOJfkgv8G_78bhNAArIEqtHsk02X1E3W1ld2bOfcNQCoxerwTmFB1X6A20aqX51YEnORST97R234njgPcs4SyM0lvCclm8Y1zI1OPgtf6FIYJLp2Pc0IpzNg47CNXA6-Lk-DxETshL-RCkPYPS-AAVK1GfwSdL_n8Q_fJXP5mEx3OJNwazl53dooRpoPf2WQ"],
+        distance_meters: 311
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJU4Db1EyLGGAR-yCp2D1Xvag",
+        name: "Asahiya",
+        latitude: 35.6442571,
+        longitude: 139.6910953,
+        rating: 3.8,
+        photos: ["places/ChIJU4Db1EyLGGAR-yCp2D1Xvag/photos/Ab43m-tLMmP0RU2wOVSaK2mPNVC-zuSF3XCye8xS5JSo_KfiPHpiyodoZ6wvGcsxVVNyyVZQQ1NAyw7HbzQQdGzCrgSK7s0nkUvIz0xmgxXEj_BFLhLCfgY-g5YN1xWazcCAg75JXLV7WTPhCAhATBgO36WCkr64qdpceE5_65kpoJrlG30L82zUxTUJT9ugZtYuTvLY89_V1EM003MyEvl8ZLqKojgLsGS4H7bSH_Jdwj-TAhCcFDTaIztlwiEqQNtAe5m_ixfREdTW0mpU8kha9sI3C1jm8lzUe7TH1rA97hINb_RIbliwMSlG4u1d_4EahePKt71wFkx2EpVzHrfUpnCPl_IDj8AzxmFWRVHKJi1W2B1LEImL_a1O1o8gKFOyjJWSn8le5uB2g8fnQhMQugfwpFrA6F4bBsXpuH7EXmz39A"],
+        distance_meters: 330
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJsVcSVLL0GGARIzYPDnJCGqs",
+        name: "Fuji",
+        latitude: 35.6435459,
+        longitude: 139.68833139999998,
+        rating: 3.8,
+        photos: ["places/ChIJsVcSVLL0GGARIzYPDnJCGqs/photos/Ab43m-tgHJKUKfxLmfe8DL-7--e3aBVXkSCrCkllGHgIzOWgzkZ6lDIHwPbbMWanXJXU32zWw3zNQT8ZoyDeSy9Uz4aDuYNMxgIA9Lui9NRvYnRs3Fwi3nY5AHNHOukPhbn_jfTHbnrrm8P9zJpDzGlrrr4RT-xijVxYwF7lk0nkT2pYqP-Qn7AZxPMWDOLhS3d83ByEnDvXonWOER0Fyde5qXsQU-qNz4YD9jr7q_kzAKkaWqynYuv82yruvG-vHhrfHOTMhIcVPpZDQ7qtNZVAL9YK5DNqCUj5Mj_2avGARRtPFrMyNWeGIP1FKiF3Gf3qEmVUZv_X5akTvYDqsfQrmZ7kfk_4ObMt7u2ZTlHMacvy1A4U7EaFy2ztHJ2a9_ISPncJKZoPT_C7LaM_HggyRjgd6OjrN8XNQkMzVlUPuOE"],
+        distance_meters: 334
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJhd0ZWwD1GGARU-BzGVBi53s",
+        name: "つまみ処HITOTARASHI",
+        latitude: 35.6435374,
+        longitude: 139.68837399999998,
+        rating: 4.9,
+        photos: ["places/ChIJhd0ZWwD1GGARU-BzGVBi53s/photos/Ab43m-uw7kzUgojInXYPerZKLBKheaC4h_6uMc602mRXmMObFYvBggQTNoX-89FrrwBKnzVeU2DylqKzjekK7UIUmmnrh8mWKu5iFP7L33Cz7FCgyV1zlI6JtjfYqW3ZIHUQ2wB6XvlmSaOF-H6Nt-K2dieLbIS6jozMrzQVOh1YttD9EdL8TEvTMsIQMbIChDnI4eGx0lUDGSgjJV5qEkBu-ctkHo7PozM9OIZX8qmaL0sRXcZGVj_Kjq8FRI2LQYjQaAaw2Wp5Ol-mfEavvRAleGxc2YxLiIM512XvKvCwEULO1c6ygZIwqAO_K0MSJZt63EKaCgTA_Bs0u6TyDx-gv5MgG8sW9FplkhN6d_VXmlCqjYKwhBo694KiCqcwctnYJXEo27o1YH7FVxTZ2A08N6tEoMYdZyqbOgou7rHMAkQfW50"],
+        distance_meters: 334
+      },
+      {
+        category: "bar",
+        place_id: "ChIJz_2q77L0GGARfie7BqUWSjw",
+        name: "The Condition Green",
+        latitude: 35.6444109,
+        longitude: 139.6893825,
+        rating: 4.9,
+        photos: ["places/ChIJz_2q77L0GGARfie7BqUWSjw/photos/Ab43m-tLNPLFR2OUjg8aMxHwUKnzp8q1whrHsUUPIAL--KGwmHoH1HTeQ07f9ZxQwjS01v7xFCtZ6BPBYIVIihwU6iO1Dn8gospSyUluc5xVasrXCD3kP-hpCmIMd3XAuOiHLkAfk9E5atykcM2HkUZsvhwi06XSxeG65bVls7-l3IOae73WGRSE1-6AG2fN9Z_ohq1goBJ1Rf8HhOYu50dr1N9IL9wjOUxf0hCpmm7xhOwNEQRKOHzy8p8Y293-g5QXR9TVqjjY6d7NsZatxhUPLZLGi0mrYPp6eHaT5yNnMLifoN9vzE1xX0fO3OaczqXDU4xzHRp_6AzgFERdCLcmV4YtAO7tKUw0ZHV4xq7F83zo8A6RIBzKrPSKg1GkmC9L-tkOdkS3a71WcXj6RlfStGjunI2SeGyqRKWVDtauCHe5BQ"],
+        distance_meters: 242
+      },
+      {
+        category: "bar",
+        place_id: "ChIJd5-ryFKLGGARnScVTRiHBPo",
+        name: "Ohka The Bestdays 中目黒",
+        latitude: 35.6483352,
+        longitude: 139.6918741,
+        rating: 4.3,
+        photos: ["places/ChIJd5-ryFKLGGARnScVTRiHBPo/photos/Ab43m-s9Fbcx3GsMThocz9BMTK8pf47JWG5BPU7ZgdS8Dk3mSJClsgWxFSJ4d2hz_0-Z9xcXBrxR4_n08HXs88a2wfhA9gi-C3-lDMcOTJCCDVnETHFB60hj3KuW2E5xkvBgDQoILlzj0AVrhqYnRdCV0CUKeZJK3vNKSRvJfoBP7ZG-sRtvxMnJrTJaP2aKymlfkGBiZglakUn00FwKxCnA2EvwDE9DSCfC54AnxQ9E0e4F7yhaFPgHlhHFdUFSIFADGgo1wPnhfBYoHGUpN5t4jWSVmXJGpx4C_xrMSiT79Rpf15CvuR_JAs-JrEndpI-g2UEIQACIbsMPKPHyuSmvKYuhz-D23xZJaw1FBTGUk4pGmQYh3mXg1__IElg40gUUL9SA214Yw2o-KqnHCw8WqpZtOak-MGXESMCrfUdmtfcXgvOxA1ZXDIsEdYGw9w"],
+        distance_meters: 347
+      },
+      {
+        category: "bar",
+        place_id: "ChIJhTLdTqb1GGARbyIVJQacY0s",
+        name: "SINGCERE",
+        latitude: 35.6494913,
+        longitude: 139.6904794,
+        rating: nil,
+        photos: ["places/ChIJhTLdTqb1GGARbyIVJQacY0s/photos/Ab43m-ueUKZJLPpUhqNBYt_ciaAglOnLrn3oNBtwuBcN6xbtCMYUWEHnMMigX9w0LRHWhcVjXhezaDMuvdD4Gy_jHLO7F-LViHxC14BjYqOa3EOgI-Wu57T7YsQandMHIW_59_VnjIlbkVOA4zj8011VKCLYrga2qZBfUlV_MHW0nhHvGvjyc0x11_TDvoQCpWuPqRbUtH_s2DogxCU_w4HW-yD0g4cq9O7e9DA47ELgRil1vQVHg1ekyrR7lHx0xEcT8ScurPcDO633mTXtF6ogpVWQ1TRApzFUoRFKPLb-wmKeuPGDOly8a5654tvZM7OrL1nTF4q-Lk7mC5kJIJ69IuS4xPwMOSRs8rxCgi7TSCAKV_KNDHKRkFLKqhPzCOPAX46ryjEb8VoI_-dH5eVxsjKrSGKKC-wywzkBEc99yqFu5Q"],
+        distance_meters: 365
+      },
+      {
+        category: "bar",
+        place_id: "ChIJT3w2O_j1GGAR8o-woiPTP3k",
+        name: "Massif",
+        latitude: 35.6497008,
+        longitude: 139.6875958,
+        rating: 4.3,
+        photos: ["places/ChIJT3w2O_j1GGAR8o-woiPTP3k/photos/Ab43m-u2_9hlFP73q-mSVzJ6OJllHXzGMkKoC7L6XbBZlmTCCLEcW-JItQwiA-knfh5tKfYLtRAolehAQgYybrnGNIAGlv-aI6cAwKPh4zEmLiY_f2Iq6TbiFIFPkAuetSapqXlxvC2KK2XP4qJLKbt6prfct3HHc-OumddiBly6GoxW-lmgs5YQtf1FWYCXV4ITI1eHS-kUeUxM8rQSJt9f10wsPtGu76AvVFrQr-yGseoGaNF4bAKnlclSMUa0lkdK7GaAS5WyrYZQCad7OfS3LLeX-4sDxmVS1y1unnK4QvBiLpHl6VEvIBMFpZWll5a_EAPoFRC7ZYALdvlhzdOsmRDfCvZBB1ncJ_9QIbyKHNiqRBU4V-6_lz1dvy20Y2VQq2qZqTVY8wwwM3p_i35jvn0kw29KAP4p1uyv1Z1jUgBV6g"],
+        distance_meters: 368
+      },
+      {
+        category: "bar",
+        place_id: "ChIJhci506z0GGAR-L4tUibt_qo",
+        name: "レンタルエ―スペース",
+        latitude: 35.6493251,
+        longitude: 139.6909101,
+        rating: nil,
+        photos: [],
+        distance_meters: 367
+      },
+      {
+        category: "bar",
+        place_id: "ChIJzTCCbk2LGGARQf373nuDPe8",
+        name: "HIGASHI-YAMA Tokyo / Studio",
+        latitude: 35.6465566,
+        longitude: 139.69286,
+        rating: 4.4,
+        photos: ["places/ChIJzTCCbk2LGGARQf373nuDPe8/photos/Ab43m-tqNmW0_aPPZqbkkqzqcitgeVRpdmcRP4Wnoee9K2vlXdE1UWOwygUz1Y6q_ErC02g9Xu_XCW2lYeYZMvQ4MI8B-ScoJshwt7fJPn01i870gSDb_yFindsScjwJ-obXZP0jtLZfAtmFhg_Di8nrPA2jaBULB-224ThG8tDinjkz4G-mWnTLTpEgbi3LXaP5LZCn5_FYtTDYXzQ-Ut00FyVoO2dIh8EPAkkQxnr_21h9WLLPVpaniq07ICUD7ednW6rExkZBfSLAM86wjd8DEnii6x6x1093hSslfxOcukh4Yq9LBLVJyiY-8db1p82l9IC67A8UAIqdtLa9c-omMr220VZ0y7nW5JU2szEHiSfLDYgedes78PGBPuoRyJ80H7m08QOgZDasdMyIKNA9HvQr1PkZ18nGEg3RrIkOAnn3SjaM"],
+        distance_meters: 372
+      },
+      {
+        category: "bar",
+        place_id: "ChIJg2CU01KLGGARwYMkQhX4Sk8",
+        name: "Breakfast Club Tokyo",
+        latitude: 35.6492974,
+        longitude: 139.6910914,
+        rating: 3.7,
+        photos: ["places/ChIJg2CU01KLGGARwYMkQhX4Sk8/photos/Ab43m-s0gL3XrxkuaFUUDQvjCjGG4w8RZagtKDk2aEpn8DQ50q5MxE5TxW_PFRuXpWzPGInP8AfgANNgqyXrWOMg3fICxcQsWDmqeylKmNd4nSeDBhCqVB82KVW8o9qlYZkZ8yTayeinAUGpljC97Ft3QWeGOd_IWaqPn1-VMUSPDDRDj8i-GB-_Kn4uycCh3muMymYSnPu60Z-HXOEg_G2nmn0trkIgl9UXQM_4gHKK99AmGAMNi2FUP9twjnO1iW9_R7LPa6is9hJS-QTXOoHdOkoX3wgbNNoedvU2o-mLk9v-BeW-x5cyiTVdXb9R3xTfNrswpv6n30VsoOSz0FRedzDwqwab-HKAsHepinvOI10J3EKXqonE8TFuQ5WwuR9Ej6Shpbk_XlSchNQ7aQwYGskJeesCQhQdMFTmJVF41xOeyVdI"],
+        distance_meters: 374
+      },
+      {
+        category: "bar",
+        place_id: "ChIJr6PFKlOLGGAR1X7NCXnnS90",
+        name: "Bistro 13 Ku French bistro 13",
+        latitude: 35.6492462,
+        longitude: 139.6911946,
+        rating: 4.6,
+        photos: ["places/ChIJr6PFKlOLGGAR1X7NCXnnS90/photos/Ab43m-sskFCuCY-Yb294XKLxijGn4rn4ThTajq3N8zCIlu4o1YBzKkn9weuaorItijIMkI2aCzsquVCJkHrtaOpiIzK4JZwivOPWMC8JHhMH0Qdv40vxPECiUD_Rsl2d2LXSMGn0p6O9ofJJAmNYl8XjiSdMfXnTERs930TlwtUP-vEl5ZCgRD0bVBz7nwg7lNwdk3TrSoBdW76s0Nrg4xDifprQCXVFn-mB3Hxa7FUX6E5pQqWuvfwv6TQyJq6z0PhP--91gUenIVBDy8rFPaxWvUQnxuA3UvevqcfxtiRTdlGilZw64py5n44A3hIYFqAnvWpDrDuL6Z3S7d3XM6Xk2PhB5GumfzQOCAtk7R_VjnTiwc2lryHAaNEgXhjntncY0gIb6KcF8TSZkYdX06uUGjs-mh1SLGafJ69ZuvYKaknNbVsa"],
+        distance_meters: 375
+      },
+      {
+        category: "bar",
+        place_id: "ChIJQaVLKob1GGAR2BSxsU3oKcU",
+        name: "Cabinet",
+        latitude: 35.649651,
+        longitude: 139.68703979999998,
+        rating: 4.6,
+        photos: ["places/ChIJQaVLKob1GGAR2BSxsU3oKcU/photos/Ab43m-uWnJn9Zw_BU3hoCu4mWX0kEdeFtdXf6j1MmHnU2YSbwTuoOvTfZ93vX7jDs24GLSIHlg3tKaHjq96G3BRFnoZDAugpemUcCwwkuKbRmqIcTX_OKO1YlTYnGKPBr2P2GG6L4blEHcWs_RVrWyk5e8z7oA8CcnEwmWJUyd4DUr8IWA7LciChHKtYwKX--fLmsJTd3mlMmG_xBkFoW5Cdz_0Mh_gl1q8Qsi_7hSUNySGniwMgxyvW2n3Bh1gfSn15pDzdt7g76FWMPVDGCKgtqqXYhxLbgOoTFhkwWpSXW5zf8PkQzCGEI12Ux1A2MYDc6S2upkjKXOmpxmnmqJLSWSPQHC4ww8oF5eL9De1T9fB7euGK68El7psv-KHlFz-g12Wmy75cpo2v6xlToEL800m1sTTCWHcXRtax43O4X1b9kzs"],
+        distance_meters: 380
+      },
+      {
+        category: "bar",
+        place_id: "ChIJy5IexZ2LGGAR66DfENJoZVc",
+        name: "金乃縁-kinnoenishi-",
+        latitude: 35.6487148,
+        longitude: 139.6920049,
+        rating: 4.3,
+        photos: ["places/ChIJy5IexZ2LGGAR66DfENJoZVc/photos/Ab43m-v1KDCEbKwMDx599Fyc9Dr8qRqD6LaT0eGA4BpZhZVFqHVMzngOA-kdTj4pj3x9o7PqVY6sgeBQiTayL27dxjdiOVw9QjbWt2PEbyr3W9UFELZoq9U76Lp5rJ44nF-cK8y1LxZ62yGKQoATtliStmgODg7HvJMlxgs9zhziZs485NwonPMmgud8Us5AmjYsqZt1kY9BkZcp4Xtj4VKYHMsKS1PXpJ_QjW8USYqDc473TwnIM87gom14FX-W-XjJTYd1G0HiIXqqYh6LtZR9oGgoqwDpsx6Qo7t-KQiAFXaH-ORsKLFUjKQ8rUMRzXtdSP9Z3m8it94fWzMG3maeFVNvfhIOlgMuoLZ1npv69IEQHFPCgKwCbT3gYMvcBUHAhwtj256Qbq_Lhi52kvG8X0w09aWltMkmMt8ZoTnzCY0JNw"],
+        distance_meters: 382
+      },
+      {
+        category: "park",
+        place_id: "ChIJDS-4ua30GGARSf_VoN28mAc",
+        name: "目黒区立東山公園 スポーツ等広場(ダスト)",
+        latitude: 35.6469107,
+        longitude: 139.68750989999998,
+        rating: 4.0,
+        photos: ["places/ChIJDS-4ua30GGARSf_VoN28mAc/photos/Ab43m-ta5sVPc5acfu3JXPLC2DWX4mBIYRIzmnEWr2FdkybYZMaaPGpfSV1ILOk_Ol3QhWOkukyWrq5PLedt2YKH8a2IypkOSriicUi_U7WIqKHGr-ZhY3RdtqV-r_yq16hV9XqHBNxqv39Q33wRcVlw6l1_N7hMhtxVMHqumoJkblTI0Hpjpp7FmJBEkLyCjLYQscHmKhgnhhgYAujQlciOxBQcW5ShF3CuTt1an87si9-yE7JlyabLDhUo-pd1xsWbZ4X-N3nqUxVhtE2LN4ImlTXS5yQLWZE3aoeKRdScfBsEGCVUESLn_fE1ltHGbomeEqvkqeHP4z_Yj3V7qXJtB7g2cQl1eekxi3wW3mkRfrDrtxrvgmNl-cRaeDxaG6waijM_oK0Sa8X_9-GBChXQBd85w4wQAc4qrGeHuWDTa9epsQ"],
+        distance_meters: 119
+      },
+      {
+        category: "park",
+        place_id: "ChIJf2jrchX1GGARCduOdHgbcPQ",
+        name: "Park",
+        latitude: 35.646132099999996,
+        longitude: 139.6865061,
+        rating: 4.0,
+        photos: ["places/ChIJf2jrchX1GGARCduOdHgbcPQ/photos/Ab43m-uhnJfgC_BlvVUpJzAVoNM50iSqm1kGht1m8CnG_19NlWA8isfGOHeNdl6M3CZV9we-l-Mr9OGaT54jNmtuZElkGMzEXmQrpwchr6wKoLGOXERB-szeYZJHPR5w_sLjlsZfwXm4gk22p7QhBp8E_woJpl4UNaXYPL4Fjd7Gc5J9jPJWtBeUKpfW3DldZBJ9C7MdZrleSQS0KsqDgTphyZNCmttX3KjaB1Ud_hxpDifm-EMSC4ut1vJYIdN4zJav4X1HsFhO6MXes3w-wYGv5DS1rHyW5o6g2wa2rw5NCfupqRHEdKwvLS5QcEbZlNvKl6UI4vVy6FEjnmuVG1DaNjZ3Jysm_RZre_GCoFw2k1KRZ1Rv6nJkNLTkXApZBshnUjst5ClWLhJP_S91K7AYMr19ns0tXDjlCDWhgKkDDF4eZsEF"],
+        distance_meters: 207
+      },
+      {
+        category: "park",
+        place_id: "ChIJm2drDZn1GGAR6gIzW5Os2gY",
+        name: "児童遊園",
+        latitude: 35.644839499999996,
+        longitude: 139.6873158,
+        rating: 2.0,
+        photos: ["places/ChIJm2drDZn1GGAR6gIzW5Os2gY/photos/Ab43m-vJEZsjAIT6MEHp8HjptqBfecW1JyCOrjPuz9gYCB6PsBERWyB7GRb-EczZriZTfhrITv1HSSUyvyWA8uNKVn5HVi1_vKs1LFm3qCizYkGw_bYdBVXD25BWwhY-FlpY9E9oxiDrgOnBAxSwUc61g-nKzzCBQfG7f8tL3GpCQZCLzqBAX9HoPji1hS0C8rxYQMRzcvgC4KBbsJbV6zrPZN5lgp2j0GZlguSbJPtOXCF1B6quhz9bMte15IDZnAtO1gCHLZ7WOhfRdlrk24nXjLBoFKMyb83QuCN-v3GYInGam7yFaKN12zS3sc5krmBySh2xQBBwFQnp_zoMWstCW4c-1fY8tonmsiX31Zs19ezF5eTh34NHYOAtmhTFjXuctcuukKOVcf5ftlyWNO7p7s8GQNMhj4jndKNpfEN8V-8"],
+        distance_meters: 228
+      },
+      {
+        category: "park",
+        place_id: "ChIJGbECPqz0GGARgsHlgkk37fY",
+        name: "Higashiyama Machikado Park",
+        latitude: 35.6484539,
+        longitude: 139.68697179999998,
+        rating: 3.8,
+        photos: ["places/ChIJGbECPqz0GGARgsHlgkk37fY/photos/Ab43m-tTX75Q6NAyeZYvalyEEIB-TInEs8dvfVQm0Pll8z8WX9Kesppw9czyKzghelrM4d72fVnZ-KvsDxXEsKXOopMNbVzcWU3wJWwq628MURRMEEO9Q9l6R_tAWVwJAIUnB5TdoepeSnWK_CKTWDx3blExEIY7jFtSly99mQJEr7CTJuFY7zKVTg-7jOAKUvOWWPtMhkjWkEWgOPp4Lbg2fdFuIwiVRPKIvzkVRFMvP4BDP-uZE3u3g8VABPDkO1cYqkCA9am-wnIuy0vKrY2iaflhwvNQOQuDD9TYMdzClwIfWhjTHm-dM1mKUy-8AWUyH7pjWdeOOXFmsAvvXWqRRh0mBFORceP16HOo_gnGIc4qbivQCsS0JZcF1lpiSaF5vT1t_SuI1THFO-N-7Dbn1MdraMfNPK4-hh-qjZbZnkLrDws3aCVwpro1CeuVQfxQ"],
+        distance_meters: 267
+      },
+      {
+        category: "park",
+        place_id: "ChIJlxzHb1n1GGAR2NGGMURMphw",
+        name: "東山コミュニティ道路",
+        latitude: 35.648455,
+        longitude: 139.6862926,
+        rating: 5.0,
+        photos: ["places/ChIJlxzHb1n1GGAR2NGGMURMphw/photos/Ab43m-v-TFoKKPaoE3S5Akmvs9Aew7aJEMscWJ2FnqjLB6IiLijU9urcsLAtlOJOM2I9I5XQr7snFvayOfLkwDrO9v3qhAdQqrFqptfsADepkvJk2T68nxGo8pCFvSfOKehZoaOcDCtYWDKiDtRvBpPjVdBzbmndHzSz1xTYNEcTgEdPy21Yo2DZfPvQQ9YqnlIlGfy7k_5faxPEQM4bGqOCWTkEg8ZNkoTiTLfq_pp8CWs8_pLYeKdekCSw9VuysF_LLPQlUlN3VYA8prMlSzWBH-x9HVwj0d75iD3LAPnVYbgFWPWZyIF4bHp4aRFenygyM4wYrK5kCwnInX7dGs999TY_v429fnR9itY3OPJfD3i-NRtRDWLcXndzjgDbmleyKPgVpFJvf_DoK8yhrt6jYQWbQlTfyfpmI1EH1KCAyAKAjCLB"],
+        distance_meters: 308
+      },
+      {
+        category: "gym",
+        place_id: "ChIJEdvE6wr1GGAR_gXcs8DeAq0",
+        name: "ピラティススタジオPILATES STUDIO TO U & gN. 東京中目黒店",
+        latitude: 35.6473704,
+        longitude: 139.691365,
+        rating: 4.9,
+        photos: ["places/ChIJEdvE6wr1GGAR_gXcs8DeAq0/photos/Ab43m-tov4b0G7_chWdg_4NKW8Oqv-GKDvZjC0MGNC_QInOBhVX0nLnH87LqvIvJhkiLStp8MuyXPKzRXdzoIa1jXIYgUSTPt9rBbW6tHzLsUpwlYBK4DYlvGjNonqWpAgv4UeqB5cAgOY_8NiVtbQW3H6pfq14HbUTlmTvVCYrhrhcTD5pnIHBihQ-ZMGwChJ6jTysnayh6C8nyQ0PGYuRvNVOuj6QTYenDRkywcYscsOez3wiW7zlxoOXINMs_TBVMGPG2SLcbhLxyVPTFoSvCyIrD_edpI1bUah-KgfHABhG0PyCByxf6nVT4_IrRz_qgIofZBZIvcevJ1K9ib_6O5p6PmBt0bTMF7Sn3YR4G9m-j7W2a-tggWvTo043ZnUSqqaXQ5bcCEQ887VSvojL221TJbZkeGLG_vukAGDGQIz6udHFR"],
+        distance_meters: 255
+      },
+      {
+        category: "gym",
+        place_id: "ChIJLdCJPM-LGGARzkcWHUuYa-4",
+        name: "Pilates Studio style.",
+        latitude: 35.6482677,
+        longitude: 139.6920747,
+        rating: 5.0,
+        photos: ["places/ChIJLdCJPM-LGGARzkcWHUuYa-4/photos/Ab43m-s3mfCvM2-StvsgJddiXELQDaJCz5SfV5AJP7xdpAZ0glwv7Audsf6WaW5q8qSEqaeF2VNscLHOFi815xVj0Y-tk4DUfEaEfrcAA8872bMGhO46gbUDnaECyqDXqcjUlxmUi_BHeuh8ez4yCu_ACFLrSDIIynZhXzNvwj87Hz4_oxFuVAJ-6RpvrupOKS5psZ7HmrZujt6FMG81v8obqo2V2aKuiLzcoGzhLCDCHdilGR_jQPj0FPE5kFW--GW1Wu3al5ZBzccl7i1ni6cZMgsBc8CdSGfV0wWwd-Xe8Yv50N4YRJ9ul98T3kOldoQtokd8mXjA743w39puIwG09DStN8w1fM28x3Dk9tg-36j2okmbdFkzUvkkpY6wWINnGNfW8fBpOOpcR-fbh_OxxY9PJ3GQyu8JN4dFUymPtTwJNQ"],
+        distance_meters: 358
+      },
+      {
+        category: "gym",
+        place_id: "ChIJKygeLOqLGGARnSG35XxpztI",
+        name: "mou pilates（ムーピラティス）｜中目黒女性専用パーソナルマシンピラティス",
+        latitude: 35.6466719,
+        longitude: 139.6931669,
+        rating: 5.0,
+        photos: ["places/ChIJKygeLOqLGGARnSG35XxpztI/photos/Ab43m-vZx8JUm3hllbU8Okkxf5GU28jDj-t2lH-2uLjDn4O0PaoktSDY3pSMGa1q4-s-Osork97MEbKebH1amQfdtZJ7eolC8dVxq-UJ81mDSrNDGOnTgdzvGOqQrBsgQfz9wiknEjWMmrjZzws9x_anHrMuN-0_QJepbUBJmR6s5wdDTYRiw4WEO1xfDBGnUXdFyPa2UTCIvy08nx4SogYRH9Hf3oE_zdeU0-YXiQh_5Ku8h6UvZtKGtm3Ko43USweK_meWqHsq5M_XJb0Dmwfmb7jr2SBMU8uzTixj7DuPtO66IzBwNP2FdWWLqbGAGv2Xq6xr4NTc804Spw3ywezRf8OdgJLiyZCA5rSmgYuUihKTQgfKpjs8AWVYwSOYMqu07eDs9XOTeND47nAXShYzqyWvW5N7qX-c7EVJawyIaTtjUvCvvX1nKO7ucqM-ho52"],
+        distance_meters: 400
+      },
+      {
+        category: "gym",
+        place_id: "ChIJsSh3Y0CLGGAR_Ud75G6_G5w",
+        name: "中目黒ピラティスrebirth・整体×スロピラ®︎",
+        latitude: 35.645492,
+        longitude: 139.6932214,
+        rating: 4.9,
+        photos: ["places/ChIJsSh3Y0CLGGAR_Ud75G6_G5w/photos/Ab43m-unLBGJpJ6xXc-y2O7Xqv2Tytet5vPu-h0xcyJlYihcTS3eNT60fC2T629LBIQcHd2LjrgY53hvTE6B4noClU_At48RJnJGIdQZcpiykQw2RVPOIuDP9SEtZAWfq7WxkXK5jD-1IDE_7uifQ0zV7JGStogzt3w2Npi36htI-DSp6idbFEbOJOWw22LkG43E7PwLTo3xKQW7iLlRzIYQJeaRi79PPzbvslC8FcexhHjTmu3AHFgfbXg2Tevn8CwiAF6GljdLrO0Fj6CR-5FSbJWtY4N_b3OvYTIWvEXlQQp5gGlvrCsjYbJDJT3CXqpDzF9bJ_rlX_e6FBdAiKA2RUUPK02SZ64iCQPr9y0SS-1UlROTVdXze0C_KhAoUWNmLnm3j_TyttVjDgW5X9kgL1AB6LzemiT0t9rHlbwgbDI"],
+        distance_meters: 421
+      },
+      {
+        category: "gym",
+        place_id: "ChIJg4NmLcyLGGARpqC7kflkJ8E",
+        name: "ボディメイクスタジオBe natural",
+        latitude: 35.6505375,
+        longitude: 139.6896609,
+        rating: 5.0,
+        photos: ["places/ChIJg4NmLcyLGGARpqC7kflkJ8E/photos/Ab43m-vd34NuaFkRVHwzlZhheh9oSYcgEbeXQLyegdPetS6qwDFi9oXFr6oG9QoNjkpMsJG-QdGqauf9JWTTUqBTXQQEGl8vu47Br_7-eOW6miAT6U3qv1Je8tQofCW1fu-K0HqS7fA-zXMtwPTl3uEpcma1QZaFXJwo5f6QL-xU7RUo3Y-nJDNeviiv4ngKf341M4SofU4Z1cvCY5c6-NRcrgKbv1zOf2v0enrqKXLNCptIOYQesrJXH-3WuSC4ylQ0-Ku0vqybXmPvC-GiHF37fYEMkbdtUTZbVejkE0CcbcG1_ZssvlcaZTaupyWpT4_CDOnq2Czth3mxD5rNM9adwLAUxHlUMdnXUIkfgu9BkJvPzboDll8zt-_WzEyHtLv3LX_D2lZE5LqNfTOQPqOXZw7Ya_eEIEZkdK2EQrpcH2M"],
+        distance_meters: 453
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJrQuxj670GGARj0MGsFj9qeQ",
+        name: "Geospatial Information Authority memorial",
+        latitude: 35.647135,
+        longitude: 139.6852606,
+        rating: 3.5,
+        photos: ["places/ChIJrQuxj670GGARj0MGsFj9qeQ/photos/Ab43m-vMyxk5yqZ0_hRSnrw9nKp-X_ue-AU6jX_trV_uSSslQGi0TT5qwciTBfMgJCemSbZP81vkYc4pndFFrdjl3Rtj2d6g8QU77WDY_7gSTqpfkTFLXmTSu1wQH0N_-5s3ERfBKBH-XK177eu-RqWVWpuNyIXELnIp47Fu5nJ993QNNMBsOVsyaZJtgzT4_fN3f_BVfpwghfOD_accWBXdvvzZRhns2x0dJSJn28-vqtUTj9SrZ-FJ_DyPY1nyL046oAZR7Ai8eHq3i0WXtIyW-kG9WCgJo0Cq8zqxBCKBn8VjBmRO3i_9vtMJKVeBqHdfByEycvOMvMYVQ7hcMwB9sCpfntkapYmVjJcRvzSlqZcDqIy5Ydfwt0zgpsBJQPDa0iQwM8KcyrWhTql7rDzUgtNVBLMAI7xeobQ_wnKoyBGmATUWYrCbl7YIEnHu64aS"],
+        distance_meters: 322
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJMWmriqv0GGARl_2yk_wNxi0",
+        name: "Bunka Yokusen",
+        latitude: 35.6497142,
+        longitude: 139.6873013,
+        rating: 4.1,
+        photos: ["places/ChIJMWmriqv0GGARl_2yk_wNxi0/photos/Ab43m-slxvSfpyN-2d3CN7pK0PjeQ5gtBc39itNNc3PU5cytD-iBKN90JM1JV5fZ_gXsPXQwnJOoJ_E-c7dE_53_J6hatqV2yvFktaTYf9vMImw02Pe52nN2QODbTK6-jgG_-B8RvEsfjIe_sOig5BoKS7EHEsvOSV8svqLZutqxataakqvWvnd7DAXKVFGCE0tonTDh7xbIEyf9_Zkc6QpA9Qdlth_WhSr4Uof3rOFvGblQ5dqNnmKCUPafR_X-CjMQK1VVCKnTCDdYM1Z6qr_-ITgvTmAbW5Mg78g6_3SvmQurfEz_RtOW-NJycxZzCIYFmG1I0oaGHrUcgSiLvQl-5dqS3xTmA8ccIevnthYvEr7H3Q6c1kfrpuPlmN7L62m_8HqIm9AEH2zNRVd-VfVQdX_pMDLK1mzdV7kBkpng_XekY7Eu"],
+        distance_meters: 377
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJo8v8JKz0GGAROABZXdHNzMk",
+        name: "Higashiyama Park",
+        latitude: 35.6473922,
+        longitude: 139.6846775,
+        rating: 3.7,
+        photos: ["places/ChIJo8v8JKz0GGAROABZXdHNzMk/photos/Ab43m-vQ_YMnlXGl29kAGbrWF-e9P7NkkRhKSicMKZznRgHxUpm5yPatJxmsa61y8c73gyA3c1TXcvPd3gfEw_PIVsHOSodeFP0mLZOKjPPPjfV9VwF88Fxr9IXIhGbfX-aDNFDnE7P0h1_dkaTBiy_n4dXWGGdXd12D9uVjyMSbTO6FL7R2PT7NYnEWinrCY-0ez9C-hu-Iwe-AZAXgtKAYSvpxC6yhzV2H5D4YdwZs5MsQO7LN4SMteDIpajZqf5K76Mgf80CwX4dJoBodUbWwWWWP4fpsmIcaXDcXGJSt_IQjs8sP_biDxfpNa4BdsXmco2XVfJMpLQ4ivq8ID8YDbcrj4pIueqX5TbpkoH8zUSf_NfQqiGAMgjwXRS34X2M8BUG3lJhL3-kwEn3y-mRsBPKBLxolcGiUCUyGXygBpG0s4yKp"],
+        distance_meters: 380
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJW67CUan0GGARGO80_9vI_S4",
+        name: "Higashiyama Kaizuka Park",
+        latitude: 35.649381399999996,
+        longitude: 139.6853756,
+        rating: 3.8,
+        photos: ["places/ChIJW67CUan0GGARGO80_9vI_S4/photos/Ab43m-uWfo2qejO7-i2qWCetICJGXX7eZfBDanPYvjL3LgZ8CoOglOex6Va28E0gTZ28XU10PeoE7PaCadVTU4Wv9nZriTTJDx9J8zse4KLySyfkk3O6tXqWwzbtBJIkq5Jy1-g9c2bqVDlg_Q5I179AvYatX10Nckx__KnGU2bDFyrA0dfFsM3A4qCwYzxOty3I5YhAXK7Wk1VF_h03pGBKGVtHTtUQYvoIT3lh7N4IZcLLqNDTaf4ZSRBA5GTltM7tfved2wDy-6fPNxg88P4U0zFRT-u9hKLlpH9h3SXOJH1Fwv7NdVhnT3_2-pK36jYdaaR8QYag5N5BjZ5_OhZvCYZEizbNw0yaHaliomiUcsTTPA8B3Wp3NjGP_4b_cotjFeCJeqbWO18WXOrTBtgD9bY1g6YfTvE1GdEPwkd2H40"],
+        distance_meters: 440
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ79ZNyyeLGGARCxxIBWujqnU",
+        name: "パラオ水族館認定アクアリウム",
+        latitude: 35.6485482,
+        longitude: 139.6929578,
+        rating: 4.2,
+        photos: ["places/ChIJ79ZNyyeLGGARCxxIBWujqnU/photos/Ab43m-s1e20ryrPgD-9F9lz3ZblhpZ_W3Wfi66DHDMUrsc-Fg59R0HpzHd92iSVnwG_Nm6PZyafPjfcFUKoVP3KgakPO9Fipy_vgmdlFqG4dBTS5kcyYoYYtL0EGjiOWoW6-uu1QKrnWvlX8HYeUrrA_UJi0QBSnD9f3h5OxxgVJ2vZkZObabKx-mu3TDOxqe39uGl7gdyWacLNyYnc9-FMYICn-4_Vpg2Y53MURLN2XJeI5FLIFSyKe9P3EjN16Kh-ulJ4FLzDvbAwi2h1NgCWTxz7Vc4levIJ-Bw_4SrJ-TpWXpQr6bug456zRv3amDJxNXoOgrsK1PNXkdczb1FB3n7CQiMMlNpxvIFZ-vNL7tiAOf6C3Ev6MbnvY_EkNznx3nql74hVHoEHDXw51YuDNOqY4z5JgTLjSFq46MoaXD4g"],
+        distance_meters: 442
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJJ7meWan0GGARko4lq7k0-4M",
+        name: "Higashiyama Children's Playground",
+        latitude: 35.649718299999996,
+        longitude: 139.6855711,
+        rating: 3.9,
+        photos: ["places/ChIJJ7meWan0GGARko4lq7k0-4M/photos/Ab43m-vc4coRm_a7jcfQGUFpRuXCwhfKmlWcF06HzhRKo6KjLQEhjp-YCo2rF_inFPSg_wf_1rjW3V9qt8OB4F3y173vPISRjKeQIYfxqOqNW_yceVFEvAJaXV1qaV5eVsXoazFcaNOLpMf_am8AsDezSZ--qEIed9URfSLq1woyjxn8ZrwExi7IxB6ahk1aOGBaEXR1rhTbzMwsy1iOled9V1_EIrhunPcnI-58BssN6WMLq23_kFubgjzKDS4L6w9kcZhiHt85yb3Verlhx-WGkYkpE_sOPMpTBiYGq33dLEg9l2iSl-E5iPdetgZP638jvPb6eLq9jenYqR1t4qTxT6UwD171pltKQW9pDXRorKiDdbjJz0IbXgoLpbT6aEtttbOYyKlDpBNkFLlrZ7UxDrKHr8823_4vusEZuOTqldTYvg"],
+        distance_meters: 456
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJY9U4MFOLGGAR_dW9YnWyi50",
+        name: "Naka Bridge",
+        latitude: 35.6498831,
+        longitude: 139.6916861,
+        rating: 4.3,
+        photos: ["places/ChIJY9U4MFOLGGAR_dW9YnWyi50/photos/Ab43m-vax76czZdq4PY160Lo1JLEftq2yoKX_tAenvScLFqDpNXN9HxiqQvoUOBP_HDJHSXMQNNhbwVbnsw3dS_udDMPtUYVQrj51aUedGrXmU4DKW8iZiUMgfQ-AnkHTCaeOmO_O9ky3Saj2rtpBUdw4oJZjNl8z_QVsTvMrtLdz8PhwPdcF_EWE624yX_OiNQa0p4DcQeqsleN9erQyNlap65W4tr809TUzoJM2Uhsvit2FMEV8c9YiviqwkW0lu8ltIPFsVO8Iuts_bstKYQ_HFa6okudmLQJEpMiZ30gr9VZ6CeO2hiU29H6E3M053wzpY1pL3tRYTs0uywvdGE0dKenKHQkJ9iFVDFuP5BKHKfw8c0hJ3oQSY5y_GHpq9oFchbqs27h1OYRgsnaLXMmnMVKTx-nIzrX8gZvsuD0ZAm25GSW"],
+        distance_meters: 458
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJswoXvqv0GGAR-zUHKpl4s0k",
+        name: "Meguro Sky Garden",
+        latitude: 35.6510652,
+        longitude: 139.68755819999998,
+        rating: 4.2,
+        photos: ["places/ChIJswoXvqv0GGAR-zUHKpl4s0k/photos/Ab43m-uyBzE9_hjgUX4LuChFm1mZE9fF95921iDjE7srju44E4vWlqW-OI_yAqGzrkNfcvF-t2IDiOCS6GG2Ev6TvSchjpMVNXH9yn2sNRP5YTLusp7taxG8HU-bM9kaCbGDTgfa_fQek7cPFW6Xao_fD2GNuPc6KZKRBa6T1TEfE2uU5JCVHwnBNxo-Aeo18NIDlbCvWf9wpDb-t3uxMoP03M3Mdtm9cIpaCDduKgI8_s05HFbntGUfRY2_vwQCfYK-KwDESBJDNUGderWxmw0n1ZzybxlmW1GktVwg9D3BG8CJ-FqQWCjzfQqWPTI41qFpjsd8nrmlNThsDdrY6C4GMpi7dtOn3UzN6PI8ZH-MZ1RFs4SYLsnSu_JGch9JWHrmM5O5gTeDCz6U2WsGyhN-Hc3nW1VINSnDQDg_eNrlkci5uc6u"],
+        distance_meters: 516
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJGWUARAD1GGARHHFn1ZAnj7g",
+        name: "時を刻むレンガの列",
+        latitude: 35.6513077,
+        longitude: 139.68893020000002,
+        rating: nil,
+        photos: [],
+        distance_meters: 532
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJjbykQqv0GGARBvIC1l47DMs",
+        name: "Sugekari Machikado Park",
+        latitude: 35.651441999999996,
+        longitude: 139.689897,
+        rating: 3.3,
+        photos: ["places/ChIJjbykQqv0GGARBvIC1l47DMs/photos/Ab43m-tLekcboMf1bn5iAsrBfNzbcMzywt65pm_V3xGlbRe50WR7RIr_kAU4F1Hc_i5at5O0lucAfQtf_SoBBEJs6SzNt8UcpRgJ62s3hUdrvDsuofcWT6Pu9i__CjlkE_L_QUo5TcaB9lCmn76HOpAzrjbDaup85sawWdjZsc21LqUIe1U1EXSW79f4cIMfb3j3M3tikCGETAj77rFOnIj9cQIIDzmb1xz_9hJl8KQ4i9D2pq6lzF8ZqPgLZzhK7AT8EY1ywuEFL2ny0sV86EZw7X9Ib93E4YlB8uBelKy9GYQqWjBOkTEAfbaDb6YT6yCxbPCnWUbzS2Eue229fzrKOBNV_ewR0blJ_U9t2PhyvGjw-CThktqCE7Eto67RE1DP-DFe0WqlycOmX3CrlY7RQJde44Ilt5F28bbf_juOZ9D4XA"],
+        distance_meters: 556
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJ9fsxCan0GGARAk4pbGv0fkE",
+        name: "Ikejiri-ōhashi Station",
+        latitude: 35.6506294,
+        longitude: 139.6845797,
+        rating: 3.4,
+        photos: [],
+        distance_meters: 591
+      },
+    ]
+  },
+  "HJ PLACE 101" => {
+    score_inputs: {"atm"=>{"nearest_m"=>39}, "bar"=>{"tenth_m"=>53}, "gym"=>{"nearest_m"=>17}, "cafe"=>{"tenth_m"=>169}, "park"=>{"fifth_m"=>338, "nearest_m"=>144}, "restaurant"=>{"tenth_m"=>61}, "supermarket"=>{"nearest_m"=>397}, "transit_station"=>{"station_name"=>"Ebisu Station", "time_to_station"=>7}, "convenience_store"=>{"nearest_m"=>45}, "peace_quiet_score"=>0.039, "tourist_attraction"=>{"tenth_m"=>366}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJ__-PyUOLGGARrZlaaczokVM",
+        name: "7-Eleven",
+        latitude: 35.6502695,
+        longitude: 139.7085425,
+        rating: 3.0,
+        photos: ["places/ChIJ__-PyUOLGGARrZlaaczokVM/photos/Ab43m-s8idKNjXsF7G1UwPNHY4zb643G5I5-C_uWE2e29vgyMwIQoRnleJPYe4XrflnGSI40KGs57gT_16rlJzliBVg6wXme5XwJEOHH0zvFj_nbqA-muoKNUcNS3uHBkPQg1AgVog8MwchtgszRuguV0yO6mM1vuxmf7BSQJLwSduJQUoeVDWlloOgqllKYl_ZWpYtM9Nu7wnrq6RVu-4p0hNFa6VCUAruST7kmwjkQ4TiByr4Wx9jWvWF6cGNWMNPMft2q3A5NfUUlRZVTFa63WzYzkQ2x6vSoJSLgu9e5flvITejYrtC0Q3Ab43aX39iSemOib68FEmgKTaRgWJiaTU0TKvLaR1ts-dhzYcBOvU7tFzbriRB9kH8JLm5z7LIEiffe7HCrmOMMhsifatLEXVH7o5YztArjDPoEtP_mV8hCEQ"],
+        distance_meters: 45
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJHSuFTEKLGGARk-e6RbwMTs8",
+        name: "7-Eleven",
+        latitude: 35.6507766,
+        longitude: 139.70918319999998,
+        rating: 3.1,
+        photos: ["places/ChIJHSuFTEKLGGARk-e6RbwMTs8/photos/Ab43m-sBsHzMCtr_7TtRXSr3mly7JbZIUKZDM6VTMEYqN79VgKG5PrFdoY1QfA8v-AdXBdFKejh0aZ1-LEaHuJVw7r3nujAlIxwcZmyrCyN1ZT37Wsgri4tTR7sclhBiwcDf6wJixRHfyHM1S-3cfxBsEpeIfmIIBOruAdQDRJgOncWef9pU39F0RvNRCWYp_wutpdCPv05s0hSfG6r5Dr_ORb0e9wAt_8-FzXRiSHT2bX0rByCxGlE_9ezmphrjm3lfQVHXmijWilKcG5Nj9sX9XkFSHBHjtm-WJsB55EL2lCJLGxmXJkCZRv4w5xum87M59xOzDXbH1Hyr5N0mbbd60IFuu6zqNDsUT_8JFmR6ff9lp9APiV1pKptMd4c9Z5eq7UBrI9jZ2ORjo5xawvhAqjGquKbKB-iO-hT21doi1i6xVw"],
+        distance_meters: 76
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJRfAFmUOLGGAR8f529_QzjiM",
+        name: "Lawson Ebisunishi 2-chome",
+        latitude: 35.650577,
+        longitude: 139.7075932,
+        rating: 3.2,
+        photos: ["places/ChIJRfAFmUOLGGAR8f529_QzjiM/photos/Ab43m-skSynVZB018ioDMQWB9AxayaaawR4keR5E-CdAdWoHUq7ZKRM8gR81aYvlMLIrEQlJ7GjrOtAYk5oiegKpFEKgD7uHSukXntTSqWqQtAd94LodiWmNoz0WDyD0cHxBhdUT6RYXEJRHPR5A7X4duIf7At8P00QfD0_eOyIpqTWbRnC10Z_3J-sEj-3iKrdIV0koYi6_JFvesdpjEDbvP9opvCWZpfe8iv1qTKcN7RmcIn8BkKS_W9OXqeIWuVFIEdT47akGQWshwmOvwGRD_XK4Nbr3sImp5P6a1bMk6RDc7tINgr5CyC9vCPdycFFW7QMNWA9mJAiOTxBznRjWPfe1hqI4ToSmiu5evOy9ar92XH7HzCDVsbOZKEUd-vrv3MBFZXYBDbIrST5IY2QDjjEfuRg0UwaTPHZ9Fw7NJ7eprqY"],
+        distance_meters: 137
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJYSZ8mkGLGGARX15KS_tsXqg",
+        name: "Lawson",
+        latitude: 35.6488218,
+        longitude: 139.709565,
+        rating: 3.2,
+        photos: ["places/ChIJYSZ8mkGLGGARX15KS_tsXqg/photos/Ab43m-uDZucy-R2EkwFfNsUSoHk1mpm_i2jiyQUZD3t7sQWhwFhWNKrKmrx2uENdGw1STvqSRSrDP0YLodYK_SKLy73LIgZxz3ITt-ACBpGOY9JbAAuHeeFa_kt9MeqvzuINDiloGucgIJklYUbKZvwvM_kIPT_AEYdfaJ6KpA1ObG5tym2AvhVHma4uNs59qyxsVb85edwez1hmvHW12isAW3HZ2-lwuKhRP9k_-4wrFCHZcX1ZQYVUkbuAhToUWYE92bzO395xqc-fXYmcH-eXFKTeCd1OHvGxqNoFcviqShKZQWDcCXRMFsTU_cTZqExbc9NpL5MoPymI1M9a1PM1OapOJzWw8Ya4HhkiUm8u566nsIhOHyOWkzavRM-0f7tmrdsV42pIPuJOQ7JxyX4r-kJW36wATH8hHAFBa6Up2KvmNQ"],
+        distance_meters: 152
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJrRgJ_T-LGGARCyjIG_L4Dpk",
+        name: "FamilyMart Ebisu Nishiguchi store",
+        latitude: 35.648506999999995,
+        longitude: 139.70823529999998,
+        rating: 2.2,
+        photos: ["places/ChIJrRgJ_T-LGGARCyjIG_L4Dpk/photos/Ab43m-vB_hMbCQkG08SHMhILeU0YFcmu9dodDn4YGKkmUEL-kxRRU3UyKogbSJ-w8YiK6jjjnI_WIDgu2HTKQnsRkbT1CPCjoHOYx4V8Zck_sRy8BfrOLvQ8wz1iqkam6y6fse7y8Cd1xFaaacaRyl9CiZ3u_o3UzWRBQtyNUSLrT2aoMfIhsdEo8yv7iuq8lsb26E2WJzx1ZKSb422BWsZ9G6NZwJaXNwZZ1SBvyHuTX2egOHviXLg5n8F3KM7M8OxYFxx8tSllB4wHv_h289m0TauqdNFk2zxnapbwlD2fLEIjJJLlOe90osKPnnAchf5Q7CIRuMbyzW84jwg64kemqEAlLuD72EXk4Lh1OHzYf7IO0Y7LorhkChP5BnmFv23l0gia7PP3tTC-p2inmIBFhttnQQfodDzizt7J4QWCggmiQw"],
+        distance_meters: 191
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJtYcgRUCLGGARNev5Su25i-4",
+        name: "The Garden Jiyūgaoka Ebisu",
+        latitude: 35.6465696,
+        longitude: 139.7096317,
+        rating: 3.8,
+        photos: ["places/ChIJtYcgRUCLGGARNev5Su25i-4/photos/Ab43m-vucEUDaNyW4X4O_VBkxCFIfas5oepw5CfU55ueDK-Ezydxtz7cFpuroQrdWE_Thaocrs0RT7BP9o3Pp1_-dF5DYQHPMVnPXwokVIFFLwVTrkVI_T-Ga2mMsyT-NYvBkGJtScwQs-Jg6hatz8R665eXlnpH4d_prlBd8Jf0XHzIFdvNonVtJBFoH9wKaaMg_7NwfHc8Ds_cVwACq4nAV2Ig1P0csfNA85dLDRVakWoKDRKZvsZcaB_fWg9Zzk_r1ICiKbCQ_GLsaZHxclUztpV3Fa6fQo2e84fPSPfTrpCqrzAvvanRUw63hVeA-pqET3z4J7qdGN_sdIx5Zlq09P2gcuZDkSyqQicyStEOWjSh-gYs-1pxny341f5CtKOCSfUx6dzeLVJARrbSdJnBqClydG8AM-2_Or4ZNH4QREvTSSh-"],
+        distance_meters: 397
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJowrwRECLGGARzMja2_ArNqI",
+        name: "SEIJO ISHII atré Ebisu Nishikan",
+        latitude: 35.6465743,
+        longitude: 139.7097741,
+        rating: 3.4,
+        photos: ["places/ChIJowrwRECLGGARzMja2_ArNqI/photos/Ab43m-vkES1zIHLohsltMO5h46W51uNPbx2ctSxbHziTiMuDjPbGMBpIeJlcszRAh89Slm8B4JU0MMHEYy4nSb9vXgTzU0fEkvyNZ-Bi_L6HqeW2lruick7VbkfQt0h0ETGA66sGd2jcS6Nk-EvQvDOi0yB1HPNPRRdz-KV3mGwi0ufSBfeNmXaW18i50DUso58qY08suGGBAFaJN6OX9Peh6wfSaLR_MlvDVdM-HgkFBehvLNKMh1zgNeedRJcYQlH8wApqw3FjVb8OlV7zssnFamfRRYquuMweWkMh3_NC-DvDMdMTYfIGIOQvXisC-O-3k_SPWPZ_zmat3jrxF8XnL96tQIxSZLG8dmWdPsPtab6KhyXWDWS6cx16YfGLdfDXE_7nJeypWbQ1zKrId3hqKX33JImJ1tP0NmIjJxz2_0BDS-io"],
+        distance_meters: 399
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJkw-gP0CLGGAR8uwO654kcpQ",
+        name: "SEIJO ISHII atré Ebisu",
+        latitude: 35.6465162,
+        longitude: 139.710254,
+        rating: 3.7,
+        photos: ["places/ChIJkw-gP0CLGGAR8uwO654kcpQ/photos/Ab43m-v4P2bUYAY3yOK2JuzkJGK7KTkAHkx-fuAsnR4uSafQ9eovUXydC4JUsPAvvXn052fXqoyPJZ1kBSunywdYGP4I3KkSUxKhcpKp4hNUdlw-ZFH2nDoz-CPurSyyND5-Vd-CE0lGCJ1RxnUIFWX5_HstRK4QnsaCa6dh7JqRkvvwpkF-sjzappjIvfhYHA1W6c8-qtkB0txqkLerLwum9r9EtDHWlsC6mfbJW4qlXAEjg9iB-_6hq-O-HwjaLelDnxsxmywtHCjvU_6NaHaZn_4CSBSuYya8047n-2RFeJ4kFUDWOJYIIeMyfW0o3_jC9NUQxplttxNEZS8aT9gGBasWiOG3bpzBZ2jZoeCZsVF33G443m0A0kp_FUcTMelcvSvGDPsF4qW7s79hWl4_jIwdeN_zS5TYSKtYitSWpf8"],
+        distance_meters: 415
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJVVWBr2mLGGAR92VYEhjqeLw",
+        name: "Itakura Food Store",
+        latitude: 35.652902399999995,
+        longitude: 139.7136162,
+        rating: 4.9,
+        photos: ["places/ChIJVVWBr2mLGGAR92VYEhjqeLw/photos/Ab43m-txQhDJBX6T5wVRH70iGYlCpmkiVcDPdu_WgECIL1_-r3CIGpUknfSPUmwnn-vp3MzwEdJrD_3lf1CqRmtCbeo-9ZM7jdPa8nVWRpGw7BOEvUDPLMhR8I3P9N3IT8g2_a5gADlFdY5nejZms5jZCu03Y3i51fMKXtSCppOOjEuVBHHoSNIf3STGBI4YMss-4WFIoiVNF8_j5KXsfo9o7cPiZ1dGL3b_zsy1Cdh-nHKQlNO351a6vsm84VKfa6qKh-JNqEtQbqZ0UOyqYmejEd6OQ-9rTealmLAjoomcUsOptIPiswuXM1moEkQ-tfemF9nSNyVpbLjrlPj1bwFwi1Pw8szDfYJrlM6ptRddnxm_0rX1veCYYMa8plsotSmdr6XXnOpuuHovlaBNvfXk-Oc8_Q_i93ptkviy_KLE4sSFX03g"],
+        distance_meters: 520
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJazaxr2mLGGARo5RnGba-bqw",
+        name: "若羽食品",
+        latitude: 35.65298980000001,
+        longitude: 139.7135778,
+        rating: 4.6,
+        photos: ["places/ChIJazaxr2mLGGARo5RnGba-bqw/photos/Ab43m-uPIJUkcqwEO3ZX11d6LHCJ_IOZs_BlPS9QAceQRyd-pz0spuq4hfmwO4-W1m2n3LPymV32IU3UW3gEWSAhyu7teRPv_gxUe5Vse6NtaVr8QH72Q2h_GwERNMJ-c--m7q-vYddbymEO1Dk4qZKLBjvvBwbJh4zJwA7KLHfs_Bi53LCTMAUlSxiEMR-7EUfgfa92fvNaK1lxnDFhSTWfYadtPN__23KErLHMtx0leUlhda5W7_3OPCWT8GDcaIA_aPPToLBtnKvYUZ-CbmBm6aoqAi0m0phsjl4G-ZWYKm8hGcM3OSkOD2KWHM74DgNdFjO5PDFCucPghEek3lhcgufzCcz7VidcyCxkpmBJSVrjpnWmrmpEV71u4tbbNX7dm-UdmNXAyC2M45GgCcY9zvi1y0K0Dk_0zy7aRqRlHo4"],
+        distance_meters: 523
+      },
+      {
+        category: "atm",
+        place_id: "ChIJH40kRHqLGGARKyDFBOZdv3w",
+        name: "Seven Bank ATM",
+        latitude: 35.650287,
+        longitude: 139.70862499999998,
+        rating: nil,
+        photos: ["places/ChIJH40kRHqLGGARKyDFBOZdv3w/photos/Ab43m-scFA4PoV0HPOSZF8XmYWCghJYw-h_WRzncBUMmGnO3_vC0KN8Oy2nfJhtUdPritfCVtLikFlM1VHBFqAxjXS45do-DKGqhCKFzCvGqxdeL6r0qQ-cyLxBPXlg_0_DG-4smw_Ba0K0VrHSwODjf5ko5a6om96sHYV-SHKC5w4YHUVH-UscSkFAfBG3jqJyGOpoKKfoQPxUCljYZX_xB4Vk4j2zQxtIu5vCjcPG5bRxWpIy8zDKK8Ncn2h-VnHSumgXbi-Ec6qGFMw0afR8T9I3AcWG91pxVaY_ht1hEnNqIxzmS_5L2zfOPIkliei88qWVtZ2--j_7xooST2cdptEALqPfkG75jIwhuFIHADR8yKzfIMgAsVnOQP9TGum0gyPQmzKG0NnmUMB6L0KAGrwOvywtrfZ0MHJgm579MsEqaAGDujc1IpIeNLpxFm1nm"],
+        distance_meters: 39
+      },
+      {
+        category: "atm",
+        place_id: "ChIJRyR0LbiLGGAR5IQrChrZ5fo",
+        name: "Seven Bank ATM",
+        latitude: 35.650773,
+        longitude: 139.709123,
+        rating: nil,
+        photos: ["places/ChIJRyR0LbiLGGAR5IQrChrZ5fo/photos/Ab43m-vWNndg0rL9G2oXd8FCsks9mHjfO49M3ekZqZp9UeBwODWjBdayurRTYdeIUxh773A5o-8YfZm4pDTupmLOv836dl_9LbiFVVhAZBcbf7_JCW8h4vUCb2SlNnnYitC3EO4ULTjHjlBpoHd78ZS1nDfj6EdCNqpIvz-YZSGfFeoVhhngxJvsWzLP_W6o9_6lOp3NI3ywQPMd-Kl6OSeGbLK8m4tCwdUKawS8c1qyqNrGzp-poTVE64dpW8DE9YZxmKAF3AUd5CkzWKTqq4j3FsqbenMWNJPvmUnOWEZjU_KNMjSSrlIkK-L9YvdGNoccpfa0UGeHG_xhDNjZkJGuB3-T-Dqn8wWZgOCF9hMA9_8K6gXaYZ4yM-B4NcgSqXAdQtdFIcgi4fTn9SR-yQI5DeDyn89H4KrxAlo4CbTdoFB27Rs67HOnNjAEsBDb2A"],
+        distance_meters: 75
+      },
+      {
+        category: "atm",
+        place_id: "ChIJHSuFTEKLGGARk-e6RbwMTs8",
+        name: "7-Eleven",
+        latitude: 35.6507766,
+        longitude: 139.70918319999998,
+        rating: 3.1,
+        photos: ["places/ChIJHSuFTEKLGGARk-e6RbwMTs8/photos/Ab43m-uyxolnrwiCGuUUZ8eIBsK66tFmjvw79MXmESKZAkWRGXanYZdzstwNsa1GBdxdM3QxCgPMh9pZBr3x7aoIYglqm3-fWj9LytoaNaRKNihfzT07RSORvEYB6kB30zGxWdU6CHgv3m7p4wzYSIsLef4hLtZMbb7J4kqElb7_9mMpx6lHCLqK_iI9t3g7Tm5V5ukm-iag-U7Kl1pMyfkYmanasiKv8-6IGddltBWeFdAf9iZmMkpT9lpEmssuKBY880YBpecfGerNiaC5EpDgkUS1tLByhEcHIzjtX8LfvJgHhFnDADu-Ugv9rn8tZpRLYGbffqvkvBmDtn35nIcnGeCXRZptpkIBqL8GG6YYJ5XTbpRSdQijOJ42ycCz9z3P3N36XDB4Qc-AG_KPtebP2v_it8MIqKZYhPnW_KIY58hAow"],
+        distance_meters: 76
+      },
+      {
+        category: "atm",
+        place_id: "ChIJxXRGS0qLGGARZ8hcwU0AEKY",
+        name: "Lawson Bank Ebisunishi Nichome Conjunction Branch",
+        latitude: 35.6505912,
+        longitude: 139.7075197,
+        rating: 1.0,
+        photos: [],
+        distance_meters: 144
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ-X2RWy-LGGARyXAdJOa0KBY",
+        name: "Lawson Bank ATM",
+        latitude: 35.6487968,
+        longitude: 139.70961789999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 156
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJD2ty_42LGGAROVuVlD0LkM4",
+        name: "Tea Bar Homunculus(ホムンクルス)",
+        latitude: 35.6496044,
+        longitude: 139.7089646,
+        rating: 4.9,
+        photos: ["places/ChIJD2ty_42LGGAROVuVlD0LkM4/photos/Ab43m-vm2Uk-WDGDlrQFjjU3nOyNHNZtkLJyAMDIcPrwzz8P0i0ZGaYFXT_5NgCBeqYxFrZqmS3Wj3Sl9LtAhegR5l2FMQKVys5JzUXhkjdV2ZwHx7RwOhjGOt-omkRnkxmavSKah3r7WFa2KsuCArtkSITTYvMB-jqLXBqEIHsjx115GN_Het-loZFMdfxdno4lnmiaGJ2MzI86Nz5FqkIB3byhfadBzwHsV13FJBJk1Y-mxatT3p22G4Y1XZxZGXGNhqavs4nkPoH5PqWQ3pkMzLW6yN48h_qEL6TTTwofvHB5d5w61-yFIGh4MeJu81nrcST75JWiJl2n9iHqf-S0qSW07m2ywOeCLyQRsid5akNtHu7iSO0styKTfbZSAgyTBJ8BIFqDRZS0n6IcsEE_3mCMSSNBTrRWf9qFwjnwVZIQ10WQrQEO04XofZgKBw"],
+        distance_meters: 56
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJa3BvKUKLGGARhcf3o6qzk2w",
+        name: "カフェビストロ・カサブランカ",
+        latitude: 35.649662299999996,
+        longitude: 139.7093871,
+        rating: nil,
+        photos: [],
+        distance_meters: 61
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ3TmJ2UyLGGARMdoFpC8f6fo",
+        name: "reborn ! 『占いバー』 恵比寿 紅茶 タロット占い 渋谷 占い",
+        latitude: 35.6494827,
+        longitude: 139.7094203,
+        rating: 4.9,
+        photos: ["places/ChIJ3TmJ2UyLGGARMdoFpC8f6fo/photos/Ab43m-s1NmQK_GHjgFbtUlNbWB3f1YFTqlDSD2acAqRk4PIqtZM5Fuj9AxF41xY8vZXaNUbb3F141YVjNbvga39FgtLXBr8rKxIH5Wj7ZQl6RtYU0jd-8RjrJs2QVBzPQOsijNvfzqmjjnM6VRSpNBPvIs1aZYbfmvmtC0dziVXWlqT6CsWfjPJUE3mI45LfDP74TII86z7g0rzXTxWl-BmX1vdpYyG0imKuLvcc_hW9PFD-Q5BcghSVxP0BbBHeS0SR9KMBFoX_vGzFMVS9V4QzApM4oou12AkI5E9iOHUYBj2DXMPDyfZDOYjeoBgmTpfGtb2-eDL67bM5mztvRb7DU0h5F7hFjOQfZOCmV8FusWSC13jbk7t_rwDwkd_YwS7afn5k_kRr1-jblhMNTIBAc1uSZPxxHKi9WnF7Gd9rLUZ9wYbgKctfi5WgIkcMy4XG"],
+        distance_meters: 79
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJuZ39pE2LGGARjP5_Cts_B3k",
+        name: "ひがしLounge",
+        latitude: 35.6508648,
+        longitude: 139.7097033,
+        rating: 4.3,
+        photos: ["places/ChIJuZ39pE2LGGARjP5_Cts_B3k/photos/Ab43m-tduCCzGGY97GsrwXsEVAL3OkvNZ7knTwIfkU1-9ABQoYhUb5h_zZmB3dFghmIg_4abBljDCyHWgQLxAEjq50MKK2RxzsG96-7PkP4uqgz3vXSq1Io7r5OgMHRvq4ZLHp8tHuzpyalUdYKdVwrregmCfft8o7yqVknOzOUhwi-eALDdOTPrHPG73DEZ4BMYSgmcYLSY8s2sMsHd14j6in7-LfI5pPSjH9JEBD21Re0YrTGequaslsuFYaJL4hJk-sgd6d35BcofWw6_zTzNqrbPpZvwbefC_n_7PbMFwVrVFH6vRfmOxwhlvORmvMqvg4qAhwexiufj1hZHiuYoSRpcWRpT6W9ojN8-V5spmLxzO2BN8wH5CAJHW8Nxj2BhX6uKTOjG0HvJmNuTLv7XfIXScyrFwIlXQfLO9Pf1A23J_Q"],
+        distance_meters: 106
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJoR0FfUGLGGARs3FIX4dQ7uU",
+        name: "ヌフ・カフェ",
+        latitude: 35.648991099999996,
+        longitude: 139.70849619999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 132
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJnyOHbnqLGGARp-7VfyFR94o",
+        name: "MOSS｜Ebisu Shisha Lounge",
+        latitude: 35.649628,
+        longitude: 139.7075047,
+        rating: 5.0,
+        photos: ["places/ChIJnyOHbnqLGGARp-7VfyFR94o/photos/Ab43m-vBVb22IOSBGxG5i0Oyiuc-ylo8ccCe98mc2wyaIxK3Nq60KPbPCYdBsPpK30C63bY1mjpe1YfwjmDi_jt2AMQvi6QLxqc8M5pWOT3BKjOO2rnQCtAgaWA5h4zy6RZ9Qh3MNc_pwmwixpCw3_qxX7_aDR6VIIoQIO15gxtYKr2FLvJ3lkBq9k04HYAqe14i3ZT6JRz3R6OWWaUUx88hDln4-XhT772ORiXQ5fuAZg6gnPSKPkt3zuUMSk3pmh5Ul4Ie6RKP8zBlGhUsEK_EehQJShZ-zZkSd5d97682T3xxzOAauZ3UBDXqwSSzI8YH53E13O-X4mZnfdbp4Y2_H-J5NmvcLzmB-rlRhN8JtfS1C8SOVpuvssnmOcvmcH7aC-6a1LwqePlKL4z6Pqpgu68EhUzzFVPxoooDCDzxfraykCHV3O5ABX2apJFet_BI"],
+        distance_meters: 145
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJA_haVEKLGGAR51FC23hDrwI",
+        name: "FRESHNESS BURGER Shibuya Higashi",
+        latitude: 35.6514987,
+        longitude: 139.7091982,
+        rating: 3.4,
+        photos: ["places/ChIJA_haVEKLGGAR51FC23hDrwI/photos/Ab43m-umFVJ7bR_qukbO7ftlrmaFka6tx-SW0vkmqJvQkwaIj7w3mVdUInwlcTkNzv9STgwwXrP6DGw3UnStJ_ZF79l-l8v1TIBFhygLaltrotJ9-ybzH4No1pSL3Zhjnnv6U_GwepBDp0edgPLbb8DgVRvmBavUYmM-rbsfYT2h7p34S8i7-hTKLC7rnI37zFx2SjqsxFPRy3Qhm9Rr4I_dLS-mwULuduq5XHrHKoq359OICIuAo93eVGbVrgjZ_b4NaeB228KBnSoRzUTWupd73Zu8xULyj5a4iLmT9d6UC_JhC4yrFdnfTXB9IhjG_NcTSR9954TXARINkPxjj4gZxlEUvhZdINMs3WnNTn_hSLFlS3dVXzzFyiEo_hReBDxSDZcL1wW9boxICnj9vpnSL_ed7fdsnxbW8jx44C4HgRcfuR3K"],
+        distance_meters: 156
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ95UWv2-LGGARrV3bVwzWHv4",
+        name: "Stand by Coffee",
+        latitude: 35.6487607,
+        longitude: 139.7082758,
+        rating: 4.7,
+        photos: ["places/ChIJ95UWv2-LGGARrV3bVwzWHv4/photos/Ab43m-vVR-N9j8j2YJJ5N7-riFueO4qvXcKnlbiRntO88pCqiEFt-zqR5gN4AYRMr-alWiNfv66sgClRtkqsOHkgeuKQDKJRYIvm5QGcbqOuftaYpWE8a9pH71KE8yq0rIPq1H9-7h3bPVD_dUA22CCTqTR8OJ20SyUtm2mEOKj6E1S8MkR3XqQHYPVgnXTVRqF3oO5Etr-jF7d_yncOanldjmnR2MPOBb61ABl95wVoHvvaoNmRGLY38wCMyQ4Y9mxrr78b-UaP9_yx5wjSMwrin1q_FhjaCydwZH_ceyeTXzy6JU-2VbId4qIdNi9-AlkrqwmhF9CRCT3rN0GW9aG3PoLy9xMplFkfqxaQUC3zw_IG4LyeTbRm1MLplNRciXcnTKm0qwjpyI-f_nKgYtJJRlZBMWQpQ5MEpkikkv84HkypSsXH"],
+        distance_meters: 163
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJIfPSMhSLGGARPQ8MsEDpLBE",
+        name: "CLAVIS",
+        latitude: 35.6505576,
+        longitude: 139.70720889999998,
+        rating: 3.7,
+        photos: [],
+        distance_meters: 169
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJG4PKtsGLGGAR0UFBL8sLklg",
+        name: "SUGARY 恵比寿店",
+        latitude: 35.6486383,
+        longitude: 139.709427,
+        rating: 4.5,
+        photos: ["places/ChIJG4PKtsGLGGAR0UFBL8sLklg/photos/Ab43m-uELoIwUwqtVEF0CQp9blvVOlFlNY1h9qv-Cp-3tJU363PnHpVJ5-Z70K0jzgEnkNZ2MHxjL0hZO7kcAzQx-JTnNLzqhIOVPmWOcdzDUZOty-VlP4p2YetoaNOxK9E3FI3aEG6Ng6v3HYFsTr_HaGmbZnSz6I4uTJvD64Ny8TbDtnn_mlbrm9uFEmpScY6DzIqe7plfe8D5aMZ7X3Adv7Ez4bCeQnPz3p4eURgUwko_XermeOTlWGm_Y4NebAnbzwbeFTmO8SypCSqV3KUm3-aXHW9mdbusRjsDrdoSuUUEOaasmpOxyWLexgxMr-L444YFVXW80woYlf7apjFWJYR5d1lULtaUllnIBU_Lk9kNBpaNUqSfAJklg85K6jeZ3LZBqiZNChtnfzGWxCXjw4buAOOdx9rOW2omgMSW_c5VSJwCRrI98nEVyn0DMA"],
+        distance_meters: 168
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ8zsr4JWLGGAR_8NTuAXFHrY",
+        name: "as always ASAHI and CRAFTBEERS",
+        latitude: 35.649904299999996,
+        longitude: 139.70905299999998,
+        rating: 4.7,
+        photos: ["places/ChIJ8zsr4JWLGGAR_8NTuAXFHrY/photos/Ab43m-svCT7nOTBIjGeXTJZd4PL7l4FtoJWKwEN8Ww9ADMJNsDihk2964Tu3AhbrPyHoFRm0N29PHfBqLx1w6ARd4kMfZXaLy8N6spGU1DOpFlY0wE9pZSQqX0JlZsFokpZ0RK1wZ1XWBRqTPiMQHHuZEADrGjmohe-6LeBa9mL8Q5xciZYKnYgHa2ZRQB5iRj9HIevIWLB-z0ZHlscwmkvNsv4fuGh8Wt10oMqO_M0wxQ3uMVic30EGg3eo2k8GNJaaOQRe5prYkAYjquSK99LfwoLs0Eu8AJ0hHcw23a6tfXGWvSUZWDznkksTBeo0oofLtY0jjDX7FJrC78doXvFEOQg3LmMxKssVZuY-HP_EmcKgw7trmsqPcHKB-UZq9tVGdXHoCx3Xby5mSfrnkfeaIeSRqt_Z56nbD3rvRSbhj2ij3zFe"],
+        distance_meters: 23
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJj6WgJUOLGGARRaqBzG55MIY",
+        name: "nomad",
+        latitude: 35.6505343,
+        longitude: 139.7089599,
+        rating: 4.0,
+        photos: ["places/ChIJj6WgJUOLGGARRaqBzG55MIY/photos/Ab43m-vK2ODVgeprhtqbjVuuepsR6ricXdI_i97P_l7mHMd_iVGNMKC93aQxntvgLNuDwCAT9uo7G-eNBrTk5xyrLffUmKN5xt3FOT-MNGFKKJoiNR92VfNLAL_pvQzTyx4dl0SO3mPisfng-pUFQbeH8esuCTdE5CRuX5l5oxb9oLueqicz_pNJdP0roYZAsgBS6UT3Wzm0UipcKJduIvf7C5Ll5wriewbkEACAQI1aHmiAguj5-svP3eRDYGsVmM2g7vaCTcxqPJFW2o9Sbn1iWGZxNtmJYGiBVUzSAHzwFrVB6Br8pqCHUHS6QXF89zolwezwFUvY45xPhHyPzq5ehACeoickRCdbIlsxE3wfzUIxTulUsg0R0wMBIy0KLsu2ZSBod1Friklgl7JkaeGBavvpG5pHwOsZcEv-cXBeH5rPxXKR"],
+        distance_meters: 48
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJLfcTegCLGGARNpCUktUM5Z0",
+        name: "Kuruma",
+        latitude: 35.6496734,
+        longitude: 139.70887539999998,
+        rating: 4.9,
+        photos: ["places/ChIJLfcTegCLGGARNpCUktUM5Z0/photos/Ab43m-taLPed127jX5MNRqMRgNdTiqxBCKcLU3IOq0voMkuumCs5eGiVSZSMCf_rWuaVHoIrPjB_genFncBNXay28a6b2oRkwkWpJ89zsDwA8BX8yA3-bDVYh_U425SeWZssVkLywXGhFNE6aKexhSGtvUpLNZdvRxSxgN0mnoH-JrxoFQ3LYSroqiIbpTtBJTDLWW8RWmO9jJfl9VARtqMbTndm6YpKIb3cGonpRSaajN1yEJRmcAWtnHC0pWaTxFYMGPbEdiSLPWODqOOLdfLb27uLFecOH-Z6aaRsNWfaL8LJgd9Si8w7D3e7B3Zym7ZNQFZjMLVuHMyxCHFpZXL_3bbUbSAZefTIoewBjZ4z6luCO-bZzo6CI0cwqxXPPSQ584qZ8PSwkee57Ibqo-BE90iMpIatSq28bcIBO6PqAfz8gw"],
+        distance_meters: 49
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJccuuLkKLGGAReZGXqB0Jqe0",
+        name: "Uokuni zushi",
+        latitude: 35.649761999999996,
+        longitude: 139.709348,
+        rating: 4.2,
+        photos: ["places/ChIJccuuLkKLGGAReZGXqB0Jqe0/photos/Ab43m-vvwM8ddL9PuossgMo09mQJDmeIjdnNnOegm_pHbS01ujBz2XTrdFyYDmUlYP-jmzG4vkXjjHq4KmjrZ9k-_BLOWxs0jpijyq_T0B7h_LfslENcxI10h79G9s0264vaQT56dLJGAvRIZNlp77rxR23EhYvShWdPBnaHIRLDzcEYf8-yuhZcbmSW8evLdjN8q7j-TBBco3c4bG8GmZaF33j4lmOSVy7uvKlITpE3mmWyObaB_GxLVhCOCSZiXBOJsdWKyujT8-FvSj-ElWKCaT8eyU8fNBnAXSoW9XiUu5bRCjgqybf1l3ZnkACNlHQgmnAJAr17qO_IPwET71Qj_rxClIjiWUEP9KLZirM2tSNhv6u5tLl84p3GDzOo3QkmwAemgBd3su6VH-cvk46-Q1hIaDj_sGQ9SO-y58Im8OEeMbSc"],
+        distance_meters: 50
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJD2ty_42LGGAROVuVlD0LkM4",
+        name: "Tea Bar Homunculus(ホムンクルス)",
+        latitude: 35.6496044,
+        longitude: 139.7089646,
+        rating: 4.9,
+        photos: ["places/ChIJD2ty_42LGGAROVuVlD0LkM4/photos/Ab43m-sWGQDE5vmdyxMLMpNtYBPltGwmCeAphbP3ewLQUKVWO0WXJ5u1RZHopw_Twh6kMNqLHbP-lA6dmRWeag0JE_DaPWsQbhl-bVhyUjm_ku88NSUAxsvzml8DQ8khf8aKS2UvjhKgLtKMIO04hILFZYifBMxY-iC-0aEZvRgzyn67lVnlnRjabGvybkIx4NhR0p-3aIwBertB3zDwdcD64kb-tC1xWbThDmPM3h9t7q_bXmxSf4tuNYuxWtca6XZVVfL_XNeZzBhaPPof2sV1rgpkByZ9R1WN5NIseZEmqIS0PL3xUrIFYL3oetaE7L4pH5UBIhakEsRQ0cuT_eZudWr1aFOujPd-10StqpRsCjR92bsTGB-YFSR-Ok6llpCgjiDJ5oy6NtlZtDZTMF3bNTg11y3f6Ud4dXtPDyskwNtACvogUY5jcG7aOanDFA"],
+        distance_meters: 56
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJVdRX7AKLGGARLLdJ6EXK8e4",
+        name: "sqall",
+        latitude: 35.649615,
+        longitude: 139.7091577,
+        rating: 4.2,
+        photos: ["places/ChIJVdRX7AKLGGARLLdJ6EXK8e4/photos/Ab43m-tMC5cUHWSVZEKdKC9TuVr55DpPnNfZocBDG4ohvqd_8gW64ptLad07JclWwOqdG9lqElOSrNC3-3gzy_RT2WbRj2jASL_y946MclD75DR8Wlw6jwrgB1ONnHRO15jv4DZ2hio0_C9ggNL1mUaQEDsd6TFpHgPuPjjk--2HOLd3C5iRRfmjnmuNTuoNHfQCbSWhnapYsYbm9ks4iYLqFgrIJAztq1GGcxrsOUfG_rM7mK6ArVg-gbnnU9mQBdy5Gs3ngEQYiNFSPpMR3kRyapPIk-wwbdMG320lseauaysozagwAQn5Klo2pGjNpM_sF7_S-js97kcHgHXr4T0PzP_JjQ8AvxQdi74ie0N42UTOi0wdytt48MiwiUu41nPRRxSsMmCebAAIAMqqJR26X8SOZivchXvYprmDwca9w4SZ4Eaf"],
+        distance_meters: 57
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJHRbzMEKLGGARyTMSqagbZLY",
+        name: "Nakayoshi Meiji-dōri Shop",
+        latitude: 35.6503006,
+        longitude: 139.7095861,
+        rating: 3.9,
+        photos: ["places/ChIJHRbzMEKLGGARyTMSqagbZLY/photos/Ab43m-uQ8J6-NmRsr1UJMuSCQyQvlzjIB_HUoYe8NXA0kPErnNI9IzbeitpctHZR1A-6sWbxKYA2BsbNUkJCXnO-QYyQMIx-UXxUoK1Ds-NtJV02-SR4khRWCTGqMPIEbpZMH_rTpwjhJXg1QvAO-iTDEvDg74vPN-F_3yIHxOal1rW9aYMpWBOuQZnZwWSkCH1_WRRa6fIx1zYkUsvMVSlDm2NyNzgBVURzNwCdktKcCzf9zUB50mjXupvFlbGcGH-ijKDmUCLjYZOmy075Idcef0bu4m3jIGhpxxxll4K3Ug2w22mwL0Ysb2JnKRP-dSPyl9TCMBI1kzUWXoraur9ZVSEI4xxbUIGLA8Z7WHCqah3cHnbo34k33uFw7RCR70FVUgVJHUaq4SnWRnvBmOTIsh6BbH2EWTRjijJNBaN12kL3aw"],
+        distance_meters: 57
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJHRbzMEKLGGARjd3oqimfZvk",
+        name: "Bistro YEBISU",
+        latitude: 35.6502517,
+        longitude: 139.70962939999998,
+        rating: 4.6,
+        photos: ["places/ChIJHRbzMEKLGGARjd3oqimfZvk/photos/Ab43m-vNoSiod4B6yflGThpO-0U2zI5fNptGBCVfePAi-PbI9AjOjUnxsUOTPMMuyJ1J7F7EJ4fpQb6cUPDUVcT0dBloZOk_TANpJmCWOwNzle110AHp1kjGlUH6-asjd-9WKySAk_C9dlSfrqVtTPOFpuRdgLPc3PEK3lf_J6Q0O6SnGuxvzj8JzY2AXxAEuQg2s26xujaAr6O8nh44E6ec8Xdp_7kPjw-jhCAhvR83ZOhj96dQVTD-niq7ogQRtQT-QzyvUoj34u5NOeSz4oDCoWUhIF7XGdt05DiQWQ3uzRs1uLtJoI8VNhoSh9INL-mSOK7P8NU38GiBt_PJHxeCkwVt0CalF2b3xYBtZrm8IbB7JM9L9lzKD9rowRvxwceNbm6OlrTA4F1JzMIdqWJdFm9f-Mjf3_kG3eWwfPwJ06g6mY3hW6BP2CEfw3KwRA"],
+        distance_meters: 59
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJz9Tez1OLGGARPktluwaFGmM",
+        name: "vivido",
+        latitude: 35.649674,
+        longitude: 139.7093842,
+        rating: 4.5,
+        photos: ["places/ChIJz9Tez1OLGGARPktluwaFGmM/photos/Ab43m-s3Pw-5GWeDnq6LCtasjJcdFnpayKWEiJLap3SAD-dxsCPeHjnf9i4tbSx6ShYd-AdH4N7U5YU0pwUq8dUwdk21b1krC84M7r1aPBgVo08ICzWNQArhC1nZlSEIH81tMdcJL-a6hQMFqTNMjDnlywTB7bqSJzrV9lRe_KzGXjadj_cEQOxqw2gdeWF908nP9q1sKtTR4RqxPLFQYs3C2F_MQZnGcFs-2RvcExzQuMAwLqjEOBxL_qB8kM0dfHS8aGvS1935LPZ9AB1HFlZwnGfoge76hzc1lfkEaKSgArw_4St2_IfacKFxEMp9jW4dt43Ykbt9Zs5UJqWdN0GzoHvppn-TGU2rZbzbB1CBwwx0T8E-Ma94y-25ga9Z6n8O66fhzGp97rRxhwFvcgInk7wivYzzwHk42aW_Zs1wPvtiPfJlnNy32JRIrmgReQ"],
+        distance_meters: 59
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJd4b6NUKLGGARtk962gShFs4",
+        name: "ALMA",
+        latitude: 35.6505657,
+        longitude: 139.70936899999998,
+        rating: 4.2,
+        photos: ["places/ChIJd4b6NUKLGGARtk962gShFs4/photos/Ab43m-vPni8PR64uO1kQKBB6zvbmIWmZeUuQ9emZYRSkqiLoIPTrKzdG8ui6cgWYbRg8g5OHTIEC8c7MYBXVazq8rTiqfdaR9FnYcenfj5CMuPT4XnA1g74EQGAvuDMNyhYsLjMQUVipTCphiBRRc9-9d93EEYOGYBnAO0ZYs9eO4UstcvvBsjHZSTvTiWS58nvn8H1PgxgfpEAcqa9DsQkrMviv5dCBqE1DwH8n0Bjzqh9T4If0Fu05ChhfN-wwb6X1URN3SMMSDKtWb8h1pjP6G5FaEynzzQBK4anJ-0EGA4pzwETRwQcuQNJ2Kffl5tojipRG4ZAdZT8Ky5a8W7F0y8XL9PS08qO0HcPdKhuBRU2vxhfattNW7rgG-ooabr25Ep7PYTOHIaGX1wJuurAM7ixB-5Z3TLktG1xuRXoGFfb6sCmcE4Q236ZBRevdySKI"],
+        distance_meters: 61
+      },
+      {
+        category: "bar",
+        place_id: "ChIJgdgIotSLGGAROBEDCtUGsTE",
+        name: "BAR MUSEUM",
+        latitude: 35.6500437,
+        longitude: 139.7091651,
+        rating: 5.0,
+        photos: [],
+        distance_meters: 17
+      },
+      {
+        category: "bar",
+        place_id: "ChIJvQDJbb2LGGARAC03dCJISwo",
+        name: "BAR Marble",
+        latitude: 35.6500398,
+        longitude: 139.7091779,
+        rating: 4.5,
+        photos: ["places/ChIJvQDJbb2LGGARAC03dCJISwo/photos/Ab43m-s-diL4FaVhaXLmgFz2-GP8rqiBQYC1kR8fUTXGqDgXeX2-rUn0X-xkUBz11wi_1-GDhezTmGQElwtoG7KvNf69GrVzo3NAqYkcDK4wIUiWVtCd6yT_kkpFDK1QYAVwerIFlAJH05UmhgFvBzRpLdBdUZw18Ufy96hf83O7s9FdfWoNqsRnjcxSNTvG1UVireZF9US3SFxnM5RL48pHc2d-SGfHexBj-bq-Zx1dYzwNOG9Mh7TKkAbP5MowJdYrZqhhfY8j1Yxp9QHev0FDbZe72EK7Kd8MnmS1xa1iDZilqKyLlnW-qcD3qqMVCi3A94JtJ7KtguJMfgxiQ-I6ZsmJayLF5-FQDL5UUUok87e3fbUrNEcqSZ9FRI05gagtjur_oJSXMhc3IwRzR1yIKL7OqlnOCB0_-9zhvO4-kUcCOw"],
+        distance_meters: 18
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ3Z16rDCLGGAR3J0K1X-BIiM",
+        name: "Five EBISU",
+        latitude: 35.650048399999996,
+        longitude: 139.7091876,
+        rating: 4.0,
+        photos: [],
+        distance_meters: 18
+      },
+      {
+        category: "bar",
+        place_id: "ChIJEwp73F2LGGARN3dXQz9rD98",
+        name: "bar ALAN",
+        latitude: 35.650048399999996,
+        longitude: 139.7091876,
+        rating: 4.4,
+        photos: [],
+        distance_meters: 18
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ8zsr4JWLGGAR_8NTuAXFHrY",
+        name: "as always ASAHI and CRAFTBEERS",
+        latitude: 35.649904299999996,
+        longitude: 139.70905299999998,
+        rating: 4.7,
+        photos: ["places/ChIJ8zsr4JWLGGAR_8NTuAXFHrY/photos/Ab43m-sRqQ9fOHvpZjNHuY5slQRkaLSFkeaYTxHfDiRBFEYLGl2RyYZRvpJNGax-h-Qhj2EJAM70DX4s2hhkaWM-DfufS2g-E9hg0A5xiZWKgA8RHSCZYlPBKcMKoYOToWAKQR5yi1tzJOCz669eM1WZNpbvsgSBopKUsQZ0IEZ8kKSCIIOUdRIcU3M7WJ0eO-uCM_9dj8p4cRjoUpImBb-7HXyXuISRXGfQSmjO-XapxZ5YS-xzPghY_WOSz9UxZ-Lz5Z_kMa8WzoTeP4HFSZo9XyselUfafx1ixbWFaqN3NNdg79Ej0p62B2nzU26IGx9a8b0yY2Um6x2zu0hpoDFYpTwfE7d7bN3mLgsYD7QR1BLixXjKFFwEKNwGVp23knvh8TDRDXvFCFUNyhNkYT4ipYC4KQR_XIrwBDgJGOPxo_nqJXv2"],
+        distance_meters: 23
+      },
+      {
+        category: "bar",
+        place_id: "ChIJOcvLykOLGGARZa0T-39fwCo",
+        name: "B-FLAT BAR",
+        latitude: 35.6503733,
+        longitude: 139.70899219999998,
+        rating: 4.9,
+        photos: ["places/ChIJOcvLykOLGGARZa0T-39fwCo/photos/Ab43m-uT1H8gpi34CHthAJGmr7PIf-EiuiD7NzRwXcsmT7noeRckowvqmC0j7k0av2Q6sZHy3r4T0onKPaTOjv3bQU0Jwrk0eYCdsyt-9DRs7CVWHy6f-fU32Z2P5SEXWskCKa61ty0ob9vW2dgPs8blo0xaqkPCnldufGFPiLPZ_mHf_eej7AQDIcwGlkWRJzsH3CbOCpwZFkYzRQZ8hp80JmYp61iyo6__12OX4Gj_85Ff9LeQJjC4LAElvZTYP7LbgovRlqk4EJY9qQZ7trRbjPs3p3VmvWMvTLzhyp1OKsUAnu1oMI3pvFWMKQAWRydiG_AFywvBzdaLgHUOuLQiQp-5ufX3ETtwKs1iCTEL46Q_RP76AsG9X3wj3rCi39NW_h-C0amCeaB6kZOTma1UjsaERAHQySTFCagV1W0jQKQzzCnOM7VdFWIrpqgiJg"],
+        distance_meters: 30
+      },
+      {
+        category: "bar",
+        place_id: "ChIJg5bZqSOLGGAR1s0IHTTxDgs",
+        name: "Bar en",
+        latitude: 35.650443599999996,
+        longitude: 139.7089712,
+        rating: 5.0,
+        photos: ["places/ChIJg5bZqSOLGGAR1s0IHTTxDgs/photos/Ab43m-vfkeVRwEn1gKqjyraDRtsxxOr83I6lfG8ZzVb8TGgRAkq2dMvlMxikzm9SSci8C5R4F5I7eVu2TMHSAtANlxfODtEpzIlLJARcFa4d602z8ujncFy3T1yVG53XORX2jHeriCDdpCL_tUibY2MHs8RZBTI2jvYHQOxAPmfiujT4wLANktAPljaJDMxWh3FPyUR2X2Yoe_LphPnkoU4HH4OyEDDFjXF9zd0YkyJhIcyjpOd0I67ohkVYK02RvP2G30qB7sfobSoy_5V539-4FrK7HJ8u2pIfpUt5lxLRWoBqIv5DN5IOldFmlEuM9vpFyp2Y28mDO4VBmKymy1AyFawe-fcq9TQzxWpe5fNntjifSzjysBJiZAj1GFnGPRiseugTymiW1-Zk_9kODpp-7QUwGgnT7M8FZmz8K6DJg8lbguLOmMcARU_eqbINJWP9"],
+        distance_meters: 38
+      },
+      {
+        category: "bar",
+        place_id: "ChIJj6WgJUOLGGARRaqBzG55MIY",
+        name: "nomad",
+        latitude: 35.6505343,
+        longitude: 139.7089599,
+        rating: 4.0,
+        photos: ["places/ChIJj6WgJUOLGGARRaqBzG55MIY/photos/Ab43m-son-urs2id3m-6Kc41myyf1jdnFokJAFPZkwpd4SqkQeNpYRbGgljflFzlIYQ9EKLsKN0jVY7jl-Axyoi5uG5XvVxzNJjE4ZaY5eAc0sV0jwXnEpG61FoyfSL3DIYdZMRu0NTqpzuOVft8JmDKeQMFXzFCGGUaaRwyVOuTRKDXaXbfw2nVtzf1QYy8QXS0gAmjB9dMnQObN6Q5b0Dv_cgCb_k4kb8qnnunotIGpoGQiNbLoTGednT_iBoHgNEfi2c63pKoakV6nBY6r2CfJe55aLuT7_wYszpN5K_BIUkEp0zq3uRGjunCYYJ9jQ3F3jGlYyWzEPT2AQfxYbgA-lVpxYsckB8QIao1W0suZZwbqoV73zoGV3stBeLHr1X5NiXY1oO1NqYwFdPBvgiUiGXbsoVqA-NIFh4psR39ZR9zfOW6"],
+        distance_meters: 48
+      },
+      {
+        category: "bar",
+        place_id: "ChIJLfcTegCLGGARNpCUktUM5Z0",
+        name: "Kuruma",
+        latitude: 35.6496734,
+        longitude: 139.70887539999998,
+        rating: 4.9,
+        photos: ["places/ChIJLfcTegCLGGARNpCUktUM5Z0/photos/Ab43m-sPmZjBRuQhqee3KE_4DZlUf4wmhJUOh_mgPnsfKtPYKIgwD_Zi9vUAfaRQvhcNQnM0NX74EwprwkRAl2RRxOUpGUilFE4LyVVQbp8sWPnK4-zxOtjLlp6QwVxN6gVTck76bjjdCpPSUuUwzdXche9mnCgmCgZgEuxjd0J9KEda8enlpWjGNpyckzWQPCuFTe1oBC9pdK5VaG4eOt-hWXHyo-RWezATUZTYvDNdvsV4QVrL30PsjDxpR2cU2crtaiXZf6g00l2pA5AFCp051Jmb04g4cnnBgd4kq2dRRYgFAAfsAGFuVs5-WTfhjfiJsUNfiSCai98vY0Nz_8Qu63B760eOzJF7EhCYFK2h-8_BlPV-b4vq2yLeC5NFH2uDsyDP4LUCFHfgItyrgPwuL57gb7jUVFVwkzn6bcHr-PbK3A"],
+        distance_meters: 49
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ8Y06y0mLGGARguQYxkmqylM",
+        name: "Bar Tafazzi",
+        latitude: 35.6503868,
+        longitude: 139.70947150000003,
+        rating: 4.7,
+        photos: ["places/ChIJ8Y06y0mLGGARguQYxkmqylM/photos/Ab43m-uEWilcY31r694WL_Eue7xrIYc7w9nazk8QO7h0vnUTAhraSmu5hN4rtPbyD7G81fyFUhP2ES-gEBOv-E1yIFDia22px6mqOWTPsqO3vXipDuMSjU7ZEFu0eJ8I-Sm5bvp06c6VvnKELh3VROYmddMIYAnMwmXxbkUp1yMQwPjObQgwsaRvlWIl_dhdoXEZ30xcqAB2Nufpiiqa5FhPRQr0GrD-wmB5G30S05DJC9Sp0iJFguNMW6FjG3AvbxzVAZ5bZdPghZ-81c-VlyXZ7jHB39p7QhTZvZ9haJRDgMaplvoUwQ446eas83-RsJJsvx980-e5_VH4fXvzgmdGDt76y_HopLXh--g8_0DyycGbEBdBtKucwd4xAY3Xdq85tYVc1Rc6tW8Bq5HyM6_zSGOUDFuqJs6Zs_W1CXnNmYkneWhKBFwT2kYRSBdFcQ"],
+        distance_meters: 53
+      },
+      {
+        category: "park",
+        place_id: "ChIJ496YIBGLGGARXE2vO9WynPc",
+        name: "Yoshino Risato stature",
+        latitude: 35.650664,
+        longitude: 139.7075635,
+        rating: 4.0,
+        photos: ["places/ChIJ496YIBGLGGARXE2vO9WynPc/photos/Ab43m-sDByUtxpBvpbcHEBzIA0cE7YfzctpwCepyvY9T4CvnqXjOpF4qKJcOZGnWm9vuiRlZsRDFiqJC49BH6ZGPcjR3Z2kPnfrjhhWVootWSnXXcJNvE9PFUAi1fQH5KI31I4g-KJtyNwE5rOafYTcuhPx4_V1TjD40104te0g3VMBabDOHc16vQyqED1hbWeskx6w1N-2WGnuXdP_gSsCwLAe1N1TZa1tDJ8aYLpXhzSOKetmS-qfHezObX4Rp46eM4V5k9rfQbv8kHbzPHqWbyrNo46w7D79MzAJgzrp4up6aL78MfKD41Vx6xjBMCDnv2HjkhMAidTJzGoeYXLNtDv_2s0cjbNA9Ne8rZ_CcwxVofSbxKT7A_HpozQgafMc3tpMxi0JHpl1eDKYvzcDtPnE14dlXle3HhgZkENFwqxMObR7-"],
+        distance_meters: 144
+      },
+      {
+        category: "park",
+        place_id: "ChIJNzCAFEKLGGARkv-S5-T3p8g",
+        name: "Higashi 3-Chome Children's Playground",
+        latitude: 35.6509704,
+        longitude: 139.7105522,
+        rating: 3.6,
+        photos: ["places/ChIJNzCAFEKLGGARkv-S5-T3p8g/photos/Ab43m-sIVWIvUcqdqxsmwrcP32huYOGgdMo8PY49IoH9Uzz0kK7DffJ5n2SyByomXVLjCoyUrdyonhFRgKV6vhwhcdU2gkmSE5rF9dDSscYfzCYSFd3Da1Hysg8HspOTSOBuUmkS0J4JANr4rC1_I6welRBSwZDiEXbNaGwRGqNHSh0d8GjEv_sIevbVNW-M7U0DSPP4CfcBjZUQvihQYDPjdpKqr58CyqrUje3bzXui3dIAicZW67lBrfWsspdjHZwfjfDX62SKxIFDLYnHJykEa3TIu4pe0MGgGdSNzph9V7SOzspbSMdYm7hc8S0Tj9fhUwlLouzy4k4LgntTFCDgxcoi1w6f_8wXx89sk0nSapON4AAOYhjOfJ0-BbS1HZSLZI4-79ya1l3NywsGfEKrpL8IiOw0EBgg4DtYPfW_oVYTCi9r"],
+        distance_meters: 170
+      },
+      {
+        category: "park",
+        place_id: "ChIJLVfc60KLGGARPW20i9ZZTdg",
+        name: "Hikawa Tsurukame Park",
+        latitude: 35.6529479,
+        longitude: 139.7099553,
+        rating: 3.0,
+        photos: ["places/ChIJLVfc60KLGGARPW20i9ZZTdg/photos/Ab43m-tj-WMjDgq9npSq9YsA6qQzHfOfbrI5aO6nEmFz-xemM5FMer7ZKEdpcfsvCSNGOfnN9nGg8qg4uF1QGQkzODvQu1_z9gZ41MEBWJ8m6f7qEBrXoqtLTd9I40LQVMSZNwwXUXY-MgvdqWhcXLu8H-hTVauBpJ3zjwIpVxWTuu3ADZJekGCxlly1xYfs1huyOsgxSMyAjrj5ForDFYulVbTUaVU_7uw6x0vLo8Yq5ookTXm6Ylk688SlvE4wuTCzRhnjtGR2COnz3_cd7l-JaGrkcCruiLQXrXob3JX9frkCNaBqL4YrD9-nDoSAy3d6olHGWhxcvUy-xoy7vGaZGI76JdE8Vrs9hRGVSYkPg8WRuSgSAjTtHidCsekiHT3rpUaXGVQ4GWQpUS37wR6aLsTAX7fQmr9cRmvMIJ0ltduQ5-49"],
+        distance_meters: 328
+      },
+      {
+        category: "park",
+        place_id: "ChIJ-72d2wSLGGARRYkV_hk1v6c",
+        name: "Ebisu West Gate Station Plaza",
+        latitude: 35.6471249,
+        longitude: 139.70910340000003,
+        rating: 4.0,
+        photos: ["places/ChIJ-72d2wSLGGARRYkV_hk1v6c/photos/Ab43m-uVxSqA1dcUKFSAybMWbx1ONpVIjOmwcw_AkigxaufXrHhtyaGblxBjFp6mdGufWknRORnz9iNSBEpt2uwB6wcNGywVgPCrztCwaGOaxLcKRR9HTqlSxSaxh5wDyS0iy_Cab7RzJcwY5Wl6CJKgy0-8QXdV4GbQuYUW0V7tefgU5y_qupp2H1xAqJCHM0KxGRB-LoYDZgqO7ICH-49pr_NlVkmM2mY_ho4f3KBrNIjBDBmUdwlfxhGHaBNZcoc8ngbQh9wjIRekl2BgIQktzFy9o9wlmXWK8Ln068GZFkJyB4Gadze3VdfvEyT_wXa_nPKgY7rg6b-nNkeigcVety4EebkcP1nNTBmlXkRw4d4LLKUnN_kwHr5HqMva3g4Kme67FtmRsdmXu6cLJZqZyl4OIlXNaAvUBWncyP-73XwubYddkxNC952p6X-LlA"],
+        distance_meters: 332
+      },
+      {
+        category: "park",
+        place_id: "ChIJSylf0UGLGGARpQ-MXDiKLuE",
+        name: "Ebisu-higashi Park",
+        latitude: 35.648074900000005,
+        longitude: 139.71177319999998,
+        rating: 3.7,
+        photos: ["places/ChIJSylf0UGLGGARpQ-MXDiKLuE/photos/Ab43m-vwydOXaj03oWlRr0F0CYFnx9U_436yM4-OguWVsZUvYqsvsi1ugSwX-IjOAPbu1upfpgdLNX2GeDpn_HyUQEzaoqij5vT0nT3tltOe_k0whzUP-u_9I8XcVvOnkpebEBdpYWdOlSujkKKslxrwwaMcVMQNQpgmARDkcCBRl_konUy31g2cdMDSK5UGAHH86cNhsjFphmuv4kin0FCo70-t-v9qpsiwpHX7Kc4NoDiV7Dm-y20HXWi7TPMAeWsuidaeVXv7aw_gRxiHkByX9vC8ceQS9l10I9WJmM7nOCNaJksjtszej3BNy79KZ1HXdkIpnWC8axJEeQW7dexlkCXniy0_C3Fl8NBpWLACG_U6UvrO6Bnw0sMjlkDMkGagOZTziad5DMhI9oxbNyfevXZBAT8ZjHhocF1lVV3p-5zzyak"],
+        distance_meters: 338
+      },
+      {
+        category: "gym",
+        place_id: "ChIJnyE3ikSLGGARMqz7m7vh-7Y",
+        name: "VAMOS",
+        latitude: 35.650262000000005,
+        longitude: 139.7089814,
+        rating: nil,
+        photos: ["places/ChIJnyE3ikSLGGARMqz7m7vh-7Y/photos/Ab43m-uCO_VHJD9ej-sFQd4O2RSbKbNJnafmhesLMx2Mkvwu_THXgKVKPOuIW_sTBRowNIUltFosYIGFK6NWobMgfDnpaADEZw67DhO-w23olBrB8oQqKPUdxvu3BEa3A9Iok6yEygmFomEEiCAmZoOBG6UB4oNxScQvf-m0eJM1v8V61upf6i6yWVm9YGGE0c1TgBoGwFMsqU5AetzWhvaNjXEQ8tUAfh0bCk92rw_pRQQaJF5dbrtbmewE8F3GuB7WIoMpZvMokVhECkgRhJfZ8V2sBcWkHPxJrOf1V-1BumHdzjcppu6L8wm-Jfaitq787LsbIpPVUqPyuM48W1JNI-u52pb8hBie66yVAer3rzFgt1hYGyXxzwa3lM05CGxnimoAWWTdXdBKTTsrp6J6KJnJ38Q4YeQoZHsDAWfIo3SC7DJ6L-IGA_yuIox-9ReF"],
+        distance_meters: 17
+      },
+      {
+        category: "gym",
+        place_id: "ChIJqW9H36mLGGARuIKzGu6iORM",
+        name: "ピラティススタジオ『ルルト』恵比寿店",
+        latitude: 35.6502869,
+        longitude: 139.7092482,
+        rating: 5.0,
+        photos: ["places/ChIJqW9H36mLGGARuIKzGu6iORM/photos/Ab43m-siqeAD6N9tcBo07P4l2A7hxXZZ12y_lUe4zC7LduOVLS8BmMYKo5JteyX8Kh7bZIu1Xtmu_gxxI-X4Cblo76-dvrYFRcvDFNo9FNb8nY9Tjo4h-675NP9_I_6gjd7iMRozgNDgf0qddojV0dFBwL8yhRDQlSqEG4maLTD__xbIBsdzIOGBjhlcjD_5aY_Dil2xLV5XUu3F5jzmU0vOttdwiOb5361EyBddi6iZiz2rwSUPBQA4CNE2lV3LwnTpBdWmXPamUi4GJzC6p8VzkjOfoIfkkVNnkjFNLvFKs1yg1FE-T7KyKn6W4RwUL-7UU_gIRCD8NXyMvvsIl5DE7oqhkM195cyvBlmLkf3z7ym_TwH4PRnYZtDmJyt6IM_g5f93OlMUcWq6tCEHKV1ba3b5-wGdlz6vW8xmJ3EMuevs2dkauU9CBheNaz2OrqfM"],
+        distance_meters: 30
+      },
+      {
+        category: "gym",
+        place_id: "ChIJdzK2tkOLGGARJ8GxMLWX9ck",
+        name: "+KARADA MAINTE 恵比寿スタジオ",
+        latitude: 35.650541499999996,
+        longitude: 139.708629,
+        rating: nil,
+        photos: [],
+        distance_meters: 59
+      },
+      {
+        category: "gym",
+        place_id: "ChIJnTS61meLGGARSPT0ep2EwW4",
+        name: "ピラティススタジオ『ルルト』恵比寿2号店",
+        latitude: 35.650261199999996,
+        longitude: 139.7096024,
+        rating: 4.9,
+        photos: ["places/ChIJnTS61meLGGARSPT0ep2EwW4/photos/Ab43m-sHghbRL8gR9FYhEtE391Di7t-X05ufJrg8sioziE0SSah6Qr1pTUQ_7ods3IJK-1DTd7gppE-t7qY9e2ziTHDqn4SNLRG4oAk7cNyhKaclPm9HlHagTKYStGVQvFHup3t9pol5KO6Q1uBg1TaKaQN61sd6HW0ZKrPFTDLVVfv_7fm9cgOGTtHFKxSznJgSmcKoaASocmlA-ab1bak7t3wR2qg1SYpxNVO9Uz0czOGihy95GlM22b3wMs3tz8IiHhinFhF7kAicyjhges8oewXMjBVSwox1bk1t_CAibaQJj7KO2JQS0cbvnecFdRzbWZa8EUAZ_OdfDZd_EAW0rcTTWBEqcIj7SccZSGccXmFVbZolqmMNn5BllvXICEsCFru-rXyhjYHv0G2Lygtft_ieeHiOoWFl3UlqmH7ikESjFA8mplLaGkfQCBAqrWJG"],
+        distance_meters: 57
+      },
+      {
+        category: "gym",
+        place_id: "ChIJkVGUY_eLGGARpZ1vgKJ5rWo",
+        name: "Tokyo Physio - Elite Therapy Clinic",
+        latitude: 35.6506883,
+        longitude: 139.7092031,
+        rating: 4.9,
+        photos: ["places/ChIJkVGUY_eLGGARpZ1vgKJ5rWo/photos/Ab43m-uOPn1-zqJQk7aDA6Thz736rGmbWMFViY_QBFkhwj9ltnqPWSlJ3ehpB7V8L5_Ny8UgBfx-n65kaviLWCrnmu_Cy9LNh8a8OENEkeILgw6JXn8MRT7Gu68Tr67-kUmflOwVMfTfgRuaW615X98FM9Eru0L7xmHlhkNVAACmKhcax2l7BJPrCx660ZMesvjs5hfPjUOA79DHuomz0WsaD0DTWuEPHALsaCGmdhiKMRKZbvBWdgg0tL6zCyiOZQELwPT7xn6iKB0zwhi-EDhd5vH7XxarKyjQzVwlHob1kzMOPBYrYkyKwqKOlV8ZmyLu5JuVoxpEa5oS-K8YuxDFVT7EEic2Hn_vrcmrwJ3a62X9XOXWTASXFEcpK9pbrvieFOSNWXTANbcAbpZ0i22iYNkrW9XZ3tFuDpBG-WHQlGtpDbd-IPViL1sVd9Zo28rH"],
+        distance_meters: 67
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJS9kziEGLGGAR03PmGKjIIRA",
+        name: "Koshin Hashikuyo monument",
+        latitude: 35.649561399999996,
+        longitude: 139.7098364,
+        rating: 4.0,
+        photos: ["places/ChIJS9kziEGLGGAR03PmGKjIIRA/photos/Ab43m-s9ltLMKDGVGWuVRFRhvfPsookBGLBhjxflzJeHRiCqBTZlzhKAVs23eFNeog_5o9JqMQj-pdZXdm1Jmrv9CwEP-XS7W12kRmCSASS__FV5ePILQwc2QyhAgxjS6Qyl81peUWET22zaTe2Vcuvu1zRuwlerA2YccpnUWeY_gUsOL59z1BCdwgUTAATwTHQmesrLUErYarJew0Cxd4_Wc4F4WendwAVPvv1bcMuaYvJuNoTHtIBCMUq1oE8rcSMZomHAqtyrGlQz38vCNUqYWmcTe4GZshkyy2ME5rxUm79azsrhvtFlOc5aeFriwlj6SP2zOTpwoiMO74xArpy17y-Hr0RcDiDZyiuhPkkpZpOuF96fOgcYNassOavxtWJxcUIyGGfxAbdvgsFjC7DN5nKyUeTlZB6A8GCJmZC0b64Ma34"],
+        distance_meters: 97
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJddmdO0WLGGARDNEhH5wHn5Q",
+        name: "Ebisu Murals",
+        latitude: 35.6477286,
+        longitude: 139.7095661,
+        rating: 4.3,
+        photos: ["places/ChIJddmdO0WLGGARDNEhH5wHn5Q/photos/Ab43m-vv6Zo1ExrhGyfZKDwpNh1gvH3z85eawKKUyRI2gQCJ9RXAWWa86GwXVJ_jL6l9sq5k2L-KGqq4fjk4j5XTheCt23I5S-KiTmLJnfMvKDchWtXob1qa_dGUtJjJOC05lVnOs0WwoT1fE-6eZ_010uh0Kz8R6XMyPs9FzabeQ_KwNV7ZEIDDiT6iYgcNBFTqLhHM6iEN56rnHX07cYk0ZqFmf9u41CgvhkXilsUAjviLf2SfdShnx0lGsM0ut-WXhcJOlexbIXUtv0fDghb4RZiSs8DOR-N6mLM3XPJdHEIf-Q98rL3sHaCCBEa1Dkz9-3OGJ02O2j0FyFMdcC5pU57el77KhEb-1xhfcDv1PLoTvKnrtV3ZOJcj7N034q82yeddMbP2snp9JQCp3cBKgcmQvW9S1M6CDtj0TfUvNBh7fXwZ3LWG2AEkH0eSlup_"],
+        distance_meters: 269
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJOePZkRqLGGARm7FKa5iMkJE",
+        name: "餃子の酔拳 恵比寿横丁",
+        latitude: 35.6480551,
+        longitude: 139.7107435,
+        rating: 4.6,
+        photos: ["places/ChIJOePZkRqLGGARm7FKa5iMkJE/photos/Ab43m-uxewY-iA5nSvOisb4k5dQL8gdW7M61MPwMtkl7yplknMKqPlMhknSI1mQRa3tRLdrVZGY_tNzJc2chinF7x3fQ8sF0k3JSHwSso2ACOgCwhJ7yWBxPjNxR1dLZVP2iYw-iq-J9W79lyiB9KAKQ-6nXXvUBYD9fCXvfmIv11vCHvjUgObbzMmjFaxG4jDBZfUcuLdb6mcXj2eQbwZjwX19mMtNxpGYe9LQBzDxMnjVsVQMIyoNEFcEQ927I9IrmHgDYbYAYVhL02tR7s1hS4VsXOH2Xx4KVCLHtGbMldV39MidDwfomWUCQnzXCfxrwtq6yxD5Vl4kXdv2DrIvwfpUxCew30OZmbHTEj_V8FcJsL5yxpdUgaw6Bqzrg4S7rXXDHWT1JR-6OZQufNw7FiMNf0O51f-cpAGjLc3wwlGfFgw"],
+        distance_meters: 277
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJUTX1zEGLGGAR8gyM3dqxEgo",
+        name: "Gallery Yamagoya",
+        latitude: 35.6478292,
+        longitude: 139.7106838,
+        rating: 4.6,
+        photos: ["places/ChIJUTX1zEGLGGAR8gyM3dqxEgo/photos/Ab43m-ui8Fj-Z0QtasY4vykVs7sU_uT-ihSP9tTkLvtTYne4_CVE4imVZtCleLswjqIFHI-lTiCg9Woqe740HfBIjtMCLL4RsqrDwfw0Va8dKFVRYz0JlNTwg5_r19rqNWLqbApU5Hs7JjmzOPifDC3gjc-uLCLTa6hSLtjsP_3gJO8YYRRhmyUgCG1Ld7VMVImj58mC9TYY4HNYYsCUy4MDiSSeHpKldRfEKQ-dtfxDCIU_66fTLxiqfuB0uhkHPZeqSzh8rA7thI5Y9nigmUNnJJkYnfIZeYqxMazfsrwEE1mkJFYKOvAZNUvmtKyCS_c82GHukoI5lJwxleYnWzLg3Z6qdliIyH3KN5-io0ptvyD649rsMCuwmilYMN5fL1Oe1WJCjAU43FSW9ge3AxAsPqX662Pk42M6bagqMl5BKxR_GQ"],
+        distance_meters: 296
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJLVfc60KLGGARPW20i9ZZTdg",
+        name: "Hikawa Tsurukame Park",
+        latitude: 35.6529479,
+        longitude: 139.7099553,
+        rating: 3.0,
+        photos: ["places/ChIJLVfc60KLGGARPW20i9ZZTdg/photos/Ab43m-uqFgNoPxZiTikoZiEE-mxq0anzmns51eRY5L7NvKwka3I7scSHerB5P9NSnfjj_3F5nc4yKFx4lN4Zj4cRt8zhhjZe3Ga5jLDjrv_cVoDNDzqRs9PROS3qPiBM2TMfTxOvh74pXdWTN9SHv0dyGpSrKQC003gJJOgYbef2ZWvIo3zu_8W0ZuX3eXBK8bhApy5xzzTZ4WTAYZqGKa5bQkQfDbre415qOaMGqOe01pxxzbENGiSwEb652GC5qU-cQT33uYeSDWg5rRBoiuvSV0wI_jh0mi-E3mVYgb-WzrFBl6tvIZsI5CVUCxIC8UejuwIins48EqZeq-0tNOLrTSXQJyGsYvf2FsHWAUsTbIN7XPAjp9ZCOqCcj0ZVB5F2Nnxv_WiretC8z-gBvHJ2NzMpqC6zOHLMxXc4BAibtrSaQ8H9"],
+        distance_meters: 328
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJSylf0UGLGGARpQ-MXDiKLuE",
+        name: "Ebisu-higashi Park",
+        latitude: 35.648074900000005,
+        longitude: 139.71177319999998,
+        rating: 3.7,
+        photos: ["places/ChIJSylf0UGLGGARpQ-MXDiKLuE/photos/Ab43m-trQMtUxEeY0rpCWEJT6CySPCu9YAxbDuL1JNT00WOhSldSaK1lkpP4ahGI_AIif7BXQaOUa36_YDJKx8_OxNhJAfMNyacBaittQpAtM-ccW5EuRNSY8tU6CNEAH0fmn1tblcFFOmTREVVAGf_D-7wYRc6OCAfIcXOrrA48ADpU1jhtvNpgBGy2PJqIxED0fC4aTZOYAjFra5XveNpFtbdvSK0ycRTqfuo70WeWSmK5Hwubje5vLVPmz7m-A5ssUFxdNYjddxV2dB3esRJ-XJcc8zUsx9G-jblWgGAwn3XzhwQTIjPgBudoKJZw2_6auLmdlSOkzw21Ws3Iiqfl4ETD9jAFrhhPcOX-3D7ppzsY9M5UmvpMyS9z990KVItMt2USbBFAXR_S536lN7UM3y5SExO8Rd5XhOslHLOhdTfG5Zo"],
+        distance_meters: 338
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJDZzhvESLGGARN8dkUppuoAI",
+        name: "Artbar Tokyo - Daikanyama アートバー東京 代官山",
+        latitude: 35.6515693,
+        longitude: 139.7056883,
+        rating: 4.7,
+        photos: ["places/ChIJDZzhvESLGGARN8dkUppuoAI/photos/Ab43m-tSNvWHCiZhCZ6RWH38eOnYTLqOBp5BvkwOcSxzEXo1BBW6_fErRCt_ydgKc4ypBoN-jrpIKpajE4IJWquXscG0C0m2jm--0cVhhqc3_ZKWi5N7WhJbvb5tuqAkHGmexsRc5pATtz2ucqRWhb8v645hc5UTCLgPBRtm3wsdjE1jFibn7di6gqDKIKc57iAkqYcy0SchhsQVbDKE-u-DGAqwbsKHtQOLnKR3G0bSW8e94CEwLBmkI5ZObu3AHAil_fQpyl_mnkvk1UPBZTmmQEAwOKAe2slc_aedG1QmnovQqPmoo4JmjY--SprhAsvZnvZqq_DU1q4LUrBnRgyfSbaUzE4dt07VQrZIcIikXRu-QtF3mxToWlJlKTQjFEL2LwwmVy2Au7O-X_Jfta-2jNQGXXZe9iiNpgOFVawf0Ows1i_fJXfNcQHgOE8PyQ"],
+        distance_meters: 340
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJX5PFF0GLGGARxGm8yW4jlZ8",
+        name: "Ebisu Shrine",
+        latitude: 35.6472222,
+        longitude: 139.7077778,
+        rating: 4.1,
+        photos: ["places/ChIJX5PFF0GLGGARxGm8yW4jlZ8/photos/Ab43m-s64eLuPZAQD7IXXOLBxLVTOkX8wGnA4CNQsnWJg_eEgZyBjuq6gqwexE6Yb6AK5sVvw4ezNiGt-vm5-_JQSVX3gDeDaE0wOe4KUxHo09GG4phR81WrR3rsenrsSX8XKqzGDuTZQ28zen3mZ3ie4wEaEJ-OjCGbPwVub6gIQ4e61zToAJEdevO3GK3P6WzBPyPpoqMl5MBDB_ULxiOFxu7TqpiTfCEOsGWq7AwWWbJNq9DR7_BXyQ3V5aEKHKy8QX7dsI118ZVx1URkbAaaeSpfbKO5tm2PIqLTKHbgJBJsiKApEji9zjKSdn1VE3eZtKknQ6dGSDSytDSET_wnwcB79miyj8Z4UhI4MA8APrSJb27J-P4h7i4FL7czXnLpR-dqLUx934dYlucsJ7AszT2LArreKbtRfGomdlFXLlpJiaY"],
+        distance_meters: 339
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ5z1EL0CLGGAR1wwRtZZpeuA",
+        name: "Gallery Ko-getsu",
+        latitude: 35.6473693,
+        longitude: 139.7111876,
+        rating: 3.6,
+        photos: ["places/ChIJ5z1EL0CLGGAR1wwRtZZpeuA/photos/Ab43m-tR2ndXIkpp535n-V2dYJeN51ZbsPcuqnn4I38WenmFW2ly106zABfYTHo05G_uJ_s2iFITfZA3gNoqHgPqwKBVNXQeMSs9JxDmVyrFWrZ7XGdT-4JvgSt84nYYpNkYR0ANq1VeR6ZGU41X6I74DjHYz2sIslrq7KqLJjxr90jWtmQoyUTI3JiQqITfCMtqEzeLJpHDXUe1_IRth-wB2MRjUNhJ_W2tvn5lH0dg3C2Rh3JKFvaYFwUtMRJlqFodOascJzn9Za_b7bltlpLkv36t_F6fd6AhheZzolqhPPksXCfDiDLzP3OHllEhhK246d8tLS-1qYLhqWLBK9izPkq5ZcWc5kK4f2gs7DbDdPcLO3XFaFt1v8HKGc-dN5pD2AMU9t0WSzexOEtT9WEJsCXoAq6j29H32nknWAoLK9B5Eg"],
+        distance_meters: 363
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJFUQ4mkKLGGAR6t0JiQ6TW78",
+        name: "Hikawa Mikan Park",
+        latitude: 35.6533035,
+        longitude: 139.7099737,
+        rating: 3.8,
+        photos: ["places/ChIJFUQ4mkKLGGAR6t0JiQ6TW78/photos/Ab43m-s3GxXQiSZ8DrftYaKQOR8PMQDwdp-PRY4b_wsJHUcLucReGHojNHf3ELrfz30obrF3UZJwW4IrSUz857R0Q2mhRulQsTiJ3BKYK7yCHUa2hAMPlll-wbBDrfG1E1ZUPcVAHHWFAv0ZXu9ypZa3e64IaY7HmiY4kBbXQrLXv4ygGeRNOmg5MKEmEMR26i8wIrNoVGJQBztM859Hgzevkugqc3ETazg2lAUws_J91D_jZCDSxoz0I0d78cPTRfaLAZh3QqZDwtqgnoty7F8ExPK2Xj8kttTGKEuf39ttoVN8mptG3_OKhiUrmoVM7Cjm9j-elcgsNSaxVPzrBWqhwNQPtcVvVBuzQ1KGz8C_LO-3s2YPmggFRjmo8UMRopNULinctymSiJWujy769sVKQ5ToXCDtVZa4nhAJwuAq5JdYFgri"],
+        distance_meters: 366
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJHffjRkCLGGAR304p75Idq4U",
+        name: "Ebisu Station",
+        latitude: 35.6467145,
+        longitude: 139.71008179999998,
+        rating: 3.8,
+        photos: [],
+        distance_meters: 390
+      },
+    ]
+  },
+  "Hmlet SangenjayaⅡ 304" => {
+    score_inputs: {"atm"=>{"nearest_m"=>93}, "bar"=>{"tenth_m"=>79}, "gym"=>{"nearest_m"=>49}, "cafe"=>{"tenth_m"=>109}, "park"=>{"fifth_m"=>326, "nearest_m"=>138}, "restaurant"=>{"tenth_m"=>51}, "supermarket"=>{"nearest_m"=>230}, "transit_station"=>{"station_name"=>"Sangenjaya Station", "time_to_station"=>4}, "convenience_store"=>{"nearest_m"=>86}, "peace_quiet_score"=>0.099, "tourist_attraction"=>{"tenth_m"=>630}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJa34LW6L0GGARxKWaJKndiY8",
+        name: "7-Eleven",
+        latitude: 35.6418112,
+        longitude: 139.67261059999998,
+        rating: 3.2,
+        photos: ["places/ChIJa34LW6L0GGARxKWaJKndiY8/photos/Ab43m-uHeFTmEjiBddn2PPFuGwUVjyHydoJny_Odike4bfsx3u_ICwM-ZGvnnYAsUz6-6S1kgSlrchFqvBaQ7A4in9whLcOVgxP1sBv4hArPL3YCq8CXN2kkN3Wjq_sneEAVCyf5fBgvkX_eUlCi8JHB883WJkLt-eRyZ7E0-cmMEWY4_c2q4FG54eZW-5FWx4_t__b_H8tmh2x1KCBYDpQWmaLNKxHac0p99VZR_SVbJ6Loh7_1tJusJeaISiGjyaxZHs-MRYbWtEQC_SpsJrlSeipeZCAvsSMD6QCiIALZKkef_vmh6hwNBGwY4z6yNtEIiboYjzTJRscX5vBuYhmWUk8glC8g26fXI_o6pHw63u8XryaGTG13M_9mEj_SJLnbUsXjVF5NRXEiPOEiNgqHf6nj3Wx8veLd_ZQ9cmwyzZVnFQ"],
+        distance_meters: 86
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ3Xt4iqH0GGARRgfLXR81Ne4",
+        name: "FamilyMart Sangenjaya Station South Exit",
+        latitude: 35.643696,
+        longitude: 139.67219599999999,
+        rating: 3.1,
+        photos: ["places/ChIJ3Xt4iqH0GGARRgfLXR81Ne4/photos/Ab43m-tO54cAfDfQEHbAZoZ04LkbEkjiPZ4UyiEy6dEPlGeUtt_p8sFTelhi8HZNL4VFASp_iLT0eyL_XRm-PQt3U0KrLA8EzxTJr6-YIfVsHOpv7ckImRcAN9iqt0weEccovmBaJw1KzXO8cqUdc6I7PqI3eK37FULKcue7Xqg2BGHk3VPpo3kn-BCQQXmE00SbwJEHrcRyum6t0y_paj0uDIn3oj3fTqFQUlLtsS0RQM9Rv4ca6ZLdyOSIFLiYAJ78CJ8yU3kvxFtEszWlrn22Xiw6bPAjzYU4exQYEv3EkUjhIe7m3EENnw3WofoD00yq8bR4op5yWi6Laa8HIMmecJX9VAs06YKh4HbUW0jvB0xMTlwiVNhXLK143gMA7ldJFf5CKr0znA9Fx489AElGYo1qmGL9oKEcgRzOIP0LLug2ej16"],
+        distance_meters: 127
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ0wBrBAD1GGARJ2R8X5Z1AmI",
+        name: "711",
+        latitude: 35.6425366,
+        longitude: 139.67081969999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 140
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJj8urE5_0GGARTmnrtutlKFc",
+        name: "Lawson+toks Sangen-jaya staiton",
+        latitude: 35.643459199999995,
+        longitude: 139.67118539999998,
+        rating: 2.6,
+        photos: ["places/ChIJj8urE5_0GGARTmnrtutlKFc/photos/Ab43m-vItBs6i3pUaxURLl3loKyT7dPiz1cRmGJu-JS4IPPUsOV-uL-PobVCGB1uJuuUrPnNBuq5stKFpra9VZFCuUOFBKKgdY8vO0YZPHeO8_oljaSAharAz5rknGl8wQjqtqkx5myXGLBGYAZ3hcNNGR3p2FyoKdLq5EQ-w0Yi5DfzFj-smWHtWm1PKOanJrjC5sEm4j0uTiXUBsESKTG5J9WS4Y5jcNt3cF41mrvxhESUSyMJaU8y9xir4BXxcR600ah7xctXTig3gHW5mFKm3syNgYG_Om9VEXAiixVp3eKCVxdmFLLzktkUfw0gZA1mYqSaW6T_4QJf17v9_PkrBX_if5V95dDjRCxVHvIuD7AjvkHR6Tw4SoGJNYWNzeitW4dTqcbUoi_9vSEm-Buv6rbA5Dab2TMYIiJP2ERMkKmjKWc"],
+        distance_meters: 147
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJmYg185j0GGARjfRZlsyaeuI",
+        name: "7-Eleven",
+        latitude: 35.6426406,
+        longitude: 139.6707458,
+        rating: 2.8,
+        photos: ["places/ChIJmYg185j0GGARjfRZlsyaeuI/photos/Ab43m-s-XaoT6mf0If6WWEXYZFOowHEIpgzT0xVNr3hB1wwgb1vhHHrDYk0IF3otKOKHOGI9IKDGvgjbQzioBIFkpRnr1iyRK6iO6sAKxPgM29mG2bF0jB0Gmp7KDge6sT6OIX7_dNc3WkG7nsckRN3YQ1WnmPqclxHTXko8hYqyggwYXQt3hjE8sDuYswsnCr2CHKvpxg8zcw00DHV6E7SuqfsI792b5D5nQffzfslUjKhyGTbO5s7SYkJNkdMGNunYPg9_AwJLkDYIcU6dpK0lmSf0W6G0nlqHQwD4St8b3CdW5Lo7Zt7RSG6sKt8-BzJP4Gh7aLUX4n8ffk0j1JrjOwL-Om_jpcoQBzsImkr9A69EmhmaZYdQ_QS4aI0POo2WG5tYdX5YL9m5XtXa5MIbC-aqFBqqOiTdDFSsVEqoVK3KRA"],
+        distance_meters: 147
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJX-MPw7H1GGARUJIi8LbAuYM",
+        name: "Kahokurashi",
+        latitude: 35.6424653,
+        longitude: 139.6698321,
+        rating: 4.3,
+        photos: ["places/ChIJX-MPw7H1GGARUJIi8LbAuYM/photos/Ab43m-u8OEQKi3YUE9HMwV-SypxqcVEHJf9oTzQ0jO7w83xgU0lgwJ0FjXI6RX_nURuipji6xoVERrGdWPUVrv4v4RLZc9yYRuZKhv9cqciwEtuNY76x_C0IqJKkc7YSxV52ZGpsH7TBpEWaObQBXKRaYfqbnEfC5LuHKIpO0xPdrHy4fO49EMDmq4KfzlW9iqDOIPPdKlcUNMCU2HMD3HA_bNiEhit9q5NuxyELma_RgI5bYkuIC5lhYwAM8X9sO_nioMBhAG6myr6DHykOcaISU6-9-DW8IdJ2Ozgyu9IiEfKL-bYn2ntmj5qGmDT5LtWKHNa3jmPkyFkRZ4Yi_L_873EvjP7QbQC8MvFoGFP8-Y7G8W9f0nmIs3EtAyCh_hLGDHLGKHONopTHgNI0fQz6MPhfRA-miggkRhtghtWg7KL7Yg"],
+        distance_meters: 230
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJ5U80FJ_0GGARQupU1wX8Rvs",
+        name: "Tokyu Sangenjaya",
+        latitude: 35.6438584,
+        longitude: 139.6693866,
+        rating: 3.7,
+        photos: ["places/ChIJ5U80FJ_0GGARQupU1wX8Rvs/photos/Ab43m-vHSH66_ybcgKS1NdIH-UgACeIRQ1xq_hrNLn0WMPsBtOX_RaTY4veyM2rNR5FBgsyrcNLsX2SXQwzjVdMJXzkbEQoBswgGc3Bj9e3dHEmOIciBdegeZymIevpxMNF6AmMhdAP93ckOqh1B7VgKHJY2Axnl9NfX3hO_P20ALB_bWHZydrGswYKZBct57YctehlNCIu-3dssqGwS-bkXOy6_JK3n-jo69pu07rWpRIm1V3SEci7bqZz2ygKy8k_dsYUJrD5qf00JmRr-UoDMCttr13J_1eByaFMJuDbV1PljVjuFzid73sCSoJ_a_bRJwwRSrux48G1wq4Fp5jlDp2wRZ9TM3okelW4a6B-bgi_yY4442Fe3hCL3QOpuu7UIQPDZi4wNFSIdkiCbgBEC3B2RPmwc8E78Bmr9cCYhrojEz7dq"],
+        distance_meters: 306
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJL33DMJ_0GGAR3hEunTw3JQA",
+        name: "Niku no Hanamasa Sangenjaya",
+        latitude: 35.64291610000001,
+        longitude: 139.6690017,
+        rating: 4.0,
+        photos: ["places/ChIJL33DMJ_0GGAR3hEunTw3JQA/photos/Ab43m-vsgwjGCP0JIVJFnd-TfiFzjQ84rXSv9_4WudwHMMXi5nBL9HhM8eA57jjxezw38ETeFCGmT07wov8ikWD3jCXUSdq19t9FXAqVjOKCeyzPLHYLRXEyFmw56ciT-LQSlcm9WHb1TGgP4A5HGyyrixgewJ6sUSSb_K0uYsEfHk1NYYGqkhqhUZLBvWTMPKd3l6OqmoNfwIkUa6mPnBFTChVNXaTY-5mdLo6zhlm_l5Bi6LlaA3LuClqtgPpBr9Mhd2gTkG6aq_xHqgC-yijCLGVsHMEHc46pesc6dG5aUZ8teHgJ2ChLox0AKbc89ZXyJxjX4hu5jwGWEq6lTt7TvTE0YNchhrS6hyZZayqfPAHwTVIvUnx0bd3BV8zU6AoSLZV4PueBmQ56LDGUlKkiE-oe1tjVKck10tz4GhnSwfKKzuRj"],
+        distance_meters: 307
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJoWzA9J_0GGAR3pGoD7LCU4Q",
+        name: "My Basket - Taishido 2chome",
+        latitude: 35.6466509,
+        longitude: 139.6705211,
+        rating: 3.7,
+        photos: ["places/ChIJoWzA9J_0GGAR3pGoD7LCU4Q/photos/Ab43m-taskT2nKx6ENVpGpf-7Orh8A-IeT7Lk4hM6nexzoCI1yFi51KNVlKtgr6qo30gkGTWxBbLy3R16wlQybKWkkvOhkQ54EH4fdoSnfLcP3vIPOFVVWW31jrsO_reZhgSssm6eTLOufuDxjyRxJR1npMWwuMM4DSmvnl_fOS1WmYs9U_TvNXRb-tfcWHdqLNivu8yZrsFMAfiFoD_XPR7r_kTBLdTyG0HxjNTXLYY72FOMXllqFS5JCfJX9Z0hmL160iGJYs54_6tZCvQ5lu9Fv--CiQNGXKWXT69dt_npiP_9ufDaQzFkK3E8N0cb8vepCFYgPLJNZGDq_92OeYgXMPqmf4_gOcQ1U_ZPvyTsKgjsGs4aIb21OWKPFJivdx6Cv_NyWnOG39k0pQ_NB2fkJyJ2YnDaaVCHplQdxfwiqRZnEkk"],
+        distance_meters: 485
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJRQv2cLD0GGARKAJK-cdHvzs",
+        name: "Summit Store Shimouma",
+        latitude: 35.6411643,
+        longitude: 139.6812962,
+        rating: 3.5,
+        photos: ["places/ChIJRQv2cLD0GGARKAJK-cdHvzs/photos/Ab43m-vkDoWzdzK19NpwoBEpki62c0ckJY6_J4fcasbQyA0ju019bF4nkfJuP0h5OTShzogvezB02qIs2ybih_47nUk71gDAVvZ-aFrMdojsjPr11JvL7yg2DngG0KtLzxJfJ-KbRi5e_CQr2nmDsKRvpTUPgLajQn4zlqCxbOofMgbpdrFDJ1ITWMdXQUTdJCDF3yswJn3CZ9bCeMsOZ8HSizd63IeWFxWoQ7oTm1lA0Y1YipcXUhza_Oszz6-ANMsuJklcmUt4yt2l7eRsUnjv74W4-XQj3HF2Bj4u3qvTJNvDkkXZu1bsM43sERQ844eDPccbjr4YGXYkAg_Fq_2Na-aEeBA8G1N1nzER_YvBTSjEiGrOLigwse815TnXpGD3mbdUNSH73gTmTeBWHcBOHfR8gid3eGblWLSytCFyQh9_UA"],
+        distance_meters: 821
+      },
+      {
+        category: "atm",
+        place_id: "ChIJGTu8EqL0GGARtvhcdc9Ykcg",
+        name: "EPOS ATM",
+        latitude: 35.6422897,
+        longitude: 139.67139799999998,
+        rating: nil,
+        photos: ["places/ChIJGTu8EqL0GGARtvhcdc9Ykcg/photos/Ab43m-uSCJKCYss4R07PmUZaiX23qLrQ8lxkufPZ3drGv5WADGT9Uz62EddjhQHX2D1fm1Jw00N2bRNsVj-bwg4yzCtlnrCnqfswMJ8DFxcObIa2QxsqWe5V10BGmY5fEWPph325N7Qio9JtfF8yB9jc6fxqlJJ8iXszLAsGLrQK4V1QB1fU1Xp6F3aso3_yVBCl10QrbkCECtW7vkoZkLNoig2mH39EmeM_YYLST6thzNckaWE_MTee1QmmK8vDAwO-d7ApsoY6aL9_IioTMnG-C-5V4JCwufAl5i7bm3ZCLoXluZlkO2A2-WK9XL55fHhMWppJdn9uCfJL1xPMTq_Nc-FIV4rAnKIDP_m3at7UVNf79xO0_hKyUAQq53e2SRIMNTIvPHNpoc7FJiT5NWUHrbVAB8ZcpmdK9FqjKRRS3aX01XBq"],
+        distance_meters: 93
+      },
+      {
+        category: "atm",
+        place_id: "ChIJyXrLVaL0GGARJVdenIWwkEo",
+        name: "MIZUHO ATM",
+        latitude: 35.641846099999995,
+        longitude: 139.6730328,
+        rating: 3.2,
+        photos: ["places/ChIJyXrLVaL0GGARJVdenIWwkEo/photos/Ab43m-usyzuSlakFZPJEuw00EmwaNORB0ELDDqLW8rTiVObkaxhfW4CHuwZgCPFFuIHF7XuO2RNIQRvsKwsnFXz0Bsr8O8CWTeuUi3Lv26Jc5D34X-guYGeA-ovmbPINOpTtKH3XhTigscvEVMV1i6FlMCdIKf1o4RjAXX54VZTUPBVxmfBEqeRCSOAo4FohDlUSdBw2wJQcSs55ykzgEvi52RrPtcZn1DH-hUabdnXNJKCFR5ZiACOqSyFqAA8WNNJCIL1qkXmWs6jaZ9bplyORHGpXZkS9iT-BYk_OXZLjBWV35PwwmOc69VDaNb1aXeCctJ4oDVTr5deZUlFGxB5OOmIiNPVpW4GpibYVrnmPzUNex4_DJ1VwBP_3TdDS947eq9vTqhHLADnFUps58dZMBbb0jj_wSvDvihAkL4V2VtEAVYKu"],
+        distance_meters: 99
+      },
+      {
+        category: "atm",
+        place_id: "ChIJhz4jiXT1GGARj0EBcPh9Bao",
+        name: "銀行ATM | イーネット ファミリーマート三軒茶屋駅南口 共同出張所",
+        latitude: 35.643693,
+        longitude: 139.672183,
+        rating: nil,
+        photos: ["places/ChIJhz4jiXT1GGARj0EBcPh9Bao/photos/Ab43m-ujj83x9VaiA1yc7Vd87a3q1maqSO10NoZrNiGhLooBm4CrZH1O5-ZT5KEwywOp-s14AisC6IW-Q1-Lo2EPHm3AQP-k-A6sGI9Z9YJ3wOuaAeiwFHpqrr0QPGHk9i8Qy8BsLgnJqbHv_CE1i-_tR0r5H7b74myNRgwASTFz6icMTM3KmcViaoCEnS9jN7lL6ox3rU6VPCgSin41CG0iaBWwAO26vTMM4YKimMw8R9VDgWqX1utTanSr2NtC58wqZxl5YaXjJMjZB_zWrpTJjwm01yO027CXhfSvlX3ObL_MoAfmQDRO118daU-dK5-I_nU12fALpSFABPU6yry36sG63zUzXbzJu6lkW2my75RFbFJIHT6WsQTubEeM9vRWpUT7JIVp73fLvlt85ly0VFYwxjFRqdOuBYNmdwAeH9L6z0buZ0SCdI3QmuLDZQ"],
+        distance_meters: 127
+      },
+      {
+        category: "atm",
+        place_id: "ChIJx4tE-aH0GGARNdeEGKyZ6Hg",
+        name: "MUFG Bank ATM",
+        latitude: 35.6432849,
+        longitude: 139.6712681,
+        rating: 3.0,
+        photos: ["places/ChIJx4tE-aH0GGARNdeEGKyZ6Hg/photos/Ab43m-tFp_SSZ3_o9ujPXO2T9tlUt5aNmYvlKe_jUOBK0J6jlFDTmr5Fz_O4FCWVee2WlPez2tn3FosbvkP_vXHR29gkXD9qPj3DR1PjejGm0V9U94Skm4lsyHvEQsEHOzNy_8v3bxsnl7GmLHIsYp9dTfqcBgSdXWIzVoWpOgNFCGhOzVwrR7-O_Vvvf_tFeOlk799BFsMGYm1yyI0d1v1jT5jNnLoGzT01gVsmtpRUmXvi9bhPwdYJ66eeJSClsfQ3ID55b-60wYLIeqIZzbcz2JZAzuIBW-GNSnw3nGn9ZqAg7H6ue1STZgREOpzqVFEvID-u5nSe0IIY5DeIgz7k5gVoXR0KjjgwfCwPDXSPrP3JbNZnB4Vam1iHWeT3dAR3Sfa8796RwoJh5F3qEA8GNBy7KWDQkBX_7mzMISpedF3JNw"],
+        distance_meters: 128
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ___b96H0GGARMeBEMh3Z4BA",
+        name: "アコム 三軒茶屋南口カードローンむじんくんコーナー",
+        latitude: 35.6434395,
+        longitude: 139.6713806,
+        rating: nil,
+        photos: ["places/ChIJ___b96H0GGARMeBEMh3Z4BA/photos/Ab43m-vW7hj1awKtZXgAlgiiu_gKy1Qh0dIcHmx2YeTbWS-pICVhu2ziUoICr7iX7exwHZsIaWp4pccrJZ_JdJ-5_BJRplmW5d_y7wYwLOIib8qLzrZqIKR90_0cvsxpxByB4dLOqRf7JZRCHiQ4QGsni4UmnyqD5dTwTouRDAzka9gNQKa3pIdLPe3u2JwWogJE9raP8512mKvn69lykveelDbwGOT_L0L9-J5zmrNokQRcwJ9z-2ezO3XuwwLNSmCEMnxEkrODW0EFjIBDgn3B1JldkocM8tSU8Uc2YvF75FCD-0qJPoh4X7S5Bk031_EvCHnzBKN7-e9OpMByq0N7erIbv6Sw8sqMX0a9j1us5Np8HNedNzQimC0ukKHPZWnmoCXGl4Si_aHK8QgcjmL5ksZZeevScqDEotcF9awvn1Shuky_"],
+        distance_meters: 133
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJqzneNqL0GGARdfuqn9Q8tJY",
+        name: "LUPOPO",
+        latitude: 35.6429097,
+        longitude: 139.6728536,
+        rating: 4.2,
+        photos: ["places/ChIJqzneNqL0GGARdfuqn9Q8tJY/photos/Ab43m-syCT_J6AHS_BHjF-a3XeZZjCtYqAxMT9U2jHixYQUPHwVY2W7iplJwZRrx3jntkSsAAv1SZO3V1lsAUl3U1kyAAEb7mTrSi5_tKPr18jHONLRRmgFD0cbJ6iE2V4FlymUEK2cnlFf65zjipSobog8tO8Cs0hn_HftQP9WJNRITO74Ssydf67RaBOR4lzXFOBehZhWUBcP1DQ-vE8ynVFX8JTxexKq4BdYpuVZlRe8O-RkN3Mh1Sf5nAHtC_j__Wgbf3vaItWHrPjnd8vXDp7ZEm0JzzCiy12pgMvssmNN2t5xZmJgYm3Gp7tzfaOzKIA0fvMNplXAN87dPmugy7UdcMIf7tqYF0dIDLpS2xn0cGEnAHqc8daC3HRtum9QYchVk0ydH1ue4xRPxoDYkimDiUwnKiwdRmdrezgxi4lEeCVI"],
+        distance_meters: 58
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJga0TEVv1GGARaKY4PWXbdVk",
+        name: "bar cōmori",
+        latitude: 35.642308799999995,
+        longitude: 139.67182689999999,
+        rating: 4.6,
+        photos: ["places/ChIJga0TEVv1GGARaKY4PWXbdVk/photos/Ab43m-u1E7EOnvOk7szhwdHUZygAf7vFd3NmKuLqtDiBMVGD7iEi82HLZRz-HdZNSHNxif9QgIt6oEAxPb1248TYE80-iAsG1ytKxcaw_8JVudJbENYkjbXYVlkX4W2-9HUl94LGfMer7T6zKQ4SX4P2vb9ogScXKllYzKuBGX4h7iXM7gU_LRuIRNvDFbboVYTgF3m472na-Be18IGoYG2b3Jb4UYCAGiaDny2F3g1L_Q4V-BIU2xe8bhOe5LyHP_rkwxEMoAbuVvskQJUmTfPNTEZahE9ILhFnMzkNOSC9pzn6WaNLUHGGyqLe6tcF4yeXoUCsbwOdzHsJSl6KYmGI9zCtTcC9oCcfBG65nrgurm-2eK47UoE5pwR1OpUHXbBa_9pve_5_oVQozxSrhexbhOy1w93eccBimMOaIjlbMN-hdhtOZFMVUE3ZyTRzlQaz"],
+        distance_meters: 57
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJAQAAwJ_0GGARL4MvYX60z7M",
+        name: "OIMO 三軒茶屋店｜さつまいもスイーツ専門店",
+        latitude: 35.643054899999996,
+        longitude: 139.6720666,
+        rating: 4.1,
+        photos: ["places/ChIJAQAAwJ_0GGARL4MvYX60z7M/photos/Ab43m-ulFOStXdLWvQ3jb2dPjKi_A9-MPa2ie3iUTXNGSB2XQRsKrESP09bstlHaUq5EaKkTAz6NUkWf52lGEqLxXzfE-os4Mq5L9J4NPmm4DdJKow41zTggcsqdp6ZjPmwZssBPnxAIt0HgGbB3tIVHCoBSiHwUAAnMk-cNtJ_qpFqxA8Hv0Pt4VPyA05-Ak4GQT-aFyvD-3IbaMwLZeKg72gzAHJQW7Z0zFcBbsRd3iAXewP045SvqqTnRTxIYPC1JkqJrZ-2up9D0UbCKGqJe55u0SpMOrvvBObU00pdGNM11vkXfvQooJ-c4Qgv_80cPckmxmwigsv71k0Gnj1uoV7tnxSuVWNPNIYiSRa17qpYg95AIdw03_IzNc_lQWnrIJYvmKOeo9VJ708VethYpvsKm-q0CqLZiURGpAy5a3xBsM-Gd6b8Js17iT6yJeg"],
+        distance_meters: 62
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJUwDkPKL0GGAR3LyfHRznGAI",
+        name: "VoiVoi",
+        latitude: 35.6430553,
+        longitude: 139.6720561,
+        rating: 4.3,
+        photos: ["places/ChIJUwDkPKL0GGAR3LyfHRznGAI/photos/Ab43m-srRAMnXhCksOZNk6DZ8BRZ7nups7vUJ8feCrflHS_ST9Oun8CZGu9NUlgwcyrELATz1fTif0IcI_0Mop1411KbYE6I-ljup8AfzO2xNjvESkB17GP5EMOm3M8XHBjzsmZDBKGywTWiDQek_6kpB_T9LVQ4vmpJmhhNdY9SZfTvCRdnt6uSh14zF2Zo9D-7Osx8i7ztdbTOmh2RLAxIjiZ2rOdJWx5iGUwAdABzihw9arF0FDbyO1xLOxTIMvRVPkUZ0-_bhsPCmI_aBULhVJiPBcsOJxq9EInxSzepnVGdlFEoxfE84b0clGehTQ8Ru4ePLhvpYwo5QHC0QEUramh8pu9SPqtCX3Tp87JCgyvbcIBhhzOWynPbWVIRJWLb6vtVYLin8AejrYOgSCJ1QnH310NA76fsvy8mpfR5gDAiqM8K0IDytNhIs7D7Hw"],
+        distance_meters: 62
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJM7G6dkT1GGARRAVwJiTdrfk",
+        name: "3rd cafe 三軒茶屋 (サードカフェ)",
+        latitude: 35.6421318,
+        longitude: 139.67287589999998,
+        rating: 4.8,
+        photos: ["places/ChIJM7G6dkT1GGARRAVwJiTdrfk/photos/Ab43m-u3bJ8J-VXkbTWQTgY3AMSZDnw0zb1RP6TSqm-582RRRg0gesAWIdHnQpdWxXDf7ENRMS-IQvamIluV1qEgsdRO-kOErHSn6d8CdCra7rZi0XULrB09IbUXlJsJBWGTw23oWjC0-O3y5-cBd2FKcF8NENiqI84_mbsQrEHgTZYJN2evlyTg2KipOPX4jG_ItaMFokg_960pbrL0RWlRKCA_Fr7IH8uKICw2D7nCXtTMRy9PRC6DfP4S7vr35C-b7u0BQwO-U3AmK-4NrDYbX9R-NDgbkVJ8TpGT111bImAgdnf4fXkkfHlF1SyXhGjyb8VDMWnYI0mkAF0dmtU8fTGXlSWx21_y4dZkV8fI7A3DEcr7I8TKm6-03l3D_qagI8YIjuAYoFLoa-8Gt7WgTKyh22AOoPD0spsLyE4mwNLRRQZy"],
+        distance_meters: 66
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJZWFYE6L0GGART83rA3sgk_w",
+        name: "Boulangerie Bonheur Sakae-dōri",
+        latitude: 35.6423604,
+        longitude: 139.6716745,
+        rating: 3.8,
+        photos: ["places/ChIJZWFYE6L0GGART83rA3sgk_w/photos/Ab43m-uyhOSvd7QxwKnDmuHeIbPa0Zr2WLlzfdAwmL5WpBr2Z2vVyDewmIWc4ScviaZDnNAsrqv7cZkUgNmD2NZmDPC3JWqldkcoizmTA8kyPy-IRtrDKaV1vYsHGlJ_rshCC02VLRiywRvPx3GSf9X5lmM29Aqj4vv0his573HBc8kst0TCT8aL9olJozEhLZZTdn4vUE1faWAyC6hZx1V88759Z_AXTv-h0jeZmEdIpaRVt-Ch_b78c7tn0opIxOeA_rsUfEY_WYJ7xLaW_ureKNzrZN4Xz8ok7JCLSGnAbyJE0tqFuOA93x7iS8aX-YlKvJGpBqz7-3bWEGd0R4Oa-iSOrPkCFn47j_Gs9930MWVxsb167YdVh1hnYGpSL0QHIogg7CxzyhNEkxTgwpvh8GzTWZlML8GY6KB9CcTfbPaHtg"],
+        distance_meters: 67
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJmwMAdfb1GGARS1xfQTHiv7s",
+        name: "SARANA",
+        latitude: 35.642004,
+        longitude: 139.6727604,
+        rating: 3.8,
+        photos: ["places/ChIJmwMAdfb1GGARS1xfQTHiv7s/photos/Ab43m-vbzkOpqEhINQOr2JA3Fp3nG7l0QgfB7AWVP76jObUwz-5gx0lRcGdVO6N9GDQK4E-h0VZ-qA6p5s7Q5dN1KEgIVeLuUh5AHjKkQjfzTDuUqZLbbWUKEQ914mLy0fG26DnDZjPpzo6tyyERQp5ZKY0yVaqDj4bU-fRVOx8aG3fFKF6vCvNMroqhhK99rKoD7JsqDdn_cIuM5iYNIlj8bIbkUXFY4U80PXADJgKOD0hqVkD-HSohDNxFelosR1H4TqEPLLROU2AsdhN0Nx1RIkQ9TYkWsIPRBti-yTUkWxkcCrlBkn8lw37VFip3LRfp-4T1p4YsCU7m0aF1NYLU3bo8xSA2O9wlP1TYB-J7dU3v5zzb1b5-t_vVZctJL17IgwWN6nTI1W_8M16-di_wcCPixQf4giuB0BGSF9JoOnuTir-mzticku4A3_ub_P7S"],
+        distance_meters: 71
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJxTATbaL0GGARRqfPzVDZU1I",
+        name: "Blue Bottle Coffee Sangenjaya",
+        latitude: 35.642064999999995,
+        longitude: 139.6715652,
+        rating: 4.2,
+        photos: ["places/ChIJxTATbaL0GGARRqfPzVDZU1I/photos/Ab43m-tYuBX0mbN3erIvuxOwaBVodaOymJfdFX-NT-5wt10caS76gPnRPBAr1_etxZxThuAezjBahfTgHo9yYZiUhp7HLETR4Nhj8zZXkpODx9wWdVhicYm41bxHkzEnR-Nsgm6wR1rAOWi6TEGySczRuAm9cbubUOLQDj0hf5x1xLwyN93NllWL8v5V9mlfvbd8BEPIyZl5lIGa-MvPV4OARPApVVXdlNMDR3g62tYGgGwP46NZuz9liYf51J3RpTcTRK0413oxQ8TBkwq9EeA79mhyVlY942VClHcAQ3NlpITHjChCdAnbTSQqWgSlRcUIsrz0w4YycUo5WX_n8bDr3uqDC83gf61NxsIxAGOo5q9Tqmx9TdbXeCxQjiocHWkJsr1rt9WxmwHWaXImpTSJ_cMtH9oK5Z8AuduiBKWDdLBsMk_q"],
+        distance_meters: 91
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ6xKx30H1GGARmR7JRV-P5xE",
+        name: "Cafe",
+        latitude: 35.6422994,
+        longitude: 139.6712196,
+        rating: 3.8,
+        photos: ["places/ChIJ6xKx30H1GGARmR7JRV-P5xE/photos/Ab43m-vXCr1TqgOMetBNkhCLHAP23LvT6CG9_tETy4J-UnsnK8QUB2RBKy-jFuZdErBrgPNcqsC1-nf3SsKn7kGwJNtM5Rb90QogANxzEuURBlRLzV1bMf2T7cE_7rJB4JR0mcivj60zvixcF9v--moIP0pMLNYyTsfNjPQZmDuIeUmSgmrtR-4xFiBnI5A6LYXJwOxdDWd-2ntvRvfQ2KZu7ckr-pPRihIchc3f81uBYfsqLqO5zRsu136GdPJ2QPokxhcLeD8Ah9bogLBOYqojFlTbFktEOJaheWiUW2IVgAfVNWRn6ED_xP7bRmjkjtH1b69NqdVTg4vr4pjRVrCwpwu4tYYQ_wSZ3C5xJHitYEBB0z1Y7N27T4lVpvgtCdsXgsDpfv90K96o9BKBFEAY-NqmSg799_LQTtR5DWxuVOY"],
+        distance_meters: 108
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJUej-uF71GGARK6Ja6nSIBZs",
+        name: "And Co.ffee (ｱﾝﾄﾞｺｰﾋｰ) 三軒茶屋 カフェ",
+        latitude: 35.6424898,
+        longitude: 139.6711741,
+        rating: 4.2,
+        photos: ["places/ChIJUej-uF71GGARK6Ja6nSIBZs/photos/Ab43m-vcA-fX9SzwHZxbJci3wEQdgA-N7Ylxnjrlt3PQMNigya0AYZJAi_dF25Ud1g3RDT4Q-DHtI4hddKzYQWH5o_g8RxBJMQSqj7ymkU72zarnLUdiuyD0vUrOOr5mnJ7WVCs7uDOQGrSjTf5Bae-5yR7r3MJCuXD2PnaQwEgCYFxWnUDwmYPKQml-OTTr5-uRMu7wYoSN7WgLUffabe3cL5ME-cIhaa70U6blPZVrxEqfOAn7sOO0krxZSrKZ4i0yWLyOn1IJdzFgrvatcz5Ll5w9XT-Fke15iR_7__cFoKXHsVtSW8nIsVgIHOGW6mNHd8qzvl7e7buv2A5ZlU89oWMQ0g7d0R7dvNJ9kLQfjgeonnDD9154ltv28JfvPEZv7o3LjaaOOqnNmLDF1-woZLH0G8D94vE0kUCghxkGFFWM84cC"],
+        distance_meters: 109
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJTSr2cwD1GGARYJTEvhzre2Y",
+        name: "ネオ大衆酒場BOXX TOKYO",
+        latitude: 35.6424541,
+        longitude: 139.6720396,
+        rating: 4.3,
+        photos: ["places/ChIJTSr2cwD1GGARYJTEvhzre2Y/photos/Ab43m-s8yihIGeYg-Zu593DlXgwcjhxFMFmY8NH4iWWPanrR_5w-iAhATh1TeKDqQ0gyssxEBSo5OEeqngsCQbignfwIFPLZi2BAZ3qGdwqjx3LVtqyT676sCNw2kSb045vY5PjQrW43PVAi0zXrjyqz6x3t05efA4k5J-RtS0dmYtTU_eYP1TsGNh6Sv_ZSdpqAAtVqOm9Uwy1GbZ3a6BuZNQZKFCMuIvl29oUZDmyt4SO3qyJyx1fX_hM51rHfsEdxtIfKomkrHsiUI5rUpi_8lj2p6Lno4vRiP0I3cPvbSIanCoUvDEkY_8qYxQr_Ter-2U90sDw3q3yfUDpJ5636BQCt2Qf7gJ6GYAecy8JUl--B3t9-Dehmzc90xClaVojvsBdXbIGpVhkVJ2EbktreoxbgtZe4ohpG1yd3nFmFgFliZw"],
+        distance_meters: 32
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJVarujiz1GGARONhLPnfSWVk",
+        name: "NAMPU'S ナンプ タイダイニング",
+        latitude: 35.642555699999996,
+        longitude: 139.6727607,
+        rating: 4.9,
+        photos: ["places/ChIJVarujiz1GGARONhLPnfSWVk/photos/Ab43m-uxuV5xZqkIxGN_27ayGPHEajxgOMNGSmUe46jH7nhdAis-_dGsm2UR9lVTWUpjI6cSWMbzhQWSJ0t0AUBIA5Cy68DgSnFLaMnpRj3otubM3hJGsn20LQ2szCdJmkmG4cebiS51BgsevMdyz-4Eods4bW0jblLzlRXPuJ6hBVTSaU11kpVUh3szFdH_qcV1w4XUypi7alNyvvsl4IRboCbDzG3RQm5K23DPUyyPqq3LHKb8XnGAfN5vAjPNdbmBCHjmziEyy_G5KDOjEoVJ0dJLU4ikS27KLnGiiN0oEN-jKjQsktlBAGxkzwa3HsKg2h2bveGTmlqM_PclQL74zSHXb0UIsY9r4N1imiWPgdU-jicgpxn7oCBgN_yS6aQSJS-NLX_q-02uNm68R_yxcLjbuhy8vvS4_cJKOTTfLKbz6g"],
+        distance_meters: 35
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJjRHwvaz1GGARv83UF-aUDQg",
+        name: "みくや",
+        latitude: 35.642555,
+        longitude: 139.6727738,
+        rating: 4.3,
+        photos: ["places/ChIJjRHwvaz1GGARv83UF-aUDQg/photos/Ab43m-vnkIRa-mG2manJ-85iUy8PFrpOZgPJ10ocmd1XSN1eSekFX3yYxchUHCznGBXEf_jljwRHMLv5bzlxwp9FjNK871pkGFvFBzz5zrHz_O_h3S88efSHSpU0XdkBpwGr7kWAhmgaL5GNF2mbVL65UFjVq2sJb1NxP1z4uIJhaNW6wPeeAjIPU1bmuI3dqFBn6Wk-rkRgeQtG2ZdKd073cwpkmbpAJvkUp2Y6_G9iYBKN1zEFxoYcGxY9c9fyrLw_ZU3V-qDNyTjCb9gCIJEID0p91l9siYOFiphfLME44PEqjkaI5os26ME2FYw79iLxemAsnCZ5P6VpHSYOedJ0JBy9x90zXMh7L61XIxr7SyQZYpxaqLOMBpeD3wq9M0Q-aXdqI-xTixwLzgymwvZ4WepwZkchLrXpucGMlX5GuJ_bA74R"],
+        distance_meters: 36
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJUwUySKL0GGARbEMSuH1HwZk",
+        name: "Kitchen Origin",
+        latitude: 35.642762999999995,
+        longitude: 139.67278299999998,
+        rating: 3.4,
+        photos: ["places/ChIJUwUySKL0GGARbEMSuH1HwZk/photos/Ab43m-tL2Xnsc57X6BkHfgRAwT13OWxVvTNBiUCzAMa0P4IcfnRCfGUZZgjFnvCYOJfjpogQ4d_ZR4UYRxzD14VosQ0ghE6uhTbbkUdWle5-K5IsdRvvmtEcU4Bte1Po5sIeUmVrcNh7shBBup8OHaBY1AsammowMCOmC_079wYapx92HXyNj1NZoIDuP6fue7NgHtohJiMzNWOxM4Uhr5AQIuiXKbexkg-ve6UDG3rHaA9UJDbjAErvHfAyLkECjTro7bK43VA5hYZM_kkv4M8iyZuubE5mxA8m_ofd9ZeHQ-a_0zt3nU6XvUV3t8iS5Mm871u99PuXsL4wkSMNQ7oJtfHb6Jv1PxNxFolBlHOpU8YahHiqJQJarKyxRhg833bCGtCTe2cy648dhmfEXDtriX4LZ1tts5X8BlC2yzr2l2TStpE"],
+        distance_meters: 43
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ1cviJ9X1GGARk4-foauPcd4",
+        name: "Tiger アラビアータ専門店",
+        latitude: 35.6421918,
+        longitude: 139.672371,
+        rating: 5.0,
+        photos: [],
+        distance_meters: 41
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJQ_BTRaL0GGARkQp-JI0cA34",
+        name: "Wine bar The Kentarone Sangenjaya",
+        latitude: 35.6421876,
+        longitude: 139.6725061,
+        rating: 4.0,
+        photos: ["places/ChIJQ_BTRaL0GGARkQp-JI0cA34/photos/Ab43m-sHvrblAcYL3PpduS5MJV2DS76xeX1jmFDoA3jkudvdULLk71hR32pE8qXOtpi_uh5dp29bnNXfntgwZRXvMIAL-BFrloxWw0XRiFl8H2zurQDoE4opioyu3fVKYnWZ9fhGqxK_DePwMiTcOlmS_SPImY7LIqVQpkjuCRbegytHjxKOUFKcloXEbpfsn5ElVBM4LeCfpuPwgW_xjHeliVs7LIQevxxjC4L9NH8NK4FK571sSIXj_gSK6R5FJoc4GfEzJdmcifSVGUZqy_5noTzzsa7DqpcqpLAja_EALCl4aHXJ0uVoKDYEp6Po4fOpzvPWSVBpQRy9i3lmEYvW1aDWEnJi25ZleHM1zzsJ1Rhbt7nTlbs-9ixNszvDMihlp9qY8MPbeMWO3Bj-CIdhwtbt7USfx8K7NT_PbHcvVPk"],
+        distance_meters: 43
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ3X732vz1GGARPRZplI5vUeU",
+        name: "クリスピーチキンアンドトマト 三軒茶屋店",
+        latitude: 35.6430048,
+        longitude: 139.6723557,
+        rating: 3.4,
+        photos: [],
+        distance_meters: 49
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJGVTOQ6L0GGARgdpYj59I0WE",
+        name: "Bushikotsumen Taizou Sangenchaya Shop",
+        latitude: 35.6421704,
+        longitude: 139.6721753,
+        rating: 3.9,
+        photos: ["places/ChIJGVTOQ6L0GGARgdpYj59I0WE/photos/Ab43m-uqyEpSUVwMgPNt0rNNtUDEnaBs21P8srq0lwfHsjfddWOd_nbwMyAKqqWC_z4KNLukZ2rK5Cy5qzgC-REtD1SoMrLmgFguVod9TFUuLqlBlT-mq6I42xSzu4qRwmx9hLoKn1aROnSJzaMY_f0gAG314Ym-RRYKxfm0FidhQBXjyAHZ1OvIKKqfk8AvupJhgzPq77TJJDe-K3tsMfeE-qNnfbRvEJE4pTE2XxNxvn9ud0h6cvsPS2DCyrbO0gyMaSrl-sMwbvGQyZNnGlcM1nFldMBtJDRzmeT8EKZ04WPPFQK5Px_420PvsMxDWBlODf91ELplXufrKpSj61H6-d5zvih1TLDzCKL3TOT84p1REeCxxPSsnq2Xv4Gxdpl_FmEHOOEsV91oNHQbURLVFX9UD9SjrZRHHRtFWqRDQx8eOps"],
+        distance_meters: 47
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJg7-aO6L0GGARwodw2nf1Nlg",
+        name: "Jijimi go",
+        latitude: 35.643020299999996,
+        longitude: 139.6723596,
+        rating: 4.4,
+        photos: ["places/ChIJg7-aO6L0GGARwodw2nf1Nlg/photos/Ab43m-vL-fQtA-xxS5r7t17Vn9fGy11OMxHe4Ho5xBnUWgdW5LWcUTuy9bjDIEZt8uzrubBfHeQI2kz-Ja5mh8z3mP4b2Zz-EPkxhEHXiOhrSGZz3S2yJconHtvPSqBQgxEDHo9e3z1Pfx2dTdfKHG0Oky1COBTEBt9G0h27JsIXHKWc1rhg1u1no_sfjdYHHCpFLPIjOb0fuQpfzUctFIv4gu_8KZyyUtKOor3f9T8wRUqEAxC4-dcpSmmgfPdSWxaHNE75dmm9I95kglSbm0GbjgV7_phtRmLLx0NzlLAjk13mbDq1NNchwH5BqPPHkDt48DF-3cCEYMNGrFJFkypvh1mVewp20OUwosZ27TMsswRzeGl1sS82W1JMCBUuNj3XIrIPG6bZ9ET8P57KuH79r-4Pfij4av5JXlg5OHpkU4yiTuA"],
+        distance_meters: 51
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJXc3MSaL0GGARuHa6uuX62zA",
+        name: "Ogata",
+        latitude: 35.6428124,
+        longitude: 139.672845,
+        rating: 3.9,
+        photos: ["places/ChIJXc3MSaL0GGARuHa6uuX62zA/photos/Ab43m-uEAv3IVq3N44GjLoPV_Zlbt6RokLwUvJjeNqqGQL7LR_0OlzmnQEGtckMFmUFbD8ujJte_yAl7ZradVvDr46a3y4-TTh8dnyXUghzG3FAWTuu7f0lxoeNXaC0apHYjxcRZxaA4csqlSDpDTH2gSl6bJwwy2cGvrysNRU5tXKfcXQVnanlTJG6-HxO3FJZeQWAdWGiJxCc7Jnct5SrN0zjDGFDrQLOTYuN2Rkv4jvK32rwfKSy2zksakC3QA5akEqeDl1GU4JDIbhZHUtBmZATCVtig7FzNqc7znXWKn9MIj3Jc_pO2cV6PioYkHbXgDJQso9WT2dBwR7tBuszZVIkikbhlbHWYGH60GZFZ-Qn0A7hycDKi4I7bF0eDF-70_rlKdP7OpXUqPEn9HrtTgHXa-zToRlaQrr5SZDwhFFCjbKZzSoD9etDxoErD01ZI"],
+        distance_meters: 51
+      },
+      {
+        category: "bar",
+        place_id: "ChIJJ58NRaL0GGAR3Us9Ap1OJoc",
+        name: "bar CERO(バーゼロ)",
+        latitude: 35.6422333,
+        longitude: 139.6725435,
+        rating: 3.8,
+        photos: ["places/ChIJJ58NRaL0GGAR3Us9Ap1OJoc/photos/Ab43m-tVPeecmbEHPb_pSwgXcbnJGd8hxTj16mtUhgNLoT0Gxw1bhieHriL79P9E10WXLqchFpX8ibnbArAdZ9gxpirxenrPzUU5nbBF08Uv_YerUjsGy0Zt0KhXnq9ihBFDp1FYMlA4MQNWpizJAgSpm1M2bd8hkRFXPMZfVQng4c5oVJqmFy95_qxFIOf2aQzEou82Ew5RphoCcHXKs-gXpOo7de60yl7kXNrxCchLAy4NUrtSlhZY4ArSQ4oW0jPgYtySlBuL-MyGgLgfXyiTNSmbhN-E5f6lCV9OIovfSiXYQC0adwFz81bdBLwLyfb19itnNZw0ftt1IdfrSRoB1iBPBccN790eAb3SDfC9VBWYrzGv9-nV7bS61FUS4sYXj5jDUwECni2viLFZ5DzeIbNRYTi75Nf0H95bTlT1aBAsfxJKFybqtx_bwaU-q90g"],
+        distance_meters: 40
+      },
+      {
+        category: "bar",
+        place_id: "ChIJQ_BTRaL0GGARkQp-JI0cA34",
+        name: "Wine bar The Kentarone Sangenjaya",
+        latitude: 35.6421876,
+        longitude: 139.6725061,
+        rating: 4.0,
+        photos: ["places/ChIJQ_BTRaL0GGARkQp-JI0cA34/photos/Ab43m-vt-s9v1R7MSytYxS4gIrQSpd-Ci2u7KKx6gMYL4YpvY1sAYCSdhFfXK2gdoQCLoQi9v8ezYphJIgh6lV8wWaAMVvSgbo_45VMm_gk7M8UyZa7xUbqgOpJpdvAJIqLqGQyToLFxncXw8YJ9zsiph0Uzn7Z18LMPbgiqUzzmIyG1g8A2qkZ8TlsMqk4f9Rob25jt8zRCWQatULal-Pn4e6_fAZGDAgBLgKkZj67kwHBQ8szrVG3_61hXb8AOmr-UHXVoCZdVLJjw-HM8UNQtR5ioI7VMP29mbagFEuqrFQfW0RQWX2ZlAn9V5J_j5kEFW9hmO1NvmXY3wA7AZrrJZLQHjrc6l1Wuc2-kAzyWK77FAMcZ9aH42-NCfTl6mXN_IzQH8mkaS1ewI5uBhhNdvC7yd_WxfZYSOwGgmolVAQs"],
+        distance_meters: 43
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ78H8q-rzGGARvxvFRU0Ffj4",
+        name: "スナック ガーデン",
+        latitude: 35.64230990000001,
+        longitude: 139.6718967,
+        rating: nil,
+        photos: ["places/ChIJ78H8q-rzGGARvxvFRU0Ffj4/photos/Ab43m-uHY8B7MEx1ZEGxGDzSnf4JT-eS3rDGobY7rwwgsKoECuQ81l-4e8dv2TBOwsptY7RZA0YszGSbwKL4aWQm38Ktl0PCBzzd9wgakho2ppd8HZoF-wnILiOU6atMqK6kq8EronDsK09XQE8HB_GkYr4WsLbUDdRLMFJAHQw_YrbtTq6wXf8By2ERwirHrg8wegwMpq-joO0l1lnfnHGmU6bvjZHTOrM_422mg-zgAsy5kCvOGuyHDBXvM2A15_a3NAFrJbiPQnF-8_jzFmKLTfEAvUVgkol6-7_gmnmy-hi9ubzH68ZLYVNqF3olpgvec_3FI3on0qKJDJWiErcA_pxsJORpShrKoVad7FWrsLnMfmHWJGkrhcT9AOAVRsw7VcXKzV-09rXquky2P0isL5W0c5p067gUJQEqox_gYk9XcnRg0EyS3f6LBTTMXLsf"],
+        distance_meters: 51
+      },
+      {
+        category: "bar",
+        place_id: "ChIJga0TEVv1GGARaKY4PWXbdVk",
+        name: "bar cōmori",
+        latitude: 35.642308799999995,
+        longitude: 139.67182689999999,
+        rating: 4.6,
+        photos: ["places/ChIJga0TEVv1GGARaKY4PWXbdVk/photos/Ab43m-trhEDkGZZ611s4P6DPMO9-Jmk9LuNaw3J4jxPT2YmoQEv6b3YYmkRiLrAWVbzJos4szYA3FzelGoqq_d3mwPsj2NqGbwXG5wd16Dg1XJptwRXn-DDhP8G6bHa7Svqg0CCnBsAhGXOT-YhKo8c-XGD5tm_zJjEhzdppoXI4t4XC-h56w4nkmVSMdmp0Pb7LXScxa6rOOTXQpO40e_nx7sgBkdBvAvXKEOB8-i6SaKBXjhdwg3FWR1QU7USmOtGCZb_C9QFz4CKdmVbD8NeTYVaB8XrkQ8v4NdclCaYhvV6JcN0jEMlMpI6rGAyV8fL_GiKfowQzPaSUHVnzgKeCPU6H7m2sXp6-Z_jR8pj8rsUEtUBxPTIHCH8TjdUtuv3YnjmBLZFseXHVm-n5zdMaUYGbGavStGmRXCGDCmYhm4SdqeNpDmdirGiZPP1IzTlm"],
+        distance_meters: 57
+      },
+      {
+        category: "bar",
+        place_id: "ChIJe9vLUbT1GGAR9OAUhLbLtzU",
+        name: "いはしや",
+        latitude: 35.642308799999995,
+        longitude: 139.67182689999999,
+        rating: nil,
+        photos: ["places/ChIJe9vLUbT1GGAR9OAUhLbLtzU/photos/Ab43m-tLIyZLPSOE_6zc2oGQIyYqIYYHJ3Po5Jc3vVwlCLJ6alREZsDY67RhppqZRC93cO9lzRrVy-OjLW6BgR5r-NSntynzbGnQ2RdrfJVgiR_DI8qMnG43a-1UBqGtwIEOAAnZCPdY3IzvzIqQwqPYbUbYOHfjNPz4VchMUeZPSpC6MaXP7aXD8PcNF3I5tVOtHkkHNB1l6XStZSj45I4tZVvi4ZilunbgwZG7BaJc9agyXiSqhp0AuUGn37gL-YqVaDXppuR0iotZI5cMIjsMvy46UIgLXhwlLIwXwlDgapsR5asbSpvLHtwM4AjLlVG5v0d7O0krpeAkFekh7FiZEvqxxkIOk3YLAvfgz7bGzcM8hmEBsY626KYiKDxfRb4Qm8o2KVjBOJShuXspXj-g0q855AkUbxxG3npSQF6XSsExOITi"],
+        distance_meters: 57
+      },
+      {
+        category: "bar",
+        place_id: "ChIJk51URGb1GGARwCdj-L3Zl1w",
+        name: "TURQUOISE SHOP&BAR(ターコイズショップ＆バー)",
+        latitude: 35.6431587,
+        longitude: 139.6722862,
+        rating: 5.0,
+        photos: ["places/ChIJk51URGb1GGARwCdj-L3Zl1w/photos/Ab43m-s6FmqK4xGGudbkLSAywDsaWLOKKK4A08H_HVj_ZFvQN3FsY7rDHN2w8O1n-WRDGwyrixBHqW52TnJ8XGEhg2C51q3Z5Ic2mKFV1VsKdwIPP9zZz19mQ2skKX7sszoESTOmh6JevV9g8jL8CoIRwKMp5Vicxu_0oYj_QThCdmNYz22Y6kMGnfOAtKsCWlm2Xu21k6Zj00KBpOFH_Oe57Spv01M0gYr2n6Hm-C5ptgUHUM3A8BLe2A7OCiyUzZQg5hwdxtgTYupiIZjz7xJP7KQ4fvpz9Zqz0ZHPcagtPJHwwWHWZ1cN-0sJDoD7ipguJ5W3u265lsykUc3kkSXrtJs2HvyoFaLp2vfTDIMimW0amXnTegl3EYpAfBtxL8RvEwAh8UACVlCic6dTAm36HovcccQs9L0jSxJ3NS97-eHYtcG4h_z9x5zLtI2_xg"],
+        distance_meters: 67
+      },
+      {
+        category: "bar",
+        place_id: "ChIJRZo1yt_1GGARmmtIG6a_ImA",
+        name: "3rd Yoru",
+        latitude: 35.6421212,
+        longitude: 139.6728819,
+        rating: 5.0,
+        photos: ["places/ChIJRZo1yt_1GGARmmtIG6a_ImA/photos/Ab43m-v2qwnDKmU4G7e7GHkfCec1Ck_Fbaf--LKuNVkdLqZHhcwQW-tN-ttmsTl21mcBQrxyBkOiKnn4odZHWw-KwThVmJQBMjQZFQNahxPI8WGpiX1rRh8EJif4zWQZ7DEgx3VPefX62tPFJS_A3mAY9Uy4TYk_OMWgXso3ImtCiLo5k0O94Q3f0dA_KGoOEwvzJ27FgvIjpNNB4q58_Np0lTGRJqOD5ahm0cpbJX6mCex6VMb_fkQGrJFEhED-E23zBAaedJXrgaJvmKOdMpbpusxaNYGeImnej4Qu1c7SA-OZZwU4-QCU-mJKyCYOzEMfd4y5QMfhJh4C71jMfh6nk-rvFHC4m6jdPIXp4j6k8gEsKKyziznu5sFvCTZXnE4by1iVDHS4mDUzuVhgGaju_F9XySjpxhbE9psRAIt4cJKwkaXduganOnekL7PDjfiP"],
+        distance_meters: 67
+      },
+      {
+        category: "bar",
+        place_id: "ChIJmwMAdfb1GGARS1xfQTHiv7s",
+        name: "SARANA",
+        latitude: 35.642004,
+        longitude: 139.6727604,
+        rating: 3.8,
+        photos: ["places/ChIJmwMAdfb1GGARS1xfQTHiv7s/photos/Ab43m-sO4--jQ24J-KuSID8GG586ksBek7qxE9CncfTCUwTwKda3NOYmD8uFavLMW3PPIyq-GFwbmElPa8P5gIzGmKe6Y1yFR1ivCKVgSLfEmIPe4FyvysvIRsIADkc3fP5yBxhmLgWrMhl3D0szJayAZcwz9_mE73eJh1CDccNkhspdMYc3s7GNArts2FFGSU5v3cOnUJne967qZqmogXvf7uow9mf124lXYQioNmOUaeuZJsZUSiPvKAZt2NhYC28fq5MiPyjGE5nMJmlrrJorX7d_V5DA5EQjA1d0VHIl5ba4qtuO1q1_s_PJIB6t_5W83BESoo1M2T9bamKruBgMdSxjGJFZHyjlllAAftUAF0T3KEooAEsgldN0-e2vVeAafuFR2_Wv7utJrQ_NysZ3usixFhCqE-xg3Xqf13kyZgq7BVVsFGuyuq5J9pPGaJXS"],
+        distance_meters: 71
+      },
+      {
+        category: "bar",
+        place_id: "ChIJAXVwgZL1GGAROOTTOJQ8Fng",
+        name: "シネマパラダイス",
+        latitude: 35.6422762,
+        longitude: 139.673178,
+        rating: nil,
+        photos: ["places/ChIJAXVwgZL1GGAROOTTOJQ8Fng/photos/Ab43m-vIaubVShQEQRIWPVCF0WL7m8PKR1O01W5z7s2gBPEZZSpEeEjjkf8xZjFRe0_AsWudnAtIsqMoc1-KWYzup9NJ4j4pOhjt4roGtHXudnxR8NCP1xCIyzmxFbUqF_KVcX0iTb1r1D9AUJMSg2F2_ywVGkfFoM9ktJxYKl0ijTFMpbcPQuPcjtXVH24Hu6SPdURiIi45_PK5QC-j7KTwfl7EXPdML9hGt7nSmWik8NptcQitcFdDIeq0nD74xx0yMDm82RQ5pRv2PGF0pvmQwW3I3Y8mxjQpn0Jw-jRFXibjiB9YdLMNKQods4YbJjzO6HG_QLP54HgIaVsj2l6eOXArlGD2z_Zl3zRAiO1M_hoz-IHoxKpjZVo5fOXffGUgdmjcYPjRyrOZnCQg7RUqqXckxGRuEFxgwrQVoFgcF93qNA"],
+        distance_meters: 79
+      },
+      {
+        category: "bar",
+        place_id: "ChIJGyf-UqL0GGARHaoI8ZTIWHE",
+        name: "restaurant&bar bushman",
+        latitude: 35.6422762,
+        longitude: 139.673178,
+        rating: 4.2,
+        photos: ["places/ChIJGyf-UqL0GGARHaoI8ZTIWHE/photos/Ab43m-ukWqVFm8x6DVI3zGTQXzGPMZwtPqlB-PRUFFwOZ2SCpYRnjS6EhShsG56EihsKKTZQWzL-xYr1mXRW43TIFub9Ba9ZtzZHXCMwopH_gYV4FDnIysJpp0qT5AxxwX0sjieYfv53cQ72-T7Jk5vTz2tdYrZwYidxq_Mv4rftx1KSGVNaBUSfpJvrTfJ7_GDg5x-6yxyZ-bA4cBz1oXlwRTD2nuvmhYzKvYQEpgT2Lk7EsacRzyauA_KwWI72w8ajfs8u0BVDsOy0azK2H-nmRQkkSRBcA-dXH1GTxWfCmsncLLnpbw-t3Alt3oKWrXfcrMjMO09O-3QaYJiqtsOG1Ijd4OGDCSlGYUVh5--tJrVYuMXj58RLNF1wE7pyKy0cWpC-iEiQrd5PcJexe6cKrpvHZyIZLRyal2GUuyhE5AIVrAc3"],
+        distance_meters: 79
+      },
+      {
+        category: "park",
+        place_id: "ChIJ6dV2VGLzGGARzTU31-Mx8CI",
+        name: "Setagaya Municipal Taishido 1-Chome Park",
+        latitude: 35.641756,
+        longitude: 139.6735369,
+        rating: 3.5,
+        photos: ["places/ChIJ6dV2VGLzGGARzTU31-Mx8CI/photos/Ab43m-titz4WKm7mDPAzPGAA5vbySOlh2wXbGjNcgwgO1csmiVwmirSW89urYMAPiXOO7UVoiQKE-sBOj12PsBZJamyO9EXUOzicEJfTcRKVYzNBfNsDgBdKqPtkxPLRok-Vzz_hlh2P2l6KMm-En94uPaB7RmO6_tvFNZ6tjreNrk79UuRrrvRJKotXAp9lsyZXlcGgfhr8QEyy-h1XZ5ydfMDX0MfinTG_dUW2XUhG_ESR0RKuBPaveeZWCQnM9_dk15usoSsr1nhM2UKceIdgG56aKKdn0oUN_g7u3ESWtXLfUa7ImYBIEeS3eTnIu8LpkG1kf069w8HAW0lJyDebu3K3E9-z6dIjK058VWnuhl3tkuM4-3KB7Ak4hrGvUNbjuq1dPFs-gPxnMomNQ3ywAwDWTsFUmKe1Qwh78rMQago_kdH2cv1H0uw3dV8WOj_j"],
+        distance_meters: 138
+      },
+      {
+        category: "park",
+        place_id: "ChIJ_aIo26H0GGARSilYjgdcTmc",
+        name: "Dokko Hiroba Park",
+        latitude: 35.6449147,
+        longitude: 139.6713205,
+        rating: 2.3,
+        photos: ["places/ChIJ_aIo26H0GGARSilYjgdcTmc/photos/Ab43m-uFGpb2qCJal7TWAafgiT6IRk63QK33SnfZoruRsVmMHqcjvEzE_DVaqd60Io2v-tPEaf-iuR38hymTK75O8ODHTQv9UvOS2HOMCmv_QMb7C2yZQ_6JvPUtmtHo9SSs3jU4JmTMQSaZ160v4UOk5daAIzf0tMzVP_jJqqcJXroYQFk8r6SMpqX2rVKoAuF3nUTRahH4F5sHC0Ro5oLEL531yEba2B4FKkkzJkR56LrNRr9Ske6xcpIXQnB3bc9Odih_1fjCFEqfgZ7odDM3t7DBEjlGzY6L2idVlWQESTidEMtjgswQbBGU6bmNcyaFemJzZ9Ol6lWaDfQvxaUicKo30d5ksSzrOuws6dbuS9BIoES3hWfMmxA3neH4YzgMj-aa1lRCGK_6_z5wyL_82Lqs35t7qOJEQDVu5YwNZtFZy8XP"],
+        distance_meters: 279
+      },
+      {
+        category: "park",
+        place_id: "ChIJqU8g2KH0GGARK0GMUobrYP4",
+        name: "Sangenjaya Fureai Square",
+        latitude: 35.644883199999995,
+        longitude: 139.6709371,
+        rating: 3.6,
+        photos: ["places/ChIJqU8g2KH0GGARK0GMUobrYP4/photos/Ab43m-tKhcAbKzBCOYU4g7033vrb337nfjvkdRaQhbnzi0O5TGIsPUx0qpcOFhR0GD4MWnbSyhkOB0sU1v-VwaFZOLwzx3ndv0mi7sTFphXMVeaL8Bpld22S_YcINXEz8gv5jT3s3RUrHMLSdiI6gme6XOY71P5WwZOxsh-seZayLkOxx-oVXmG9Lv6bsvfvsyO82u8wT5vDv8vuJebYlUbhkpcVN9Zu7tWomuzImY4V57uzgygeGozOXb_xkvD-fFAzYdRaUUbioBZT8NA8oZa92pTud_mcdHRgZiYwfzWJOnVZZ_BZOzsvdvwp56GXcI6f07WZMaBRLTmRgtbls8d5Gg0nfkCFJTed6p6g8VVRzE99VyY-A_edIXwTNXOl5tlf8qcsrfVuPhPo2T4Cd_juFWpE2lWx9Fr2ObegT-onWR-aS-ey"],
+        distance_meters: 289
+      },
+      {
+        category: "park",
+        place_id: "ChIJTRaesmHzGGARVIEnDE-QFy4",
+        name: "Taishido Yamamomo Park",
+        latitude: 35.645249199999995,
+        longitude: 139.67192169999998,
+        rating: 3.1,
+        photos: ["places/ChIJTRaesmHzGGARVIEnDE-QFy4/photos/Ab43m-tX-9Wc50-QRwFLod_Ga-4Je6kQIwNjZjcKvhe16g8P2RS5Tu4dLKx6t2qzNENMsSsWD0imX0C0cxdqj_7A7kHt2elV8f9qs2LY9awp_hLzaYsXgY8w_p7IeoLK2oLIcw-h479yEadj0AAu8TFU6LRGqIVhua6Lgphb1mdxMZQa-D2MutWJ7h4AE1R45OUUDkcd7jlFYo0rs-czewXcIy2z8sR7q8LGbup9fSog5r4LdFE9-2yNh9i2Nq7Tt6ThaRzCbmyg3BF_qre4kJ6j46LAp6hnUyhbrGdbFy6er4Eg3meFNntH4o1FZhm4ijHSXS1cxVaGs2TmJdRDPtjq38Cc17MKgv4ZXWUMdHf7-MycAhiVkND8vCjDBYGDods_C6sHcXH0EHoUbJO93Ea9O7QKC1DxMJTq7J_sgvYxTrkcqPEkL4n0iFf4EsfJWQ"],
+        distance_meters: 302
+      },
+      {
+        category: "park",
+        place_id: "ChIJc_wvoaH0GGARiHtYSnKvjvg",
+        name: "Taishido 2-11 Playground",
+        latitude: 35.6454357,
+        longitude: 139.6730652,
+        rating: 3.7,
+        photos: ["places/ChIJc_wvoaH0GGARiHtYSnKvjvg/photos/Ab43m-tApftdatu4ErKq-DM09O83NiQUXz2TW-NiH2IbV0tLXy1figcEsg_IEp5Jte5Tup9fj_Ig1L215fnE6uYYee0C0FWraZe1i81oOOsP1vr0LUxO01cvImCu_N3A-x22UNvDQa0Ah0N_sj72sDXoS9DK1NZoUTgL_K9T_ITKxGB9Q5Zc0NI1huoErzwFxA2EXR7Obv3RarjwocLgfFKLZaVU4K24gcGUMNegNZakrvLjH4bPDOh3I2sHEqUFc6EEAVio2rJ_UZunubkPNM3fN6oJB2u-2BfrTu-8kYdXnEf_blnMAxeo7HGprBXyEFooiR8dlO_zVb791dHOsUv8T7tMO9NaUEbK6lkRGqDdaZksraVpBg0ZOe2h_BsCYL2DPimE9r-YaNaYlS6tK9LR46kSZoD_w1v7PZsRfGGyg5WRqw"],
+        distance_meters: 326
+      },
+      {
+        category: "gym",
+        place_id: "ChIJ9XUuNS31GGARDgm9aLEW4BA",
+        name: "STUDIO IVY 三軒茶屋店【パーソナルマシンピラティス】",
+        latitude: 35.6430042,
+        longitude: 139.67237509999998,
+        rating: 5.0,
+        photos: ["places/ChIJ9XUuNS31GGARDgm9aLEW4BA/photos/Ab43m-tDVtAbUxtMrUELZY6IJ8vbHM4Sc0ss3-zX1vxcgsXzbNA_9W2Zoe_hU0XTKZyZiJHDKnZUM6ykKmk2AU25VN9QwRiRdpVsfgapGy4K7Eob-9SRhI8c9gctSisoKrh4BgjLTSRphe5OO8yDzvc7uQYRBHrzNFX2XMrFUHboMz4xfijQtjj8FHNKH7tRnWIGhCv1SEVoMs9MHdRtRnZktYYnx3PAy3sGvjpsQx-qScCPyqznFSTOqMkjL88BvUravm7fIQtqmCE0cMSVAW53QWixRaVS7iUm6orgtihRGun-N7MAWTndNd2qExUMmOQhId1m3-3tPaDQT8z07zQsTxaX_8I7XcumUegxHeLFTVVKkg4IcOXZK5NwjWC8Qgt45oTPhjqTcSybXsBFiiYG7uK2afJULEijxj18FlmCMyyjJQ"],
+        distance_meters: 49
+      },
+      {
+        category: "gym",
+        place_id: "ChIJmcq7EHL1GGARBxZH5ngEB6I",
+        name: "パーソナルジムJSTYLE【ジェイスタイル】",
+        latitude: 35.642453499999995,
+        longitude: 139.6718465,
+        rating: 4.9,
+        photos: ["places/ChIJmcq7EHL1GGARBxZH5ngEB6I/photos/Ab43m-sqk_epalawL2m_-jxuFreGi_U2cYia50YlvXpl9qM0PX7sMk6LKpFn0itZM8wTZNCJRvftQ3g29CerYTGyjeRpyHOjoApFsSMJWfeIymMxFafUmPMqZ0YTmEbUlwswOuJ_RQgF4PsTQF3FcPCwwcdDiQsTluT3fCXripMHzbGeftYOtYLjQe7tfkcQZXlq9mJGCplmBG6wj0oCE1Fj4Aq3PpT7hVFAWkYD64uXStwCz2I9MtvTVdJnOyWwv_hbSrV3UEu63_MI34kLjMNrQHnq8VvckU2UA94GuWI03Oai7ou5zPr7e-lrscsPv9cYFRFle8Nl1ct7pfFmpKNQMfHD-F42qzmjzOtnvxmVJyD21hjKHSwVEiTKHH76Xx7iwfNPGM3ZEFLBK_Z6EtAuZOKci6lfrXIjGFXusaSj6uA00TT_"],
+        distance_meters: 49
+      },
+      {
+        category: "gym",
+        place_id: "ChIJITiKven1GGARAQV13BY0kOM",
+        name: "CLUB PILATES 三軒茶屋",
+        latitude: 35.642007,
+        longitude: 139.67234689999998,
+        rating: 4.7,
+        photos: ["places/ChIJITiKven1GGARAQV13BY0kOM/photos/Ab43m-tVZTelulm7WB_gc968UxcJonnkzsPCkoqfsyLZdgjSy8NG4qQ96tzEIdKEobAUy5FrJXi-ZlfhYgAbIDOY0ZGiykzGMC0pXld3-1eln47tMNVjyQL-S9CnBvga51Q46EhvW-TSPtHFs-MvUk9C0Vihxb6nY4Gg2vZqU2ZCZUo-mHYrHZagZEphY_E3ES8LuB8vH8upSlciUUCJoa9_HqNPOZrcOxNxvvPzVZ3J3GcpDV-5ycpXIos_fFfm_lkCWzzdckTvJ8qwtEepfWiKz8M7XVeP4jCT9tSocJFrttV1NF0LzCo9Wu_krK4mUTQOnejSensVBXkjDl6zBFIggZrn0uWSF2M7cCpcwJruW_yuD0Ed3AqEMDp40zZQ-6cvIWIfDBen_auw9foBtz_BT0JacEh3gdB4_UlGeticYzbCBQ"],
+        distance_meters: 62
+      },
+      {
+        category: "gym",
+        place_id: "ChIJjYWBdqv1GGAR42EH-uSI0JY",
+        name: "Function三軒茶屋",
+        latitude: 35.6432375,
+        longitude: 139.6716176,
+        rating: nil,
+        photos: ["places/ChIJjYWBdqv1GGAR42EH-uSI0JY/photos/Ab43m-u1eFMRw9czu14WIwKlzxWHgdEu3ONWJut9OCa7lFgGlpRWt5SSFKyd6AxjEZ9RoPQMegMjO7pGlmPiXmxacgKcWq9HA1qpFTUoeU_sDQ2ZfV7sppcyNCfdPxJyfE3YhTJIksnyuMjH3Lp-oBIZhtYxkuewcJE1QpSUXVf9CVtUntZmNNnuvvyygl0YuhX_LVXw-HcHx5bP2paIGY-TVooRly7K9T8EmM_LmncJqFJSlISITwDKWydnmtFbatanN8bmmnHqyWKL52kuAG_GuhPq1KxElBdb4K8zqTV8UyZvtu3ng2XCQKVBRGmoPSGAWNdHi_ygYLAJ4YpW7MZPrsqtcV4rcum6vs3UHMCU0vKFRFle-SPYrgapFPMT5ki9dDbB2SGPBHKRzH3RNKPGn3o-wDKH1TSHU88PV37UfxMW7fi1-QQuBKj11PTfjKc1"],
+        distance_meters: 102
+      },
+      {
+        category: "gym",
+        place_id: "ChIJtaD-BKL0GGARn-MGo3i5-To",
+        name: "Anytime Fitness Sangenjaya",
+        latitude: 35.6428586,
+        longitude: 139.6712567,
+        rating: 2.9,
+        photos: ["places/ChIJtaD-BKL0GGARn-MGo3i5-To/photos/Ab43m-t2W3wECFwHfTIU3jBtF0LjtSeCdOczKafc0hae9w7XJgnQ5mHbWRo4lcADjYCUFJAwjMOpLF1EqPmfmzNAe3iGPel_ZGnMhXWDofsvlQltmmxYGYRT259di37bA9rn-aHSmvCbXIwcObh2ZO_0OuBcQC7HNBgKcJJBbr-l_OjDFd3ikqum9yIfw_EFZnq99rlbpvRVIlqtKp4PK6giLPsrpwYohFutX14DLiI-gua1TB8akBqxSHhr2hXxFZ_KSo8uIcyTWo2hIN1e1oyTidKQbtgC9ei04i7PZ_mHHNpzE5NJmzaQ071ylzuFfrbxT0XedQ_VbCdchvEbzhugC9rMHYRIqhBQaILCTELDOGxambGl86Tgo2ubAqE0SHzXn0oUlSVUbCuLau1napKJZBYUx9OMOuRIhAl-oBELlXpKomR8Ktzv-qqjSWLpiDD0"],
+        distance_meters: 106
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJqU8g2KH0GGARK0GMUobrYP4",
+        name: "Sangenjaya Fureai Square",
+        latitude: 35.644883199999995,
+        longitude: 139.6709371,
+        rating: 3.6,
+        photos: ["places/ChIJqU8g2KH0GGARK0GMUobrYP4/photos/Ab43m-sNlM9ICEKdTHuBGHhyOPJdsDOfHDLMyaLlfMVMJz9wC_ATr1YOFZYw5D88wSDzdPx_dG05MkeMple9K71ZZq70W1xGc9QD7CDprUu9hHc_R2PjXc_tp-7_EPqH4-kJKi_dGybkDpg01KCX1lIZvPhMHUTyxYlpm1Bss4wHFFlWh_MtDp1kZiwOLXX-6PBwDAGgOh_NfFUa2_ojzGOsEcK_7JIxhVshxWqeDPkiKSC_WorQzDKNFi5Rwqa_VsG0lLusqFT_dnmDIwIo-1158e4eWYsFnV4syKxMcZJ2I8ukmgj7nqeP0D_KVL79p6zhH7N4waBfuLl-qksbOoj_pJGT2KDx5InBYu1FDHZcQtnei-MDUMiAy4vpg7XO8u2zJ3Kcch1FrO82t53x1cU1Rb-m7wJl-FYKMIPW0wmbJ9rEOpyK"],
+        distance_meters: 289
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJTRaesmHzGGARVIEnDE-QFy4",
+        name: "Taishido Yamamomo Park",
+        latitude: 35.645249199999995,
+        longitude: 139.67192169999998,
+        rating: 3.1,
+        photos: ["places/ChIJTRaesmHzGGARVIEnDE-QFy4/photos/Ab43m-u_M2cbR0CuhyuBxEsFUAUtvHvFSwVGgiYGJO1yA3tsply1M0KOkxVOQ58NSD6-r6y9U4WMO1lXR3IBjoj519yxL32te2gWm_LrKqcoFj8PpHIzdR1_ZXoydbJG_ea51UA3SQGpg6il0a-WcxFzJXcLDAWd4bJatJf70GoSTM1nJOqwOLhX5UkYT_8E4gGGYWUxIXKcZBjutml4Tu4TF-8VmPSB6RZaL4dlE-mjJwiFCBFRuJFSvr7Al3_kdGh11_KC7X0Y32lMWcfA7NtlU2LB_c4S5pUTnNrhyaEOqD7H9lADh4M2n49NS7QtyEnMwI--I0BW8DnJoSMmk11UckeETjeFUlZXRBhePPJHjY8xsXAW0JvLE-lxFxIwZkzK166Fm80CfDxxcC8NT2_F3AW3NR3f5OqtKi5nZ8l8b7jmCu0-EomSdpx8gPxYhQ"],
+        distance_meters: 302
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJZ0Nj0Jj0GGAReMs0oUfjkyQ",
+        name: "Sangenjaya 2-chome Park",
+        latitude: 35.641748899999996,
+        longitude: 139.66866439999998,
+        rating: 3.1,
+        photos: ["places/ChIJZ0Nj0Jj0GGAReMs0oUfjkyQ/photos/Ab43m-uZO_Gx9pMHBBCRCJahnJlm7d3GsxgVvCJJWCghlYv3Ejz_kERPna7shWkxb0KYPAE7zzpLBDasLrfb4nruxFG8AbOm48Rw4F5i_x_ixupbkCJuwhYUhlgridBGG6Hl2t5HJqphwnkKCBcs31YkmAgcjaTLd9ctKbpxHOd_ASRjpSZqDx3UcvZxAhwVNx54vGZgHBEzh5tmNkvmFvKmDFkfe_9cG7GayoguGIxM9DzgjN7LcD--lMP3Ti-lAX39fUZzA9GWSHsarmAXLn9ByhMdy_aAVPFsBRwmw71naWcaJPXOvu0QEMk0FtIs1FTkYfGjahzkm75HOAfD6a_aOSs3SoAMo3GxuBgDPaO365P8-H6ewJATSKDAsiXxyOlmqENhYo6SOrhqpuO0xzDawGgoSgf0H8iq4q7tqPZDmoPBOmSdpp55-DOcQgfneuFE"],
+        distance_meters: 347
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJgRzhYKT0GGARmHyHMr4myDM",
+        name: "Showa Women's University Koyo Museum",
+        latitude: 35.6435508,
+        longitude: 139.67697719999998,
+        rating: 4.0,
+        photos: ["places/ChIJgRzhYKT0GGARmHyHMr4myDM/photos/Ab43m-sZMeMR9S49gXLqN4-kZ-Q3DcwD8IlqdRDqJkNXI4tIhCSzO-GxTX0lI44MSiIuPcFXvn3nU9URDlo-pIdgehuWG-1tYTL0dbBcnVYQFkp1URD9JnX9mjlPWOLNMQFbqYkmVUP7fGdSI7_U_0tyNU8O_r_utoZvb6NE2sqorMIeOIkINsXh4_Xd0hhIHTXxulX7O446gguM_1_1DmQSaMcpGxLzYW_QHUbvazWGkbe_OpbgogsGccDTnFp2ozy00Onuvj45tLQZhrHOw3PD4Mi74ExUHVyfj4DjnDEOcrSkdqjsmEu1-Quv27FFjq843lNubz9wNCAz14EDFdCP0H5da0cYyqyJIiXTMb17XK-OrqFGQLmdA2R6Zaabc2FZg7UgZW46ix5j7SAK9iG8vZtfyGuk-wf2am0tG060xqSb0mo"],
+        distance_meters: 430
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ-02iU570GGAR_pTTGvKxvDA",
+        name: "Saishōji Temple",
+        latitude: 35.6447989,
+        longitude: 139.6677743,
+        rating: 4.0,
+        photos: ["places/ChIJ-02iU570GGAR_pTTGvKxvDA/photos/Ab43m-vgTuXqIvdwPAdXVoBdiH0cSmPCXRdgFZgDqIloxReXhu_rvJ2wW40Bgy4fS8ybcdE4Wih6vhveOicTGwkOSgPEaeGf7vRJ5xGp0jAwHwDActMPwU8X-HMtI-8MBuTtSSwUpPeikkTioj5FtdU_JjSDyMoSbY8asK5JDjbW6neHtIVuZfE3hkwmPUIUsv1pNRFEbM-6YGeNHxPMJMY8kAuQWw1xKQD0-DEUYNvsv5QFiU5ozE2ABkhdTD6SoNZ1EInOH88r0hofXjVV0W_orjMtY_-NSsU0_cYhgtrdltMOEkjKoMiOM7YN6o_pm6NvsYMfJjv6cmvnJuo1HizprrwmPCRqYGh6DnYhR3JOMcYEIxOrJqJITcrakKqkslShhj8r4BTgUghwub415xE5Tm730qZEyDEaKK-vQ3hIXNA"],
+        distance_meters: 484
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ89RSO6X0GGARW_UPJYyZL9M",
+        name: "Setagaya Municipal Kodomo-no-Hiroba Park",
+        latitude: 35.642261399999995,
+        longitude: 139.6781249,
+        rating: 3.8,
+        photos: ["places/ChIJ89RSO6X0GGARW_UPJYyZL9M/photos/Ab43m-vNal0fwHF7HucUOUQ5XVy5Mf7PCdm6jiH8MXafpOm_tenH8w3J5L6YpOm7sSzob4Y7U76mBgG75i6D59i-TPNEST7_WUvXyleiYykdP9k9QRP879IFEF1qYQ6lCkdGgoGvF7t1RZeyZKxTL7kwu7MXZSkcfI_wVRDWkBN9j-dn9Mat-gK6WVh6aMq3ccrF8E6A6O84cURUdWHd8vgL3zKfGgxjne4101mL3pYDgqYr0zQVxQT77BLBb6Ay2DihLV-62Ulphqw-iGN9PbT9Z7MJQAs8AHRD3-JPsCx_VPGUxRHxD9YLf6k7E-dvDEA-FImb5grnXTiKVzxsX23RSnnBo50bNHmfh3W7JUFh6cM9PdmiFPiFGQsP-7Z1pw-DPfo5VST5M0nICHDlYADHaWhrdC2msf1mBjMAgN30xF046g"],
+        distance_meters: 521
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ1eMHZ570GGARsawZADkkvWk",
+        name: "Nishitaishido Park",
+        latitude: 35.6442698,
+        longitude: 139.6666971,
+        rating: 3.6,
+        photos: ["places/ChIJ1eMHZ570GGARsawZADkkvWk/photos/Ab43m-t_DKHE8PUEbd3DwqSAOjV0vR6hLnNTDd-uQsBl0HRhJxr0a5Tsk4XQ8z0SpcwWP-FzmXPLTanWbAAktj02wxGM0h2WDv6Gz76GJoLl948FrJ6cdx1d727o5a8Qqvuvbllt-auZkoalnfze5YiRmiTP9aa9YhvIRfi2CF4dR9cbqZbCzZPisKeECmdJj7SZPpv0N80mwDrQFMSkxKYt4C5kviIFckoSVGtF8O37x2PrD8LXdiJr1N3w3z2wqGwCvbWdlBj_7M02o3XAkgIgc2OPlV0JnI3dtVudLix_S5Z3s_nCQO9_LBZSsC-brmij6DY420u5UhOrvW1MLiYhwQ5LRvOAJ2vqtNtY3ybY1bErYHfglKjhZ7sBhe7EJDDlVx0iTSQQUFDbj3uyPGE1MRFRC15Na92mvlyAoyZTmta-KDEp"],
+        distance_meters: 547
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ7dC6Upn0GGAR1x9G8Kr5hf8",
+        name: "Setagaya Maruyama Park",
+        latitude: 35.6412544,
+        longitude: 139.6662132,
+        rating: 3.8,
+        photos: ["places/ChIJ7dC6Upn0GGAR1x9G8Kr5hf8/photos/Ab43m-smfm692b8_Z30ec45OWM7KRoMwlOpBC34b_grxlbE9073ZL8n3xCV8jPJIGE2Qg3cGChtFusymcDdW8QTpUQx_3G018XTBT3-r1f-8WtiGY9mCUd_d7XhhLxAROefcHD6AHjJ_MKZd-UrfePoAe9GTJI-tKVonCMR6d3rs7xav4TFYvRtnDVmhJL9ZMwGAVw0Ee4G1XH2C7CHYiIR4RXrK0EB0KlNeBoyxYt9n-niu6JaKhveK3garDoug8-DAvP8eXnUbEv4mFB9etcoC9Gma-7VwT4VBdt5EXaTInRy0nLVwKDUZ35CVcmXcJVKcpyK6oZ9JLacAdJ6LjHuj_Y06ro6Ls8zRFZotFS5WDZR9h7Hizmdmxx_z_Jxtr5sxvzWasq9uzIKwDZ8jNHqkW3C2oeXAl2Sh6iOrMgWnZ45dXg"],
+        distance_meters: 575
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJJVttp5n0GGARySX0dmMH7Fg",
+        name: "Kamiuma Nichome Park",
+        latitude: 35.639382999999995,
+        longitude: 139.6673293,
+        rating: 2.6,
+        photos: ["places/ChIJJVttp5n0GGARySX0dmMH7Fg/photos/Ab43m-u2ggie1ObsSTFg1iIf0NSN3CWq9CFn8iZe9cIVPKx4kROd9GiqYFR8wmDv--FxidmKGynd7xYgnAOlYkNJxufWt15vUYeUnro1QDBpGb_bVPK9Ol862z_hkKMC41RIdEblJOziSTx2Y4Pd3p8UVc8721fyMf6hQBQT6DDk8iQgpQo9W9ESzYiqP1L6TK6cJjZNZOgtJpWeyCVDmNjFcIu1b6Va-EZL_quHHvVa-jYJli4iF3o-OLNFRPMMpCml01UpG1Q-CJOngl-Ir38Ucv_9BDYpDDUMNTT1nmeGdUFPox3aMqSpqixpm1tggtEfW3z4HKjbAjVE9W5ZSheAuYHA1XfYQpnc9h4ememipOLW8fEk-I1tjFw6e3c0r5AHDsNQbH0R4VEWE95_9sTQCj-8fQ9TvL8mGE8XXwg2FrjlQJOO"],
+        distance_meters: 577
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJVf818KvzGGARw4xSoCT1ehc",
+        name: "Sangenjaya Gorilla Building",
+        latitude: 35.6475857,
+        longitude: 139.6691456,
+        rating: 4.4,
+        photos: ["places/ChIJVf818KvzGGARw4xSoCT1ehc/photos/Ab43m-uMvpp-Ao7fnh5TM9N-lwsmt3b4hWQn2l5gMpoc9S1RvRy5fzQ_YwqHl_km9oY4dRYqbyxbKuJGQ0lahCigbYgmCotb1zq_L1KxJEbsk7lfnsNLi_ctVm7UAIAbMTYhBrbz2EEfkgVdiPlkMcJAogcy3j_OUTsi-UjzylTcV85Q7PQiA860p74a5r6ee-Fp8T6ZaBFqm2fI9agU0hFw4XJ5jQ2ewF7xc4Pio3QPWHUr9-UD5ufdi4OV6lvuDNuafnpOqUAD1W9I6l6zsbuZz-NUrXYqcTMw80VYO5d5qJvjqaH2g-m86KIYfX5cc3E5iIUMAquVQh9J9e2oz2ePsHq6BxhQ_RgWUOHWP-OVRWc5ONH1b90Q7RbraeskZrsDwUT_GBSv9o0DskjqVVAv6NX3_WP-EIy6vio0ExrwQWGtPVIbaH1IeLWXZceOXw0t"],
+        distance_meters: 630
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJ6W5y-aH0GGARTdd2-4qF-9U",
+        name: "Sangenjaya Station",
+        latitude: 35.6436399,
+        longitude: 139.6713265,
+        rating: 3.9,
+        photos: [],
+        distance_meters: 153
+      },
+    ]
+  },
+  "Hmlet Shirokanedai 401" => {
+    score_inputs: {"atm"=>{"nearest_m"=>286}, "bar"=>{"tenth_m"=>367}, "gym"=>{"nearest_m"=>72}, "cafe"=>{"tenth_m"=>396}, "park"=>{"fifth_m"=>230, "nearest_m"=>216}, "restaurant"=>{"tenth_m"=>311}, "supermarket"=>{"nearest_m"=>796}, "transit_station"=>{"station_name"=>"Shirokanedai Station", "time_to_station"=>8}, "convenience_store"=>{"nearest_m"=>266}, "peace_quiet_score"=>0.362, "tourist_attraction"=>{"tenth_m"=>472}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJ4Xpx8_yLGGAR3dI-yaX5PYE",
+        name: "ナチュラルローソンNTT関東病院店",
+        latitude: 35.6318524,
+        longitude: 139.7254159,
+        rating: 4.5,
+        photos: ["places/ChIJ4Xpx8_yLGGAR3dI-yaX5PYE/photos/Ab43m-vb99gxazAsrTiUwGSZ42yAm2rh0u597XbtAR2kmxPM8w1wc6HnE30NNPTIHLtoSQZMygniVoxXe7L3zDnKmKNkQzjYXXaCmm2Y1ktJO6eUWUhBXFth7BPmgexV7tA4JGRMpsQCDVtxjYdpPPYrl8KEr-T_-0XtxNNj1hGaZT-g8jBkVOh-9DRhdv4-0K8CGTU9h7yO6KViOUYatPb_EHcfW7D1qKQLh96NYnpKb9Sqv08mlSjAwOUsXlqz-X2kO-ImMmO6UPmSnLwMoQ2jY37VTAa7NO0Ec7BVBh9XAY77Wya_reAZHse1ulOxmsmo3B4AHYtORRhE0rMiBYirNS-PB0ZCIBsR5x9YxaryhaSj_vr858mR1IHlnCHSK-XPEJDbr3LBAoq_iYLyHHJyAPIHT5ifOE839_mGjvCt5XJbcfh4JWRDlxzL4bx3Lg"],
+        distance_meters: 266
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ8R60fAOLGGARXOo7U-M9d4o",
+        name: "FamilyMart",
+        latitude: 35.6366473,
+        longitude: 139.7236594,
+        rating: 4.0,
+        photos: ["places/ChIJ8R60fAOLGGARXOo7U-M9d4o/photos/Ab43m-vApwYevmZ2OKkyePqUKSdNkBfASefYiIlnscqIquMn3vMulcrY--3i6Rg8jjI5A5h7tPCLH_YDP_nm25xC8EZJMUIjLNx_IkplkSLztGELZhbjw7H-KVI1N3M8xRzXr4fftmGp-N4az0Wgom7RL02I03NgeAhDZVFHUgup7Iewfgohr7-ElCnFPreNzRFfqgP79lJsPyELcZZR-kxFlihQMpxIv3l2-QufAsmnreFOeaQWg-rk-KdWYQM5q5iyrQ3ZoNQDX8lGrYZhcdla_leq0ktblYZo0WKR4Ix8ik28eqh5372Dd1BtU1-G-4R4EgaBwhhRV8baKHMiwsi0Z55IV70Tl8BjUHIXP1-u2BnYde8mBC3xDeRuoU8W5YIG4kIScjJ5-bpySKQRVURJoUsa2GRoHHDfGSO9IjQ4EuLY5A"],
+        distance_meters: 291
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJx_ui9gOLGGARvRGbmSvqc5Y",
+        name: "7-Eleven",
+        latitude: 35.637476899999996,
+        longitude: 139.72569629999998,
+        rating: 2.5,
+        photos: ["places/ChIJx_ui9gOLGGARvRGbmSvqc5Y/photos/Ab43m-sI7cFpyfo2EXLOBTUbxgPMEKehJykX4moZ53zFmLSiIY9P5Pfo3EcdSEf983FzTEG5gGA0KSAScOKC8BnAShDPJux6rqnUZ4dCLyZGsdZAPdtnXLWWFRCZKVB7Z3wwG_PQRBX6QWdTYSh3NLQvkxO-Hz97q6VDMNyzPvKfbc-x_3RsBk2R2ofTAzk5Z6s2j167XoyO4njbFxrXILi_2bkFAXYVQq0Kda0GwRQPG8GZ4RnTnQUeHTe7hFKZwXMDn28hfGNDva_XTfv0xTjsPIpsR3hhTyEpHDZOXqTA4wMGhhnR5V1Cj8pu4Yr1lXOodktMiBG7XUZUCBr5Tuq6tha5znW_9Ldwjvd1wUi0Hq4d9GlkAz5iSdaBgRPRvNqdpP5VPyRfuNqob7X3zIIgmNsCCPQdgStlOLoU3hlfBF10cREP"],
+        distance_meters: 380
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJh5PpkByLGGARM6OhQPgPRZA",
+        name: "FamilyMart",
+        latitude: 35.6347211,
+        longitude: 139.72000789999998,
+        rating: 2.8,
+        photos: ["places/ChIJh5PpkByLGGARM6OhQPgPRZA/photos/Ab43m-vUpJ-M0a3hxyid8OZ4TFQ5fk6V5Gfg30PTy6Iw3stELCHX4ZjQQ7QWkAMh7Hw0iWIld9NFbjHNlM8ODJW6AWs1XL_0e-TnGt9Te67l1bXnVHZ6OmI4wKASqiziV3yQU7_eyOvJ4yat7Xrb8vVSxkZ61YO2jsxQcTKz2_9qsfT96fSljvaS87eRMOAGfuqM3t3QSPvGiRGFUFSry5qfaFVuPrOLGsVkZO1LE_CZHt6tcQvzvsqRNaeBheANPpOZ_JSBgJj1ljAJBGVQaEfOPPjpWUBTAX33cU35PQEt64vSIRRnefmMPGWCLjZGFatQNIaW4est0vuGagAZBSmkCe3reYShJeKnmwVDK5tZHfe3-rO53tQg2X7rNsg0ZXNK1zosSWoexQLsr5P1kJeBaDj_c-hA39Zhy8pInOw-gcITCQ"],
+        distance_meters: 426
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJUdU4NayLGGARZIoi6EyQHeU",
+        name: "FamilyMart",
+        latitude: 35.6301439,
+        longitude: 139.7255944,
+        rating: 4.2,
+        photos: ["places/ChIJUdU4NayLGGARZIoi6EyQHeU/photos/Ab43m-tieo4qE4cqnHM5gAiZDC6iBh1oa_gUh7nuNeGEC0kRU1NoAL5dpKHsq42Lmqr6zIj5-sASEUyezV3aMA7Bm3kQvzB-lsqgUagbjQcwz9lMn_EEv3Pj0Mqhqf-eeXneqbHFV5jP_5cctPihsdivdBLo1NS7zuJgM3Sep_Hjs798izYl3NZ2mqXaDwVu8AICqQp70P6kW6J_OyeFpv8YE-RkZAnLEqmsiItXX6EqBEukZkuMJIL-vYZTG88hj3CWOaS--ATgog0ssTzg5q0SBxIq69a2PP_G8XMwguyDzdcf5ggYGz8AnDaFBPSLIWULcHGKyWzG13tj1g8hxPxzSW90P6GWwhYAGrrRu_0-SIVWChTdjLbjVgSviN7ob53wRpSGdQpTOmgLKUdysrdPgOds4p_puO5D8CFsGPlcv4oQetQy"],
+        distance_meters: 455
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJXRn6RBmLGGAR-uGbwHRdpNo",
+        name: "Seijo Ishii átre Meguro 2",
+        latitude: 35.633049299999996,
+        longitude: 139.7159649,
+        rating: 3.7,
+        photos: ["places/ChIJXRn6RBmLGGAR-uGbwHRdpNo/photos/Ab43m-sj5aYARtAQGj9VaTL1kkuL9r5AMMhFm1jf_zpZWWeLlHDoSEGwFWyoelu7QvLehAT4d8cT6oT1JIcCBPX_A6ZFYSMR4CtpybczMPgr0ix4NzsoV1bk7EtdC-ZB9G9CqAvN5LH8O7SenCekuwHQ9bBeY9osCIxtL2APcV19zuD71s1adAowxdzsp93Klx-I996D89g0K1HqSwqUumxPciPZwaZSr_W2Nm2VwxgbtsZPwZbtvI6ygH4LWC1kpc_LiVDVLm6nz5t-rrzQ9kbGJ_p99tIiGyk--OSOXbqliEsNzEbhSnzOIPP9_WFj8S5U3mHoYgurbmdaJ1PFvhaoxHRSycPh32mWdQ30krwZmYUO2LDOIhAEQHxbDMys2jdt6lkmwGY1rI84-oTHJe97hdL82RipMLFY9QZErEvkRko4JUWg"],
+        distance_meters: 796
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJp3N7sB6LGGARNBc3hZcuy0c",
+        name: "Precce Meguro",
+        latitude: 35.6332611,
+        longitude: 139.7155962,
+        rating: 3.7,
+        photos: ["places/ChIJp3N7sB6LGGARNBc3hZcuy0c/photos/Ab43m-vJPIbsYVXMrXbdejt2-tj2rbwQ3OPuwB3aZCbUNEw8Zzr2B3_eB1G2futRytX2fyaAAgU5SQm9r78IGhjT_ZqQITC9Mxm1FWIOnk0ycgUY4FMDS5QD9V967lOdj9dwKyu0D2KI_Ux6IlOiIEZzeFZTHFrQ3hDCnyfT_Dw5nSMFCASHqKQuQg_NE-5SJIkobcpSaKMBXsDW1J4m_tiIOe0KdzGNdqNq56t1kxcJGDggNVbD2V0WyM1cfnxPTvQhJiw07VYZxdqD9XGKZlFSID5_jhHI20PIGlKA5Pl5LKlORe4C8C9sw9o0MRRSvDy_swG5J3jz_mb5rsdCRX1VtWeEZ_X1fhgoANj8Sks_s33Bg3HI29YSCOE--15BgnaRk4l_itlkZZwpsF9oFPe_fMZVU-CLZcF2qVHOpAstbbqWCkkwnYRcYPGbXSQpzA"],
+        distance_meters: 826
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJV4BeEfuKGGAR38u4MM0o3yc",
+        name: "SEIJO ISHII atré Gotanda 1",
+        latitude: 35.6261267,
+        longitude: 139.7234268,
+        rating: 3.7,
+        photos: ["places/ChIJV4BeEfuKGGAR38u4MM0o3yc/photos/Ab43m-vcPuQlhzYxuNjJdWfWdV1pqp7wGcDErwxzPsHaRwcoxvGj_kIjTc8kg_UqJDCg-D6FUrvFS_-hrHDdEN6EnJTEdo5XFm7MGE_3E0ue5PQzlWcSO7AHza3t19rsqmyK1EL8O37Owb41Lxq_6FToxPghsWZ8cG0jfCCSIKMoQ5qCGylOqiUcIthAONVqrN6jd8SMlmQUHrIQJuVOgBZ5UIkszAulkedlh8arwfT_iFb7_mCrcnBI7g-n5GkXJoJ_rhA8Rzw_XdXfxlU9ymLYU1aIQqvF6srbmPKcmXweYM-qN-Sj9xa-AJtjjMyxPb87x5daTTnLQfgyjnDUrbnTcBEwzzEWUYlhk06U6HccTNkrMwhNfYadAXeNpONB_IXdz4h_yYwlKSZaMI6VxmBqUpa79irMaU3TOnNQOx2t02pTBA"],
+        distance_meters: 901
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJR3yGBhmLGGAR0-icxq3F32o",
+        name: "Tokyu Store Meguro",
+        latitude: 35.6352098,
+        longitude: 139.71476950000002,
+        rating: 3.6,
+        photos: ["places/ChIJR3yGBhmLGGAR0-icxq3F32o/photos/Ab43m-uPpHzTSOTrv7QqYNMIB-ftbRAFSXSbI5O_NV9hziKHEyzjKDHY1i6TivD_YNwlxz6SNPke39jFcmSphMu8n6UgswtxNjlucgr-Seu9-4kunPPSfoyGXAkbbC9FNYyLbZeIrzCFQizLs7veFj4AwXp5GfrWNEeAYnLAKgMkdVqGPNwTWk4TtHhLc6Gp7oWoJr0EZCsDW0lz48LOt7hagWPWpu6lkXrP6NziZjWnEnC4r8gXEw6Csdx68yn22n_JOYD6jKkG59WkHM6Ff7w0ezB-osTbDWIXfN-DoosmwNMBiac5P7OjA7w2OOIScU2BtnT8qCcEixqTqjANXh2KQ4ssxh0C7HlXpdBDnYTIAgtzBppb_EM_icyocZH6fK77fn9uzEn8J_meQvWjLMVYasoxdukwXS0V38dVR60wtKo"],
+        distance_meters: 902
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJA7X3ex6LGGAR3BUWgWGBRtA",
+        name: "Picasso",
+        latitude: 35.6338417,
+        longitude: 139.7142945,
+        rating: 3.3,
+        photos: ["places/ChIJA7X3ex6LGGAR3BUWgWGBRtA/photos/Ab43m-sLY2yNVxriqeS4SZTVDA1WyHYBhsuRnHHak_NQvvBXh9h8kVgVd93AmJZVjzQK2lHiPFXC6g4htciw29DPFz1ey6UWch_ADk44rybHajAGu4IwKLPi8l0wmPX4cPAU3GegcmQy_H6Z-sqNqsIp7A0qvqsxGkMCt5seZKzXiRr1jL_tt8hfO4dY2Kaz7xZYIMSacMiZ_g24uqmruR6fmtP8GkqlJ2hnTfzCA51FdUEFZ5FozHaVPSEYN9GZeo14cqWNzgAn7HrcZyhAj-v0zuDWRKz7yVxydPpN2w2P5gaPk6Mr_XAETWuY1qdo_jpnq92p6nUixnJaud5L_rEbFH77Z2WYXNRlzLlVYFsTdL4_Cz89ehyAYw6iiLhr_Mqv4dx8aVLOTEWhZXSGTTFujXUqXz6LNKP5qCpWcMBN8IsS25I"],
+        distance_meters: 938
+      },
+      {
+        category: "atm",
+        place_id: "ChIJu0GuXwOLGGARyibKldXG3WY",
+        name: "Mizuho Bank",
+        latitude: 35.6363099,
+        longitude: 139.7229125,
+        rating: 3.0,
+        photos: ["places/ChIJu0GuXwOLGGARyibKldXG3WY/photos/Ab43m-up-bmk6h6gz_yhZxt55IrzLq_e0FjAPB3tPgcJ0gjXyWLxFnFyJeLLzlkNjYrARjFXUans1y4gFCQ9otGPy--5t4LHvHAghLHJn21HEFMa4siHd_yx-pRVQUaSe8E4_LmO0b2bfSt2rFGOztIzW4wayIxMxjKX7y7muZLTWAVjFcBamRHAHhJh76JG0aGN2C_KT70PEmH6YX_cid9RP2eqwdUZZuz9k9k4BI5M7LPHDdt303QoEnT0hDWf8YFiM_De-N4DWagll1NSS39CEZhv_ZkecGGSz1-CV96-mLySQBfmWn4lhsD2TUWGJO_yGA_t9ZYvu-zF9apLWhQxYzslQvm9BSvKIkWo-b1Bkgdj-f_UV2AiFcTQxPJCp0EILjRuI57i9eyXqHciVsu1oRQGn-Mrh5fWd62YsmreQcfCjaiZYfXikuy90HzHw_ws"],
+        distance_meters: 286
+      },
+      {
+        category: "atm",
+        place_id: "ChIJTUp5T_SLGGAR4pP3aHun-n0",
+        name: "E-net ATM",
+        latitude: 35.636646,
+        longitude: 139.723684,
+        rating: 2.0,
+        photos: ["places/ChIJTUp5T_SLGGAR4pP3aHun-n0/photos/Ab43m-sqsGfJ6-JdddldTQsE5xNolirck9RDHhueN0MBy9_7iov7FLjIUWINL8_XxV7fyeAFi5n3CL4KOvlNWzAObv6oLBlkSAJntUtv6BVWcck-ZCFlAM5kQaFfeSjpKSK6QAoVXYsuLs1hmZitmnFVg2GnTyzpOMkBWBWiPsKPLrFFe9SRpQl3unqiYRSMJPl1vhn0WnlSR4lQhdCEx7nsvZS4Vz7_tKGSqZt-y6BWT-4piHcpr4Hr6soS2E4snlVRgsEaJJpI5Yo0om7f3408E6flO5Pbt0cgFqNUy0chxyi2DfKDVbG7EhaNZn4IT2lZPib4NwpuXDyBKGmyVtIX_0T04X7bAbpoxHtQRwlRTOB5ltOdgdUjME5XgifkuneZ1rENaBcO8CKG-aQ8xisZKIBZWpqlAwJdJXxa3AbhCgQjsJEQiIbl8mdfY-oiXUbj"],
+        distance_meters: 290
+      },
+      {
+        category: "atm",
+        place_id: "ChIJIbEnesiLGGARQHE5S1m5YDU",
+        name: "Lawson Bank Nl Ntt Kanto Hospital Conjunction Branch",
+        latitude: 35.6312165,
+        longitude: 139.72576669999998,
+        rating: nil,
+        photos: ["places/ChIJIbEnesiLGGARQHE5S1m5YDU/photos/Ab43m-uXFuAzKklmgGn-FA7z8GO4EsK2zPaH3cmHjtVz2Jtl0yu7U4C_ot3gagtTTuRmAmaAlJ9SItmmvHO1OyvNMuaUPOA0Wjc2-NJRVNJCoAXC9coPlEHmd0YCfgvtxYdKh4oKuE8fwkgtYZRqMlxa-qgtTdvgPPutwrlFPyLwasxA1bpcxcj6ZHWsarkrNkZkcXdKgrbjR98p-btGcRhdybT35waz8VVzuYwlN2JH7svlqXpwMNLwNfh8jCRikZq_qt2LLKDN1BJ5sqV2q-uiqAmznB7nhmgufrgllQQILtnA1Sp6-KBD3T7RtnQbp_xdzMpdkW53Dss1cvNy4yzU6Twzg0hzVTBX1uhlQ3dbMQzurHOQHoBdNCdWuZ9QGgMy0i-nJIHfmlH_FkYpngavhL-h-usWgHdwkt3aE7Oz5RcSWM_C"],
+        distance_meters: 343
+      },
+      {
+        category: "atm",
+        place_id: "ChIJVRoKWB2LGGARcm_bdqTFZFs",
+        name: "Seven Bank ATM",
+        latitude: 35.637541,
+        longitude: 139.725933,
+        rating: nil,
+        photos: ["places/ChIJVRoKWB2LGGARcm_bdqTFZFs/photos/Ab43m-unVdNSlFISHJaL3RR-_23uEodNm88foi3KKp8NnAxB8DgJaxeViczzG6tJArbtW6Eac_H0sTtTRDC-45oLnvau3jZ6WUVr-DQD_jplbp5MSy42a7KWq7QfsdUY-4Qg0lISaGtth8u7Kdk75_INk0DhpuwAjQpAykd89Z9pf7M42RHzIdxdVLYW1OeJ97EpDvJLZIixKeqWVIlb89Im0x5d-FabtGgXXfm0tay4mAZeesB4JO8DZoSxwpuIGY6TVNs_kndr4aWeRVfbkYitYVNFL41Zuzx5VVk6PDLCcEG60vkJGdUtxI3gHIFIexZkxVPejyJomm3shKOxofmwoMQ2GA5cdjVzUw1dXKQolRHqr2bzR-T1GytVznhuRCgtNGDpSvgwrtJUs8Gm8Zv9IhhhBxRwKPJyTj4wzPQ7p51gINUDSJ8Ti3_htmhgbL3e"],
+        distance_meters: 392
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ60GkjUaLGGARkceMKwzUZu0",
+        name: "Japan Post Bank ATM",
+        latitude: 35.634708499999995,
+        longitude: 139.720113,
+        rating: nil,
+        photos: ["places/ChIJ60GkjUaLGGARkceMKwzUZu0/photos/Ab43m-vY1Y1d1Huz2titUf8WIn_V2hTNJA6psYkzyi86LqqTdIsQW5vg6rWmGFoWbQ3EL0_nnfIdClP9vzgpR0_FyZ36sm50VMYmU3KR1EDO3DVIQ1_XnOQTq4htcJvEjn0S3wl-3maftlqtJDmPwydOxkjBaaDnBhWh90MV6QQ3OvCjtgL2H4R9NL9GrUP_3hBr1L9_VmXwnLn4zyWfAnaFEOLG0hVYOEP9FFbjaOWpJmI4UGDoB-6Fef9npFiwdIC-c1_WRhhoE8uzX_BpxORrZrPcQq0S9K3kSSGliQJDRAv4QIJJf-v0m0JQQqFsxi3RyCSBz55zftrHht1eRKgJGvEIXci0scqhjbObZHVelp1vIiKMTgzbr9tZpXRP0oMuwUI34SPB3RXzP_ZFESQXL1F_bLg3fXfN8jPzlBw0q_-fy41VH9wZRN0phitArBFg"],
+        distance_meters: 416
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJFwcP4neLGGARQ_OTnmaAMdw",
+        name: "Garden Cafe Ikedayama",
+        latitude: 35.6318699,
+        longitude: 139.7253775,
+        rating: 3.3,
+        photos: ["places/ChIJFwcP4neLGGARQ_OTnmaAMdw/photos/Ab43m-tgbba3LzcLY8KDiCInq4XzTkMaxuBxNymCphmtu5sesWumdlltbKuB-i9QBwX3b2xz8Usy9ycwG68P8ldFZqv7UxA814may9LKOKMNwtas-LQ6kJlexAC8HJfpKUWwZroS2bG2mGktsdSDkGfi2-wiNm2fDLGra80iQWE9sscvIqD-kapxleSDbriLYJCZp6JPzDUZ6jAKP4l--KrmY5My6dXfT2tw5cyq3083fQB37y2SkLtlCPkR1QHm-D3kBLhabyS16Yti8HPlr2lBRH4EwbwuvXGWyLiNEw5ostaLykCzjeGfXbxtuv5CubHYgaX9ezRWaWWtlGn4HooUeBkDgJGA9CVh89HtMhitXvbexYM-r4BV9ED72wWyRGQlV2lmwtObJtWF55poJsAuD009RfGrY9LM91J8OjwPHMjzEw"],
+        distance_meters: 263
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJl7iU8Q6LGGARJyCK2lIKr_4",
+        name: "okcoffee meguro オーケーコーヒー 目黒",
+        latitude: 35.63525,
+        longitude: 139.721502,
+        rating: 4.7,
+        photos: ["places/ChIJl7iU8Q6LGGARJyCK2lIKr_4/photos/Ab43m-vuStWYOfPrWZPYOcQj2qk0bfqfyCuxzR9_lEnekPBk8sedVYh3__yE0kpG9BOuXvpDD33_m_NLsz195lNXbD0QbTAASUPYbY6IRixzoV1wUIFy-HzETjzM_vyb4Me0n8zOb5J7FG4-GcCRDQVJv5e7qmZKHUNqEpJR-s9vWHRq58xEC122cJM0GidpHWBby7eKFOGV5tR5f-a4CywGxnmIpwSIYHkfSvS9AlE4H2v6e8C00AZqYYxVviP7jtfF23ctb11177FjyT-ApYcooh5AUlU8vGoYbrki3GE58mREtB7Ter758v8XLHL3Pf_oDddfdVEAzA_bfVq9vzZwHFyArhLhTFUZYNtxsJrVYEvzGje12Fwk6ojThlmT5Nw29byBjEqY1tgZek2yP0BlDmVDvxq6dNMEhqm_iOLtHQevIOdl5Yi_QB__TuzKrkk2"],
+        distance_meters: 311
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJA9kcwdSLGGARg53u0D1oBlY",
+        name: "NYUU COFFEE",
+        latitude: 35.6353769,
+        longitude: 139.72156329999999,
+        rating: 5.0,
+        photos: ["places/ChIJA9kcwdSLGGARg53u0D1oBlY/photos/Ab43m-s6lNDPG8inOhY_v5WptM7rVQmr7zfrjzgULAVoeHWj6g3bWQh_U02lBZ66TJgtxnxx0Pf2VWCA4QmZf7wcjOJhD_G00MQAP5bnPOE_npSm6Dmg63ADwX4UmCvE9-xGKOMbrRcptKAS49ep-vzLciMfzNxp67Er9xp5EcmFA7uNdmrKK6CjxA8BYWpn7N1zg_UythlAK8Xyjdn_N-hP41bOBnCwBFDdOqtW8rlSUZQC6EPZ-T8pERVYR2-JtHlFTAkRsucpfASs4LVjSHxDpsCNv-CXOT21NYz5zjTXniPHWGymHfRIY9awDLD8KgwXSB5bS8fzNz2cW_IFGFWyJBSKXM41Z_5_8W_eCRkClraNosQJ_zUsoeNV9svvjjGzhceTeCAIKjqPXPcAIqvimy75Jo7ccjiaf7pp2WgDw_mx6eXm"],
+        distance_meters: 311
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJvaGcrByLGGARnJYwKGuFYd4",
+        name: "Jubilee Coffee and Roaster",
+        latitude: 35.6357226,
+        longitude: 139.7216609,
+        rating: 4.5,
+        photos: ["places/ChIJvaGcrByLGGARnJYwKGuFYd4/photos/Ab43m-usp5sM4JxLBGt_nXYMlg6kKxnJhy7vguEo9-w-4HpKZQxvrKdtuHkchz-koNDl1PpToURxfpedp4exr9nIi5HFAvA7WjIXwjreicJ4lr3njjrDLTn62o4PN2VG5Wm-OMlHFJKXOkz41rBFZABXqS2pPUY1Z7PKCtTCYBDaiKNXI8eCUdXkg7rhARuezuYsxUEv1-FnDDQVHDLeYB_q8_ib3_bYPkiSKroTo_WNSddRk5r4UanuIodYT7X48U5F2WpDY3_oJO2FKcojurPjp0nLiWfpZhFaNTb-dA3wCsKpV-vFPYdXhtf73x0SbymJrzlWYL86Ntbu0blHl76RGDtZXr6vsWI2Fu6-EBaTNUKGDXMN6D5kBkMSY6lrn5g_AA65UrWkR4wnFVEfOr_rmvnPCp0Z-30lNRnlmUu-5CnhGZ8"],
+        distance_meters: 322
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJeY0YuQ6LGGAR3_5L738kjq4",
+        name: "CACAOCAT Shirokanedai",
+        latitude: 35.6368057,
+        longitude: 139.7231553,
+        rating: 3.8,
+        photos: ["places/ChIJeY0YuQ6LGGAR3_5L738kjq4/photos/Ab43m-u_9W299FTy40ybnvNrZk73yHotOP2kiuly_AA3mS4bwEWiKNM5D7V8V565UmjFSzx44qDWLg_Bsp7I2q_0mCp7c9Ctl_tdW_TuSPh-Ev_FEjXxcpZPK2ReYHiN2NYUkJdFWWwxmPcg70-VylFMaqxr9aj5LmA2dFd8UlQdx53dfqaWN3VMTeGT-nAIhH0MLdSbpDXa7dIq1RjWisDHpHpuhZuJGoafTKlJKirEgvmy8tN4tohjGZIuWs-BU0A0FSQKRmnxagyuJjxJG3evSiiWAfDC720E6ZwTCmlhigkiYDNdtdr_YYkGURFalbXCLzbT0rkMfSHaaoNkhPEudGR1Yn9heda0P7mUxeiLshYBKL6n6n5vs0bZV8Maw11uKhoporl5hZ4K2gp9fgKPi__vTuHBd-8DJ9Rpuw8wGIVaK3a-"],
+        distance_meters: 324
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJt3-1gRWLGGARkDL65zS5Gfo",
+        name: "STARBRIDGE TEA（スターブリッジティー）Espresso & Gallery 白金台 カフェ",
+        latitude: 35.6372697,
+        longitude: 139.72403119999998,
+        rating: 3.6,
+        photos: ["places/ChIJt3-1gRWLGGARkDL65zS5Gfo/photos/Ab43m-ukGtkI9PBCtjsFGNpCWViC7857oKmPTOxmhGfz_V4pzO48_LMk8qHb2VJ-mIXyv7H7ei3c-rJZivebTT8E4TMLmmup4I6SqyMnzymqBVJgCzF8y2DZpe2-kWauFet2wR0cKPJIs6_DaCMyN7cC3oujypl2S96m7DvcnBHxIWQfNuCXRfiR5RB8zbt_dALVJ46FFyX2VFUPHejDJjKUZimsU5gQ-A8ic9hAexyWBwRdnbYZNpjFImMRGs-XOolJT743hgNzw0If_Y8msWN8PuF0ac8jPd2hi5FqjE1I8maPeQaivR50hcaFzzxySDVxCZ4qd6dBoKF0aGMnc1W8Gtba5JS9jzmqfVnXmPAoQM5-2HkA3t9eEZ4MqI4sOKWSPXp18dkNMhRsd89f9eDJxkhJH2YXYq0p4MgmprrRAi-V5A"],
+        distance_meters: 350
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ_XlNlwSLGGARPhHlccRXMGs",
+        name: "遊宇庵",
+        latitude: 35.6373041,
+        longitude: 139.7234029,
+        rating: nil,
+        photos: [],
+        distance_meters: 367
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ82GdTEGLGGARQXQUFgA18zA",
+        name: "Salon de μ （サロン ド ミュー）",
+        latitude: 35.6375339,
+        longitude: 139.72418,
+        rating: 4.6,
+        photos: ["places/ChIJ82GdTEGLGGARQXQUFgA18zA/photos/Ab43m-tvRofzgKyiC_nI7GPg-NxHX6_SNcSqLt-zgM_CMIh1RmQNPep-jHxEiSKcpUVJfMwmvF57iG0yp7xt8E2QMzPnUD_58WAJ0msbTicHh4-4zRH82_znL62-DG-1W8J8hc5Rbwc2dYr3oM6L_eO-vrVFL95mw3f5tNrTDl9ijULvQaFEbXhWDVX9sse_N1_3-Cr6oi2l8HGynhSC7JFJkduDcdpAYFtewX83FdrnElpAWsEWldBbMRfdr7Wc_XnmkSnZoJNett4fwDnPR2yo1T4Inx5SjnTDYu4z1Aa_3MBZexZze7Qr7H0hlaFDhPjIf-Q1aIep9MPAawhUtY81voelPcLMaXsEHMnBxfFOMgOlpnXq9dyhWEyKWSANoYaeS6OWjUjerQXU6GGrVPnXg1BSMwjCBBSLdGMkkJxszDpd1_0"],
+        distance_meters: 377
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJQUtUlgSLGGARlZYiDlmKWm0",
+        name: "Cafe Kuromimi Lapin",
+        latitude: 35.6373718,
+        longitude: 139.7232027,
+        rating: 4.6,
+        photos: ["places/ChIJQUtUlgSLGGARlZYiDlmKWm0/photos/Ab43m-t3irJh7J8Fp8NN6gl2IBZJlOQxW3DGYrp6DdDbt5C4IiZYR_hx2cf7c1VtZPocd8ng061Gc_-ZbAk4sSYo6s-DvwYqZUmpdUu1wChQrpos_A9ONg9skNvgDiOxjzlmUS_86xb87PZA0Fe4y6VQjwTBdxFQb6xHWAY0qhvcut4M3CFxdNvM27lB__dshhzVpLgqxyfeYTPXG4AAlkfKzdz0OK6aEj7_3WbLMB3VOWhxZbjAl8l62B_LmMLmB0M9wS9OoKIREicJ9wgIcl4d-7YrvUCoJmaYwcfOeNPBEqIbR80cYGD4mTOON2ZzfT-SB5moDEJ8xcvz_3vSax9Rj2cAJErH3cWnAwTfUHx1PhHdy4CmjUATsGU8Lj5LinIEriyhgQtJQ7mY9BiPGSqQ1c0lXBtTo_ejUZb_v4h-fnPKSg"],
+        distance_meters: 380
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJE_EnWKqLGGARdf9mRh9PEEI",
+        name: "La Maison Blanche Shirokanedai",
+        latitude: 35.637287799999996,
+        longitude: 139.72256470000002,
+        rating: 3.9,
+        photos: ["places/ChIJE_EnWKqLGGARdf9mRh9PEEI/photos/Ab43m-scVxu8f3fx75D3SaXJ2zH7wJ05DemLPY2o9sq85wByEKlsk1IoJjEEpRqSHxsihGiASWdEtEAciD85wHZP09taALT7QSAUspsvhNXXh4y4NO5SRYaDjUFhRoUmavdm5qizSUrKhC16sug4AfNDquJMXAV6t0-o5NESIiByb1zhgKGzAUl1Aeeem7SfFY3nIewIQRyYSltpwv-UVUbDzRuecjxAqYVc59tL2MmgDFCX3N9awPtgWkP8vp_fHGgoh5yqXkfkd8CrczXZTytegpSNZLvwYd6h0Wqr2XbTOCUxG2csoZXAhqO9cDjUdWSl51VbNA0I2TYMUx1sgBku6LABqVck7uIcKvzY4-M0PmHqTDT4FTKQlprxUiEE-wAyMKHFGmYHgzFUY9fMq6vTBauC6oL_zGP9wvB7TxSkeobl9NA"],
+        distance_meters: 396
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ93f_EwKLGGARfu1MvGUu1ro",
+        name: "天川 離れ",
+        latitude: 35.634036900000005,
+        longitude: 139.7258664,
+        rating: 4.0,
+        photos: [],
+        distance_meters: 109
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJjZdqFAKLGGARt0PEYKLE9IY",
+        name: "Ishinabe NOGUCHI",
+        latitude: 35.633998,
+        longitude: 139.725914,
+        rating: 4.2,
+        photos: ["places/ChIJjZdqFAKLGGARt0PEYKLE9IY/photos/Ab43m-toaf5K04Gg844Jce5tbtfQiwPxUPQmiVQAgMXlmBCBIKKwVmdv5dGnDCqmau_2lHyjWKTRYN3DnKxImZ_senARqluaXwq8Ut-tBg8T2Rw2hi1xPCmLtIpPbUuRgQM-PE2ZHbTkFXU2lsNzbeY4Rp_j3o92mIiGw7FqcKem_yN9VkzocAbQTHnshk865mPBZ8dy12CN2rI7aOu7hoBtuV1XeZwQiP5VsPdusLRJjfNO6ElRFol9e35vMzFv4ioYlWalE6jfu48FrJZFYEkQaIp2OiGBHhlSUDflF2pWeKIyKPNH26sK8slOQiBTNJGRr8AwnLkyYfvPmkZDwBBT6jydqnZH58NDmaz4Ho0A6Vwxyt-MWx1TdIFmrMvmX2nzRBEEcVWtA2zafkzIWEDZFTMUdgbSEWR0OXClXB1-AMOH2B4"],
+        distance_meters: 114
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ-0Uc6ICLGGARgNZj3D7eG2g",
+        name: "鮨とふぐ のぐち 躙り口 ～Nijiriguchi～",
+        latitude: 35.6339989,
+        longitude: 139.7259157,
+        rating: 5.0,
+        photos: ["places/ChIJ-0Uc6ICLGGARgNZj3D7eG2g/photos/Ab43m-sK2LjLEiXyEb1BfF4JjcOaE8POPVFyXngQIYR2Fd8GCNvuNHJsWxFOSMGScN_LDtf-oiwOlFwbphDGK0b6NyGm5mLkgm2JXWUEtyb4draFp0jRzNlpQMRbqXGWDpAliOi5E6p28EIOD0Mlvdz7EqgQooJu4bsAD9vMM4iRMN6M5ZH_ghM0TRhwWxK48CjSmC4UzW2e0oklY5xNuDg9XezbYYZ2Fi5aGN-iWv9VPOFqRMU6BcweGYxd1YLBBiizTPu4sp_OvBdl9aKXmv8p8BfvE7UacmXk77WJgyAwEOHB0vhTtygrVmyQHlQzTI8fh_LjAjNe4aDxW6eg-7lGh3af9IuXi3I3k9vRPNRXpVouvqQMjeTz-0Uhzw1Dtzy-IEdR9d4Yag9QR_2oi7iwhwARr5I9Mob7-z91JjYZqFEDjA"],
+        distance_meters: 114
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ8f_HxC6LGGARWQY1kbhvPpA",
+        name: "Oeuff Shirikane",
+        latitude: 35.6349483,
+        longitude: 139.7267743,
+        rating: 4.7,
+        photos: ["places/ChIJ8f_HxC6LGGARWQY1kbhvPpA/photos/Ab43m-sUBZmuoYfvxkQCSOlZoNslrXAKAQWvygQH2XTd7eD7cN8pBXZx2b6-WR8EzJCzawyJzyBLFU39FYxbXTpqJYvIEO9PRxVDtRnh0EIwNRvbxv9IeV02Qb5zApN6uiAICtttCf0QIOeylQc8JZ9a7IFlc4uq_yNHGe4LHJ-RWWELELgM3TCM6xgawtpy0tAHKxyAEck6Tsc2DUkFypO2FjWurnkJr5D1mP272LZzzzG3whvWDUav2qN4D5uSfzGnYLf7BsZIlN-AVkdTIzacU4BZJ_mCycrF9v0j0Stmrnz4qZeJJPYvK24nPaTDtAOtG1r3jdE9e_UvsSh0QjWZ08h8akgROS1_f-gOfS3e1TAUb6Dk-X0NTr2V5Xz-IwFsXmPRgY8AuqPoRwdXU3DucQ__iNd-KW1odIyUS0ZQRqcrFA"],
+        distance_meters: 209
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJN4AGg0aLGGARpAz1MjfiJKU",
+        name: "小川フーズ㈱",
+        latitude: 35.6352815,
+        longitude: 139.72163640000002,
+        rating: 5.0,
+        photos: [],
+        distance_meters: 301
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJX8y0gwGLGGARk5YkoqSyTDA",
+        name: "Chez Iguchi",
+        latitude: 35.635837,
+        longitude: 139.727294,
+        rating: 3.7,
+        photos: ["places/ChIJX8y0gwGLGGARk5YkoqSyTDA/photos/Ab43m-skKKYLOqE7afGBSTkid-KGqDnBns0QVvxKqnjtDNrA_3-F7CBegSKM0jnecJF_hjAzRFc6swfFblsm3ufRYYzkNTkWfn3x82ndUnim8_8h83Bakv2tPaYVhSUGWBZVho7l7E8cywINWfcbcHUX4FHdwMgA2iCEJ8h-tJbEmVOqiHw_KeMizaAyP0CQyP-yi69HFloTGOjVrJMyASuAwiP-0KQRZ2aAaqxYrS2or_zWCtaBlZhozEQDXaWKF-funDEUeVGEQMZ7J59hn6n25zHuVEle1FMsQD2TsnAEN-_OPACXYRErLbE7PVYgrx1Y88d7JjG4Q4QQBNnDb8h644GZ1PoG2o07QKohGE41jHOA-FwxCoVi9BkTXJ-EjQBEqiOoPhth9zbCgSdOpMySoeQ5ewaQVCNdYYsgS2WB5cZFpA"],
+        distance_meters: 301
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJl7iU8Q6LGGARJyCK2lIKr_4",
+        name: "okcoffee meguro オーケーコーヒー 目黒",
+        latitude: 35.63525,
+        longitude: 139.721502,
+        rating: 4.7,
+        photos: ["places/ChIJl7iU8Q6LGGARJyCK2lIKr_4/photos/Ab43m-s9OQumQtF7yBnW8cgT0GBQToi3HELtvzQDY0Rz0fxotxtNdMEGgm4siaP2mWgoTK38yeLxuJ4rjXTt0TR6cXbVKEClIyc0XnknWa10t-TXLP3fS7qj5yr-xFzA4ukTYOIgwu-nV4vjTdeTn8fB-AeN939JICClw_9dWL9G-e478o9mZ5wWI9FC6p4OKm6SEOjXUu6LMEmLBpDpdxBLJyx-S6OooxTMI8tiPk2hhnifB5ATghTsXeM1gChenLCrVRadKpDxB2-tIAkx1kH2Gyr_SbiGZCAfwe2MiEJL4G7timY1nRaO_RKzkGWHPVurE-yJT7XcRrlZ4MJOZPKZUYkp_YqAA58nYgHTvmpkfduql1jDgrjys3iiWRRejZOFlTvkaZVJD2R6PjmN0Eu0h09Euo5bGMDZml_U7cY_wI3gvrD_w4quU-DFoJ9w5_4i"],
+        distance_meters: 311
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ3_JwxAOLGGARMwXaPVODi2Y",
+        name: "台所研究所 白金台",
+        latitude: 35.6353769,
+        longitude: 139.72156329999999,
+        rating: 5.0,
+        photos: ["places/ChIJ3_JwxAOLGGARMwXaPVODi2Y/photos/Ab43m-s7ptKombAqW0oiWRUyjKQtyhULQGyjiUv3_uuGZC4WC31Y-bIg0zVR7qBN32IYMX4OXgW-FOKA6en8TyJ8lFvdW4nYtGFaNK9_qfbahkqiUt9iLv_i9Kp5oa41qz19j8FT-_sndqtPAzPKgSY387Ft0VOJohmWDbNfsEvHoQPNWOEx4FWoZh-g2Lpu7BBdr9kd1_qq7MAMq13MXVNMd86L-GhCEARJrHms8x0XBXtYT6K4YDfadN95yRRU9HTxwpA5borMpwp_oBgqxIdbpaJZWXj60h60GxuMoUAy9wSw4DyJLPsfFel-U2ObIgB6yjbM7tw58_cIFZqNhiSVWAWaA5luLSg6BlJXOGmM8j_6RFyQEt-oXVRg3Vtxblm5twNRcKoKOkC-AAJKwE7YLWPnDlExZH2QicdEJK6GXMzPN2Sgsp3C5M4t-Xk7S1lo"],
+        distance_meters: 311
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ5wmmL_-LGGARGpnCcS3xru8",
+        name: "オステリア バチェット OSTERIA BACETTO",
+        latitude: 35.6353769,
+        longitude: 139.72156329999999,
+        rating: 5.0,
+        photos: ["places/ChIJ5wmmL_-LGGARGpnCcS3xru8/photos/Ab43m-sBSXjI-TNaDjMhEFMcBK2TxHpucVzf67fsCcfRwQHp0CwX3UTHuWfK1d6t7fqFSLfT_z4aFGWyBlri0nCvOZFBIX4CRLVov_scdS0kbxvSIVRwvBGhD792iycz--9iMpU2ZGxCvu-hCMu4mXvuJDEAV_xUh_xWmOs_bCfGtg7xpx_fx1zAbP3-CJQ2gHgEyIdm_a51LbKy24tymniWcUShC-_zRW2I8Uo_IXWUpmA_UXq9o4ac5w6oLBD0NlJI_05LLJJt5c9yyI5H_w8TyUMb6DgCKWNw5_AGpm0P4b3wS3V3UMaI-KjdokJ7z4tT5Whb07zcICU_SeLjdBXMgRssDeDmbayg29hAAGyD2Tr3onPeJRKDobpPOlWDBJhEPg6pEmj0XQipUMizauxQ96552iijOwtXHkOSTZjXY3gHhHMYmJTM_edowab154KP"],
+        distance_meters: 311
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJTxq3DOaLGGARwgNz3_i60Nc",
+        name: "week shop「 今日は、」",
+        latitude: 35.6353769,
+        longitude: 139.72156329999999,
+        rating: 4.5,
+        photos: ["places/ChIJTxq3DOaLGGARwgNz3_i60Nc/photos/Ab43m-vTW8ZoRrweCKzJNksotRjKwmo0gJaIBpEhaWs3X59XprUYikvwcaY0g3XfEoPZwqOICVeWp59wGWyGNtLbjRhfggamBHlZwRYu4sm8QMBZ7oZI7qvvjwttloMXr9cf0yGt2XGUwBd0cTNZn_vvE79GtJP985ooJwyXKpAzQAXs6IxqVIBsN4sn2zoQT8ksyF3BqtLdjnDflTy9UqSh94RfqFiD4O-JZ1veo4-ojNC4HyVF_YB-VfQBqghR8Q-jmWEjlEQNDk4vIeI4ICINVc5HT4eDO09H50DmTC1tFezPmiz9181NgNgx0_JMV0qOqRkfLoot7Ais385MwtRxkKyetSghepfWCZF0LyCFGMdZYwPgGvS5VaSeyllhTY-9iJid6QGwpe9DBTtp7JVASRswVT8w0dp2fWsbQ-gwauUc3u0J"],
+        distance_meters: 311
+      },
+      {
+        category: "bar",
+        place_id: "ChIJN4AGg0aLGGARpAz1MjfiJKU",
+        name: "小川フーズ㈱",
+        latitude: 35.6352815,
+        longitude: 139.72163640000002,
+        rating: 5.0,
+        photos: [],
+        distance_meters: 301
+      },
+      {
+        category: "bar",
+        place_id: "ChIJwzEbUwOLGGARM-tgngeU6aU",
+        name: "Bar Rena Horne(Membership system)",
+        latitude: 35.635878999999996,
+        longitude: 139.72198559999998,
+        rating: 4.7,
+        photos: ["places/ChIJwzEbUwOLGGARM-tgngeU6aU/photos/Ab43m-uDm9w4QlX_sFhx_g3Ljz_S_NetrCcG_6mfTWf8OfeUzGBBjNdf7T4EHF-IvQUDbYLVRrgxxRbYOvnivUvIAOWOaWec9MeSvsQ4uN-KqFj3p4b_KA5fbOsGabCpa7WDkON9nt2IKkwmLuFAo-ChQyR7AL_dz9LjKqqSdvA2M09wzf1h4WSRqK7uEXdrsrGO_G2SiXFlZ2a9TZ4vzFs9OLAD3ZaC0A81G25NFX2jOhg90IttnLSktNje_b6gtFAKWE3s-OunDyTMKBEMgkf2JLEA9pm3p3llgyLORLnAEnaOt3sGTUhNqXuZ2NejWmiY0nA0o4nFyHLZIS0_Ugmp8iz6N6eVUcke39Vlzlt-DMUhHUTlMdB6k5LKtfzfvMHwCNlSMu9dXyIIsCR8BYcFe9IYAHGRmT2LwH_TdQVSeAGlaApwNyJkLE5shrQPhA"],
+        distance_meters: 308
+      },
+      {
+        category: "bar",
+        place_id: "ChIJIdH7ngSLGGAR1V-jrYq7NuA",
+        name: "Tapioca Drink & Bar",
+        latitude: 35.6368235,
+        longitude: 139.72324079999999,
+        rating: 5.0,
+        photos: ["places/ChIJIdH7ngSLGGAR1V-jrYq7NuA/photos/Ab43m-uXa3Vn8w1IU8qNOoBfFO8NIrX6OYPuUNR9139VZO6w3u-0L-My-uCVvL7rzYw-aen-i9ZG3LrJGmx-V3Y-XNQ9bG-hCZhTVsUAAHq2lhUkpjEd7h3JHvGH55QsLC73Dos7Ej-wHfkSM6z5I7M7-dKDR6pXyoouSjnZfE7vgsCHYV6u7ftLtQpsZwF1jvDwEV9H_4kE2fUM7tnAFdC_6FV-SKb7etnfBWFg_wbEiHpIjiUuY9rpb9XWqvkibmiJMx0U0220LQkqrYsudn_2216NPT3Gjef2HHFjN_--WBCOJil3OQKqt59TrEZhOHmmmuvG1HYbPIuT6UicSBqeZDtmCAkOv9hWjeZdVPAgplPqspNGzXBMB0tKZYKp2jTlCw7cWEtPzOIfUi_IRob95wBoVxYDZuDOMshLjcn0ZkrtB31c"],
+        distance_meters: 322
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ8QTDUQCLGGARJYNnxnTLifU",
+        name: "ラブワイン luv wine 白金台店",
+        latitude: 35.6372378,
+        longitude: 139.7240349,
+        rating: 5.0,
+        photos: ["places/ChIJ8QTDUQCLGGARJYNnxnTLifU/photos/Ab43m-uusBXQSeTmPt4RkB_0yA7iEEj5CXkFE79QTNXxUX3xPF5117r0Y0P2-iGUyT-VTHw7OVy6hBtOaAGsIoVOzfAEn2DjyfxH7N4pqh0LejztiknpkkJyTlG6yOgBwgfCvrvGPsSezSw4QuM8MeTn-mgXKVyhCiPE-x8Fr4Ws7-qNj6rOFPoVr_gTw-f5gdb1wct89JlVFWWchauwyOfPcQdlODb2X-09XctohvW0lfJDlI2frDs6YsqiaAb38HduT8ZtIEfU3IE9FpCEUWgCwqpO94Xq8DIqsL--gO6oh-BvsV9c7iMa8mfpSyoWxriMoxLAXNzZZpL9pXxBULJ02i37HK-Tkd4SpKZHGPMd619m55AgPw6mxRF6CRMoVavGdfgACACQAzg1AZIMMqmF02EgdpweMpvDtq8GI-0FEt3MKmMI0oAKa4EQDee1kOat"],
+        distance_meters: 346
+      },
+      {
+        category: "bar",
+        place_id: "ChIJwWYzAn2LGGARsi20yiBWzz4",
+        name: "salt and plum",
+        latitude: 35.6371757,
+        longitude: 139.7235781,
+        rating: 4.4,
+        photos: ["places/ChIJwWYzAn2LGGARsi20yiBWzz4/photos/Ab43m-uDmDWwrpc51wN9lLMaPOaN8hxgUIUlgxPlJBmJh1Hmggn0zy242TBwZLYUZzycf1vjENYcBUtOIlCgN3Lc6NesfXOKTjL2e6jNCMdKlhfDLaYH9CMUzKLF7b-CeoJi3juKyi776-id3K9sOmDH7ZSflsWj367dN_r-Stiz4LOws4FTh-hadQR28cnq2lNAR1hy-OdgNz7Q0SfQHDZTbw2i1P3fsAV4Np2azwEIkkLtA5HGiSbETjBfVv_VLHSa6dVnFPBsN12J9LeODOyf3PXYBFi0S3CC8fJed0FKBU4MPtCpJBV4W2ZpDTwZrKEIW0cRpiWKmJapgLUBn1xVOQ1e31oMH9ufPTYkKDX-yX2gtroddjI3dbesBwp0RnkSbanwlJf6G1xMtpUoQaBk5Z01NtEIaiNXwRHDtEpboDu2UQ_o"],
+        distance_meters: 349
+      },
+      {
+        category: "bar",
+        place_id: "ChIJt3-1gRWLGGARkDL65zS5Gfo",
+        name: "STARBRIDGE TEA（スターブリッジティー）Espresso & Gallery 白金台 カフェ",
+        latitude: 35.6372697,
+        longitude: 139.72403119999998,
+        rating: 3.6,
+        photos: ["places/ChIJt3-1gRWLGGARkDL65zS5Gfo/photos/Ab43m-uALulmVIzIxvbhT4trEyRuTOrPJ-QtKDgT8JVpPEHaaqsVzF4JGSVkTxSubmdLPXC-1YVbXVbdBJdCswyhuUd2N7VFeO8yRyc1-eleQCRZHv35FjJ7osvNx6_b8DGJ2YS7NrQ3bahjvil1deuERcsU_7jCq-0fEb3urlDBhU8jmky-1OnxA9Lj_z-wjY-3EKnrchOU-h28apSfrJICdqi5mXCQD72JiathIXVuUSaXXOT8DMFNvt-o-ISsbceQCKc-IrBM9yqEAKRCF4ZD_bbeAvgeSEc9El8LW7L5qjvxXaJyrLlFuwuF6pfHp2UsEowzYxwpAwd4ixxadH4wiorQEZHxUZJ3Dr5GlacAAi-uInz1jGW91bIDN9R7fCvXWbAsH8RsUgUOxTZ--FYwTr_7MTRaJ8OHUEv-YWSddcxCDg"],
+        distance_meters: 350
+      },
+      {
+        category: "bar",
+        place_id: "ChIJT98WfgSLGGARIPybH9joXhY",
+        name: "La Goccia Tokyo",
+        latitude: 35.6373475,
+        longitude: 139.7243801,
+        rating: 3.9,
+        photos: ["places/ChIJT98WfgSLGGARIPybH9joXhY/photos/Ab43m-s685rcC6RgpaUEB4ltv1_hETH8rnd9-bjZksBfLZ0dppAVWHOixkp9IHlPX93gcjmJTwtR9WP1E1dBxnKH9BIjkBbqpS8wfp8iWMkSdvOrYSxX1VDBe9SAWoiFCVtI2jZs4LJUJYNoov3cVWyv_b-XX8l0gUgd-8OZvaMdOAVnoFPeaOTdbHhx1UUpP6Jep6dn3qsgPZmfQHRXfstAhK9tR3tBJWgqid5Dt3GSXyCuy3lmevIYgcK9fBUIqWq1w4DX0l9b5AfDEw0PFcD8vXkryuajfl2jF4zvX5fIpcnAQkLEFLVgOGhKZYdxmka-WIjk-Cd7_3y8bNEwh61ABblu05crit5FCB2ZmqszCYSj9ObMLyCrnqmX-NxO9fQ6M90Av-zRI54slnCyQd9U6K0XRiuR9C14rWT7qbx_DBVdBw"],
+        distance_meters: 355
+      },
+      {
+        category: "bar",
+        place_id: "ChIJAQAAQASLGGARqI-wzMgOWvY",
+        name: "Bar epice",
+        latitude: 35.6374119,
+        longitude: 139.7241369,
+        rating: 4.4,
+        photos: ["places/ChIJAQAAQASLGGARqI-wzMgOWvY/photos/Ab43m-tWHzsIrSZ2oCStYbXMXw-LaCHTgGxLR4VikecfZa3oTaO93luFeOZfXbFUqKNrT7A38KN-j36dGRAbXuj6gPxp-m628sIt1Vd3_Qqv3dlHB1uzHvfgIfR6wSoI__mGjG64UGX0DfzSrrjOD-UF36eBWIXQiKgCFNuvIO_NgVT0AfgxWgRoX8sBjEaR9tf_ZZKRer7x7auafdzQQLtEwj8MFapVAXzt_EomH42FRCsJpTrCnJi2DJ5E0sgidy-uVZl8FRQW_lCn2p2ioKR8SgGg2-761j2Vhb_OO0HlJco9yZZXovcTWDB5w7oOyvjc8oXmueDw_bPMChDnHRBTQPDxXea0aiU7wG_x9lBxcEf4miqUdDb-lBmZW4I9LP9lyS4eWh2oXFBYxnrkG6hGkn_Ou3nLRFxuwi4No6vZ0wk"],
+        distance_meters: 364
+      },
+      {
+        category: "bar",
+        place_id: "ChIJmzxks_eLGGARaCgZgPse04o",
+        name: "Restaurant Clos des Gourmets",
+        latitude: 35.6353086,
+        longitude: 139.7208881,
+        rating: 4.8,
+        photos: ["places/ChIJmzxks_eLGGARaCgZgPse04o/photos/Ab43m-t3ZxEL5IWViy-Umc9Zit5TSngGeeh5WLL08li9C7dA4jNUAFXyaUsX3LM6XooyVT_4LNM17aJVVr7js7UMgqswx9bC4gSPjIffPOuibARUB73ImY5dnYIUbljMOmEcwiLOrRq1Kg6VtloU0ipxrjCU5uO4r6JANnL8HdxlGWrn6-O4FOTNGmZ6NQHu1xQtqnLZ75K0v7riFLzBCBD_-yBYB4hLxelbxJl77dVd0WHBYBA8iKDkPJOl2NBuMAoA_lwibso_hEv2sr2L_icpmXSxmi9yOwDBz7C94THlS2i0cgevDtEuKjzUkoLPuFju74VpR_C6RTDBNET7igYcIpv_gqB5C3KhgVrlkB-m0ceEqcut5hkDFdYkZiMHpT5TxY1h2iu56GZlKd6c8sRMar_bYyLMeSVPnyHm5wGhBBfkgW75"],
+        distance_meters: 365
+      },
+      {
+        category: "bar",
+        place_id: "ChIJJULj1HeLGGARI978BVXS4Ig",
+        name: "3ème トワジェム",
+        latitude: 35.6374409,
+        longitude: 139.72417869999998,
+        rating: 4.8,
+        photos: ["places/ChIJJULj1HeLGGARI978BVXS4Ig/photos/Ab43m-uO8f9tB1dLKwccYEWTi8ZSJmlcQcsiTyfSDus86frxgdpUm5oNzpHJDBUlGkEr31KqpKIORDHGfJkT-N5oxo3DUy_3PnbUFLXgibJXN8NdCdKRmGB7TOYo_byqqKDvm4-ekPwXvOp_4kwtqII0p3IDWBT6MQ4Z0T_g1KTR9rNoX3TG7zjE5GLqJ79Jpcr54rz59EWGOGd4K0oF5uKB6WfUeTQfQasc-F4acwOcTfTOSHVxX-DNrpjRbhRrbgzEvI6jrvaSf_M5M5YCpQ8qiDLbPT40Lwik5NdeyL_YMTmpU7iKhdHULhu62cr52XKX5gGN-NMTwRRk4ZWT7mbhG70PjMA_kgNiCNl9J4qdKtjC2FXmB9ox4_89Y39RofMVzyTfRMcFmIYiJtCaHtZorx46_Mm-dBMdt6mEmPIsU9VlWQ"],
+        distance_meters: 367
+      },
+      {
+        category: "park",
+        place_id: "ChIJm2_3MWCLGGARX21KlUqXZ_k",
+        name: "Aioi Square",
+        latitude: 35.632808,
+        longitude: 139.7263702,
+        rating: 3.8,
+        photos: ["places/ChIJm2_3MWCLGGARX21KlUqXZ_k/photos/Ab43m-uJ1MVefhq53sYXemmPAc3avEFw6DPx5OnUw7e1tGnE01-62uYyIMpOXqLeyt7gXXnLAPAolvz5Rm0dMeMsO7l85kFonwYmJug1rfGdkDennY5UlW84SJfslIp1W0UsJf9B6qnfH25eM2_glZ4ghGj5AMNuQkJex647GvbNI7Yy_ZR-KiklHkdvIUowdjQDFiMEFyGURPS24cE3qhLvCF2zGSq3CJ5Vd48hRjQHK_n6AGnjzh3J1c-XH28yKipI84dHn_1boI0iqbVVVTn6nHzV8r1qFFMmO0kA_uErs18Ha38oF7ruUhFiolYIiU604KivTd896vQvH8JG8TqKU_jK8T0I3haRl3_0bM1xheQ1az8a6SW4jVa22Ye4BTTe8FpVoOltIJXHuhtkM6SkvC7DRprWRWxzv2J3VgvN3V5Msw"],
+        distance_meters: 216
+      },
+      {
+        category: "park",
+        place_id: "ChIJfQ1XDQCLGGAR5J5JJaCLW6k",
+        name: "港区緑の遊び場",
+        latitude: 35.6352739,
+        longitude: 139.72664369999998,
+        rating: 4.0,
+        photos: ["places/ChIJfQ1XDQCLGGAR5J5JJaCLW6k/photos/Ab43m-sHmk2VX5Xu0ZW3yU_LnyEc-CUgCywK5jB3acJrgrMyBVu6TB-8oW7xuR-cEMkdKxO17q6-8IzgTWcl37kA9c4paWVKjT4Ck0njbhB16bKISgwFKPDjhV3NJdkyEQK1-Q410Caor691dbBrxBWX_186i1aOkfbjLAsSBjpbRkGDGcxPRcl2IMqQUj9ZguVf_1-R8B4LK5XOnVhL7KK6R-X2rVgfGTi1K6FlZQAtExWncmU4KyGhcSmaq6QqN0hQvtTz2TTQW28B4I21QCF7aBkdoGaYQchbJfnh-0jShYBrVYBdEwKHFlGWmtBs8MbKlVUFl5LEBhMrCmLja2eha2yvfO-Rdo3sBTf-azf8czNwVl-eQQHLUyAyjk5P9X6L0LF_DFS4Vx67PJcdoGI_C4nMw9nXh9ow361GHQ_dS7U6oe42ONQta83TNqz-nWT4"],
+        distance_meters: 217
+      },
+      {
+        category: "park",
+        place_id: "ChIJV4l-uAOLGGARUP6E-gYBZdM",
+        name: "Shirokanedai 3-Chōme Playground",
+        latitude: 35.6360151,
+        longitude: 139.7255908,
+        rating: 3.8,
+        photos: ["places/ChIJV4l-uAOLGGARUP6E-gYBZdM/photos/Ab43m-sx0R4_vfILGsG2Jjn5B-H9nGH78yrkN_INfdLkdSOhq8-YRqF7ATNNPNf5bsCo8qOPq93nl9ORnqNieicSh82unEgVlY3YWB-6Q8koZjrnMEu55tbN4kmmW4kYdcLFw3H-dt67BcgdDLMjbBmoFX7ICefoULpqzBnO5opPbRvKzYmFUqyazUcs10Fvaot9aNiOG6NJeOhfeCJkiuw-gRsNqupDAHpCzmPwEBdfdmZZvXZq8KYYBucAX22aM13ARRcFdH6KLKRqksTKK_h-9sZsHOa3Wx1Xxu0PiwFFyTsyBEtqhKIkkUkCLLUuI9wgGfGUolQ8kiUoRmgkSLQ3hOTEjJJhP-ewZFecT3kxSgk3FThJ3iFvQXN_67aLb74gDmyqUfRlp9rrd2i1PtEowtJSbaXMJhhbxv6IggQg7vQcJnw7"],
+        distance_meters: 222
+      },
+      {
+        category: "park",
+        place_id: "ChIJZ24IXgCLGGARC1rsl3qD4V4",
+        name: "品川区池田山公園 管理詰所",
+        latitude: 35.6326378,
+        longitude: 139.72304450000001,
+        rating: 3.5,
+        photos: ["places/ChIJZ24IXgCLGGARC1rsl3qD4V4/photos/Ab43m-uSu1VhvEw6hhrNQHxEkYuxWqCLb32mZ_UH8oix1QfJuVJS1E5ZRo89-vJzHv5QnxSTC9WW0f6VaD2hVdyZXAA2fz2KoFMXdKuJAUFdi55VUBVsCsLtax6ALDiT6K6XJe1jNW1M6scy_B9YTbizGu-6Ayh1cY5QoqCgzegjvCRq9oEjaTztv36WFRCae06e8qymc2UfI0J6VGXiJ3O-_clc5Go_KZ39CYzsmjHMublG_Ig1Z8fHaziRCG11MRAWpdWNWpZmvrly4P3XSDEF9D6QHONj8arBpQPKz8ocRFdRmEbgAyZ52-ZBChddt_h1ksjLRIxpr-0hRbDUID98OO7f5qKWZ4yeJfNzc9vHKDU3rygSRK0rNSEoeI6whyWmm-2-OtpkY4t47DtJpCxUBlrwWS_SJF6CLYBo32mZJUNFjQ"],
+        distance_meters: 225
+      },
+      {
+        category: "park",
+        place_id: "ChIJffRlmQKLGGAR1b8H9PbPYU4",
+        name: "Ikedayama Park",
+        latitude: 35.6323429,
+        longitude: 139.7234796,
+        rating: 4.2,
+        photos: ["places/ChIJffRlmQKLGGAR1b8H9PbPYU4/photos/Ab43m-sXnq-pMIpon0bgEJLbCC3w16SylASlizdKqAmrRdxH726Z9VYHZVeigONUfbLYOeRwSlxuEqyEJDecMV0SOvqtDd2ZLpYJ_d7kOb_CQZHUnl_rjEeoLTOsW_WkdoFJM-AOtrf3YJkLHUa4hISft2pBhNNj3O5cUMKH8al-SjqsA5XGz6hGaZ_yo4lJeMiS5-mpu26UHyNH6jdKAdaKbnz_OU8YogXsQvQw7DeIGuHt3qPoRM1ubvQ3VLtyGXbKoVuJPoWaXFJ_Qy9vaITwiQMow-qL4GuIhbSOCU1CK8zf16nYMMx6oNFNnRfG_T3y5CsSXvkMfraiuLFTCcDrBSjq0DGTFBh_zwbtpqc8F10OgGN5Ukm_SFGFRE0ewPI1bkRby7OjoHyyM4FemjedMrlbOKOLORohUd2_F_1RI3-Zow"],
+        distance_meters: 230
+      },
+      {
+        category: "gym",
+        place_id: "ChIJ_6_xDCiLGGARIzX_s66M7i8",
+        name: "NEXUSパーソナルジム白金台・高輪台店",
+        latitude: 35.633828799999996,
+        longitude: 139.7253476,
+        rating: 4.9,
+        photos: ["places/ChIJ_6_xDCiLGGARIzX_s66M7i8/photos/Ab43m-vHog3x_Rp3JzEXRmvgZrPFe-sAEzqIu2zwxOkQmLWb027oUQmjXOLAmzjsDnQgveZHq1H0BlQ6OgrFVRTZvbmMZ34N3JI5x9JvEdZXlBhrgghQAd9DN0dNqaSlN1-rYtMQQPV70YYs98kyikdUu9Vq5U3u3c5z8YGTE1G8FRY2-NjnPO1dgWYHcDzdfqwqHAYtGvtn7OTeZ3AL3RJoVZ0GjVqDIwSTUgK9I55NZTWEGgmuy5j-vXMdTcrWsXMvBoYliS7IspWGPTZnHPO3u3yFyWSBmF-y7W133dxGhBvGYnMxCmc4812NIxN2-Yg9J_MD7yyd4GIzUdfk3JPQvBFyO1uZuuBpATqHl-SlcgVdziC3PCMB6sLEyDjBJAqL8cvFfZMGN_rFvemPZZnz3c04MrS2l8lfxxVgNVpohEAE5FhX"],
+        distance_meters: 72
+      },
+      {
+        category: "gym",
+        place_id: "ChIJUVdpwSKLGGARy8o4YTbcAyM",
+        name: "パーソナルジム IDEAL BODY(白金台・高輪台店)",
+        latitude: 35.6343995,
+        longitude: 139.72581490000002,
+        rating: 5.0,
+        photos: ["places/ChIJUVdpwSKLGGARy8o4YTbcAyM/photos/Ab43m-uGuQjb3wDBE1hM8qBYoE73GaiZnsNq9Hiy9uw2aytLlRhFH2WQrV0cuI0LN9hiZZE_oyYkvKV5E8dNJuq1yAQcPNzQ3yhTaImggxrrwMfDLNk13Fa7fo2e-ObM1v47RGlh-YZtmYJIBw0CYsRM9AjcM49uNhAW7iE-Vn7chyUirV8f_VUofCpbW7ZQemUXqlWTwPavNvrVpuaIT7oX1odA22RO1wlf4XC4VP4xtGk4u0rdjq0aA4YoTJmN566_xNVo09iwdyakQHzIEavoz7cZMtWvuRpAsT72YbtOjayDA5N03dGGRMzgzdSxUPbu0J6VqYem6IpvMEJwXSF_jEovMKlZGt3Hh9DQWe1d5Yf4R-yxFZ8RQyofqEeIP08cuSrpWfuNlPO7x63Hz2W-W8qoWHr633Sgacq8EGIIf-7uJ1CL"],
+        distance_meters: 107
+      },
+      {
+        category: "gym",
+        place_id: "ChIJdSn5PnSLGGARumoTm8Dro4I",
+        name: "GYMMATE体操・アクロバット教室",
+        latitude: 35.632738700000004,
+        longitude: 139.7253915,
+        rating: 5.0,
+        photos: ["places/ChIJdSn5PnSLGGARumoTm8Dro4I/photos/Ab43m-vvTT9YEaM9FiP_dF8_az85snEG769CCm4iMDuNiRoqPEuoGJ7xwOX9s_u3gdls7Lvwi2vbHCb-F5PzsKSMs2gxQyV7HNR0zUnYO6zUOWRK8cmcUX_pBo0YsCdcBOoU7yIQTIPJ0H6TsPbd0K6qhDPEErCkNYugZ6tQUrvnQ_ZxugOjqDMJfJN2Bs-czv4j00PTutjKTTcANRGX8uyTSLqiR_dVpitQQeCQWIre1C9dgozfZXJvQTmoJEOmZQMbEWAcf07q8yWrB1fCWNt97EDcZ1u7BXluRGZUQzSF83aKqH5TiULg6R-u991LcJhc2IlZzOaH-POjzknJn9evEAeaPWfo8z2qnVY5n7OK33VYSSpsUg1fs2ixi_CkMMG2ZaZC7-ZaQtSNc5_pl9Plzo3ID-XZw0z_XJj3IjM1FyPBMA"],
+        distance_meters: 172
+      },
+      {
+        category: "gym",
+        place_id: "ChIJZVIJ5_KLGGAR5mEsBp1hfl0",
+        name: "白金コンディショニングセンターSCC",
+        latitude: 35.6339762,
+        longitude: 139.72686629999998,
+        rating: 4.4,
+        photos: ["places/ChIJZVIJ5_KLGGAR5mEsBp1hfl0/photos/Ab43m-sH1N6Qivj3OFi2H7BavHPrq3P6yDHdiCyNG6KTyU6iAVMaDqKKGc_ExsKQLhsskCCksbAwXKyv57yd9As-4dcltsfG7sXQk9VM9b-E_88NJRyyWP6bRap0YCRE8FPt-2L7wFD5jld_pSmQ8wYHDS2fVPyl-TKpiJshidYlHvODn6d7TXr27UpQhJ5fQZp5es1fOSRfkO1r8t5PwrNkiorxF3fOuY3lBGekE2J4O_QPt_P_7dO2-2hDFqbVYtVpOOS5eh2RhFN9AB4UwJQXW4i-VuOz5ATxQyt_LwQsU1R47kCjwIqai1f_hdhsqKySgF0C7_uKk0t1QLHZcGItHg36WHtWpCbj47Jnxu0lKXo1IbsNSQmdR95KFVvUhsfYXRizicikj6G7y55xJu5wYS2UYyNCQIiV0CMIlFkigcnG2jkF"],
+        distance_meters: 200
+      },
+      {
+        category: "gym",
+        place_id: "ChIJx-gpXgOLGGARHCMS1gpoDmM",
+        name: "スポーツクラブ メガロス白金台",
+        latitude: 35.636134999999996,
+        longitude: 139.72309289999998,
+        rating: 3.4,
+        photos: ["places/ChIJx-gpXgOLGGARHCMS1gpoDmM/photos/Ab43m-thTDXRzyVOK0w8frD-m1MP7EbEsjm09JxywZDr2DTHT34EqE_4aSPIotuPZQJ63jvpvdR-dYX4niCcmsyGVD6WrNWhEONC7FNkqWtxwq09WdgebHvl1WVvf3p0zH4osTuhEydRhgSIe0OcnWW4ui49ydFskGv9PNrvfSSgOWbETgOnPCzfERAPUf0s-2JlIBCVXpvzbMvTtXZdaABsJ9RSgHRcpM7Op2W96v6aOLBOW0M62neMH31OBHdgG2uWFTkUKq0aAS6YukX6zpVXRyaszuGd9He2oq8PBwII4IhzHPJvtfwAHs4Aa2ylscMTvpZhiDNAC1sUqJiJqsztDHTXMVV8dDZldUkSYQTcmhPQkZ4d0ZsrFF4eR18eXvP2LaUkaHZ-3eZ79IstS_N3hVHrL95sWUC3oQS1DxwyZ_zwE7tn"],
+        distance_meters: 261
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ7dBpXgKLGGARI90u4y1aqCA",
+        name: "Jōkōji",
+        latitude: 35.633817,
+        longitude: 139.724572,
+        rating: 4.0,
+        photos: ["places/ChIJ7dBpXgKLGGARI90u4y1aqCA/photos/Ab43m-t88YM3t4bZd72pgVAZKwgwnWJ03nmCtSJpLIBUOwJ8sdM5hRsKWwx3cYg7x13ECL5dlcE2iWlnNLNcv-wUeklWYTsKXe6lwzRH3O3LPBc6jMSPGXZ34aHIkxYZJl6FGXsHkaPsM1_G_hpUU5Hx0yVAz0KayRXxCMQMrngJW_2buT0LX4qxtdIMUA3SFLitOeCmSZUzhC87XsjLXB33HjU1pC4T9MSVwasH_jRrBtM_qp__PrUAm7JngDoAvIqgUDcfwVFZjC-2xWEJu-1kXiB5DVIJWbWyNXrjhWktKn-xvY3-7s_4Qc1Y6cH73rkRt1lW3EXDgrSAomtnPddndCAgAY_rd4bGsHQq_kqTYolN8WwlI-6myzMSa3NMyoz0JVr5a9xNXbmYGXc4S5VXw2AEx03GqShc9uf-SmUUwYw65vU"],
+        distance_meters: 40
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJBVH9MQOLGGAREabKqseluz0",
+        name: "Kamiōsaki Park",
+        latitude: 35.634467099999995,
+        longitude: 139.7220645,
+        rating: 3.7,
+        photos: ["places/ChIJBVH9MQOLGGAREabKqseluz0/photos/Ab43m-sL334_nH-QF4Wix7UadSK7tNi1TYUI30rQ1ul0RN2PXl9dU-eM7VuAbBX7bsraFKboBa0BiYG0uqxDtcgSK1hDqOGVCz3-aaoLfBwM6cRPyrFNagLa3Fo9c1EBk4-PGPz1dOMX784F_n4Sglrzr6RCV_gmgq_sVVOLgBBS-Mcc8y94bCYKBcvCdzPpaeXjesxAmf1qSwpAePYzX__n5YDmWOyy9MAiQaMdt2H68ZDv7y8X69HnPOggYLqzoPsll2q86rzeCgt1i5Lf2XXHnD5qPOAJ5_3ADnmVSiQgHOrtSo8lWJcgWznG-BDLTyBFxBVaIUOlPo6bYE3nnGSqWAo5wZFJ001V1YSC8Nb7EwArwIr1s5Rh6PRS2ty31CWhwZpcn2AABkrzQ3_5ILy3tW-tV_jZ110_hWQ0WFRp7L4PA0TWaRx8sfzLAG7V3vKH"],
+        distance_meters: 238
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJZQpgdf6KGGARXCH1FGs07t0",
+        name: "Hatakeyama Memorial Museum of Fine Art",
+        latitude: 35.632268599999996,
+        longitude: 139.7272422,
+        rating: 4.3,
+        photos: ["places/ChIJZQpgdf6KGGARXCH1FGs07t0/photos/Ab43m-uzBEdJOHwsWbFcLLLjgBLqOSKyisK2mqRBsMXHDoBovWsZdFrXspbgYVbqf56D79J4ThO22sLW8SaN9OhqH6BEfAYkoOB0IKeD9D-25sGc_FuppAGw1x6ua6pXCu3XB0S8ieYXiE00NgoxHvzlK3QWZ3T4NHPsxqIGlJEa457l94GOs_nS-zQYO9w1P244jDdIU1YL4zeXMx41G66AfTEdBhwjJCvj5wSdDFnH8MhAwUGcKpnHMqGt8jjRmkx4f4oYqK1k1gWuHGgwqr2N443yNYczN5Mw7gSYLlNDj8wiBNFFzgejsjkvPM1RBJVBvMe6rVMzeEwjoWZJCkau72knDPjDOkbLSWmgan46tPqwwkNgV6_iaC9-zBlNur3QxaLtK5pxzlvzFexcOBRG-qYINIZYac6J-PeFP4qv-PGq2FLRQ-47r5FbtvJJbqnN"],
+        distance_meters: 314
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJC4HlpgSLGGAReROnuAfh3n0",
+        name: "Shirokanedai Donguri Children's Playground",
+        latitude: 35.6365634,
+        longitude: 139.722171,
+        rating: 4.0,
+        photos: ["places/ChIJC4HlpgSLGGAReROnuAfh3n0/photos/Ab43m-tw3Tvc_PD7FbW1tmUh_4UrGe7HZVBHPwswX6kIMBbPC8r4ke0ys6yOW-0cFPaerIx50t_PHqms-01B8C8ePaCmFC-tTAS-vEk4v2ErWnQg8-6fjP4j1viwL5PITFMfqx8jXfbys49_T9WojJboRAi-BEJaLX-y4ZvprUSsyceKUZ6JThvrHEZlDSzbD7bpZQ29ADJ-P1yYPA1k7h_R2LNMQXkJx41Y7nrGlIsbXB_rAGubhCgVlUrm5BZwv4l81ZlTwHFfAnWDMntryanY3_9P47_PSvdGKtomxmK3E7HaxUczAXKB-0UXhQTT7ds1gAjF9j1bd7G7Jvgeokxo7MXc_VryGrq8n8OE9BjxfOW7FJDDu88EbLhXpOiVcBVZkMk5kNTgLwK-GslCcfPq1q0zn0_8r6BUDydkIYgiXL-9WaUR"],
+        distance_meters: 349
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ0dylheSLGGARXn6UMKbfUZA",
+        name: "プラチナ通り銀杏並木",
+        latitude: 35.637406299999995,
+        longitude: 139.7237662,
+        rating: 3.1,
+        photos: ["places/ChIJ0dylheSLGGARXn6UMKbfUZA/photos/Ab43m-vRXjawOullFHcL5WIkrH90FEBk3046aoeMDF04Z_WH3GKM2Hxk8Z-CTMWfEOMeOaBOHaj2FSg0ureK0MA_2tlMkDKDVnsayJOd6e4ncAmN_51UJqSheja5F3gCP5jZlhNJtB1VVSrzfbekUd6rJnswcivd6CXzBzkKOSZI51RIy9GArNWr-nrDipTfl1IS5IXyPLltgsltDGFe26RTB2YMYt2H0ZIuphqNN-_957_wpAhmCAzob4pppvmoPYcaLpVVEJz6Sqn3YcnuCF55r1aFUM5wNIo4WnQegiBm4BKOV1qDN18qpO8wHpRruG_l2n5dDdrnwJCksycItTgFeOaGZX5W1gLtGxB9ZtZpwQvpMH0OphzT63KQlhnAQetQJ-5fJzAiBoirKapPk4NoTopDB3yn0d6PsazVCYghIBrbBg"],
+        distance_meters: 369
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJcVS8_LKLGGARn6hNZbotZ4w",
+        name: "瑞聖寺 大雄宝殿",
+        latitude: 35.63728570000001,
+        longitude: 139.7269595,
+        rating: 4.3,
+        photos: ["places/ChIJcVS8_LKLGGARn6hNZbotZ4w/photos/Ab43m-tSOIMCE2wNXsWMBp3T0B-JF07-AixhurqYy3tDFjJXvSDE_mHZPpQVCXNPRQ9e5DS7V3pvR9qS7ZvNr5jqy0GMvsm6V_4B9BATtoPDg8ZgqN6myoDIF5a-a8387913Jjc5F7d9ZEmMeIGWfC9tXAL9nOLbZykhY8VBqGKzFTTFf8nVtuxlt2XREulcMrw7WSTq3eK7QbgKX74SrcoNWJTLUTZM_7LGkTRzFTPmmsgDKParUBpGQnoRbS-_HFtZrbjBCClc5a-kQP4PdkOMrSKlM8uPc-CclMFU2jAPOa1uz93nRtMkPMlq4s8JTnX_GbWHXw13LUg809MudKoM4f_GjG20c5mtJQ4JCacj-W4URXtJ3TsjaArFTyae1xbS4PAkJTp-V9Tf0XohnXXCNYyWcJqpqOiKf84cewi21P3fYg"],
+        distance_meters: 404
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ11c1XwGLGGARw7yjtmaO3HA",
+        name: "Zuishō-ji",
+        latitude: 35.6373116,
+        longitude: 139.7269666,
+        rating: 4.3,
+        photos: ["places/ChIJ11c1XwGLGGARw7yjtmaO3HA/photos/Ab43m-ud9eIlEVLYPdHWgL2o5ArZabvEjHera8kfNSGDzoW9C9eJ57XuDgsIfhot0LbYlt1ZdGldhC3dhV2J1CgT2y-acAuqAjT8ser4r1XcgIu_UUBZ1WHOcAaXJ4UGibReqy3n8Q7Byq-AfKKCLTHmO6RAr8r0v2CfdFNSMaIXuLXReaTjRSt9OrSR-cFI7IZuZaUfXAD2-qgAnMVBmvZEXhTWQ4sl3GS2BjZBhM9HGkvG8dCAL8x-lC1I9d8MiMK4lipH6vkev87XvpuDH1M4NKXSGKuTOnUHYvvhtfV5Rf0YmDDLfSpnNOTJljQzwhJcFYv_oAoepZg4ZW5y9SRVAgmUuWWf77kkfY0eEb7t4LHdgfhn3SxsxLOaG-dxf6VRBlSUEc4R5SSiKrZrRvr6EO-iGYsrtvPCrr6_mQXkwuvqbA"],
+        distance_meters: 407
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJrfgWDASLGGARWZNOc9f7grs",
+        name: "Shirodai Children's Playground",
+        latitude: 35.6380673,
+        longitude: 139.7258751,
+        rating: 3.9,
+        photos: ["places/ChIJrfgWDASLGGARWZNOc9f7grs/photos/Ab43m-t0-mYmfzGMz_H-JctzvcILn4ATh6eIC99rCGy9eEyJyZcuLWSnlmGRrmOk-a8B6EzYuShh-baBoZmnZOa1z7s7k6UYciQRPjlp6NUKt7Fr77w8gba_2E4FblsCLRP3S0oqxl3ZIJktdsAZAUStpQmxX6XeXBn7Ng1iqOKsnlpqa3xTK4Yvn18dvJG5ZtYLw7vq5SjGRRSZNUfTThKvvvUZVMpLh0l1oPouap_r3q8Kdy-QwF3QBeOoxWSotHVKgNMl7snW4RIgF-1SBpA7lLqeti0g7FPKwrMtc3c8-D923FgO5EZN8mt4BYFKVigPDpI69mlJSumZxJ6LwCe2s_QC0ihOzjxKCFNQwQdgJuJNXCP3wGN_8baO67wzBKaYzBH2vftJf03j87nD0KEX20NFcVe37unT1xQ8FOoYvnSoLw"],
+        distance_meters: 447
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJhWmksv-KGGARqLLIKtoyfz0",
+        name: "Shirokane Children's Playground (Sarumachi Park)",
+        latitude: 35.632855899999996,
+        longitude: 139.7293547,
+        rating: 4.0,
+        photos: ["places/ChIJhWmksv-KGGARqLLIKtoyfz0/photos/Ab43m-sxpLOsUub_nrkDlxPydq-M981KyO5IhKIw9BDblzMPGriqpQ0GRZ6DAQWUSVn3B0qOHDrr9mr3hUqlpbhHRA1vsQ0HAjgfiD9izaO_TlA1YnngOyWSRDN_JVt2XtVY9wgfXJpw1bl2MctCRLCEd35UsTWeFDxrqlr-POfa2H_5DF6OfYt_Hohd-ilaXMI7qK1iPA1rN4YZ2yZ3rsA-cxgnNUkf4nEl7Z3vAJIbZC2kKGArQ2u1yNxLLlbc6Wk9G7LKglIbeFYXkyGWGiM6ARtsXvJNMF1qaTjbw26pZSK7sE_ueKSNNdQq_aEYTcziF92ypmgmp-Rn07p9GNpvTBCe-uP9ET2wWUkvvnrM45v9Lf451JoRHo1MBYk27mKs05VGAUmySDTGJSKeiogx44-6iGL9fowwA7Eg5gDk29YURA"],
+        distance_meters: 448
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJf7QDOv2KGGARrlfaScGfh3o",
+        name: "Nemu no Ki no Niwa",
+        latitude: 35.6303085,
+        longitude: 139.7224971,
+        rating: 4.0,
+        photos: ["places/ChIJf7QDOv2KGGARrlfaScGfh3o/photos/Ab43m-upFQvDgRH7j-FQD5imq3XvpYcLAqy58n4baj-onM8cyqLcrygaMoL9C7oP7cWnFduarCh0gCTm9Asm5hWzDl6RQVeh-MkCsSSIm-uIzlSgEXFGWfb8pjEb_90W00oWpWn3SnnOgqeYt9hgkL4eJI0aoUpi2CKg0bGIw2IYP7FWtzsGB_C_cIkfdpEGSjzIsj-cmHOMWkfDvz_-mzNgA-19Wuy6YGwkhQXmtNRu2XoJmNj6WAFTqxYLifY1yXQ02suZM7t26Y8ZL43hPJgLRWhekV5QF74rdVh0qpm8WAe-q7bHzjuAAa3k50YxMXP82MwNxrVjvAA9dipkadj-yOBXjPWOXNCnETywvjOmOes5vbbB0cxBzPI-dIkEBHN8b7aRfZKDxOzrXxcrCEwDZdkZxOyR-FaXv6vHG7jjnFjsnpUC"],
+        distance_meters: 472
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJT1LSHASLGGAReXDV4jO0g04",
+        name: "Shirokanedai Station",
+        latitude: 35.63793450000001,
+        longitude: 139.7261466,
+        rating: 3.7,
+        photos: [],
+        distance_meters: 440
+      },
+    ]
+  },
+  "unito Takanawa 6F" => {
+    score_inputs: {"atm"=>{"nearest_m"=>250}, "bar"=>{"tenth_m"=>287}, "gym"=>{"nearest_m"=>232}, "cafe"=>{"tenth_m"=>283}, "park"=>{"fifth_m"=>352, "nearest_m"=>150}, "restaurant"=>{"tenth_m"=>257}, "supermarket"=>{"nearest_m"=>277}, "transit_station"=>{"station_name"=>"Takanawa Gateway Station", "time_to_station"=>11}, "convenience_store"=>{"nearest_m"=>287}, "peace_quiet_score"=>0.272, "tourist_attraction"=>{"tenth_m"=>406}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJW5-FClOKGGAR_wzWA1lPeLs",
+        name: "Lawson",
+        latitude: 35.6359321,
+        longitude: 139.7385135,
+        rating: 2.3,
+        photos: ["places/ChIJW5-FClOKGGAR_wzWA1lPeLs/photos/Ab43m-u6HbeC8qTzfH2athAsJOKdKsp707bLDDw__m7KBguXlR1omW1pOvdhnA20NwFlfAE0mXKuBqPJy3qAE9wJAiOmqA4wZq3nUi2J6P_UZ7RO3yqJBsmYTGZjoD6MeJH3bgPETG4YBQa4EkKQ2gw92syH1cHXWteF4ChlizWD2awG6bE9IiNGIaHi0gZ0ZDyga9jdJMmy3Tkr9eiaCd3nNvJgPUCR4zLra4iPUVIYbo6KoRNBXkWow1awwzD8LFNTDraTdms9i7ULQrusokEwZ8kbZu0uLUuouGNOZtkkS41bZMOzEzYv61DhM28HI6YT8NpYNLXCsQxRzj1kHRMz5dkUphAkThV0T7vW_BuUbPYuurMImeq7xQND0kaBftPNGiQNlX4E6gQdqKR74S3ywjys5v5w8rGxWZXXyWTyc8kFhnJ8"],
+        distance_meters: 287
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJk8EzNQCLGGARzHBCe7h6TT8",
+        name: "セブンイレブン グランドプリンスホテル高輪ロビー店(1F)",
+        latitude: 35.6316941,
+        longitude: 139.73486470000003,
+        rating: 3.5,
+        photos: [],
+        distance_meters: 289
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJj3NkXZSLGGARoOcG3YUlyn8",
+        name: "外貨両替機 SMART EXCHANGE セブン-イレブン 品川駅前店",
+        latitude: 35.6303014,
+        longitude: 139.7377335,
+        rating: 5.0,
+        photos: ["places/ChIJj3NkXZSLGGARoOcG3YUlyn8/photos/Ab43m-sH3UsbE9J_9Sdu1AU7b9iWOY_B7pKUw6Q9ql3Rjt10tkmiHbOgeNJbTMRfS1TfRR7vuJft1cUxRmePqxlsSCnUlIDgl8QtRCnxiFhuhg02_7fzXHZCaIdX26Bdp3rM9DTmlclrGNiq7UicG0zZoXuXwaGHQ7sle7CIRGS18ZCdyKin-COWBEdVmkA4KR-r6_IE9deZAohKoydpuXUvoInjKmV_sOTMcCOc9A8cuwk2ShqlyIBGpdhCquTwlb4Blqdqa407APK_MFx4mXa_fEwprPEm0WFZQ3SSghOwVjMBD4d1uUMFhh3J4JBw18XGLRCO8vHlt0mGPg93Tn1DCyA4aURRE8HUyev4R17qZq9Vn1INfXceS6JlCoP83QPHvxnwXWwWWJKcn0-Q9MatnX6j4hDmS_vfj6YolSds-zoVvH-2VDqX1lGsaWdVoqW6"],
+        distance_meters: 395
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ-baexVCKGGARLzsaTUlIIbM",
+        name: "7-Eleven Shinagawa Station",
+        latitude: 35.6302776,
+        longitude: 139.73773800000004,
+        rating: 3.3,
+        photos: ["places/ChIJ-baexVCKGGARLzsaTUlIIbM/photos/Ab43m-sroGVSpgMOZ1k4E2dj5SbbRvvI2a2G3zbZ3ar_jbeJ0PCaYA-dXaAf9csxIIHD1xFo3sQ5VN32Vw4UilerxjhaLbZUkys_g_DjjcJvbLu5IW5mbfgBq8wg76-6OOT3btzq3ICwE8YBSzjQmrzXexdWT2U2TQYZ1gP8Q-E8NGUkPM3ilJE4Vq-hXgI82t_1g2V8hdO-kI--jf0zoPSysmOXZrG1RjbCXwKb3d4D_gzNwzRizRvGphhsugcod7m58nijW8Y4r-oOeL58K1gzdeKIC8kVLdT64zVVNBPfi7wMEgGEzvuH2k91skFAFXQ4VpClp1eekoMZ1qKSS2349-41oQJ6k2QSOTZ_5variP385gtT5A6Ju5rVGBF7qKntF2E-KIH19S87e6qDsAYyBLIjjLRxWHSytif7XXq7qA22cD8"],
+        distance_meters: 398
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJjVChSQCLGGAR1rU8HGLccOE",
+        name: "Lawson Takanawa Gateway City Shop",
+        latitude: 35.63628810000001,
+        longitude: 139.7400178,
+        rating: 3.2,
+        photos: ["places/ChIJjVChSQCLGGAR1rU8HGLccOE/photos/Ab43m-u9jHEfsn5ULYT01rB1wXACbjuBE7vhgOj11-LKvIJA_uffZSqpQ_2hOsiSEeCeM3u0RywXcBlnwf6qQqbvK-N2Obhn06F1TB-Cw9kUCTPWMlzyuwq5_8BnBoZMO-_WTzG0HIr7Th_MIfaNp84B4J_bWmctYdcd2NWql2YeojdyiREgyjMNH7Amx7x-j2BfIx7SBRcwXVQnD-gg3SEcD4-cs3jkKKRJtzMOaQEa_qGSJDNhiXz6_cCc1taCp2QI358h6G_2d1vfQP6vzEBkOkhxtFEJLZBpl7eBoubwn7i9lNMoXFbCMcTgOE7RnfqzejoFEeYEgEOJlEIYnu3LAeGESauB4Y09WTJKz30Ttkhc6re0zMBRFQQzQCu70bGokGNBl292pVR8saaBfxiDk5kfPc8Bt9KE-fBV9_fUgiVgvULTjXcWCltdBghirA"],
+        distance_meters: 405
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJuzsBPgCLGGARJ1IJN-Kxji4",
+        name: "成城石井 ニュウマン高輪店",
+        latitude: 35.634824,
+        longitude: 139.739557,
+        rating: 3.8,
+        photos: ["places/ChIJuzsBPgCLGGARJ1IJN-Kxji4/photos/Ab43m-vTPBvAeCRW4dP4PemfPOEOpkLPb8jWVMXZfWSqmpmC-VlE6Mbm5w_zEAq1skDSHmO3g97YvMeTQQcC-h5wRb_b1DQy7s12ZmDuZQwg_8JLq346eUQMuJkDaugd048kNIDBiLK0WDqGAz3dH0VIzcoZLthGXvBJmcgaN5iuf_VynKgCYvFGa5zQo2BozNnyB69H3JlLHPZ5pZGzSHstUnoMClh9-m5KFlaF0DYu9br_cc_YtQvlCHW-oQn3nRo7ye6MngNFn8unTqfOzFU4zOoxlel9VgRSb5z85nP7phej5uvAiSATrP2hB05Ia_QbF04hv4WKZuoa-oTZ_Femng74yaLfCvc9AFBuwv8zluRMKE3kIe4_G6ILvl9lLWj2OTA0FpRRZU53BrkzthbzcYHOSfoulpNNO_TkX51OJSImZGEdLcG8OnisN5t9fw"],
+        distance_meters: 277
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJZf24RcuLGGAR44AMXzIc9Zs",
+        name: "KURA:000 The Gathering Lab (Ogawa Coffee Laboratory)",
+        latitude: 35.6379257,
+        longitude: 139.74105609999998,
+        rating: 3.3,
+        photos: ["places/ChIJZf24RcuLGGAR44AMXzIc9Zs/photos/Ab43m-sD83xPZ6tBX1nQe46wih5DkYrMZHl4yxJebLBDrpL90oq6UdthkZK6qctQy8wDLSg7paCz5NyOuJmy7-DhTtg-ZI6yRETupGGplHMPmtoOYHxetudPHO8D2Hdl3NjkmeUjUzhLdLfsacaI-uEGIIIwsjYVoQFYU1r7KWzARSFnzbBk2XW2EGsnVN_fHXJ-Arpcxrv0Lx_RCbfF8DfWTiEzP0WMMjHZIdVICCPrK-vkjklPo-7frzI_m9neFjOiS0OJomqzq_aoZyz-EgsU9gquXkEB6QzCXorfUf8NQVeO0mcRwciKm28V8snzpTcvdlRftZeLfEZ-apIfkNEMGAAx8fsLcOgWwm4S8TB_uYI325wQ6ex506pGLhibhnW0yj4bb_ytpKRnJMzHjRq8UEpmQZCJcGBxnaOpwFKmNNqZ1BiNX0JN1RsZuCK0Pg"],
+        distance_meters: 602
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJpeobtRqLGGARhXoK9m7QzDM",
+        name: "Summit Store Mita",
+        latitude: 35.6456947,
+        longitude: 139.7385419,
+        rating: 4.0,
+        photos: ["places/ChIJpeobtRqLGGARhXoK9m7QzDM/photos/Ab43m-sW641gvXGcQPmVjl2IxpHI1eT8y-A_5qm7tROnqoBg4KChf_UMhcIs4yOO13WLibpntoudfLY-UY7X4elEmHjWR7x7DJbcWIvpdSAAHqwOKX64emrHZB_ujsaHP92MvqR0MvmemDtPy04UM3Cgj5BCvpbf53lj9FojRag6L9D4WcfVQoTVKGi65N1Ma2swFD0dA4n05zSWaVgJFK2WqBecZrI9_ceMd6Mk5_XWmZw4GzTxeQymLqFl0PK-PXb9HqGjQEbkjBDZNk_Vzz3ofDcCAMEcmcN8Rh7ZvJFgYJ7J_8S36gdghXLaWtNH1EoNaHt-XM_3zkm4GLm17YrMsIxXkIqpT8EyzPUAdLijGQF7VPnO_fBe3bmcMloQckBBCt5QR_90cHnojpqBKyie6lvr-OD9msJdjjc1TQmxGXAytg"],
+        distance_meters: 1336
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJBzr1rbSLGGAR9boAoCsHXhk",
+        name: "Hanamasa",
+        latitude: 35.6421535,
+        longitude: 139.7478798,
+        rating: 4.0,
+        photos: ["places/ChIJBzr1rbSLGGAR9boAoCsHXhk/photos/Ab43m-tLdveqJ5pdbjqF6X--AucnYZj1qWkj1a7g-m3uSevnjYb165tenDStw1DadiiJhGYFTon_PWMBNZPU4nEVbE7vE1f72RgjtUEmTrUXmaNavDI2JkWEED4BeXlQHUSdIU3MJiXdUEkbUelcqJne_86wf0DiHxOubcHz9VMct8ZBy5kDZ0FtRicmoa4eSO25Y3GRoqJiWZHUy9tYaMjRBNdBFaKy5j4pOtZPFtPO9i8AB_mow6D3y2ugnSW3md8N025rOA61Vc9WaUv9AM7uqDXBR2-NHCuQN3PQGiPc3kDoaYzGESFNGK0G88BTiTpHAW1glE3g7gXwcniVu9megvlNYJ2FUMYeZTXcDEhng24nY1y8jUOeWvHtUVdJuompM8_rSribbkq_d5dP6Zl-lfPgOTUVuGI9GJ3jo52ta7LI4w"],
+        distance_meters: 1369
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJUXcpGR2LGGAR-yShzSH94U4",
+        name: "My Basket Shibaura 3-Chome Shop",
+        latitude: 35.6427055,
+        longitude: 139.74786269999998,
+        rating: 3.8,
+        photos: ["places/ChIJUXcpGR2LGGAR-yShzSH94U4/photos/Ab43m-u3UhT5vwDJwbwX8yPmVB99QLNRn5sgT2VFkNiUeud48PMTR5BxrL2VmGGq8KkaPdOacddsEJ0_JVSi1l7KamQP3pXb8H9kQ7oli2mFVe916He0jg-YZmq_doYiJVFGIsmrkbroWFhDfqUfb6yohSZ9cIfNpDMyzfUHpWHs3jKMPRiFFABrXmfA_GhivuAZvuMaELyflgJT4ykk2b3vdca_gvdp6ZKgno5sQ-8C4Fjz6rnkUj1DeAJcHMvWYvx0T6hokBKlTHfTG2lcRhb4WcDwYRgkvDDv3DKC_98kdVfjvpqyIWciV0TrY100LMoKAm0OvtPPt3fXRY4S6hLw3TqvR3mVMa_1z5I9rM5q360gFwz8a4QLCnl4DNQQq1TQkgSNehnYUdvBSCyVI-v0IUU21hoxeYFAKrGKLU8j03aQSw"],
+        distance_meters: 1411
+      },
+      {
+        category: "atm",
+        place_id: "ChIJv3Uejd-LGGARxsHWkUqSEbY",
+        name: "E-net ATM",
+        latitude: 35.634682999999995,
+        longitude: 139.73930600000003,
+        rating: nil,
+        photos: ["places/ChIJv3Uejd-LGGARxsHWkUqSEbY/photos/Ab43m-t_0F7-fE3if8nXCWUpjdw84ez6CMsQH3CKDKV7nVvJ2Wm1CcGuwn7osrNLSPJzmeV5NiB9rMtHocv2kbZhk1wiOVen_7BSGW9SMawwQLqwWet4k2s7bkwezK_eMxCD7YveS0ASWCizuiq8ZXiDedixrUit1v2r2zcllXhSJnhOUEDOGKGFfp8VgJQpoeteDRFQTPlgdKewm9qkO_rIJyKKsjt0v8VVUHCWcbK1Z6ddyMEJiAwPgQARnGqMd_VVSgtxsUwTtNcGXznwda2z0_U2rYrSFMw5QxVfyIwdDADg0MoJ2CfBDcKMJRV1ndQ5d-xbMprfakh5gXDRBKxTPucgab1xjUYSmPVJQWWWGLtKZMKDdMNTWcvViN4KYNBsL_I6yz3ZydvyDCx1egeK_kgHDMOAJhhncLQef6nXxAZwcpLooUwx8WWfPq7rlQ"],
+        distance_meters: 250
+      },
+      {
+        category: "atm",
+        place_id: "ChIJV9OQEtWLGGAR-HfYxkm9nuQ",
+        name: "外貨両替機 SMART EXCHANGE JWマリオット・ホテル東京",
+        latitude: 35.6347309,
+        longitude: 139.7393849,
+        rating: 1.0,
+        photos: ["places/ChIJV9OQEtWLGGAR-HfYxkm9nuQ/photos/Ab43m-tjQD1KakdhdB3DEHNa7yYlVW9XTRAlNOdQa2vGWpltXImRdLohBCnwcQFqpTc4UpYIjQkEnteMafi9nSlPN-GAN035eAuZmQxs2uuf2vXeVpgQonLM-Hmcd5Y0XESE92ThBBdQMiCBBcCjdGqnuStTyN3QMBt0ftSRBKveErId65miou2O1gZHHDdXbe4GwwRAVWXWEIKhdk0N3fpiqpyjTVx20Br-vqLvK-CXKZIKR8RhJZCpwiSyrwIdWJ3ptoz8WGtRDnNDnK_uys7NpV7Yl1in8fglRCezqplxZgXV1gVkkhmYyHiQ3qD6Ca6q3tbGiMIMpqcJRjAxd6OdRBR2x00ljGr9ZiVvlH0fl4-kxReAM49QV4eowSTHQK0spZ_fs51xKFRruVy-ELaf-rHB45LQ5NNFO3nmJblsdhCLKtrLJM7mwFOv0yRu3_Hx"],
+        distance_meters: 258
+      },
+      {
+        category: "atm",
+        place_id: "ChIJW5-FClOKGGAR_wzWA1lPeLs",
+        name: "Lawson",
+        latitude: 35.6359321,
+        longitude: 139.7385135,
+        rating: 2.3,
+        photos: ["places/ChIJW5-FClOKGGAR_wzWA1lPeLs/photos/Ab43m-uGwMjfvWb92-cw4FJO-NEdaNjbBbRni5tZAeuvCkZNetbcgxyWCKsRZR-xjrwjlHNBnviwGKVAmQFoJWMKFZAHKdYPMSlGgNhxbtYTCjTheoEhlC55FxgKeC8CSs2mjJfGlTUtm_SuuOnCyA1i-CBzmHrKjk3MG85qzPwgqfSO7mq_w61AoLP2fNXBuV0YU7WbVEmNUSLD3IB6izbQiHsB62YpT5wZc0bNxpysR8dMD5u_BgyZn1BrQvC4rJjrjVSThsjuAtyQ5fwe8LH3IeRWm8PZN2FhN9DjuShZb8SsBWIbBvnX_YympyWev9nUwmIbQPVtCnNxFiYTRZbr9VIU3r_mBWjmBkBoqwiornNoR4K7ZJ2X_c7B9Mk20Xevr53BOEbvQOEzH0PuBBRJzhZnwwfv6UHC-p9wpCbvkj00im0D"],
+        distance_meters: 287
+      },
+      {
+        category: "atm",
+        place_id: "ChIJO0Cm77iLGGAR6F_Q2fXK90Q",
+        name: "Lawson Bank ATM",
+        latitude: 35.6359333,
+        longitude: 139.7385357,
+        rating: nil,
+        photos: [],
+        distance_meters: 288
+      },
+      {
+        category: "atm",
+        place_id: "ChIJVVVVVVKKGGARL61aujeRFjY",
+        name: "Sengakuji Eki-mae Post Office",
+        latitude: 35.6363117,
+        longitude: 139.73855279999998,
+        rating: 3.6,
+        photos: ["places/ChIJVVVVVVKKGGARL61aujeRFjY/photos/Ab43m-tIH-6YxskS10mXTMFqiu3obB4lH5I1Oxry4VSqBimcu980krMU6S6CMXxfCmCIxOJzSSneuDIk3aB6nJ427mFN7NsUchm2YRF67xxZG0w0xZEmycrlvJE1ylJbzJYaGAByz3kmF2XHGIo9T_5tCLNfMHq3gXs8D7KlaVbOkODO3-9htQXfImoiVf-w78yYNYcRzsS7UeQnvhDxczN_FHf7oBVgEiBaYITTh47BqIV3pKvdm2hMSos6mOPrJHiO4oktyWKdQ8CV_XrC42nka8N1nHYk46sC3NG6-gP6JLvjEW4ZArn5mHY6bsDjiWuqgRAjEHjJ37naEiH8uAuQFSpuan9WyipfJIdn1XDv1pJcGZ9ZSczLoc76FguHM9I5WVg8ZicWYo4GIywGjnze--PNeeWHYxoY6C7cDU-dLt-mXxyr"],
+        distance_meters: 325
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJR463f9mLGGARXz1QPaK5yhI",
+        name: "and which?",
+        latitude: 35.633454,
+        longitude: 139.73770679999998,
+        rating: 4.0,
+        photos: ["places/ChIJR463f9mLGGARXz1QPaK5yhI/photos/Ab43m-sz7USJzQi8Yf9wPnCfFVrm0UBmMZTm9MqNBj_GsiAD0eCr1-JRqvQgdt26jmyrKPA37ChnGZ1w6P5paDN0_v6kAmIyp9EFXzcYjkdWNrnxeZT0hEicfiRObdY5OLfcxBYycztj2il-wi01aIw3YPWblm0GbSUimrbJmmJunsrqB1gTuAEAmWnSjvoI7WTxWJzMOVJ55lm4MR6yJQM_yJwhWsMs1Sb1sUQ-4WJXoz70mcWOwK74YUYipr4_smBKNIIkocJw5QX5jkaOOnh4JlUYTnhlZ3pNFbhbsxO7Bdv0oIavyUTmVbalWAQHqN1FCHnctLsblO48Q0DiLR7LZxIn5z7TKOjBXRg4ilaVKyr2EmzzLX0J3tLBYfMSzTzteoMqucl4JkBYCp4lH64bK6Pt1NhucZXUDtLy0W6O-YsROA"],
+        distance_meters: 91
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ9RupPVSKGGARRE1rDdHu6lk",
+        name: "コミュニティカフェForYou",
+        latitude: 35.6331577,
+        longitude: 139.7357044,
+        rating: 4.0,
+        photos: ["places/ChIJ9RupPVSKGGARRE1rDdHu6lk/photos/Ab43m-stW63Z-XySLQiHq2bz3luUArvA4yRruuwyKXZNOuAFpYfcEZgeqdtFHIspZ4Ysq654a97hHgDlCmSPAlrPxLkLulg32OqnKA12sLlB6zRekR6oCTxJjocjeNiPYCpohK2V55ddMYiK_JHNuJ8bmrbrbRRnCGk8Ev0QbxnDFs39BsMzdR4MoCRC4YX1lWtSAjv_hGEcAdwKJxTDwZLryILbG71ED659XPDlssWuAjpUGNEfsRhiKN12-Tejeun5A2zTmeX_2pisfQ0RpfPquGoGAMFPHuxlA-eqPIUVZKYIt7vqRmUU3L2BeupOx0BfEAxXBN1ftHhbqQR8I2YAGffMejMxn-8ssjKVPTFTz-fzopBAXzZ3PsGUsAoS2e7hIbyBMfCrdZLJILnYHefuSG3yEMN37oxufX4c88LjGuEfqYsy3TKhFMYMiTuduhdX"],
+        distance_meters: 119
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ41EjyoCLGGARCdmrMQR6QDY",
+        name: "VERVE COFFEE ROASTERS NEWoMan TAKANAWA",
+        latitude: 35.6349559,
+        longitude: 139.7390687,
+        rating: 3.9,
+        photos: ["places/ChIJ41EjyoCLGGARCdmrMQR6QDY/photos/Ab43m-uO3fHyKYH11xBeo_lA0rccBcsXuq4WxFrPFWsFJmWpLXLsL5YnDk3Vf0kBgaf3JSk9qL-XQ1VlYwzE1PHU11nXszPkrt7Rw3j32BsLIdFv-OozOFWDKOGbe4CollwWqB3oAsyvYNcemLcVq_0RIJ8ng5ypnYJ15BB6UyQVbA2oR1gUNtjud-S47tF5XaotlU662CX9-1ZeDW8w-8XHIoYaE-hFBKy4ELA1CI-K-tmbHHn_8HelYh1ksmHqxt3dRoURF_LKBV0olc59dj0EhLC8ZLzMifnxVVWIEOJFZfGqCZT0eKC9xnGappPlI72GDnT6LOAnyVnDjLf0mHnduNWGkI0B3113OVK-8rqB-StMNUmrbqO2afZE0LJqAKGSlZjd9-WvPM1UuwhyisoOiD8Sxh5ttBShiKetpX4I8ic5V8vj4Qks_kv2a1GvBu4x"],
+        distance_meters: 245
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJt0e7aACLGGARFmNekTVykBA",
+        name: "TOOTH TOOTH BISTRO&CAFE",
+        latitude: 35.6347309,
+        longitude: 139.7393849,
+        rating: 4.0,
+        photos: ["places/ChIJt0e7aACLGGARFmNekTVykBA/photos/Ab43m-t-fPtfjh0YyrbHAKNFD6rxpSt2v_5JzObtmkXhomLCQZH5KEz-BBlfHD1KObCZ6HQlgk6z1S_L3D6b3-xGmoNz-OVWq__IAKpoFMXHlNRqgI6PS8jC0rw43bsj0qim3yxi1Rk0RRGs8MmO3t6JtsXRwrTKOIFfvnbbtrTySGajKcLGd-Etri3SAbx-s8ToVnkyJUNuSvs4c8KhgS7v7DKPaeqWL9PPtjSaG0WRwX-m35jqsB7E2zjQvbOUF-g4HwISDPXV_IMWO753QOS0G0StCJH4xsAoUglffrM_jBW60oCUaR9466KevhUiHS_CXD4KF012PuRcyC764HQKu32BMB_WrUwz0Q_MK690BUDctIi7kAJ4NBKQNQ-LpXN_i21qouqqs4MmxWeHemryNC5RgATk0U2d92inju1hEuTAIFg4RaXSgOe64PkuEy5-"],
+        distance_meters: 258
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJRUz9dwCLGGAR40SaviAvYSg",
+        name: "SOW COFFEE ROASTERS",
+        latitude: 35.6347309,
+        longitude: 139.7393849,
+        rating: 3.7,
+        photos: ["places/ChIJRUz9dwCLGGAR40SaviAvYSg/photos/Ab43m-u-KGgENYxqZiKkOLzlCeboDW89Ewn_H74BW3KWZOYQHoe6M2_IIkV4ULmw4O3v6qKTmVIJMwTx-zhnY-qdx_sUMjbLY-vOohoyMfB0UCHzhOGOS7-DspWva8GF7F26DAI3BkuIDv9tNeuwiwEWmIoeGcXwG7fxaT8WHWRFyuExTgFuLb4c57RazSwqy2hIdSKSLFlV8ceF-m6Th4F4Zw83hI9cRZfi8srOeVPrsxO8-nXOxv77KvcLYHjf0Z-tRE7-sYTNM3peXN7BhaKsWx23SX4Dgq-7sOGXrXkIRgJvv4fsB0I0oL_otTvRtOrWUHR3j7pwqTkkWdudSRbpe6Q3CZFP9PC37j1SIDD1ZwMC3fecQnzQOC8pzQBxxdDVtK6n0uo-nsDxYU07IHyyPQdKAFwIecBH8mqUXOpusMKpKfNjM4njJV4NPOordrab"],
+        distance_meters: 258
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ36WaNgCLGGARA0dVR-AW7PM",
+        name: "Link cafe TOKYO",
+        latitude: 35.634891599999996,
+        longitude: 139.73945329999998,
+        rating: 3.5,
+        photos: ["places/ChIJ36WaNgCLGGARA0dVR-AW7PM/photos/Ab43m-v_Ylz3A0l4ceAbsspGKE08bMv4zooMnUPRU90vaw7R8TnPCU61207kzz438yK5ZSVqD5MZovn_An5FM7K45Ohcgi4yz_ul7-2TWAV5TPKX5Vx9vPHqRNfNbJh1fyQuPZlU_yI6rFCYPskhGam8jLwl3-8QyPad6-5_GqAasMLg_w0YaEjcAzJHRIYE24Oo48Rdt405pLchomTiK3S7-1J4Km96jILhGWTY_I4MpbzxdNBtxGH2QSTwxMOUYa-XQty7jCTF7GLW8s-dkY2XBdjY--TpYwabTkMnkIFoRxljjkI36F1bONMtOiWsU0UymHp3HtcylEvYNreYfsEhZhFGv9Tl3kn7JR8xuL-O8-fC1k2FCx8y3OxpoiUyF7x2IFjjfu5xs3QQvU6hydn__vqRq6Yd_UHXakmy_tR95ik8_Mz6ESVikqvrTeX1Gm52"],
+        distance_meters: 272
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ9YPmGACLGGARuY68lgo9G9k",
+        name: "HARBS ニュウマン高輪 3F",
+        latitude: 35.634891599999996,
+        longitude: 139.73945329999998,
+        rating: 3.3,
+        photos: ["places/ChIJ9YPmGACLGGARuY68lgo9G9k/photos/Ab43m-tgYsCuUZCexE3ZGrKy8GZZ1Quosbm-3Y5QYfT8eQQY-hAFpEGHgCRzqKyZjRG14WUbQfwboAcclnE-Y5V6W1mnLx2Qphtmy7ah0eJnkKiM40cXPqbPfkIZHbjGeg911DoPXcnra4BHbPwIFqk9L166cPnLRNqhorQyzjk7EPGSgZCmWuViuFRGm5UEpeqfZmOCTEgNtDx6un2bkT1Fsc8I_1pf7GZhQI6wultdtancT7DMRCrRk_dlfYzySYLht25t3jBGjpQZLQhDpQLfh3WPWXraMqUzVCnF4HqGVNPeG4hKtnXS1OtW9GTtLTr8j4mADIFbxnOIuRN_hSKCVgP3ZIZwdZPnunqW10VmE8QvoXbpWTGMFEXTgkTnF0QOTzIipob3wHqo2k7ZIF7y035q_inhRLCpKckKgqbWFAYMqKieUE6tBi7ZBu2yFLEe"],
+        distance_meters: 272
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJP1ZtZzmLGGARnHoy3dsBx_4",
+        name: "THE CITY BAKERY Ave.Takanawa",
+        latitude: 35.6314707,
+        longitude: 139.7379325,
+        rating: nil,
+        photos: ["places/ChIJP1ZtZzmLGGARnHoy3dsBx_4/photos/Ab43m-vvQUlIdHWOaY50Ta4orDkv92hlk_K6Ct9HAK9vH71qlekhtmQ3YF3N5MCwCFkwxm2Hut5NDx42TyWyNEK1fhrUaME7rFuQCIIlw0VwQL6XpCHCXId5Z8J5keizRYcwJyahmUVs7ykdc8B9ASDFNaka-I5KjUKrGhGyDi4myFyy9F9V_VXRXIPZDoWqSxKj7AXhWYLm9O1TrrhXJxh6RR-jyjqm9dd2Gwnpu1PvCxlCGl2_inhCE8INzzYXN8sZ6ZonEr4FPaFP9Cdkpu3R2cLqx7Ul1VVz-__igulP2cNQBl7n5Km_C9OaCHoHL3kJVVA3foCABF-SEJM4jPd9dykrlaUEW-uV9R_8-HJdkfLGwXoqMystI7xc8x4HSlzxxre0pwrCp3g2rif8_ivlKEX5BBRjMoQo0_mD1uWXEXwMelxdHAW5bSpMgiOD_3bt"],
+        distance_meters: 276
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJtfqlJwCLGGARDC48TtGScmo",
+        name: "むすびキッチン。 cafe Terrace",
+        latitude: 35.6360257,
+        longitude: 139.7381594,
+        rating: 5.0,
+        photos: ["places/ChIJtfqlJwCLGGARDC48TtGScmo/photos/Ab43m-ud1SDHHc0qezZUVOyeI4KFPtPbQpL2x7BeP8mLsxnijAsE_aIM_zQ34fKZ9MqbuQgkR7SAqBeg8XA269l7N9rIrpUlcn0FJRBsx_zPp9baIN6T1dMDBe4WhmpBinjYrg3QEq4MZn2digLRtvRlnROw86QVpgeCony0t_6e-_RNfmbx8pBu4aCWTN8j0YmBjZ4H6H-jpEElB3kq1VQOyT60-7etK-N0A131XhF0lLoE6llviojtr-Smga0TW0i5Clx--tsfzJUCBg6qMyw-eoVFoS09NqLUawU-rLgs2DPsrP-DABa4PxpxGbTKsk3XEZwYGy92jxafIFeYdCP3wLLsYN1wM0GPN88VtI0pz3yUp_76wVfq_zI3UP23Pw48gq5KSn0Y1bWq7Kuioyzi68ggw5zLDCFqWFGWDAIwbVuyLQ"],
+        distance_meters: 280
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJA7bCGgCLGGARRVts9svsL0A",
+        name: "ZEROCORNER",
+        latitude: 35.635063699999996,
+        longitude: 139.73948009999998,
+        rating: 3.8,
+        photos: ["places/ChIJA7bCGgCLGGARRVts9svsL0A/photos/Ab43m-uokIDI9bpNPAZtY-ynFPXrtZ26jEBiZQSj0oVVea5opfuoQew69Ouo4e0ZOVF8xoRXg5O5iX-oowt2bemXXZuZZKj09kabe0--lNIsuZLsGZgipMNZ0likpYf5zHwA9UQtziD5O8hm409MMUeMCDoouSImr7F2wYKt_nWsAWhYtIstoME_fkiSXa64QWUan67NQ1v_m7iyaF-PbLQqg-LGpdFyQpdHjCUNUM5PwQF93NHJAKQ1VtThANkAJ9jpT5gThcdqvWnONKDJ8FfF61wN63bkgSnx8WyeS6Sl3aQF5BDf6OGoGrDdaW_CQ0Phf-6pwZnXR-sUYaT7TlxzSQH5kpCUJ47YCU9f0k5ow-5DT4tG_lN7MY-Bz0MU0rNVYkYFoaOtMKjQkxqCMRrJiybwLOAkTfhSpZ31_rnfPsxTAsjLFD-i9rs_AMulmyIE"],
+        distance_meters: 283
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJR463f9mLGGARXz1QPaK5yhI",
+        name: "and which?",
+        latitude: 35.633454,
+        longitude: 139.73770679999998,
+        rating: 4.0,
+        photos: ["places/ChIJR463f9mLGGARXz1QPaK5yhI/photos/Ab43m-v62s4Kdem9XUX1xct7q73Uf0hcBR6NXihyvZVtqr2L7JjAeS_PN6ducnx7axUCWUDPlg-x9XC4bZxsCt8HaRdV1W-dp56FFKcZh0YXQPMC4y-Tvet_F1Y_p0Fk0MWwro801ecqZ-sBSLYhWwhMPWpO3sJyogRglJlQbB0odc7jypRROsSV9SAf6g9x6AJ8ZLm22vDqtQOPFOL97_h_iJvxj2fMXpF2FNsxAeibBxjpb15xB0Kf0A0_Fpbr13Ib_T6H7ryZqQR6Nl4ZP8e8dEH44_zXi3VSxUnQirYVmT0b06j9EIC4PirzWZiLStz-hgiFZYKBuVz4uAONfnZajEbFMcxpnjmkc7Cb9OXZpwuUSKovR9LYxoOKwssHVPbPDwp7JS-qvFgLxvzaWU7x65yflCftVJBNCzb11S9rTXXwHg"],
+        distance_meters: 91
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJaU1bS9CLGGARo-iQJZojGsg",
+        name: "Miyako City Tokyo Takanawa",
+        latitude: 35.6335492,
+        longitude: 139.7377664,
+        rating: 4.3,
+        photos: ["places/ChIJaU1bS9CLGGARo-iQJZojGsg/photos/Ab43m-vaEWOJRR0qVvxp88bt9SPCBBTX_Dv9HMqpO7FkMPkDQbd4JypdH526ohBNNT1_OKIavlyblsBzwEdJ_JdjAtIFsdkw1PLN1l6ALfScyNFeMfza3sxicNo6Sl-IcDdtRwotXrnEPh5H7Q7-z0VhAB4uScl-DgyoLqKnTeT6NkXXXz81eDbioUoE32hfUWb914IVI4kh3k1V6Oi6OCHmGMthPzkIl6zY_x7eI2ADdYBur5VgYbmgMSvWy1nH1TbvCP8eXOD_bApQX6iC4nH1_MRmZcU7ktUJZ7FUz-TykZuthaKWd83POY5fk1ATCTBXvgpk9ynyhRXPpc2PQsUhsgrH0ePaZ7zYFnLXuh5H9urK87COihs4ZzxRIvtVwSVc9GTd6lx57E3Gl-R_StobXfynJvoNnsR66QArw1Bi-nyV"],
+        distance_meters: 92
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJH4BVQ1GKGGARSghrN1Rw4o8",
+        name: "Devi Corner Shinagawa",
+        latitude: 35.632910900000006,
+        longitude: 139.7380607,
+        rating: 4.2,
+        photos: ["places/ChIJH4BVQ1GKGGARSghrN1Rw4o8/photos/Ab43m-v52wD7Dq0lJILI8lnKLQsf6vaqgz2SWayNlJho1qKrFiXuyjFhX2mpWk1vWNmoMos9wLLGYK9gopdqkdYn9CAEpDwwcb4smo64Dd5ssCFjT8Oe8WJhF5aDaFQEGsFYVA9pZilVqcnIb-3DkddFZdD_JJnY4fxvaI1uNx-L21HZjbVht7Q7DxpVt2SqAS1l-4w6g8u6Ry3giop45y9cCtqIxm_rvBz2cteEn4P88uFC4cTC4JK2X0W1Ms1JHKfi6TeB6rwiM2KI1IYGZtv5P1daJonlKLmdVR2G4xAa9UElHBLnk_haIzdkmJVVtwnC-wZa8U08wsNrkNPKoZO-OjhENo1YnL5XifIQx95og4JfA_xzp0b1wVxOpbw4H-2TACKVHODPofkD3WgGu22qn_cDYaVHb5MLFoTtWdE2iXQArUaf"],
+        distance_meters: 150
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJmV17TZOLGGARyGzmPmnU3sQ",
+        name: "明神丸鰹とめし 品川高輪店",
+        latitude: 35.632460099999996,
+        longitude: 139.7380063,
+        rating: 4.7,
+        photos: ["places/ChIJmV17TZOLGGARyGzmPmnU3sQ/photos/Ab43m-sVmSGZmDi7MTPwXkAm2y75wJPmV-75BDMiw8d6yAdkoaaCenhFJyMNT2OCcGigHLW63dcD8c75fpeTntB0zzMF4GF9zb6P9uk4iku6B8RUjJItpBvGlH2ZgfrNGekBCbruISCsb37Dmufg2S-NXzzSIi68ROp5-nvuyD1bi9khiA-wRiFoAtB9R8qU2UxKqews59C7gmEgLnC17tXUEl7RK3kUf8W7bBE2-uZtiex1NkQlG6oQNjB42dVgCeEz1UG_u33aNA7j30mBdwcMvjHtdgJ6lsPjzC88qus31dFmpRBnEKijOehIV3L-dk1uQdysvs0odOpqDLkk9-5hd0YeeRWTjES08dzWvWpD6MPcsEP4lNYR2tv79udMkIUlBtHH0-1ZIS65348EJZeQwO4DXIqW9WDt8X8GN6-89z850TBBcO0XT8k_9wjTAA"],
+        distance_meters: 183
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJB7kXDRmLGGARXNbcEWaGUqU",
+        name: "Sefino / セフィーノ",
+        latitude: 35.634354,
+        longitude: 139.739016,
+        rating: 4.3,
+        photos: ["places/ChIJB7kXDRmLGGARXNbcEWaGUqU/photos/Ab43m-uChx6lSliwZxWDJA1pbQNyvMjWPNIUKiFDXdaSQUc0Lb9XZ5SaJsG8lAQwVQC5CY3khbAak4N1_feuZ9HR6O921llXGHj9WOy7QWGYNQ8dEGIIx1tdqhMmL8xajoCJyir6fFCce_Z9-8FScwxjZajavx5TCAg8Wc_KlNYb-p-x7A7nPaka9EM23_jaFjH-joY2LqmnrV3YUCRbPTfl1T0dzlW2Gn7AKmjo_oNr40Hjtxo8lg3AofxLBdl7inlGldO9aWqdtBd6yhQRI7I1s3zQqGn1wSqiZiqnwIqEp5Vrxr_v0aPISP7BcenDKTiRk0yg-xYEz3WVNy0HAEAR5-zujV1iLNdceELRUyfbqDnbOEGqWHCC7aJ0-GbH4lEDJ2pM6CsynWoTQWoWisw7PRajT0EKdOHToXpcsz5nBVDDv_DsrM2M7-tiprt-IiIw"],
+        distance_meters: 212
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJCwdSQymLGGARazWSwqPFrzo",
+        name: "和と寿司の 秀",
+        latitude: 35.6354651,
+        longitude: 139.7382293,
+        rating: 3.8,
+        photos: ["places/ChIJCwdSQymLGGARazWSwqPFrzo/photos/Ab43m-ufmHC3XrTiNqSX0lcJmUoauign3ay2OfaYniU0I2-aIFhXQym_rV0rH0KvI4HMMvqtz7LjhgP6f_jQ4bWdxnn0JrbW1A0Pgg5FMmHUn3kgyoIk3RN7nr_tZP3LDRKxyS7YxZaBESL-A4Zg5mRIXz2stOIRUcmrvWtLQAxredqrB_TXMepoEFfDH_9mz9uBj_mNht9jV2LumwZrnukn2aM1xc3LdfHsV5AiHoofQFPSoqHQvWf2eS6j6GO9aVBgwAJBaCdJgb0s1ZGqCbIr7YOXD9INI-O-fPFo2J2_iQ_KedoUDDphD4gaEdD85KpXOguMLsJuMrhSOTsBnvudVVb9bwwi_ameXy-ULuctKMUaT8yTWHXzGvfQwnCQNesRxl_ox1ty1kfBGEfyqj60ADf5xe4NsMEnQsFZyHSL4gkhJA"],
+        distance_meters: 229
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ3WtQvmPzGGARos7T6C9Vh-g",
+        name: "Nishioka",
+        latitude: 35.635453999999996,
+        longitude: 139.7382988,
+        rating: 4.8,
+        photos: ["places/ChIJ3WtQvmPzGGARos7T6C9Vh-g/photos/Ab43m-tWzMGhHM_odBTdXq4BcPT50GnhVht9E7HpYF3ovhjtEByMERwdzoXh3D3sssJls4ZBRloOZ9a-pg5jQUBpZmd6kc9jUb-FgzNLauc-yRgeInl5h-PNEYoBvTa4vvA7eEj2VcFjtFYL9ig994rLgyviuTwTBiFzUKChr052KbqOe64hHoz6b2j5FhYEqLMfZohq6_4EQw5nb3fLXTcx-y0DVksBt16K_fFQ79JpMZtlHcBUDCnkB-vGAeP06-hJ5rYcTiws2zpo6CAW_WO0n8SRigHqmBtJnxgaBwVHzoM0w2h1Idq4ateAcMZK_t5hUdkRNqN8kMhwxSUTBn50fZrUS6xaK1gebs6QqFUXKzZdBxG-omHI-RSZwACsHoHs9gUjKzmreWu4GVlGZiDl-XMIuaOukEe1UbKOgvgrSFwExQ"],
+        distance_meters: 232
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJWdgqmVOKGGARP4SRR3JZhto",
+        name: "Chinese restaurant Toko Hanten",
+        latitude: 35.635453999999996,
+        longitude: 139.7382988,
+        rating: 4.0,
+        photos: ["places/ChIJWdgqmVOKGGARP4SRR3JZhto/photos/Ab43m-t9_fdZIexoroUINcVUhe5AMUyvMtUrfkjtJDJ1YE4dYSd3a3UUBOsbBbuQpH7g_p2UCVVDW2HT4fw8k7AF22rC5AcbDsIs38yZL_aVrM66Ajr90e2w7-XUY_p4XurIBgCZ24YZv1xX9l-wlqgx4gpH3bwuCmIJdf-I7On2kiN9SpiPqsBePuBG5aFjrxapCG3FNaGkfGwAwM_Y9oGJJFqJcFil64BSscNnOemv9ZTpaW8GRtWQ7KdxZp6BVLGTDuwdqTggO13T-n0dJVSV4AoSvv7gPOzKU9yBMFze_sxxUW6ZHGtRFCA-gT7IKz8pWYIKbUQEDyDCwKkiuqvYeu3Uc9DFQhUr1JyDnGlHHjtcyFFlhim9Jy-BnqFEoYzUT38cqf8m0IKiKJ3kA_ckDRS5LaE7vI_A6lgFMBoHDbQ"],
+        distance_meters: 232
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJjxm8nveLGGARfcG616FICTc",
+        name: "Saki / 咲",
+        latitude: 35.6346821,
+        longitude: 139.7393792,
+        rating: 5.0,
+        photos: ["places/ChIJjxm8nveLGGARfcG616FICTc/photos/Ab43m-t1uTibbVyAexrcPDykwNWEJ94Qi7veCNbcu51KWQgHsDgnBMi2wkInCG8EHb79ORHOVw_Exvg3Y8CthUNmmQpNf8BxrvrO5h8Fn8-p58mXXnLcbeCe_rs0qxxPRCsNi_hawsT2vtGSIVgotL5a51zQnmDw5qM5ApNLOiOvYNH2ozJyP7OT9qKZwMh8UM-93eIKMcqYIp931D40ZFhzGARkeiHczwQCkatKEHyazvB20D39iTMnjelpDApLSa_HStm-d2NNp5IeGIrJUWI3WVqJsGKtempLjAp9pvZpL4rH58nVHX18ieulESyK5h1gOjyFK6FBlzQ4wB0vCL3W8jssvcH59AZZbm3j1bxzre6fp3HGZ9S1Q0osnkn7EGl8UwvAfNC2nfZ7AyrcuWM7Q7gd2_gsEjNgOnkNhlvEqHdR_slsbJf_gG8rMNjWxjP6"],
+        distance_meters: 256
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJles4PgCLGGAR6iMHxOGRtEM",
+        name: "800°DEGREES TAKANAWA",
+        latitude: 35.634809499999996,
+        longitude: 139.7393188,
+        rating: 3.2,
+        photos: ["places/ChIJles4PgCLGGAR6iMHxOGRtEM/photos/Ab43m-vlcjNjyOxABKQwxpwWWhhA7o22vB3hfGx6_8mproASXdHzTEi4SxNC5wg358GvnAMyV6HGVvn0G8iFZs9rEO6OIUVcDBBXf3dXwEmXDzq19jCV_vosX6gL0knzX4wpm1m_E5gbt6HyEtFH45Y-A7pXGAOueXFvimB3ua1m3pKUlrCarPbA0-P-O7YGThwiQNxWBZiUFKlkRpONchjxxUzut8rbswqt04bylOcHDX4K9ftoXqPuF0KBY8JpDhf2FCCq_0Y6Qtx03u-0zHGTw2GIQDqXd-HPwXcCD0ejZEkCdDfVywxDuqu43jsQxGaxVR0YsG2YRyGsZg85gKimXXCwh4p0vXTKryMPH02bfuLeuKO2rr5lVg5P3j8rYINP7vWnW73HDFqekWtRNil7P2AhZqQ-YWT3iRUYuX9Nuh76-BWkVox9pZVXQAFv78cz"],
+        distance_meters: 257
+      },
+      {
+        category: "bar",
+        place_id: "ChIJH4BVQ1GKGGAREjvVBspLu24",
+        name: "down the line テニス バー",
+        latitude: 35.6328374,
+        longitude: 139.73805969999998,
+        rating: 3.6,
+        photos: ["places/ChIJH4BVQ1GKGGAREjvVBspLu24/photos/Ab43m-vnf5XGVdRe5lGO8S76QDTeIXCHtd8-smYGMYjKLr0iPEcTogiFQJdYnTsCNQkg-_PJPCaythPFy0o5YMR7k7JGNub44q-YsIo_hc4wco3pr0p5y0MP20l2wNeStrRXidQRYy4I4L4o886QLw1xyBcmj1qF90wC4CExrK4Cue4Py_nrpPaUZCor_x7n_o3PPaXOXRaagsqXFwBdcyHxo5WA7y0Wm1oS8VNZoWXjOGylie2mM7Vb1SfncNIC1oiNHod34OVGhnTVakHMiJAh5gSiXL6bKBB4LFtIy2oGSXLqbxzUL9TfNZlm5FwRwgjQNNTi0oB2oqvFpXEZLLGTwL76ALwcLhyXPPSvgnqBewkKPKqCZSEYlEh1u2OK94TJUKR-rhyixUxCFWZotPkPe7Jx9kaEwB92enLnUaAxd5F5-1Q"],
+        distance_meters: 155
+      },
+      {
+        category: "bar",
+        place_id: "ChIJzQTUOoGLGGARuEUFmmhPZdA",
+        name: "茶室BAR ROKKAN by ROKU GIN",
+        latitude: 35.6320276,
+        longitude: 139.7348154,
+        rating: 4.8,
+        photos: ["places/ChIJzQTUOoGLGGARuEUFmmhPZdA/photos/Ab43m-vRtbpKSnMUQ9rE8sL2vt9F8ENW7tBj9xMTPa4EpzN-fxUHDaGGnzH-ZkCGxPS06FGXaC_TOQUfKp0r-ZsuYM8UfRpo-b-zDdg4p0QS7klxL4Fz4CWuM-UIt3yNoDMU2S5kJXHtzfgOdJqIndyic5c8I_9zY7qE04fVtzuXYobka-xFEr7IvXIfRDkCgi7nR-BcM2MZnaB-35m5_CNQWBMQhXhjyvlMU8MKxT9uKZET6-zsZ_oSO6ZwSVnYrP1TRlkotLddN_XTmwzmxxdPt0Vz86JJeVxfQNKJsheggOISGItcpQ6KaywwB9_u1qIbsBu-Kf_xT3uuj4I6C-mKiZSFXq3L4-I0JlNqR6hfu1TgPMIWj88pHg-nsBz1zBrYetZsySvft7FHxCkAHmO94xSSsm0zLhWHT-8PICmD59n6zxv6BIOTuaR8HtvhPg"],
+        distance_meters: 263
+      },
+      {
+        category: "bar",
+        place_id: "ChIJk4AhNvOLGGAR4zN8tCGFy4Q",
+        name: "JW Bar / JWバー",
+        latitude: 35.6347726,
+        longitude: 139.73940629999998,
+        rating: 4.6,
+        photos: ["places/ChIJk4AhNvOLGGAR4zN8tCGFy4Q/photos/Ab43m-sByaGfctIr5AMvGRkPPBnUTOzV4UYtnlIlTz9Uw16juezUSJY2aJxWyRn-zmp4u9Uaor1FHk-7vEyyGzJ5EZpOmp3NfNDeoXJKqF-GDV9Dy8yXkSWZke7UbhcGBMMA1VUqxesxoX18IHWWvfmR6dKSM5z1OywsN09_SzTKFebHWP8lHmylQhur3xbZbnowpw7MBda1dzvfiobZ2RiiQbPSp3MBh0COD8tjg5gcyR5qy-V56Z264sWVGgNDtuDtiMZAwRhzPika7q0qb771JuLLAr8RT9X4JfVXypKhJyxa8OjXIeNi-qeH4bp6FSy6TiYLgDxDp7wF4cPM9rWFqNK3XjmWs04IsnkFD8ED1kJaXeTKisSVLLx0tOU3-nvrdpmlAB6YWJMs_xJpHQbvgf5X_vHBTo3Xqk0YUdbE2JJBTltExeg60mpyG1H1CQ"],
+        distance_meters: 262
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ32OKz8GLGGARo7bqFCP_qmQ",
+        name: "JW Lounge / JWラウンジ",
+        latitude: 35.6347726,
+        longitude: 139.73940629999998,
+        rating: 3.8,
+        photos: ["places/ChIJ32OKz8GLGGARo7bqFCP_qmQ/photos/Ab43m-tco1z7R_aL02XUDKYG7FLEnZhL2T5Ow-LXKXgY5Y228-BxW47VsjV_hp_ccl2ofNZqKR6PwqhJrAelATbK422iXV6BRpq5vAHRdwh3B8qQnzaToZnyRJffFTbomU2pOMNq9hJAEkc6nNMzhPG_z2f1CIw_0WSfQHjRHc3swc5gJfXUSbnlbjLKPBSfRmkRtE00nf45XYCA3Bc3hsz5DSgQYb_pEN2AhCPO9xihJqrEQ-BT6rPvUV2d0dmVbjlqsjN3ubMqwlxpwVuzc0xWjxFF0sTsRDbsrDtp_QvkkmMvXtwi4AAxBaFEoRESJ7yHFG_fxYRXb6-X9H-o1Dzg1FSTUFt4t5vb-iNF9PVlG0S1eF4bZizNpLkL_-nabfxnDy_iIMteRanCRh6cWwe2LmRt9hDC1JtReV8qQ7PFjYawJsJb3TELGnFg9BcmZ3oZ"],
+        distance_meters: 262
+      },
+      {
+        category: "bar",
+        place_id: "ChIJJR80WwCLGGARkU5M-P8kq3s",
+        name: "Rigo SPANISH ITALIAN",
+        latitude: 35.634891599999996,
+        longitude: 139.73945329999998,
+        rating: 3.6,
+        photos: ["places/ChIJJR80WwCLGGARkU5M-P8kq3s/photos/Ab43m-t2_hgEZKrsqBZeKr9oHbPnFLSgT8gVH_A_2TWoq7QIpTYDs0wnOAki3vP52JEK1B1XBwWAzwaT6dbSTRJsdINpwlStRWlBvvY2yGWoyohRNmo10ksct1ue9sD3tTouIwRsQRQl4nXzPEGx7HlPxiYWDLgH9mcZVo5mCrAJxsDyErv50ZyGwFvlAWqov2Oi6NhymGYBpe34kDGxabtg2t6h8Gh0EOIkkoHBt0vv-SOpflilD3wXPa_Toeeum3PlbLjTsY-Qrqvzgd7i5NpS5e4vjfU2StKkKdptuis2gLKBrdiRSaRpRUjeSPf5C-yKXojj8B4p5LCEnuftPlC4m8J3t38o1_fMy_fxkfPDbOhZS2f4HXnXpkjawjB7sX5xxlHFbJoQnHcfatEYoct3DXyjYwihRZfksdh4Ol1dZY6jtdYfan9fYL7C3myo-7q2"],
+        distance_meters: 272
+      },
+      {
+        category: "bar",
+        place_id: "ChIJt7tOLACLGGARoSlXxvZxBh0",
+        name: "\"+Inn 1\" プラスインワン",
+        latitude: 35.634891599999996,
+        longitude: 139.73945329999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 272
+      },
+      {
+        category: "bar",
+        place_id: "ChIJOfZwTACLGGAR8EINu5_esgE",
+        name: "ラ・メゾン・デュ・ショコラ(La Maison du Chocolat)ニュウマン高輪店",
+        latitude: 35.6349248,
+        longitude: 139.7394544,
+        rating: 3.8,
+        photos: ["places/ChIJOfZwTACLGGAR8EINu5_esgE/photos/Ab43m-trAikijGk4xkzP3T0iTf-dwuxBtx_1sls38UBC_Sktr5ggUINyY0CYNK8CI-hu-uc8x6Q_FiyxuIiLM0suhm0TOMO6TKpa35XFqQEhHDhf53PKBu0Zb3ous_un8bY4INjfzIM3qdB8veUXNSsQzMezke_jgpO7_IWzBRGaoDIr49miRkPUFS7dzdq16JPUG4hRQ9YSkaNg5o21BQPAiRKQwm23ne99OPige5lmvBsd01XTsNnO3XPAsJAeveiHk7290l9I9tvdSPWov0TBU5NzbBN7M8Gzicl8OI54j7mD8-p0V2ZbWeAJSpFJlKX40CVE4sN1YkjCBU7msdwbfFnwkx_QFy14N_CHFWUL10iTqzQRQPktDhhFPbyukJA1zl9Ik77U5qjbRPkwqeOYdFXv9Y8jRNIU7fS-6Ebdf9Dyq9FY2qbKwYkO4q3Ykw"],
+        distance_meters: 274
+      },
+      {
+        category: "bar",
+        place_id: "ChIJDczWSACLGGARJ3WI36f19Vc",
+        name: "DIYAニュウマン高輪店",
+        latitude: 35.6349701,
+        longitude: 139.7394459,
+        rating: 4.6,
+        photos: ["places/ChIJDczWSACLGGARJ3WI36f19Vc/photos/Ab43m-v2KoVy6Uuc946PkjAD9oBdoCV-negyFmBPQXpTc1wwldXzRCyY2-njp5oZNKVf9VHS0y7aaanAyyBk5ekJNJJp3UnGYfdnIZiUY5VIYrr09N4obcCmg_0EEUzOL3bVhNEdC-8B9nSvGQvVLAF_pq6JEoyH2IDbYeVUxDpcXJeUkvGXlaeMGUGGRizNrdX8FaNCpucilZqOqEelIeEC7YaL4wU1-lcdDl5t4PTTwEAjEc_LSvjaCxi3D6vL4s4xwe8wNSSCaslUDRicx0aWV2AGlaN08d-W_4JEcnsJOwMav_O6SwTHUmrLcTWMO313xmHdJYtu0kPVCbNYhPBFqqQmAmcQZpY-kaTNds01cucZRgZD57MzIpiGvtcNZwsxjMLbk8gULGBC4NK6DWMqRExSZUovGwGbk_kxzN0ELAv67oxe0KkjoqE306lfNcRF"],
+        distance_meters: 275
+      },
+      {
+        category: "bar",
+        place_id: "ChIJA7bCGgCLGGARRVts9svsL0A",
+        name: "ZEROCORNER",
+        latitude: 35.635063699999996,
+        longitude: 139.73948009999998,
+        rating: 3.8,
+        photos: ["places/ChIJA7bCGgCLGGARRVts9svsL0A/photos/Ab43m-uenDnbhO3tPEefvyqk6xqACQOumV7dgC4K2hh7p5AF_YpGUxfSwt7AH8Yd3H-w49Z3mvYBXxa5SAwyZp1Md_KnlnhhOLED3G2V18N3i6TrzXsvJ_h9SJsARIu5sgbCnPRgs--VnOuWapEImGmrunXr0ZyVqJ-P-nlyiXMovJdoLFwRZ1QaVR3Y2YRottytPPdRvoaNEnkfaYhSdzBCrZOe874gukIje1kdPLtwVXI9xIt7TEPR-pWF-viMdgpeMLk4cvZn8qfE4lYsK9OkmWvTgOXPnH5YAJg5gxd1KKsEi9oawLJRsE6z-tiJnCZQynCTiOf5k4Bqm27yO2BK-eibkBbdSbzQOb4rdk0li6bT3xoQO1DSErtNJJq7cJ8FZJJMxvULT2xJrZvj4M__xKB5taODuUKaSRr1UA59F_K0CwTcUUFnk24vX0pshAxO"],
+        distance_meters: 283
+      },
+      {
+        category: "bar",
+        place_id: "ChIJZZ4ErdGLGGAR9iWfDtIMDVA",
+        name: "スナック美智",
+        latitude: 35.6359321,
+        longitude: 139.7385135,
+        rating: nil,
+        photos: ["places/ChIJZZ4ErdGLGGAR9iWfDtIMDVA/photos/Ab43m-uUYjwQ7klv2i-fhtpYAlJes9YXUmj-VaVZgaeq1H0aZNhh2voCPuWVsoIcssKCn1eRyw8MqFK6-aEw9MXhB8EF5TqhJAci2F96mQ4abikCoTjEyA7ONvOZOlk8OCagOayAqL_FnwwbUkkDWCtIuuWHcuwjSg4q2gBVTbSrQo0LlalK_EZtByf7RbMqkgWHS9JsKldDZRrnhNWSio-VdJSCyB9fIqakBfsLeiVcnfmf-EetWE0TRG8lKo7wQ90ydkoaXPPnbMbfzirpCjvEnL6RGAgWWnLNuyWaZuqX0I_WGUEmmhODx4lC8ynxkLS415tsFa_pp94ImVz6kgM3-WVQxofi2OriBAQGKWNXBU8al7yboYyRlC0Avrx82DmKw17EY4K2dNXLV01KQs2V_lU0smJFMDwmz1GWmsW4ZneeBg"],
+        distance_meters: 287
+      },
+      {
+        category: "park",
+        place_id: "ChIJG5biIlSKGGAR8WaSxLR3gBM",
+        name: "Takanawa Park",
+        latitude: 35.6329215,
+        longitude: 139.7354937,
+        rating: 4.0,
+        photos: ["places/ChIJG5biIlSKGGAR8WaSxLR3gBM/photos/Ab43m-vu-skkvzZDMELEFd4zb6jH0RU8oRiwNgjEN9p3_OwToiooHjKpqSlS0Wishd4yn9dTF4HWsnvaZuSoSkrNrR2zxR2nLukolTpt-qRF8Y-52afbM-fj-gIDEORM1KxO1WnP7QddECx84noOD2Oyp3wh0XM683HPCXkFKFO-v6u7KkoVCyGI1AOXRd1JVnx6UAOfWuZf_dVAfpyw9OdcSA3YUv2L6qMz7fBKyB9SpHlyc7GBl1YKK8R_IAgKRuzC46Qn28ydSzKFs2wJt-54zJ2pkcD8QPGBwj8eS2185OqPxAzQ9SOs26IWBeodb1yCsoiFzAKFc2ecZ-sUoqYBofbblgkCBQ1BdhW9ClrQQD_rDJf8vpqFQHesAnnK5AmYeKwfXanery8wPxmBzGS9nNmvWtoOZvoK70BrOQiSsXf0bwHj991Gd8oj9kKKfdCL"],
+        distance_meters: 150
+      },
+      {
+        category: "park",
+        place_id: "ChIJu2c9YACLGGAR5XNO6_Rp4rw",
+        name: "Takanawa Link Line",
+        latitude: 35.6357587,
+        longitude: 139.7393205,
+        rating: 4.1,
+        photos: ["places/ChIJu2c9YACLGGAR5XNO6_Rp4rw/photos/Ab43m-sh45GSpNfF-Lyz32TrRBCLHZMRIHnUqedfSusYhHB4KbOXHbmjLUN2aKSqOQ-v5tk6Y9IjQ5obGh68SMQZpDBCjqNCgHMA8oiGclLtnm9FDHg8R0_siBxbcFKdGNle5oQKp4U4TtJn92Mnxu_qYoRl9aaB9VATTBShBhpi4JGFaskSVBxYiVw1y08cefrAOhZiFkrjCBFuVKKdPhKtN6lNGNBQDevQccNia-S84sDh6_r8K7X1iLnocDWe3VHRHI1l9bPI85a0rhlENMX_5Ae_Dav18ZHBo0mNx2DbPGuwInHLAAhA7J_enLyEc95yhSNJ3fMP8b8JOWaNdKceNx2YetW-VhOoR0VUCHaP14ksNcDMSw1V5ijIscnWbGhMkzhlkqzfgJMkuWxEORGy5nGzQayE-VHLeGVDeuhFVky2YIY"],
+        distance_meters: 319
+      },
+      {
+        category: "park",
+        place_id: "ChIJRwDnTwCLGGARFPRRNr1uruo",
+        name: "Jardin Prince Hotel Takanawa",
+        latitude: 35.631234899999995,
+        longitude: 139.73467829999998,
+        rating: 4.8,
+        photos: ["places/ChIJRwDnTwCLGGARFPRRNr1uruo/photos/Ab43m-sUiaLJvvfiAWhFyxLGoYRhk3qUmThg6icUE-z0Yk8KoQcM5xlEF3HV9UW6H_lMLK0bhmLnLaNRQZonckgtSO4IApVmE8lj9FJMMdz6wbYH7t_UdkzoBcqxU51YGx1aEB9ZZon7xjbWneH7mhn0DOzlsn_D-AisAgyGrLDIhBX9hO4jtDfcCb3LW_Vls3QFldzn8mFDN8vuli8QFC1YGBF2a30Vyy63g7VIUQNlcx-xDMI6ab83E3NDNdG8GC_0IXtRKQGSfolUNa2OExErKEyoVSkq1tncNGl7Ie_a4skXs0nXtRsxeNdQR1ZfsyCji5DhT48Ltb0uRT2Y4vWG1nIlA75rnAGSYt5O7GyECrV7Y8DhffQEjqe2mM7euLOM1kSSVIcij-fRwg3DnrJ6FA9waNzevocmxgNZEIPwcnO8MUqts_1t_uJM_e0x_NDt"],
+        distance_meters: 340
+      },
+      {
+        category: "park",
+        place_id: "ChIJhxtcFwCLGGARkemQyZn64gE",
+        name: "Grand prince hotel Shin takanawa koi pond",
+        latitude: 35.631299,
+        longitude: 139.734525,
+        rating: 5.0,
+        photos: ["places/ChIJhxtcFwCLGGARkemQyZn64gE/photos/Ab43m-v-JtMASC7mpcNDUQ5U1RmB1-ltxZYlFhaPp6q0zzkU0RAUWyA91bUzRLYAzMO0l5gVrC4q5i-BT6kqSZrEbnYwF9k2BST7Wcv5qmMXbVIKWkxTnHAm3NXJL2EINRhLdY9NRd-52RCS1bu528x4exiB9M4YPu6Mz423w7FDKf-lY53nWf-sxO0BfsKtjh1S0spdS_k0vpAbMZbz4vI5E7B_fDhjVDR12xwEJUoIPH8F__t5AH1CETsRKzR1Yz51qAXnCvT-D3a-KnZbOLAxlLdCj8KIVScHa5Z8E4SSu4L0B55QP2XGBTvArLoOMwT9wEFwuS2vdFsWhphQd9jkUPP8FLacvWH4-iGMYmk65c7Uua0FtJtpq5u_ftFO373AaBOn5jqAuz0XszxlIchkadg1eknO67N5jM8Qbk9-iwW3EZ-28cUCmVICU3jJxjYh"],
+        distance_meters: 342
+      },
+      {
+        category: "park",
+        place_id: "ChIJ91wUL5OLGGARo2M2ppbTyIc",
+        name: "Gateway Park",
+        latitude: 35.6354943,
+        longitude: 139.7400457,
+        rating: 4.3,
+        photos: ["places/ChIJ91wUL5OLGGARo2M2ppbTyIc/photos/Ab43m-uuvH4gXoqXYnnUA_281s6lfGELSDEjDtyG0xXLtFf1TjX0HI_dvYdmXmvZ6iJ0VPy_1JdUZcktP2U2HNXbUzZ12q9FYCJbyvS9Z3F063Dw0JQOg7R2OsKpiS-bk00KEE-z6IV-IEpqodzoRfn-71HHGsoU-KD7sjExfZriKwe6f2crUGU2F4M_MOQOvcyVzVpsxPSPmgGo0IT9Pk4AYY0tq7voDAkTomWBA8_Z7W6mUo2pIWRSq3FJ6FjI3JbwwXzF1sGDQu44gSEsbmfHRxwsCZlw1ve9EJ5UCDqRvBh_HYngAdy60eOaSmVosTAKcexPKNH9stWOkvMQUC-GLI1nPxxsQWykGMtcNYkjcDdUAXZkSkaoOVK9WFG27bN2s0SlwM2ZjwzHfn6aD2pxSFr1f8lsFgYaEzveYOH0-P0B7daTQm1q4tvnT2d6Mg"],
+        distance_meters: 352
+      },
+      {
+        category: "gym",
+        place_id: "ChIJqfoIbACLGGARoQLt_NioNbA",
+        name: "zen place ピラティス 高輪",
+        latitude: 35.635453999999996,
+        longitude: 139.7382988,
+        rating: 5.0,
+        photos: ["places/ChIJqfoIbACLGGARoQLt_NioNbA/photos/Ab43m-uDPmLxp-ZWCHN19C2J502JDXGE2KOJb3j-_82dpGPbSmCYZwRilFm4zsGacmi24E_gbNTt1JVidLfF-f9ccNQmWwzyTF8ZtgqbvErQNW2NaxQY88UbqvnQ8O-ThKvzApjQZ4OzSrVSZHD2UvAj94ZAGrww5pPzsNdIdjUcCtIC1euv2uugUqnuB6NUtgxgshDkGsc-HzXdvGiVm7ZjN2_5FAk-yQYk0IaOFyAkx99UZSUQr27fOSqQZBD98_NhW9cbjIXKNEC266XwkzBWOf9Cg_eVccuOfGmqiZE2e6-0O-pT6B__s9MVIbatelbbCwlDI1s379WUJ2JiJBZrcrfqdsWa_WJHjkRJ4zaK4Sdw53Qkk_IAmCGvARXGHCqGGN5qpJaKHHtRZIDU3wDKCw7HcAjNvkLe22A2mYjFXePrh1PY"],
+        distance_meters: 232
+      },
+      {
+        category: "gym",
+        place_id: "ChIJub91h7iLGGARlG_ZoD0lKK0",
+        name: "女性専門パーソナルピラティス COCOLANCE 高輪店",
+        latitude: 35.635942500000006,
+        longitude: 139.73839859999998,
+        rating: nil,
+        photos: ["places/ChIJub91h7iLGGARlG_ZoD0lKK0/photos/Ab43m-sK6w8Mt1-59TuJ2-9lhPlI4XanZzaAu8D6Cc5K8WggPzMmsyGmHnN8iuj48qwbI_QleO1QxPVdomkTGk2upU7N8kbTiPBOBMsnog9YSlxGDYgvse1GbI_ZvJfyFDgO4hj9YgXga9rHsz4p8IfJ32CVHim3nNxvs1HBm27FCB_izGSBxkaEeMDcqgkMKnrx6ZRyM-0MadWOI1-rMXHKwrqaeQeQ1FhOMoo8dHKP4o8F5IFJ6-To8rNV8wsaYrWG9DCpycvewvm6MUPtMLcbx10WhsowZspGNbLKMHB66cOsgRvD_lc0r75qVw5I95fcRr4jadIvVJ5blC78vHcZJfbPUOmCi-4UqkNMEk5oztnt6ze5gKzxtqTPsukL46gRfB80VuGsvOutDTcd6enliqJvSIcXw4Dg2725SiONnzlS4vpeolz5pGC2-YavyJ6n"],
+        distance_meters: 282
+      },
+      {
+        category: "gym",
+        place_id: "ChIJD24NNjqLGGARiB27dJZ5mV0",
+        name: "5sレンタルジム",
+        latitude: 35.630935099999995,
+        longitude: 139.73678569999998,
+        rating: 4.3,
+        photos: ["places/ChIJD24NNjqLGGARiB27dJZ5mV0/photos/Ab43m-ux9AD5dh_yS9CtY5Ej5hxetblfFRmurOQdnbSVGApsIPDGUT3EkYZkiFf8ck4PoGUjEkFbZOTyOKKrsDvWKMXuJHtUDCyS0WX5qhGt53x2uzw8b_Rrp_IPOPlJoqOr0SOC1mQjVApTIzr_evY1dg3w_BtAVZ32_i5oFrUFBDGg0TAgyTc2yzJzz8UlGR0HkJzWT8UZUx3OXj4xfUIbjqsFU2NrbqczgRV_9n7GXWhyZg0RCduQVefXK4BZwV4Rihr6KhnUJY6Ylqe2G9wse6fMCHCceZbg2Fm81cC80BMHBmZPMFyI2hUWpHbZ4ZL-wdefBKuNL48VU7dAwRC1vlBCTrrSnmK8ZbXmDiPY99Erz4px3EoNsFHgDvQrA06w-hZ7Hyyl5JJRazj6ZQZrPxhQQOwpNsANqi1aU6eLRJZ-iA"],
+        distance_meters: 315
+      },
+      {
+        category: "gym",
+        place_id: "ChIJm5mQAheLGGARkEN_BuuLHA4",
+        name: "MGTOKYO品川",
+        latitude: 35.630800199999996,
+        longitude: 139.73687769999998,
+        rating: nil,
+        photos: ["places/ChIJm5mQAheLGGARkEN_BuuLHA4/photos/Ab43m-sopmfxEmvffaBSI1lSCgbtEVwtSSadcUovlTesRIkmE8OXYKC29sjwdO-ldjQrqP1qd0--BhaaC-8tYjCgVIikVYWue1sahHVAMHeIOGyTTxTUbKMU6OqnNzXbKWyan5j7Gty1Fk8onQtshBdpSPFB7Kpb09h1hthAvWEb4YRjG0ODK0ZYM8OloxEXFUhXpkcHpi8HO4hK-jdJndvYtYog_ECF7E6W9ROqsk3CjeNFYjil8hi48OH33xDZgRZMs413T3eaKzFV-Rura3dkIJhxl-Dkb4mSzHfD9APc5wlqhYM9B2xx2HY468MI5RrUqX5xeVb5fDXZdciXNJfqM4deaYVUlA1OFZ99_B2jhwwxkXrWX9gJAvPFr1itJ7pPWFjcjzqTJY-pyDuZyvgJ4X7WYALYk38bPjMJn4dLNHNCmyw9d4Im2lfRRUHjpC8I"],
+        distance_meters: 330
+      },
+      {
+        category: "gym",
+        place_id: "ChIJ52Y_UTuLGGARYTnVylO8dbE",
+        name: "フィットネスジム",
+        latitude: 35.6309521,
+        longitude: 139.7353459,
+        rating: 2.8,
+        photos: ["places/ChIJ52Y_UTuLGGARYTnVylO8dbE/photos/Ab43m-thDenhSe1aRZKnwRBRV0JFXK_sIWIDC9JyprjL975erkjcLT7mlxMdlgU_V1qlRP2KyBljHbymGd4GIxHSZISUSc-QKd83hnwT6KTyVn2g8T0v2VM_ALrVFXRPBpywDlB5lEF5ic5uO7t-sXjSqSXr-hD796Q9PCcKfd6dtMY4lAMhU1JoSdhX6fXEJpwtnGwMUsDyEKOphazd4Fk-lsivyhanh7JRZhzwBKZFayuFMlG9aDZVzzcKoUbPKZVMmOfsfsWlpt2ytd8I66YlQPa5FLNzrqqJmsxvHJ1bAMRPYYuHF0bYgo0bZUittCBclwI3J6hudVReH3shfbemxSJdUDHm9JaMbQZ9r8SHuvKnXiRtwXRxKKEd9i20rCZXm6BapPDNXip7m4FL2d5woICjXVKifCYIMcfOF1dpVIxs0g"],
+        distance_meters: 339
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJjxIkclSKGGAR8Io6R8GmRkI",
+        name: "柴田錬三郎旧居",
+        latitude: 35.6342344,
+        longitude: 139.7365652,
+        rating: 3.6,
+        photos: ["places/ChIJjxIkclSKGGAR8Io6R8GmRkI/photos/Ab43m-uVF7uuo-KOwQrHJ9gMMxPdZLGq05j474ZrDJ66C5iPuOY8gXnMsQYxU5GbPdPjafaKqXeciY16Lw155U3M3RYj2i15vpRHmgtorZfvc3s5LyDYysKlyT9yQBRSCnsuX-7_PMlSfFRv8F9p-kaEsSxWuC5dvnOVOEFQtt8pAoi6V-9vFxBQ5PlQUTyAauG56GZ-71DrVrXi0SvxW7gOkf4NEifE3afPVRbYFRs3Kuq84fwfqi_GoZhWVs-lt_K8ZbSZ5H2ZaKlQuB5gWk_OaCd_aUNfZBah0fWfha6YYUGEOU7sT9CIIUOLYRxNhzLy6oeu38Lo2yA9pVSimwD_2J5CGIhsMusIsKX9GuA1-Vt5iBcIjf4zY8VIeK6_TL4GYnCmWMAS_yeGMRAMk_TTCbQDoUDR67XE5yOClKXHnkdcOSDc1Zw_h-OlvrOcpz6e"],
+        distance_meters: 55
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJlaWyUFSKGGARjGBTT9eQH-M",
+        name: "Tōzenji Temple",
+        latitude: 35.634208199999996,
+        longitude: 139.73520159999998,
+        rating: 4.0,
+        photos: ["places/ChIJlaWyUFSKGGARjGBTT9eQH-M/photos/Ab43m-t-rPfDIDoor2GYk_dyelXDPVFwk0TKwvJMnZ9YnnpTnThkdhC13_dPpI-XjdxBo7NfpQLsfkrcK36qa4JrZboeuHHZ_CLpfOssRkTrZdXa_CK2brhsB7Jhfg3z_24TI8pWF-f-xfld2-WKYrwdyGby4L-ZM81GbPmO6R8hmpc3GZuCc5pg0G9uEW-LDXZxFpOw0kNgGzkeoMiS-V7DbzOxj7OBukQXwxjRXl_3nONlih4YvjH1LfDFXxfn6yg0HrMCqDSVH3DXL4UBpw1CtRmR75fqHBau2GFctAZruoZcrqQsrH9zaaIohcl2_5GrQ7WJ9pCc3oyzZXam3m5miKkplBXL30vF6l00-oEZM3eldDuplH4quE8KrzOfySlIFyxVh43oFS6s6bvzuQY0Q1xCHWhUa8dr8PbcruQa5NKEDcoi"],
+        distance_meters: 151
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJG5biIlSKGGAR8WaSxLR3gBM",
+        name: "Takanawa Park",
+        latitude: 35.6329215,
+        longitude: 139.7354937,
+        rating: 4.0,
+        photos: ["places/ChIJG5biIlSKGGAR8WaSxLR3gBM/photos/Ab43m-tSOwn-eMgbNlyNk38hFh1wN6xDqMSk85YLbJryyh-4hTmBpjISGCgS9ZJ6vzTEEktATqtCm-hTreFKCs5nwmgirrCNtyKfBy-N6WnoB3wKoEAtV67C7X5oSJMd5Vc6wQm3S3Wc_5UziWJehyk1MaSMkl9013Hvpmz4bVBVCTLmCqvIK8H7FVrVCETQtVXeAntmvSfU5-KMj6Nr5EnD79aUR2XflcoBt2P_L5AFe-uXCKcCNWgYtF49s33yguBF5QYq4J3wSS1IlETmwNfuQ6UrgoxQspYdHWj0RhWXtfKs3hd3OL3u2qwolRICgGnaGTd5ue36w9jraM2hOqlD8EeZ1aAAqSFQrzP0tbHUlCt8M27l8vSHw967yhBkQa4pKg6Xvzi9J0m9lPD9om0X5OvlWk61QueYe3spBKudxNazqDRHi1jztS9mLcL-UoaW"],
+        distance_meters: 150
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJl-1sm1OKGGARKF7IMwZLpYk",
+        name: "Takanawa Shrine",
+        latitude: 35.635291699999996,
+        longitude: 139.7379167,
+        rating: 4.1,
+        photos: ["places/ChIJl-1sm1OKGGARKF7IMwZLpYk/photos/Ab43m-vAB-lLbmsaL2cCn2YMeMfpZFs4vqCDQVI2w7378KQVtSDKWLgjegNm9D9aEN-lLQD4FvH5P3uAdTIinWoVDQN00wL9-IzsLhJRQv7vUjo85RxEh1gyD0UG5sEEnWQTy9TzJ4sMcwhAT1KsQwFVQukHZSkzpQRUNOxSX_tV7lzy0PobKrqfyDncpegWB214S9uY-Wf7ezQBOL_UQt_MEpM5iTrktd0MSCY-2cPdrLMnOx9W-kTy5-mOlL_mZvcZmT36iGsoqcFdPdrSQQw7Eq9od-5OvLLe3PtUQlzefwZ6jPw2kO31GwnZZNfaEVxwCZGYUHcVGT-PVEOi_6OkjalA8rtZOtnI_1CS1D2jRAcv4xJNNoPdBaBel4-JldWIyz8zNQ4xwljbuoQucPBhWEA-kDSHrMwEle6vvwM"],
+        distance_meters: 198
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJBeLUl1aKGGARHfcT-DlHVC4",
+        name: "旧竹田宮邸洋館",
+        latitude: 35.631808,
+        longitude: 139.735814,
+        rating: 4.2,
+        photos: ["places/ChIJBeLUl1aKGGARHfcT-DlHVC4/photos/Ab43m-vYR76OWiR5DUa6COMKHs9i3dW7WjPUXFS4EG58qrbq_y3QoPsCrYAvulfX7GwR7ttfVgZ3QCHMqsEGjnoh8Q7YPWOTKbSm3qgabY7uKJHuZDSW7_N8gFetTuQG3TG1wkT371AHJznZrit__bv7Hq8csljbPgBKhgOV1PJaPC_lTmJpIeywyYC9KCYbqbOCmhZDefEu8y4maARpJqOVFpqUPSFC1C7tNrys29h4p-0C_YBFASPDrao9XNjert_es74yYNTjEEoDJ6B6uk9y1esyuWUXggU_7Yu_M84veE2xCfeBwdCN22bc1PPh4DIGluDKnrsqLp0bIrzYCFl-SxkxDkUWzEomRsc85cVd1ZPQI38HNCssCsn4U86P3E1_Ge-oXEbfU-qcVLz-RxZ6ckw7lLgJbX0HKKpOTfOKkDsbFcvN"],
+        distance_meters: 235
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ4Y-GGVWKGGARAHFc8A6VDf0",
+        name: "Koyasan Tokyo Betsuin",
+        latitude: 35.6349814,
+        longitude: 139.7340404,
+        rating: 4.3,
+        photos: ["places/ChIJ4Y-GGVWKGGARAHFc8A6VDf0/photos/Ab43m-uWKx4Rk9NiDEJlKyCiFVgOQi8a52Y_ab1QhlCLwAp7zGta2gyRu2RT-Zv_Wvh8PIPbUe5FJP_tD5GgjIhgNTsKcd4wN0JRMXq2dwRilTHyAV5nEqUJ6PmT1ah-Ic2kzA-pDJbBbqFtrrKUNG5kvmSuvPAR9RQaKWhC2mg0xHS73KMqLkUpb1pAqcOsJQLS5IsBLB7mYeOku2sTLuy0ecaCSRTfhKXPmN9YO6ou0XqLDVaAta2sjLZ_Ll2EUheKrwlXpHAgajIeQ4zGOkoiv1iWL4RY5opOqHNqHNr0RfkoBb4QIcOrf_qnWXdnmOd3xgYlPfZiD1ChhGdn_GcQU6pxvBEE1QVVCYT0Y2HTC6XUXKcNKl2Fjs39eOQ33u4jZQCvHS8kjr6Zz9x6o9_4f9jnXvEScEv-mGYxd2CSTpqlxBN5"],
+        distance_meters: 282
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ45VtnlWKGGARMqIZqLcFk-g",
+        name: "Ghost Buddha",
+        latitude: 35.6334522,
+        longitude: 139.7330906,
+        rating: 4.0,
+        photos: ["places/ChIJ45VtnlWKGGARMqIZqLcFk-g/photos/Ab43m-s_lBPBKpPdYwTosSDD271lUPpDt8dVU8OUDiv776BuI2ehGu3RzkbY-tZ5W4w55Zy-7oLcR4ExWCuSl89s2Q55XCv6n_cfFfuZPzfvt4AAyeQmMGmXA3HTCI1tsHQxfWcdJhye4gy67mYPUKEYnb5IoA-gGgxTXgIHeVR_yCLeM5kSBmhwaQuBED_vlOK-GMnTvF27VpM5mZT7g5ZReuzceSrwgEEunyO9mORKg1a0DUlcD6zkvJEQwYeCGW7ZX3FETi5m0M4hq033F9nee7gi8mMRnyylhoDVJmpNXCMWgB9_m0mVhRPIsJmwex5OTV0HEmiqh2uoHU_PapRuoLiU1s7rzrcXsmfzkvVHDo9nWUrDQ3GO0f5jTJqkXS83Z652NIoIoFxNBhlyBxtwzN9Gx0vsAkbKikx_2ynN7Os"],
+        distance_meters: 335
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJVz-cNauLGGARqP4z7F-0dyM",
+        name: "Grave of Oishi Kuranosuke",
+        latitude: 35.6371051,
+        longitude: 139.7366192,
+        rating: 4.3,
+        photos: ["places/ChIJVz-cNauLGGARqP4z7F-0dyM/photos/Ab43m-usWBwFZZcQsOCb94HOxjNJcfySFoyP7rJN3_KzP3J1qYKns7hca1BykkClYnyN1ifCI_8ztY1VPDeFVfIFFI8lLge0BO_HMkqdqKE55qnMbbc8FqkX3O65qc9Aq3ht6o5-PwZ_a2Z9xJxqWk5kxC_GMYJ0ymQcOpPk-YwrXv8OIlCbpwRD-lfCYTjPh6tOn_kUuxnIAYu2BHwIpeufCTiwiCy4G5ZBGQWJoP04rk3Vb6xiCwFO0Uko7JoTUtJcQUkHHxFVmLWhacgddPCGuWRiXMkLZkgmuO8DNlhBHtiBgMqhqVJTtbRZ86CcGwLvmnleOxTZl_kzBHvtbBB4QZjbbE-KXcmCGWqMT4OZFh4n-hPRTVuQW1fbaBvxXtJZXlvtvsS3M_p9i782cjXF4XkKNJKSpxMnpq4IAuK_lqlp2w"],
+        distance_meters: 371
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJsYMRTauLGGARM4SwXVL4N4w",
+        name: "Head Washing Well",
+        latitude: 35.6373568,
+        longitude: 139.7367212,
+        rating: 4.0,
+        photos: ["places/ChIJsYMRTauLGGARM4SwXVL4N4w/photos/Ab43m-vPXEgyVx0IkModeOjRzEVec-qtxGiLEN8jC_m76bdJOrUtL87_x_Lv5d4FQhfJeyKQt6yBxT0nGSzVw2rk-h30heRLnGk8JTVyD8YOqPpg5X3Q6xSmJfTG9QhHF0RVJx8g90Sk4jtxFzDI5hDLettFeyXAMxBCWOKIpNXnmc_-asNoCEavcR7ORyyxLnGJVx-TW1X2wwuBPNZjUQrKUIBeJhlzYXpKNbWxMN-CbjrUYALwatmNkK0-5CyQmfS-dBrbA7fj07hLhyP8Ld385bMXOGiddSghscxEwo8hJyzWAKymCLx4eQK0skiBURHxHA31rah9C6c0-Va-RIX6VeevaeRc0bFuIdRXIIk-7xYfMiHQLd0126DtHmNjJhXGgYT_Mi1R3BiiTcrgc1KEAtxe3-RuoSAnyHnMXAxNjVYqrQXe"],
+        distance_meters: 399
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJeX5U41aKGGARpQJCQQWMQrE",
+        name: "Takanawa Mori No Park",
+        latitude: 35.6304242,
+        longitude: 139.7349935,
+        rating: 3.7,
+        photos: ["places/ChIJeX5U41aKGGARpQJCQQWMQrE/photos/Ab43m-uDE_a3HpnLYPxuYtoI8sYmlhBFHw6sjqMzRNU11wreg50aQVRPgsQISd9CC-KndZbMhXcqQoFoEtPdGY63U7J13Dh4UIXljLgTBBM1jW9r0whk939m3qzpc2o3NHn8T6153y5P8yf-M4G-9eKpY3HpwidGu7BibEMoFxvIE2a2YaiL2YAXQfBd7jMaiX6LsBsju36ueDgKPbBFOQM18Bfl5EOjcjSB22pzTkZGfOHYsvAnsezP7JlcbI0_xfkYKze7UVhRHyaBzNCICH-W9Wjr6KTf2S_EKKJUIVBrQD-jsKPJf6wOSOMKNTJSCFZqgqiuF0QzJfNZcY5o6mVbPL1pkjBmEPD7gPivudR1NOz8IauJVstB9RP0CIs5F-lVFikfg4rKP4G0J-TBZv4H9WdUfIxNhMsPQ8LJ3BvtqEUrUS3l"],
+        distance_meters: 406
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJlwt2FVKKGGARo5sE_rHgtUk",
+        name: "Takanawa Gateway Station",
+        latitude: 35.6355207,
+        longitude: 139.7406809,
+        rating: 4.0,
+        photos: [],
+        distance_meters: 403
+      },
+    ]
+  },
+  "Hmlet YutenjiⅠ 402" => {
+    score_inputs: {"atm"=>{"nearest_m"=>105}, "bar"=>{"tenth_m"=>430}, "gym"=>{"nearest_m"=>98}, "cafe"=>{"tenth_m"=>399}, "park"=>{"fifth_m"=>412, "nearest_m"=>96}, "restaurant"=>{"tenth_m"=>181}, "supermarket"=>{"nearest_m"=>192}, "transit_station"=>{"station_name"=>"Yūtenji Station", "time_to_station"=>14}, "convenience_store"=>{"nearest_m"=>106}, "peace_quiet_score"=>0.386, "tourist_attraction"=>{"tenth_m"=>737}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJX-AUFDOLGGARgRqrTzD8XaQ",
+        name: "FamilyMart Meguro Nakacho",
+        latitude: 35.6322085,
+        longitude: 139.69267829999998,
+        rating: 2.7,
+        photos: ["places/ChIJX-AUFDOLGGARgRqrTzD8XaQ/photos/Ab43m-uqISoEOZjEm-EhTa8zciFg3inQyzZ9KT8-2gf7k7VhQMR1ibbbrPs8FU6QAlMvW6oYzFBNCqL2_J8syOSF3f8pfTQ3A_mJx5Y0bjUbAQv9LFs6a2isr2c3EWWS4LXtRm7wqRItCvvuEOK2IqBuI8ejSUngHHVKfDgrqZXvpnqv3iwMqBZ21onqt8yXrv92qIqDnAVfhRapzSQy4tT1AQHjstG2GXKot9geQ4-ovTQm40KjYCFG6-dCMy_xpet6AXAiUKTvgElWi3BpXYh_QXHUjdQZYlt6R1VUwdgEwIaeMdZSppeVxesrSHcYJX5cSYJTqTLmzuP92qhAt3jRJHlarFI9q4-7-oLApLZJ-cEjY5RnwNP29S7yOgNb9t3P9np692Dz2vKLg02G10BZ6Vv9m3RwMc1CRovjO9QAZgSiHQ"],
+        distance_meters: 106
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJJVI09zKLGGARLBxmhP9YrbQ",
+        name: "Lawson Meguro Chuocho 2-chome",
+        latitude: 35.6308867,
+        longitude: 139.6934176,
+        rating: 3.5,
+        photos: ["places/ChIJJVI09zKLGGARLBxmhP9YrbQ/photos/Ab43m-synOJTV3V0uz4HtB8m1CWlGXwdmKZfNVL67YrP1AmnDbnTW_9p4833x0s6Clf01NHeeFqseX0WIWYn8NCNlS63mtLnXqkUM0cdkRI6OO4GrqmifmL9WyQymUb5zNNFIkK1TmL827yVQlYO7YDzqGsqOUAJ8SJaezV0YQ6V1MFKes1-iUqVoOmhgxWv8ImWXxwOg34fkENDHMJhfoyaI9e4Yv2tsxK43YBHFTvssEhJYGWGJL0tl4RgfhXGIebQ9h18WRrDx8OdSOeKS7z-tC7HXYykMYmQY6djtbrtjsInhzJuQCoeP5DruLVdc8ZmEQe1U_mz8NOHdQUSJr_44EAgzNVeLN7JdK8nsGPShIwVkspG4N41cQ2TTshS_Ck6PSJR9rsXTXydZAnnpHXh0-UcF1a17XGOPVs9ZJQHuNieu-8"],
+        distance_meters: 149
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJuQ6ifwCLGGARphoBRrA9xz4",
+        name: "セブン-イレブン 目黒中町２丁目店",
+        latitude: 35.6351328,
+        longitude: 139.6951643,
+        rating: 3.2,
+        photos: ["places/ChIJuQ6ifwCLGGARphoBRrA9xz4/photos/Ab43m-s8LM-oowGjHonsr5jivzicNIh1vQo-8Vn-3l7iaDs0WLbX__-Cibq-t0tGupN1dG2fg-CWyWcXPDYc01S5mz0BX2OZCZbHUQahk22l6VmtpKzFcu-ncgi_ebUXH2AnhqOfvrE2z6zCQCZWBJvYW3QpwWmp8cjFC7_lIB_VA6tV9lwxSBEcEI9Bik9QJ4tiN7gILyJVGCSRz5xxNlb-UeRq9sVZTnjphADYnSXH-JLJyrHvjUBtePAf9DGaAjEmyboBV4EmVVM9FEhY_uxZVMkgWOZSRnWOHn6k4wo3QC7awAKVvDibFfLqopyDFSpr773uoOzN9KzSQJeUYC885J8Nw7lf9xBkh-CUfGvn0Aw0F8_vYYROvvHby0A34QHo6VuuG2wOYmPqugOOqFxUYJAc15gmRmJmSrOum8x1kaNKi5pyVdjuScexDl8gtbim"],
+        distance_meters: 349
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ52iwcy6LGGARj2MRh_JWwwY",
+        name: "Lawson Meguro Nakacho 1-chome",
+        latitude: 35.629142300000005,
+        longitude: 139.6965775,
+        rating: 3.5,
+        photos: ["places/ChIJ52iwcy6LGGARj2MRh_JWwwY/photos/Ab43m-vEI7inLAfv4nGZCcfqRYZpjG-gsx5WYw2h9g3CJ2vNDH39BlneUB2dfCiwmDPtMPOadjbtzPtc62dmJjgFQ64x-xMZeIX7y6v2UcDjXhcaLdCYShhpDODk_OvXqFNR7Z2OCV4zmlT3s3h-YefLpqLU2OhUME2DJ0O_-4Kxir5f0XEFnx-c_AUk9n_gDw_tPaR6Hir-FCFPvD3-iNONPhrwXEKIJyaTq2TAMDXNNw-JmHvICPzFbbo2oMHSQDBtT9f371HwUZfXNUajCQzZsnSBXjfPBiPrshLQ0DmEnXnsBEzhd7kCJDBQg8K1bmigwOEMWbt8hahqyeJC-lUQugM3SjEEYAQ4UCmSdKtnNemk47rKICOKy3PPQWdsrznhvcRCjqzvb_M_yleVvs0I4lywSETRhX_-cSc3fDAJFIPjNrU"],
+        distance_meters: 418
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJL-PJRzSLGGARYbjsECAUgpE",
+        name: "Natural Lawson Meguro Yūtenji-mae",
+        latitude: 35.636091199999996,
+        longitude: 139.69461429999998,
+        rating: 3.2,
+        photos: ["places/ChIJL-PJRzSLGGARYbjsECAUgpE/photos/Ab43m-vG4fCgCLqdxxPPD1g_SNbqtiMydBdnp3PymssRXGaE8eBuvo0Uu8XtYhXj6GXTpf-1jAJRHFTR1SkXf_ejqlRkRuqZYzzYr_8W_f4f8fKbxRIPfqMSbS2xFuxBmxbrolAfKMeRKksPlRMsAHCTWZL0eAy4P8vlFCHyO-YZZLs421tbPotXPnlKPltlSIU7R_x17o33NZXYGT-jmpMmg8OvLbi-47lOf6q8HV21m_D6BiI1ebPudKWrj5q4S-R88TA2Dl_dgz4hmjghZt2TL6mCVr5Q5opavZDw6ehvzC-Ppt2DC-r54qxy_ebIKTMnpYrOetcduv6VVmkSqAJ-5LymGwHlB3m7ZaIgF9ojCAq9lcYetWEdTIi_HWYKVZoYxDHj3b__5BxD7bVwJh5MU3V1zMtdkX7bgMo7HbRTNW0AcarE"],
+        distance_meters: 440
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJow2eijKLGGARUcrAXo5qD-0",
+        name: "Supatsukasagakugeidaigakuten",
+        latitude: 35.630449299999995,
+        longitude: 139.6938367,
+        rating: 3.6,
+        photos: ["places/ChIJow2eijKLGGARUcrAXo5qD-0/photos/Ab43m-uAAk-JPx1a_kseYmbv7NSaPV4cexOPsEi-d7wwTCRIKnsncPdQp7uYPn3vVTz6Rad1liQY9VPM3apQZcTeJ_Aa5swhvPlUEZxyG2DBQQgkSNNOXgF7yum1IOnqQ_uyV1Wsx6qAIkyYQitfYGhTqwEaiYGizIBEhGAogzixO02Dh1zR3DNTUyClF8_342BPoIRPizIdMcGCl_mxhtzo9M5aN8pQw4DA4urG6m20vzQOk1PxtIN-TTFR_v__EvexQUV2pQy4Cnvap4-n7KOFsLG1st-ADo4cPg9aG1FUt0BF3hZYyRMDf8Tx_gtCb8bLnGGUPJVG23rA-AK6J70t50vcxUeq5DuGTneneOWIaxMc9Uw-9ciUfVctpO6Hr9TLD85xpC56qXl0mG_h2Mlt5e9AaRBKpCsSZTFvibQLaY3ZLd-G"],
+        distance_meters: 192
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJTR3_6DSLGGARosUUxkKFgFI",
+        name: "Sanwa Yutenji Store",
+        latitude: 35.635279499999996,
+        longitude: 139.6927149,
+        rating: 3.5,
+        photos: ["places/ChIJTR3_6DSLGGARosUUxkKFgFI/photos/Ab43m-sDf7K75kNyzZP15XBYOWiHe9xrpHTQrLDlEWWmfDVKKJI6c0R_mGgmtqp0j8TFO7VXVFoSnFFmyJRhhKtH1mjYpMin-jKAlt5d_4K_O7Tr8Z50Apanrjiyiye9uq2-tzqM4SeDXEgZ3PALaUHDiZ5jwmDeduuNwjBIbALvUX61ABq2dXyOozT_k2IF_yBwzAjZyuIBCLG3xPgV-N8w-a-BympQNEaUGwGOr1GDMNCgXYbDH_BDcJa81pH9G1iJG9ZKYDkbT2tSDPJijzcX-OXeIJFiCNYcM5mD0x-7uN5Ru_yDRNx4FNskh3coK_O2gb4ID9nw6XmYS-CgGS4eG9joLa9m_9LUdugR63Wq0Fs-iLYrqUIDoxX45yfQ0LzIj7kovwa1B-_DZUxJsDSyDHqpW_kY0ICLwu3O9abAg5-pyw"],
+        distance_meters: 360
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJA1QthM6LGGAR-tmc7a28-tA",
+        name: "まいばすけっと 祐天寺駅通り店",
+        latitude: 35.636478499999996,
+        longitude: 139.69353619999998,
+        rating: 4.0,
+        photos: ["places/ChIJA1QthM6LGGAR-tmc7a28-tA/photos/Ab43m-tb1iIkk8ygS_kuojd4xaHQl71pGL70AJQS_IZY5bbSb2F_eXAdQ4BxTEAR9dJOvHIbFT3SVu5dLYRJtYL16_W3EZ0S07eqi5QkyIgvmzcZoh9is8jociKOqxxmZ8vYkhYcnKD8FkxHDE7aAwIxagUf8pDPxkblJjvQr-dwTbMc_9MTt4bs7RdWO2-DlRKkxMIJFrDDl22bHgwRJ5ImlCh3rQ185qTPbP7AEN_J5wPlT1J5tAnDkQ5t7VC8P3Bfx_e2K6NoVnxLN2BYgBiRvthEI9AfACpQpKPzd2EKNfhqZzAretK8LyC_92LSYPPK6aIN4naZsLFSQI5iQ0ZyESTZ8oIbvrRgEkFgybHMepiOSo6savNvL01iDa0G7gVNNqqNnr5faZyNkFxce2Pe6qRZ-cVAzUDZBMGSS5OS5PeADg"],
+        distance_meters: 479
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJw9burcr0GGARlDK6bTiZCOc",
+        name: "My Basket",
+        latitude: 35.636921099999995,
+        longitude: 139.6908782,
+        rating: 3.4,
+        photos: ["places/ChIJw9burcr0GGARlDK6bTiZCOc/photos/Ab43m-sPabzVQrloeMfzxiN78YlJDrU90k6zJ0GTCCLzqtmNd6f1VPsywpcJJhmJzVuhsPcpB_cLe7j2-TXiJCaO8CmmnCSCXa5wRGz_rRS6rT8Bd5sx8XlKXGHqo07KRNIUhjcJp0ZOlf7LQCWYHdq9ws45-NtqU_3mPnNxojWm1Hv75z8Q_yKG7KleC3blrhhA06mYcXaubt5yrqxWJQexJb0CH2gUdvdWId2_sGmWHhC2pS8mOWl3ynKXfcVZJ666EXNI7blS5x3haZC150GGJaqH30AN9NfiZRrW0aDbibVDy84Ep04341zy7SAckiOk0qjCpBKp4_po0Bno8DeqXLYhN9MicXDV2Rz__dOm1wOkv0_xhsVz2WgMrfeIg4U3UEmp46cT5mY38h9dMI5G0caZcd1PQhLYV17Ie5mAE_stXg"],
+        distance_meters: 592
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJr-Ekqsr0GGARTJo43_BbkX0",
+        name: "Tokyu Store Yūtenji",
+        latitude: 35.6371799,
+        longitude: 139.6908046,
+        rating: 3.8,
+        photos: ["places/ChIJr-Ekqsr0GGARTJo43_BbkX0/photos/Ab43m-vCPbWWo5bGaU6D11Ds7OxfjTmmHXg1zKMsOCX97UhxKHfAAD10ESegX5x8qV-jMgvPVpaC2yatQ8lTNR4O6DEj3sl3EKqmrTVphG_VQhVKs-ilLq8L9K8fEMYgaJmjlNIubcVoXswoNpYI-BnZ42s0Ow-vyo7SdDQ-HphMpKVj-Uh7LcPaX4eLNy0pSvk9H9atHNQAqTCpm68eu-qFad1ZnG6VCOmAVN8skWQr8FN8Oq1R3yBB1rOk71XDEto3hW5ryWJitGaQ2NyeFzlnpdCMsbFHFEoId2zpCBSSMxNFWq3VPXPCsAtWt9ELjOI-pIyvvyEdqdC06WocbYso-slArlnB2X4_OrcTrHP1rYVmC5vFsJuFP6z2cdYWfTUtLmDaHmCkVKbn6zzHsMGfgyV_jpmghx1Wt1RbH9X13YpecA"],
+        distance_meters: 620
+      },
+      {
+        category: "atm",
+        place_id: "ChIJB2wl-TKLGGARxzHd6UN0WuI",
+        name: "Meguro Shinkin Bank Nakacho Branch",
+        latitude: 35.631276299999996,
+        longitude: 139.693512,
+        rating: 2.3,
+        photos: ["places/ChIJB2wl-TKLGGARxzHd6UN0WuI/photos/Ab43m-tU2-jbjp9_l2cV1bp7E1mEZQqeHx86W1Juo1l1J0l9bMR1eYp3sJUkC-b2WNME33i_nbSepFTcBleUDhf_YLjyajSN3BGCNu4bR4Aw1AJX79UtVDUr9k-jK9XE30oE_gAf8MZU8PygcbqX94UqWshQfXcR3RdgJl8idG-ShOxpm2aaIGbhfuZlMgGtTAi9n5GVNGgLaVtomq5fae7bE7ZPQu3NltcLaw7WuqU619i2rhykDci2A-M8HPHHvnmL3hK6kkUOpn32IECriaQjisrmqx8t45ylF-iE9bN-f3mO7s5mV5abY-43QukPUQsZbgO8ED3g7JtUnyIaG_1vin1S_yX4trbKWB7j4zY9Q3RLATPOAd884zz2BXoMPPjw0Q_1y9OZMuw-xIc4TN0r54MHEsYPR_eJpxrbDUPVVz9qygDg"],
+        distance_meters: 105
+      },
+      {
+        category: "atm",
+        place_id: "ChIJJ2bo_7mLGGARhwC9BLxjwTE",
+        name: "E-net ATM",
+        latitude: 35.632276,
+        longitude: 139.692677,
+        rating: nil,
+        photos: ["places/ChIJJ2bo_7mLGGARhwC9BLxjwTE/photos/Ab43m-udPPAy0wTZaBLO03NueK3FILcG-mqdGE-n_wlOxtN-pNnfJAph6lorw6M2_PLTFsUaxjD-Pd8vZKL8ZYJvwOF-Ymmu2il4k651u9CJX7DsTJNEskmpSmhLFhHchk_OUbAF3Rh6a1q2JxoFog5UDVH0MGSx3gwE_CKr-Auk30VAaowLdk2a1ocw7r0rm4BGkmTg60vIcubcrXhHcFK4vXh6BLVkti3Qh4kCPEB6dgqgNhHiNJ8VOp65aG43Gy3sC3dyZ5zh4VqawGpneeDu6AAYylMEScUNCrOhi3UhHYy9h7RtDb-IIzKieCdEb4dMqLTghkp7uCpDkag8i_JKfLf7DQX9-RxieTIQTMQ3NnmYQUVFMloDjPN_8j6uMXUI5KyjCx_eFs3SWm1p4Dg1LZ8paJxs6aDuXIRcIvavNGWaJuAFRsIvzWCEcHlNe1oq"],
+        distance_meters: 107
+      },
+      {
+        category: "atm",
+        place_id: "ChIJd4qgXYeLGGARAY5wldVSrqs",
+        name: "Lawson Bank Atm Megurochuocho Nichome Conjunction Branch",
+        latitude: 35.6309025,
+        longitude: 139.6934297,
+        rating: nil,
+        photos: [],
+        distance_meters: 147
+      },
+      {
+        category: "atm",
+        place_id: "ChIJJVI09zKLGGARLBxmhP9YrbQ",
+        name: "Lawson Meguro Chuocho 2-chome",
+        latitude: 35.6308867,
+        longitude: 139.6934176,
+        rating: 3.5,
+        photos: ["places/ChIJJVI09zKLGGARLBxmhP9YrbQ/photos/Ab43m-tvANsNT1H6VnRrEmI_UH92ZRlks5F3MPel7R50a_RaCUZtID-vTLguA0qvTFibQKZgIIpnDFI5oRalgg_L4-FBZpegOHA-nV2CYQ6cEKdP9nnovEMFVyn8NWwHhWGQ7e3nXyHFwcpWHhUR_UXNMwBY0gjC5krjnDJDEzqqa5RKaQOYqnfcJa01HkFUmX-Pw2Q6Hn-f8RwUIxdzjkKSRse-8ZgtbMl6PihL7V3_GS5ECGwznQfyxxk8q860o4OVRwu5dmPdF8h5AToLcdFs8uP79ROk8jPt3NTTO2mEnTr37bizmgoMGgghhzA79vA0GcKRCE-_jvyUnkG4iSTcIY1XpMdcP_S7_ERbP_L8YzQ6ipK9XBerKMhf9_Z06Kpo7Xx_ygDVo0MeTmFQWO-657QBpEYF8IbG9Q7Vfw5tnoyxZp4"],
+        distance_meters: 149
+      },
+      {
+        category: "atm",
+        place_id: "ChIJZzq-wjSLGGARXfKOVcj3mV0",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6350931,
+        longitude: 139.6923467,
+        rating: nil,
+        photos: [],
+        distance_meters: 351
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJQzlO0MWLGGARvW1uu-89f1c",
+        name: "necoma",
+        latitude: 35.6309617,
+        longitude: 139.6947678,
+        rating: 4.8,
+        photos: ["places/ChIJQzlO0MWLGGARvW1uu-89f1c/photos/Ab43m-v_ChDiwgu6khOfMJJ21xLy2qaEb8sJsjeNDQiSJAFAZOkrJlQlAQeZltvsTE-sqZkbE8E1Sk2-gl2Gt_1-a_8S2TPhxfCra2CpfGUvRgx5SJt0zltZY5bn4dL2LpO9oIfiT3eoOCTB9sscWNppRrVGEVG7PDlTzWl8ObnJIDP4HpZWgydibc2YO9m7RCvK-ILqpZ3W30wVLWmIeBFCchPxF0ngBWmmjy8gFtTpLSWTDyZ45jX8i5ZXAcd69Y4qNL9hTXOdK-vICWmUCvh_-a421u3r77gy0HThReCpDlvGfzCg9eqkCZzp6CbBTOF7HLbj4Nkk6fFc-rLKPLiFBgLLu5ffny5M8ahweL33Fna3YHa3bnjpmaIdHr_DsQkfA2oFUKkwVmvOiz2P3aj-whqADhXRljR-bRQcj_bJqSnp7kn-"],
+        distance_meters: 159
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJZVfTXzKLGGAR2NJIDsc5GZA",
+        name: "Paulista",
+        latitude: 35.6306186,
+        longitude: 139.6938472,
+        rating: 4.7,
+        photos: ["places/ChIJZVfTXzKLGGAR2NJIDsc5GZA/photos/Ab43m-tjDnFaU1tSzgKstdclCBN5LeEKAAcaqzxIhUq32mPjpe3Hu7qGN3vivoN1QjhzlL2RAm8vhopM28IE9PTd-6_TaMmebuP-UUheYEkSas7jTGCydlhZAX2xAD2nzGUY4QHVLOONXmqfty8iW4YxqKnpRhDYuJDqGmlIlfOfRzffZqtJV7glxij7pkvlRa1O35QYw6QPaCnCAmalVcpj0x2nCMDpbiz4xI3f3F5jzojYCtypUaQQD1XaIneeW79oH8JHzpIVcz0UKhBK9iYz7ynMtJAFb6b9ctJuCOzlvVCOV2sxXeyZjeoXEjbfL3Dkx1zAjSj9NnfgUlAlzwDL8hmu95HE6mPtEy34_eXTwg1M1wS461ElYn9C_26gSOvRNn_XRz-R-3mgxAeIfxspswXnDy9hfMyA9UMufDH0fyZ6Fw"],
+        distance_meters: 174
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJgzTndeKLGGARTQSHaeVlXrw",
+        name: "AO COFFEE",
+        latitude: 35.6306112,
+        longitude: 139.69368409999998,
+        rating: 5.0,
+        photos: ["places/ChIJgzTndeKLGGARTQSHaeVlXrw/photos/Ab43m-tY_MsnnQmvFYmj_mr76rutgczYU7FvKH2SM0MHlREgmROIRNo2DPsZrWm2e2_NBkCbL-vNVpcl_dEhoytJcPFv0wpGkca12ONZmFzR7JqJ7-uJ64YMZRVq-FAH9zGdG2K-45-AEx-BoytbfHihjsduTRNufFy4FM83ngOXwzq-N2qvJ1UY0AKpa8uj1_EKLUspJ6_Kb62IIxixdhwZk18jvtTfEw3_N9jeFK9jWXuTQvA0O1PUORxcsD0tINstAy3Kpt1IsFkh3HNa2HokEnJJhVFZYxm3llrmhbYn68jrNp-LppJYfqNMhD0B9Bhj_OygV5-Fav2_r_cw_CBTJOO2WkAYmCH6x_lgGZgFHE5ob4XR0PcqG0jR_i4igAbVUErkMKcGBirPLmrLBPOD67_l816MzkCU4k_V4lznZ3equM7d_Fit_46KWdNXglyZ"],
+        distance_meters: 175
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJkXRe1siLGGARetnAFPWjcjY",
+        name: "Kaleidoscope〜Cafe&bar〜（地下1F: 目黒オトノワ）",
+        latitude: 35.6334964,
+        longitude: 139.6924683,
+        rating: 4.2,
+        photos: ["places/ChIJkXRe1siLGGARetnAFPWjcjY/photos/Ab43m-u83gD1cmquf1Bzv7pKV2jotyP2Y-j3J4OLd8gLHAvtubl7CRsLO-JMKWMoYsYVEhvJj2jjf-o7LcZCgqBpu4vPo3ojcD1f7mkkxoeMm9g33L2rgXrCh_t3aeCvDxn3QxiHTpWgEc24k4_U4Zkg-uTwZwfxj20GeQLJ8gFsrnD1AywBkR4HsT6v_xNq1go2SCGhle_LscDR0tIfvuyGJUrlh5Ozruooejkb-TApfsCDZQEPx82DcB6QhOqc3VEoj5qa_ObBcvpMQhG_Ythe0vYcMumVIJYXjdDFwyoa-nWzFppMoLXMeA9Pq-I3ZtJxJywjkcwcWWk-EySjjRA_BqPdiowQV-QchScZMu4SC1yzhdXaeZcXdQ371lxxIODXeKOKHWCtlWN6_aUFb97d735ytCcd-MhpTUXA0tEMa1mVpg"],
+        distance_meters: 192
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJucMisTSLGGARFf4QUE4WzpI",
+        name: "Puchi",
+        latitude: 35.6337913,
+        longitude: 139.6920797,
+        rating: 4.4,
+        photos: ["places/ChIJucMisTSLGGARFf4QUE4WzpI/photos/Ab43m-vFGQXTehi9-ZMFmenlPY7Rv-HvMajh7hMCw1wU5cRaS5wty1-br6bK7e-rVJycuxYXXifIDBALxJcJRjZPHyJSHtTEp-DSOyX_c-DviteNAQbooPWoEfnm1OGWnQqUsLK20UVpwAO0xa_hNg28rxZYZMeEyNPu6wdHODsB4E5oe6UgnMiykFTMtE55jBxNnfAogvFtS7PHliJb6GvVcmOzRIX1ddFc0DfUaWtU7PzHzMIC-L3YsIqLLZ_AqEfFuGrnStmly0Y4lLrpjsEvZtrWU8redFUNXDAi9UqPtKF5OqQcxgsHz1Ck-9c98IrEkKVgHwCCrDtlcMf52LjLWNDuRidV3kh34j0yULPqZHUbE2lQRSH5T0Ws1XJ2fdTjtE1Y_gk0nhZKjaf0KruospicI53ZaO7dGJ_FIsXKlH6r6A"],
+        distance_meters: 240
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJMc1cawCLGGARL2xktnih1vo",
+        name: "AOZORA COFFEE SHOP",
+        latitude: 35.6347653,
+        longitude: 139.69283249999998,
+        rating: 4.5,
+        photos: ["places/ChIJMc1cawCLGGARL2xktnih1vo/photos/Ab43m-vlObL9-ZL2aUQwrWzIElrs6FrYarYUv1y25mYV41vcs70u9y_5dPR1LHsp52vTSMtImBOaHPP_yKYIjHH56QhtTqUg93MEHeUZCsqe-FTZFVOtyIYoJDyXhogLGQohNwZoj-y9u4IejPgS3M7FcAShbTBiJarjrLwlplo6ZTZosZtdg_uQ82y6iLprnvTR_3JShf4j6GQPLTniPXCcRgyQXK5NCsmyh5NqjXyMMhuNjeJH6ZwhjcTPCtrjIKD9oHZY82fPo9nqWR9EzlVdBSYXqh-Bt-IRf5mgu6stqjsi9GyHtJrEuktK3Gfry2qwVTrM3pceVrHOa8EvS7mWZmrTPfYPNATiEzM2xddldhpKwFfpLYK_Hs9ebpoDz3RtZHmfppO7jWLOLqLaZLdTMZS9B7rryKo941pcABsmem_O6Nmd"],
+        distance_meters: 302
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJEep7vzSLGGARamfMiVcFTpE",
+        name: "Denny's Yutenji Branch",
+        latitude: 35.6347656,
+        longitude: 139.6917508,
+        rating: 3.6,
+        photos: ["places/ChIJEep7vzSLGGARamfMiVcFTpE/photos/Ab43m-uH9CUWcGaanYIR9njeLFFZkEvzegatzVFyd_GpNW2bCxq9qJOGWTRfveU3xIiegbeT6udCBT4L-Dy9KyBXcGxBDKk2rUOFc4zSeHwKPCWn6oIq3mu_2EKJ6Is-FMmVUN58Nq5VsEMJZk5DXukQE27Xslp0u-0-VB_LlLCY7f9Rg37rlIhbIiJ2m8k9Cj1AdMeQEYrzQiyTSBOtJ73mbQ5HqpnfK0-t_z85hzbPkU9TjNBmnojrHvXL6VWiy4ibfJOsjNihzD8JXfhsynsLt-fUl5G_xlr484DkXXZeKO0VVXoksGWWbEl9kburfCNWgbcUHebnyjYeecF_qCVteJeNgP_Y_UZyC00Mtnr_HsspeHPRElG_TsDLfqjJE6Twc7Vn9Nc37ZWCzbb6a93irXsuNShtaHdCTzWAmJIx-B8Kww"],
+        distance_meters: 345
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJBV4hyBKLGGARj9m5g5-l8EA",
+        name: "LURIE. YUTENJI",
+        latitude: 35.635261299999996,
+        longitude: 139.6928896,
+        rating: 4.4,
+        photos: ["places/ChIJBV4hyBKLGGARj9m5g5-l8EA/photos/Ab43m-vaTqKFvYXzd6tYUB8R3rH6xDZUDr7o9Ip0M8wf5S9sEUksOdYi8YWSnZW1Unlzenu8dQziXmQ4UaitGbL_PbNoHEjK3t6Stsylss2N8aYQ809snO21jVO1Ep1CCEjCZD-wMEZpsB5ekMnyR8ZqR-W4vhVzwb1lufBrSEXeB3lUAqjXJPGhNZwVKd88j6f35XAH94ExOQASBseXaz6QRBsl07MWi0Lm7vxORZBXJ6uP7qCJNbSMVwiFNebh_BNhxYYkJN_OeX3YGjsLRQz9Pi3_ZiHUE0W7OEv0skMHdF2y50ohrm55BNYQ73Po_ic-2Yfyy3TM73K3xrwKPofD1hT0WrYJxfqWqLuR0-AWixykLjh4YvJBdraoYQ7edJ6jcZIAszR0DsjhC9WDF678MbB6L5otTG4NY7iCrUSMXbMReK_gkC4-y6UFWIMdqQ"],
+        distance_meters: 354
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJj8RVec70GGARctv9gJkVUr8",
+        name: "A WORKS",
+        latitude: 35.630624499999996,
+        longitude: 139.69033670000002,
+        rating: 3.8,
+        photos: ["places/ChIJj8RVec70GGARctv9gJkVUr8/photos/Ab43m-swzFOGwKcab5Bl5OSA8dmg_dF9HwqPa3-lXNubqjuv2TH9BWGgu74ow_RLs4Kv4pPckwiq8hepYR-HDZHFw4YQHadmFgG8wMMHZjOUMDXFZ5Blj8j9sY2DyEM5P0D1G6qukdIHlDLxF6GvVFFb9pvh4dh-3GlL8L-njt4YbOgxjOkmHI0N6o-VMquG9dvPdM9e1ydVPv0nxlIUiEfr_9Z03M1wDJNgoBoF6TJzvs6Ki4dtKMwHVryjuRI2PmxPGRDOuPderdQVIKVCO4ns3qpcP8TCtPVEiGyFnB5qgqHJe9HOHq8MBFcZmNi_pAPT4Ak74FpQR8QTXt9ds61d6nWKCtboO_APzzF8aj10-W8BPmtI8STUY6-U6gaCA2PqfMvoxzCZooTGTVKKiV0R1NT8u_Bl-xEYOR_5WgB15ds"],
+        distance_meters: 361
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJhZIq6C2LGGARgXWW-O8x5SM",
+        name: "FREDDY LECK sein WASCHSALON",
+        latitude: 35.6288529,
+        longitude: 139.6955034,
+        rating: 4.1,
+        photos: ["places/ChIJhZIq6C2LGGARgXWW-O8x5SM/photos/Ab43m-spoKlscyEZDm1YkQMDHL7D2aeGmgLkGRU6K6jduOQczYLlGThewkDvOUjt_R9A9V_Yqww8jiJd6rkM6GF6Ji52QTpbSt52z1PAOcytTVXO345JOEEOGBw9z_t_EMuS0B1pSUIBZE_tXhXiDAElb6y2VtfcpKRR6u3MjCYzDhKlC_x-P1oU4eElNhopf6W8tIZhqOhih_CFSrBEnwMopMlLGbmmxw4CvItACp8i9G3S0dxPmKp55itc5n9GW3pmgLZrSkFO72EaZ1fwUfgelY2CFnE4A_HEowimt1w0JLyTNtK0xWLl2sxAsH4VT3yTmBUI7os3nF6GEHEnLeBmPNButuKsZpOAyhkhvAcM-pvU46IG5k3yEZrNfLIYBPncWdSckbk5Z1K01zWLoEe-S3qGv2SmdulxEzeL6VEGk6jw-Gjku3MURRL0gNud6w"],
+        distance_meters: 399
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJWelGAjOLGGAR2mc2HWvAckw",
+        name: "Oomura",
+        latitude: 35.6315893,
+        longitude: 139.6932314,
+        rating: 4.1,
+        photos: ["places/ChIJWelGAjOLGGAR2mc2HWvAckw/photos/Ab43m-vlog_gXoxg-2DdLJaAC9wGrcUQxPsgumQ4HzszM0ERsbMMsH73mS9JP-Spl15BCeMGt08x7SmtHvbx1c5m9dDsPLKGc7oEgnzmun0-p_U4LRgQ5kM_pRGTgOaYWn6SrWc0cPfBjfxAw6nUtLoZO9SVSGX9LSzCW0plSBShVeiNysTexmyLdkWmAvKP8FaveRibRhs9LPyF1rqZSHRGtosNMkFdOzspmFswkBD1IEr7Xlj8kgHvaQP1k7FzHXBsQfsOEMoGV9jDLxMYespWxcSpqom6oGFT2wlRkDYXWoUdMrZnJKkIUOy4JLMdX4jhFYS_9-4YAC7cWSDIuW_vrXTiOAB2GC82nss2TsKII1Z-tfBF54NnTdPKVkWKV61EAjp1BSSQRtG1jkJ4CwlweCiywiwPneFZshl3L_p45hRZRuBtr6WxC0WlsjYHfJS4"],
+        distance_meters: 86
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJxaGy4jKLGGARpBnTlf1jHRw",
+        name: "Sweets Wedding and Partners Co., Ltd.,",
+        latitude: 35.6315345,
+        longitude: 139.6931387,
+        rating: 4.8,
+        photos: ["places/ChIJxaGy4jKLGGARpBnTlf1jHRw/photos/Ab43m-uAkPULBxHTfuTddGXNoIQC9kWDB6phhCtZRpJ1YWYElFeyj2z1Ue5VQlx3a_SVLUmLC6vXJ_cJn7QBeRgLDnaTEy7THFagpaqzPMAY9wvbJqNR24xcIehSyN7owPhmtZREu14pwl_MrW6-uYXyPtSlPYCHVlS4waFi3ktNj-6GVpJkOTF0OsQdJuYIil94yoH8a1M5uUwJT71eL7iAgdPESphLWqcOKT7MEY1HK5mZtXx7hMp7PkDOwSjoarrko8xVZ7sPSIo-pJBJiiw5dAUpV4gtIV3GecgqOPt_jO4DzGWDbbgUt9QRv2m98MaInzd3V7HYqsySSk5HRbsN4PDSkqMFX3aIKlnXywG7QnwGEyLFufxZ7csuyTlhbsHeEZvnvXtKKq3IbNg0udjED-Ws9T-vUYTxc9bZ_DSnF5Bk8Qx-0BP5stzgk_8loDvj"],
+        distance_meters: 96
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJhawnmFCLGGAREmolcZQGHfE",
+        name: "Aiko Udon OTTO",
+        latitude: 35.631401499999996,
+        longitude: 139.6933561,
+        rating: 4.5,
+        photos: ["places/ChIJhawnmFCLGGAREmolcZQGHfE/photos/Ab43m-tUg6XM_2k_uArZebUT5H6O6qjwXfI3b7Y09XxjnQbZCdV65wV2pvh7VQcU8nGfJM-MmKYosr5d22uZyatWHbCyR8_I9LoBMHqUZVv4L8ucvhrm_1YceJtjXekljob57y_q_sk9C4EZk7TAdhTpbKViXdL5Ba-MCUTDBHT76SH6_Lh-TM800xD4Z-6hz29q9zg-M7BpYHsjdfLGw0jexkj_zx7rkSdyLhnelFSv2p2d1GJdrobaivCILt9jk3CCPzPfjAD82uvRcQcOceDZlnxobhUuueWnnSn5aDqUO94F-3MQS2ZCKv4mtgN0jVVcERwC1a2BBYxd6f70iHe7lYp8RTPsu0UnAhzXe9_1CXwneUqRHu-xwNui1uA6CEgSauGxdO_QyVTLleVDHkcbl0TlTCDJd4u_Bl4HVNQri6T1hQ"],
+        distance_meters: 97
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJkXbN-zKLGGARnJcwC1Pjj7E",
+        name: "Domino's Pizza Gakugei University",
+        latitude: 35.631177,
+        longitude: 139.69331209999999,
+        rating: 3.2,
+        photos: ["places/ChIJkXbN-zKLGGARnJcwC1Pjj7E/photos/Ab43m-smVYMpPkc7okLvPTOciJgy1iKtQOVDpqrQz49QuqTFN5yY-FJ2vdqoIzAMIiQDR8gc6O0aGF4fE8xgECwxbBYf1ysIgE0gDWOiSc5iNzWxwcUkst7YsIGZETHeiJnhY-Hqnl4vQ8ZoZCMm7cx7p-UzkPv0QqJdWVJ5FogRmbKBjSpIyBx2R0YdpKHaWLNpBygyVdH3N8qhbvO3m-KGJkUw0ucZpw-S5JZOisXgqwb7E9M3YiXeKhqiLOizb2ODCuVihaUxDnNVtw6oMD6dB0lED7iZ2GMGDtTB6vP9FmOjNsA-OdmTbdCuXXx1quyZ1SEehCPU86_Fg7wRK5x41N78KTMBTEnUpxN6CEXsi5dq_YpDDtYJizTg_n5jsIUtxlNNbKeNjp_D-_1GPwsaH-FXxZW0-j2_j5KIy_8h6qf5u8Jx_idEnquVDlLmnrgs"],
+        distance_meters: 122
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJpyDJWDKLGGARmpcWlZzOua4",
+        name: "Serita Denise place",
+        latitude: 35.630874999999996,
+        longitude: 139.69375019999998,
+        rating: 4.8,
+        photos: ["places/ChIJpyDJWDKLGGARmpcWlZzOua4/photos/Ab43m-toDm61YVnA0TLcx4FfaObNK-iPuHN8Pa0-_7S8xpbnb0WhkRQHl6vkA05eMXrUcf-HcI3kfQwOxOTpnMqhG3SCAXINHEqXm3ICX8dT7bksYOKV9NNLHQ1_nALMzTfhPj4_XCvAnUn1nCFPFAneXxKNngyRU_i8aEyVCC_Rm9RrvTiCI0NtvCvvFKhxv-8SBscXdK1xIAPaGtdxcxKYvQxVn-mJMjYjXIQMDC7a5Bm707AuZCk5QYtFvQgN0T6t_iNdOdn0ruvIkG8lNASmrSsdo0B5St-cDYtcmybiyftabaVvpmp42C-nFeV-_DmwukEZIAOyKx2R2VZBnI5_BSYxg16njpME9mCFu4aNIN9rbarrUTtW4C-wHjJEj4Sl-jA5BoRsPmzKgbyBEKZSGNuAnTBv0NbCLecTdsSbZP6rnqA"],
+        distance_meters: 145
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJOWDqQTOLGGARhQIVASgcQso",
+        name: "Tachibana",
+        latitude: 35.6324519,
+        longitude: 139.69229439999998,
+        rating: 4.5,
+        photos: ["places/ChIJOWDqQTOLGGARhQIVASgcQso/photos/Ab43m-vJcjERV8IfAm91gnpqXSsF6AJyw8PZx-kfQqlxK34rCEhZ6E3NZ6NVc_PkksftDvKBRnh0Px5NjW-ntnQEQ_eg_8Rsb9snIQxprgN1Tdmh4-O3Vytia_2I7vp42HP2o1UPXMQ_ef8vw270HuCG1K2mdeNK3YfhOJrRM-PEBDwJ2nP7FxXP3hc-TblQ5E0SqocgfsRXN3cv20C88Lg5TcQUdp2z_vAJVolV6VazEojIlJ0ZXasSqEkd29VIJ--oxehGQ0_FHQKZ5Qk-Iw9_E7YbP1qUy2d0EfSPyH5nlogLCLl0hqrdkx3OkjWVXtWMW8jACTFhdFUoC0P1-Mmxhf5kWemIRQ_E2VZv0TFFh0SkLt6wrRf-ARXDEMkV5pQ3vDrNtCiO26-eGWGhV9WCj-bKWw7_u6PxCjwXacb89B7YhKv9ht3nIoKjlbLhNg"],
+        distance_meters: 144
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJEw8RXzKLGGARC5xc6IWVASE",
+        name: "Ametsuchi",
+        latitude: 35.6307755,
+        longitude: 139.6937316,
+        rating: 4.3,
+        photos: ["places/ChIJEw8RXzKLGGARC5xc6IWVASE/photos/Ab43m-uteRe8oFyJlbc8Z3T76jbvEwZRxUxopQNKHBzwx0O8ntiwngwJKETdcXj2XLLteSKKCKQUGIFIU6ch5CL967L86K-hUFAC90E561USmxv5BQ9S12mJJ7_btO16wUiZx_EGfXJwT4F9echYD-dmbtLnFbOeb1qaaDTvJuBsU_hrkE6DW6K4XQA6zbunuPvp4hxbR0MLMjbcZx93hhP1XZIRlqu8gsDrXljChpTkoxxy_qfm2gF0GjWnQg9rmQgVYIOxdltXJCf25PM27YWX1bX6KUKsksO3cpSEa3REDlMglaLt0rbOFApUffFW8gmCM0kJAgbP6y_y7sBENpaxPDJMyF5EaA5cGGQQsbNvZvlnQ86KkwQt0M1rRbhC3slunbg2-hEy-yWBjoDB7xQHjn7d260qVF-e1Nms4ZadWNxXUS0DIGQjzwl6a5V2BoE7"],
+        distance_meters: 156
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJWwTSQzOLGGARdrWcJk2lI0M",
+        name: "Sushi Tanabe",
+        latitude: 35.632527599999996,
+        longitude: 139.692194,
+        rating: 4.6,
+        photos: ["places/ChIJWwTSQzOLGGARdrWcJk2lI0M/photos/Ab43m-vzj15IMOja5_ibNU33Mc02SkzUpqgqWsQpsAIMUIRfX5V49iebcLm3ZSt99bv95ZXHQLYqd_mlnKs8sHoIcwGJXfBrH_zkI0UqgKVm2-cWQUlE2l7PND8dAKmM0kna6qaexNTu1gZRNeZ6vQJbcqNI7tF34jkOiognWYTGAyg5OAFWcawIJYfqBVnV3prCDOcGC8seXhX9dH0uq40iuPsvkG-EcmW73SR53ImU3ZgMJs4eqO2QyITkbubM_VpGfcKzLdmMQb1Ix9ac9JmypNH2uWz0QRFfNodW8SpsBCfBldpdeqlHFRYTYc85Ui58s3BHbWDy_AzAy7pcwPRXBg-L3Jj4Qg2K6jZXQoO_EkOZggxB_XwHzzB4dZlsXXAFvd8KVhDepnVr_Oasjm9gKqbgczFlhn-X49f2CPr7URAJIt3Q9jgK76FS85_dkC0p"],
+        distance_meters: 155
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJWwTSQzOLGGARfhoBNd0FqpA",
+        name: "Tsukigocoro",
+        latitude: 35.6325451,
+        longitude: 139.69216129999998,
+        rating: 4.2,
+        photos: ["places/ChIJWwTSQzOLGGARfhoBNd0FqpA/photos/Ab43m-s3Mwo257nHc0FxqGtK9N3cvnEeb_QmyvTOPJLeclckkiNKo6lyoxkW56bbT5dFGqAtW6msJTTIUliTmamkmBgpuC5LJkzT9fVjxSOOy6kKxKUbWQ7MH4VVWG6HzJajeavf5KxAXrLYKJXZKfRTVFEWOW9Cdsu8o0xQHx0-hb9pT2ryLnzacZSSmWva6Aa9VaaYp4dLgMZZuen0yMwwMSQA53Lmnn-NWjKnkc2iMwIeowTR1kLEdd1u_pxy0Gg6VGh-RJyIaEc3I5mZ9aTWf26mN1psVeSASttWjeYSfG1jx1j4U-FOoFzlKentKm9r1PJKar9WyJwmQP_05ELbjVDFdY3GvVwRJwMHPUgHuXeCOc-PId5PzHLKGqTYVCrzwXP2Cyx3Pyvf-ybPELg1-AsAwWqsPgnO_bUQATW8bSD5M5aU"],
+        distance_meters: 158
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJdwZCKVuLGGARPFYpvptkQso",
+        name: "鮨 凛音",
+        latitude: 35.6305513,
+        longitude: 139.69394929999999,
+        rating: 5.0,
+        photos: ["places/ChIJdwZCKVuLGGARPFYpvptkQso/photos/Ab43m-tFcVWolEO233oGJcIB8ph7nkmSUopJa_jABy79NaO2ar5jR7I1yvBcpRL5Hz6VVbdOlIngUl9a2fgr1cOTebo81PjNhMK4S933aU54zv2AQY1bAh9OCrHNmVWClAZUSk6D2-BdsNmIJvosx63RyEmN4IAr3nMWSmawFlmOBOXbzMfmX7wUz2u-nexVkzqmouX8kmRbjl4p7GV26TSK2QFoURL055MiYW-Mq0QmDM38I_F1__72rgwsLblculgg62o60KaD4_qhBy8ltJobBuFLYJFhTX7kspOX2Oc7PO4YdDhRRcABBtwgSUT2G01pRRgwVva-BEUzLGfHjkGTIDUZMXKE4m5Y3cHhfoxTT6UraQEzsrtiXj2KI1yAjegiLkWAsbf37UDKSiYcTDfj72qmTkvw2uvmWKW2QzXnDxVLkf6-znjZYQWk-qbn3_9v"],
+        distance_meters: 181
+      },
+      {
+        category: "bar",
+        place_id: "ChIJhawnmFCLGGAREmolcZQGHfE",
+        name: "Aiko Udon OTTO",
+        latitude: 35.631401499999996,
+        longitude: 139.6933561,
+        rating: 4.5,
+        photos: ["places/ChIJhawnmFCLGGAREmolcZQGHfE/photos/Ab43m-t8jRcd_n2B6AmoyvDQSN-lvXNPWjYBV6UL-rHuJGRDPLS4pj7yRZGMa16yq1pV4s-kvSouDCOGuwdBsCkAvU9B4UCNCvIfXzy8BNfrAQfk1CAjeVdTgSDNq7CKtbv8jIOppSSdr5ZE35OiKXB3orjgviki9FUYFwnJVpJsnkI3XvKE3t9FS6BoxPS-otwLn6DyaSb39X8AG6l_6XSWsSnl7SNMhtwG7zO31BqflLVwG3m2Y1icgpg8lWZHv_mKLXO6l7CTYej0fltHepxFhIEUUGAztsL6Al3hb4YTTb8xpvAhqhuvicuRuJdvthuATXWWe0dP5rfS49ZPD1PuiY1v3k45x720rC05kgnm6ComQLNEzG49TAS62VWFdXR9KIfE938fbUmjFue5J8dtmd_XimozhqIw4mPBsATHh16zbw"],
+        distance_meters: 97
+      },
+      {
+        category: "bar",
+        place_id: "ChIJkXRe1siLGGARetnAFPWjcjY",
+        name: "Kaleidoscope〜Cafe&bar〜（地下1F: 目黒オトノワ）",
+        latitude: 35.6334964,
+        longitude: 139.6924683,
+        rating: 4.2,
+        photos: ["places/ChIJkXRe1siLGGARetnAFPWjcjY/photos/Ab43m-seXVz-qf98C_AzvE6Toz--2vTkErfMQ3qwiGmSR1sqjMO3vL-ynrnVVpCLxuy3x_ICYbecwGPTkSH5XhE3T__UrGN93oktl3a0CW40ulxNwT-AUqzUfyL4LzxUKp9OoUniNVpjz0YClq-9D1ar3-nb_M6cyZluH31R16ZgkNRIcMuXxMiHfGSElQ0JsE4j3QugqHkgnOYYvvgmA5w0fB0amnucFx50OeCi3leWR5b3Wa9-dMD-9I8BvxB5QOp6bVUHRKU7V1dWSYNOgTfvMU4e7tXckJ3tzRS-Rx5U1FXJ-cCEVltygCvNM6a6a0QPKiUqE_-mL6SyjQn-ARwf1CDGWJ_uzC8Ks8B8v0PyknMr_2TncXJdo60FJoW13QmTFMKZZg9ofI83pN5FWY-D2cIB0l-s1fGSEKmieeslRFipjg"],
+        distance_meters: 192
+      },
+      {
+        category: "bar",
+        place_id: "ChIJXd6gagCLGGARsdcMHb99YYU",
+        name: "純喫茶tooスナック ちゃぼ",
+        latitude: 35.6296001,
+        longitude: 139.6944885,
+        rating: 2.6,
+        photos: ["places/ChIJXd6gagCLGGARsdcMHb99YYU/photos/Ab43m-s9Yd10BjCN4ht-JzplZ013tzw2fJPL1TEDkTF3fZ_ENUvxtAWfQXwHqyPL-gVn4EWDxWKF6MLVBfqE_KIL7Ez2a-3E1yourqy9V3sWfA2bfrsSsurwnoT-4FR7K4SutT9LyxlN1QOG2n9YmfIDrOMhNdqUaDaISCna26Xtcd7ftSCO3LTozFMgReRizSkWLremoFZgg8rm0u3-4APUG33Yf5cStKJnQZukY4yvYOwLWmUqaL7ivwlNf8QSduHjJ-mYL9lNTSmi-R23d9IjQEdy2lLTQ8KFjPL7HObnC40QMs5Q6hNI8866Q9F41iUl8Ck5xQAaARErXZfyR-bFwh5yYIVFwb2wkfcdiVP8XAAYAh2FhWSsMq2Z_xcIjLdQmcXVJJpHrRyXXqJl_KV-Aduiy5YZwSHQ0vzPzoqgWHVgI_1-"],
+        distance_meters: 293
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ-b573PuLGGARRV9M0DG1Eqg",
+        name: "Wine Bar RYU",
+        latitude: 35.6352246,
+        longitude: 139.6944301,
+        rating: 4.9,
+        photos: ["places/ChIJ-b573PuLGGARRV9M0DG1Eqg/photos/Ab43m-sWoAxW_bkUAtSmpDQggWdIzYR3Ecye1JqWN9IYUXcpF1MyAFk_2XYNfmeGw_lVfSKQN81pHDm5tjQCNaoADPX5zOffPal9o5iHlDTX2Aukyy33pXiv_h-B9vd9Pt17-BJhaI0fogVhkucUxlhC-teRc9rukU3Ke3GcQq5Erm1792pldE8PW-3smUrPjgofNyYcqb8aPPvbJ9qfQbE0Po2mF24bBGMKxxgtSwc6Uh5LA8HTpah9hZ9cCqxyyxlPe5arxVcxMqHDjxvhyCUQJVoNKQhcwC-5iCs9o_M17PAPeEXgmS8cQoMN0sYq8KHTOowWBTXj6cGZlKRfaq4mJ22wQ_a3dhaon2r92gb2Ad7uDDr2VGOPjcO_xYh8zT-H-VqDEWWFferEdR7PqWzSC4Zq1Otc5cWc04MSOrux4gqZtJGcoteLbEWd93t1HpG5"],
+        distance_meters: 343
+      },
+      {
+        category: "bar",
+        place_id: "ChIJEzMI2zSLGGAR9wmbCMSmS90",
+        name: "LUNA y SOL",
+        latitude: 35.635135,
+        longitude: 139.69195299999998,
+        rating: 4.2,
+        photos: ["places/ChIJEzMI2zSLGGAR9wmbCMSmS90/photos/Ab43m-tEEW1VY0D-3-GYcJqF4UN2_JVMak1n2y0NFDDQSyeQZnolGYflKYDgPkuwXqbJW0yoxnwdZTGame_YcgYuP0NbdkO5Ism4XcgivyAgj805W3IwycpE7mgW_kovugDXBA5QTrNBokpASaUxRZXYQTHow9mkyBV7otq3i4hiG4m2rrDE6UtuCsqyB8n45p9vuIF7IwZ0lqS55_wwQg9UuFX1ATKGUkMK0-q-eWUaKvdDZ0chV2MAHmHPS3oLsn5pAPlanBfIuuHsoGeqzDMBaI9oesxtXACqj2nREU67jwNicENLSNUWsArJpSOweFwpD8GX7HP0Cuq_TPqEQt-yzX9aiF7mFTMyj8w69IeGmxI89MAA0jxgkEUyKJshP8lacEW3fxBRuw78XhQx5jyBZI7_52yNT7hJfgtPoF5lu26vRQ"],
+        distance_meters: 371
+      },
+      {
+        category: "bar",
+        place_id: "ChIJN5Op76eLGGARsvPO5GCt-mw",
+        name: "n-03 karada&bar",
+        latitude: 35.6356111,
+        longitude: 139.693268,
+        rating: 4.8,
+        photos: ["places/ChIJN5Op76eLGGARsvPO5GCt-mw/photos/Ab43m-tQSn93_YGs0mi-uHf0FsI8Mg2FhPnoIScETkQKYAJv8YWF42amKUyCSZRPKzNdCm9eZZjmPCZlkkDOwJrnLfaaDPslUluHZIPsHC_CuOJXhdDrc4IvN_Wzp8SwAOPM6PQD2_vKuc5j7yw99Vzc-0kikvLNJfTfxpjofzKfuQQjFj5N1NW_aB1rwLB4Vo2kiSsATw_8mKuUTvHWEirgEr-bnSy6dFQ1DKK-xRwrKmcIyeayJIPEEY0P20fG047oUeU7YLMZyCUz5rjkLQNOoN6PJyVNulxU96X28GdX5rvC0YZ6qpCPUcjtI1yIVIUwtYa8icvl2sOeW52hvkmLLfD3H6n_w-LRtXISeWcTpvPkZBC1TG0H16iCLhxE-gdHYPULGLVFFkq9BUGCjC6TzS1t0XbFpX9xYu9x6uNf99naDA"],
+        distance_meters: 385
+      },
+      {
+        category: "bar",
+        place_id: "ChIJDZMaprmLGGARZp-aMrzjuEU",
+        name: "naniwo祐天寺",
+        latitude: 35.6356363,
+        longitude: 139.6934607,
+        rating: 5.0,
+        photos: ["places/ChIJDZMaprmLGGARZp-aMrzjuEU/photos/Ab43m-uS9WPpWNnooL5vL-zY9z8b4C-4ibZ-1OF4W-hf4jR6nz2D1t_WMUoBtbUaBLbZ3BrJwJL8Aj_ef5o7ErXqO7SrxZFafrLXAsr6RrWq9JgwCdnwlKJ6wxv-KEPqfEGxZFlbgc7nwHpt2sNxPETIFToo2Q-xFMIURVWxQX9PaDFhDN_8IpMJEf_oRYBO3B7EaQ_O2wnWOpya7Yf_EzSwtAoywP33t4S2O4KBD92RJHXG3Wlqa0pS8HnhhMOg2JLvitKuHsd5esnEpPOVPrfvj_brL43_OpNA2Pq4R-PbRrBpWVHYbwXaBdau-QrRhiXIh1a1hmb1g9v7osScZIoc-Dqlshrs1P1ZaBUrKbE6l9VGAxwW7tQP3u-vA-ia4vaOSIk495gQqpqETjxWlYgIFoXn2-8QM6YafwKC8Pc4dpTcaCwv"],
+        distance_meters: 386
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ16zq7ar1GGARqr5F23rbK-U",
+        name: "OVERWHELM HAMBURGER and BAR STAND",
+        latitude: 35.629536699999996,
+        longitude: 139.6904301,
+        rating: 4.7,
+        photos: ["places/ChIJ16zq7ar1GGARqr5F23rbK-U/photos/Ab43m-ub4DFXPRXpcgt1uhGYTNB8FGM6zfoPJxQZhESHhZYHF5C2ohk5qLY2AXpxPLM3nR67La86IE9m7M25YrMHmou7WLj_F-fXL9BUiXJ5I7OU-hO700URJAim1g_ukwOuLv8AYJAq1tGAPij3ZXlNU5AKgy3Xcg9XEWsd8T-kqH_-CxXaHc1Ug7qNIdUNmtiVU6_zMV9Wkg69GGE8oLTpEh-qOrx3dotEaEslK037GuBVDIclxKO0II9XD7_I3C3dh2V-P94u_7GndUBFbaMmCtsKkxmjZ_Zp9Xr9KIv-udqGw0E_2P9Y1CVK4sRc4jynT_moz1HiQmozls1VE-IN5uUsFdVUyzN-jlPyn-Ym3_tyrw-JpbltBX6C6xiuOG7Fo58uyu953gokiy5zykkFlJFUOxkk09OE3QHO55V18s3LA4x_moAQbzeUc89WscQS"],
+        distance_meters: 426
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ98pNJjWLGGARCX99qBR9Yn8",
+        name: "BAR 241",
+        latitude: 35.6356909,
+        longitude: 139.6918837,
+        rating: 4.2,
+        photos: ["places/ChIJ98pNJjWLGGARCX99qBR9Yn8/photos/Ab43m-v3dLz9-6DA7Jf7PBdbH1QFXWaa8tbbWCgIRhBBbda5S8jEaFBzWQFeEBlBy36DsEbMOK4DmSkT8LUz3qdcnad9wwxas1c0iyKcwj2Afu4wtMZ0z3KkJx_whNrQNlSOySOFDH_4u3yCQvWebgw-7z1BGRBX6-Mf8fV0IATluOvH8lDEYw_h077_Qxf6-dOurZfoioYdkvQyD-FZZ123FnHwb-WvE6T2LtPrl-SrzZa-8nsBATOs67nZneCh9t9uCJdFYfQhvsvjO4BxHiMNNqVkho7FsbLYtFfEwwXWNVHBx2BVRNICb0xoCjRZJsf9P_I1EnZ8A7nlVdNyuJMYIiQUDMZiMTurza090-bKqM3EKTOuBJuGTIo-BJ12NASAZeX8QHQ14wBzbVUR8uDdVR24xykjjMpvt7DHpY2KOFZsiA"],
+        distance_meters: 429
+      },
+      {
+        category: "bar",
+        place_id: "ChIJpxXV7zKLGGAR07bL2UeIJQo",
+        name: "Darts Bar Winny",
+        latitude: 35.6357028,
+        longitude: 139.6918853,
+        rating: 5.0,
+        photos: ["places/ChIJpxXV7zKLGGAR07bL2UeIJQo/photos/Ab43m-sfKT7KEHZAWtinGcASU3SSX6d-x-FDlFWqjGKeqmlixLzAYXu00bm2SxCajtCdDHu5aSBbdnHCDMl0C2skfn8cWQlqxRF5Cq2TR1CfTPvW_vxrqWzjBvKolAgba4vt1RqGUSqZgBlBx4whLMQSgcROl-d0Go0qQFmV8aXkqG5RWfojgWD9DreStfn-Rbya137gp9n5GVhiSa8xokemSfnqtRCPO1opeYJtraCzl6WV0su6jBlwZgSxqrakqmswCWNT5MdS5TXavz5dY8lCMn-ouXcTNnuLC3ie-w-lgheyd_UAexf3x9u-w9h52ZtqoGvnzUfEkAIz5co3kayb80fMdyxqkwsK2rXX3nptm3yDqqAeXlq2j6o7ka3rGMXVs6rwm9Vlo3-MTqCsgN6bUh7ozdHOsgCqgWwj3-Okkgk"],
+        distance_meters: 430
+      },
+      {
+        category: "park",
+        place_id: "ChIJVVUMojOLGGARhG9UbTl23DM",
+        name: "Sankakuyama Park",
+        latitude: 35.632991,
+        longitude: 139.69421839999998,
+        rating: 3.3,
+        photos: ["places/ChIJVVUMojOLGGARhG9UbTl23DM/photos/Ab43m-v5Uqca-DA6TuosR0cOccXogrHNtrLLsQfpVxd1tSCKHReMg7iludTbJladnvqqH8DooFx4YffhIUmZBTVe9x5405cD1GIIyvjp3HqCQSjz21U3KTaJ25lqqxCmPHltxW6YD_odwA-FYhpTaXtQgDaWIy0Qa7-N7_Pc0bIQSKkHjrxTkB55fm7tzoV-WCpPaXwBRQNbeZVZM7o_AR_8o5uPENlrJ7xEbzC-1ogT9endbOz1eut1VX6hvHh_xyUj2CiATgQjUkdF_iKhhN1NkhbuSX_7l_KxoQlneHKwgXm-RZrVi9C3nQZagr6MIP690bHhp0uPoeTGFLcfg5qzL6vMqeuSSQ7665NZHVsfj-fBtvlyivzP32OGVXwKwWdaUP1riT3ShIGfrbq61STY_k8GabZuGKfCdaGTw43fSDV_Ety-"],
+        distance_meters: 96
+      },
+      {
+        category: "park",
+        place_id: "ChIJxwIhjzGLGGARn_QkDYXPTfE",
+        name: "Aburamen Park",
+        latitude: 35.6322103,
+        longitude: 139.69668049999999,
+        rating: 3.7,
+        photos: ["places/ChIJxwIhjzGLGGARn_QkDYXPTfE/photos/Ab43m-s8Y4eBKCTq6uda8CrPCSpOiY2RLTC6nnCRVVRPKPafsfJHnqjjrz2vvVW0-vy6CvD-s68sA4lwAMqywZTarmDa4KgQhcldJXaQFQqn5Dj-dcCuLHFXMCqw5vFU_jg1vTk-IX8D4Krnfti3nByuO7pTeqnIhKkcDQ3vM57uY6rzz96xl-_1TyHcSO9GHkt-8THAY4zjeKib2v1s61yvc_jPEBWLRhNXE6WmuQCrjphjmHyR7IVwb4Qk2LvReUetLKbRxRka49psFztaSMz59rW7z0LftCyxW9Xqb68-g22h_UaAofqzZOA5usoF_PVIT_yb_7K7nFt1aTiiwKUrOIq9ZWNB3lIWQJ53EtJMUuZZ7zjjKYxCCbt0uRadaQfuZWehBGUhUCiI2kaG_FuFgmgzMeiVj-tzectRW6P9t-4"],
+        distance_meters: 256
+      },
+      {
+        category: "park",
+        place_id: "ChIJtazLLs30GGARWxtcyO4-mZM",
+        name: "Chuo Green Space",
+        latitude: 35.6300825,
+        longitude: 139.6907831,
+        rating: 3.5,
+        photos: ["places/ChIJtazLLs30GGARWxtcyO4-mZM/photos/Ab43m-sf5dPC4OSRh6EeoGQkPAbIlwdrGMSnPoSAuSLmfiZEOr2iRVfHUMrPPp6YhMypFBD-rMlT8HK-toI2Kn6BxREO71pIEJnaPnSZ1v4OBvj3l0g8VO9t9mqNBQO4YYjUrxZbhBVfPlHCisvQe5XPANt7zHc2EKbGAW-Dj-KSORxM_MEt7BX0io7IlsH139CahJxBNuL59VJkQAE-OBaJUhTV8SES3IMpOI5TgT-TsEjt2CDpvffC5oiMl7AHImX8qcKJ79RHKuaYm5Kff3XHLoJ_SjHO1yubuaJzJDT63W4Q3TH6E-DF_nH6pzxoXvFb8giQYmUNY5TLKgqk3fRc8oYKwV328_VHkJGC9FoMfRCkdmB8lsq1M76WNo4K22x8gebZgJ0LzrH_F_a9_jlqk10IHnnALleCSyABhOWoy9p_NAiV"],
+        distance_meters: 362
+      },
+      {
+        category: "park",
+        place_id: "ChIJDZ8MLsv0GGARGjyUoVElkY8",
+        name: "Gohongi Fureai Machikado Park",
+        latitude: 35.6346066,
+        longitude: 139.6907977,
+        rating: 3.3,
+        photos: ["places/ChIJDZ8MLsv0GGARGjyUoVElkY8/photos/Ab43m-t-LzXvGJExOohokdrciXFnT0e6SVRSuwEwKFr0D80DaiXKEotPcAVnCwiVFb09P_bPi0SbbH9gCPmrJx1JbYzo0Et3AyOCDkTv-hrLmK0NrHGlsr676fPJ5Cwxw0mO0mZdoGbD5YEaaF9b8l6oFyWlW9ojidrlkkKCpGnDa9pagkSFKR2oNtbAJhsm195T55Df9SMelY4b-5flfXkMrzIQbKwIo8LEjbLNVHoeyciJOtpRe2cRYWxeqrZQqp2oUUbsMIqjDf-A9kRlrxwFJ9__CiyKif_vje2iRTsFjaAQjpHdr66CJSpI1xakQ-FAsZNfdz5SFMoaz8h_2qCGceQa2RyY3IaCBOM0Mi7IhItUwlbsd9gbG_XkbJkGCAjzIbHA0SrSRrerUCuxkuD_D4mjVtlQDiXin3JckOVvmvJonJI"],
+        distance_meters: 386
+      },
+      {
+        category: "park",
+        place_id: "ChIJ6TbzEzGLGGARbo7fDgAfiGE",
+        name: "Nakamachi Seseragi Green Space Park",
+        latitude: 35.6341201,
+        longitude: 139.697731,
+        rating: 3.4,
+        photos: ["places/ChIJ6TbzEzGLGGARbo7fDgAfiGE/photos/Ab43m-s6477Se54sfyiy-W3DowgtjroufWaz_fF4AIeEjn_47V_5lDMswD0eqWivH_-_VLceYRu8awA5dSEFsc2UvXBUvCnF9Foi9fWeBLE_FNrc2Wxzu26IfCpf1W_Lnf2GW6J8mMsZRWFQrRe5oQVZjM-0PfCPZejFOMKIZZZGpsHoqNv928v-SyP5TiUaxnt5WA9rcq6VZ0TUy1KHfNaWj2EoKloVCt2hXf_TAX_xEf8cQ5oeHjKP1DzlXMSz1CC6hDAjj8wRO7zX1b6qcAQ-F88_tKjfbk1KspKHmoaxq8yHhd0u5XD-PwCUP2z3wy_OqfRoMz6EFqI8CH4mrL42EHTXmjz0dTthRc9lEu-dq0M7qHyMknE_McTs0sHlGzhyxe9emJnUa3MGU88gxw8dwEaqQmWmz6d3HMcrvogukY72RTz6"],
+        distance_meters: 412
+      },
+      {
+        category: "gym",
+        place_id: "ChIJQeKRbFmLGGARJLdl64qAU_8",
+        name: "パーソナルジム growver",
+        latitude: 35.6314746,
+        longitude: 139.6931952,
+        rating: 5.0,
+        photos: ["places/ChIJQeKRbFmLGGARJLdl64qAU_8/photos/Ab43m-tqXzn72bpAGkcZINgxHwwCIcMTc5iUST9MZW5dfhxK1B2tGUeurnFnKwvL6rPZjmrjxmxrWjU-DqwIPeun_dX8OXuWZP9XFzCtnJMGxYT-W5maURyEwkpKfnMWTZMfstShD6Nkk8nPx_uiV0lwKuqRmJGFXtQUxWledDZ63dhGgeG0kL5v-igSnGSy-TQ4raATF1UIKnMsdbJaiTOM59Rv4mZZiqUB7BiUGjuNVXEtIVY9rrzsrL0gF89JH00uDRuOl52oZKRN6nJUB2V8AIwVEnmmNd1bNZ4OafIh267KopXxM-HNfE6PMjljhtnmJu7UKnpuxY_7P4zP3PKueOJ84UtiP_gdXzL3mAd6e8x9dOSQ1TnWQL8Mqmn-3B-pSl_Fn4fqth4eEq9i_e8p83aTEGj2ev0EJPAA6u3sjctO1VMt"],
+        distance_meters: 98
+      },
+      {
+        category: "gym",
+        place_id: "ChIJyUxyw8z0GGARgnZVJviImFQ",
+        name: "めぐろ中央整骨院・トレーニングスタジオＢ３",
+        latitude: 35.63093800000001,
+        longitude: 139.690114,
+        rating: 3.8,
+        photos: ["places/ChIJyUxyw8z0GGARgnZVJviImFQ/photos/Ab43m-uIMtx19fysWq-N4spMcFAPYr7TDqkAklcqeOOtjxOtvjpTYAQ1KdmyMW_CtvmH2RJyOr6SzcyVSGlaS5kA1WtD2rLHiYhW06aEonfIhz8LH0RsexjRJlQ9f0etaugnixrMZ0GKJlmjwpSYDEsKCExw6NB_GId2UMZn1OUumH_FsMOWpYyWsi_pLSXhr6_4fbHDmLEWncU0adWAFRt0qLGQICyRw_pizzFExeKXvw1IHdqnYVJX8LlTU2JxUIy3XjhHDfyZWzdWP2XUKU9Ef5-XN8spmChqf7qmqwKgBHV9RbSiVAuT4-WFnBS0xcYTico2omlXCt_AwWvqWvb4lcxsRQ55py9iuuHkFkbpTJxDQoNqmsH7dAw-nTek659OE1CYp7T1Qek_bxTKP49GOg53NwLSgSDEkiWyhC2i_6E"],
+        distance_meters: 365
+      },
+      {
+        category: "gym",
+        place_id: "ChIJx4PsL830GGARFVsbGSpryHg",
+        name: "Central Fitness Club24 Meguro",
+        latitude: 35.6297587,
+        longitude: 139.69063509999998,
+        rating: 3.4,
+        photos: ["places/ChIJx4PsL830GGARFVsbGSpryHg/photos/Ab43m-uteM2AugaMRgZ_mF0sGPiXyFR-UqtS93ubY--xvTqBdbz3JGNT_550tOHBYs5GvVDjCbKJvdolbkkTZIy2Pc9dGxRZz2OYpOuUzoY0Kzb_3d_mxV_IBL51vPyZn4ck3P_vF6gYlAd5FPmzPCv-medqq8GVlTdThVpkDoGmYc34K6v1Du6J--QJjv42PrxS7eblTbgrQZrPC2Zeh5g3KUouTGphurSAmrkwu18xkbHYAZFaIR3LJqhAXIVaPROZjpEIXgKoCBNIbRZ_LL5h5EZPltLqre5sSQrD2zZdHfTb_jEs1Fpd4eusGxY7l3UmHi9P0h3320s05r8P1zTVjVvtuEmRAxdyn6MeAMEns7zMd8YP6pKsheJ8g8uZaaTF2p1ozVt1GXylZ3foEhi_R5i5-9m7ESGPYKQjALUkcmTvHl06"],
+        distance_meters: 396
+      },
+      {
+        category: "gym",
+        place_id: "ChIJGaYsBTGLGGARw7a2w3S5ZjU",
+        name: "Choco Zap Gakugeidaigaku",
+        latitude: 35.6292057,
+        longitude: 139.6967133,
+        rating: 3.0,
+        photos: ["places/ChIJGaYsBTGLGGARw7a2w3S5ZjU/photos/Ab43m-snVmEUhrXQpeh25nsSRxTVNdUyjkHRujXEPEaO_LWoSylqWI2MSWTv349moq7paEOoLy0T42PKPschV-O4DzBjtdGi8Cd0ClaZVGDcpiaEi_ij1DXy6RBYG9fRWA7ey1uwIezOGVaIDrQbzjnKAWy3KoZwMRXlSPvV2bNbRi4ChSdMq58vFENDJe2Tv_c9QZY3bXFAgZEAFRuHc3GOT2zfYWV_L9H9UoUGg91uqiuwbqqmYB7YixrXLEycZ_KxdpiBIGrMm_hcqwrQPpSf-L1c3GQoI9FTQFDaNTrFmIA1Xb0ZiXbbYQY2ixL5L8CIoyZ2OAlVxsbBjy5qpaAG9lZhI7cU8d8ljp7kmqG9Dc-t-fVlCF84XY04x9iEY7OtkyB1_7u1-DVbqIWnY3AOu6DNh-hVqt0eT7LRH-mBuXtXSQ"],
+        distance_meters: 420
+      },
+      {
+        category: "gym",
+        place_id: "ChIJcXhJ1i2LGGARiZtRNwOV2A0",
+        name: "早稲田イーライフ目黒本町",
+        latitude: 35.6283471,
+        longitude: 139.6961134,
+        rating: 4.7,
+        photos: ["places/ChIJcXhJ1i2LGGARiZtRNwOV2A0/photos/Ab43m-vikn8UCALtgI07uc6GhmOq_YG7_AUkkre9C3sYzPk-GIzLLymTJbuvIMechPjHeFVRZ6vypT3u-2Ki_Ha8pruu7cBPQHSPb0vUQTaDIJbXzKDxip4Uf7Ww0RY86A9r7iuV5OyOYdCYjgZxqvaVfWoMv_j6ZpSavS7bkMNxol8yayk-FR-oVFqOwYiSntQf4DyzmN4by1IPcBpKjmn-QThQhaBJiNy9R7fXc3YLFLzb4_MquG43Kc68GA3HeyKhuXlg-OPwnommNgmhm78UGMUxNfI5FfMVYeB2MleFEDSQDEQzVlZOhivWosAXTPAS0pJPwCnuH5wDXpT0qAy802TfEyke-HmIL36x2LGD2wEgt7RH3TueE71mdzi45NsNSjZOqlKzAj_NBNiGZ2POLV5eRb8e4O6ADYMaIFshOr9_Tw"],
+        distance_meters: 473
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJxwIhjzGLGGARn_QkDYXPTfE",
+        name: "Aburamen Park",
+        latitude: 35.6322103,
+        longitude: 139.69668049999999,
+        rating: 3.7,
+        photos: ["places/ChIJxwIhjzGLGGARn_QkDYXPTfE/photos/Ab43m-tWqnZNta-MGWpcHqVZLjEgP1IdAVES5UTD9t6xfFV2JqOPTL3bcWBiXTxW24Zv5HygwQYok-i-BB9vfmy-kyDfRjqrA5wR27plq5ch7JSOmqCoz4_nKpbpsYO6BumcJot8k-sZzPf7lPj8Neb22XjoSNxHzPqKZ4DPxViRrKs88i__-Z6_jNYd9Jym_7VrZGFQ4DaPFQI7X85aRaUU1RENPt-TIAws_O1tY0MSz1AmDQwQLSNL4h5jzX0wma9pQXO0C74YdGvETem1Hj4ve274Pv-5yAycp3i2oYOtFZHz0DqQrGlIVtoOmbNNj0C05PgAP6Aj6jdjryxpnUg1canHgctktrY9iLij-jTOuPwac-ev-mufKYRQTN4iRyG6FXUcIdyW-nu3LqZQgTNJqAV_MyT2Z5tVsZXV-QAvs9w"],
+        distance_meters: 256
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJtazLLs30GGARWxtcyO4-mZM",
+        name: "Chuo Green Space",
+        latitude: 35.6300825,
+        longitude: 139.6907831,
+        rating: 3.5,
+        photos: ["places/ChIJtazLLs30GGARWxtcyO4-mZM/photos/Ab43m-sysYMM1xGi09XvUu4YChmcSmdSuiIfI6EWLYgY5DBKxq6rB3uttlcLsB9JIzix1QIItcOZm4vg9gTBkLjsanyxM1H07fnrqGIEhDuPp92rMboUMyRT441mOP3PqQeICI2JNjTbA2bFmM4g7gqVHAbHaULV58Jg9RHMiGainCUSPSAswklXCcdA6VnMjzvjQty2cLBLClJrf1LrcMMLCH1ISVHSV0FRYXAtukt-j7DDoL2BZ0Zyx6zAPjspnPtWf_K3kSZcGnmy3ARkntWmOpruZPs3C6xnw6Bya_zDbItiYVmwxkCQdYGKP-v8kTqfLUudIwHbt-6ptA-xH_8FHdJwDZ3DCy4rCWjUlJO3uqmYqKmYPpElcg87NkaSILishQafuwvw_IoBHOd_bb1fYhnSxtE-xx-TQUiwebFNv0TUyk0M"],
+        distance_meters: 362
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ6TbzEzGLGGARbo7fDgAfiGE",
+        name: "Nakamachi Seseragi Green Space Park",
+        latitude: 35.6341201,
+        longitude: 139.697731,
+        rating: 3.4,
+        photos: ["places/ChIJ6TbzEzGLGGARbo7fDgAfiGE/photos/Ab43m-v9vMcoKMrj9YKU2PPIZP_i-eCOpEs37iVRN3B5zBZM6JCzy4Z3uIxB4EiE_6QIqtL52qm8Tf6tnO14ZBgm7W_t7LlKWDirp0K7gIgSCXKNSVCnQTWQtdB5wPCM-X6ZKBpCwvuh9cM70Z-LXHZ_uUC4OP3DSTTKGeUFgEQw6IiL0fP-w9VaXZOJlt-mgxS5p_r6aIT3iAbiI7_Z_VHS-MoKCmgGQi-aXJzpqoSBXfeTnGxRknBYR3NpT_q24Q4HRlojeNMDi_irA-PSoCv6XBmrcVgFY5Y2erGtjw4O-HNrGnNzM6SsBgbFAogzirqBMk6a7tlCFQZJhNYxna23gtE6_vTQZaLO8X6g3UkU9DRLRR7fcd_TNYy1ATHs-5SBFx2IjsjKhpVMR-FP-KtYpBrjcz9LggABuUqIL-6geyjjJcKK"],
+        distance_meters: 412
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJNc_hcsv0GGARWqQUZnw0ONk",
+        name: "Tokamori Inari-jinja Shrine",
+        latitude: 35.6332054,
+        longitude: 139.6890462,
+        rating: 4.0,
+        photos: ["places/ChIJNc_hcsv0GGARWqQUZnw0ONk/photos/Ab43m-tp5T8eNpyDGnR0xBgjpmvFQfSz2roFXeFz44CkUkJUvRmikmOyJEAKbfXrrryYBbu3_LAj3GTG0EwMP66qEempY3kbwjwxGwlzvnQRZ5WbfPotHpZ9weaAJxBMfD_gpVQOBisfcspQ80m9mUJ2INgMqgRkyfJNxnKIzAy9r_RahYvnEL4Ldoiuq-vDz53OUXxmbu6P1jMcvUWcLjQA608nib78xgwEeNYrk24IR0YAtXY7THHEMBrvRIMnFMZyClT-8R_QSu0pWZayZB1GbICdWVCQR4UQ-Vuz-J2rRRHu3J_WukoI2j2RE3AfrnbPe2BV8cDDOHlEp1Ry8oEnUzeo7wZpP50UUQRWz9Y5kQXObh_rYD_bPo5pi1LYkk6Lj7wogXqf1naFCcavWHL5ey4XhTMMnEMAVVoPVGPL5dY4Es96QeOlO6T8x3HefCaa"],
+        distance_meters: 449
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJI3CcHc30GGARfrymhWBIXXo",
+        name: "Pokapoka Land Takaban no Yu",
+        latitude: 35.6298472,
+        longitude: 139.6893677,
+        rating: 3.7,
+        photos: ["places/ChIJI3CcHc30GGARfrymhWBIXXo/photos/Ab43m-tbvyXsUvnFV8XzoEtHkRo3mJNimjOdlKg15SXllBhAthtXiC_MUlh8AWJ4h47oJbsvJxGGffzg8ajm2E942QqKPj-syMRWuxDx0QnwqX6TQPC7tdbaZvclbwdn5RC_hwtjTiAtM04lPP2qRptN69hw3FVYQQe93_VBbe2tF947-XYA_1kEMEoJMs5Nc3kVOAVq_QgINkW93p6S3fVzxmYqGl36hvXh-OnkMzYMihTscOk0VkO-IGHFKDh1GpJWmVm4zOosaBKcDZ2FwcSYTGxtgzj9iakpnapSIJGA-qng5RcbN5r8R5rmp960Pk5G8h14pAS6SDOPTqXq-zUIu9eBabeoDYsUwhqyyX4Hlrt9JIqFyN_bfQrqfS8oq8iON0twa7zuH0uoxmDJgsY3XwOKByAQCOcOcMn3_O9poyptow"],
+        distance_meters: 481
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJuQGevTaLGGARO3mhZQ4qeXc",
+        name: "Yūten-ji",
+        latitude: 35.6366112,
+        longitude: 139.6969264,
+        rating: 4.1,
+        photos: ["places/ChIJuQGevTaLGGARO3mhZQ4qeXc/photos/Ab43m-trlxa5mQ33GpHKHwaecWnzUjX-MkNzLtTyOTjaCufxkuIbtr4kq_Su7ZI9_OQrcZ4wqiT_yPuBjCP5NfmUNayQj9sud0GCTWVK7qarAqfzy6LRWi_R-Uh9Fl2bpKBgw7ggj6y1EyQaExvi9Xj9zr9oYCpA1h3iU6moGGGooh867iSpHB1bfyzRLhG-cvmO-VvOS3LMI2LswodnaZA1cRh_SwFf_sSeXVsV8g5EaALXttQ636x-Sc_xRwX7JT_IRITrSpt7Kd4QcuRFn-4YRe9k7KTR5nyMXLSmRJHx_e0k7E3_buuiO05KGZqdFDscacUeQuOREbHDTmtyXdcB4F53u1tVr1PgOGxXxkJG3QwWklH6UM4opVPyXbntgVfjjvy3iyON24KQGmk-EKNEQ4L56IqEvTFJbDRk7SNlGvV9cNoR"],
+        distance_meters: 566
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJT_D9ewCLGGARoa_VPRtwgd0",
+        name: "祐天桜",
+        latitude: 35.6371462,
+        longitude: 139.6966036,
+        rating: 4.0,
+        photos: [],
+        distance_meters: 606
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJNU-qIwCLGGAR3Si8sHeULhg",
+        name: "掲示伝道",
+        latitude: 35.6371931,
+        longitude: 139.69666569999998,
+        rating: 4.0,
+        photos: [],
+        distance_meters: 613
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ4_GGZDWLGGARp9_NqoUwGI8",
+        name: "C57117号 蒸気機関車主動輪",
+        latitude: 35.6379441,
+        longitude: 139.6929059,
+        rating: 4.1,
+        photos: ["places/ChIJ4_GGZDWLGGARp9_NqoUwGI8/photos/Ab43m-vXGDpkXnU2EsLkKVmzYvhWNHnpiJ4Oa4JTk7boQJ9v33L-Cj7gDbPWYuqRysvXZmtab5LPfuSRNou88lgz2pd6UfKT7XHDsxK0tDbLxGPyVKfRhsA6ho2YsOY_CRHLZwmumUSOulu9NMjExDUQl2yofs14ShO7N-9AnAo-negLrAxs74e_ZxC70_hOc9pksC3dUpOvkMIU1lpibQrLRp9ZGGf-SvrOUWsVQpkvh2AuiS4547_bgAXXOGWWZ2CCTX59UB2j4ZpzQ9gwzUme2xlTNfjBT0dRduVrLO7TtJS5_Z5So3IbAOKFY_LX9SrvRG_9JJnsvYNJ9uZ01XcFpAdrPOCqONXDpmExvX1XQMKManFmX5BhAR1CSpufqaU-P1_u5jEc7ruXdco85qJ_FDRl4mwNgJQ0co6ryeOY1_I7PJQV"],
+        distance_meters: 647
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJST5YrjqLGGARWABsCKweYic",
+        name: "Ōtsukayama Park",
+        latitude: 35.633255,
+        longitude: 139.7019013,
+        rating: 3.8,
+        photos: ["places/ChIJST5YrjqLGGARWABsCKweYic/photos/Ab43m-tTJcHnfQaJFOZOTb5p4pNPixv-P-R13OTPmCYsAviZLHdmwKaQ409QoLPC0H9-uJlvGsVEz_RCpDkUIyO4CfqnrDT0OkSy_ExcT6MvYwvT6dB7FWcootGVHSvOopdJZ-U_mlzLyA5aQk8m6zWugMcaI57HX3UgyWIY2sQtH4-UsGcVWiukrGmVwmlsE-BAypy0hhPG9vTNXVJkzfQ_1scBe1wD8oU0dv1-jGIv8lRt0fAqMhzFjw_5A2WFyzo2KUZRx9cMea9ws_H8zIW2XUa7WBTmV6ffD0sbj2Z3ecRxIYRyPyH2dF-iRSeKzdgP0hPJC8cyFzUCheaWS8rm3Xday7RWuPjBGdoTXavzTnyRx9KsV0sy4AvYUsuOU3_Iy3MXhx-sz40K3B-_EO29BVJCI2DbISP5FrLKSjjTQFV2RA"],
+        distance_meters: 737
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJ5wcqq0qLGGARHC7R8srSHVQ",
+        name: "Yūtenji Station",
+        latitude: 35.6374425,
+        longitude: 139.6909485,
+        rating: 3.8,
+        photos: [],
+        distance_meters: 641
+      },
+    ]
+  },
+  "Sugusumu Omotesando by unito 202" => {
+    score_inputs: {"atm"=>{"nearest_m"=>124}, "bar"=>{"tenth_m"=>100}, "gym"=>{"nearest_m"=>190}, "cafe"=>{"tenth_m"=>298}, "park"=>{"fifth_m"=>352, "nearest_m"=>161}, "restaurant"=>{"tenth_m"=>91}, "supermarket"=>{"nearest_m"=>413}, "transit_station"=>{"station_name"=>"Nogizaka Sta.", "time_to_station"=>16}, "convenience_store"=>{"nearest_m"=>124}, "peace_quiet_score"=>0.078, "tourist_attraction"=>{"tenth_m"=>417}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJ7b56xWSLGGARDSfGWuhl3kE",
+        name: "FamilyMart",
+        latitude: 35.6617576,
+        longitude: 139.7210697,
+        rating: 2.6,
+        photos: ["places/ChIJ7b56xWSLGGARDSfGWuhl3kE/photos/Ab43m-tCEGKAutqeX0pJcb7p5WXacYkzroXOG8hRq9DCdOJZi7eRB5TeuSzk2XT9Xrf4GARsvYIQ8a5MqEw6qjFSOGCyb1hwmkAkNs6PtN84AsrCiSsxLLxnpHGXaFhPvlwefqEs-fUvo3kKMXsBCcQxp0GSQlZ_m_OFFUpoNiohL7DKuWA791d9LBgpM7y5OkRuXyyYUog9zspmmXQT6crATArHIm9bw_ufwzUZd0fUe8jTL0XG_AggE_wV-EdgmyE0_xw8wfRxsyVIdH6j1ww-eLm4aOc-3d6olBSj8pvbNAxB8pO-4KJ60eF978NiGxzcpCXSxgBgX94Ol1AM6_E6MuhPQybsXbiFqQRdyPaQ-2EYHzzm7TnycL8x9Lm-ijp9ABNyBXgXNeVkSo26PBcdYA5x4Ty6qyvELuT4i9F9HhbSYIda"],
+        distance_meters: 124
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ87344HqLGGARmkBOGFhEg-g",
+        name: "Lawson",
+        latitude: 35.6616207,
+        longitude: 139.7231147,
+        rating: 3.3,
+        photos: ["places/ChIJ87344HqLGGARmkBOGFhEg-g/photos/Ab43m-tpFdr56UCqxVq4rl_dWZtYiQNbyCKhGEEDsLEavrcq1jHTrZM8Si59GYmLvOUTm7c98NeVZHkkh-gmISjVJN2RxZfmayvkS1ktTFsyZl4Kz-b_oZP1529XD5Dwj6nkOJjfXkvLZZDBJWedV-_7xxTi_SG9bVMdFQdCWB_CBlPb9aYK6_HUsa0os6jqYKDhuQYzP6CkUu3QX30uf7RMqKABSo0XWHRlfc_fqIfflzGmREysp-ivFW9BGAGp4LJf5EQO54dcuNHnIL2LvMV93rD_5aQ-LNqJR9nmTb7SK0uXhLIOs8jQkKKYLAOjXu98rcefxIOi1RKG2Yfl-QSdMacqo4gELD2uTpKWe8krHipHmMYiyRj5ZCN24F10nabm3kotGP6SYXkG7FuIrj_g46UBda_pkMegHrA7doBV_xM"],
+        distance_meters: 247
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJc6jwimOLGGARatOhvqifHPo",
+        name: "Ministop",
+        latitude: 35.6622437,
+        longitude: 139.7180655,
+        rating: 3.9,
+        photos: ["places/ChIJc6jwimOLGGARatOhvqifHPo/photos/Ab43m-tWBK9d9FWQK0ZLPk3rO7o-mxdoZzlSwIqrW-RfZoE-Vdc1HVE7ya0yymi5Gu8fM2z1s-NQosDUD0-7bjCWT-ZRTD1ZlhQLiTThTAZiqjP_QkTbyDFlxCKTrm29zN6ONAr_nRPjlyl-oQ2j2lVTICiiF0VMy-zIZ3_GS-VOy6aDCdyNImalb0qxrOvhgDtC-RbBSW0Z-0Htusk8Y5TsZKDyMRCAOkN6qWTlnCPOhQYGTAyJj8VjK8eCSL0-s26vENDR5tjD8QjAgbxXZYX3uSsqHdCBk4FnKHwkT15_zzCFJJSs8opMorxdhMFdk3DLJzqidxnbMn6Iqlf6OhY0O6NRuGquxPEMpVDj5GM9d8DoM8O10fknV9Whzgf_iSomzoHEvPROlI9kSMYsmQrfO3wYIMk17AyfbgUqH0rX4Z4B4kOy"],
+        distance_meters: 260
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJefJcWmWLGGARelz-kXgNilA",
+        name: "7-ELEVEN Nishi-Azabu 4-chome Store",
+        latitude: 35.6591838,
+        longitude: 139.72093329999998,
+        rating: 3.3,
+        photos: ["places/ChIJefJcWmWLGGARelz-kXgNilA/photos/Ab43m-uImGkFRcsO082djkKxW4QiuRoOWOGlcUoMacQ_PYK2Zw6bp3dnUVf6TLouqqqB3OK18cVO2t6TcZQqkfaXoJwbiRsRfRNpv_wDq-URii2S0GjR82x0CAGqVUV4LizFl0ygfeHoUraOBKSMZze23kTEr7EBmfmW2EIrOTDs5tt83k1xVGDoY1mZe6zlnTGexhGGmbuHFMTDBQpK-857GqaRCLXNiYEGYNdqc_9Buqdz2cf_EvRKeGFwQIPQ20-E0qP4wvI2YDwSzILhVWoPeXSyr8XNTjfa8EP8EAacvZJUQ94HxGvAuEoN7Q4viuJ-MSsgJvloihnTL9eKxGLl1Lwu4UbrwTBOuLtU_RVwKthWHZaeRMv4uHBawaYFeoI185Ot4yvs4plNuo-sG2I_wDE2QBs80OA0qpoKXyuGzZMzakXQ"],
+        distance_meters: 409
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJDU4pT3qLGGARLx9kfEYeETg",
+        name: "Navy Exchange Mini Mart",
+        latitude: 35.6623753,
+        longitude: 139.7254264,
+        rating: 4.1,
+        photos: ["places/ChIJDU4pT3qLGGARLx9kfEYeETg/photos/Ab43m-udeZVYRApwLAqfd2c1rVYharasr5uEZDvWy-Kr2-XYmYl_mxy1JWD4duYIqTtuQattRtGo8kwZCaCjaczNZS9K5SlXbgY11e459ddPv-fCfUzo0ov88j7rtqa5Z85ePnWf5K8wy9ZbQ47Rl3NKd2FhjRRAHZYVF8a7bu9f6RSNb3MQZ0jxClzbhPoojQYHONrFZFsq3KzPF5cOMaFqE_3MnglJ_n9on2Kp3uPCufaenktQGGlJt98jdjGm8hpdeo4_Zd1YdOjfuhkJyLMowMv8CiXet9FBCxkc9mRBuXIaDoDfjpJRuVcNf-gkFiyzv-yu_mXDpSMYh7eQpnlTc9T0CvaP-CXKSnlU78HnOTVwC-gPSmxriXn7moIIyo20b2u9rTyoUyOJ-o1qLwlhXLufPZEUgWR0BnjmFPMjYKkwnQ"],
+        distance_meters: 418
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJk4JCWmWLGGAR2Ncrtm2BIII",
+        name: "Seijo Ishii",
+        latitude: 35.6591498,
+        longitude: 139.7210713,
+        rating: 3.8,
+        photos: ["places/ChIJk4JCWmWLGGAR2Ncrtm2BIII/photos/Ab43m-vBFYSpKlZUMrdO2ciyUJa7CIptAuUlEf7rusyA8KK6CLRpNoMi_GbKIMC32ZjNEYnyAgt9cwX1aCVb8ygdyo1hmrR05wOuzCZWG3953X2VQ5n5qQ4TJvOJNsY_T0tVzs7odrrxHopowWoP2Q_8rUjpuRruolkqiS459b5FuxBuQHMHYfg2sQXCCcVWrTf0V68-ZfhF0AT2VQ9imdZPn7UO1GbOiDdrKJ_p8vpytI9_jw06bpqAvTlYx-V_qEvP-nAir99gI0FmHRFwlacdMFHC44wPyM0hyCBbiVp4lOAWPLCpGHONRpqaxjUjwQE-vm4Ld2tOlyUrwjOu8J_f8kMnJW9PMQ8zSQE02ymsD_xiyuuj5zyI1mfkwX-QPwsuTI9vbxwDvQpMoYCMe1uq3C8Cm3hS1ULVvyrkKk-PvmExhg"],
+        distance_meters: 413
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJifrpfy2LGGARbZSGVRPnFwA",
+        name: "MARKET LAGOICE（ラゴイス）",
+        latitude: 35.658744299999995,
+        longitude: 139.724594,
+        rating: 4.6,
+        photos: ["places/ChIJifrpfy2LGGARbZSGVRPnFwA/photos/Ab43m-sJLTBQlv_GOvCV-cxsOx2dIVoLd7IZhERWkf0TfyH1svibNTFzfOoewlHwNL0-1uTjlcpCZe5JmM3CTAfr55N0jH6-SEaGHBqmyZWcrKfxixscuudi9kkT3QTjrbIaROSYNJC0xSL-mzrmBuYJHLsuwc2qm5uE0y0i_uFlBe1Nns0sR8K_QhrBhxeu8TfduyhxjgHK1-OYWZj7xoeJhRuIUjtgjVVoGMoa-5fhG34LZoT2JTas13GtCwnilnHH52kkGCnQ_x2s7-vNDlzUNrrRb4gJTFv3iQYRBqnhwPhWYBPcHH0wMg00BoZ4q4jlHyZqYYosEmKMHWEt8_yfFgCZVwB7bafY9E8wcmmuzVhC7JsFp5rVjuKcRScbSW-pqctLuZLlWBf4tVQ_dIR_OmcZvZpITgeeLwdZ2ygj2z9LXQ"],
+        distance_meters: 569
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJB2kFpnGLGGARkcBfkjX2bkg",
+        name: "My Basket Nishiazabu Shop",
+        latitude: 35.6570443,
+        longitude: 139.72408339999998,
+        rating: 3.7,
+        photos: ["places/ChIJB2kFpnGLGGARkcBfkjX2bkg/photos/Ab43m-sGgso5Mx09oqh57tP4_TN1OMOwPmqVcyQn7jmpxBExBdb_JDbOfKJ5vkX3dT-fcvV1hXZNgH0L2Q9KkJIUFc3FcmWyQeYCUaTqpPpF6P62F1l4RihiHwf8t_b5CW5pYDQlpEkkg2wmURvZqC1Su-ldrni3E_Kn0SqRPZtjNmnKNyw05InN8PRWPQpHZNCj-vXiFOLmA59P5LrX9oKLzIWjzf7GymJ4DWoKyK2lWMt-_yRhBGXrhYWNZUBbF0ZJrdLXm_wxlGjjwSfVVYhktHBv0ehLSn2X202WTJFL_VNaNOwDLMcOzVRHZxCEWVafJxtBB4NW1DgJo1N0cphBF7UUvVR09ZCb3q_bTNaADVY4tITtbni3Eb1u-5B-iGPsbI2mWg-2-if5VVAABPGCF_6856txWTdk9bbfDOkqSjvCNI1D"],
+        distance_meters: 710
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJ43u5J5yMGGARBWFVB8gS-mI",
+        name: "Seijo Ishii",
+        latitude: 35.669581199999996,
+        longitude: 139.7166217,
+        rating: 3.8,
+        photos: ["places/ChIJ43u5J5yMGGARBWFVB8gS-mI/photos/Ab43m-tNWchuAnxkrGOyqpXnCpJqblMS5AdlJsvrkdoQrNfWx55u8X4u8nHRAoM6qI7BmlHrBVRC3SXWuYWXvFv3nQHy3r0gr8AHEqAiqNuqylqSawK67pHHETOcrfQvJ6Lh-fCAbqyr0i2fU2tvdmPDl9abP9EfpkBCA1k3tNVssfamfDG3wdRsjXJmGWbG3l5fHEQpxzuZ7SVT3iIBXdJRimlR5ipbzuDaWviObXkUDwSWN0qLst13ZieR3vg6Ni9QnS48Lne6pZmUVp-EfWFi7E0yF6EL0ycVMm5xBtALSjNPwSPuTPDs_NzSXe5RR0AZswUOpsRJila2Y2I4zwuJEfdLbwJV1HSuxl-oq2cro4AZg8yoLujCnBfbCnP0bKbDFt4hypQwKZzErjsVqBSQe083uYdSqER2vOHer8Lmy0o"],
+        distance_meters: 839
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJlw0kkHeLGGARbFtahK90fA4",
+        name: "SEIJO ISHII Roppongi Hills",
+        latitude: 35.6617988,
+        longitude: 139.7301965,
+        rating: 3.8,
+        photos: ["places/ChIJlw0kkHeLGGARbFtahK90fA4/photos/Ab43m-tr0COHMYS1-7dt0vgjI-NfUhTK5MrWmIymNPi4CzjQ-GcxSYZUSW_bQz-OT5h69x-gK0d5rk1dpXt1l13EVPpN6ttmF1FJEc_QTguX05Hwo9cLMvHuvdPjY5uOe6yy-P_Gx89OfAF8Qk6rsMJu8FI4NFpX6MvK4enrUm5htF76SQABpNf-sAaSQirqaERcsblE3jHxe7l7ZKOMDTFC8U7jf5rwtIA9a-gGX9NjEX8rLTmoCnfljn4-zNYwM6ykohS0vVtGuvW1HUYaPpOwPEWQ513cApKccwkIQ2CN4deRQnZdWNOyxJrXpwySDdqct5X3vy9QZjbz6rOKQ_kO2Nn-gnibsChb3HBDi4ZAW-2DcAXcu-EAm3XMchC2B2aPgNZc_0l0Omb4QEMRHJ25OxEXZX0Dh7mRq957MO1uaZP4G6k"],
+        distance_meters: 853
+      },
+      {
+        category: "atm",
+        place_id: "ChIJCQRm4Q2LGGAR4qfFpS4YShc",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6617671,
+        longitude: 139.7211035,
+        rating: 5.0,
+        photos: ["places/ChIJCQRm4Q2LGGAR4qfFpS4YShc/photos/Ab43m-uqSH4YVkonetRcpAwuuy53z6h9Rj7TLmHc84Zh7YT1UZyDlmq1RrSK2c52YiMeq6xAC0fVSUZZux8aSPQxbH8WoCCZUZzIqWHoEp8sNlpLab40lm2E7EVfzsB4fWeXc1L4P_pOwJAGDBnLgKHEeeBc3_Bgh7vTUyhI01a4UKiapYiDYy9suNl7s37C56h8_8NocMy2yD5jH7TVkS3gUKOa79cskd1oc8BfUTq0XaeCM1faNurEtSARQuh2ER8GhhE3E2YK3CLszEpu3-eccYkZNr1x4cBftwjKj9w53vc6t1db5LIV9Io4R4g1z5kOPCTHYDuKStkvWQlT-3s44eSRsxbbEmLLWwkLEJiInXS_MFTiuPZOTd1ODeSkQJ0t9rulg0Tw8fhSAoE33QsTXTpK6PndCnmMHIGbc867j-qK_3OvZb7c6GpSufP6Bp2h"],
+        distance_meters: 124
+      },
+      {
+        category: "atm",
+        place_id: "ChIJc7grnqGLGGARj0xpboFLqLA",
+        name: "Lawson Bank ATM",
+        latitude: 35.6615215,
+        longitude: 139.723044,
+        rating: 5.0,
+        photos: ["places/ChIJc7grnqGLGGARj0xpboFLqLA/photos/Ab43m-veh_tWC5PIFi6jwINtMtN9Q0KXkGFCXi9w2EXAHoyzlYBlNgM4vbsyDbog1OTtd-4X6ZvGKvVl9Oft9X6nDU4tMkl5eFghPvZeer9PX4EO0pPGOXgVI1WmiskxWutKGbQ6FQKkjEdXIQtE-p5H-lVC5M95FgR4U1iQQxKcXNZtuQZvOWJC5u6w_1qQ3tX_vdRVCecpLufH3Z5BWRgNn3e8MSKIPY711Am6Skfm_TJNyIkz0Acncr-sZfs_Dy3Xk9U0khTaN9hopQIHJeSS4YZublHdmnG4yfin0c8HnE5doSvhk22N_U4dDLLFWzk8GPpVwfIf_4-Cb7KU8pesK0xR97MC2I7FSe9Sn5o8c8UlTlkhz7fhZ5Szx-5WF15vVJ7ji26n8Ec-9H8E7J5mXDk97Dxwfgxj2XgMeYd0s8r-z1ERDQTjDQ5gpBLHeHO0"],
+        distance_meters: 248
+      },
+      {
+        category: "atm",
+        place_id: "ChIJCyeQk3qLGGARKzEYKHzrGUg",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6606482,
+        longitude: 139.7234125,
+        rating: 4.5,
+        photos: ["places/ChIJCyeQk3qLGGARKzEYKHzrGUg/photos/Ab43m-tffILJq7FqxKkacJnWcIcmO2h4llaG2tBFgLE6StRUKVnC5pP5mAUwW6f3SBuXdDoIR3qi6Vz868j7IVkdmXYmnCCF7JGcDROPfkPyQPC45zwYB548bmGzAogevEPXYmjYuLQEEQxZFJaFESYqqQ7whZwsrrm1t7iRzQbOc9Cuv3k6idNBu2h52wWylXlfnuZU1MEalZpRu5xaTpmT5Ufw4H3nl8wFSr4fqy5FsbK3cLa5hZXiT1kq31qLsRjWdfybfqHlF6gJwXjUZzmhEXvXzqpfcKVqHv-cyA5w33ZTqbY7yf4pEHFiUQsO5qufHVEsRitBvp0CBO-1ROZp6vX2lUzXZRjMWXWiM2rl7Muzzp6unD7R_t6jyjj-lgJJiUZhXX_3WXT3rUpIW31QMRIU46jSVqxTBnaQWDryWYFGVP3wLTy2nj7czD_G20W9"],
+        distance_meters: 338
+      },
+      {
+        category: "atm",
+        place_id: "ChIJg1uGd3qLGGARMg-gmb8iAqw",
+        name: "Nishi Azabu Post Office",
+        latitude: 35.6606283,
+        longitude: 139.7233922,
+        rating: 3.3,
+        photos: ["places/ChIJg1uGd3qLGGARMg-gmb8iAqw/photos/Ab43m-vDUkqiC2ZutFbxTxYBYhMzlW0Y1gfNQAiyG_nD2FwbSLtTJy0Jnv4r8iTeAb2qpvNWtdn2mr3w-ngWC4pz18yOdPNDEKpzMHFzKkoE2m_Yn7iUP02tk_x9IlkUI6039eCXm3DB5wlxvBrbzMMMyZWl3g1gWC5i981iO0Zv_9fYx-q08jjlZsgsDWbvW_Z0uIEDVSYtqymI0RhN3V1ju4kvRiMNgqmylA61K_Gl6XxoIcZUrDeGecr9YQU3TFuE3AJQWg2MfGf-WtXMl0dalLpA9BAeESEwbqKaoLBlxCeFD6RjXbtHaAHPLigs1GidOvFdtn0UtrKzPEzLDo6uqFe8UQBieWqvOlozFbqkMEavwZdzHuOGpJ_YE9kRt3a7xMHHB1KMmn1CkVEHlGYjxjZHzvF9I40jEYX5KjQhDfUxHhcn8CJGVizGxQ6V7zqk"],
+        distance_meters: 339
+      },
+      {
+        category: "atm",
+        place_id: "ChIJcVYZud6LGGARQAFLhZwc8Y0",
+        name: "Seven Bank ATM",
+        latitude: 35.659144000000005,
+        longitude: 139.720903,
+        rating: nil,
+        photos: ["places/ChIJcVYZud6LGGARQAFLhZwc8Y0/photos/Ab43m-sVQgEnXy-lz-2hRf1a7Ewtih1-Y5bIPeA8WAlgAC_knJJ9nyDG_cn_stT-5ADO_Xu7krgqxSlCHd-upK_yKtyVVcZjPiz_F4ZIIUTYVI8CW78T7USf6Dye5AZbCZe2K-5maDSiVvwfCnhvuRxvuWH1Lb-v2gphn6j1TkAtN1XHF0_EyRsoe4vB0GhNbSpmPT58T_RUmj3ueGPH2cQtF0XTB28c_Cg13ev3NOEH06CqplI8_bgrJbF_zybIshsndIxrQpxzN_bLdLn8nSPivM9QBU5vKrDiHNnY9vwx_av5LbNA7KUJJvju3Ec9Id9blt1wBffzBeNbZx7h9BCFMuCw9LZ7RLIX0Jeoav5mi9VSn4czjnN7YahtbMOUVh7oiI_NDeXm1nVRJ__AGDjVraC4GMiE01z3_4NaewItJtj-Z5-7BA_D1KapV-WjPzij"],
+        distance_meters: 413
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJD2cueXqLGGARNzYzZQZtoCY",
+        name: "plate tokyo",
+        latitude: 35.6620834,
+        longitude: 139.7214012,
+        rating: 4.8,
+        photos: ["places/ChIJD2cueXqLGGARNzYzZQZtoCY/photos/Ab43m-sUndGlBw6uW5DmeYqBnqRXn3UVQcODe9xxpBlrkJg4ICBUeo7mAuV-_dyT_mrbwl75XjeScrjOyZ-7GAigT0OiUS0HtbzKBi5Dax6Y3uBODF7pvzTCGXsrjVD1uGpZEan2cKdADkwwWskHWYBZzQhg8HYYCIpnSZ46JtXVs7tuymw-KuEFgNGYABxqg6fSXcU4mkhP64QnOHuypX5etFiuGQ06Skx2zsPS2qtSbKUm1wu2PEbhpGtAiLbOLFDndftNw8TFlZeh3uPE7pD1ZtMu8_m4tgqcjMqY-yfb4wZ-UHZjHituDpjVRHALFuOn4GtcvYmrlJupER-Yk0nK4kEMAUNCwrjoyaNKoSzQDmSabd_Nmig97_E0qjyKSh_M0ZRpJ_kb7u9leKHRoWrIucAQ7-xtQDnGIlUN2JlAzdlyjvEd0wWXK7Qot_mXag"],
+        distance_meters: 100
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJidi90kqLGGARHqn8P-com-M",
+        name: "The Pie Hole Los Angeles Nishiazabu",
+        latitude: 35.6615082,
+        longitude: 139.7212873,
+        rating: 4.3,
+        photos: ["places/ChIJidi90kqLGGARHqn8P-com-M/photos/Ab43m-vMgmlZCZuH5Xtt8WzE9BjLKtO7qJ7HsHS0bdQ0DRT82xk-X6geheCLZJINmqYrh6o20hv3NHBxY6mkKZ-1O5iMS5zPBMxq2iN09BadRn1CrygOSoY3HiH3EsNbtqeyV8pCm4l1appzKThQ6J3gAzoStr2f1FqhZhPihJZY7vL0GiK5U7ZTzaWlvwFYW9f_bXz0xjSDUUPdEJe0D_TQDvrIB_PACjCvyAd5QLrSuSNqz4bx3RZa382_5IoBKIgUbMJPhJ5yzVBtRbMdTG6WD0gRQU0RVHiOlzabEU_HL3sPcX6DT0Z7IKNKD1goBCNPQ0xXcFYlFg4tSXqUX-fqVjU0edNY98gFDqsULtKa6HCk3pVRm10DrVIh6ehgvT_gsYFv7kTE3t0t0ftWaD1h0hKDNYunW1WMXEUmJZ60Tha6nO0wBfB8T0XsfTlyf0Io"],
+        distance_meters: 155
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ6THNFQCLGGARJQRqzJuB1Vs",
+        name: "Cafe toi toi toi",
+        latitude: 35.661970499999995,
+        longitude: 139.71896289999998,
+        rating: 4.8,
+        photos: ["places/ChIJ6THNFQCLGGARJQRqzJuB1Vs/photos/Ab43m-srQi8MhlG1GlnlQVHiv9JdOX5g5OxzVOdnwYQygMGWtsHiQ5frHX3tFoR0GIoZ5ni0A_swze7czb_aKfQZ3L9sxe0q_wpQJ00YDjRKDxC0y-9jPQ7FXBmlcSuyK4Gao6QF0_wLk1e7tj0RMzAGhxgQrhWbDmP4aPvIht8RFsyKjyxYJulCl8X33ejN66GuevZv8GG89usS3HbKUKo6nYdDDbfzHJ4G9UOtjTtsXDtzkEB-U7dhrDJUtM5WSxLTpEXUz60cARmlalYY_37e04tCZ3I5XWM1mhpVG0wq7TJQclb9UiAy6cs9kftZg4jRlp4jL8o9Q4cIEpbvbPu-cevY6xDG-mK6AAi6gPekwgixFquzhsI4pvRupWoQysidg77TwjHfIcvod7jbQsAXxHTNRCTPtXDY0XXTVwsado15UX2uWbmzNQoYXQsr_MkC"],
+        distance_meters: 196
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ68EJ1HqLGGARFa_N9offj2w",
+        name: "Tafia",
+        latitude: 35.661153,
+        longitude: 139.722041,
+        rating: 4.4,
+        photos: ["places/ChIJ68EJ1HqLGGARFa_N9offj2w/photos/Ab43m-uA53iwVF-gN_uGQiEZc77E0Yhl5MgCLUFbqHd2s_mVReE28l0u8sNibIW8cmX8Blo9ZZdiH6jZ9VamX3PP0tICVma1h_LSVrmEje0UkocBfl7vK2DMNhRc63eIM6sICDQf7SxwWYf67xwV-bAbs_rp3YgIoxkQNzWQseJs567D4CReom-4VS3TwHYHZ9CgmEjQoVuwQ8_lXsShk_62YVVPQwigx-XPK9UbKygUB14dfWma1TfDa4PKvi32dOScgP-n64XvRRztajQ6emDXFfdYDv_DVEOzqTzUwrvolO-_OLX_9fyQRHFpbzwfRoDwClorI5LoUiuJmUyaws6_QyyP53MYw1KF2r_nISvnUR3RCCcuebDmEg7aPRzdb1IRGXMsjlA81_PbEP5zzIycTpC8-gCzwMhx5fU30fMgrkfFoD8P"],
+        distance_meters: 218
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJKwTDdWSLGGARiU96hStw3b0",
+        name: "buik",
+        latitude: 35.6621877,
+        longitude: 139.7183234,
+        rating: 4.2,
+        photos: ["places/ChIJKwTDdWSLGGARiU96hStw3b0/photos/Ab43m-tMOeRXhB1Pd3Ib5LGgzJqcLZNj7NNZeY5oj5-pVVrk1vk1GpQp9KnvVHXRPfolcyM8LMSl8bzlCY0rCvmTdOIcsms_1WZEx7zBsnlKUbwex9xYJhkXaQEg2k0PEKzjDGnJvaGzikkrILVEazfn0J4czXUYEpDh2wgdBiX8Gx9oR7sJEVmA6LpD1gB5Ue02B0TbQeoEQSrC1t5cLkp3kbKeyHcmYh2fSO67vFU0_Z4eh7Ze1-_F6ZcCLwO3FVpmbkXJGPVw80D-vD2TarigK5yEZFjbQ8d93daeipHm9wrGs-7GJz4oc2avouyEcNpYy8wJG9tgrjn6K04O2gubs4VhMY0aH4nFsaKkC7jl5FgaVRVTTkyFVtLV1cUVVFYe0b06yLMLVn8s0bPJgDEZlxDUO5KTghbyyqU0wzGLFdJdM_KFNz7_a5JJ7zs8UT2v"],
+        distance_meters: 239
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ3QiqsXqLGGAR-zG5Lp1ePWg",
+        name: "Kissa Ken",
+        latitude: 35.6611057,
+        longitude: 139.7223793,
+        rating: 4.3,
+        photos: ["places/ChIJ3QiqsXqLGGAR-zG5Lp1ePWg/photos/Ab43m-tG4NWZmIeV8CbzahSv7FSJYvHFB23TGTpLXGa26BFKZ9Ltvb2ZGjCpeTMvQzyRACaSAWaop5T7nhE6kqo2VPzGFhr6lR3MjCmcFnm6VWSs-03gKlgXGdRsWoOxWSJOYRhhzwNrkYrnh8UK7UYvJzHh_7mJHXpr9FknUc4EkICxzjgvVh37X24W4UeLE4eoYiUwOUy6dR9-JuE1rwANCseheEdJU3P5WibYYYDdypOC4ga-7ZG4vbv9BvklUmuehc8YWmVPpcPVe9LlPa2S9eCld4sPNDmpCaHuCPE8wF066_FzzKksvRIl4wDkeBGeBdZ_zLzmXK8V4Ql65mXYbQBKDSKSXPGLMYjFHMbD1ZBambJcbWE-aal4hFLCzRmGEmjYNRm7utXh6wZxVt1S5lJ130EDNTaMgZGbrDKn6uUKJg"],
+        distance_meters: 239
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJebHxiy2LGGARrl2rESmAGlM",
+        name: "OTSUKA FARM CAFE and KITCHEN",
+        latitude: 35.663122,
+        longitude: 139.71818159999998,
+        rating: 5.0,
+        photos: ["places/ChIJebHxiy2LGGARrl2rESmAGlM/photos/Ab43m-tCxgJkJl1N-0AV0XBcmRfWeImgo_OjJPeXbRxpzyQ_oBRFwMWvtSrj1OBsaQbuBqhpCWTOldsQdJKkWJLW3E3diGFg2dhCh2R51vUDH80ZRSqcKZu0_7OvVEEDQr4ktA5IZ5hgR61M4OuG0t_QbBrptNqtaEOk3VST59A4z-uFoT4hKqn9y3p6_5ZRy3Hyv7d56EkbkAJ3l4_AvXQc-l-Q9Ov3SMhQdKdylrgYb052YtlCZR-3ojD_lTmUpUo9gh5Upff3ZF8w_4G3T6lAXGi_llXwAArmab8Eak2X9qBURbpQAxykfGm-Oy2YZxwZZ-SLCer8nQ6u0arjwn683U9_QuxdNdZW6G2qfQBjfCVkOPeQYKvw2VbkxLu6h5tj_cSoGmj31ur0Wjp2Rg6FODY17CfxVKg6oSBi-_LChytwSh78"],
+        distance_meters: 242
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ75m7AmWLGGARVqpNxaCzUTI",
+        name: "Rainy Day Bookstore & Cafe",
+        latitude: 35.6604927,
+        longitude: 139.7198445,
+        rating: 4.1,
+        photos: ["places/ChIJ75m7AmWLGGARVqpNxaCzUTI/photos/Ab43m-vks-m6PknTR9ntftf-FIbSTXm8BM8erXjokHXeoWdKeipOR9Q09Oj-ZlEXElG9OlqMBuzg1BEm9lxgD3VeBfrBMo3PCVW6nYnPxoR9mV1qINkO8NShQ4VKstdVFyVdbfCz0pZXQsIVp8QUH5kzBrMBuNoKcdOZ_v59OqmkoaClzBQw6e5d3HKKx7gLoGZ6gIbAjfh3373sg_31RDnne1xf_gaq6w53dIPIuRhvDRMYNE1S5_2leL6xmwMUBvPTSy3GSl0U5-biom8NRVCMt-ys27Xhvd0tVA1LTveiNjXhlo-KE9z-Sp0e9mzCx42_IRhqEKclVpK7Gkx3_YW7QbZLj1dLJVmgiSNSoHXlimta7yhxuTCXJ08k8Dbuy7KH07m9MwWdRXbOdG9tYBQNP0kGW_NPXF4o8HM5LkO5AW1C5g"],
+        distance_meters: 278
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJDXuh-sKLGGAR9MCPWmSLpIw",
+        name: "iff coffee roastery aoyama",
+        latitude: 35.6653988,
+        longitude: 139.7201432,
+        rating: 4.9,
+        photos: ["places/ChIJDXuh-sKLGGAR9MCPWmSLpIw/photos/Ab43m-solZ-dwOxAp8sZs96V2afokLo7ikAfF6FJNvw59OrwX29s6ajOwLAd9VhKh3C1Hz8rGT0goTlkWDOh510srkZW-jUt94BGHHWnEltiR2h-AGSy2gAYRMh_eFoKkrLzxI-SnqLclCy0Y2SQKdmJtFyBd6iKrs1lre09o31n_wJckkIoDJqF-6LclhWeRrlsS98OzDnPa38oBEPzbUQmysinF3W6QATd-5eXHSBzKHzzB1FmA4w2EEvJlP1PNOkJobf4P1yscN6x1SBBw8NanNvZw9U7K6vSNoxeAGiH_17kzLxzZBVlV567YPEJlMPrgXByjnBfQTQ3Cj_VJD7dlCtSN7eTANCqXgcAWZlXRMsLeUk3ycIAURV3jeU-IQ6IshTPkWM-QEjgYZAXLeag-qUbnyBlihYp7ezkHoY-lzZSyvYd2V2v4JoefrtBO1pX"],
+        distance_meters: 289
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ358ef3GLGGARJfatGplPocQ",
+        name: "Ippodo Tea Aoyama",
+        latitude: 35.6625215,
+        longitude: 139.7175663,
+        rating: 4.5,
+        photos: ["places/ChIJ358ef3GLGGARJfatGplPocQ/photos/Ab43m-u9OXNVzWCMFWPnhWmxH7l8RJPSJFTResI1EBpYZYrDTRKRxs12JdFjgAkn2WvujLS4SXeu8Hb07IR1huFPgiUq6YZuKfXJEYsPvhQXXzIp_1IN86eXxq0v_58vRFOwgDe6H1xmu1kNqTsxqUSa9IjwOnRvWyZmZvGBl8BS4QZcKKKOssp5JwtoKJBru60VbFFSzFXnuUZc9wYR2yOgkvZ24QoCoa6HUhAeB5lqPT2wsXbiPeanVoUnyf1fFYuBnpxi0Oelos4BN3LuDJ3BxgSJGd3Vs-gbgWtR5K62Fvcqhz0Qza6VqnqRVhhc7Qrv0ED-LOqOZzqs_MuqQRy6sg0UAEKcHY2L-QkU3RUIvxwBjdgpmOV6pxFfM8OiVPWN-dLRI4JpoOYvepYSY5XjiCpAaVsiyPvpSAHRWwwxFP5Yu1pFxRwlWRLpptWEDZch"],
+        distance_meters: 298
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJC1yGo2SLGGAR2-xWOv-MZrg",
+        name: "Comodo",
+        latitude: 35.66283,
+        longitude: 139.7208135,
+        rating: 4.0,
+        photos: ["places/ChIJC1yGo2SLGGAR2-xWOv-MZrg/photos/Ab43m-vFDjvcHv0_Zi0ufeQdKmlPG3rxZ8I4-1C5aFySHtgGnNithX-EIqqaXA3pfTpyEHqBYrAyK3LoJJVezcHnK3Ufe5QFbmDmmJsYWChCvtlNQLiFkXDzYPE5o9ckMDUJ4pJCMWYO8nBPSfJwcW93aVWGpT7cna_Ilqh7rOeWwsAjiGjBrhza-UZz_LvD1Uwbef_ob9kMc0WlFWMJr_u6k2gDjOes3IDGJC7G3eE56zZ2oeq8iPT74c1-3qWo9S6SPtMccRiWTYO7tLipVWklWMEHp8IrcNqL-PkKBMVEOMGgw9VBzjVOUasQiLFqckAO4k3JDKQbK1rez8Z1PsgcY55XWUzh3arZnTZ1TUIpC72BhYzFpn7PUt2g3i4RdKQRFk83dVYtH3tVdS_G3J3WxkFXiIy0798JPgI1U-kcQk1f8tdi"],
+        distance_meters: 4
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ-5JjXgiLGGARzoWraZ5-Cec",
+        name: "麻布雲隠れ",
+        latitude: 35.6623647,
+        longitude: 139.7208383,
+        rating: 5.0,
+        photos: ["places/ChIJ-5JjXgiLGGARzoWraZ5-Cec/photos/Ab43m-tUdSSD-TJqECjpHTmKi6JeT4H4XivSoXBlMErknNwOCZfxKVTgwCeSnarC47AArUcKCw55ifkJlF5s8Px4-EdEhS7SeLktqJkTy7bW-ou6BsvQdi__N3AZ9gB8o2bws5GR6uQ_AmS-prsbV6m3e6nSiLfTA3EpBoGafiLrdfM_5JQC86XMuxrM4sACTWuWtt5u07f3AdM034ely3es2eKhZdlQtuiLBI0eCrgF5vHK33yQt3xKjbWDyuLjUNnTbSetNxWMXPlqEbvO4sIONVCdc-jrlWglM0hSYDYtNg6fLHJroUWOPqtpJW0lDGqifBBtBcposlsPvjzdelMTLPpI3GZEomcat5Hd33oEmQYjWPjtf7Q9tEapIyveOCOFFMkXQCKnadjoYeIdOey_doPHMM5vwduYzXdItChpLPEiUj2VT_HlcI8vnM3anA"],
+        distance_meters: 55
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJJ9ednmSLGGARWBVyeHirrU0",
+        name: "Kikuchi",
+        latitude: 35.6627946,
+        longitude: 139.72019179999998,
+        rating: 4.0,
+        photos: ["places/ChIJJ9ednmSLGGARWBVyeHirrU0/photos/Ab43m-vlnJPMha4O3QPAzU0kezXHt5v5GpH3r2kzNAUFn8moX9KvFZFakBalACwKPpA2a5zFfugpPl5YVm0uuKwHikx07rWTWk4vSsWnVWMqFovzE2VgJqolZppwLqnvGYB2QgWPKDokgof831NTydV9bq9WzYbSDPjjRN9QSYNCTFUg4bIA32OuWswpqRicTyc7HytWpFRZZJWk3Hfx94ApgC_Cpc6lK76lGhAmq3BX8jZg4QJj1Dip0dNuS12rRbR0QNRD-KMn4SFN_tOLWMv7VkqqZKfgGwBlr73zDV7hWxnkva0f7SfKDl3X4GOek0-P1tGXFJfxFoevaKiMsvxoDO6kBKor7o5Vwofk12oJnL6mA3tme2tTjOSzZMcJzjyo4uEfZ4-UCYZKFisa8TQWrOrvhhsa8ueLisvS3RbnIYruIu1r"],
+        distance_meters: 59
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ4WqguWSLGGAR2PeK-xhlYT4",
+        name: "Hong Kong Room GOUKA",
+        latitude: 35.6623648,
+        longitude: 139.721102,
+        rating: 4.7,
+        photos: ["places/ChIJ4WqguWSLGGAR2PeK-xhlYT4/photos/Ab43m-tmytf7Ha2vzaZHr8YRTN_a3yx1BFaDrBNjLk58MuCIWQ2aDrfMZO8I3Zq60b8EOQfTWw2KUfl_w2VXYjWz9cqpHRXABCxXHyAtUCE74SNTv0yxk2reObNwWA121gqUJugJ-zrmGG2zQAgLQseRZPDZrILSwUVelTQ5FSYxqBy8RE-vthtrjB_4FAtqiWTlBLUldzKqGK00q_eDamE4ONgm9JH4na2pVMwY6xGfEy9A6wrunnLXlf6fse_Dd7tha0DoDGRL9AuMOFq6tSPxcEEtJ6crfcfPAGZ0MEuNWLuOi0fdloattTXXFKf87X10VZulIMJagtbtu3RMl4HB3qO1fXRW_rsCi8t5Sf6qRzeEkOOB2Ze-6WzsuuWFNJY_93URQXKLIq1Z3GIt2ikOla_9WZq9qTD8wYDop4NBD_lqWAA2mK6s61v1Dinf4Ftw"],
+        distance_meters: 60
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJHdL4-_aLGGARywjqcSfVp6g",
+        name: "Arcanum",
+        latitude: 35.6621759,
+        longitude: 139.72056899999998,
+        rating: 4.2,
+        photos: ["places/ChIJHdL4-_aLGGARywjqcSfVp6g/photos/Ab43m-sB5nNvYQ8dCmZz9Br4DFFqK-Uxe9V3DZ7-Ovxm27cM_YnGzaCimejEJLjPH_wfMr6Y8ZABHVGCvYU7QRLl6tXW5Ul3XEZQ-emSK90SQoHIO6oJmOY8Xg3-8pKpnnYMdfLBUmZ6e4CP9flv8t0jgvYSJA4XL41Il8-vSmcKfEzvQH5wvocHyo_6l525f8NT6FOPv5HS5J3N6jgI0yYrpGREl549BHVGauzZ7XvaCKmZrzA2SgdhbMQd2wNmGbegF5qUihIZipaQsBIaARqTFjbxwSTRv_uAzUf-hr-0iFMEUFmktVp-hUXA41iKiOdrcMjuSEx5kZGeaUtSVQtBiCFizlHHg_qjEL7stswy1OQKreDpP38DKagrGYq3uPZFMqefcfUT0frr7ZfsxYzTvm2Uv0GB9QvPq7elcmlhiqknooDX0N6img-befUzTg"],
+        distance_meters: 80
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJXwfFgSyLGGARV8bRpDaMr04",
+        name: "N'onaka",
+        latitude: 35.6621759,
+        longitude: 139.72056899999998,
+        rating: 4.4,
+        photos: ["places/ChIJXwfFgSyLGGARV8bRpDaMr04/photos/Ab43m-uEUwhhL8-5bpyjN6gc2fgAcvHKWa2P3hCP3L3R7PzaUS21XC_l9cLbkBcbph5LfPDndFSh8U-VZYbHX1tqJFdZAf8vr-hZ1G83TxrckgeM3U6kLNo8OVn_jZ_23DuXxdsnu_oUqpDk1Sm_xSFxnX0j_DyZ7tw-NFoOggt7zdcE9zb2THX2MD8i_yAFFvejRS15Gsashd11qWAtdx--sZfU-m8XM4U8Q_e6DRRPR1rzLiL_Pyt9883EO992kk0zBdk0Ku6fSzV2_ofv5yW-LYZUIyEd1-E8U5t4bLeMO52Xf8fr20w0DraPBuVMWpxCaClwBPMYospGCOgkIm_dnMJOG3f12EK4Y51QbMWGptJFjSEllcJG5vEkVWZSMPjjluKsAUP4ug3qz4tc1-lcqlYBD7phNDieTVSCvXPLoPk"],
+        distance_meters: 80
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ2WPpYnCLGGAREbnMnvsMICc",
+        name: "Italian Les dés nishiazabu",
+        latitude: 35.6621759,
+        longitude: 139.72056899999998,
+        rating: 4.6,
+        photos: ["places/ChIJ2WPpYnCLGGAREbnMnvsMICc/photos/Ab43m-t0uIoa3O3Q5ZdHfUJfymX_7ERVAlXdgNhraT6CyQU9BZii4ODgquJpnG2Byv0fjZ1A0QK1NRmnlWL4RH-beIJjqFYr_vVZiTsLW1PdJxU1WX6uwhNJw0pGbyo3ozHeX4wASQ9167EearUKmaOTRyS5AnE3FgH9tOggBWk2U9qPJGTZiIx1FgrXbXXJFxslviFoNELKpEgBZRPWRbYrT2lzoD63gbogeHn_BbZDysEj179CkpPIQxfBEW2xs68x7Y5EzHfrh-2GIlTiJ8Gx5qrow1oYGYvSSsZQ-x3rNikieg3S3Tb6j9v_UDfmXlO2HfglN1pIcnTUFZmEhYoFHdZ8ME5SWziIwThIES9v-XNUNb_PELYXuT-MpVGaikM561OjUW8L5duDcQWLCK-mU5_MJMpFscLCkVMbExtJFks"],
+        distance_meters: 80
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJmz5VCACLGGARmFZmVgN_7V8",
+        name: "西麻布CURRY",
+        latitude: 35.662167499999995,
+        longitude: 139.7205407,
+        rating: 2.5,
+        photos: ["places/ChIJmz5VCACLGGARmFZmVgN_7V8/photos/Ab43m-tbPK4fapx9oFiPPg9FTeE52N5-WAhPR0Kh0ziryr23xGFfxQX1UxJOdClNKnp73RenyWhJqLB8zg87Y5ygzYCQWQ3a5rOvuHB41r-SGdfs6BGXXfEBy0brA1onPxWwxnGVuqNgqhl7JVzCSXmfdyCgzvm6Hd9cxqvmklXtOTym-6w1oEbqDXWNbpTTt704SLV6LvrMS4ivAN0KEdKPkUugNNPVewrkngjziP5fay6D9P8iWbsG3DNgDWifp46p_Ywe6zW9zxAgIlQJMxfFtl_KsNQrZuavC-uLOBhms9rpli-zPU6V9vnbofnkr9xbPnHzbIOaUH0tXPy17ZP1FX3fBzFcGrFV-LXM1ULpeMMPNBkiS6FZoQzmrOf6n7qsWyqU2qYxvuihHbS0EKzuh7rNslOFXLZH3XDmy_KAxKIIMqGBTHIIzzGWoYVZrP4U"],
+        distance_meters: 81
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJw7Z9VfWLGGARi-1EqdIK9vo",
+        name: "AC HOUSE",
+        latitude: 35.6621234,
+        longitude: 139.72117830000002,
+        rating: 4.3,
+        photos: ["places/ChIJw7Z9VfWLGGARi-1EqdIK9vo/photos/Ab43m-s-jRPSt3geaUQo7R3MZT36M07h3Tj3yzAEnw_dsBdEM0XXnTMjcRNkoskJNerePPDAmyO_UfQpPCtgwDNSKxKvGUkDMZBOncc6BM0MJALDsXvMDyZbtoXeXl_d9emWizs8mNcUd_duQUJSlyJ1vDsjSRjAiJEjDdKJlijTlBgel0rUa_NjirXs9jiJ53K0uFanWTl_NFPRo6YqL348JTCELvcz0Y40Quy_qFW7V11j3p8GQbWMouQjd68VXwHlzo9EiUzA-JLjsLx_0Vu3SGvRPTnlisDzVUZsHfJdSlQu5Ijjyg_of9VUR0SXv6DrnjjgByNdIGE5oZHaoKEsQGfqSB0WJ_0oWBTpg0CjRNnmbKVASiGkSFEHISYVvrgsgLcxkArlKJLZ9ibGcaJIO6gIV63WBOWF7Omv0jPa49Bf4uawTPVAPQMPzWcwKEy0"],
+        distance_meters: 87
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJvxiQtxqLGGARARI1NuleSXo",
+        name: "ボヘミアン",
+        latitude: 35.6620811,
+        longitude: 139.72115499999998,
+        rating: 5.0,
+        photos: ["places/ChIJvxiQtxqLGGARARI1NuleSXo/photos/Ab43m-vEAPLDPuC7g90LMCtj02VrANks7TcGRlqLRkqWSvUoYQ0uCxiHn7Qm2UQp8gR8m-g0IbxbYW46wXlItxWr6yKmDBauT8mLZGSp993UXryEE2rwE8q6fyakDS-4GMBjr3wGCEoUNjovYd5Z04ZnGZ4InT-oz14IB3ypCcKzZRzRoooGNSzycjwf6M-dWunh0TlSErww_J454Tz3QtwNH5bU-jIumXrQ9VAKiLVJAloGNQsM5P21lVStq8rAy2_q14Ry6CAykTqryfLUHXbUJSu697NtgZ3qfzMRZSwBY9k9fd_J1jLKymunQe-j4xDYVlq2GmCOchNurk-yrZh5j16QFfltlTE_xK8cY2UewMd4f7UIdGnMD0UpquRdXOwJCfPoM4-13Bt1i7R5xk45Kbj8OZ7ldtSiVJxS-Fo6le9BcEq7"],
+        distance_meters: 91
+      },
+      {
+        category: "bar",
+        place_id: "ChIJIdc-XACLGGAR9UwipR286pY",
+        name: "金曜日1/17",
+        latitude: 35.6624139,
+        longitude: 139.7210534,
+        rating: nil,
+        photos: [],
+        distance_meters: 53
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ9-sXGgCLGGARgybJaGgiJ1U",
+        name: "ATS",
+        latitude: 35.6622335,
+        longitude: 139.721198,
+        rating: nil,
+        photos: [],
+        distance_meters: 77
+      },
+      {
+        category: "bar",
+        place_id: "ChIJXwfFgSyLGGARV8bRpDaMr04",
+        name: "N'onaka",
+        latitude: 35.6621759,
+        longitude: 139.72056899999998,
+        rating: 4.4,
+        photos: ["places/ChIJXwfFgSyLGGARV8bRpDaMr04/photos/Ab43m-vbKAztXgKTmBKwbm-rJuo6NePfPVPaxiW5sz9o9bVJeldrvrUQz9sQIWiKznQYPOTBW25G2Z3FD12rYCrts7-C_n_6agisfONPpB5URsFwvon0-nKUct-uo9gp_UtARvG4QPsmVDfDnnvvo7Dw3RWl-FIWlxso_jFqMnA_D4eY2j8H7Fkt1WbmM_lVdpfXNwIdCBaiEnUkBr100posMTQ5G0Q50pq1SwQ_ASmgo08trWgroP_FPUWDTzzfMu_BffStlSR_QL7gW38uhdbex5YE5bH91cG5DO_52BvjiimFFXrWRNy7FgEPO29As2Z2nJYkchB4hjdaIOhLBtKD8wtoSpjYO7Edup12nv1Y1SAGlJGx83GcZqu5yWFzi1_jQdumqJkBjBKV1wz077lXR6fd60YetV_gxmamBH6yKlM"],
+        distance_meters: 80
+      },
+      {
+        category: "bar",
+        place_id: "ChIJKQ0fBrOLGGARE18t62yHUrM",
+        name: "Bar Nishiazabu Serendipity",
+        latitude: 35.662155500000004,
+        longitude: 139.7205362,
+        rating: 4.9,
+        photos: ["places/ChIJKQ0fBrOLGGARE18t62yHUrM/photos/Ab43m-tuvXlotD5R9WlptRbWWQOfmumwzsNOIr0_7pUh_FOOjB9EV1CEGuOeIcm_fQcWaLijGRzG3d5799H1oZLCeY-xoT4BHq1VoZwjCqGHPIorXMKnIBbdXPB_Hi3Ae9CMy-XwM9wiW78kDD7DqhLFRUSpcSVnERFyg_wJ-QIL9AJCmux1q26CkNUx8AwbLUV9q3I0KXtx_kbWzv3GKKx7RGeq-h5UQHlSx7lqI3soCtSjDh-OEkSZA-VH6CBsnHz_PMPCPccu5bM-XYzd0x3OdcfyzCg67D4oGiTYiRcJ4xP51xmsv4CGgpfLi68tvu32_X-fRgm9sq-8h1sOuNDKnD7EUAyItPLkL6KxysaJX-B_rNty40zbw2Oadn2pH1KbSJoAcGW_j6BXuf_Esac3Sy4UHVpJG6dV5JESi872IUV5n8TI0VFkEvWF9tVlAI5f"],
+        distance_meters: 83
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ0QBsgk-LGGAR_8yRXcJCZHU",
+        name: "NORTH VILLAGE DROPOUT 西麻布店",
+        latitude: 35.662191,
+        longitude: 139.7212734,
+        rating: 5.0,
+        photos: ["places/ChIJ0QBsgk-LGGAR_8yRXcJCZHU/photos/Ab43m-siSSU0w_HxagG5nINUPtfNv9nQMZhdv1S1Cx3uXqxokqUyA49K5MuR9mZ1kz6br6v5Fq_Up-ZDIvmj554Fg-ILfp8V6zWfhVudYaMcod09yyAaGXF7kvdhJAkEED9hgowslcNyLQ48wo7lVGLsKbKKjl_dcvuN36XdcaEqAz9dtzjoFdgLBFCfKgBdOYkBlMIIWYfj1pUSuGe2jcOmv_KQloD6IE1FjiV14z6x-QwrcM28GGHuxqcBFuLj-2R1YDKMJSnkcrVIP1tKIAAxd7Qv5-UMhQvQ3zotPG8G7nwHf7kYFGR8U-i4Rpoza0LXxE6_4YC7Ejbvqsaggul_lFsliJgVccu7SYVTb79Sbu-3la5qXsV-3DIJXR8sdJmBVXaQ9yu0c4fuqQXNVCCpJ33E3aFjAqFu9WHFYnKgzBJdnPUL"],
+        distance_meters: 84
+      },
+      {
+        category: "bar",
+        place_id: "ChIJhYk_yGSLGGARaz4S2XID8Wo",
+        name: "Bar After The Sunset",
+        latitude: 35.662172399999996,
+        longitude: 139.7212813,
+        rating: 4.8,
+        photos: ["places/ChIJhYk_yGSLGGARaz4S2XID8Wo/photos/Ab43m-ugCwxH9LVqV4DVAo7YhfNg002g0hQt5g0ecCTz3Q66N3n0Jol4Ug_tD_WdKvas-8CkLiIHIyjjd60uNLy-pqHrUEkHvPiPEYb8AR6Fld8nJ584N5xq2DK1WIMHG0dontGIVG9luv_K4uV42gX54P5s6TdlKlNygCDmDh_zAIpnB2qqLNmY_77xLu4MvNClUClhWX_5mNh8gzsCx7llQPleUT3XAvpGh-zYgz5-G_mJTcZdj9vC7XuxbnDh782wyDCG-wobF6xPKye0QsHUkN37Gr-Jqf6GCcA5q6fYRRLN4MUfTPub08M6oopZqxHYumPBuWdfPVQBm68xq517QaI0X5XQzs77KTnAKJnou6ClHfNu_dA2J20VBqzpHMyGt5Wu2ALlbSG_G9_pSb7j9CJvwgtYXgzy67PmahaWRFiZZIEV"],
+        distance_meters: 86
+      },
+      {
+        category: "bar",
+        place_id: "ChIJzzOa6fuLGGARq39zQ6TS1Ek",
+        name: "bar cro バークロ",
+        latitude: 35.662117599999995,
+        longitude: 139.72137519999998,
+        rating: 4.9,
+        photos: ["places/ChIJzzOa6fuLGGARq39zQ6TS1Ek/photos/Ab43m-uM0DkQ9txu6npsV6K9b1zE4kJmTsul4ovtFwsZ1w8l7os1MvPyqIvHSjO3Rc0k4R7hTcdfK4KyBh1S3bNLQgN3ehimjerjfRviFed-o21dwnDTadCy8xXsQefqfsSTb4PiHo_Pp7Q2sFXZ-z0qVec2uTrW2IZ3JkuHn5sgtRGPusbKay1KgiUSrztiHxHyv7qTmRNE2gLh5VGIIRJiYLc4gsl4Gt9ahQ99NJVAJrP_W-xbxI-_tPQjTOCvyTCoMPTnXGmnd6UPzTcr91AVhg1tnn3R7z5y9qQl1qfcf4wqmeXbQoRjrSvtP6GxOZeD5RcR7Idb0xYvnge3PRh6IbOYp0PcqQ6Es2iiE6qfXIq469MAlV8x6lun5UFA7iaEOS9aIwWHVyRxu6TRQaTlNwTG2NYXWF-JVE8XoJdyqaF7T2E"],
+        distance_meters: 95
+      },
+      {
+        category: "bar",
+        place_id: "ChIJfUWB2PKLGGARCvHyzHFZ310",
+        name: "HOZIN",
+        latitude: 35.6620841,
+        longitude: 139.7214012,
+        rating: nil,
+        photos: [],
+        distance_meters: 100
+      },
+      {
+        category: "bar",
+        place_id: "ChIJVVVVFXCLGGARUbdRc3Hf4c0",
+        name: "Bar 裕",
+        latitude: 35.6620841,
+        longitude: 139.7214012,
+        rating: 4.3,
+        photos: ["places/ChIJVVVVFXCLGGARUbdRc3Hf4c0/photos/Ab43m-uiD8AVRhgCOtxBO8ddBTsb5UOkGyg7zAx4rvjIQymiktbIFRChA93q75yp5S9U98EdK7ZUQ5KBN-GlnDLODhXxR86JrhJCW8cT_EU9lJC4GMtNdhAne5KsaD0yAL9kwOG1JkyjEWGlFN2ANOntvaIBkEc_Lo3Y-LY0J4rMeWTV1icFToQfswpo1jCQ2Cc-w_t7gdqo5uK9BkWmHG1MAsXkTmWZKbsSWfVXdwzoFpTF75-YqdmXCmqBZc1vS5MW06jXcqo_gkbR8P1C-nMMH6qEPfV0q34kXNYqyXZSg6gpX3veBaR25GWfRHKQf7W8IWvdOV6mZSBJIiouzORCGAdTG6_TWwNA1dkL2J_NwV2MC7C9lEhx-uH3GPxPpYx4F8ma9gH759ct6j1cmxkw-92kM06f7-ZjgPNCCHnALHD0uWsA"],
+        distance_meters: 100
+      },
+      {
+        category: "bar",
+        place_id: "ChIJq3xNyWSLGGAR4DD9GaZPeAY",
+        name: "Yakinosuke YakiTaro",
+        latitude: 35.6620841,
+        longitude: 139.7214012,
+        rating: 4.2,
+        photos: ["places/ChIJq3xNyWSLGGAR4DD9GaZPeAY/photos/Ab43m-vffWyeIRXCWD_9INTfZzVRK77kLaNWPGrvwCGEk2-oWmwmCHj2hPhXcevZ9dnnEkczB0ShYnbDHWAEjAgQPbVtQ5KtbfmV6rNVxfFCPtG4qAO3kpN5lxv9bZdpSCM1gDpokVni_WoOSVztNoRaoPzZCM5qTgshoiGR3M73iahp9XhjBdC4UEHhcMR3N8fTDipEHqxO5kh0uHv2p6LI23lRBCo7Q5CvoQBGol29ca3IMv8EivHGgWRh22OqSfRz6XCgjk8WQRjh1ZKaVm8DO1R9DZEbC0yss9kGqr5HBxXB-hjI27hdKNIkzRu6t2RcE-6oAAPqQzqYfoYofA61BVZwNW-sh7Tkfe_WczXS9fB7fvGKQcFbZzaOF0Nnhc_AP7NNqVc3ve17vH_a29dv8_cRod1GPWxvfpQakZyRNidzQ_qHg1O49r4Ze29Kog"],
+        distance_meters: 100
+      },
+      {
+        category: "park",
+        place_id: "ChIJERblDGOLGGARVBPbsA9uNbg",
+        name: "Kōgai Children's Park",
+        latitude: 35.6641268,
+        longitude: 139.7199741,
+        rating: 3.5,
+        photos: ["places/ChIJERblDGOLGGARVBPbsA9uNbg/photos/Ab43m-tQJr2-MTRPIAlu73Jd-MWSn2jjJT12_n36J0FI7JhA7P13xmr_uDQZCJgTDeeGw492xYrmTO-dbYo13pugLHXPLqlScViNzo8uilAuHnz35MqYwunXOnydtzJRTdQggk_WOroPfU-j9cG0gSvPKav-Zc4QJLIc95_Xf3WBrmffM7w25eFo82y6juhwlTaQY5mDLzj1EsHJjj8mTklWOG7PJjmsg8kc-9BnVNLf6m6eDGdsCIv81wj1GS8E2EJTK-HWsuQhJEfoG40rNSS9OyJ-JQ7l0dv78kYkMDSbWXX-9Kt-aTKalkhFwdJRHW7CdDvWwl7xgd-3M4Rc8hne_YFZ-m5BN15FcsRpWbwWY4l3Qi2xEdSTv7yg6WEnoZPurLNb1ncV0KpEqiqLM_RNmwbILtSIna-9d3LQvezB2Xo"],
+        distance_meters: 161
+      },
+      {
+        category: "park",
+        place_id: "ChIJVVUOf2SLGGAREApt7xZxH1g",
+        name: "Nishi-azabu 2-chome Children's Park",
+        latitude: 35.662388299999996,
+        longitude: 139.71909259999998,
+        rating: 4.2,
+        photos: ["places/ChIJVVUOf2SLGGAREApt7xZxH1g/photos/Ab43m-u7aaCFFJydZobAWRL47xm-lJW8Gj8US_QnQOMephLZdoDqz9RIjLw8K3vi5lyQ_sh2OGxh_KkRB-jscbk_c7wZfYVtwMtQ0NCcWlQMKgyP9v1TOim7NFEueq6RipFj5kuczxks-aTMr5qIK7OfyaP8YlniXs4m2bXpbZHdVe2yuKZZLACbehFkHCnvxxOQ3r7ePqbLMyHs7ezl9SZhCyb4cCBAfqOuhJD-x1KeD_nfgs0hGWHWLCEGSfuahHTqoBdXx5e_aHIT0KyllLJlXVNdQKHra2YpbdoQ6-0lSixGna3SqqdvMIXn59IQ1kgXXl_S4g6g4aA0NRRIvIfYdZW3sNOPgJnqWCXgkGpqqsqjsbl_60lxhseozG1YCXby33INxC7aKPnK16dEJ28a5MQCHV756JMwB9CMZHxfnGw"],
+        distance_meters: 166
+      },
+      {
+        category: "park",
+        place_id: "ChIJF6uk52KLGGARrSEsQuUbQ5Y",
+        name: "Minami-Aoyama 4-Chōme Greenery",
+        latitude: 35.6658279,
+        longitude: 139.7203985,
+        rating: 3.8,
+        photos: ["places/ChIJF6uk52KLGGARrSEsQuUbQ5Y/photos/Ab43m-ssxLYy8SJky2RbdDZiEpL2NfzLskTQGTSlbFbFhNdpI7DUKcBMrPTznK-IqSmp6hXZZmWL1EuZe11ipDHurpAZ25tWVv08XQMFI1kjVnB4uc0GvdbG58IsdFMZvFekS0gAuw6_7Fqb0f0GysIHUYQpkQuwGSZ0-GE5-NpsgyLaPnnt-fijzNB2-gCosmRX2t8ArxMSs-2y2AVCsVLsDxcQ6Xbvi8-IUBECO8lxzHKumGWka63TnOHmfsbvaEiIkdTrvDgfba81aiK_v6vkNP8KsBlsRkh5lVUrbNVJjLN4zJRj3QW6LnlJzUw1oKuuD8Qdy-r3RiMKEEAsWQ5ljEobhc3GlnsvaJzWNge8P4-KO12A_NNaNxV_iaWo3kXdxJAJrg_BUG6i4uRwuBQ0PKmcSjJDeUDIln04XI1NOOqZsA"],
+        distance_meters: 333
+      },
+      {
+        category: "park",
+        place_id: "ChIJe6dyuGOLGGARp6aJOhc5Lgs",
+        name: "多目的広場",
+        latitude: 35.6635273,
+        longitude: 139.7244457,
+        rating: 3.4,
+        photos: ["places/ChIJe6dyuGOLGGARp6aJOhc5Lgs/photos/Ab43m-s3JSfACpsTD_0_Khp62WIhlU_weqDxkiBrsUg2-garaLqEl4JHmywvhEzeyyOIz4WZWzu_CK8ekshDyvr99RWQpf3AUns_QwrcvvpN1t2N_2j_D-aRrYMSLIvA9nqwKfu9IUeMFoTlwEAgLFo4b6nwpWw0QMyvyGEBxl6qPFYWRN2p3qOEte8FC9N1o3qef7OUZuV7wA-eTqEr5j5jAiSHElIM8hfwuOslPFUeqWWboqxKg-mXDnor7pN7xcfAU0WrNzM0I_w8OCXmShCIhaHT7DBs-ma1msUUqtlLOeI8rPtLpsxYhBoibnlGYxzki9OeMRlOlZQyMezorZy-_oFDyIHuuK86vKr4A7ffBk7y8m0nMLecgfHZ_lYMtYMVlBH16mXkFIB3ehOwihXaM3KkjPN-D6Tq3o5jRpOvGCrvk1vs"],
+        distance_meters: 334
+      },
+      {
+        category: "park",
+        place_id: "ChIJkSd3AACLGGARztGQE9VNXR4",
+        name: "Chiisai Park",
+        latitude: 35.66001,
+        longitude: 139.7225497,
+        rating: nil,
+        photos: ["places/ChIJkSd3AACLGGARztGQE9VNXR4/photos/Ab43m-sQY88j4FlDqqnbG3a7uJ6yArDxMwhsNqlMVMjEjx5SRVT-QBA8pKazGIvS2tinzBpMbLyQAhK7aOvHIMQmUvfhUbuC3J-cD6kSp0ojDwUAYtTMrXq14ABFNjxCPwQW-Z00ESPEhfggoSCIkg_1cDTbUtWp6eNSanmKb7TnFxtr9ws-odn62gte6IqXc-pG9HwtjO8f26pZy8ozLoIpNPlmrD0Yzj0Ur-sSgy0cu5xPLljDF2hdnaiXtZCwBX_SBwHUvuK0ByHRYONFRXM6_lJxCenU4eJGToCrvbmcHZWTJxlM0JbeEzuqFaCnMbqt83O5av5GFp41z58QGbTtCHurlZPndYaDz6yYk0Sy5KREuO_L8YN1FpM9fBUy9KXXwx-eDxD0TwM0pXJGELDoNavrP03XCuCCPLBETrlB7kVxRO1GS2PrwlScFC1gSoae"],
+        distance_meters: 352
+      },
+      {
+        category: "gym",
+        place_id: "ChIJe5upbUGLGGAR3R96rbO982E",
+        name: "ＡｋｉＴｕｌａ〜aerial yoga salon南青山〜 表参道",
+        latitude: 35.6627273,
+        longitude: 139.718749,
+        rating: 5.0,
+        photos: ["places/ChIJe5upbUGLGGAR3R96rbO982E/photos/Ab43m-ukzY4jhSzmhojbabhZeLa-qT4IYcRQ41nNOQCfFEfrq3YW6lJl_Lundr0IUkGQ73iAlFmEsYhmdG4jnvq9i-SRq50tIuQIQKDo0IFmOylBUqgPor4lO_IVGCNk5AeKbGWF6ky3yPvBFePK9uIUHE3mhlkci95y4UgB2znV4FvzM0tasfzEgB28mtIJjVmRqRusbRSBfF-gcqjogcdPVe_MQT9GtDMR38yMDTL0Q7X7JZDsZEHc8c2dZRtAz-yS3IJlJrCpypzvmYTKJVw9HbSS3ECC5tWund2J0X84BVoU9GIIFaISI55cXt86Mj3IdF85l8odWucAe9w3JiGcWU69D1FJfGzEHk6fxGcJ6FgSG_LhFwFzKgfJEFnP7bE0-UarOFRhp8ttgJ_-RJLdo4JegWN-zUBte1NXkfVdvxwdWhLO"],
+        distance_meters: 190
+      },
+      {
+        category: "gym",
+        place_id: "ChIJnZKfjWOLGGARMiBBMcV3zLo",
+        name: "ARTISAN Personal Training.",
+        latitude: 35.6627402,
+        longitude: 139.7181905,
+        rating: 5.0,
+        photos: ["places/ChIJnZKfjWOLGGARMiBBMcV3zLo/photos/Ab43m-uekFIPAhkYphSrJHtlS2hTMCd_4c5PyaZFhuyHIxQOnrpggZjFtbJUVqn4UtIJ7fq1rKlIxHLidD7YHp82L1GBe-Hent8IS5V6eeo_svNj57XVITeW5ZPKTenpfpf7pXbel8usiUzMYlo1RcXjLd6RjI_O3ecGgleLvSoOO800tj5a1DPKj13l1qX1KkYARTHcONToIZMdHzuMRDVxll9cJzQY9698DR8mi7dHydI-b-OsSOUo3SIn_oiotKih2xsf3Algm3-f8I2XIDA2K48pamLng98HfaQFAIxAiRe87JeoXfnwBt4Q67HC1ZWLmyQPIZlWRIHGIZfHUDnMuejRmEvNdP5Pxvt9Z-kzgL3Z-usAQeIegcH5P-_GfKuFVHck1e-g0KRVI5V7xCghGLHRSq3Q877dE2Op4XzIy2POOHt4"],
+        distance_meters: 240
+      },
+      {
+        category: "gym",
+        place_id: "ChIJefiBdWSLGGAR5B-A9YUZoVI",
+        name: "Teruyoga",
+        latitude: 35.662129,
+        longitude: 139.718107,
+        rating: nil,
+        photos: [],
+        distance_meters: 260
+      },
+      {
+        category: "gym",
+        place_id: "ChIJQXCeyXqLGGARhuO3XtxTPfo",
+        name: "青山サンクラブ体操教室",
+        latitude: 35.6604669,
+        longitude: 139.7221573,
+        rating: nil,
+        photos: [],
+        distance_meters: 291
+      },
+      {
+        category: "gym",
+        place_id: "ChIJLwT-40eNGGARgflDFXqCLTA",
+        name: "ヨガスペース『hurmth(ハームス)』",
+        latitude: 35.664610599999996,
+        longitude: 139.7181249,
+        rating: 5.0,
+        photos: ["places/ChIJLwT-40eNGGARgflDFXqCLTA/photos/Ab43m-tjm2wLX-VLTSBvUaFktArhizvgHPcmBfqXqwuJQGNAPGYhOzom3nnwO-kOKVossGNFAVNpk5mRe0xrFtX3UBXv5IYCZhsyGGWqxw16WEy376ikk2sU9WEtmz40rDLalyDAr4fqN-I9P9Px0IkF7W6KqtsggvA2opTuicVOVZ2jhJYwnjfDBYwqw2KxjBd92f1mMXAVx3QNFD5kcmQE_z0sP_Oz_2blqh2nOTiq4ZJcRjYmLKx4yUOknSg6iOY2HyexXxA1bXsfwZqCbILj40ewVTqWKlyfutDZ7dgZvyMfuzwXueiFrjLt59ZmhYFdNRQ578TC9texMuiClYg3WHtPrLAth_DmEzmBsBIPRgXA1r2p-oSsj5re0UDMoZU8fVGh5pqbjHY4FKGCCIN5oLNSX-E7P-6q1K_60IoKIkXlodWW"],
+        distance_meters: 313
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJFSdQyGSLGGARXPn9EDdpiFY",
+        name: "Kana Kawanishi Photography",
+        latitude: 35.6621662,
+        longitude: 139.7212374,
+        rating: 3.8,
+        photos: ["places/ChIJFSdQyGSLGGARXPn9EDdpiFY/photos/Ab43m-vXzSR3VgZEPaCexSapqCfmoPXw9hgiQW4BhZkNWtbQYkz0aw5w_Q11gMOjDJJj5dLc4QIbZGBtD9mW_2TjmgxrIdE8pZa0YuNn0OoTym2BkZPmgmvdhecewhkU2pGoHsz3nPskqqGBpxa0z0Sc3JIvYiInTSQ68bJDztCJVFuNsHSUGeOC0F2jSZi4M_kXF7eqgSkDZgYYmwCFPDouyY4VkKnb267aPoOm8ZmAQQ-vnws_wVLar-mwuCiDjCWpSC0u32yiL8pgL48FBBvYaM6mfChQ-JTWt6cQTnLwzxn9hQlPWvXH7_P5bfaoGOmtlkBrbUg6EFnDAN1J7-Zo3yNTaCnVV-8PkNyT_YHSDce6ybl1AZsWcJqSYc1gkfWqlbkd_2CdVG6QWa3n8XX5-SfDyGrsYEUrWG421fXyeaoxgWYt"],
+        distance_meters: 85
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJnZQTLACLGGARzid1D4yWWJ8",
+        name: "大和田建樹の墓",
+        latitude: 35.6629909,
+        longitude: 139.72202529999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 108
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJUx6dFWOLGGARoiN8InqI2cE",
+        name: "Aoyama Bridge",
+        latitude: 35.664386,
+        longitude: 139.7203384,
+        rating: 3.7,
+        photos: ["places/ChIJUx6dFWOLGGARoiN8InqI2cE/photos/Ab43m-vP9vbbqBZt4I_ZAM_9cQKdQTaul8JNJLz6EF2F54vntpQSehpU6HfYO6IjOk1ZNNrWaVkyyLR0ZKuP_-A52-sk7jYOOkacbArVM5-BeWcicUu8PwndYL25gaiu0WpyRlRPXAZXfURG_M4UhZ-2MuRKM7hKXDz_efc8r9Njd_xrBgE0dP_YHBXCnemMdxStV04kochBz6JLTWoFwfLBlZ2yJRzvQecryGJuyI9QHIWuVTgFUm3v31cd140PT_Lv9xBCg-_tM-TerwdtL00jJ8isLebnC2uZYZ5QAQskDPDeht2zMtcmmBNWjEDE00mSPAWE7ZSSDi4d0FD4FUkQVRdQAKfgomxTZJo7qwX5Fi7mxRVBgkGeDEEaYAZjyceDExfX1gPaFyqBOEFhT8S3GmejFyP9cnbUrudR3ekKslW6cmII"],
+        distance_meters: 176
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJpwl_Y2SLGGAR_9gUFWneMhQ",
+        name: "MFY Salon - Cunningham Memorial House",
+        latitude: 35.6618278,
+        longitude: 139.7188854,
+        rating: 4.8,
+        photos: ["places/ChIJpwl_Y2SLGGAR_9gUFWneMhQ/photos/Ab43m-vGEauU2qXVwWbFyA9VpFuiZIRXVrdaWxBrv6r0sZSoN3p_qYEv75m6wP32AWi7vdcmP1olpjwX6da6vCDE-Ky7UKgL_jX1ucCMqm_x2tosVjd9jv_d_vCWyqFA5qZiuB58mcD_GJUcq6Zd3-OTQ7N7Sg884-vw--IyHTn2-1HvXP36FYDZgcLyg0VEq9VkATQtiGDve58J-3XUSdsCdT9uohSPBJlOAIMxGSQhsYp_cMW-Rl6e4Nr8PFbUwai32S3VBNXP4XXqy19UYR6KDwVNFEqy7a8GmPhQeqOQSIFwBElbzX7u8b7z_4QYffTR0aqgqtzJTx6EnDGSCkO8IbgRC056aZQSzUU12shxzGHeQ992cKCEINsjZj5ZDKeIo7BOWqtmP0q2IVPswA4Ba918kRiSZWYW7b6u0b6fksp8WA"],
+        distance_meters: 211
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJP8YkXGSLGGARF02Vs75NFEc",
+        name: "Chōkoku-ji",
+        latitude: 35.661195,
+        longitude: 139.71903559999998,
+        rating: 4.3,
+        photos: ["places/ChIJP8YkXGSLGGARF02Vs75NFEc/photos/Ab43m-uYZp6-qDnTfqPRWisswsdG0sHj4qRJcynEcFRB0pbL78XnCjhBvNClx3gsSSYqJ0zPVgSPo_3KbFgxexT5tbfr3iDBDEJZ9fxJNT1DHdp1KIEMhd5dm3R5wfb9vv3dVnZ63nEny_EiQ1Rf3SpWgy-SASOH0-63Gc9y1IjbL6aVdJDlGGg7zFezeZQnHoNEDJ2Gbk9zWi6sFKwZfKpaH2NsnQuxAxeciMGL04UIO2RHG679T8qh3FmpEVpqaUGOagBec0gduG-NqJX0zH9VynkNUph5AhywR4M1KLUg4JkEBbUIN5-bsULHUjmVyZowmCdltRedRY_lYs_eERWD4AQay__9OXewLRjF4nykg5boqHW7KBvFHdPglfnw418UhYtTL1vSbwqabjM-VhFt6YJHwChkkTqXs8T-pTqajWp7x-A"],
+        distance_meters: 247
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ_7sGxGOLGGAR7PhH5QQ5nNw",
+        name: "Shotaro Akiyama Photo Art Museum",
+        latitude: 35.663405,
+        longitude: 139.717594,
+        rating: 3.8,
+        photos: ["places/ChIJ_7sGxGOLGGAR7PhH5QQ5nNw/photos/Ab43m-sQvmb0VEc6kCl9VyTw_bKKC81ROrYZRacdrpnbYhsqtER1dU5jZSmVNPmF893zJxjIvgCHrWZcTX6thsdtmuyqMT_RAryZtER7hWVjuOJsNyVAu7uebk8urxrIVUH8yIwggxMifTmmHnG3Th2KpFJ6Ri36ZUx-Gb-0wk0N9iYMnPazKi7pDgHvRUzsx76WiUZUnyDat1TdPJLzX7Hij0aBu3kpfG9pxuAAxOzQToWdDyFz_s1GjBpI-WkqMAe-RdQE8EwALh6svlfguULqq7bwYKPFTTVJ6E9CUstsAO7H99oZNF1AqKSE8kXQmNyyGnphKvtz3GZzB6Qgd7dQ-mTFnhQNY3vhVY1suS5CpjN9f1p_V6hO6_tT4MlXX7cEZ5wMjzmm9e-8cOMDF6MOslhxE9xP7NxqyT-w1UtE2X1GLudD"],
+        distance_meters: 300
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJmVBbD2SLGGARMMF2OfGPoto",
+        name: "Kōjintei / Bujian",
+        latitude: 35.661573,
+        longitude: 139.7176565,
+        rating: 4.4,
+        photos: ["places/ChIJmVBbD2SLGGARMMF2OfGPoto/photos/Ab43m-s40W83CjHI7HX9I2TGwVRgIESVWxdCuXcrBsJRSGqrFy-zn6Da5EJs_ZFA8e6ETz1dPQmiCxdE9U7OGc1yTbI0_eNCrXxLdjaJsdw17baAVS4HfL3PwQNZpMInBbIPheOzair4qqKYJMVT5zADRpSW8Urt-8CO0GfEynPUuiErocDkNlg98GYXZGdLftWgGNlr4DT2Jn4kYLY7YsCULVkMIQ4hMjqWOoUSR8yLqJ2iDFTl247xhT-en9gcgFGuN-su1H29AZbspgc1h8HtGnTf2BLc5fsbu9zTqOdu24kAMTZK7jynsb0g_CZS9c_zNIx2zNn2fuJUT5ojV4jzspxIzbM_U57kERbeiPdJEIUnIBTUPIF-XyZIlIE50pPKU7jwi8fhun0QeNwwjOyPe7TfkfmdOefquGd2F0PpdPwGpg"],
+        distance_meters: 321
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJIe1uymKLGGARGpOwOiZEDog",
+        name: "Aoyama Cemetery",
+        latitude: 35.6656277,
+        longitude: 139.7220659,
+        rating: 4.4,
+        photos: ["places/ChIJIe1uymKLGGARGpOwOiZEDog/photos/Ab43m-vSUGHcKl3DZn5hX8y4hktWVlDurWQY6X6s6h8lrp-ASO4msAtUZWSH_aza1jdldf-Y0TpEFchHeJClIKj4YPZfa-7vWLuaiWKOEdmzJjayu0eyHlGMnLK4xNDSuI_jjqU1vEwZrdBYpj1meRjHaPa4UdqK7sWv1a1Qp6D-e8aj9CbQ-6nWaxCBuLlnXeVTNT4TTtM2s5gAIl0o0yBg0maEh_W9MeepnJg84xV4GXTKQbJ-OqpTV4DNvgWPoA16dkEjj7HsLWgyD5ehdffN1ceSLSSOLpV__0WQ8uev6a5s7G9msH08yOn8OMrIKzPwd4jFHJjOjuSYWFAcPMvKSZmkPBx02kf7BPM_lNLm6wfLRWAmOdRHN0RFAkQ6NqCZm9uNXuYzPqDow_CrQDSLR1pbJBLWrUEh3I8wGUwwOHfV9RIWqfHcCC_GXTIaSSOj"],
+        distance_meters: 327
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJSdL9o3uLGGARlqZDcmCFGRg",
+        name: "Aoyama Park South District",
+        latitude: 35.6635688,
+        longitude: 139.7247901,
+        rating: 3.8,
+        photos: ["places/ChIJSdL9o3uLGGARlqZDcmCFGRg/photos/Ab43m-ui3dnACTIAsznZ9Q2_ZzTavWQCZDQ1IlxJLTeUyvgRO-Ww2aE0hJC0RXTYogQ8uBkYX6q0gZD9p2ZNQwJz1HjE79inEXmyBxhXLrpGUtaalb9ZraceZ3kl1Ngj2D0df4UBrD4Hu4YNH-IhhYVEdEJTvZd7ZPO9Ybf407h06b-n8uKsbfJnYICoi5Z043YKfpvxzN1xUZwoGHxzikz3e8Jhugm23sKigGHYjM745_pHw3ryMjNPfazvP1Ot9jEuFk41d0AcSXwkJuvQfs6cVVyk9goItLdPXzKposcsXumG0zpRuhrEeDLioHWJEy40SJOwxqkvUyazL7FdtDd8V45SPOXMwygOFmealWB-sjEI9hJDo0j1eI6HfvGrYtj8H9lmJhpmrSQeDkgvQjzczerq03OQnAUfVGBCpNsBtJ_AHRE"],
+        distance_meters: 365
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ1ZCFSWSLGGARpUEUiKoCxLo",
+        name: "Beni Museum",
+        latitude: 35.65992,
+        longitude: 139.717978,
+        rating: 4.4,
+        photos: ["places/ChIJ1ZCFSWSLGGARpUEUiKoCxLo/photos/Ab43m-tvQ4jtq3RYtSjXJvXevIeMHSuSxFJ4nNm50s6wiRXQ-wQgB1j2yJdpbIPeQVxEg_qzcUBV3oMbrEvYAJtfCB-r4PqXC9ih5pjkKZtY2VW9tYqw3gad5tWeDB_GO44uazwCrMA8WcPajfxDfF95w2_aEgJBhgW66Tl98dmGSteEAxNHltaqBNu-Ggmtpmy_Ib9D3AT3v2KV0vC--J-UcKzO0JU7YsBWdOJvu6Qi9ymcVTGo8LMPdMNrETAS2dSp125bPzfOe3YT8CmlSCql_AAw4FJBNprn8SHYkvd7QKdNea2znqjEmtLmeTcd7kZKmva7oYwzdn-ImQ9Ze1lMttZ6BhHVwTdT_XlXqU7aQ49Lb-0bgPlPfWIJ_i8-otzFs45DC_n-I7c2u5pNe4Fazi01ecFaxh_I-rFr79lBo6ePzw"],
+        distance_meters: 417
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJdzWDgX6LGGAR_Fg_79e-e44",
+        name: "Nogizaka Sta.",
+        latitude: 35.6668266,
+        longitude: 139.7264971,
+        rating: 4.0,
+        photos: [],
+        distance_meters: 675
+      },
+    ]
+  },
+  "Top Hiroo 206 " => {
+    score_inputs: {"atm"=>{"nearest_m"=>101}, "bar"=>{"tenth_m"=>211}, "gym"=>{"nearest_m"=>113}, "cafe"=>{"tenth_m"=>261}, "park"=>{"fifth_m"=>368, "nearest_m"=>262}, "restaurant"=>{"tenth_m"=>93}, "supermarket"=>{"nearest_m"=>391}, "transit_station"=>{"station_name"=>"Ebisu Station", "time_to_station"=>11}, "convenience_store"=>{"nearest_m"=>64}, "peace_quiet_score"=>0.145, "tourist_attraction"=>{"tenth_m"=>432}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJDzouPWuLGGARUnSHv4SqIoA",
+        name: "Ministop",
+        latitude: 35.64815850000001,
+        longitude: 139.7149229,
+        rating: 3.2,
+        photos: ["places/ChIJDzouPWuLGGARUnSHv4SqIoA/photos/Ab43m-vEJpSUfeZJ81dI6b4YNZZgSyx7fWFvjhpj9jQFTLqn38I6EGgZiMM3lqtU9ywok2ut2Txo4c7LxpiRlBdLOeJp2vk5I9pcBzbFzV0gsUAQIbvQbHF8mzJlWXW5L36B982d7fLmtXCiEao_9tXcPAZmjIIXanMdmdI6gXpX7vIjSaBk4tdiwZIt4H25AdRKCqY8rm_LpgUv6-6s_ty0qQyJGrirVcR2OFWxV-j5MCugIKEPdIbPa-BX4fHap0BEeZj-IE4py7Pc0eRla3qe7c2fhhQqozEekpEdfo_Xi9hoRK0vA3soNrVGUmwGu-couJsUgByxkizwCrtrFhxxDnksdZXpCQD0q48A6Tolb9j7i-z1sjRv-yEuLhRpA-kZkgXuS4i8GBQXx1Y0adTiUet08zZBBrc10CN-uzcMEo3R9OVW"],
+        distance_meters: 64
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJwWJVaGuLGGARYsyOdEWmONY",
+        name: "Lawson Hiroo South",
+        latitude: 35.6487005,
+        longitude: 139.7158923,
+        rating: 3.1,
+        photos: ["places/ChIJwWJVaGuLGGARYsyOdEWmONY/photos/Ab43m-tl0VeOAjLYuFfzk9ZJu7K_9d2xAWUnYcIed3iZVgZ74CRmooDDdMLiAtX2NkZc5IQkqGNkPpVdOdi6h6drGzY-EvhX0A1xaamW2u0bYFLjr26x_kZKP8zEvgtvbC3_YEKooAcST282h62ZKxMTERVx4YwI8bR5HrLuzokCHUugh4LxeyEYsoZigARtZutDJy6HFwn3H_y_iDoWbe_6Fn8YrrcaCJWPAm13-fWgOI55ZubuJtKS8HGCJYAY2QuLPV7M6xWkloxXs9knZpJjOQox2L-l1YQrvgmDkGXrYbkxhdu66GSpJO0ZXIOZCHK_vkgD-7c2sWvMdP05mJ4mYDqrMYGjxCn9wv0fMo3SBx4mHf44GbqxeR1_FsXiGTLUWyG5MCoSObIV_-KAvKtsNpgRrJGfHTV2wiC7tTal8VlCYccL"],
+        distance_meters: 105
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJVVXpgxSLGGARoMFeXDRWcC0",
+        name: "7-Eleven",
+        latitude: 35.6472159,
+        longitude: 139.7148014,
+        rating: 2.9,
+        photos: ["places/ChIJVVXpgxSLGGARoMFeXDRWcC0/photos/Ab43m-uGeaK22Ntb-R3VGHKIBLEi8CBU50t97us7MlKidrBl6se1NDWeOGHoF-hQ5PYUPxfSKMhspOYiZjtX5D2ubvVxTMqrKdVNsAywS0iobmd-7lYPLENTTOE0t1UZ6RdD6guA0tcnobTtWx1j7xwRzOjxAUcnT7WxTD1Ujel_zkUSCflBsHIa13YzycHEDPexv4PneidWX7v5iXQZ3My3y5lwj2tjI3VsV2QxuRuQwMhOMu7VFKptW2ksY4h_XPNmmREvX5-6biNM7a9TzFE1kBCygcCqDhPxfoYv36-ksRgllgZwMMulXe2av6eRwCZk0WLFlviwCzhk9nH32Cijvx6GhXxDp4jVG8-wisjDwz3r_vWxikcnWSqoE3v6F8ccMhywiJKWRrYfti3pTEAoO1l2HzRHDeS_ef8Rf787F4fRyg"],
+        distance_meters: 167
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJURJ0zBSLGGARuDu9JXyM1us",
+        name: "FamilyMart",
+        latitude: 35.6469776,
+        longitude: 139.7149632,
+        rating: 3.4,
+        photos: ["places/ChIJURJ0zBSLGGARuDu9JXyM1us/photos/Ab43m-uezXv2QBft_EVo4_8xD5zdYA7viP9HCUK2OXgo_uyfT9zBuAPGys8rNuNPsBYx_LposrLR5AW0z2l7_zsrd4fcUdEOqANX3O9FJ4XNGUi5C8aZXFYm5lEPHO4uSkT2gCVphSdjvWrpo9sXB6p8fiCXe7o6i-41kex8kzkGQylMqo0K2Cwp70QD6i5rc7bCwLbvyY1Oox_8pl0Ew5pjIcDGlyu-qYJfVHvpa4YGQfkyhNgSl6bLgLddH9NZTXPqDwYoaik2PumbUipc1NRYh983VtxlmQuIQdjhHCTfqDll5S01tphjvSQ9HtIAxxvujXdtCI7ys6CDL2lYNvgYTDPMGxjgSINKwQ3mNJcRb27du2oR2o8Q-5uR4b2NL-464LGMoGnoIWuyKwY2iBE6eISxGZ_ak-E12_daHDmH84soAcff"],
+        distance_meters: 194
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ71ZbphSLGGAR1Fg6Of9oKV4",
+        name: "FamilyMart Ebisu 1-Chome East Shop",
+        latitude: 35.647028899999995,
+        longitude: 139.7164867,
+        rating: 2.3,
+        photos: ["places/ChIJ71ZbphSLGGAR1Fg6Of9oKV4/photos/Ab43m-tYCzh6J2LAXD7xHz79uQAVbB9Q7R95sQGPj4Q-N0QcfHqlP1ETXT9YxdKLzWtANST9zJQI7RgWqei81ZJuE6BZJnKn_ld1Q3a3ElwqsR2Pk1ozngezt3ux2AWJwLmBAWo2IeIFGUORu1lAcfThQiKyqnhEkLWHBVcWmO1WzsTfjCseFTJxzDOoYncIdxDORWAZ6rQK2gUBuEeEfrAiFR8P7mXprnosURmh2cpshp7sAAyf03n9Dm8qkx8cznnLTHHOzsqdjx_yMQYgZGWWazr5TVBRc1SNwwAGIlNBfXibY-T3bazVF4OsIlgfsTVAvs7lrhyO10hvq9giD03gLH1__A_QFe1jc-phj539oCvQdDT0czuoU0zuYm6N02T493KJgGp7k3gjQ8mAhQYrczaVwUP-o7Vjew_RmW-_ObwdPw"],
+        distance_meters: 246
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJu9Xv1myLGGARRAQPieSXFS0",
+        name: "Rico's Supermarket",
+        latitude: 35.649128499999996,
+        longitude: 139.7190223,
+        rating: 3.6,
+        photos: ["places/ChIJu9Xv1myLGGARRAQPieSXFS0/photos/Ab43m-sQCujeBdJNaMAsN9RxVDikrljFLHxr4EEyoEAT2fEMW9K7HKJpfO_fmBUSzSoPTD2zk7HN7AEAvAiyZHuYgNB22Ypr8W17PwJpp05Gh5fjXngD0wXNHk2VvEuaC65PRhULnGv_H_SE_dHEYW1Gx8r-lcEvgAMAVTK73vnSjaAZt6zFG6j3EOY1LcXZNCRGlkQ-osD7mT0nEsuqd9QGV3XZ4QMNGZvqMacoO1s8y2z-2nDdh7Ov8m5rX8QVvTLpfWMGUKVG2ZPPjh1RJpZaL18NDLCSMKwOH30MQMbcTv5YePlTV29JbmDWmWagzLVdT6vHpWhr7Sg6Sm9fh2f9HhwpOH_rfGARbtOhWnDtYAvbBnOZCiPJuFm2bFq3ru87pVOUInkaTJO3c-lPFIdyo3iV4YuGD9InDmdBRGqpwDahYQ"],
+        distance_meters: 391
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJaWr4osCLGGARtqss3tcGVMk",
+        name: "Man-Ei Produce",
+        latitude: 35.6453114,
+        longitude: 139.7176546,
+        rating: 4.5,
+        photos: ["places/ChIJaWr4osCLGGARtqss3tcGVMk/photos/Ab43m-tax1cpbBGRS1uyw2Yzu_YVsDseNe4J4skHEiaMtYoXYRD6FCrpUZ8kv6edo9oTMZfZKF-d4SoDAgx-xiIp8Irb6768fjoyyR7axLH0-6coBc45JsAwswOW7YCKxg3ho9k1NoQ7QfIpNOfobiqxcijk_gP86ptaAYlh2PJmzWSP7Y688VSCQvkb3X8Sjot4DMqsmTElW2ORubOtCldPalALLLaaPQKX2aICJXi56YcdS-e254g6EfqLesPQBYPabyNUsy93iv8U7mrrEllN9nSsqg_waDkKZ8Ll0QhwduOjyApNQC2eCsmRF-Wk3RwE5IAQSa5W4AnnYGegilgfO_6ADdSCFjT4cdXrvCjaLrRYnEWdvkcSyDGMPg0e1aY31e_sAzPTJarIcGzSfdDdmorYGeiRpaujhSCPdhTmftSW8Q"],
+        distance_meters: 462
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJkw-gP0CLGGAR8uwO654kcpQ",
+        name: "SEIJO ISHII atré Ebisu",
+        latitude: 35.6465162,
+        longitude: 139.710254,
+        rating: 3.7,
+        photos: ["places/ChIJkw-gP0CLGGAR8uwO654kcpQ/photos/Ab43m-v7h3EkmuV8L-WnGI3BFxlf9lRzuITYYzzaHy8rtEu-Oj4vqcWhgTvGu56aMcmbfQ1oq_f_tHzkW2sXOOMoK1Nrx8oYtLpodWTVAPTlNNnAwKqV5-D39yd8COUxKOexRDFfex9jFa1tsYPYlSTViAzFPjkjOxIyeT5UMyczM_moR6NLTgpmoCEAvvZVuqL0WKgigIfVPyiL65XBh8oxUhbfZK8nagZybNZFawygoIdEdGBK_THcuEL8-Bj5dLORIQjvbEJBXBvkj5dWZ41d2Inr1QdUdp8IXVPLRq_f5mTyNsVnB40vY9_YXhyCbG_bpYhcSw8AKxUa6Ncl9bB-rEp1uk9epymz0MF4pXlqcufC9xZXpndR5GroYhklsZ-LrkkbN6u2SxoYcNmUV448-VkUO3YJo_PzLKMaR2zndP4"],
+        distance_meters: 472
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJVVWBr2mLGGAR92VYEhjqeLw",
+        name: "Itakura Food Store",
+        latitude: 35.652902399999995,
+        longitude: 139.7136162,
+        rating: 4.9,
+        photos: ["places/ChIJVVWBr2mLGGAR92VYEhjqeLw/photos/Ab43m-tyfbNeg5huO43rSIIvDusASfZcFtAObgqVykUiAnlFv2Lgd5PWI4PjqtCPsJC4F4hTlarBn8KrCVmN9Bajk6PjnHfcCMpU1SsDSdCxjQtioBs6g83IwwtB4_OcRYoi0aWeUBJNW5_XGgJFH61RHVScOdXMSSVlTXdMZPK8gwm7hCRcZrwf3NfeZBzj9oKxrm27ALJGwAz3b3UQ5SLweZ6c1o43QeP086eSCXnPDHzAGUl8TTDQ2W3p7epVBImA0Dy8ZzvemWh-hDPrhirtLWpNBEE0AMA_Ja06vz66SAGJ4TXozkTA4uQEBerLGTtLWAWTLQDH3UI6eqGrBoUng_J_Fh0CE3rMAwPvwQoqQf8rykU_KQmjoA1iRIAbTXQRjnnq6WpFS7Vgd8i8gxNF8o-pCdOB59Hxg7okoS0SW3TsnDgo"],
+        distance_meters: 476
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJazaxr2mLGGARo5RnGba-bqw",
+        name: "若羽食品",
+        latitude: 35.65298980000001,
+        longitude: 139.7135778,
+        rating: 4.6,
+        photos: ["places/ChIJazaxr2mLGGARo5RnGba-bqw/photos/Ab43m-v4VOeHsWxcUzcD4uf7xhmdSMhdhXak-jIfEpWg61IcAo5Owaq5Z5Lz8YJe4nCYatZaWa9mzVhoVbxr54rOWqrk7Ix-omAl4BPKqsT2Ba-YBuWnqurHfsaaANQZ_xjDYti5V-MEwBVrOKnpRaN73NmyP6CaF4sD--UE_TBaqKe_6ASDucB6g02pr_CvqzkIzMVbulvo8QUWzUgrTpfpX1dHiEI3deVfFhvHl8CHo55ZSp2bLNUGkfOO9ZP3EFu-zyNT_hVxyKq2PhX8HXXZICAFLaJtKScfLhE8AlAPKjs7w3DKqf7XsFMjJGjpJulwQ7sYt3jRlXQk_iQ2OIu9q8x8t9EGRS6xacCjhnlQnEy9YrFmvl9BHWtXMUZmS13qRB0zxdiR1uyEGs6NioidsQG8Sm2K--4PxCsZj6od1vk"],
+        distance_meters: 487
+      },
+      {
+        category: "atm",
+        place_id: "ChIJPemfudaLGGARfOzE0TbyhJQ",
+        name: "Lawson Bank ATM",
+        latitude: 35.6486583,
+        longitude: 139.71584239999999,
+        rating: nil,
+        photos: [],
+        distance_meters: 101
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ1eP75NaLGGAR49UnKVBYZbM",
+        name: "Seven Bank ATM",
+        latitude: 35.647245,
+        longitude: 139.714736,
+        rating: nil,
+        photos: ["places/ChIJ1eP75NaLGGAR49UnKVBYZbM/photos/Ab43m-sTlAxWCF_cNf3xKjVire9ne35Zy9y7rHffhxECC_MvDzmfKZ-aeoENgRFW5Z6zdoZGGIb8xtpIyXqjaAljUzZJRQW7DN6SmESN0Znl5phS_EHEyOQbo3MlR-F6viMw2YBP3EEUYmDcVYVWn9KjSAAZS2vkpzzmz9VVQEdITCOIWRNnDnxa-zfWSbDvdD4jt5XxCZDBrQ-EbhijRoJlBwrtqC1po1RSJinNoS-kA5o2vCbe6rXONjlqlS2BgnuX3KUaIZ_wo96ts8FcekB3ve3Ayjt50pfpPdF6Vpy0aPqhKAsxo7RU-cEH3BASc0-_GPXFFvwfpWx9ITAXFZVYtFVWdajRRh2LwPKacGZQdj4c5doLvyQCN6XNUkvuZjNNqN7qfoI8Y0Zr5sEDeasXZ6Bhrxe4Y-4a7Dujh9VAK-Z_1WfZujGeiPbGFl1XjdUE"],
+        distance_meters: 163
+      },
+      {
+        category: "atm",
+        place_id: "ChIJk-o5XmqLGGARWcb7CMFAoyQ",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6487646,
+        longitude: 139.7129027,
+        rating: nil,
+        photos: ["places/ChIJk-o5XmqLGGARWcb7CMFAoyQ/photos/Ab43m-uNMZzSKjCdramXvbj94ITUeuRbu3n4C0WlOgA4ErxK5woEZQbhQ7VgZ0tvK3frgJED2wUo6JBrYA54c560DNW6d1i0KYYVYjj6kjsNcUzBrkeb-aWc-hjzHOXpw72TMhnFA6RNf5GyrN9WieNvvzv1ewLzZss5Ty1jrQDH8X5jf6EzANtMCEm0DuRtWEsftLp5F1qp-jXCDYIsPMpx8sdz_WULNph1V2JZKbpVqQn-okb7I1ubWj7S_3kkH9caQiB173XTapAtXvGbfCGNl9OaCRapX3Ixq8JpVWLVRSrSLSGO9FkYFv51klAQdBsFHlbTMyLA0XIFu4Ucu8JxvvRn4hjJuQoEgEnedfdePKkENu1UFwcy14U5NnQLrmBCQn901S3zMSuxa2HS9lwi40i7TPcP4nSY4LIpnx1AdUQeGsw"],
+        distance_meters: 165
+      },
+      {
+        category: "atm",
+        place_id: "ChIJi4wiXmqLGGARkA3vlRyDTbg",
+        name: "Shibuyabashi Post Office",
+        latitude: 35.6486819,
+        longitude: 139.7128919,
+        rating: 4.0,
+        photos: ["places/ChIJi4wiXmqLGGARkA3vlRyDTbg/photos/Ab43m-sdcpE1hf7VQ4vFB66nNOCpvkVbMIITH9BVK83P5BPgMio2icWJQ_5HgpRnrXBptn0vDkjXf9tYa4jAgdI6tVZuW-3O-4zBZejlv3Ispx8lh-rRO9Fczjw9nDyPVm_o1iKtatCV9tm2cGUsG4RFePyftrn4aUXjdKzJlAYbnJW4-0Ry_gnL3bHYujFGR0jbsOW6iFpDzHnbdBQbMrG31mWkLhuNVvCYhACvjn1MGC6d5cTMQBFDdcSpSk6VjiQYIIv2OwAQT_8M5R8lnUxZwaN6pxJg-m8M1ug8XbANOs2pBzW5p12-NME81omveyUfgrC07w91kfYjpTu75D8HOCqIyh0GTaAHYoURzhs937-y7wLTEtXa1n8wOwRl19b12092edhgpZHcB3hvy-Jk4cbVFNQRe9LjEp7QsAdCo8Ozd1ZIHCe2VDn-nrmDdkaB"],
+        distance_meters: 166
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ8wg9dYmLGGARUa7xeTlgoYI",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6469565,
+        longitude: 139.7150486,
+        rating: nil,
+        photos: ["places/ChIJ8wg9dYmLGGARUa7xeTlgoYI/photos/Ab43m-tZNo9LJoW20pzkq1n4p-IZyBvQ1QrHc330tREACWb4oOa3Xp9pVgUpEcibaueawnVXv8yTqVBn-HsQqb_bgZKWYZSLhqlkpFpxQnC93zGOo2f_nWDsQgEVIfPj8USmf9bHa_G195KBE22othiZdgvSCz7t72l6Msno4ZnEvOVa1P9YQdRs30-TPzNsFmHD-aAdR5DEtILT_jlSzRQVU_Y-OhHyWW-9hK68wI4dJVqljAQ3gY5CLTRSYuSWNtddMIXv4xryjyMIkxaBi5B8yRs91Yt5JA_SuIMnMbbVD7F35uUUZqsZ8i5alKblb7PjtPYniKgp-qk4IAlSuzCYa4afIQ5adqU1girgvnOFHQy-bMQE0-HfvwlT9qOC5dNIjr9YMFd1AySGkhb09zxlFhablWbFSIK2HU9og8Qv6QV3PW-Xcb8SL3-mMNIuaPSj"],
+        distance_meters: 198
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJHzWmAACLGGARqZ8MUAKvWec",
+        name: "COFFEE BAR COWBOYS",
+        latitude: 35.6482713,
+        longitude: 139.7153074,
+        rating: 4.5,
+        photos: ["places/ChIJHzWmAACLGGARqZ8MUAKvWec/photos/Ab43m-v4PjeSPSGYfYIkBtX9fL57DeBtQ6sXszQyLBZ0rqzcHo_Mi4NPdON-MXSXZsbIoJboz-dcmoUd-CugZMWdAVRh1q_c5YCL1-KdFp0IJ9ve_A6bIpKQHRHwDhRkM7p043PepkBuQfAhSYwX-TYWol1ea9R9SaAc6vkLtLtdrG6U8ugZAXIf9fhC3aJJROliwT_6mJhxyBABa1s1xpp0sS3gelhBydplCY5N1n-W_6DzzC_ZNfDgetdQHT2z5csda8OpGpeDR30IZav3y4YNzfAiUzxKzncVSXudZwW9gfUNfmRjKyScl_QZ_l2KXC5Xn_0NIRj5WTH8yqWwpLgsJFjh5GNnT6RgjD7FQNd4DMpNDmpUbh4XnFjzJCxODhex9FDEj8qYmBTOLVLA86tgjFB9MNbKX9S2wSbNCqrDKcwCq5ygNHAffePsa5faxiAX"],
+        distance_meters: 72
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJIUXLRmuLGGARv4deDB0zlmU",
+        name: "Cafe Crane",
+        latitude: 35.6482067,
+        longitude: 139.71602099999998,
+        rating: 3.8,
+        photos: ["places/ChIJIUXLRmuLGGARv4deDB0zlmU/photos/Ab43m-tjWhkaKT87i7wEC8Ze_s31IvcqpwPVjBPk_etj8P9_XZjly4cxi50twx-CDryfof-1py-2Mx1otraY1998LaUfq_WHNFqrTDaNPUe5-bK0GJcXtBwpVZEGnSQzPlWpFzPp7Lbt7aD36ndmGIlWgcd1XknV1MiBj7pTyzRXgSiXsekCVD5DIzosRtGx6-zz_1x6h1iOcx4r_ZFRHbJhbvXO6DJ6gHkTaZYiM5tFUNval5dzFNzs8mTMeS-Qynis9aXkmwDMxxz8avz1FEU6AOacJOMaSeaLkQ1rRaU9CfKPUevcZB8Bz7ETKAG7vXWP22cCU9I5gmpTAO6o-IqhL4Rx9_uTIkovoYgQbu3ksO3P4H9WryVwNF22dVHZOnn-l6f9MeybkiCXJSGFk6tQPqW-3F9-XKWs5OTEu-uGOkGIjzG2vEyMuxxTdmMlEwS-"],
+        distance_meters: 130
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJd40yL2uLGGAR439qqiU2px8",
+        name: "Starbucks Coffee - Ebisu First Square",
+        latitude: 35.6474987,
+        longitude: 139.7146735,
+        rating: 3.7,
+        photos: ["places/ChIJd40yL2uLGGAR439qqiU2px8/photos/Ab43m-vxVV3XApK4lCL2N8WmnTjMuD3wvhUAIEhqoE2NWVtHO8Vfnps1SuYkmsvJCIC7n8sMeJcJCuIIDSTFePbz58QDAhjCx9T68JApzOJ5HnD7KDjSDj2T3JfvHYivWsdXWX2qSqlSEUTlWC0qy3OwBx8BvSipvAzrXvSxjV5TCkogdD316YKvIND316O9ufQId_gU-xVDipruSm4Q7WmfFTNOwMQ6hQYAMfjGXP6Iv1VHmmhA7V8ynEFuuJXE9qWqT9PYgRmEYpvaKn5wFZNUTf7f0M4xnmIZuAkVHvmbYoKR833dI6fmPmV6mIjhioeyyR0bBW_0hhU0mqMn_IkAtzXahgBw5CuF8ow8OK5BwoqEl6PqTXehdxnHKX7bh-7aChs24em3vWjRujmmAwhasLvVTrwqs7ccrTTYUOqV0jSW9T4u3WDLH5RWTgfoQ53w"],
+        distance_meters: 135
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJle7rXWuLGGARPm_rKU8TffE",
+        name: "Konishi",
+        latitude: 35.6486802,
+        longitude: 139.7163915,
+        rating: 4.0,
+        photos: ["places/ChIJle7rXWuLGGARPm_rKU8TffE/photos/Ab43m-ve6BFMspRYQyF7-d6Fn8ilLBkebpbQxU5XcWLX3fyKKrhHJoyAVPpi0_ckG_YjdHnbdFPPEAV2sWXIPUA5Sk47lCKFT4fRREnh7-cdZe20zvOiry0nWsY3GcRPy3Rk65wOyo5AG2_SWZiazJHQuocCRaSEt-kSA6ldTxY-pFZnMrHLrTVYlFwrTklicdjdvz40UGB854dWI9bg0pSBLqNgISXg20H3oVJpPrsKngsmV4J6542dLdf1BYSzA9q0ww5Dgx5fDNiy7fzdWCTAiSKF9lGcK-bqH83iBsxYr763DrRz7X8ftBCeTBBorZjrMBVODLETfLQAg718boVXPT9-mWIa1rM4Ye0-UkoGZsgTPpzHD5oKL2XkBbPygggZnlgg7uKJkwZj4rYJMzDEmTr9FhbhPSJet5lMJdRpUlLWhw"],
+        distance_meters: 150
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ9UOIeaiLGGARjdE9a1a_cc4",
+        name: "guenin cafe & bar",
+        latitude: 35.64722,
+        longitude: 139.71534180000003,
+        rating: 4.5,
+        photos: ["places/ChIJ9UOIeaiLGGARjdE9a1a_cc4/photos/Ab43m-tasxg_0l3FGRPJANn9ZF85psnIEqQo8AL_pjAu8hr6V3BC3NdaMgDXxKhnuyYDZudhWVFY49nTdbMlH_CePDgPyKO5Q_bNYIqbp2O_IfwOS26CiohdC2wHbkhZ8ZrO5dcR4fAx_LBHcZX5B_o-8idvR4slBkkJnlRUjYJ2mMTlfpPwJwk_LLidLnXTBm544P3iKvRtI7i0j3uLQg2SyXnBHZUFUhmh-q3rQXMcucZo6AeLlMZsX4l-MBBv3Mlju04T-BDXRPsruXswtmqZjP-aPnd3smYP9XWEa21nBVjLPFfL1uqjcl46pwNzQKyLh744TxHOd-wmL3bYNT-FsEBdtGGxeV2hpmDRSI0mFxKPnFHY-wD_F-d2yMWIJUmSWrU1PG5M4kqcMzYds1VO_auTYzT5GjrDgbgWPeDj-H0"],
+        distance_meters: 175
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJO_DhTgCLGGARGAoP1v0mvDE",
+        name: "cafe code",
+        latitude: 35.6473213,
+        longitude: 139.7158331,
+        rating: nil,
+        photos: [],
+        distance_meters: 184
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ4zBPEZ2LGGARLy2IHfQC3R4",
+        name: "ENERGY PROTEIN BAR--オーガニックプロテインスムージー",
+        latitude: 35.6475668,
+        longitude: 139.7126915,
+        rating: 4.8,
+        photos: ["places/ChIJ4zBPEZ2LGGARLy2IHfQC3R4/photos/Ab43m-sqetiQoGuSfybnGx4LuGLLz8osUd02D9Y1DvgI632nTitDihhXFJ8ofOd_BxaTnqmWEZkYnTPSaJjRMFjJ6U5iKWQumRhnSVE83qlUVpwhmxPf2w8_wumtAUcuV0oJCNVrUpBWFY0vwsRKP-NP0U-RXA91HkwI_K2eXtFBFW8iB_hE5SAyk84Nwx0PrLiPrfeTwGLehiCzwYaHSf-xiHOqK2yYig2WxeJrSQMHP48H3_M9ebxvACnbalSU0vJlzDvQwVLirm9lyJ1H3jmedw6aYve7KEcZpLLne2cU55A9Ndfct9vazBcN4sQQk19_X7iNUCln_lLe7tfzU6DW6NDlLBk1bIqSLxzrxDbUdSb38YClQA8e8anCausgccDG24kxJIV3QZyJ5XgEeZqUG4az9Y8DizFOfZ57QUWlHwsQq582"],
+        distance_meters: 224
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJw-sEF2qLGGAR9GpWDat1fyw",
+        name: "Segafredo Zanetti Espresso Shop EBISU PRIME SQUARE",
+        latitude: 35.650109,
+        longitude: 139.7125988,
+        rating: 4.3,
+        photos: ["places/ChIJw-sEF2qLGGAR9GpWDat1fyw/photos/Ab43m-s68Wutx3-c9hzDpqbWeFBPNA1nvy9ofC5DV53bCmF4NRwMp5VXxnZRX3Hpmsk8S1e04LQ1t_xkaP9jeud6pPVTlcJDDrxZtylbeMlONKgayThr0R1oi3DX2NrTeT_38JgnzVRAEsFQXVoGt9u13YlS2NTZDSvP2KHIeigURQ5uJrj-nyrHlINTCWDiRp5aKUvSTl-pvahaYOV6GiRAs07yyUG-mNwW5eYIla4xvV6WKkZ9nvKiZrKnuQErqHbI3h7mpW0kyRvIFbpGaW21LCZ4-Fg3SbCp87yOjDkdOdHx0pyAPnV7je78BLQaZtJr6Aoun4pcii8nUyGMBgy9a3-fJh2GZU6DhzIuTsFlwwQlWVW81lkPt8ZoRtGc4V5BPwYeHnL-BdMYSOwrDx5wRzeb_cJstUE-JfHHDPxrAm6gDw"],
+        distance_meters: 247
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJr2_9LEGLGGARZjaqHWZebF0",
+        name: "Tully’s Coffee - Ebisu Subaru Building",
+        latitude: 35.6467787,
+        longitude: 139.71323719999998,
+        rating: 3.8,
+        photos: ["places/ChIJr2_9LEGLGGARZjaqHWZebF0/photos/Ab43m-sfcELqrVNepqNwlNuFytCyW4_8t4Ji2wMSU4u-3_fMhHG8gOAzs5k7zoC8vXmYZue4hBLk0ymFijMQaQq5vdoz7X94uWkL9KEPWWSxv0qWqcnuK-YDoeBcuzu7Ael71rOU_rnufFvtsJmDbTB6iAPzpf8c1xQWDzZV0X6jCa3YJHZW4_KHLMf6qunwyUat8zwWjSSzP-5iI5iB3NhLOw4SGU8-cpjqWvGvmz1QicHp9LQFMeJ1UEhgNU7q1SQKcruhOFkaXuLROKz5p3saPUtu5wQViG4swMjo231NJMXZuMDLaYTHCEe7jasLHwoaXXc0M-1mGEiKOxw7Azqi9g_w1B9Ork4nRLxxj0zB1NE5gOp0IhEs59S4a3UfldAjHtTbsqGPCFbD6vsP9rQsQzfm5B8SSEAYwW5y5nrwzb4l7iI"],
+        distance_meters: 254
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJfVmFVo-LGGAR-Tu3DwrPqsY",
+        name: "Areverie Terrace Ebisu",
+        latitude: 35.6502398,
+        longitude: 139.71252479999998,
+        rating: 3.9,
+        photos: ["places/ChIJfVmFVo-LGGAR-Tu3DwrPqsY/photos/Ab43m-tW9r855gh-2ilZ7er2DXFSXjRCNu2XGTfNTOHpBf0AP5M3IVgLMoyTSFi4_QLy-XzsEBWAzZYbjDYYcy2sx2vg6KmIt2a2Ki5wgqs-ksCE6AnlZzRN3DSRijju72KNf1FNo9OhXhdY4be0bsR0WAquw-am2EYfyiBZ5WruHwnQpYA7Iz6fMYLNIs0JfHhUlJB88G1g_2LWMsC7SFmOaI6Td_v5K3o5r3GS8Hd1qwZX4clNZ43NSQvvjO8ROJTvykAkgTyfUdqNzPLlTl1j5di5VchG2FafTlKe6KW7CeCX-F_nvtrKKUBHBfrkYPwUvFkAR5I8CWyt3AejFQoOjaDDuqMzOB2oXvmgysjsuWfZJ8ocvG3ygP8rDHfPEAu3wtCoMzq5L4fJHDzVeUhBaQuo5msa8dNPR7HeXfk4TnlBoBpAPA97T3BiwgSABg"],
+        distance_meters: 261
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ008GG2uLGGARRaEFPschYl8",
+        name: "coyacoya",
+        latitude: 35.6485403,
+        longitude: 139.7145612,
+        rating: 4.4,
+        photos: ["places/ChIJ008GG2uLGGARRaEFPschYl8/photos/Ab43m-uTBPpPV_sxV_3hHlZFgwEUepfvHX7xmvBttTvkT4W3t5-ljUveIQwDOyy6Nf6mPO1NOLILzvCXW8nU0GkqyufLALr7d5kO07S3fxCMjHWvdLp7h8VF0c0lycGINRU5KjOqSM8hkF4-ul77DLyW3VTv-TEWV_BWvaB5zivzAVmZRwhAMX8f0rKuNicfOEAdaLO2L9ocfwpVyti_kmrQW_2Hx_mPiZvOaUX0kiIs8DcR0jC9bRv67Ha4PXaP2IrWm80x19RTIfbDLHA5nFfBv_Q2slEby_VK2GkgRQIAgJNCfkIrF4TDGpb2ZKSSgoDWqt3worF3CXS8va50CLixK6Si4c60Mu7Ydm63EorNzYMIwVzqPpzh87A8h0aB7K3rGFd_sZjUm8EjV2rdgx5vXF7dH9YVGYFXgUz3Gt7sY_jm0Q"],
+        distance_meters: 25
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJC03sFgCLGGARoc-9fRMV_sM",
+        name: "Caribbean Restaurant Sunny Cafe",
+        latitude: 35.6484373,
+        longitude: 139.7145959,
+        rating: 4.4,
+        photos: ["places/ChIJC03sFgCLGGARoc-9fRMV_sM/photos/Ab43m-u_h6kPIK_7qs8y2DRvuKHIbud729g0bH5gtKBTlJKet2KqvH_AlejMVFkdHGKPRW1Eld45H5qxr9zJqX0-di8dQkjN-MppawbMRNZPcXf6MsrPIeH1x9QCEDF1LzwSSc46YKYRuc_Ou2UsU94KA15dNTSjsAsPMjBc_M9BOH8Zj-puioGKZV_l4YgOkpNud2VGx4fkndlkDZV6pDoc9rdGruR7VAexS_WBuG3F0reKwjYK9qfu9OqGWV59irJorEOUPFO-sQzCcWOQ23eI295V6tfJo7hgSTEUTMZnWdNsG60uqrj0h14NSHaVM5yGPidhc713yrUUGcjNaMuVD2Ulo_uOD0fEqNto099baIdDTu3W_Znhaq2zRU3Br-Ni-Q9AWM9cve8wzVFBWR9TKwUU-n2piXueoKWMNuHcCF3SAA"],
+        distance_meters: 33
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJLTh95UKLGGARaNNQTNyglXE",
+        name: "amour",
+        latitude: 35.648751499999996,
+        longitude: 139.7141497,
+        rating: 4.6,
+        photos: ["places/ChIJLTh95UKLGGARaNNQTNyglXE/photos/Ab43m-tuCufkhYPpLnguqt6GAHZbvI_hNGBQDsEnDUPEv2HSaSOJojttUPtZJXSJCGz4hFk-QUV8Oy0w7X3z9pI6iZGzTi4vbC8zhlemClvSo-oWz9sjCXCILVYIeONMKPjuzat5GHgblturXdDnVdcO2wted4oQ5cNDB38-N74-RSOQc_M13KJ6721PEndn_n0FU5eUvaAlim2IKacP-l5sn3qtVg2IhOjGKKizXtF0sT1_dOMkgsqRHzXJ_TM5mFTK3-yEd8927xkrTt2oPH5EeZ-d37942gJkC8z3EsRPwzN-Y6KASTzoUegyNNE4rVdVeMi1LYc5elfs43rzHyP_Iup9kuUf7mxmVjJ3BLqe9BipOFB1jByw4FAitx3vI367TVCGXI2RtrRe0XT0IgyLW9WIrmTlXFjF0tSUiULWsCIMgVg"],
+        distance_meters: 52
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ2UNTamuLGGAREE5GXV_IFz8",
+        name: "Ebisu Shokudo",
+        latitude: 35.6485674,
+        longitude: 139.7154993,
+        rating: 3.6,
+        photos: ["places/ChIJ2UNTamuLGGAREE5GXV_IFz8/photos/Ab43m-tPjQiwO7-gLarIizSfbyJ-1rBE1e5xdUEZ8ytK5rlYgxwuz0IMT7F5-xCyFF6RvnSusjNCg4eAdgGa07pTrjFIalav8_A2ufxB0uDsQPzjdb_ux0ysVSecEew0NbSawHzSXorH2B9JcyQFvVez4dySjFSEfbeWSECHqigJbsoFh171LMxHhtukIE8-LbWQF47_DCAgCeqcwh3w7kHSZWUfRZwQhRFqv5CXB4ECRT8nWm_3t6BknUUNCVq45Dio4LEPXP3Saukxlnj0O5lPWV1roEX8gnNs3vKS1sZ3nMkHe4tb4RTZvxfa8Pow_Z4a0k5nluDiqptG92OpIyfhXJmFyRiwaIpzNQfZxjTHB2R7ci7bAbQ0Ni47_hGZB6f8zCCwqUfdBznU5cm9O23JzDngBVQOHcn5i6tcqjKA45WBSA"],
+        distance_meters: 72
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJBX3GVm2LGGARDZtpqwswTpc",
+        name: "Teppanyaki Japanese Steak Restaurant \"KITAZUMI Ebisu\"",
+        latitude: 35.6485675,
+        longitude: 139.7155762,
+        rating: 4.6,
+        photos: ["places/ChIJBX3GVm2LGGARDZtpqwswTpc/photos/Ab43m-vUcE5ygpkAWuDxyof8j6m5EPCNZYFI0cRwvTUfxobSOWlYaDzn1FC-3WPfHaMAPAnUmmzYPfGiGbNOd9Izz9BBkLcvG0riSDChIbuJFcyWpiS0TiG0uYq1k37-4YB_FALXcwu6d1KvnxRwVcf4c9VFIVz9mu6ccB2mqna2zMso3nNyQqlhw0vAOvi3HJfXmMxFvsB6BlZ0jFuUNoJneA4QAd0ucpgKfm9G9wITq-1bR1yeXTD7ByL5LLYXU2vxiB5IYwABr8B8EqEvF_3IvL4_R444Rb5CEOyMImjwHAYUY-SEqQyH4bJ5Z6-WK_CyA5Py9vlImy81ek14jUaPa-zX1dcx-H5aHxW-MSdZRvI8xcFkEL3fRZVQL56ozHmntGPfECGCKEdTO1wkE4tNfSN3XyZA2rVC4I-TSfB2yhD7hL0"],
+        distance_meters: 78
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ-TRJGTuLGGARSK0PXRSjvbU",
+        name: "焼肉ゆうちゃん",
+        latitude: 35.6482274,
+        longitude: 139.71537179999999,
+        rating: nil,
+        photos: [],
+        distance_meters: 80
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJzUx-GtSLGGARjX4pY8r-pI0",
+        name: "魚巻酒場",
+        latitude: 35.648144599999995,
+        longitude: 139.7153219,
+        rating: nil,
+        photos: ["places/ChIJzUx-GtSLGGARjX4pY8r-pI0/photos/Ab43m-tTHbdrYWgPdWZ4Py9XdfSdRc_GJaTBOdUAscnqi4rDBBHW22MN3WvYQcY3TmvoBMuqcWVZ0wGxz5Qi-FRqEgb0bXwlYsKjL1X5HpCpWJNaXfpgZ0lpxAcyqK_B57bTmkX6NwgjDr2TH3QwM8eTOmpwYqcb3UWGI4wy7wMbeYZyEUOXO346TNbiu3hyHWOXC4CwamxHNsCClVSDBZ3boWwlsnN61Ymc7Ag1ZoObOxdR93tb9mgX91DKoGlbvQQuVxNd0hOymavA65mRWfnuB9QDjWksi0ymUp7Kf2WGGeSI4JBywl5W-Y00aVi-0eaaHSkOSa_O9FY3vX9gPntOtBfVo9AAOxLu9NR1ZoYKxaGPMAU4SM0aqg0q_rIiPZe9hqVZn4DKqQRsBweUY1AYbqOBrdYbWyFSEKXKPhkHulFb88Clh7PzNyIBBk78I5Ra"],
+        distance_meters: 83
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJYaYhsNuLGGAR07C8DAsFFI4",
+        name: "RÉGULIER",
+        latitude: 35.648551,
+        longitude: 139.713784,
+        rating: 4.8,
+        photos: ["places/ChIJYaYhsNuLGGAR07C8DAsFFI4/photos/Ab43m-uhaNQUOgGX5UOcrznlLoTIRwf5MjKOQmiZxwh0YmLk7e9pXv9fh9_MH8sXDSdSUHOqn_OD3xeFP8Sop46sKlC2rNuBnDHHJftRa7AKWrIk1sInJxh8LaVe66DlB20wFGsRXqpSjITM08lRdjpnLB2-K-Hpe5VpRbUd6RbsNXS_Orkq9DNbU4Ffh6VAlKhPjlr8Vjt-1hGUbgnzlUNAbjkbwppmBEaHsvxdiHddAPAVAXFANJtzEHP_5Ddz8UzDYGFyaJS3eEeUVkUf942GjpCPlOtpgwXU96z-Ji0oFSgY5cPYEPnXz7R7ds9luCi2Sj7hC-8RjYQzzwkIVXPifczqX9UZw_i8OmLnOBVUpe2l_OiPzAsG5TuWBpqPCx1kf6t0nFo1APKS3b3JdIYdYY4ncfFR7-rAoCci6dccaRlgQI5DG4qhXswqtzdJ-vuP"],
+        distance_meters: 87
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJU_GMx2yLGGARUhqC9E86_7Q",
+        name: "Tokitarazu Ebisu",
+        latitude: 35.6485553,
+        longitude: 139.71373649999998,
+        rating: 4.2,
+        photos: ["places/ChIJU_GMx2yLGGARUhqC9E86_7Q/photos/Ab43m-v5wRA8ATbyZB5jP0fuRLuGb_xFa7EUr0rYWCx8V-kSbAALiWvoNGyzISqyLY3u5RfFroYU-DV-WRYcWyBDw_-dmG0UEYDQbfz8ggvkczmJ3yLJenZ-GaT9a8X9VGDqR_sLMHvA6U9e-vOyRc2UnDZxOiA1QEDSzMNDQ43x9ntbusMCI8O5hwWlsN-jJmGAHYS9mandUYhMvwfHlwOoAm2_iMLGJTrXM53Takczpsz14_r6u7CPMXLXnnqSEoWlL_yNJ1nj0QPGKAbsiMk-DT717aUlAHoCbN-SqAy9cYopY6JMbh0iF8o-70GTCe-IODk234raZ01ZmjQxEUNyHVnzol4qj4DaGkT6uOtw_8kUm-hSYF7uLYvnYFr3cu9K2B9RMn2StWWK6ep6eeJlQ5mm45vEuz_Lf479z24AvLRYyw"],
+        distance_meters: 91
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ49405C2LGGARcijau9UAPxE",
+        name: "Sowado",
+        latitude: 35.6480215,
+        longitude: 139.7153124,
+        rating: 4.5,
+        photos: ["places/ChIJ49405C2LGGARcijau9UAPxE/photos/Ab43m-sH63w1Kel_EWiRqCRUR4EIWuOVuQc_TjYbN5g9RRo4IJwG4KMgbYbeFhud1hnnhXLI1AzNiAtL_NPOnTMGMWjyv3_na2sZl7basX4ibf5ql1A0UQZMdohhuNGvniYdmqS4MyxwXGTscWOgARIziG1f7sk-9TRvoiaGZMs8Ai1MjIoRuGCky2ve-cyq8p6oyeUKoNJEE3raSOHKqzVFMIoLctnswfSobC_ymRnVrZjmtWrrEgIm-EKWh3Zh8L2kt2zbzuz1Y5PBS9fipGCOd2nmz4-tbvgTCgYtChmVcalzypC-6WdJE8hg2CEr8GeEmZhtxKQBiCbjZuGiSxKtQ9h-PHH0YlgTAXkNUjezVxnhZ1ico2O3h9ZoKGCp5OvUWUKX_l5g6334W0e_zYokWAGxSR3qRosqCAB6mciqyfjVr6TP"],
+        distance_meters: 93
+      },
+      {
+        category: "bar",
+        place_id: "ChIJHzWmAACLGGARqZ8MUAKvWec",
+        name: "COFFEE BAR COWBOYS",
+        latitude: 35.6482713,
+        longitude: 139.7153074,
+        rating: 4.5,
+        photos: ["places/ChIJHzWmAACLGGARqZ8MUAKvWec/photos/Ab43m-vulEihOj1U4XpZDqmmDhEWZ2PM7LQ0Fg-Po01lMzC4-_tI9ojJA5Xk7v83tWsZ8qYk0HZNKbtkBvToX3Ws4RzAPoF0ot8fgULoDSmn8C1uTzvOLHtcerQZ5Y0S9pMUg-WIVUFMR9uFW9a0Le-77bBQO0tGfBooEJ_iwQqzqYh3nagnelRoG1mcRGEm4fBL8bGWukGDrin87l1bI3hjnS8gBpUah83a-tKDjzu4fVQrl6-uhKYwfr3_flaCynylm4ctywAlb2UJkAWlmn_1udRntZOuU-FXH4DCbY6P8eJZEV6_DFeo71Tf96Nh0f_Y7Kzg5K8NUeR13CiIrZPbdguYe5_YQUJWvJRb81L9Nv_T2lFfr6X_WkAbIWlDE1dvzz5nsryj7KO0OVptxyGX9J4gZkBbpKo-eItyv-J4i8J-D05RALePPCQiQPme3GOf"],
+        distance_meters: 72
+      },
+      {
+        category: "bar",
+        place_id: "ChIJU_GMx2yLGGARUhqC9E86_7Q",
+        name: "Tokitarazu Ebisu",
+        latitude: 35.6485553,
+        longitude: 139.71373649999998,
+        rating: 4.2,
+        photos: ["places/ChIJU_GMx2yLGGARUhqC9E86_7Q/photos/Ab43m-vO1qQbmGXAyjrgz2yzYfeQ37RGc6pN12X-u3P3owS1uafH-Ek_m1eUGAbpzGrPO6Hqx4Gj0vM_ytbopyfjM5BvRWD1iJuUCBaHaCx1IVjNlRAD3aV04HybRj1gVILDEDei4N82c5ySMLjcO4rElCCgLYwu2pq2-FDDLzqYXv3nFkxtiMcZ2uCaiQIf4xDmdqsiRsIA1JSnR8HgoJJ2uVqqa81l-tLeBgobZKCZZQ_WNSm7JrueWReg2nkBhownvpLIOUd_dWHPn-656B520w2Q0nRsE8NunxLvhLlhvy52jv05q5vvFGPknX85713one02NNc6hQycDqOVXLQIbrKEHhne3yfLxnLvdjvCg-T8QsBCbcXOL4d-WxeJNytx_NrcId3m8zCst3xHgt0v5lE4naQmrNIvtQxpYu_xsrrGWQ"],
+        distance_meters: 91
+      },
+      {
+        category: "bar",
+        place_id: "ChIJiUJ-DQCLGGARA1Ak2X0qvZg",
+        name: "GRID CULTURE",
+        latitude: 35.6488485,
+        longitude: 139.71602149999998,
+        rating: 5.0,
+        photos: ["places/ChIJiUJ-DQCLGGARA1Ak2X0qvZg/photos/Ab43m-tHv91FdvwyN_qf3Hqj1ACz051QXpkJBvJeTI2LOJSSFQ1wclphRaDrMvL_2WEH-v-HwIT8TH_PZEWO7ZECCDXDSqpJp8uc4VWd3-5OZ0f1yvLTMy2kw8iKTR_qQFA2Ebt-6R2IG4sTyO2CKoqIsZhonJO1eK28BR86958s3rGJKjFxEUgEcHPV64lXbMOdF6LQAYzE42SsXV6jDMjV7mZv-79aGPmMcWKJw0RXAOLsSLMcbII-myw1gLUfPGayDQDibUeUvirDFLCiP8HZhwFI6cV4ehj0ndPaM2VNq1DnnnsY8iooaK-28GLyG6GO8N8jHfpVT1BEQQv7FJColnEzeVmXJXqOg-zeK373yoer-PSU7lRFML5e7JhKK527iwxRjHE_kO7B1Fzlk19nF_w94dRAdk7TC4MB3ajLPRbOAYn66ygjXdL5ZozRCYZS"],
+        distance_meters: 118
+      },
+      {
+        category: "bar",
+        place_id: "ChIJjSlWXmuLGGARusWqpn2VyBs",
+        name: "Anima Libera",
+        latitude: 35.648763599999995,
+        longitude: 139.7165289,
+        rating: 4.1,
+        photos: ["places/ChIJjSlWXmuLGGARusWqpn2VyBs/photos/Ab43m-smh2fqbgGlj8aKsMS2CwwCj75-8BVutXQXZF1VO5Xx71yudqa7caQ04trCfPtYaTyotANnZTnCdl4uRKYJyrvoECZnzZp84nRnEb1GGeHttVsbRD_BFbIeIuIl7Pycn1yy4Mb91GMHFTV1TZewY8LyjR72hGxNe8zVpCvJJOPr6Cq82KSgsO_ZcRM8Y98NJ3vDz3nUe2HpN_nmCnCbQeHyQitURLZmmT2HRs4uO57uu47EtBQ6hEm-8Zjj0ePwmKGd9NfioJKE2Ea4OrOXrH2DwLbw7vyNSP5dU_YEZHskYM-dt7DiVKAfJKqKDs9QHiiYmnjWd7ykU2bimiFfOZtKZop7-x1WXftSUA1caUWjSLf_GRomdZ9nQcOMiGqdPKR3jZobziplinh2Jv9Hue2DlaNscN7p_UUBOe3MwT5qtpts6aOcItgx6YfsMVbM"],
+        distance_meters: 163
+      },
+      {
+        category: "bar",
+        place_id: "ChIJkTRVNwCLGGARH1M16OU2XHE",
+        name: "En.",
+        latitude: 35.6473161,
+        longitude: 139.7153804,
+        rating: 5.0,
+        photos: ["places/ChIJkTRVNwCLGGARH1M16OU2XHE/photos/Ab43m-ulYexDTGl1oTAozXC9Q40HegneHxvSlG44oVYF8Zz6dx9l1dsxPlhFySsEC9tF55DWMBRnedPpK222qI_NA_5WbqksyOPsJKqWQWF9WDRb9kV_yN9TFfPhjVifH8weZVpwcVgNWxuX2IlwVkn9RpRpsslKdZoVt1nEBK32_GnAKIL4qeDCcee5-1oDE71tcTFe4n90kIFEwUDcCWCI8y_4t9h5WUGzwwuQZUPYeousX1g4P09CCvgzCCsFE9_dDPqcw5R8WeayFWQNM_dofHn1oO_F0MYKmITxmughs3HyUaGHUaXk01pevHMxb3IGRCtLuU87QpPrUVDJ7EKHRNjrFw6EnFafhjom0R9BRtJgE1EXLzCnkSrXHsM8SmxOkrrUTil51BsAjMh9ikwXrlTsErx-P98xn9RNkpw3qTGOdg"],
+        distance_meters: 166
+      },
+      {
+        category: "bar",
+        place_id: "ChIJIYJ5b1GLGGARqsc6GpKjTd4",
+        name: "Live Bar Cham-pan-pon 恵比寿店",
+        latitude: 35.6472074,
+        longitude: 139.71526839999999,
+        rating: 5.0,
+        photos: ["places/ChIJIYJ5b1GLGGARqsc6GpKjTd4/photos/Ab43m-uOk_YbXLOyB_l5aOsGep8yKXHDTVtk800yxVVGbukgMji60ncxwbqFR4w77N5dHJgOZQG4AOdXoVrz0oU4_VDE0a7fWEL39UOclhCN8TNlzm3GbZoKOrDy4hVA8Ao_SXOOgDK9p7L23WMJGxKgyUCQZN4pGZZBuIX_igQxomc8QQXt0ckY3jbEsUZ2oXf2Y9UFE6EfJrSQpGuwr-Hagxto6o3JcAPS7gK8__IHjZZQxNVZWrhx_ELM3sE2HpjUkBMM2qBeUK2eeQbUxNcWSEx6-V9Ip7K02xhBNrCQsaEp1oX76cOVFm0b320xmNEgPaWMHOsGut07cTMjUzwn5lGSc2f8Dymg-dcXqDpLgLHLo7OF5T-NGrFF6TQJWqF6PnfRh1rrSEm1PPxywyixCI_Ba78TBGeM0eUpSbpv23FrbSFohD8pxp4H9UuRIDMu"],
+        distance_meters: 175
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ9UOIeaiLGGARjdE9a1a_cc4",
+        name: "guenin cafe & bar",
+        latitude: 35.64722,
+        longitude: 139.71534180000003,
+        rating: 4.5,
+        photos: ["places/ChIJ9UOIeaiLGGARjdE9a1a_cc4/photos/Ab43m-vFtU1bMndJ4aQk566lWEKefV7znnrU-iBrL1vz2r_8vz5dqpjwVGg-6BbhFxfl2L5upeg7HoACNhZbl5IaJfKWknvvMNZRagW9M7r0MhAKsz95UgFL-oLrKAWEfgfTMC0275jyoFA0e_J9v9AP2huUtnL4iDFeDRYHgZs7HzeobujSNHyFXkJkNqRlQsGzISt323n_hdjPdYn1_ia3tOLoB9dcWi_709Um_kLWSqx8gfhegruy2zdXaT5zYXUVBvxrsCWqWrgisyVgzXgrulSjJuY6-cXUZZK_l_iOevpr-8B6Vhu64TNyPKiLVsky1wjS7vbKpkzS5sJvzY8rcmrGF9WnsTP4fW2AWLIni0Yt5Mb_kijUMaLP1ipJdcAKgGL40VOCbb9Xa0CQr7IfgxBdr2ShWI0VeJwIjHZJBss"],
+        distance_meters: 175
+      },
+      {
+        category: "bar",
+        place_id: "ChIJbdG3UZSLGGARDLCW3SCcWAo",
+        name: "Teppan-yaki Shizuku",
+        latitude: 35.6503198,
+        longitude: 139.71536419999998,
+        rating: 4.9,
+        photos: ["places/ChIJbdG3UZSLGGARDLCW3SCcWAo/photos/Ab43m-t-KPqLbTrfcNraLMlXBduAfNob7vJYN4cBH9XS-0IQWQrW9vleOmR69CCfEMigczkeRj0Vth7hd5jEIPBzwDj4nHq4PinJfWyaFV9DH_AqkwgJ3nqWdhlPYJrpChGrvbFr-DJPiMrFxLYa6JkvRlbjIvqqVhDbr9MU-dqoIWH1fJIvVBSbyGRe6DsOTEXXscfrm3ELJpKCKZEOB-rC0S4qF4qyOeaU6s-WuyxGWCu7MyUD7ZSagTGtto5gDpWhk-fyFmN312XdO0bd_RLIWidjNeiCofAKvHjT9FJVkttGLMexX79fqbrGHBx4Xk6OGPmZuJ6-iWRcMVQ66Wm8CT4FZU9P7nERgPKawjNWGHve7JTkGMUihf68ajZjHkusz-xm6P6mGBzvKWF0C6DmwOW8fD7Yewi1kMI5dSFmNfMA0XI"],
+        distance_meters: 187
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ1cKcZd2LGGARWWoXSYrJXHs",
+        name: "和牛 鉄板バル Kotje コッチェ",
+        latitude: 35.6470609,
+        longitude: 139.7151859,
+        rating: 4.8,
+        photos: ["places/ChIJ1cKcZd2LGGARWWoXSYrJXHs/photos/Ab43m-uY8sSRzQGW7DDEzVV6FPIkjVA-nGUlnz-Bs_jKVJx7dnLq2adBtYSPPanl_Wpbg8lhkF2DFQQ1yD8Ukbz7lQcXIo2Cd2okbCb4qw3sWLFUFd_SNsRh6vlnB3hZnDMzWo6rSDCFEkqB50H97VlwNZSuYdx4ggy3poXdps1QXB5ZX0dSNpCkiarAHpoqhsfnqDkulEMKFebP-9F78k6MNKMD8PaqD2OJNVO0asEVvFRPRE8gDcZ2lsx2UN47HUr23okkk5fw0hqlE2DMN6WG9mFJNmy6LruocUc_AYiI9mh4DIuV9PzVNByHUPSUVvJHRyp5Z7e1wHXyO6dLW84NpPq6KLN4CsEBcf3fJmh5hdOvvuvO9y8i5nrqd2pYQKR6zrRKCHx_4t6hvAq08p-qY_Tf6ZJYmYIiYf73kzwSTThlp0Dj"],
+        distance_meters: 189
+      },
+      {
+        category: "bar",
+        place_id: "ChIJP-j0XtiLGGARiTLxw5cNyUc",
+        name: "Bar Stars Tokyo",
+        latitude: 35.6484496,
+        longitude: 139.7124148,
+        rating: 4.4,
+        photos: ["places/ChIJP-j0XtiLGGARiTLxw5cNyUc/photos/Ab43m-ujTY2CqhBUSX6BLi-SiCdc-AOMMXkiBtpVBjbRETnbPb_sDYcOSw5wrfV6iiNga9MEsj2ENhhFK3qOdIG6Ke4pS6c3CL3KpwEoMHdVcHxqI5fJ_x1B7Su3PfTitdVq9zeOEPiIpac2_twMwhLizkcNpcvc9yEXnJrL2xppLnxNrzNakKIVtXpvFcq_lITEqlOoXQotGZX1wrPtN8jfP3NBTiLvloOaG_QBQASgsTN3yNWpL3De0rJS6uXGawg-PKLiRySSC-LN5x7g2OkYTn-iSgpGekppKuCD6ZBkYKQ8NxF40cce6-SCGIDSNSqZinlAzK14Gc6e3P08XH7V6mmz69bke4agNp9Xd9fKxFRFhipiIAPuQZut9eYUH1NLj1xCbzlel4NSB-bqjpfRVJw_EQZ2PWbfdHDjEsLo30JRQQ"],
+        distance_meters: 211
+      },
+      {
+        category: "park",
+        place_id: "ChIJPd24vhSLGGARAU1Rql_EpZI",
+        name: "Shinbashifureai Park",
+        latitude: 35.6464824,
+        longitude: 139.7156513,
+        rating: 3.0,
+        photos: ["places/ChIJPd24vhSLGGARAU1Rql_EpZI/photos/Ab43m-sH319KyRb4nHhT58FfR7qcsGYDRNjgfP1eERGE-itMbSg6Y9p4VSM3BGUsm-nZwMJk_q9BDTUnNObowwYiyWFGtXiV9lZeufxld7C5QRmWWpur8jVLk_NTcqmvrDzMX3ncTBAMXjfVwrzTttiMj1CT9yczDxKEh4aS-4s6Ul1wCbI2oHb-G6zC3FGCTctv1nGDcoQNe95f60PXH0NfA__mr0JbO8AKqelxbhTwooQwNJmZb9ICTdhkAiGFwDWjCtHHmZe0y-ERINf4AtyjU4zhVuDLDxoQ9XtbrV6JQDjabYqdCboQy7gVUSnQNLiaarOBMEIc3tIXH_40D836twMW-3PK-0Ww7m5fTcUd_sP9j7iTw-WcnkTvzt7UKseERmcgClGce_NlGC8AzAwUVHLUZkaCLhmfD53a_rRX0y5Nkxg"],
+        distance_meters: 262
+      },
+      {
+        category: "park",
+        place_id: "ChIJSylf0UGLGGARpQ-MXDiKLuE",
+        name: "Ebisu-higashi Park",
+        latitude: 35.648074900000005,
+        longitude: 139.71177319999998,
+        rating: 3.7,
+        photos: ["places/ChIJSylf0UGLGGARpQ-MXDiKLuE/photos/Ab43m-uA0Hgvfaz5TPxaqUzaFw8RmfwWfJbdJVrfuEC26IszrHaNCsaG9JyiFK1Sm0B0gDkaB-Mpz5nsgxLjpYCJSNX9rEUgpjS9M-ahVCADXJUuwBTylzRadOPPQzfrWyKW7fcisl73S1-CdzHj9a_3xuQH_OQK2MZYFCcYhLUBmuqVQQaG6bvxBmXpVygIGgkKYrop2cVQomNF51F_TNuZS8Sq90J02EQFlhHykq7YJhWkgbwcKM_0RVfWff9s7_9Pzpt8EqfO55wVVOtwUHavvyVzc0Z2tu2iLf209oUjoceqGJu2cI_YvRJ3-DUzpiEcJ65yO1Naxint0ZLMTbCiXMPnuRztEpXvzzwt_qH_uGX6b78x2uM6Esih1xn6aL-_qwKx9uUpV6RoZ1VccW5I4_P-8Rmh7XYbkeGC6muQPGJjCq8"],
+        distance_meters: 276
+      },
+      {
+        category: "park",
+        place_id: "ChIJOxtz1--LGGARNkYDuYlrFVY",
+        name: "Ebisushinbashi Park",
+        latitude: 35.6463726,
+        longitude: 139.7161851,
+        rating: 4.0,
+        photos: ["places/ChIJOxtz1--LGGARNkYDuYlrFVY/photos/Ab43m-vJtF34_DT01SpMCoZhHW7DyqjHUl0VXC5Xiis0s374b5QHouhCNrUBjP_btDEszUE9-SUWnijclaWYdlfAA2jl5fQyVJ8GE9CCu0RkspvGJme192LKiSYlRrhN-PEVvWvfxShdGzfuoyGFprdl2xoACF3fvqxhgl630uF6c3zj_3VNI3mh04tOG9Y9wTLV3iJEGvFTZZqp74ZF8jRpxWHLZx_9HZEbAkLtIKBd2Bkng813C6L0QMXXwHNt4VjQt1BOScOtzIzew4ND5D0Ott2hf_JtP_m_IdZ-y5HACJ5g316b5GVgPqxb8WDPs805TK6c9HAfXAaIJ1RDCrm2J7L86CpoSR9-tTxvSTw67VUOCKosODnslWd5eCzEXi6js9MYVJHIklD5GQFmRU-99468k9Vi79OW0sncpTyWUsQ"],
+        distance_meters: 292
+      },
+      {
+        category: "park",
+        place_id: "ChIJqbujeWmLGGARhLvLecjTkj4",
+        name: "Shibuya City Hiroo 2nd Children's Playground",
+        latitude: 35.651926599999996,
+        longitude: 139.71436649999998,
+        rating: 3.3,
+        photos: ["places/ChIJqbujeWmLGGARhLvLecjTkj4/photos/Ab43m-tB59Zq7BCytDTrw9Gjuxlzuxsy5wNtfw0cbCvVM_aWHDndeNIyYyVuX-oaSRrHP_zNTn5R9pebEknD6K6hoGllLIAhKoHL7YaXkhdsT6lYnvCVS94zqyI4OltlxvztDuduh95CiY4R74yeSmBgnvBdG8DTR-NwPIc06gywQATe9r-xcGISVqLohrpqUZKdphnAzkahw3kf0_W8eQww68AaXVUZDo8ZO1FBhE9JLnJwocZUU0RlU1oB1ZkvivpGchQK545cW8h6UvUhhnbBrmPftpmW6sFCn9SOtJqK6_VSvVNKuAFejILcjzFUBTWt_0o03b3kF-Uk7ZtzGL4al12TbiugjW1cW0Jf3WIMWVMm6jNvVBmF1sW42IL4tYBseMlD5kvU2MXjf1-j-iCUfUh7vBpunEFJWU0xBsVVMVt4eo2j"],
+        distance_meters: 359
+      },
+      {
+        category: "park",
+        place_id: "ChIJNcv7LBOLGGAR71GxVFPhUHs",
+        name: "臨川四季の森",
+        latitude: 35.6485494,
+        longitude: 139.71879619999999,
+        rating: 3.5,
+        photos: ["places/ChIJNcv7LBOLGGAR71GxVFPhUHs/photos/Ab43m-ua9wc-YwQbxPkVVaj3l17-92Cg82EfadqOrNsBRD61ZCB8PYED1lr7oHoUgZlrQo-MMVZFuMC9MDsBPhnk_sWLiWT0ZqH_jZGau_9LzApqAlZAIjePlRT5jVSM7rGKvwMw-IW1OjsT_bYT-a_sv0qo3OWue-v1LyXJ3vkOXkrH9HpQvViIDmNPfDXUIa1SfBeqEiSFqp8HG-okzbZ3rOoWxJ7BnSkgu6WV9C9g0whawJuRp-Y3eoTT0gcKKL30a_4OTiIOnZQsdeCDd3h56pGMiMpfaOBl8uHKhRtubSSWetd0hv__wxJIbLAThxLoBEu0WizeSJ5CTnCAgeqBISvC9XNyc_hDoXwOrY-lQ2lM4o1LPAYeBGFnrZr3MSuvt84ISvkBnJT6GuvufvwfHD6Q-fJx1Bp8PepEDpCoEbk1xAENPUv2aiiXgnYE01fx"],
+        distance_meters: 368
+      },
+      {
+        category: "gym",
+        place_id: "ChIJyfnMRWuLGGARK6rNdAR0iLQ",
+        name: "渋谷区空道協会 大道塾渋谷支部",
+        latitude: 35.648143,
+        longitude: 139.71576299999998,
+        rating: 5.0,
+        photos: ["places/ChIJyfnMRWuLGGARK6rNdAR0iLQ/photos/Ab43m-vZl9_Ff7Qebcl1QMV_qRE22hhHEt3R7ecqaYdR-_A6JibnUmPqHuc8FP_SqYLMCHyqzDm2synWaonpC979fVLo07dIatioX7TP0L1SxSmSDUC76UALXQFjdXUlNatVc4w7WM5pU8cZwt-HLERs2H9MlZHG7BDxIIlT9wDUJ7keeNx5ov8zaB4ONsFbqERLadgYOm0kRMC-qwvz9RpD3Lh0MBoJOWGFjwC-BzYL3ZsojiEDchvw4_XIiMtV9-YED26GZZ5mlOqFMqWHJ1RazvEqQysXpQfDon7jg60Duol6bPAE4QNVLX4jRgMo5_8sxig2MlslcQ5r4njlGGB_w4Xe8jL5CGfIdlqvP7D2gVzNapEIzES5GaWknYB-2D5fZvY1YxcubzrHIuePQs68WqNjtD5TgfBWgDsPyEju4TDgO40J"],
+        distance_meters: 113
+      },
+      {
+        category: "gym",
+        place_id: "ChIJq6quX2uLGGARikLFrPJ0D0I",
+        name: "SSSN",
+        latitude: 35.648763599999995,
+        longitude: 139.7165289,
+        rating: 5.0,
+        photos: [],
+        distance_meters: 163
+      },
+      {
+        category: "gym",
+        place_id: "ChIJX5qSoGyLGGARKbqGVGn3sxA",
+        name: "空手道紲塾 恵比須道場",
+        latitude: 35.6487921,
+        longitude: 139.71673389999998,
+        rating: 4.0,
+        photos: ["places/ChIJX5qSoGyLGGARKbqGVGn3sxA/photos/Ab43m-uEs91WuvLZvh9wnwk0rg21Mr-so8yabvWtOtIBlk8Xl5ZtCNZgWPsR6SGs2Lcegl8nm-C0WNpdfILsAcxSegV5SGknn5aoEQnrozmess_mZsP6sBHbh34XAu0E9nUr5IOExcq9ndKRiBcyhR7PM2AAud_HA9ZlNDacSmTkIRWy4vP00mgYqfnPYTxojqKiuqGOTQZ2kR36gzYigvEHuPUKG6pan0ZYcCuAfJVRubImM6mjYkOz8vuFG7lLUuqH6NbzOZleh9U9UIWQ0Ral8b1PYHGdtCV6WQEcyj3mly7eZ3u8nTb0Svu-8-o72CI0ThTH7g9NnzjxBC939DUbknX4_JSOlYEHIP2DipQ6p-ROjIQi98qJIR7iqJrOYtmiRN-uL9--aYI-z9zdS1rfDoZOOAay7bT6Xl7yZdxZ78wXFWQz"],
+        distance_meters: 181
+      },
+      {
+        category: "gym",
+        place_id: "ChIJWZlpqGyLGGARYzQ7WRdLjRc",
+        name: "ジュニアスポーツクラブ",
+        latitude: 35.6483488,
+        longitude: 139.7167721,
+        rating: nil,
+        photos: [],
+        distance_meters: 189
+      },
+      {
+        category: "gym",
+        place_id: "ChIJNfRiOAeLGGAR-1eDubJgZWE",
+        name: "venus恵比寿店",
+        latitude: 35.648753,
+        longitude: 139.71254890000003,
+        rating: 4.9,
+        photos: ["places/ChIJNfRiOAeLGGAR-1eDubJgZWE/photos/Ab43m-vLnkQMYpQqGPPBk40ZCy3NE3ROmjWgPX-lPwVu6LUtDvEgmJtrOwUgSZ0Qh3rE_vU6agaHzp0yyu0r8ZJPRuFZGbTt7SrInkFbrywpRM9AItCoPuqxpDQBu2mGNA9wdQNpKzIfEnleHttXApfZ8hcloh74_BUNWYmH3MvounH0dtJ7xG0nco8l_Ul7LWVMaHwGGwYVcAjyNEL0psZ8_fb-5dePpye41TX5n1j2Q58oznoy-182CykW8YuO47OzGF1uwUKXRxVdS4CPkXs0dIuOcsl6u8Rwq0FPy4-8nzywlH6vh197tEI9w9mct7xSGj6NGFYPutWLq0P6uCC56o2XzoRYMSGV1twNY6g2LyFJx71toLRlxuwwsP9VDJZl0DdRzKGeHzAOrWtT7-iyS83efy3ieu6oeodB2talIySIXfv7ShMiaCfBxCT6r7_d"],
+        distance_meters: 197
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJOclUWmuLGGARx3YVCIMUMiM",
+        name: "Hiroo 1-Chōme Children's Playground",
+        latitude: 35.6482806,
+        longitude: 139.7162237,
+        rating: 3.5,
+        photos: ["places/ChIJOclUWmuLGGARx3YVCIMUMiM/photos/Ab43m-uHIqhU0he1ZeuMvJ_PjpNq_t3CIYF6vI88TarNQFZfsdgYBbt3kmK1ecADDSfkRpi7axDfWPChU94hxpiVVrDhIU3nilt6Evi6NapChWeyLJC9M0KeokmKoy23PHoNiPORwBLMF6jzbdaqBQ2V-sdo8OR1tkO_3kuwfm3kKG6erTTje9o3dzGUfO5Ihzj2beypHrPAaJS9eXjZhKJE3EvgCk_hFq4QpLPqjwz-5PxqmpP82v4KGcuhKYyEhn_5p5RIaQk_yG17UW3WwM0kntOa3tco5Bs6tlFKziILcU625MKaHXgBRqZiqkPQdNUU3LdmOOdhY0DazoUFdgshfVVtpv4flyU57HK9Zf8UN2GHywDc9X8afXQGWgZ4rfdtpmihrw_RhJHmrBYliLrnKhBTi6qPUAG-KnXxanj_Fh4"],
+        distance_meters: 144
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJSylf0UGLGGARpQ-MXDiKLuE",
+        name: "Ebisu-higashi Park",
+        latitude: 35.648074900000005,
+        longitude: 139.71177319999998,
+        rating: 3.7,
+        photos: ["places/ChIJSylf0UGLGGARpQ-MXDiKLuE/photos/Ab43m-vAAPMZIXxdw85lVg-qSb-pX81YLLvHsrXDojUIM1f8e3Pg59fczth__ljLapG-mB1t79KxFA1VOvsBScljL9HP83-NhRwtRm9205YOFMbjpHfUwEjHOTIfuCI4iPZkuqxWnTjHXhqWfMz4z-tB06gAdCUDS-piePj1feg99QpueFxRNkm0kEykN1GfmOBU6hhNNy4WZsnQOTgdOBbCLUtw1PA3xqQUX0r415Z48IBRWUnapJR_6mZ3tJePanEQw0ld_LxIS_phUN1ueezezC3BtuCq9XWwYhp-tEZhIlUJMfzKL6t6gRzT2JnVehJ-dLNnzh_SdgakSyOGK3ZmeOuapxI9z0EgaxDg-2JxmqY364NEyRfzdVyHmcLjCKe1elV6dyJAl9q6ASHjovOJdL78ZWziqvvFpfZPmHpPESilA7s"],
+        distance_meters: 276
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJOb7iZhOLGGAREl2YWGF-j_g",
+        name: "Sorisso Japanese Cooking: Designing Happiness and Flavor for Travelers",
+        latitude: 35.646679999999996,
+        longitude: 139.71708660000002,
+        rating: 3.8,
+        photos: ["places/ChIJOb7iZhOLGGAREl2YWGF-j_g/photos/Ab43m-uN3NtZQ6FEYLOc6jj9DdpV6ZkHfGLm2cGpXEGkwLgTOZb9EKQf35b37mWG5YXnd9sKw8oUAMSLP04geuH93F_VF9jbEODHYJqyryJLWTby2LteC8Q7fmzUvEeDB0NrHtTGWtShUu-S_z7cPpqij4RXT1Z_cOhoNhrTHbeyYiYRs0rdk7cP4qZ3G2jrLyxeVqTKDwpcK0HN7p87E4hc8WCrlhHiqLruTSa9weuF7kqOl3-JQ_kvumgsa6mJ0Re8BTcTCQDzt4zPjJe7E5YM4kIJQy_1gbUYOck1sutIRBlZYqbYcaOqi2WP31-Dba1AFVoqTrNsnk7g872GsnOKrnjAAUrTUQxi7ByX7eM3tHpb1R3-CKsu2kVIIRuVQxTvO2uFbEuiecKvVvb5AYQvtNaVWtpjtLLhJwnk9vhqExaI-mblrQIWbHX40fMdCw"],
+        distance_meters: 311
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ5z1EL0CLGGAR1wwRtZZpeuA",
+        name: "Gallery Ko-getsu",
+        latitude: 35.6473693,
+        longitude: 139.7111876,
+        rating: 3.6,
+        photos: ["places/ChIJ5z1EL0CLGGAR1wwRtZZpeuA/photos/Ab43m-sACwas7kUFs3gxzhDVDpbncUl6nUwLmQdnMSxW4FDq6r8FcoiprFNfVdcRglQC8vP7C26mYcMOyDGNypK7_TitIPPujqfY5216PAVVm3UwVpXdK1NldZEYXDXhbyaLpRcF6eyxLQ-Gwy_MdEirUoDShZA7mijoLwIrr92MJNAcfc2OyEyX5jyO9VOVsJeViYhd1eAcNlTaVSuXazwRt3LU_ZdV6HOkCijpYqZatRiCZAkCHj7wV5G1dSJfEn2GYszBbqiXXUFk73P4kUAMQNI-mrqpAA5ZHR1-yx1uu3GMFtafmziQU7CagwBUXO_wVg2j5fyF2bMzgn1Zo0grrpEByAorBcP-yKVSMBNuQJt0TTb9mu4EImw2gpkaci1p2CA9rc8QDRPzCU1L25l0GlG1OZwrJPjtscM8diGqsvMVrw"],
+        distance_meters: 353
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJNcv7LBOLGGAR71GxVFPhUHs",
+        name: "臨川四季の森",
+        latitude: 35.6485494,
+        longitude: 139.71879619999999,
+        rating: 3.5,
+        photos: ["places/ChIJNcv7LBOLGGAR71GxVFPhUHs/photos/Ab43m-ug0iS_XcLtL7li7H5PII0H05ZWrR7FDBR0ENv9xUrYujvAc5VhoyxGsCVenwIQYD4jEg8VdVtGUht9LVuDedqQDYQPwK4L2urSJ5hnEo5cjLYEwX9UBlK13i0cw5MC-DhAvgwCLC_5HVsbKfZuwnWr_3wTYkS9H6NC-t6yrYTgJBFaYE72YkxZ5Kg-pF10dKmAWeWQ3a-RH2viKc2hA6LU819C7OoN7PWLDAyPvxc9Eh7Jk5iOEMj7aROyCtUV36QWvTlwDI4S_EniIf50G5vPH-przMx9Sq5bfJp6QRUQuQbGzmnFDH-G1duXqYsQl4p6oeZqxgyWxIYEcD5Oz6suT-0l9M9uDfNWGCtNhgynirMnmsIvAlPgHYjl_PqmNdtMArY7Pp99h1SSpq9dxCWIn8SKykWEXNC3SRV0OhpfkWIYrUPSQm2cWklB9VeQ"],
+        distance_meters: 368
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJOePZkRqLGGARm7FKa5iMkJE",
+        name: "餃子の酔拳 恵比寿横丁",
+        latitude: 35.6480551,
+        longitude: 139.7107435,
+        rating: 4.6,
+        photos: ["places/ChIJOePZkRqLGGARm7FKa5iMkJE/photos/Ab43m-uRgghC5wwFjIDEehn8zyrVt1XOH-xULLLD0b29-BwhohYJG2nmYpjSdehEvT55NqTrsVyIIv8fhzGoQAaok33MEcoi4I_5OoLp6cVRfVAuzjj9YlR-q5crMnoAqK4IRrGNBVJFekYboOHvZsOBT-mR3DqxiTCRossUg9snXSjKF2wpBl3sD9NzdImnPakMbKAABSn9GNBdV9iktbn2ppwOH9m3n12W1iw0kzdigVvW4ttR4FgFG980m0383SxuCZO8xoT0vVICX2ZlQmkBZNQDN9bD0eB7b5zBRLEzmRTBsVKdRFVPQs8aQBbMRaAUxzmiFQMbPF5tOkpwYozqo8Ij-pnQCULv5Y8l7bbJLcMSFkZTEyBSesYTpkNSfSh-PN2R1IXsRTc1nv27BaqOlXy_913fD1Spls3Yh1b78DjEAg"],
+        distance_meters: 367
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJUTX1zEGLGGAR8gyM3dqxEgo",
+        name: "Gallery Yamagoya",
+        latitude: 35.6478292,
+        longitude: 139.7106838,
+        rating: 4.6,
+        photos: ["places/ChIJUTX1zEGLGGAR8gyM3dqxEgo/photos/Ab43m-t8eqEJ-FPexPtF9TgeNnhhGepXI7ZSR5zqOE5nn3MyXEoUaCfxN5uf3QUbToHkw9NlGvD0bktq0pm5urVD_UKgWR0eMhI4Z2gN9-qX-aQSmWr80b0_aleVUjSELAXUcR-nOzbFoymrEuSY-M1bpwqgjBCd1sLQVnPFtwL3AB7GPjVF621PtaTn70R7b29cGHk8yzJ4Kz-QDwQs7T4j5T4kUQ4HTDZzNdNT6XwkdNEL3mOzSEOtBTvWKsWH3Wd5HrIr33Up9Ccz7a_AR912cONVzTNp-_m_35W4uHXMWar_GpqYM0yxuYfI33DfGAYktleTABIITOfIOH4ksIK6z_Q9C2JdbPI56IoGc3qwU6IcVGxGZ0LassiiYPLcRwnu5lkN_sinIrHMyWfDLOZTCN2tv8tNaCmQ_nhHPfZ8PQrRbQ"],
+        distance_meters: 378
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJr6-L2WyLGGARR2PoMnqdgHU",
+        name: "Nezumizuka",
+        latitude: 35.6493555,
+        longitude: 139.718915,
+        rating: 4.4,
+        photos: ["places/ChIJr6-L2WyLGGARR2PoMnqdgHU/photos/Ab43m-uxEDxO0_GVRH_0LGocn4Z2ncZ3QJlrNxH6ZPAhW2iIZQf0W6p-PfoFGB46kw5qNvp_jy7NiKNS7l5jZg7H1X6iUhV2LoDPGAhJSONUwCrfa9ZNM5Tgg5JHcUy3jiFMUiC8bkXnJxge2K2VPNG_0TMjkzPom9kZpYHN-nJf4KJvV0l7BDaxpbGAE2m-kxmRV8fK5PgXMHYqRtTZuyQk9gOGe8-VzEgNUh5x7NTphtLYcY4SI5nJSDA1a3Fznl1L69ohQJwK6iePyv29Ju4juwUB4zUMmCs_iN03ZX7SubdfNoriqwgVawDgFmlnn0o_ht2E_Dy2A7YLCNxy_m0gFzPskqdY3wrj_3Nf1r5fvFeFYgCRvIpyCz51NSqYgUBJKx1e_kkNBqo3a1yqajCY08mnJdi_dpx9jUrUb_VGriwX604"],
+        distance_meters: 385
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJKT4_IG2LGGARMn9DEVzupDk",
+        name: "Kōrin-in Temple",
+        latitude: 35.6497264,
+        longitude: 139.7191746,
+        rating: 4.4,
+        photos: ["places/ChIJKT4_IG2LGGARMn9DEVzupDk/photos/Ab43m-uDU4weWQxV2UkuGxYK9KSEHZkKWaUhsLxSaGLCBTUbqSYioo28iJ3T-AkjCcf38JJ9BPzHZRVniTsqJQZItTHSLLkP8fE5yW69snw9CetmGEvjOGaLqz4VtPCUw6sIe5452Ku24dm6BfzUm6Ime7Vz3UO6j51o30gwxuxH0ZwXTbm41hJh2D0iLkFlACqfgJPGKa3AxE3dgW_8IOfFBNDl2o63rMQePt6Dhg-li-AN6NSWrtX5rsCif9WQXoeiqJHY2069rTcMUAlq-aPhSZF90IDlc0vLiuc5LJltx0ePfFYJhkOYA5wR1vaNFwMG0utSoiCR-DocuMHUYcFn4vfqhZeA1RMa98_ykUSuGtQYJB64cYHyTR3iC3Aksgp8Uqhj21aggWehjf68qaDaVRxRGfzFPhVMO33Cc4fZ4XSWfX1a"],
+        distance_meters: 417
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJp1QzPECLGGARa61TFJlj1SQ",
+        name: "Ebisu Station East Exit Park",
+        latitude: 35.6466778,
+        longitude: 139.71066249999998,
+        rating: 3.6,
+        photos: ["places/ChIJp1QzPECLGGARa61TFJlj1SQ/photos/Ab43m-so9FlEZH-tvcDrpTJ40aTyBIhE30nsvL_NzYeChwVdC0e6R7o0nqu12DR90fkA0Sa_XjShFCdLYUBtkc0WvaFtU5yRLuahKNDmKiqJrrccekXGj1JRDmM62XsziqIO60HHH__qszb6dhim-83Qj_Ds3rLG_PNfzi2U8kuSBlBNQSdYAUeI7NVkCbaN6it_OgVEZAcYouW2Ed8xD_Dr5GZHvth9VNBslSL-Odok76V2cLT_IEYdeGqVFYX7fWGV_CR4puZouOgKAMO5MoSXHvXR7XTHLk178X8Fgb8iFqRw4evAspvubYaWK8tkU16nrGTKgRAc9FWjoAo4aVKWooOlYAIWwjC_gOM4yXNJ6m1smW9o0Tw5KhbuINvegIRhM3owr7vOcDqPhB4jZw4Egoz0Kjl6aK8drpAXtMsQ6r74nw"],
+        distance_meters: 432
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJHffjRkCLGGAR304p75Idq4U",
+        name: "Ebisu Station",
+        latitude: 35.6467145,
+        longitude: 139.71008179999998,
+        rating: 3.8,
+        photos: [],
+        distance_meters: 475
+      },
+    ]
+  },
+  "STUMP SA 501" => {
+    score_inputs: {"atm"=>{"nearest_m"=>21}, "bar"=>{"tenth_m"=>168}, "gym"=>{"nearest_m"=>111}, "cafe"=>{"tenth_m"=>113}, "park"=>{"fifth_m"=>284, "nearest_m"=>64}, "restaurant"=>{"tenth_m"=>39}, "supermarket"=>{"nearest_m"=>36}, "transit_station"=>{"station_name"=>"Hiro-o Station", "time_to_station"=>4}, "convenience_store"=>{"nearest_m"=>159}, "peace_quiet_score"=>0.083, "tourist_attraction"=>{"tenth_m"=>348}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJzwpVr3KLGGARBfgew51Dqso",
+        name: "7-Eleven Hiroo station square store",
+        latitude: 35.6505917,
+        longitude: 139.72210149999998,
+        rating: 2.6,
+        photos: ["places/ChIJzwpVr3KLGGARBfgew51Dqso/photos/Ab43m-v2fIfkBbxgVZZY0XBPglUVNsSo4734kiEyLWSMht0Zn-x8x068eVerE3RUYwDBzHfSiuD67tx_acHHk8hvNXhOWIfvUFFxrgmfzp_yApzQE2Hcdn8OGFP4fgTajGMkZ5TuWMx2r45pgzrt0Agzi28Br0ZMgwTHU5e7yT-BVwLEUA_Eix5IUUw-6QGVTo2yo989aErnn-V5tGQXesebvn2ge29hNntW2c9LCHqBx_CEqyIyhwt8EIg4Dt666DZDtNfoGabooFlZkQI3UbPcEZSEp4kcPPCbLWHKvbo7NFkkM7gcMncaNoNsLQp3GWdS301q81rRisekQfxuPpI4FmEVswlILbUES1xojQtAPJWzfXRhUBZTUAA9POZGH9LJhm_1x1e_vwYIqpsJhFoIq17xwuS306dZq8CGfJqRiznzO6Xp"],
+        distance_meters: 159
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJHWLWenKLGGARs_Xs2aKc7t4",
+        name: "FamilyMart",
+        latitude: 35.6528814,
+        longitude: 139.7223621,
+        rating: 3.8,
+        photos: ["places/ChIJHWLWenKLGGARs_Xs2aKc7t4/photos/Ab43m-tBe8iGh5t88lZUVjESCOFaS2gd2cTGll-YfeyfwOrGo15s5TbGqJtBkPsvyuuq8mEz_sF1Wx2y46mMNBdh94TvJRqUpySjRloCnoBABcH6mNFkf53UsSXJK9syBHLfeW2TUc7pP0nTVzptKUVgJYFyj0tiFjXFBl2B_koHOaevmItFfhO09K9FRZ7V7w5_bOh3xX56pTq_NC6IgQw8gD-_8ePAVekLmr4u2b0Lc3-MFBMwzGW_p6I6MWfhWrH9NFqpD5ORBQke22bHCqps0Mz3wFMBzBDYnyqITQx3jezdblokaXjMdpRnNqsRmhI4xUpFSIIQjbDsweKgEv22qF8o5p9El65bzzPdDpFZalFvDCNorvvjHd9kfoh3q32uNIOXJIKSRZpx3Ubbc6EdQfC7Xe8WYfB2w4AtUUVMJPow8eA"],
+        distance_meters: 201
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJdbCGF3KLGGARQ-9SyoPc-fA",
+        name: "7-Eleven",
+        latitude: 35.654306,
+        longitude: 139.722916,
+        rating: 3.5,
+        photos: ["places/ChIJdbCGF3KLGGARQ-9SyoPc-fA/photos/Ab43m-twzcvHTSOb0iwHqIr1C4MEpsGCdTXclMPMMymfUG3pzCrj7P44PetWe2TcN_3qufE1ogbPOY14k4An8N1TQNK1GlfFIUqpQryeZ8cXcVRmS4Zb66lmOgQptq4a69AUTS3Q8m65_pQh4bG8y8IGOzaCsTEdJNs4hqBmM46bICJ1dU5C8FpRm5uO_SI9nRk4XQ3ChLPBUsasVoEBHEpsf082lsMJ_8B2ykXzKOYpqFifziheG_bFyzrlAZts0R2Zr5YCHHgiRHdH7bCzWQthdqao-ck8ckSz7AGitiJKJYdx3dDZKghxPizyVApoHPm28RI7HUBzU9n-gFvOatMlo9tfXajjK84vFWyxlbqb65Plkpl-EMQ5wD9mu00BKR5heNzs8_lNi75Z-sQBkVDdP89WfYJL6Ov5LSze8JBkwDP71Qqj"],
+        distance_meters: 332
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ53zgM22LGGARzuqy_PbAklk",
+        name: "Natural Lawson",
+        latitude: 35.6494503,
+        longitude: 139.7200765,
+        rating: 3.7,
+        photos: ["places/ChIJ53zgM22LGGARzuqy_PbAklk/photos/Ab43m-uMDk1P9aP-BvJnflmfCmivCx5tAYz1o22-s_y3F5Tw-AV_Eh5laUARv6UQJftE3hYiwZiId14Gxw0xRmgj9-s1yiTOba41cDBGLiEHzkgL2Up8AuD_kwuS6TDHWVH0C3ByA4t0NlmsFk348B8ISRbvZlDeMb3fPJ69QnXrx_GHVybTPywPsHq5iJiXhTjgrNEaQCrweyKDsFKgFj6MDjl480_AiGn0Aj_KhuHgMovoBH_uS1Zqx-oUd-YCcMtpbDXxV5GTlc_Z7D0KXfVN2lpyZbK_QFy8vLpgQEj130mFvFoHdPl_fF0OWAbxOnTH1ZqEUQgwk8HTzbhQ-prgGUh4EB_BrjdtqVi3GyaIMt3WUAWP7-HDjadi_1OqN5JLgNwWzlopNHVhkQxtDjh-xPH9mW_o5jL_87y8Ziw5Q12FC4f7"],
+        distance_meters: 382
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJUVS2Ra6LGGAR0zf2WQ7sTbU",
+        name: "7-Eleven Minamiazabu 5 Gaiennishi-dori Shop",
+        latitude: 35.6550373,
+        longitude: 139.72295,
+        rating: 3.9,
+        photos: ["places/ChIJUVS2Ra6LGGAR0zf2WQ7sTbU/photos/Ab43m-staerz_JaAK2Yjoneq2I1u_nNch5-X996SZRt2fE3i-skwyAO7onqg7KN6vdHisalUdCLWI2EOyZhJPIqXzKHJYFiZvCwW-n46EFyBK1Lwol6dKOmeou1BW76H30gqHsoqBi0lz9Qsrp0nYTUOjxlwzu4SLomnTdJZdeGAzZPMeHBOOw_AFhkNU-jv1r3NQPpj9RBDI5LFjCD-My4tJAJSW0WCEMm-j3r-EGGo1aOJb2h8EMeAuj3L1Sw6_1R_aucWBEojY7AW2mT2FxRbA8kqEU9BbYrIiM9vt8Qr9Ih8YM3RAl4BkF21ik22u9O_eoYtvJF6ZWcQPRDMKFLVcz_SzyCBofsxto95Z-UooU_GePfu0_1vtnQ4tgajXF4PleSevUBN300leeuzDpBdCSF8AEbQMuyGIlv0iCGKPBzZVOXq"],
+        distance_meters: 412
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJmXquXACLGGARLP732kP-g1Y",
+        name: "Super extranjeros",
+        latitude: 35.651301800000006,
+        longitude: 139.72396709999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 36
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJoWUL1nKLGGARksmuxkPoQfU",
+        name: "National Azabu",
+        latitude: 35.6512776,
+        longitude: 139.7241397,
+        rating: 4.2,
+        photos: ["places/ChIJoWUL1nKLGGARksmuxkPoQfU/photos/Ab43m-vc_iW8XfLVVHiZ9HPfzW_OUOthfnHpO-CcX9LilPaaWswR2WqFy_X4fX3wCJS6ANm9jnHPARboluO2Z6Xx98khPJPBIZ67fIeDjTUCAEiS8tA-80Sc-XAIzI3VraWAsILgWASfRxjgNHMpIGgYcUEDeMB6-p3zGtyMTNSDhHPYaBQJh32uTqfRThaAFViD-ak2jMDxF9kDVESM9kCYJ-2FHXnixnvc3hVOMKJvVxduV6zzylvEmnIgSMtUTRqoIQkQGhJ62V3Bai9drIjQQ-vvKGCwrgQlvU9GerJSEq_UCtE82BTSOUIyqde0U0f6exnEInOjaWt1n8Y6ScDoW0EUqCzncEMMOTFcxvJByiMQxKYfdfTulo9RO9YSkI_zKqcqA4OS7aqepqEoJ3LLJGow2VrSwHN8No_o9s3uFB5wnHkt"],
+        distance_meters: 51
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJkV3t58SLGGARZNSyxzDG9Ec",
+        name: "DEAN & DELUCA Hiroo",
+        latitude: 35.650532,
+        longitude: 139.722093,
+        rating: 4.0,
+        photos: ["places/ChIJkV3t58SLGGARZNSyxzDG9Ec/photos/Ab43m-vhxn-abaSDz78jabGPmObgZO-z7fpnfUqJnfGPDw_9kc-NtFRZ8olvLpE8hMbPJGcLsCFwOetK7vCbNz368o5jNXZMWkpyMKqWhF-Y-EAA6jE-ZewyTpT6x16dfBcAEIHjBSUupIWTK4skedQrdX5Y-ESHXfwlmVM_2U7vgiyZLMCuKDewnGOTLWg3ZuhIyf8ASpbmXaa9DFPiPHhYsNDjKUOc2lxCRI-KDAjNXvJfSpzs5nhckLmaCE8lUTT3U3F__z4yhF3r5sTfx3X3knk6j2UcOjPqzrWriUjd9XF1VAZR2fDn5C3lA7ekgLeUecMe9s9qK-CLJusPrSkiXbqq-QQ0H2NGP9DGPn3ABCUk0ye8w0syNNiF6mbweRgsAb2wUMRKnAgtUBU24SQBUtMIeoMiohDHXMtNFSDaGThyKXuJ"],
+        distance_meters: 164
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJGascq3KLGGARIbGWavI347c",
+        name: "MEIDI-YA Hiroo Store",
+        latitude: 35.6501388,
+        longitude: 139.7220611,
+        rating: 4.1,
+        photos: ["places/ChIJGascq3KLGGARIbGWavI347c/photos/Ab43m-vCspIBMvMLELLE9jyhIfK3umTVhJpSqeLK4JaGZAlknCkyjhWQFh6VM-cw5dKyOdHdd9UUKh1q0-55R7CFN6g4gp6Df_zKSr_4qGlRhzhWvvp3a7FYVquCuzuyWl0GuZU07ZWs_TWWOeyqsT4tLo6uOtHHgzBXNFinJvD90ApYH3uLl87F4MaxyeC92gkHTz1ZHRNbRkcSR6P6RIC7zLWKJW6Bgkdwv-_-U98VsgEghPYYEGG9XEywzMO6AHZyYgAQnL_N2uRpPlsHf8MAxyk7Wj45oMPLVEHetiD6imedruqJ3SsZTiDd4JYdH9V6-nORv1R_Nl-5Ej2BIcMIE7pbzvOzz5x4g2wt5NH5_SGe9GiUw7hUY8pEuB8ZV1LlNGNjBpAlztZkCWfE7rpbBEmXdrNdXJcLkGniqssWQyOmDhKZ"],
+        distance_meters: 194
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJ6xQ5E26LGGARINTd4QPD8M0",
+        name: "National Azabu Hiroo Garden Hills",
+        latitude: 35.654729599999996,
+        longitude: 139.7205536,
+        rating: 4.1,
+        photos: ["places/ChIJ6xQ5E26LGGARINTd4QPD8M0/photos/Ab43m-sKUkuN8vsXLNA6jG6fH18k-3FDQ40iIp5VxtijX1vRoiuafR_lTKyAiRNPJwH9dbZ9ZZqQ13-58MjSD3oRMnO9hWJl9grGvRCquTr-B8mZz1AK1uU2m_Wz2hI0qgtuvS5g0n_DyUPth4sh908nkBZWvn-em-No-dsSBUGuGcabB7LfPfrKuNB1sRs7A5MkwyyBKSYpzDFeANpblWrM-U83SMBbyLUu-4AuD8XEQC6IOye8ZuLfPNmL9gI_g2KLxVfrIYs1eRSeIesnb34cgqa-7szo2wLihrMdlBeNAb4tCUpOsB8gfl2w39RmNGi5GFXbbAuSDYT0vcDYkCNcqE2vPxkqHJjkZLIQzGDenPI1eJ7Js1ws9yXcsAGE40E0Zsyr7EMY5MMjCAx152TkgkMh1JOhU4WyHtyeVpOYE1ymeg"],
+        distance_meters: 463
+      },
+      {
+        category: "atm",
+        place_id: "ChIJlY5ZwXKLGGARVBZ9XBE_qF4",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6513832,
+        longitude: 139.7233539,
+        rating: nil,
+        photos: ["places/ChIJlY5ZwXKLGGARVBZ9XBE_qF4/photos/Ab43m-s8UdRZGJFB1gs50ig0wPWyfzwyNIc8f-19HLKy5aO3Y79v0jyGkIfWj1Lu42JtuNs9Wh72QRDl0THu2scxiH6kIFzA9QKI8AJiakfNNIcfsZtAqAIPyLm4y9-KB317M8EXSTfZt7foZzLP2ApelDRpDnCtYat18KovSjNBlO6DWFNjwuHNXfFd3M9193rQupChNz6o0t1brj5S7HsJ1PbaKDv7NNXZse4zrTsQNxLA9-nnCGarQEV97tSii049BWlTszaaNzJfST4oV9j2s1fXpuYZT0ALflyqvYOJpksUnFiZ6BkLaW4rTw3Y1EQ7NvhmDJK584w0TUjflbEaVD87BrpLJIIvTTkbY2lNgohP0-cHytHHr5aDLIKA3ikLZzGUKtQw7vifk6yclf6YnnP7SU4KyPxJkgOO0UjZmFlEiJ-C"],
+        distance_meters: 21
+      },
+      {
+        category: "atm",
+        place_id: "ChIJl8xQwXKLGGARw0x7-rDY0mg",
+        name: "Minami-Azabu 5 Post Office",
+        latitude: 35.6513847,
+        longitude: 139.7232893,
+        rating: 3.5,
+        photos: ["places/ChIJl8xQwXKLGGARw0x7-rDY0mg/photos/Ab43m-tPcrzQAcDsQN6uuplAt5miIMH_1FshezeBlMvyZkstHXs3MOp1oKnuOgBcsj-2xEViMDy68DIxv7IJdPDp0flGV3z-eBArvg8IvXHVn60aTKWqAX_QdXkeDBcUk5x7eMp43YefBSOlABXSXJTgVLo1kecghjBLSdO-cB8T3PeDeC-baZrXPQeaoQQ7hlXz0y-oA59X9Ib4YgeZ1qQvtajoS81DpQ6oFY--GHMg7tN1BYeVeSBOnsZDPD2wCs18Q21mZ_8C3lkB7N_qntbCTnnxCn5DUF-r_NchlBI6FRmKsz2BK01sQOz6PueQQwrT_KL5pcSj4vHE3CsCk0Yz7LxTcVT7mkBFjlIItWZJ_k8ngjiFt4j4jT8fcLyf7Wk93AZnRpPwXaVsLNyd1w2IOalZtioEN9dOgksaJp0RmK1bzvM"],
+        distance_meters: 26
+      },
+      {
+        category: "atm",
+        place_id: "ChIJeVSQbgCLGGARxUMlg-b-yyk",
+        name: "Mizuho Bank ATM",
+        latitude: 35.651074699999995,
+        longitude: 139.7224175,
+        rating: nil,
+        photos: [],
+        distance_meters: 110
+      },
+      {
+        category: "atm",
+        place_id: "ChIJKxsdsXKLGGARAkQ0COK28jo",
+        name: "MUFG Bank, Hiroo Branch",
+        latitude: 35.6506557,
+        longitude: 139.7226535,
+        rating: 3.1,
+        photos: ["places/ChIJKxsdsXKLGGARAkQ0COK28jo/photos/Ab43m-uaETsPS9y_wXxP-ReYGdqnoe1hEH2ET6M3cTUd2wUm7x3KDRkwNXV6_6StHY08p4SMCVybJS7VOFQjrixuxHhUABu4RnAsmjlcGV9-Guw57dAiszHSiXCHVLgEBPDAsLpH5ahFcuZBI9gqOA0_ODaHnbRF4o0XQN4AMbJZbr7KP3-hstKqmTm1JoXoWSC9ZmcAgQXNnzlm3r9ALUJryB5UEWzcfu-0dXa3d9SA7wM_1o4iVdK9jTCNx6YttMPG2clv-rbE1_quYnCUl_eWOP9IjeZ46H0OApPaMhBHLXEtEW9dkL-Wnh3WG--JbNdX6fNW38RnlcfO1EM9IF_NzT6KdOVuemdRko3ASVAUZLbB6xZa3JlvKQu13QQfqFjv5GDkC-9b9SJk3ZC_xqcIH6fxYyJVV3RD4yH07JYr_ucvQaI1PzadH_ZnQZTG-XmB"],
+        distance_meters: 116
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ-ftCTwCLGGART4AoYyqyATs",
+        name: "MUFG Bank ATM",
+        latitude: 35.6504159,
+        longitude: 139.7228016,
+        rating: nil,
+        photos: [],
+        distance_meters: 127
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJvaSTxHKLGGARR0u9-Q4N8Xc",
+        name: "cafe calva",
+        latitude: 35.6513736,
+        longitude: 139.7235853,
+        rating: 4.1,
+        photos: ["places/ChIJvaSTxHKLGGARR0u9-Q4N8Xc/photos/Ab43m-ttiFctlXkYzPfVu451Qx84g2rh81zmold8AKXz7y4EzbVjpadnfxFU2z-ywb4w19IUmzXZf8kzO7c5qvIKFNpwndSyJL0lRDLCKYKOioQwahjCtrMJRNrlmospiRchlOyJX_ND8ymCrR7assb4H1HFqEU62eFDpfETWayxOiJIQCMFeDNVhdtGCKA4KT6Zo7ABda2yF2-2h4jyVPCd4GFv1thRUOh6jP32Q9HLKP4-235wAl0pEfpevusHmdmN5VmcTJdXzKu3yeQm-LYo7X5KBNdOFcTlM5ay-f6KkYwk1oqze59TvpL2s8HFg-60XJTefckEN6Wv0qrIyAnsSeHZn6K371K1VcgBtTc8mwT5HDDAmu6Gw91cZUaFqCKEf63z4yvgz4ML753f2yS_GKgDf38W2c3tp0psvPJLMLYbBCC2"],
+        distance_meters: 0
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJkdpsSnWLGGARo0s387arNM0",
+        name: "le-333 (ル・トワ)",
+        latitude: 35.6512458,
+        longitude: 139.7235269,
+        rating: 3.1,
+        photos: ["places/ChIJkdpsSnWLGGARo0s387arNM0/photos/Ab43m-v3wDGv6l_47ZkMhJ75aVVlXpZZBQCi6VT0dMpyex15yZSOUhy7XTcq2yPOHbrGglmnIi7SycqNCfmOpS5fHBJjKn_Jv29lyRHO1JGZWlOBgSkMku8Z3bZUoFP3FGYkXCbqzur2QzcL1KMeKtHPDh6QZ69xx_Gl9lBJ97060oPhOb9qq8VskhbX3FS8EtuwSQ9faPBJq6IJ8eA54xb2CG_4aHjDuBXPw1-QraCI_FWJSMsh7vk_HV_TzwCmliL48Db8P4igrPfVvyo77YRLWG8Dkf7RJD6K4OUKRTZXYHk9pYJH_W1WrpVOquu4drlL1MD6PY37FdEtw8qTmCKI-IPWsdsDGissazhbFlddPrByoPM5GZCxMJXiYA0Uhe0w5Z2siWx3s0zzJot9cMZ--uMXSvSMXf59LAgqBgg1PMermg"],
+        distance_meters: 15
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJoZJRRACLGGARLdEbknNPx2E",
+        name: "Tully's Coffee",
+        latitude: 35.6515712,
+        longitude: 139.7236522,
+        rating: 4.3,
+        photos: ["places/ChIJoZJRRACLGGARLdEbknNPx2E/photos/Ab43m-uzLfgfwhz4hr31ptMw0Gn8vti5MsVSWa-NCrynW7XbKP7P1hoXChLiuhCKl1yY7R59ZLh0DQxmss-I_cTTcMR7qHuDCPG2PcKv4YThLaV3UqlTfTm0eIq7ZNl_C4fiwiA8cZWDYVQNKor3W5cYP-nSddMx0qY_rOBqURL4gsLkCnjn196FdjMFUOIno_iFwLTpEjruYXLo3tqzUeCoMHLQy1cCBMT7hIE50NmweBxt_90dME6yUeRTbnjz6uFRbX1jZGgVOPYrGFMhtzqJJPcK0JMgMRH9Y4Id3CSj4rsPhDA44S8q3elsPv3tInO2lFW34ZK9EFPA7huVXh54amjgrgNRjg_BM5NgZvz3c7yPQ4vIvv05z37KMsGM_srLGE64RJiIpIFP114fpdsKUAEofAjMN8ejID4h1SEpg1hlGa5-YDKnlGsrgCdiAq_V"],
+        distance_meters: 23
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJsW_AxXKLGGAR5TqQTk-q-XM",
+        name: "Segafredo Zanetti Espresso Shop HIROO",
+        latitude: 35.651175599999995,
+        longitude: 139.7234321,
+        rating: 4.0,
+        photos: ["places/ChIJsW_AxXKLGGAR5TqQTk-q-XM/photos/Ab43m-tTTy01OhsQEX3DEa0-Jv4eBYIwDcBALwN80KC7FiR6tRW0FHmKpbXreXZH1oJe_PUfF_2MbHJj0aBBfVNkSIxEc_Omzb6sWFbQB6UrUyYFVnURUnm_-tzYUfWmmV4ZAMYdQtReoDSCfJxSM2fqgp2g_H25fMLr07RB6MTwI7L5X4-IH5hBNwnRr3VAbCxWjSDYN2t1p64D-zX34OMEPcf5Lj8vlocYDBZH9vdFQES__VCF2D88zzxTxKA05-gPhBni5EYM374ysuBpKS8l15sR4X3s9G_2OUpe96dwWpTsCJvFWKslVlLQa2FvFVqy32CvgV4ZHNuzM3-KSivBytefzxWY2b6EN0q5BXuDst_5l98rGvUom5G6HqTp7570fIJtX3g2rdJ_95eik_PMhg3akKO36SJEF081XR8F_Ekq1Q"],
+        distance_meters: 26
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJK_6Rv3KLGGAR2ZFo8LIQKjM",
+        name: "Bondi Cafe Hiroo",
+        latitude: 35.651486299999995,
+        longitude: 139.72283729999998,
+        rating: 3.9,
+        photos: ["places/ChIJK_6Rv3KLGGAR2ZFo8LIQKjM/photos/Ab43m-uKH4DD8Zs-Tcot9ocY1hyLODiLmv1WB76-8Ud4ZgoaA3IeF3PcXTgK0krv5ypj4qxdIhtTDIBAF8GfTt01hVjUBUkwwr6gH1GubPyhz8e65eOy8QBvH7gyTWPpuBYHPB2MYSHam8Abs7aPU65Ic31NiwgtcZjGKQNBRpBdaebhhMFTR6KqKREnX7407r6CyrvmdQsrtXIDB66btwX_tluPpgmEUOtZG7d9z3McrVWVEEPBPD3kzTpXJbt4Kw1Xjh0dqNPNpuSxu_wRY6Y7DXD9hFTBTiz0vXU69g-KQ2I92ZFhq5JkdB5LZNPzAtnTt1t-7KI99Kk0Jmp7hvMAI5ui3uaD2SzQqFneL0W36HQ7uSxZJuLlDz1Pvtna13Sq0ixgzPvrRgUJzJgRqbRdZXIs7FlLvCxE-VB1farg4Z2doLUd"],
+        distance_meters: 68
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJXzNZTSyLGGARm-bMdBVhf28",
+        name: "3cafe",
+        latitude: 35.651891299999996,
+        longitude: 139.7228564,
+        rating: 4.6,
+        photos: ["places/ChIJXzNZTSyLGGARm-bMdBVhf28/photos/Ab43m-sx-FO0zAc_7jp6hmOfoocZ2aCVYE9XqkDjmfL6V4mmmriL25sGIczZLrDgfzsIQTwmdYavxRxKCXpFu79Bnfv2SW6gBcEkduwq7WxTFGQ8Meh5lYnU2ljX7IQyWoGweB9Xnh1KghJ8yOMO3Baa4H9pZGJYvlpvCGI135u7LC-TG8DjirTm4W68j3bgAA4HY7H_HoSuVL9c1dT0uZ5zXRs6y8qGmNQItlMEdkxuFm8nRdi0DcI5gLj-Xvf5G9ehLpU-QeNNdUE7eGMItRQF6mcDrKCMhzd5GVWqNPmVcPFBfsQ8XPdIsYlAFNiUxAUPwye7WGbtjMB61inYdYpSL2WZzZv5fxrFIYwEDgtWj40Zlo_O_ORpwBdVBu_UdY2vV2PGRuo8ATGKXok3QvAw8qyTmJyrtP-gU3viKarmZcluA9bN7wuzappiSjiEZuij"],
+        distance_meters: 87
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJu2kjK3OLGGARL309Ly5Wc4Y",
+        name: "Nem Coffee & Espresso",
+        latitude: 35.651098,
+        longitude: 139.724579,
+        rating: 4.4,
+        photos: ["places/ChIJu2kjK3OLGGARL309Ly5Wc4Y/photos/Ab43m-upxSdkcb3PADt8RLW9eHN-Sy5BLtAnqvtHmPKOBMe9_3vDDEDiNGVQIUTchpzheQ0ZALQZKs4IJVrDtHm9Jtg_I0m691fviqfKNHEskQUKunpXRJ6Ovtqli9yeYmq5NSDZOpYI_tnPeqAMR8Cq7OZRnQp8E3xdDowom__K2y3w-I_tKEAmFYpK-XTU0hPedRbR1nEYhrEz5N5pPMlSRnuFV_-s58Ssqhd8n28Un1WLcgSXFBr4_aEdKcttAnstnHYVFyZLIe9gO3vwhzECQXdaU_OP1yfrqzON5R3yvf9pP33S10v5glcAe5QJSKxMw6nRd1Cct0Bv0wl2G1Q26S-6p8v3ANMNzhkhntYhFt8PzwyhEsuJqg78YUo6YImvI1GjbALun8QxwQOVNI-0B8Rg4Tq_W4J9BDjZR8St5sIml2M"],
+        distance_meters: 95
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJExOnbwCLGGARfbwkDx5uCAg",
+        name: "Maika'i Tokyo",
+        latitude: 35.6516002,
+        longitude: 139.72243450000002,
+        rating: 4.7,
+        photos: ["places/ChIJExOnbwCLGGARfbwkDx5uCAg/photos/Ab43m-tq5WgDR2JTo4IyouuRHS2renSLUZLEAhdeYivEYLFbo31WQEvw2l-X5d52LawKyn7BJcQG3HZradmMnorhCmD3uO9Htgd9Va8Rqi_7UJjCIFzXKiVEL3yaO4uhObCnVEr0UhhyP6yGu-xjeey-aURqssJoPdVd0_QfiG8SyqIo1S8OrMxDOLgwgXctC7QrZ-a_6KjQO2ADKlfhoshzIs0cVGGU2xuhwl7HN_F11n_XbkCcnFMR2MNy4CC5MkBa3zQxa75eNlI6oVQSrRKeCi2obNXbMeuon3pevTj7xu5G_doxRFoWzuh1oZJftfuBsVYTq3UJYXmdKX1DLYKhe2NXcLAWcn2NueaI1BuVtHeUA3BAo_2yEQqFDCB7JDZuYhAiB3_-dXw_rNgrLTH3yBxeJ8fBpKXn10v2i3GlPqx_x_Fe63tUR098pPLO4WTl"],
+        distance_meters: 107
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ9-2ZDACLGGARnjNTe4S5J9o",
+        name: "HIROO BOX PARK 103",
+        latitude: 35.6516002,
+        longitude: 139.72243450000002,
+        rating: nil,
+        photos: [],
+        distance_meters: 107
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJe3VqvnKLGGARv9S95MyMpo4",
+        name: "Fleur Universelle",
+        latitude: 35.6518425,
+        longitude: 139.72247299999998,
+        rating: 4.0,
+        photos: ["places/ChIJe3VqvnKLGGARv9S95MyMpo4/photos/Ab43m-vm8-fXhspl2ePgYMg2QNzw96o3okvSO0wk-FEbh99aUoyQaWHdtbJDz8Pi9F4ygT4Yo8tJD3TlMIo8-g9wouzXmKg7VFIWZ-0hvfHBoEx9K_cL5HpjJgj6OAS-t3jth_O6jhJB2CyFhav0i-n7Rk1cvmtOZIQkuHa_6bD3ysL_4hFAhvvsEX-cF5OZKr1yDtMLniO4rzA6hbQ1V6TFOkz0PABZCM5J68WrnuSYrd4z-hASaqz2Jxg5XoiO4rp06dbkALrB8MmOBknAQmgwXkQRWiiwtvpC0pqCcNPTE-8pquOVUCtHyym_SyymR3BJynKOz_-wy6uSmrSEoKmQuu0kLLzbASRUUFDJraM2_TKwevtZfS2ZQV8b6HmNdnanpzgqaz7C6ARnhMUYXiimj1tsneyyP-MJWKvzLdnFgR5jyQ"],
+        distance_meters: 113
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ1f2pxXKLGGAREgNvQorReIc",
+        name: "クリオーゾ",
+        latitude: 35.6512501,
+        longitude: 139.7235313,
+        rating: nil,
+        photos: [],
+        distance_meters: 14
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJkdpsSnWLGGARo0s387arNM0",
+        name: "le-333 (ル・トワ)",
+        latitude: 35.6512458,
+        longitude: 139.7235269,
+        rating: 3.1,
+        photos: ["places/ChIJkdpsSnWLGGARo0s387arNM0/photos/Ab43m-tMq5AbWPkcDBxopcl-Plh7ga_m7qK2ecazNGokFhK-KXWMmmMl3mFm9_ABqZypB-eCMBARdop9Cc2yEm9LNy4HyZLpnle9FyBFb90cA3UJMBMXF1kxC7UJtFQeR_js-N3UQM1Jnb3adsKf1mp5sX_8niyIIWGHXDo7SKwIc9VvHzwlzXo4aWPtD9lA-BE68kzQts3G7fgoqhmXabfyWxTyeVJXSVecvUALuK6NQlyV1id_cSUQA5-yKuN1_KLwE0KkEJsWeMOxsmB5MYwDsuDI4XCTmyd-QgjFXTo03MSPScZusiHwZHat1IjhbtqF5N59IYwzAd5cy2akCdy4KSvliUuEnLVOKmtCPowO4MlMHphzEMXJGEIdKZxezTxH9yi45mS8tV_KV9Tf41UD8JuVCEVRGvsB0PTqb0124Ybq0w"],
+        distance_meters: 15
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJu8cv0HKLGGARLNR73-8xerQ",
+        name: "Hasegawa Minoru",
+        latitude: 35.6511814,
+        longitude: 139.7237085,
+        rating: 4.5,
+        photos: ["places/ChIJu8cv0HKLGGARLNR73-8xerQ/photos/Ab43m-tADIICAPKKl5VW7Dn4Ny8IXcgl0wy9RzSUhbN7wo342l_tKK1Q4Luarw4e2JwefbWuv2VUS838adaFEKrzFDplRlTqN4DD-JgPyFq0sBgPQvWP4o5ycHp72z9X4fj0R_M6PeNmQ_VhkRKzT7YIjwJh21QcWgbxjnLbphl5VTgaE3PZOtMhHB_E7y5IvzbRxq91PA3-EynX0u_AGM78kRkDLRPtgWZSAKI58HHOi2xFaj54dIL2nrKuCk6xSSwXfNZQp7xd95boGxcVMkIEXAygeaaXBE-cYaecBljTliyrHxrLYIHM7s8ztmg3oRIO601Fs3g7SgTxxOyNqVFAsaB7HWoSFWMyRLdp0OK_rpaBiLfgfZvNnKKFOcFapcJovvdu63FPNByc-TvWTjYZFW30Q4ijLo4gwIGVQYAxslO_7m70"],
+        distance_meters: 24
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJU4elxnKLGGARAOl90IjsagU",
+        name: "CRAFT NOODLES HASHIZUME",
+        latitude: 35.6513506,
+        longitude: 139.7233039,
+        rating: 4.2,
+        photos: ["places/ChIJU4elxnKLGGARAOl90IjsagU/photos/Ab43m-uThH-8UjyjW4EYKgmGsG-craMZWn01iohiD7EywFw47eQQe5wVgqrhyhVO26iXGdZNmvCVjUPImmelQXBeVixZW4l4u1fxUAr0Minavk0zdVbFEB_ZlUjWzkD3WAZjvgrZQ8SEr79PfracR99C3244X8uzBcGcoEy9RWSDgpZOZaR-Tveuxn_gr0EW3yzF_ejQR4BnY9ZuSuet7RIWeB1tFNfsoTVqlz7crsY4y2rE0XgzxFGOTTVTGOP8EzVknr5tFqE6WLx6ppYmigOlHx9pnNzQiCpMLgInLzB5t6MqXLc6jXmJvc9GrRCWzpJNe4oxBPpeg8WkPTpxUZd0OZ64X_UyGmfMlYTmcz0nHls5OlsaI6KKYxbvCjRTCVLKo7iz1RoNISvdj9Bkae1a3YmuXOHxD4JjKxhLdx4GdV0TVFpA"],
+        distance_meters: 25
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ09mKw3KLGGARTaqg5Mv-O80",
+        name: "Ginza Daishin",
+        latitude: 35.6514513,
+        longitude: 139.7233067,
+        rating: 4.4,
+        photos: ["places/ChIJ09mKw3KLGGARTaqg5Mv-O80/photos/Ab43m-uVIybT0ASO2Q0VTOWVBJTtW2tmwMGuXmZZJ4B7UqQI-435S7_afoTKchcJOc6y60MJ984acOr4IgU_oBWWRXuRM-pHVM7wffX1Ynqf8jN7xL2dGS5b4En7JARAXz5mFRwmoHvZM02g1EgNMP_GiY6HFkT7qzq9m4nj5cWgzD7mvr1l_Ut1LY3aqsudEejItxtw8TSfhzZWDGm88X24qNW4NLmyvBiErm19DZLyJpNO6uE5PEJav-KPPTN6s1Mcjtzsi79Etw1QpL9DhHR9z39fvpBsrDz1emHDkSm9sS2FLZ_OIi4Vdsj0ifNkjKE7U-VRi5dG9berPh6J3ZwKundrVijIhOY81RVLufwFAYpa_sjJb9kQxeS3QBBlUXI50mtwmD2fAjmJjmEvXBJaJeKZHxgZoYU5SRwslEacq0d4wt0z"],
+        distance_meters: 26
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJsW_AxXKLGGAR5TqQTk-q-XM",
+        name: "Segafredo Zanetti Espresso Shop HIROO",
+        latitude: 35.651175599999995,
+        longitude: 139.7234321,
+        rating: 4.0,
+        photos: ["places/ChIJsW_AxXKLGGAR5TqQTk-q-XM/photos/Ab43m-sQLPZEiQSMvlh1TnRvIOwAOJzcMVD2_FYHHIIHmKqsEqytxvKUvejhjKzLAEmf6kv7XOkF2St9IiJPigtAXYW45rc6nJAM_Dd-FQDvs4cgiOQ6u5GwyDipRjrF2WCYssTajDvv7bLrb5Vw_RUcvOQuRDYkEhbQDhkfnOh6mzGC4mL-hX446yTOjhG3rC5APEOusZukSkr-3MM24HaF0foYaZ6tU1kpFXEAxL8PKDdiJrOFiSFxy4po0X5ZkOmUYDiMkYBiNW5-NPBnNoGLX2nefmnLxCvKPq0Q5EFrzTkgAZgRnEWoCiG0MbQ00V9wqyZcxDhJqg3hRwuj99eFRUbxqpHkBHHWOMurX6qKMSfRjQdRXOXpokmg3hgE_P9dXLVo8cTYoXyLOW3VCMyAzo92d2JZUxSaTSRmAscR7Lub5Q"],
+        distance_meters: 26
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJmfuVJiuLGGAR1g4nyKpZRTc",
+        name: "440 Broadway Taco Truck",
+        latitude: 35.651241299999995,
+        longitude: 139.7239799,
+        rating: 4.9,
+        photos: ["places/ChIJmfuVJiuLGGAR1g4nyKpZRTc/photos/Ab43m-tDM3gkB4EMCpFWqCjrkZLGwT6mo2zzynxf76IHOKKh88cbksQTNCK15SW0GCOLhzumu3uIXLXpcdJf44ZbVamLJWRxhgILkOsetKQVguoIDZg2rRWrC0EN7hfvjPMIgkki6RCRdPPNA2lndSe1FobaDA3SknMN5YvGCooxToXTzk8d37EjjuU1iP6Xxq0GTs5_EBQLsOgxs79ZbyQcrrHNl9uHI7ChWFt3tE4Hmh7_vI0w0v0ogTGdL97xMzrslj7Ozo54zkf6Lj_HgDF2pS1XoybyeWtwX_EchHeDEZ3DzEpnKmZuMpcC93t0DJT--a0oSMXC94V-up5QBRH354ns-6jRYEBwXvsCLAFqcLX67FLbUMocTZIiscmcAGdPsIROyw226AjQwwwqp2WxGobW_U_1cONlK81uYq18AXi78RIk"],
+        distance_meters: 39
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJRUOgv3KLGGARV0_vOOCBoK4",
+        name: "Azabu Sawachou",
+        latitude: 35.651344099999996,
+        longitude: 139.7231682,
+        rating: 4.2,
+        photos: ["places/ChIJRUOgv3KLGGARV0_vOOCBoK4/photos/Ab43m-utN8HE3ky_PyaExvZPBOhsSiu3-Mq-YDr1XdXUguWSywJDA8pu7xJdqm1n115DCtRrVzrQzs6EdYLjKwwADI6Ewj4pT1X82rf0PhViRGrfZLVPHetBcot3ian_orgto2pw95_Bb0gSFFC583Zz9NJLfcJgIa9IW9fMJNcJKW1pwYYeipWa-OfLR6JkWH0CwnjNSgNKgyRnXUsrmpZS9mfToXWf25SLrj_V5gx0WGOxzjLEPD8olos8L_2itcun59hx77x03CLEKHKhQVVScbEkHq3f-Z4B7Wnp-D2AHNCg6rDeAS2pV8bDFWZWT-f9JMO44eBGtza0EqPyFv2LgQHRDievUiAsfOEdkk1RaaJjJO6FMDqxE56DZLOHP2QplIAhZ2qdTLJpYtxaDPzNe95RIkmvJTqGue_E5tdgML8"],
+        distance_meters: 37
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJV_xcwHKLGGAR_6sPERlmf3k",
+        name: "Tsukushinbo",
+        latitude: 35.651376,
+        longitude: 139.7231529,
+        rating: 4.0,
+        photos: ["places/ChIJV_xcwHKLGGAR_6sPERlmf3k/photos/Ab43m-tkDOnd_wpUdGdDW5wMwkTWSYTf1Lw0t4QB4auVmra2qd-dhpgvX_qXdXASmnrfCCbUHDAdEQTqwvHbcEL_v-v6JKcUQO9cznwRfTRcCo1mDOAVIEj22OHIN3lsnjn5VUVt-9aXkJAlbMxDrugVRMhWkc1O-CmMc_MOb4tGlIeiu_-8iu3Dv71spX8ybYt8MyATmmhqO1WcUxe_UnwXAAaS-T7fUGlcSXcNT8pjwegC4w1k_9MipBAFmokguXJA7JplpnyLXfpigs1yOsdw6YXWLAzCenMyro1e2uk9lTXmbP3vKuuWANOlLJE7gXE0sPsv3vJvzD5NWRw_OPkbnlKTq29eOZ4wQWFCcGNvHiy9PcW3QoibufOJl2-MDYc-3JWORMl3ZFylVsLI2WL8osxNn8ozKqYt5WnDpbxGazs0wnM"],
+        distance_meters: 39
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ0Uj00XKLGGAR0hD7X8ZzKSQ",
+        name: "Salsita",
+        latitude: 35.6510263,
+        longitude: 139.723645,
+        rating: 4.1,
+        photos: ["places/ChIJ0Uj00XKLGGAR0hD7X8ZzKSQ/photos/Ab43m-sQuoSJiR6UCUy9ZNqCQOBSsC6JF-mUMkQmh4adN0NRIbENXCpDsUGYrBvNoUzUrLi_JHJpTxLYkALjz1aZujye_2sscB5DKoqvY33ZSi7BkCn9PvSRh_uZ4JL0jBFs_hHrljK5EZCcFBWXyK7h4BnDsFrK1FXTE5XUhhznuBOGls1tws24x5QGBumdmfxzs9eDFRnLx0JJe_tFgm3x-tcPKmZ20vVOE2D6in9UOZ0Er1XgE80tzaUf66PHiglp50nwOIkI7hyXfRazfF8FtIgS733XKMuAKSa1_qkI0-6SS2eAb38ojCZRyJIZrZoZ2a0vnWRZJqzTLoxRBRoYuiuyZVbbnt9zU3qLd9BwaEwJgVoZ78VKPLfd4Zqd44AJYWeJvKjgxARe7ml4uNc_SMJNbLeBhti8x1a49-InNkA9I_-nbytuRLYXQ3acThOE"],
+        distance_meters: 39
+      },
+      {
+        category: "bar",
+        place_id: "ChIJvaSTxHKLGGARXymu2BWFzhE",
+        name: "Pomponne",
+        latitude: 35.651370199999995,
+        longitude: 139.7235818,
+        rating: 4.4,
+        photos: ["places/ChIJvaSTxHKLGGARXymu2BWFzhE/photos/Ab43m-teN0R8Xz-o2aqY3aYQeeGp9VUevHjmrNuWw87mbp05nLMtzGnW6KpYoUEgnl6cda5bXFkrhbMaEV6nZ4Y78Tig1e_te3-2GK1PyVKvhCHm8qzAOuxC6rYqI44btBW2thImFxAXCegxaQHOwxL3RTVSHOdkqfIYkcnvTUWbOn0tyeDSkF4EuQ1Mhi-PECjBUo3Ip6xorPf186yZANiAp4lEeQOKc9Kqg7Fg8sodkiQB05N8xD2nDl06B5ohuX1psP92Uf4fsjxiryrdW_GgC877VGMQeMmIJto_FZ_TMfNYh_peo2L7CF7MUeWNbJy9JVzhTMs0wXVEeHRUTSwl1jV5fToCQkJ5MEYWPZa4IIgCrVttoCIZ7K-PW7WJMdi6sbBp-Lxzfcw0Nh2nHTj_9MjEBeSl-Qq3VAhQ5j92GqhqWw"],
+        distance_meters: 0
+      },
+      {
+        category: "bar",
+        place_id: "ChIJaV55YwCLGGARzNrzKKpZj60",
+        name: "Entertainment Bar F 広尾",
+        latitude: 35.6512465,
+        longitude: 139.7235419,
+        rating: 5.0,
+        photos: ["places/ChIJaV55YwCLGGARzNrzKKpZj60/photos/Ab43m-u3_rlfPfp2eFGb8braNB5C1BcO0XENWQf9z9xh4LtBtfIydEBIkhVBUJ4P-E6LrIWotgLdYeJqEGJNNYOhSJqK8UBKEMulG3hUeo5XKoYY0DhNDpaDmMpA73spmRi7HkbkHHTzCO7aXJnZb0Y7tf-QCOPRN8mlItA5lvrwJs8QDn6vaH6rV8bnWUlrQvF4vlhL5YAUgE0Ldc6UwKpgvwjrmmu_diRILKHAj7mZ0kU26NkpJkpyLbhSBr-eRKGtjXIq4k05fhCU05r8ZFF7q-LJzIKEy76fsV0L0FErUZ01A0QX4-LybZBEbK-q_Kd2qxIaotsJezoB4SYTqVDRBO1IcWNTHHJ87dkf-3EtlnhW6ULfwBa1L66Xhy6w5TjUqt9zl1dgTEwiFQleNYWp3oIHXb0h2ku1KtPJ4zsS5i7ZTAAGDo4jY_wZ3p7qfw"],
+        distance_meters: 14
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ95_3xnKLGGARiHggmXIAVms",
+        name: "Bar Thalia",
+        latitude: 35.651174,
+        longitude: 139.723222,
+        rating: 4.4,
+        photos: ["places/ChIJ95_3xnKLGGARiHggmXIAVms/photos/Ab43m-vtlQ4xxVqfzOOKgbFy8rQU2ugcy8iilK-85FNNCoHYdM7zu2YHegSs2-17WnzkateR4d8CGKn6kFqUezxGdydezTlSaM29eYcfdd82fIu5ASEqtmY6cAi2lq5EIZDNYwa3gEqfQdliBdWqwMyrSP5ahw26_Q5hGYdNuvZSEVGdI86lJvBrJ0zI8wsIVl2GIUubV1qHYf8WiY1YU7CzpLxP8bueoamD7LtcfbEYx-ZN4rRtPGayXt_1jE756xXTydoT8STIuE3YpxrxFf-f2VwdLspZ_bo2I5-8utybZoElfAFwvFvznumSavkmH4HI82yNNe_KxU0_RIA0sdhMsWmPVFhxLRT6OuGf5435-dIda5v-PSButPbYvXsXv0tUAzrMznJ8SLIeuw0nkQxoXlC017D19qWfJOExaTPmOgcMRwAS"],
+        distance_meters: 39
+      },
+      {
+        category: "bar",
+        place_id: "ChIJm28pwHKLGGARu6vBEj7_DOs",
+        name: "ENOTECA",
+        latitude: 35.6515513,
+        longitude: 139.7231631,
+        rating: 4.3,
+        photos: ["places/ChIJm28pwHKLGGARu6vBEj7_DOs/photos/Ab43m-vwmb4PBJY4_PrQnUx5JWQQ1JwphTEU3msch7yYG1WcS2_HF5_l8hLU1RviBi49r3wWM6WWyWscuULXgc7Byv3Zyt6Qh17NFBNUnwn17TTgDGfLDgRK9HNeUWYPTuvd_alj0rKGS-g7Y6zpsJZckGqFAMXl9DVU5HC1DBWk1vh8TBtMf791mSw92nIjZoqEVN0cPi21lIJ6KQwsF6jhyj7Wivw7L7oHPw4y_5cIHtqwb2iP7jQ3UzcIMAokFfZDb_3CPcStIOYjKnegg01vYOuAsgM23ly04POspyAfSy-ZxPcO2FITXPNWI7a11xFN2CCE1k_URKXgzyJcNqItmbAe9B1fcSqBo3gK1N-UP4WdDnR9AQmU7tOx0dO9vBZWFMksPtsFMG90eMIA3wuRx2wwL5z7bJjq4Yfz6pVvVivj6w"],
+        distance_meters: 43
+      },
+      {
+        category: "bar",
+        place_id: "ChIJP3gJVACLGGARKzYurecTsTs",
+        name: "スナックまちぶせ/広尾",
+        latitude: 35.6516002,
+        longitude: 139.72243450000002,
+        rating: 5.0,
+        photos: ["places/ChIJP3gJVACLGGARKzYurecTsTs/photos/Ab43m-vBWTZSJgrQv4NgFiAW0WB1xULsORwJ_yVvb-j5zlZqEwTTJ-_ozn98jwLTn3kkHZxJgUFGIeCpMJPZHpzqVYcuoQj2fmcnU1aFhJY6hYFlYbZFSd4_nfWZhIzMcTcqrdTw_fzYD2ZIopeU3Oi1BjXqjhnrfJqvaKtXY047sd-y6F1iWhH0f1YAJdtiUwQdPX4P5RNGW2QfxTleUbhqlpToro89Ggqzhu-390oLDpAEM2WXA7YpkJRVqrZAOUUqh9atnZ-FDGJ8UbqGF8FduX24B-dmth4l7MzjsimMgC8Dv-O8sbH0765Or8osbqcRQzWChBTbRpcTPK3PDeFBesQ-3NkOj2tTWMDLLr0ZHBexBAx7iccklBSOddmnQHbGbL1-KtVSnA25bSfVq_2H7r6GIBhEEhsQwg2Z4fvagkuYiNVbkkCFlsJjGouhxg"],
+        distance_meters: 107
+      },
+      {
+        category: "bar",
+        place_id: "ChIJMW9iGEaLGGARp6O-9HROayo",
+        name: "大塚ファームByマナマハロ",
+        latitude: 35.6515914,
+        longitude: 139.72242409999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 107
+      },
+      {
+        category: "bar",
+        place_id: "ChIJSd6_o9qLGGARIb8zlxayJPY",
+        name: "HAVANA1950",
+        latitude: 35.6510714,
+        longitude: 139.7220554,
+        rating: 4.7,
+        photos: ["places/ChIJSd6_o9qLGGARIb8zlxayJPY/photos/Ab43m-sL_rvf4Xpox6dNRO1fcXoDaUCwHfGHusn4ni1QXpRCIXzyC_XJbwEsKOQojMJkjqo7R0PkoN87HLq033rJO5ecj9Q48nVwww29ttlWj4j6jFZ2F26Lx2JyGf-BPhULZN6pyujwBU_z2ATyP99YtSjAvcPG_GzN-DOT8cY5TKVW2FvnUb39fPjlOxByx-6ZjHT5naJ8wimOnNzvmyugVVLBgQoneRLgmW56bGkNdGYBXqJUCpLIdESAVhvG3399KxtzSBr5DwWGgSFma3IWoSBsbzx_CPk-5ks_IpynNqN7HtZHIWMWPjMx7xcz80NrelGuDg4mjvIWDv_3Cjl1r55hsn805fcfspYojnkmSpM6j8MU38A6v6VwLl8IPAj3h59_qiLbqc0HA_W0ITHv64vlkjTRDB6P59tQGF-4bdsavBY"],
+        distance_meters: 142
+      },
+      {
+        category: "bar",
+        place_id: "ChIJAQDXpnKLGGARKzlCAm1e2bM",
+        name: "Oysterbar&Wine BELON HIROO",
+        latitude: 35.650749399999995,
+        longitude: 139.7219457,
+        rating: 4.2,
+        photos: ["places/ChIJAQDXpnKLGGARKzlCAm1e2bM/photos/Ab43m-urmJ5XzaIFG8nGMDKSIkUvLGv8ACn-_meWux8U4AVeqqEKWzSKk_YhJwbhOX7DT1m-0GxOzNyqeSOjtsXSoKdHNgHwL1uTC4i9EnoUgCfE3komBxr6vBp8ohyNr7SBythdW_81-Bby7ADaGInA-zjXiiw5Q_O5ZouMdirhqhjwOU9th6CnEA18BjoHDqX4H45o7htZw9rcXSdCQh4S3RGnTdPajNTLKZHugeHQeMKsHLclVpiYbJRntnApFJY-IOezW1VilC-OLT0dw6DkG-NrEBR3JGTU2sOvGSfrFVD__uB5dpe6NpulEQbuo_I4FfaRhSUPnBq9nmzlEiJZArsBvHL9C0joGNEbd_GiQMSFk-5eohYcLYqb-rlHW8Y_4vnlQDFQBfRAmyQQ-DMYqZ0GERo9XgEfTj-q8Kmt55w0Z47XsI8QDT_BbB1zgw"],
+        distance_meters: 163
+      },
+      {
+        category: "bar",
+        place_id: "ChIJKx1FLwGLGGARXKauaiS6RfA",
+        name: "夜パフェBAR ＆VIGO 広尾店",
+        latitude: 35.6507383,
+        longitude: 139.7219518,
+        rating: 4.7,
+        photos: ["places/ChIJKx1FLwGLGGARXKauaiS6RfA/photos/Ab43m-v31MHcpeoEKnsmiFy4D4_8G5T0CEnEXfBuRlUE9cGlP9QHomtPGUwGvqmKHTWbOj7e-7bWWdXZNc-68UeY9n3ftjIG0i2HPWC9TNFPdmhkFywk5fDm5Z9JpUlnzDsu3Sq-IYyWEFfQi-7o7ScK7nrSMhbd77Nm42j5fWXEoKVm_OIHWCFdwAsJDq62rdVM60QtoQ9gANuFjwvi2idfM778gIP6srvJq3bYxzdXUZUzQ3iAdHhk3lEq_8XVW4iRnVPUlMdxqkixVBBfLkIZyAqMJaL6-xu1qmzMaVJty1UVZda_KxwgyFrTYBn6s8Kddl6Ml4C08FS5gUmPCBwNAuPQ5Dl3G33h9rcDPFMeZ9hOmpjcznFZdkH53_RntXvh4JJR_uhuGXtIET38zrwfFWIQQ7n_IacHbOWmaXkZTbI2f67ATJtUWSlbvuU_XYF3"],
+        distance_meters: 163
+      },
+      {
+        category: "bar",
+        place_id: "ChIJteX-LOmLGGARoMCnPhoePFU",
+        name: "スナック すいか/白井餃子",
+        latitude: 35.6507191,
+        longitude: 139.7219059,
+        rating: 4.9,
+        photos: ["places/ChIJteX-LOmLGGARoMCnPhoePFU/photos/Ab43m-tZxfa5qDVYeS0xEPHKi34aiHK-1UHBJ36QysZSIZqQ-8tReH1uFZdMDuuG04bKn-3pO4J83y0lzm6n8xJUL_XsrRvsAtbNQTjt89Es3EDUppPcIgO-Y2GgDJcQGYdwBQQO_kVGiXOoWrgsBD7FiKjKq6Dz-oTuSO2GIPYk9DzKTVbwWxvKy74-t6ErW1bDBqcAuZu2P4sQNav_9FF6-cYUnxJXvlFUjFwUtxrHPqzKP0Av6tQrdQvj7S6lB470f6bm759LRPQ6jhcy_3y6IllN9LgNalz4Npl7L63iKcbTjxwlnncAxbRJ_TL6TTYVZ9ooCtga2wOEyoj7fxvCLMI0nicVrMLq8ynVDHdjEd_b-5MynlS0SxUlh6g7RtuRyJdUGA99bED8yrEfyeqka_7gLA_ipyFIiXcY2x6eVP4WbwwJLDL19zEfnXILSVvi"],
+        distance_meters: 168
+      },
+      {
+        category: "park",
+        place_id: "ChIJo9Z63XKLGGARrWNPc-rk8N8",
+        name: "Hiroo Children's Playground",
+        latitude: 35.6518802,
+        longitude: 139.7238988,
+        rating: 3.4,
+        photos: ["places/ChIJo9Z63XKLGGARrWNPc-rk8N8/photos/Ab43m-uJrd-k5otMgN6sF1oYe_Al08KYyFNNQWkrCgV0EwlcuntpzkLPFSFA_S6PUw6BQsMDjjfosqdYzdDjLgRE4X6ll3LMaMYABS3bp_IGaq0xXadwsLEEf-Q1ZKbxuIJPfBFr_SKr9YoXOEILIV8La0ym9LraK2ghdmcJTvM_7ZaGAlGov2STTlzckN21qFRQ_RpHSHvQzYI3PO7DiDKTbe0OH_MKstkkz2f-8upyQIXt_JgoOUVvFJwx6fvZbz8p5iC_tt84d_Oijn2w9v4OuyvjdarJYBtDgG_FPqlrgtYekiKzwKWoT79Wdu_zve_3DOV6WvmIi_IQDeb-ahyHvrI48EsicIJfDUHP4vBrWAZ1HaUQYygBJWYueca5oGcwSu2KU151JlcaFlkgRRsoltT-0LgYmAvj9hMgelAPK9Or7XMN"],
+        distance_meters: 64
+      },
+      {
+        category: "park",
+        place_id: "ChIJ57deMQCLGGARWsm7QVf_0sQ",
+        name: "花菖蒲園",
+        latitude: 35.652095599999996,
+        longitude: 139.7246911,
+        rating: 5.0,
+        photos: ["places/ChIJ57deMQCLGGARWsm7QVf_0sQ/photos/Ab43m-vP8s1j10hKfnuLK0rl3SbkNCoZKqb4MczDdjZ-KxFT_-MauTu_T7fX_GAqYp8DDVfysqTzCR0H05hN1PfW381P7mWnCJC75H2n9cgae7XHK2doMHID62hBJu565Gi1qD4Ce90RkYEetyCYoB-l5Xq9KaWSOrs4LlSv89_NfWT17twyTp8unpTwjQ19RuIssV7dlkMZBCUwjNEs2u5LWrE_y_4fwh31I3odFiIqXP1HVKOEWAs8oRMxXZSIgD7J505gcZ3ov5mNTxKeODUTSpcL5hcgls9cyizgkVqHxBK4V0fykjBn9lp5s_wObR3IXVVxdkTC2BF1tybDjE-rPo6Dm9m_N7I-xcj5lxqhQRITvBdVhF_I0lMkfyTDaz0kVRUSmVVmWpqzCMJufEP3ZNq5kUJyzI67y6ZKLQ1ZcILl6vk7DxwUVAGiMlfz75Oc"],
+        distance_meters: 129
+      },
+      {
+        category: "park",
+        place_id: "ChIJUdNMKwCLGGARiNROWp8UI9A",
+        name: "Baien",
+        latitude: 35.651967299999995,
+        longitude: 139.7251162,
+        rating: 5.0,
+        photos: ["places/ChIJUdNMKwCLGGARiNROWp8UI9A/photos/Ab43m-s1hZ7yWbIOQvKrAqYOlPE7xO0se8qyHhB_QcK6WK2IwWICDThhsd404jI1k1vSx1QS_pbjnCG20dA_VRNN9Im7fp1c8ajIybZ7yUWuTsTZquSnWo7ysS7eoh4KY9OPEGBlV8Z3mtv1vGLg8sbIK_rjjUH3ip7mbPBtvdqH_BvqXWRympRZKFYHNiSBCNMe9vXE2Qb5M36q7GWtsQY4xWgqbHHuBfA7RS1UYaIplDqkutOVfvts8Q8jKTYLYsrZiqheTuDFVXnWze43dnp55nG_gFklaOWI_zANRgs-1xBW7k2kGlEXmeF9aCJzq05hw_ijmwKm_QkUoKEfNbiyTL_vI9c5ig0R_FRMd8Vtmn2xoBfh-58U96kBU8pAs96njDWLcqMqE2ixKYB1E7N5J9q050f-FduNH_qx8h8HfGRa-I6rcjKVR9E-H93jAQBc"],
+        distance_meters: 154
+      },
+      {
+        category: "park",
+        place_id: "ChIJBZk1rgyLGGARtjJYTaN0hBA",
+        name: "Arisugawa-no-miya Memorial Park",
+        latitude: 35.6520827,
+        longitude: 139.7257986,
+        rating: 4.3,
+        photos: ["places/ChIJBZk1rgyLGGARtjJYTaN0hBA/photos/Ab43m-ucqk-BU681VkxwG-nFsL7dTMnMK5PS5e9mvuF3evCD3e98oAdcIBKumLJtVKy22tqRERTBEcvgIPh00aYPrqqHUc9eg1FqA1WmfBZzRHZ6N9x-5wF29dIpgoPEr4jFdbzCiXxxA0-CqaOH5gQZucAViWVyIIYXSeh0zS694IG3Numo0AiCQOdJeK5smVS4uVGnJJXH3DxQUe7YLxY215xIIebhVokFY77w8l3Sifl4E9_64861Jz7_T3fIoIe37Ra-Eyc0cFoCWhFwT10aMS3YIoY77b-IDFGVhL4_DRgq12tUPI2vjul_mfs3lz7EiGhOTYMWgdUMUcLfjLw5bT77vLL-uVsmD29-wj7cp4I5gqfBHn_UL8zR03VQeJZ7_x_TQAhzbEbijL6rHXBuchYaaeJGosZVg7XCyQfclsqq4KI"],
+        distance_meters: 215
+      },
+      {
+        category: "park",
+        place_id: "ChIJ5yLfQQCLGGARu6jc4BajWTM",
+        name: "Keikoku",
+        latitude: 35.653169,
+        longitude: 139.72581259999998,
+        rating: 5.0,
+        photos: ["places/ChIJ5yLfQQCLGGARu6jc4BajWTM/photos/Ab43m-tVODYP5XumkeT2HwAAlDrV3zTEM5h0brqPJCybIKX8EB2F--s5Kd-mRjwEn-vtTSKrR-iI3s7Pe2jbOgovKJ2Yv6RfZfnRPnbY23uZOhpTqBZC1wrKgamvXDl7kMW0JZ0VjWOljPtFVL21U3p2HMv5LeJVioYa5re1xR5aR5VhB_cu1xKaHCzFrpDZ_yeEUAvUgcadcNMCAUZ-626EWXaj_vWFL39T3eK-CN4xuUdpSARd9tU_lIa4_LVrtrQLIfu8940BtLgj6L424QCOUcgriLeUdNPtd3glt2kt0NAtzjuvzSO2DezYDR2Glr2Ap_XelYXO9Hv7Pwd3VDrYiWDa5wANxKxFKTnp5OPj457qMFTxlWiQzAq-2pMEOtn0OEociSP8O6J4uEdoQsgR5Ut6ZNnBpjebEH33qhyrJ0dOEjEjVrftryBMDLpAMyOk"],
+        distance_meters: 284
+      },
+      {
+        category: "gym",
+        place_id: "ChIJyxuZn4yLGGARg17h5uawxIw",
+        name: "LaLa Pilates（ララピラティス）広尾スタジオ",
+        latitude: 35.650911799999996,
+        longitude: 139.72248439999998,
+        rating: 4.9,
+        photos: ["places/ChIJyxuZn4yLGGARg17h5uawxIw/photos/Ab43m-ug9Oa1-0TL19WnU0ziojrDsRV6ux8ZRaRBOEGbYzJ8Y-FcTbFC8QjeY_X0ShZHgn8XBEULkglYPveEPb8nmR-tfhdSMQlQgkL_tki7dr9JMGfVnJ6xwXB7280kWQq3j-swvEAImZy5UQitVY8-Fjs-JrzdnGB877YR8J-XOr5Cdxo2evJESq3Szx6HwucVjF6HTZs1jv0lhHN_IAgEJ2aNlZcjSc8zxMC-w9HeC8HasxgO4czdsw7etBmcNhi555A_8DKjjfcFQPrwxAGPbAP8BGBu4_BG3tVeUt6mOqmKi2mFsKqv_aq2NCzHb_GMXcfTmMpUWB1amz6aJg4YDw4W8E1pE6raf4Ve7fCSr8cVDJpI1l1lywQXQ9ha9uyb-yOs-dbMUiCZDZQ497LVL1bU-xGhQBtDafT-5OS-Z3Z3y-6x"],
+        distance_meters: 111
+      },
+      {
+        category: "gym",
+        place_id: "ChIJQyApUUSLGGARqhG9zgK1h30",
+        name: "CARDIO BARRE HIROO (カーディオ・バー 広尾店)",
+        latitude: 35.6510714,
+        longitude: 139.7220554,
+        rating: 4.8,
+        photos: ["places/ChIJQyApUUSLGGARqhG9zgK1h30/photos/Ab43m-u-QhHvihgvTaARgIae4VAW-DhCMX9BVvV6sIiw4-Am8dAQe2roOvhMb3KArFe-Mya7jG4ZAubR8RKtGcC0hnGiyCNdjswDgwWHJVNgBNXZOyom-OA7BRd5ai33YP7rk64uaD5CaAm0Gf97iJrU7qOmQGRJGKq_lo9FnF8HIHn9FsLSJoGIDDFGtLKNLZgEwzxQADca668Yap9TqrTTdcEMFChybQ4xF0ywJBjLziwe7HHablmxPSD3EhSlKx7_YsLo38xK9WrvBKzMM9IqGnToZ6hwvuoypiAQifMazg3DV8rAIDTSOpzgbAQr9xqJWGp7dJFQdTighH-Hn32YMSlJ9clGlnIvLIn39t-uiM5jUggGsxXp_wjlxz2N3Atn0ZB_enNIGjTEtPz8fjiRow5W9wsoX76Ghd0u2Vu3CV5fC_s"],
+        distance_meters: 142
+      },
+      {
+        category: "gym",
+        place_id: "ChIJN6qMq2mKGGARgloxmc2NGm8",
+        name: "Body Style Works Hiroo",
+        latitude: 35.65164,
+        longitude: 139.7220337,
+        rating: 4.9,
+        photos: ["places/ChIJN6qMq2mKGGARgloxmc2NGm8/photos/Ab43m-vZ8Se5miNe0k9-9RrhgIIQGsZWNSzqYRPEHa40eoenQzVwbxXPRI_ZAL0JaaERSX666OreXOiMgAkeAL2TbABfXjP_Y7NKDh7eoHQ5ofTXiXUuiq1YOv9axEZVoEZ_YGqMQ8iOlvoRMgD4OdEP55mqi7SRFdddYHGauRd-o-cQhRYdHDNf20nSleODAoOnkb0W--XfgPPKJoMpVnvgLqwgIkjlMZuIlo4YT25CRbI3TRvHv1FcYaTdXjQ62Wr53daLU1eyvzFpc4HwUJMORc7T-Vw5-aJcE8DuVbCrs1mSSPkbpbASknOsDZtBZPFClCU-jN48sNqh1hd3qNw8VuJMstkXUOxh-xcm9O9ENBQOwixCX6JwOakYZO2QRCeMuBeOlZ-CUdtCNVUUzKukk8U6-VHRZU_2uYgYV-dGw6rqeQ"],
+        distance_meters: 143
+      },
+      {
+        category: "gym",
+        place_id: "ChIJpSQ9oxyLGGARrUQRKeWjRY4",
+        name: "ヨガ・アシュラム・ジャパン",
+        latitude: 35.650749399999995,
+        longitude: 139.7219457,
+        rating: 5.0,
+        photos: [],
+        distance_meters: 163
+      },
+      {
+        category: "gym",
+        place_id: "ChIJTaZmBTaLGGARJiEEaGxQ91k",
+        name: "suwaru[スワル]",
+        latitude: 35.6507383,
+        longitude: 139.7219518,
+        rating: 4.9,
+        photos: ["places/ChIJTaZmBTaLGGARJiEEaGxQ91k/photos/Ab43m-tkPGFb7tVFZDacbz3chD7WvLI8ILydHEOht1PC2sYl471BTg_UtRqKJXSjg4S0H-xbrMWW4h8swj10nL3JyVc2HRv-9ph6FTNWj5ZTrsGpDtp2HUzdsFnfCD_7xs8Q7scsI52DigLhoh1h4Uip3qecv-I9TUDQCX0C-N0glnzsUDclBifhQY14LhOkQqXj2xQKB2ZeRNC-c98Yap1YqqA5BnEL_2TFdUOLCEzVCI4ksMtY7uJNoUmPN2R7rQ8jKKZtYXVRjNN1_jSFDiJMMpOdTMoAhQPuqax09qZ_UZmFrTEhexj6R1yz5Twvhih4N5l13wnZnTUiy8Mmn0PcQaMJtFeQBwiKfa2XNngJ6mnb9s5kev-TjtCfk9yj-_ysLjzuAFDvixyR-lYIBjbFa6eLDkDncfL2WIVuuHUqI-ccJMkD2tQRQ1t4CZ30vA"],
+        distance_meters: 163
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJo9Z63XKLGGARrWNPc-rk8N8",
+        name: "Hiroo Children's Playground",
+        latitude: 35.6518802,
+        longitude: 139.7238988,
+        rating: 3.4,
+        photos: ["places/ChIJo9Z63XKLGGARrWNPc-rk8N8/photos/Ab43m-tQSA6u2rHnsmBdOE8fqlwKYq0pzOwRHFdaswix2zyUCRH3VZniL3rPnXlKPPet9tZMzjxVsatvZHN84D-W6Un4NWdGayzMtEhwvItwTl9s3A55CjVOPgseA7gT7asPyA66nhVjM24klHm7tZQS5cfztU5A1urx3mHySdOR-nb0I_X2niDRtSGJq46pZm9rMAly7YWeut6JQals-6u9rZLctIugD_Q7i_9nLxOMnXWyONu_NmbIB5o4dZ1r8aXKJWPBQi9lwirkFAxT0h-etQFhPK6jcwm2pbBzZDIbgL4c3rId6GowsjC2qP9T6EymIBFuBaqGEpxpKZtd1kjsYybUcWzhELau5iGmv0JsixJjf9XAJAz198nhOCDZz5GEL5R51a7Ueh6gXUPanU-9u6OUoVZhhDyEqvQ_IM-R6ZboxbBb"],
+        distance_meters: 64
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJcREZcqmLGGARu3YJ1QYsfpc",
+        name: "Imperial Pond",
+        latitude: 35.651756999999996,
+        longitude: 139.7244403,
+        rating: 4.8,
+        photos: ["places/ChIJcREZcqmLGGARu3YJ1QYsfpc/photos/Ab43m-vuOSAccdm5ZoHZtXLEL9p9KWjkx364vVgo47iuJjpt4bXKi3a7095JjL6pazBTlxYrDoBRTc_rOsV3prCRx58FbgH4dH2E_9SynuNgLGL2rffdrkplOL7ZlhJkfZXzCzFZYD-cd9zbrMsereiNp8uRsSWKArX2Pg_yZbzyQQGoKxk33VZ2rKhVoEEJX5-OwTXGLuAy-WC2sMRw8rxyyTJxP7WhHSZSyUbntzoCr2M6Wk3kW_sEGZ2TXZ6vExtY2eGf2O_Xo3ymPeqOeBQh43QOBYZUuOVP6HGu_t5rQns9QV9xvl5xxXYU5lUpAubs66zq1bvDghLaCLkbRJ38lPAB1mw0kH3IZm6kC9xCd4A-DVhBxiF0hhaNC6AF2wx5JCavyvo-5w-SQHjwRE3rVYOaUsOihnxQRCdZAiq5jPfHv14uCCDJRSEsd-8kg3nI"],
+        distance_meters: 89
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJWVpUpnKLGGAR_12nyU1Bb-4",
+        name: "Hiroo Walking Street",
+        latitude: 35.650622,
+        longitude: 139.7219475,
+        rating: 4.4,
+        photos: ["places/ChIJWVpUpnKLGGAR_12nyU1Bb-4/photos/Ab43m-vYcFya6UNzGZpN-vfDCFihaLSRzF1MLSBZkySvrYTFQ-w8XDDpNXvyn7oZsjnBR9XNwPtMc0E-qwOeTbbd93oqE7L8-QaHazq9WRpnWa87OPSaCL5jIzgr6UG74tLeNSbtnBtziopc4BQdIINo5NsbooBvkyGmoopfpeNy62MT7cKFxDFTAipkE0VAUE-qUUgmOf3GF_Y_obUJWd4iBOlSLPh7-MfNVATxoayIpK1vy1TkSGnnJY6oVSpZbySd6cJbuMPXDy1aMCoAnuDSaP1qQ__wBTkAib54V1GuWQXIdT53b69UHrMpuA_jAiwZWGMRRJiXWXvUn6xDOYJM2yvUrcWJmQ4y1waYR8FONrVujyAdOQt77rx7XfI_GUB6aGVRWE_scEDfM_xZPjRWKwOTRTz1qvMkCO8ynKBmTboCzMh37T8OKH2LRiHXbQ"],
+        distance_meters: 169
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJBZk1rgyLGGARtjJYTaN0hBA",
+        name: "Arisugawa-no-miya Memorial Park",
+        latitude: 35.6520827,
+        longitude: 139.7257986,
+        rating: 4.3,
+        photos: ["places/ChIJBZk1rgyLGGARtjJYTaN0hBA/photos/Ab43m-tNmSx6ZXOd4ZVAuKLgngm9iFP8oS47PArnM6W1AVPTXf1iztAnWzOCxN-sSPO525AYXDuW9RAQFoKIi9UNZlPHOBEzgmwq-1hopjkOXJoa0_qbM_9MliUqAwcQgRDPkYnUhghs9X2FRhfGV0HdLrzvwMW8lHuJxhUu6S-KohCPCRQvr0jgNNbdRlRwjClWpVT0jkxhlvWAi9q7PSSueM-SVkhYcNvu7POUzcZ-Xxa8uycpsXD1vpG1ReT6OpeeoeO6JE9XO75lRCshSxXuWh3a_rjv2i1S3d54wA8gsFjUbWeK8ngLFb9BDtf4Y0X83gCKCd2QMVzx9MEIPBLIxobPU9n4aTvMSRXRWcQ_mF6rWHX-UGaiC9OXD3Ajw6LlF6Ku6RwWpLcgx0XYoVD7To6byRwR4TrH3tkqhOhv_S5r_jE"],
+        distance_meters: 215
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ0fHXegCLGGARByHrCOW9S6Q",
+        name: "fountain",
+        latitude: 35.651389,
+        longitude: 139.72650099999998,
+        rating: 5.0,
+        photos: ["places/ChIJ0fHXegCLGGARByHrCOW9S6Q/photos/Ab43m-tzl6dYr5-W_IA5zzOzZx39bJKlsMnH07zPoP8DGx24aXAPZG0Ah8aGdHrQk_hYuRnA6ayL5dFHSzHS6gEdnmowDLfrMGepLKwgfCa_qIGFaXwNTsgbIw1SwBFoh6fsJ6N4ITQ-S5ThzInMHxPwtSFAN3BFAIOsSzjdCcn4hz8oLMUbXKfMVsSq-IYvJNAqXiVlePYLercwgy1A85V5P4Hl6w2RedVyc_UQDUtPQXluDGPp5AaPlb8_DWk225x6s3YCA9-vq7P-WacCaWQv-7tidtUQClN82vQGwF6n-sLtmbCaFuF6qS5pcomOzlkyCDofA9mAAf8wnMUMCwI8n1caBal5uyD9Hdp34Ehii5qxe4GYBpfW1nCq79npXLI1b-QWKczyqNZ9S4ZspzInma_WfMyj5Lc-1fuL8CsciLhlqvyr3FlVRFowyQMP6w"],
+        distance_meters: 264
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJrW-_GLiLGGARlK_-TlYEqpg",
+        name: "150th Anniversary of Japan-Germany Relations: European Bodhi Tree",
+        latitude: 35.651578,
+        longitude: 139.7265837,
+        rating: 5.0,
+        photos: ["places/ChIJrW-_GLiLGGARlK_-TlYEqpg/photos/Ab43m-vl5v4UNDckAiyFXzqFGaGQmOn0_7A2XDiBGPyO-7xtAVedtLKXN4ohEucixRu-Kfo3OfoBAWyTW_gD_JK8iBeb3VIP-SfDMbeQhmu9RSTO1L_qDYCfi5SWDDe9KcoWsWpobDA8amHoY_eVteALC49VY7SXHGoeXlakL20S8u-2UdwVt7QAEn4X9S04JE-2fboHodYnB26m6ph8BCkd0vXtkxnu02HHG4dLvrAN9veyNqQh3vpPIfoU7tqksEZpGRRO_5cjfmzxyai3yEwxhQmc_ubeJACcbpIoKAlfAtv57ZiDBaTcCRa2_CczkTGxgzjHKuEBLyOIAWwp3fMOmPI0tCd7n56EpPWWLCjwG_NDvm5PJL2Do-_m3oZPK7SkVojphclwfqdCpE5v5ymDZCHPh6Mnp4wcRAnSlKRAX1V2EBZY5KGNTH52vZSQ6w"],
+        distance_meters: 272
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJPc0MUNKLGGAR3xkiybCfUPs",
+        name: "Momiji Waterfall",
+        latitude: 35.6532374,
+        longitude: 139.7260123,
+        rating: 3.3,
+        photos: ["places/ChIJPc0MUNKLGGAR3xkiybCfUPs/photos/Ab43m-sOzOcaLg8WcCOHuCs7aAS9MDWgaP5rllDmzfNgPGR6qdnvL-4jHWi7jcBAyXGt-z-WuFXTQ4g3wIiKmJ5BIvp1L2OBwcrvVtAVpX3cnNKSMXj4DpTjxbMNPPji4kfEkJPmAFlFuXBA_iAQoMtx--aKM6xFVC8_b-c_7VVC64YLU9AgEpPErADgeqRXNVkp5wDHOFOWf9v2xbllxaBMp-UBKRQKaNopmZTZBWqBLd-IAEI_v0vYx_yJMgOuE-oyYAYUIkbAOyymHT1AnQgv_WQQjATzUBrKAiAQO4YHq1ybM6f4mtLGrnxPFv1cV-kkGULv0IXVwuVXOsvJ1DC85P1tHBY8zzXKGQlfR5wunNfG4w12JlYT_netBbA6BC0H6fDN_kOvBVDtXDs9Q046ZUw1onIOIIWe8JoTbvmC07qOAtDFnP4us8Cr-XFN-Q"],
+        distance_meters: 302
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ0-FZXwyLGGAROaLjAUR_LNw",
+        name: "Shin-Fujimi-zaka Slope",
+        latitude: 35.648963099999996,
+        longitude: 139.7253278,
+        rating: 3.5,
+        photos: ["places/ChIJ0-FZXwyLGGAROaLjAUR_LNw/photos/Ab43m-t7wM7cjcWxrrhKBGL4FGg5c9Vm6EmPAW23mHpe-NMTR-KAM15q9vr5ot1CW0kRwvi_7C6Pgdnx5EyTnoQxR01W9lnx0zT-vvAodG0i50MrxQrKADjVEa4CgBPnWXhHQigvoV6h-lfIE042wevGUkWl1jhwLhW_ElYgwKyA56ShRyZomrxc0VHjjnRkdx6A0MUES_vRWCWEG8Zgsuh0r7iNnMyAF4oYdgrD1lyEpuwqjdm8vdkrTcmcpQXmSrEXaILax4p3n1dOSM4zBoQ0o_aHi-Uhkbuvzm_91nJgUOtY6E2clKg7Ocj02ulNPYD2vte_t6lR64Q-8b_1BbWYkGjhsQc1TxG7UnjJrwY82ihK9eFGNQDUrtiOS33JjCqWR98z75ioNltRSl2oH7KWLTK6hqaYwOFoH9oe-H68ymXjHvR5"],
+        distance_meters: 311
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJmVoi7m2LGGARt71Gcb4kjG8",
+        name: "Hiroo East Park",
+        latitude: 35.6534183,
+        longitude: 139.7211414,
+        rating: 3.6,
+        photos: ["places/ChIJmVoi7m2LGGARt71Gcb4kjG8/photos/Ab43m-tm89X3l4-7OYL1T-sYa_Kfs_6GMvX68oWCns184eDn5oV3WNF-qkwk5zKMMQhiAUWjpja8zkOIJIG-wwTUkYAeeY9O6SPIIOSJaPD0zsBJ00JeYa0-b42lIaVJqLt9Lg0qJ1Ilt4wTXv_eiV41SNpnPJPhIa39Jm8d6B3qvXW0SsJb0h_VMuHD2COdmc3OAEmsdqXCb_HTHspURL3ELkYfc_9-ZURM6Gr0wP810-i9aQoWdn-8ec3F0QL-QcmT-puBUnFLHb1PcosFs2YzST4BLDiXYQOAjGgeF0TKqaExbMREI1cg8mDJYpTMqdLebr371iuf6J8X48ApZDcdX37_x_HBaeAVCN39-u5dE0CUdmMlvy8HPmWaO7wSiJIacEV3pq9dN3j4rD2IylofZPwz8S80Lv3ZmR1UpHSR8OjX_PRW"],
+        distance_meters: 317
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJAYWRfA2LGGAROa3FU9djodc",
+        name: "Hiroo Park",
+        latitude: 35.6485085,
+        longitude: 139.7220135,
+        rating: 3.8,
+        photos: ["places/ChIJAYWRfA2LGGAROa3FU9djodc/photos/Ab43m-s69ZvnOGLHJg_M7ngVN8mZleNC_B6RcA8tqpHFy8I_6TCQN0VxtGjp29QZWHqczRXgFduAOwGCL_PvpsmHghjdrrEvOHqGLG5oAimVQMMM1IrXuF3Cf2xy101s0rDOXCljQ9sah1RSsIVsc9tzlHYthiqM_0ITFvrTVOj84LKN4N7FGZELgx9NdTYHVj7i0Wzcrl5qtKhkx9517B4yc5BDZNB6eRFnYsKpYIqijc5I0PbDlARdWQgc2w1WKwCJwm3Xcc6jMUvkVjrVXiuAJTcd14RpFqQv6LoU1MW6uMhHQV6yXssUblKOPTGgWxh_IQfoXy0-IpsiN8IVOtFKQvWIkT-XhtGI5OYX8m-0Eq05xFvG6UdC6A3N0OYZLPsDmZE03L52wn6DwA3LHj0tU7b1jBYcw8EC6Vj0xwJlGEgtnahx"],
+        distance_meters: 348
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJhQJxh3KLGGARhnJ--oKEEic",
+        name: "Hiro-o Station",
+        latitude: 35.6518505,
+        longitude: 139.722174,
+        rating: 3.6,
+        photos: [],
+        distance_meters: 138
+      },
+    ]
+  },
+  "PLATINUM COURT MINAMIAZABU 701" => {
+    score_inputs: {"atm"=>{"nearest_m"=>118}, "bar"=>{"tenth_m"=>317}, "gym"=>{"nearest_m"=>49}, "cafe"=>{"tenth_m"=>375}, "park"=>{"fifth_m"=>523, "nearest_m"=>204}, "restaurant"=>{"tenth_m"=>119}, "supermarket"=>{"nearest_m"=>286}, "transit_station"=>{"station_name"=>"Azabu-Juban Station", "time_to_station"=>14}, "convenience_store"=>{"nearest_m"=>117}, "peace_quiet_score"=>0.203, "tourist_attraction"=>{"tenth_m"=>368}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJaQjeJ6eLGGARukCDVxdeRKU",
+        name: "Natural Lawson",
+        latitude: 35.6497556,
+        longitude: 139.73446429999998,
+        rating: 3.9,
+        photos: ["places/ChIJaQjeJ6eLGGARukCDVxdeRKU/photos/Ab43m-t01TBRSgZkzZbEnHFWUaX_33EoiaCfo24vTbIgbmin1zMqmTBmwQ39FWuSoLPtET-qeha7A2HneY0Wv-PuSe0TrK1ICi3eZ2bUr2xYY4_HhiBg2KT4HaAW02seiBBHdWzMkm56-8uBnNHAjUe46N-as3Q3D51Dk2rrwCFt6nQ4CuyjRuroiV1XNA_8ImOfD7VPaMTVJlA1LhJYnUAmxWEZlZLlFRZTQZ4arhHCHeSYaAD_dD7y4x6Rd0mo2DSqy7tSxcrw431i7VzlNfEcVDWaXwpQyrYeSL3_jxYnsjGoMpFNlkJqLHG6MS4fIO5EIKzqN0Dc362QiwaUaT2ow-0Z_Q2D_4E_uqAko5-RMkddrpB5AhhK7mmcXqWKBtSbLaLQ1xM6y6t5yXMo-B-3smpGF7564W_LyTsBExCE0oU"],
+        distance_meters: 117
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJw4rQ-A-LGGARmpxHXhLYJxU",
+        name: "7-Eleven",
+        latitude: 35.6524163,
+        longitude: 139.73439,
+        rating: 3.6,
+        photos: ["places/ChIJw4rQ-A-LGGARmpxHXhLYJxU/photos/Ab43m-uwqgnCxBVIyfA1Yni8dphjGwqistAxeCnH6WkeYM5kqfHyB4nJdTsAOjPUYizzLwXxEuqVZBRb4aFV77R0XrLuBWtNzFE9rz2mc6ieIOZHumMVgjsJ7CMNiHnOounCJWDdNc1xNZHsRkWQtkGzQ2a6bDwLfQKlcvK0oP5aa7jGoKKfhWLHiJH0v76ej4cdITdq9o4htXNotLbw413PPeOQWCW7XBCb7u3TxB0v6srli6D1yBb_Dfi4VxSDVZQC7BpufgC0RplF0oGU7SFyuXe4tPWjV7D_SBedrgejv5FUNobe7HcYW3Q6LCfAF4WXwFwBbuT2HqNHM8vGo-OJ7lU_MkBlVKtEzR0MFSzZoWZfKGsQQSjAW-BzeJYQbHdEMNmN3b6VnI20sJKoXXNdjmCmxZWKRUZIy6E"],
+        distance_meters: 273
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJMToXmKaLGGAREMbiYmf7Lao",
+        name: "Lawson Minato Minami Azabu",
+        latitude: 35.6499283,
+        longitude: 139.73644769999999,
+        rating: 3.3,
+        photos: ["places/ChIJMToXmKaLGGAREMbiYmf7Lao/photos/Ab43m-uWK14RSILIq-8o4WNAe9VVGOIOoLvVty2JLxSPx3-4s9zJcBKPJRZlHEIk9X8pyrlUry2TOmz1cKE1MjABi3UiMkkzJwAWUJmFu3gZLo_-fMFFwRu79vzJR44pu0Z2inC4dHH8M6eoV4Yp3VEJ3kH8BnHJ-23CQq9CC8DVlEcbTZDgDTmD7B5xBwyY79m1PSjGYlgQ9YZo1s8-Y3NUNsXvBGTE_vsU3i5JsYRpgbQMzqKOI3l-_gAxWvYWYM9zl6O2XG1WLB8htkrFJAQaWN9X8KRwLyRfEWMMjEawpnmyJErUH476DwLXDnE8zsiR6E6bvWpQCqdiKuv3Z8r1jFrDDZ4ooaDiwJ-ckrxkwMlrgU3y0GP1qLxPk1irJJD3B7D4O8nCJ2PXiwxnE0dSfOTwrhH_yKHmU4Mgyg5dbw-2GhLV"],
+        distance_meters: 290
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJ5yLZVKCLGGARvIKEykCbRKo",
+        name: "FamilyMart",
+        latitude: 35.6528852,
+        longitude: 139.7344177,
+        rating: 2.3,
+        photos: ["places/ChIJ5yLZVKCLGGARvIKEykCbRKo/photos/Ab43m-tpYPcxjZBzocrma6kpRHi2Sai72iPVwGwuLQwMQsZoEhsO3vzCpT97rR-x8yl-s7tslscoQoLs2n0mmJmqbwP0w_ki9fttapSmKeq7B-VdSYZ4ikcLVgRZHwCzGBNFZdkIFYjKsLxGPPhWu1z4KmlJosUeslVmJJf6shWBkNxlWP8oSehjsMZYiujSxIVOqkEjsDIUNMFCDtih8EBHqKpQMB5kcTf2WupEBqreUlzvR11B4qgz7J8CKc-DRoZnGZl0C_7l3ta3mvlDU_96HoBcWMF3yALd3hd6D6XCoHnokFBnV_UOl82Le3WFVORlImCXWPcuZq3mYah75cBDWrZgFe-QsDfaC03c6XPN5dijjaDl710QMfgbqgaHPL-HdYIIuxfamf68ZN_V_w3UZypSv9gYOysKISP-LI5CSg09hfqm"],
+        distance_meters: 323
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJw_C2fKaLGGARHTgR5qaTvV0",
+        name: "7-Eleven",
+        latitude: 35.6486855,
+        longitude: 139.736546,
+        rating: 3.5,
+        photos: ["places/ChIJw_C2fKaLGGARHTgR5qaTvV0/photos/Ab43m-suNzgYoVNkqV-k-GERFkWNcC7h8Z9Jb8vulgZ9nSEgwOh-poIx3szy3mj1DuI93yJrDabHBoKjWUvBcN7Z2IggzaIJosS8wbrkgpg7keITgsp9yXqj4TeZaHniEZjvaPez-oQzJwbZQJnuA7eceVCgFlKrvqJ_J7pbfEUffimx0Bpzzb6hpDLpyKpbinrE98uSUXXC4eWVBV6QJACcSMYMT0HwvhHFzMw21-ss1zpHumNpPhquNPQTMXDNJmSnCjvMFdVkuN6TeAQdO6tTz60xaVPk2piQFulqZ4Uu6ZjQe4mOQW4VpzptA0dTPrFvoUCNwBlCJCvrpNxgW__Jk_BrWDU_c4lmf1J7ojZAiIXL1UY_QM7CVlGhQqS2tyyqFayJZtteJ4fdrlDM8h5comKxec1-ynoiFnlh9I_-Phs"],
+        distance_meters: 339
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJIQcUV6CLGGARKY6ThCLydeY",
+        name: "Super Naniwaya",
+        latitude: 35.6525968,
+        longitude: 139.7341941,
+        rating: 4.1,
+        photos: ["places/ChIJIQcUV6CLGGARKY6ThCLydeY/photos/Ab43m-sX9V5L4lbTkG9aG7JYe78pu5KpUOPjdY7472f7dzaQ4pYrFe1_RIOAUGHog_BR5RFuSzc5ih3PHt_5GsSNJm9sepYxDuIiY4_Iv0BK6aGsfJFStIIQEiqotaQTcMjE5xXo-napgHZ-LPICKGSJbN3vkE-i7QSQwoysMuwxAuMOyta8NFlGpnye5rqyxEn8UiU5hNJchrICOO-exg2u1o-eEm3j7j8pSHfjWHR58k0tuiyDKyUJPccyLT-OshpUO-ldjKH2Hzz9QXtD_uqWFQS-93nofbb2hLAhfIExp4vlOF2JMKdE2OjlaVi5f7L4uhmTRTc-Tvd5lCB5caaGGzMmZd5atIATIr0Mk0jYCRY5azT92vUgV2Asml7-SpRr9gwDJ8amW6zusdpt6vfcXbp3Fz2YMstoWZ7rH3D3QuLRIoQ"],
+        distance_meters: 286
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJ1wwVWgCLGGARFvCcTOGdg1Q",
+        name: "わくわく広場 麻布十番店",
+        latitude: 35.6539119,
+        longitude: 139.7345234,
+        rating: 4.4,
+        photos: ["places/ChIJ1wwVWgCLGGARFvCcTOGdg1Q/photos/Ab43m-s2-Eo-QK_s1AarINquA03kSL0rcA3X0NV01gKsifAuDDx7urhO-VMRdwCov7U0T5h42And5eM693BH8aszvTnu92370hIg4abTWZShKTabFV-e7KZUV4GRNcL0kTEJQ69H45WO4fVB_VUpRr1s9PrCUd4holIf3kXkHMiow_SD3fNp8Q-Ghe3Sl59nq9Aj0KoDxcz5lmuMbpEZ5WvhyGNJ6Zd0_Lg4TmDTm7dCkJLq_z1Xy1raS629T1uAZknVh0iWqne9dq3i03r1vLyM9avIP2KmnPizks6gxX9hzN8m33ZmLGHu1WPq3_fZ62UVTdxannlYknGx4VyhCuKWCj4g2gD2N1b3rxbyH9Z0h_ErJwWcE8NdJ75VPUWO7kidXJw-z3mM5WcS4DX0kDVsmGrA5lvOfBAMzC4DsdnWoSxNXw7WjkK2tVoPh51Y-KIR"],
+        distance_meters: 435
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJO21xZAmLGGARvElZw5V76fk",
+        name: "Amano Food Shop",
+        latitude: 35.6476989,
+        longitude: 139.7286529,
+        rating: 4.4,
+        photos: ["places/ChIJO21xZAmLGGARvElZw5V76fk/photos/Ab43m-sAl7nsLCEZm62GSy4tF5hvtoVv57FDUkWOd2-_15bFVRllHgDSekGu9lqvwW2nrHlB2K7DJdd1x_s16tySOUxxNV-OQ_rdoBs8IXp5wEKUXulH8FEWAyY2jVb6sgXckbCLDHFcA2Lv5hAtrOYmP1Cm30JajQaO1x_mWv10UJf3JaOTEGMk287GLCpls-fb9sq2qs2JRTZJyAyd1wEA2QqfITXaIlAuUuZuXj6HdMWQyZ5wBJgu1QPu1Yz3ElvQhIjZ7u2hYrWLusy1dC9FkuolZzAlnDcuUptJ15tf7wPFFSJRtdOIX4Scl827-pxunDHLuKRWKzHxKhh5F8fPFZ0_pdYXpA7-Qcq_jX7lRmH-4P6Fuj3mN_I04KdTeuAwR3wz5oLr3l0E7jbzQGJQ_EtBpnj4q0TVdQMbWK_Lfh9Guyw0"],
+        distance_meters: 496
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJ6YTYaQmLGGAR-_3fdRDHFfA",
+        name: "Hanamasa PLUS Minami Azabu",
+        latitude: 35.647101899999996,
+        longitude: 139.7281997,
+        rating: 4.0,
+        photos: ["places/ChIJ6YTYaQmLGGAR-_3fdRDHFfA/photos/Ab43m-u2T1fJ939GHN68klB2ckg-D2vVDzxUboo2T-umzZ6enFWul53IZIi4d3dVCRZrgnPyy6tlrZgwYnn2tIXUTs5baMwR-xHE2yvF-kWPogPX-od7Y7kSzp47PL_haX9zf9lkKo0Ed4vjUXHDyDe90poQn-Uh01I5hlp4W_sAyZdAsM21uw6WZjBm1r04InL6KSq_bxRCsiLvNfQ5Qm6v1LZO8l29xFyzGzv8w1llsNorHRnFDZ9HchTakh6RN1cz9LyEpjiQWIB8gRPOzEVByRKdlgw_ItaAy9_tz31x6rDA-ScyZX13xHtd6TyLuzUdk3Li9UY4BdTIMSd74qiSv-H-WngrV574XrG24fJfYgY5-BHSTixQShlv0K6LXJLXm5UYNwcxqH4uNcl7FoUXb2zzGf_O7F4c-ZDjxF79Sks"],
+        distance_meters: 568
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJFXXIYZ-LGGAR4fTlf4doJ6k",
+        name: "Seijo Ishii",
+        latitude: 35.6556391,
+        longitude: 139.735627,
+        rating: 3.8,
+        photos: ["places/ChIJFXXIYZ-LGGAR4fTlf4doJ6k/photos/Ab43m-vytCgZsWVhG6ThX76lunbOCVz0Wm_Ymsp97n5jLkrqCull2qi2g7eULaLMYY1JWQzj9wY9lVw0tqD2gXrQryfdVn_o_NG_FNlPBVOqqmRXA1xVQ0_i5UES2yn_3U_uH6Hp9irwLOBVIdnZqcY1NimFD7f95Fv_AhDTICQ4oUyAkRAVHFJ38b-5JKYp3X3L0Fw_SZXAcsaKT9kwQx0gfE2bKjkKzEkYVRTQgLi50UCJY6PYmMmJSYVfYkX7zZ1z1mONtjZoaqPluqLYknXzwBBzFt0ZLn3o6QCfOGES5XJSNGmL45_5KUese_Sc8_5oBeb1IHyqhvnuO6eSWRdB6YU40Ncwa_VtE1R3lucWP44Sjdyz4V12A9z4V3ixB2fcNqNTwETz2JgphWn54GWuOpiUB3VpHaAjCDPH5oyVSkzPsA"],
+        distance_meters: 648
+      },
+      {
+        category: "atm",
+        place_id: "ChIJSXkxoGOLGGAROTnox46X67s",
+        name: "Lawson Bank Atm Nl Minamiazabu Nichome Conjunction Branch",
+        latitude: 35.649697599999996,
+        longitude: 139.7344421,
+        rating: nil,
+        photos: [],
+        distance_meters: 118
+      },
+      {
+        category: "atm",
+        place_id: "ChIJnUtGcF6LGGARPgFfeG72CuU",
+        name: "Seven Bank ATM",
+        latitude: 35.6523541,
+        longitude: 139.73436089999998,
+        rating: nil,
+        photos: ["places/ChIJnUtGcF6LGGARPgFfeG72CuU/photos/Ab43m-u5_-BZsLzy5mpBZWVhB-XFPmNq6gsaMIke0WeHBn-7NA3FUaaaHiN6vG2VM6DfA-VzbxyuzETDyjlp3pPxmypvSQIWNODDslIDoTwWru9lMqHbj0xGhJQtIbnL45MRmfWr7Yt-2nrms3ttwL9NYVroULTznxZdRqXS2BSJf-Y76YZWK2aOj3Pi8xwGISTjHO_AQgT7wqQ6gcJINXQaPKScKyiD39FZnr6hSrcqNRaksmDqNF1dr0ZPwkj3o6-3lkRlwLxmTeZ1Cn85y0zMVeouI7_tImGpuvrVOBzguAm3h48UmcZ2_zy3pfdrlluzDq6SbPa3UQBjZfzviIVj6vba6WT5AyuhYPe5Ugug6HuzBgS4DkpQ5naYOcdyTTN442uHiPp0gikkPf-MMC4AU-sXI5YgjGQG0eNhkaj133AxXLesc7ewEIAbZBq0lGg3"],
+        distance_meters: 266
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ6fUvyJiLGGARnboQUbGjj_E",
+        name: "Lawson Bank Atm Ko Minami-Azabu Conjunction Branch",
+        latitude: 35.6499346,
+        longitude: 139.7365117,
+        rating: nil,
+        photos: [],
+        distance_meters: 295
+      },
+      {
+        category: "atm",
+        place_id: "ChIJT1UkHgCLGGAR4FORkmVnKo8",
+        name: "Japan Post Bank ATM",
+        latitude: 35.6527915,
+        longitude: 139.73444039999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 314
+      },
+      {
+        category: "atm",
+        place_id: "ChIJs1Xr7UaLGGAR8lAJVTng6_Q",
+        name: "E-net ATM",
+        latitude: 35.647706,
+        longitude: 139.731159,
+        rating: nil,
+        photos: ["places/ChIJs1Xr7UaLGGAR8lAJVTng6_Q/photos/Ab43m-v8_br9tzTgHBSC-pF7DYZ3_SEQNQTZ4QNDrpBv9KYi4j7h3PmkNo4OkKNG-6rUuhkRSebxziCpIhfzLl_j7ErwPT1Be0u2A1mfS0mqmC1-JYmOtj9RnECWPe6mnQ8VdRU1Kmpz0qGeMkXp7m0gL4Fdwfz3akBrP3rxtIQUFZQ_SbUPYw31FuFkatQnk0l7AOg_vWI2i7cxwG0jQea_X5iTfcPKAkTaBlLd1fqidL8MlJzWYcjVSxO9JUK_VpFb2BvUxcHgaJhwBzcpoa6n3UdYAI5Rtxek24W0pV84_OdTmf5ktLPc6pXjlMo7Qc8ONVKS5Bqc0_GMIpf1Uf_O2CsFF3buEMChM43KJNptSyeuDQcun8IyNUjOgX7HnBH03ybMn-bXdXemq1rBOS3USbfnZtrgwdogLNapiU26QR8I387pvFUCU2g2bioH5r21"],
+        distance_meters: 330
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJAQAAQAqLGGAR7AgFRjMyyU0",
+        name: "エヌティエス コーヒー トーキョー",
+        latitude: 35.6498439,
+        longitude: 139.7350147,
+        rating: nil,
+        photos: [],
+        distance_meters: 163
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ78YjmcSLGGARYYIsyBbMO_Y",
+        name: "Northcote Coffee Shop",
+        latitude: 35.649128399999995,
+        longitude: 139.73505889999998,
+        rating: 4.6,
+        photos: ["places/ChIJ78YjmcSLGGARYYIsyBbMO_Y/photos/Ab43m-tyMIE6Wsz6dKjthoZp8uk2Q0RC597ExcsZ2ztQx4uAnvp0f5qBFTMpDzgIJEa3HorPSYeIy_Lf2nQcKlUKLRoXsAjxrlhw1FtXWwCvmn_n6MYJEdiO34kn0xMb7pNeNW79QZ0kuRkXJiNBLel2JiRLJtcdPxquMY6lbGWQOO9359fJi8aeLZm3gIcbXDjlxafKjpz271Irf1nzDpcZ4XQMBo_IUw23LJZPKsljZwhEgRc5ddXCsQulElqYClHoaiHrc4bRU89EbEbCI34p0GqgaUh5a0DHynEimnpsdEnK6r08iREQE1vHSK_2UljYIX8JISj3Fv7Bbqi4qlJkeUxLRI9x4qA8X-7Wy9ZipphM7tu_f5ldnMAUp6YDVg1uuPBYFYJD6UsujFlRhV1Anq7TxaNa_fKx3btXMrcrZ3PBkyXUSl1P_xNiRvsvxycv"],
+        distance_meters: 198
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJn-pgX6CLGGARHYyfXcxzpNw",
+        name: "Kariz",
+        latitude: 35.6523657,
+        longitude: 139.7334799,
+        rating: 4.0,
+        photos: ["places/ChIJn-pgX6CLGGARHYyfXcxzpNw/photos/Ab43m-tOxIxhaLhOgsBSJRGqCA3-jxsS8O9ruSUi_6gBqk3mtuNJng_IEV7SO7xKw5do7azv1THkLvrDvYZfmupbwaLT6FBd2PDVYhcb5IU8e0eCyHvmVCnB_-6uSQ18E1kqDGj4wOxzg_hULPJkCo_gcktlHUT04H6kWHTgKnXEA7i66YZwgaJKRisliMsTjdJD--DDwCHKGBwprcAp-3g3c4c2Y52x1P3cix-THaP2qfLSpY6QRIrt6KlSz2aKEnjxCddr4_wE4HSNAsLtbtMn037W3QZI6TgBPWI52nXQDkU9pqOQGmCDz7P2NKtsQY4yzJaFHSrTLTTKBUmpPgaRooVN8hRym_AFLyCY_hYfCUOSwhimAPaHdebJwibh45jXeNljR_YfM-oX7xGPGE8HAZitZDjeUBTW_-eg0oSOKn0GioeboK8uMrRVsCqm_I3-"],
+        distance_meters: 248
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJgwYtFt-LGGARdaxenguJrdE",
+        name: "B² Minami-Azabu",
+        latitude: 35.648484499999995,
+        longitude: 139.735244,
+        rating: 4.0,
+        photos: ["places/ChIJgwYtFt-LGGARdaxenguJrdE/photos/Ab43m-sSC5ceaJhhr9AiY-rBSm0-FKTUhNL1tFU1Zif7pEFBQUTr9BtIzNIEks3DzxUdBHxu6aqS3EPCcYXFrNgS_klIo5E53jm4bYNZ7WTJgYIaTj1Rm004PvyKkC5LfIZubXYkG7L6CHaT4q8q9ZvkPcL14Wk6jB0wIfbGW6JeksGuGSTdPeMuhQQNAwcFtMiChSDEzTEgIgA2aKCW8L-fc7qd2ct4A1X8x7W1gHGtiK8FFbb7dHmNpdr63_CT6WdX866WlYLkJZaN4xBa8TCKHV0dTQZl1OpAlhLv4M6R_WZaJk6F3DlRR6ITaeTVhOyanFxoKtZa6pG8OSWkzH2Uw4-X4ZXAA0-JFGno25uuiGjF7l4nmKd1pSgct1LjLSuyf_d-6zTHaAgJpO_afu3rR6OhzciJkfKwWfizmx8"],
+        distance_meters: 257
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJn_LxrPOLGGARAt_XEbpH3kQ",
+        name: "d'une rarete cafe & bakery",
+        latitude: 35.65244,
+        longitude: 139.73493349999998,
+        rating: 4.1,
+        photos: ["places/ChIJn_LxrPOLGGARAt_XEbpH3kQ/photos/Ab43m-tMtPepEX_d9QZFJWGwV7f4fUv6Mg1BbzUPgGtIV5GoQ1rT46uYLQXDQ18Z0d8Ekn_6aqyJPhUIQE8b29_bdEQ014U_Jnh4HRgJLT4GZTX_AbypxkOS7hCfdCm4QnOoaNMB-21CylqhmUL8YqpTljKQ4DYELqYoIRdc2Tqdg9y9YK6BhMPdr6ISdqkXsx339mwCYxrQxV6XWsCpT-HPM7FnVP1pUfiYdyODhIOKE6Zo8bcRuQQ6Z_TX0ay6kn614H_8KSZb0UZtfpvfgo6Gsu7RQPkwJ54TBMZTIrS00kJBYJdC9Ia-SJANykNNh8Jyv9267F1vgGdyNkvXlmet81nEwlRu9n9ja4UKpxcOTJES3PSw-9mPNbvtCdw-GX2sk_h6rqQdmFyhJY0nXaZpaeEDulwi9ShjQR7zmR_oFqtjyxaL"],
+        distance_meters: 297
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJgU129p2LGGAR-DzZwhq5RDk",
+        name: "BeB BOWLS & BAR",
+        latitude: 35.652722,
+        longitude: 139.7351755,
+        rating: 4.8,
+        photos: ["places/ChIJgU129p2LGGAR-DzZwhq5RDk/photos/Ab43m-vHkQ6EhsUGRuETH66X8yatjLt8vfvdbgmRQwzcqcac-_83tGUl2pHiq66wF-h4g7QHK9LHfAJji9EWAkTOPEsxY9zv7Yc_M07_-1x9tgH5RDearT8jg7rV0YnUYUOQyGZtt-GLxSjNMvl5MDaBEVqS259HsbVx37NPBm6l50sqFYBTzMM0PG6_cCdAwnNAq0I3E68QsCw2oz024ngeiABtU07i2e_rp1D4t2zVf9tCkTWF-1YWFkqvrD5pn3nnIcWIPevKBwt8WEdvgsMGxC3d0CHZlV4YdFeclt94XV5VkC4Ev4p97FrEgnai43rGncal1b1deHIEgnP2iDEn6DDuTSXnShFhFe-p7G2HIc-INJ5P5uRAyivBha0wERnNBl7L763Dk9KQZ5k_GNGBYZ6DwITWVoDs3fgTTYiCwXkduYiNvWQa7Zio9h4zC-IH"],
+        distance_meters: 336
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJvUjoMgCLGGARnXb0OGezUbY",
+        name: "BeB TOKYO(ビービートウキョウ)",
+        latitude: 35.652722,
+        longitude: 139.7351755,
+        rating: 5.0,
+        photos: ["places/ChIJvUjoMgCLGGARnXb0OGezUbY/photos/Ab43m-uEbyhZrzvI7YxenI-mQpZpa6aL9avo9F4KZ9q-VLDf2ZHZ6RYlvlWJWYhFIkjk8YJmk6wWmpHoVTu_RwbO125A-gijOl66GaEaXBiz9kARi4-TuY_iJOsw-Y_oGFZz37KspSpeSeatb_-1QoGyIOMVgpJ0zaeAd-csTQCXpsBuKTyq8WOGSIBU4ZgDwVfBKEdHV4SKSULxFAo7WqVoh_m9clNvcQlVzJCHTOnsJa7YDkEGrDZVdmWzngxwujRkWMIOD626iILb41oJ_YGC5Lcv43YvfpDguBb2mdJeEJ8-LcdUzKcxpPXU9V4gXBZ9ofKxEn4f8OUHm6hdlBPryz5agV90yJsSqbq3g_Mn5DmqnazAjK4ni0bCRC5qAN33QtTMPmqXPBzco140YnmNWlD0LkZSEGYtbB-T9Itg7_S4GguhXUm1IcDGVlfo8Kxo"],
+        distance_meters: 336
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJbYMbQQCLGGAR_-BkfybysiY",
+        name: "麻布十番ハルモニアビル",
+        latitude: 35.6524837,
+        longitude: 139.7358055,
+        rating: 5.0,
+        photos: ["places/ChIJbYMbQQCLGGAR_-BkfybysiY/photos/Ab43m-u-cysSqDPpJZoXImQx5pw6PTMKuAwu6vUX-lhRZtaiLMXHI7GFkiMpr0WbUew0A9iXMRxG4FryvbVqmgaary11eChzbnxuPd8cV2yQugqbsaTjmCx6vuO0Y8Wu8TCMFdh_COj5AHTgRZPvOStKFZ2DVQJF8IOYUXsTfqOyaCXALc6fCfATw8Que7GzJd9rdiWWjp_JlFu822rLHgOsiZZ9CpstVpj2g0DjRl8KA82839D5KEjkIMChTZ5eKBJWGhX_GtRiErGPmLLUl27Nq6ZoLaskIzKADwhyHAkV6K5JP4pecpWpaAyNh1JA60cQiIPzm2rqgW0Cs_T4xJ_FDgTD8f3t4GJuwDy4U-OfEC4Pc_XJRI49zNOkaAqOfSdq8eFFM5XzW5k34oiMaPV_zExIySvPZybgqBT0OMtReuw"],
+        distance_meters: 348
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJYw9uJA6LGGARkFTg5kX9F6Y",
+        name: "Café and Snack HARMONIA",
+        latitude: 35.6524837,
+        longitude: 139.7358055,
+        rating: 4.2,
+        photos: ["places/ChIJYw9uJA6LGGARkFTg5kX9F6Y/photos/Ab43m-uLMe5Mk1cT0BREZbmciL7FPI0OhVU32RDp7OsUtWmy1j1Hbj_AZl3hY2ssQaeEhHvOE1gVFQeYCTDu5IQulbOk1G_ALr8zJ44H_ZawklR-p5WbWXIl0zxHmDEVG0Xl3ABmYjvG2xNm1-GBtkbnHOS759zOnfDUSn5N5Sk_pd3deNyukzZ4JNOlul5bYIpKrXk9h02j078g_wSIEfOH9KRPwP0WGrHHzq1IsWEu7hsCivU8DgPciHA3oYu7GCKLnoGDt9OxYylJkHDj_-HP-YQUjnNzKqnCPjc4ipWKaboclYy82ivb7Kpoh7af__zQLGu9phaTeUzV9eAILUfs6W22hpnfBVFpYOYFOuK_yUWk0JEWmrONcFHmV_KLxh4d3_GrmVgTcXh6eebAABQVR6j6fBviMhYVK81i8SbWJnQ"],
+        distance_meters: 348
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJh5lBBk-LGGARwf7wugPkdk0",
+        name: "Night Owl",
+        latitude: 35.6533965,
+        longitude: 139.7343362,
+        rating: nil,
+        photos: [],
+        distance_meters: 375
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJhQYnH6mLGGAR4pemQmDowes",
+        name: "Torisho Ishii Hina",
+        latitude: 35.650019199999996,
+        longitude: 139.7332408,
+        rating: 4.4,
+        photos: ["places/ChIJhQYnH6mLGGAR4pemQmDowes/photos/Ab43m-skI0M9adtL3vh-sOZQJrfFnIG9izakme82TBQTet79qEoeLNmKRux1MEmtMSHjav1WKxUnKrqAyLH8gaoAz0vfCC_Oeu0ltpqSmDRFdxyIdQ29OePTzbUXCu7J5m5i6NP5MQhu2xSnF4w6F4FRQdqA5U-hFuK6Xmmup7ykL2i5dE_RIsGGYu9wghq5mB3ar0MTFzPqIumJPK0mjt6VWPNoVbPKdYRQkekYZjgKQHuzLnnIEXDBtRTvaZPPN1-42iro6P58lK2gRgUjXzlW9TEDJIg6QmAVPKunCPegkZfNVjLmFHe2ViauOBf3hRSC22_iourSegmjlk8rR30SU2kq5YOevRsFQOP6YzIEgxWeIMXK4BpEGDQK-R-5LOEeb21n_RRGDZa-vXbaBnNGzmgJsJ4pa5dACDBcLh5wHXc"],
+        distance_meters: 13
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJZ0eWUvOLGGARCJ4KcQ1fcoU",
+        name: "Nigiri",
+        latitude: 35.649992499999996,
+        longitude: 139.7331743,
+        rating: 5.0,
+        photos: ["places/ChIJZ0eWUvOLGGARCJ4KcQ1fcoU/photos/Ab43m-uimX5sZsV_pg6yXuombtx_ahBwiNoigLvGmBIsqNm5PNl4XFvJriXbU2zLXHipH0rWOkQLLuUbVTERSWp-a-UQSAr7Tf1fGfRGH2guxLkKUuQVOThX4tt3VVwGvZ-HlugVkeDEVQlpny97dIUPYkr9-MRtaJ3_4MfDcKeRyf1_ZPpgKjFOILFtb4pIcmFPnFzDAUFTo5TFmXvCgRIFoUgdcq0iJ-jxfQQ5hLPso0a9khHGFIqmFOX-aVAVi4MeFoxl7olVxPQd2UQ1F848Cz2qnkguvxFqzg_mUPzHDWlLatansOzrem_VMXYsGxbEwMtPXYgB44T12FLXkAdMvC0RCmzFTam94y5E4wcjVJHHq7kbsxHGUHPjxEjbTSb85Ma6_orqVQtoIv77Nnk-CtrDW0QGvJwWfg0ZomLa3DfPQFql"],
+        distance_meters: 18
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJU775s4aLGGAR91CXpKNCw0o",
+        name: "weenamkee",
+        latitude: 35.65,
+        longitude: 139.733,
+        rating: nil,
+        photos: [],
+        distance_meters: 28
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJfYwJvViLGGARSR-KkAQm0IM",
+        name: "麻布十番斎藤本気ハンバーグ 麻布十番店",
+        latitude: 35.6510916,
+        longitude: 139.7338365,
+        rating: nil,
+        photos: ["places/ChIJfYwJvViLGGARSR-KkAQm0IM/photos/Ab43m-t2qFWX83p_6f6AGLVwc5L0ynvZhTT8kdBvD5BUD5VWDn7bKhHdBhN3U8zV_vtCSaKD3hkudj0pNuuh8AxVqh-CNuEZ7EhuMxFrixnJJjM_ZCEyC21p9zzWDkszZ2hbZMBkz9H96BF3-ZNl08pDG51DD7Esvtq8xzk1M6jb6daE-TVR2gRPOn9QE85fl3TCCs8D2Hr5ZJ5-2ntBRtueAb7nA4v5T3O2wAQOlCc74M7Xzn3l8RGhax8rpIyCVaZRHjwowao4WgrKY3IkRz0yUyGwdAuGuNXBR_Lr1Rmld6S6ytIw71BGA1yObCwHtDatvzgKiToUD7fW81W4ywH9LUctPZSt5bf54Bu5X0lMOKeEKH-dUPykGxlrl-sgsUvraFCYAffyogtp8DCgtGJejTNP6fPux5lG3cqmwZ_uCjQOeOEu"],
+        distance_meters: 118
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJgRPRH_-LGGARBENbD6_tTgM",
+        name: "渋谷がっつりガーリック",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: nil,
+        photos: [],
+        distance_meters: 119
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJRSpiHgqLGGAR2ls0aJTgbAI",
+        name: "麻布十番セレブパスタ",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: nil,
+        photos: [],
+        distance_meters: 119
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJY0xz5fmLGGARnNArEYCcjJo",
+        name: "Premium crèpe Gelaful 2004 Azabujuban",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: nil,
+        photos: ["places/ChIJY0xz5fmLGGARnNArEYCcjJo/photos/Ab43m-tOsUKeV6dXJ3rXKhUOycT1uQ7dvYwKUyzPM41XflZStHdgY-ji2EAonGJeRSvkuo180ddPCU0AsV2ubN2gHlKOR0XXGhhCDZhP3dH0zREd-0uPVzS14olzcuTSAJyG1mhUfWEHIhE_dnuLUqHh1_saNcJmprjtU_3W8do8XrPFOGE2G5UL4nlNaZZoToz5OQtxcB1A1shyD8hNKucLmZTZVCD1pvLcPugIJDPd3nyUdDwGMD0XqqKoK6mmJl9Z83MnFTt0cSSHSMBTgeoyenejWM0PcHE6-TJ9bOVAOSU2MDWzvLmq_lI9dDISBO8EkOyY706HdbH5JYRfCQ_oiGojYsOYP_p4-etAUqC6dH7Iw-Q72q_RnsXuk4cCAblAJCBK5BzgZWnh7rlwTrL07WeOKA0ZLEv5MMxJj3NsDR_WpgU"],
+        distance_meters: 119
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJhaG2VIuLGGARJcRwmTHihMA",
+        name: "釜揚げしらす専門店鎌倉屋 麻布十番店",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: nil,
+        photos: [],
+        distance_meters: 119
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJd-vqDBaLGGAREw7aY7vksDA",
+        name: "麻布十番うなぎ吉田家 麻布十番店",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: nil,
+        photos: ["places/ChIJd-vqDBaLGGAREw7aY7vksDA/photos/Ab43m-uH6oC8LHYeYgIaiZkVE2xuQN3GkptU__aBTuF_HBc6elqblaBDC0vLwvYL5FmL2yJonazexO8jDtMN6iF1MnAronoT9_8meP974pRiJhYu70AECLqUeigHeRWspWCs59N14t7_xU24RRhylzqOrm-zFtM6jgiWUoJOl-hO5o5DwXU6wElccekzMPf7qqpGbGYwfvvCDBF79ITkACclCmqollJcNASjsF5MU59IPAku1PMBSWtFr5Syn48GEp1pCv1jcc9rfgMkXLEAKbFiriRmprA_2Maw8xbDCXE_0YUjsVklNpY07qqQZQREIXRoCPCdP8mwfI9XNK8fVTrTUDpGUtRJxaOrSFbqhHq0PX8ekprfqtFCQDFbZIS_OnQk7WXfofKwhOZQgPL1z3Pm8x-d4SPJHeyKuNDNUCLsNbWiTw"],
+        distance_meters: 119
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ4ZzZJWSLGGAR-6j8pW21In8",
+        name: "Jerafuruazabujubanfudoderibarisenmonten",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: 3.4,
+        photos: ["places/ChIJ4ZzZJWSLGGAR-6j8pW21In8/photos/Ab43m-v121jURmM4FOJ0JMBf22W7tPcBn4d575zQLJW5yJKiG9_kf7YtKXTJLGtDgfZ39_12xttK_uNNrYe026S-jHRx5tgYLb22qLCJRCjqmNgkq9WaWeajHobyT4gjBgKPYkLYvkBRrQZb1GJsvsXQrKmzdcUMkz3dHVS4TGZWvlePUnih754CL3rI-XhBZ7ANFhraTGZ-2JoX_MHL9_wKg85jlZB60r2uzaCVD-3HiXcZFpI27Dd-Sjk2E2EUSf9W-alrVrtqWF2Io61if4X0D-TU4RdyRx-uw5sbG6rpxysjGeUef9wPFOqB6-_Yh2P9ad46JJs4se4Khpslq77KXwQWrozNbaA9hrTL27XianNidVaRA-OaTHOAO8ca0ZyfRWMx0Ykz1dWVwhF_r-1-Zz6zjovRg7cm1uXIeGL0KefMuhUz"],
+        distance_meters: 119
+      },
+      {
+        category: "bar",
+        place_id: "ChIJNVIgw6CLGGARwItdgYhdZl8",
+        name: "Moon",
+        latitude: 35.6510916,
+        longitude: 139.7338365,
+        rating: 4.0,
+        photos: ["places/ChIJNVIgw6CLGGARwItdgYhdZl8/photos/Ab43m-t_lJ7-7wIIU6LnMb1vLR6FjBUekXFhbSygwnBcK_4cTpWG5CApSPN0wN1sF5rrywf-I7SvITFcmJNNTAClnMEm92KWpWLq3MPjp4kPdm5UrsNtxykRYpxfAajND_pFXViwbblOcrym0Rh856SmrsDKCQJGD8TL_pcZ7Y87YK3RPTnofAOSAEOsSybzN4vjSKEO91ona8yGalZIFcjpsRTHqDsh_dC1GG8hWElXaMntpzTW4YDwuZtBb2z4xz9EXdFBQqr6vUZCN5uB_WcVfzfipdyinNdXGMcraF1pVOpWP-iqxBs3NWv6KofDn06hSMPZv3LI8e8CLaCarkdD0rV74RG6urhmOV-3RzaCOfeW1s0pkw46CZkkxs5MqMV90JwU8vcqEHecD4h096BIUnFJjA28LbGbipMZ-anDJbZiUg"],
+        distance_meters: 118
+      },
+      {
+        category: "bar",
+        place_id: "ChIJReilRN2LGGAR-gAXjsLKskU",
+        name: "酒肆ガランス",
+        latitude: 35.651854,
+        longitude: 139.7346427,
+        rating: 4.0,
+        photos: ["places/ChIJReilRN2LGGAR-gAXjsLKskU/photos/Ab43m-u60_yuUh28kMh1JLML_WXYBD_2aO0PY_HCo4XrLLjla-Sl04J5vDe9JedDPBNICGb02S_JGmkdHwH4P1ON-qVa6OJlyvldzwlbvJxTpJvKnHdizbwOFSKem0sM3_cAi5edi336vbb5n7wBy9S7u_6Vo3vaOOZtfXcPVozpQprUWuM8eWJapjWXqCwSvnZJwTsvTpepMCL9B9OsL2fw9CXR-nHUHm1la4VCEuJvpHy1yu4bAvvMaw4t020qPHQ4iF96HwEo9f3T7NEeK4i66-_kHk6Cy_-q-BSCg64KUNbbA2zV5go5CEtxTYYsh-l5q9YC_EcAtAgsd-IS4JMMMxnSaOJGzPA_HXdriKJiP-pFUtjl3nyFH_Zd_3atB_6FKN0vcA8I-veIrHjmL7iM2Qky0rp_EarIsBnAi58VWEZ5k5Y"],
+        distance_meters: 228
+      },
+      {
+        category: "bar",
+        place_id: "ChIJDw1hfQCLGGARQKxpK8oNtCM",
+        name: "forme",
+        latitude: 35.6523976,
+        longitude: 139.7334249,
+        rating: nil,
+        photos: [],
+        distance_meters: 252
+      },
+      {
+        category: "bar",
+        place_id: "ChIJb-sKSdSLGGAR9p7RaSGrHjI",
+        name: "DJ Bar Rue de Boy （ルードボーイ）麻布十番",
+        latitude: 35.6525876,
+        longitude: 139.73349919999998,
+        rating: 5.0,
+        photos: ["places/ChIJb-sKSdSLGGAR9p7RaSGrHjI/photos/Ab43m-uGHBTahzEgZV-3FcuNRXaDy_gryi3eYXEuT7Q18P6bViqVyztCz1kcpZK3MV4ccKAWopCdjtPsoo0Uuzd5IqtanUPkN_6hhg0TrLpuIpAY0MB6EpWCvPCYq1F3aHxIw25ZM5cwbT0YS7ljA3Z3nQdTwTD6AMoCtfnVOLyfFqT9WIKxIo9hFE7_Mq0YHHVObeuyflbrrr677d2KjNJbGleV5L4bzl5ZRRextKwJJeG4g9mVOwvY021E_ZSv-fNXzIEdlBEODE-rxHKIK4oVgZjjGlnC_fLf6-LEC7PbXf5rtOSEXKDsQJxX_0bKuY2_qma-Efp75ukjd-RzEQxjK7_RpbjEG2z2tJFMcVpojOfY5e7OWpMKp8G-_uoF_UIhCMhCg7JUVNL7cYjsxHLHtpixUfBIAl4AlDtDZpXVCI8_dGdHLzRy56NmTv7qHB6c"],
+        distance_meters: 273
+      },
+      {
+        category: "bar",
+        place_id: "ChIJGXH8JT2LGGARGXqEQhZY0Nw",
+        name: "Bar 4 Me",
+        latitude: 35.6525876,
+        longitude: 139.73349919999998,
+        rating: 5.0,
+        photos: ["places/ChIJGXH8JT2LGGARGXqEQhZY0Nw/photos/Ab43m-uSCnQ60ATERMIBavAKH-F-PdvyXWVJUmRupoj2CRk0s3uUq8-Ch2NjHMvP3v6gUroOf_EpDOAp3MIG8QC8-JVijI1PsPskI07bekqUx00GKgvajD5hlDvJSU9fPeCkHjCwtmfkkdHQVOuhjBatBoblG8iNVY2uBZgu5K8RTfjjPAmVKaUU6MD0Y-oKrrzPII7eFaX3XUoR9O1nCApUNiM3m1AcVx4jDayHiErepJwp9Z8_RBYRPa8knKHbywXS_YXlaWnv_WyazYQeW0Wie0Q4hgA2XTFtPNleL3172Glc1gKdFAGfHAzBXk-MyHQcl3roIXAQB6UKJlnuwwwful2Y5mALz3hHsgNG8kID60NHiGfLGbP0k-7AZAw_2pmF2VvYBBCj0Sl29zhidWmKwWpPg-YcU6w1P8arGHtznQWkUJA"],
+        distance_meters: 273
+      },
+      {
+        category: "bar",
+        place_id: "ChIJRU9o7QqLGGAR-j-6dXVgkIM",
+        name: "麻布 SHALA PEARL",
+        latitude: 35.6525876,
+        longitude: 139.73349919999998,
+        rating: 4.3,
+        photos: ["places/ChIJRU9o7QqLGGAR-j-6dXVgkIM/photos/Ab43m-tcA34XfmIJ6jvuyy3FAgSWta8L9tZXbyhp4zu1xE-DypPXgL9eGj-3a8dfa8C7tQz8v9B8ZBXRe5yFXqPsTmu6B1V4gagQzdf0IChTnh76LkNHxdAVrV7TKrnmhEPZLWBVZKS6yWK8JAGVi2aRagIQB_9_SO1lcaDHYNNPYsrnGyK5BvpPFZAR3qdXbvYbW-9owve9k9ysBS6DOV3EBQVF9Yexrp3IAfepLLLlsa8CjlhLnfym8nuhsCeVwY68wUHFxXwBDFOSpwepreNIEEZKt7s89OAk4mtG0AxsBnYhpOY8fihric301F-OlMisFpU8yfty9m852Tf_DusyIvYQLT2IywDfvJinG1JTpLx06Nz74PHSMV2kzNdhUNdsnIokR78NKj0PYWTwd5jzGe0nei8A1XLPePpN5-XqH05JLKzm"],
+        distance_meters: 273
+      },
+      {
+        category: "bar",
+        place_id: "ChIJvw4rAqGLGGARDCJULtdg9h0",
+        name: "Pace Italian Lounge Azabujuban",
+        latitude: 35.6524073,
+        longitude: 139.7347265,
+        rating: 4.0,
+        photos: ["places/ChIJvw4rAqGLGGARDCJULtdg9h0/photos/Ab43m-vLVUZ4e0y9wu7zEw67FcrpsyISDrpDXm8XmfIYvBhOR_mdcbDMTpq1aE5F2kK4hSeefksruJ1pM0A76BJD-7bXgbU4ZyUkymS6U8e4a2bKJjIh41rvxhlC3OTMy-Y6l8mpPaBRBcxYglzkhrxtSDMDV8ddDuaDHzSvHgVG2FaUkXHwkGCVmimp6zgEk14JgnlFwYUTo3quJHavkfBHB-LyL7YdbQYPwilnJ1jLCmuP1Xpcm6qZABgLpqN-Ly66BCUUsPIpT1kYk591zIW0PlBHkI_d8-I2ityb8nzks7NvLrZ_ZCrfOvMWgdevA-bllfPTLtCgFWhcuXBvCPqfhHmbY3wIJDn6kT0qFINItvxIliuaHapr5_8eTvGSTpdm9Qrfrj8H7TpssOx_2wmyStFjr4G0ccdWDVz1CFhcaRcsbw"],
+        distance_meters: 285
+      },
+      {
+        category: "bar",
+        place_id: "ChIJDdZQ8KCLGGARR_O6YT7dugo",
+        name: "Moelleuse",
+        latitude: 35.6524876,
+        longitude: 139.7347807,
+        rating: 4.8,
+        photos: ["places/ChIJDdZQ8KCLGGARR_O6YT7dugo/photos/Ab43m-vLP4L-uJPO0MkMqyrtpCrY74qAlzVaer1MzYG0e5UdIxrfJdFrkh6t3e1uBKtL47aeNp8JiOL7YWcNg-lr2imX2wY_AgFTCT42cI5J2VBTwEwj5bZbhWGvMut6r2C4tk0-v3FjGNWmKnx3kjtJ9LfSCjh6M4vJvEI8VcpuKUbrewbcBs73tyT3CHzlv4lDvebZsYpGgB-6lXLd-UGpSjJp-0W4bcKmeOWKmPRUBaOuKr2sv-X0G-OE5JpmgSPudxLzOHSdNKIZPs6EG9bNDdRlWi-dk-fkEsg-uuN7NME6tTdu_91LeFcdLl3C1Om1cnzy51Oye2Loj8enRHGxl55zA05xL0WQsp2bmi74AUX061N0ixfsPWsr8PHXlXDElwz2hLQVLMgG1TxvkdcHjSQnmUmt-ke0U6D2wUrh6iEDjL8B"],
+        distance_meters: 295
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ32GJnW6LGGARzYw5bUOr7CE",
+        name: "Bar Trap",
+        latitude: 35.6480032,
+        longitude: 139.7354465,
+        rating: 5.0,
+        photos: ["places/ChIJ32GJnW6LGGARzYw5bUOr7CE/photos/Ab43m-tHUm5egQjRrZnqj5kBXaX58pG88cVaRjv6NGiVEmJm_YFRoVmg1ng0dR5cvwmCvqhVAje-TW8wiyp8ouUvDkcvfcD0F-7nyotp0PfahmljxM5A47DHpmZ5CRu4xR5RPBorJqd7jDKeNW-70aGoo1DEak_Wi84ivnH03wjsUzrHhXymyfXrEnApYJnZ1PCIpr5eZdPUhnW0mdneP4JQf5F8RRKZ_5eBbW4tfTbfrSbllGQTqBqthzBkvn5EfQ_rVQmNLGSjii7twttq0AGrQ0crI0ugCdaIG7okwNfUmjauMDV81VEGXwUm-YgcAwkyMK3wn47WA_hdfXj7E4Ukh01gbqLnHwuGa25_xpTrb__FJZYqGgBxJg1oNpKCIJpwQAUz2RQF7-u_wZ86Z1iaNxLIzbsS-v5e0WCN_0ZYqGnux16PObODI-d7dKmnrQ"],
+        distance_meters: 309
+      },
+      {
+        category: "bar",
+        place_id: "ChIJEQmWD6GLGGARib19iEvEW5g",
+        name: "ワイルドサイド",
+        latitude: 35.652482,
+        longitude: 139.735262,
+        rating: 4.2,
+        photos: ["places/ChIJEQmWD6GLGGARib19iEvEW5g/photos/Ab43m-tIH2I_95KnJzG3nOQudBMpRaztMQi4wxeABH6It_73cGPqZ7nUYpEE2P769LqThOVa_HcgYCeYhXnmdz4alHZsxqiaiKZhGXpwuRvcWnVjOp60l4UuQPQX8z_DFd6-1pBKSfeFOmyk9ygbGIE_g1f4FF6EZ4fYlm_ppbFjX3hDA39g60v3i-e27MIp3DWWoBKUFApBY4ZGjfnNlROBK6ft3kAiNXb5m9ujSNrb5zOzyTxBRC_YSC7JsTIOv5JL20cgsRqPUZ4l05L7NhFy02tpBUHaPdCy3uGR3v_HOyetYq9U_zflmSY6jI43JVE4SbSufJjTN0xjba8mBecq1RCz7vP2ejzOx_TCI52nRSegqiu9NRLMPthqfZphiN7CvnqHCMenLtLujBjAad-yasFR5fTsVLRYu9ppQa_ysm8"],
+        distance_meters: 317
+      },
+      {
+        category: "park",
+        place_id: "ChIJ03J6awqLGGARn5gXwjG4uTs",
+        name: "Honmura Park",
+        latitude: 35.6502249,
+        longitude: 139.7309967,
+        rating: 3.8,
+        photos: ["places/ChIJ03J6awqLGGARn5gXwjG4uTs/photos/Ab43m-vCzSHqCuMcLkUigs8J_yFMaTgGWEGhafeTIvVlbxpk3QcDBMZVLHkIDPo41ITRnki8Riqk0-HzvrCXH_Lf3ci1H63rNjF5xg63NCSDLwsn-nkPJA47TafiRCn1nApVywic_Lh4vrd5oLabYEQmPPIJcnsfksAgw0LBbC_0nYKqX4MsTqMfLaL_mtLD2eGn_-7eCMyLcKPGgDCkhlYQTTShAZSZa81vV8KMpV-axqFLAcDzpPISw0kE40Pw90m6wgCJMFOLjjBLEPVvEUbkbngovBQpOpwZdYpGv2_jRmnwdsn5sFiU3SI8glXB_8wlB9Xky8E1dKrlihS7mWITvLNDu12TI-1qgdWC-IFLrHOCiWMzvh87oGpN_whBiKqcuSENvTuQ2yx6hywzNcKY4nI5tnqpzTVkHQqyRI5rV5KPltwL"],
+        distance_meters: 204
+      },
+      {
+        category: "park",
+        place_id: "ChIJF_EuXAqLGGARwnMrIR9Sgws",
+        name: "Minamiazabu Shinbori Children's Playground",
+        latitude: 35.6498614,
+        longitude: 139.7358051,
+        rating: 3.8,
+        photos: ["places/ChIJF_EuXAqLGGARwnMrIR9Sgws/photos/Ab43m-tx1Y0hFdNGzayM3xhHTCLxIuFPwJo_aMIPe7Kxn_pu0h1QLch3a_NZbDd-vkOkS_iezDoQ43_VJjarPRHmM4EKO9eewyOagdGsnyX-1ThlRadRByPez91jpC9YP7aKSE-ucY5ItXZpRm7UJGRM3XEOGI--bQU-XflwZxklgzmIrVBCfp4BBEh6koP9PsHoLUuodqA-GIYhcgkub58sm13WbkI7UiQlXroGAv5axb0Jv9NgxuoICWbB16MJalwWNMoGGUZkb7L8lzNyKwqLDDqgtvgvZDXYoTw6kfipwske2-u5sw1j0webPFRvo4KZcs3Gh7khmrziTW5Tsd0J5zE8FDbQJtaTVEUeBCkskQrrQZAu2B4O6Mk3r_IpHI4tseYFC-78363yaehchvk9paonQmb4YPSuoOmv9999WPI2xQwYu6clujIY7M_gX1TZ"],
+        distance_meters: 233
+      },
+      {
+        category: "park",
+        place_id: "ChIJGYEBCxWLGGAR0BRpmkYAvAE",
+        name: "古川さくら児童遊園",
+        latitude: 35.6466326,
+        longitude: 139.7335712,
+        rating: 3.7,
+        photos: ["places/ChIJGYEBCxWLGGAR0BRpmkYAvAE/photos/Ab43m-tZcJMk73CIImQP7OFQrVch0qTVHlsNDiJ48J7HUFP1NcrJkZv_-Mdsrz1aUb5AQmpjtSv0PejbKO33T7DefzsWnPL5S-Zl4-KpXEFCUq6t-NxOFNgWrXVVKYOWaexpv-EOJY90XLnFqPbsLGuGG1kz9kAnSpcTv0GVewImW3Rqfa1W1uVyM2etuBzrnqu3_U22Vxec1P-LPqR3D6NFAxdYSQsJ-DGkludb01g7ku3FvDHz5va0rbHk__rMU-R27qtr4WWWaiNeoVbGd0GCa5RKC7PaiHL7t88ZxsQESowDWb67akg4_-TNYFjmfHucT5tIdpQhpa1qcbizbXsRvUaLNC1xQUe4DcrBgChPsNXK0mzcwAI4NGkmsSeAqy0Jftu-WqWXkPyDnU1qnhbFhtxaqvR-ylQgULnMaBW5ktKdm3rg"],
+        distance_meters: 391
+      },
+      {
+        category: "park",
+        place_id: "ChIJT6cNJKaLGGARzLJjuTQnCrY",
+        name: "Furukawabashi Children's Park",
+        latitude: 35.6465089,
+        longitude: 139.7354712,
+        rating: 2.7,
+        photos: ["places/ChIJT6cNJKaLGGARzLJjuTQnCrY/photos/Ab43m-vp_-2QWurkLUbCk2fugtzwPQOgj3OtTb9Eq6MYNzmrkp7jsRG4kD-_QSSAhJ36DP2XhVgz3oF_T-xr3S5m2xQq7L_1FASmTN3p8Y3qO_j-iyJCrWIt5F6NZEH7QEjQXcsg9i8la9Sq1BlyZtosd-FBCaTblCikHGfSL9QtTCRWZNj-EfDFyntb6ethJS-W_C0Egd6tAScxtCTUecSlHu1t7D4PpZO-HAGuIS71siXUtvP1_x2B4QU7SL_kwRbQEGXPXyfOg-TrS-HPySx31x1sugVVu5emlunb2C_i5n0xtNbCDWrmmunUilF7cGGUUfUvPw3gIC15jIKmCzR7agVBmvCnH5D4y89wqJIe4yYZDdn8a1wgeSnvk_bFCPTfLYNhfE8UCm6KwBwvniV_ixawGlX1yKoXB6S_85xx7QY"],
+        distance_meters: 451
+      },
+      {
+        category: "park",
+        place_id: "ChIJA30KCQmLGGARkIlnntrSxOA",
+        name: "Shirokane Park",
+        latitude: 35.6467552,
+        longitude: 139.7292377,
+        rating: 3.6,
+        photos: ["places/ChIJA30KCQmLGGARkIlnntrSxOA/photos/Ab43m-tjYurMhEovmU2cTz09urC-_cDWOckNni-IvZA8QSsqzKPQ7WHOth9G0CSOosapg_wG5szY1e6IxAmFNM8IJBmnzK6ml9L1hw7GWV9CFWJ3NqOvTjwYKrYOC8bwOvX_rj1cIwa8mTuT0E2A5RDh4kNNQ4oW1PEoCtN_dSs6JfPiHFhOlFatErycy1CnVBcCviZnFQP-e5aOhccXmAF66UBJ0Mi7BUWS8BNoofor4sD9PmwvlLFecp8Cld3uuG1O0cIU1QkmlPosFxcyZo-xsb6jhxUjFf2QhGSRUdhxtOfRvxuFVagJWiWyCqtReLeFRGzqozJ4nIwI6kGxN7ekcjNx0C8SY2QnRRdh_N-eRms_G-JU2_Jx01srIcbVS4DXXJ0tFWcqexht_gUgpQhPTyrA8J5j05mOd-EwI0fXsYIhIg"],
+        distance_meters: 523
+      },
+      {
+        category: "gym",
+        place_id: "ChIJWTveMqeLGGARJjSOjQQGJeE",
+        name: "ヒーローインキュベーター",
+        latitude: 35.6499962,
+        longitude: 139.7337623,
+        rating: nil,
+        photos: [],
+        distance_meters: 49
+      },
+      {
+        category: "gym",
+        place_id: "ChIJdeMs1biLGGARgQCttTMVcY4",
+        name: "Premium Fitness 南麻布店｜パーソナルジム",
+        latitude: 35.6500462,
+        longitude: 139.7342918,
+        rating: 4.9,
+        photos: ["places/ChIJdeMs1biLGGARgQCttTMVcY4/photos/Ab43m-vy-mxXSnbrjOoWZN7IvhQLcEO7JWfhKcBJTkfmVezAq_kU1hBbuX9mXSPcbjX_0Vk0c7FcpLSfRQBkLCdLcKR4t69OG5gA7gUbC_LKht1CgSIKUUqJCW7SAlmgxmOjiwFIsv-28iwjpTmg_inUj6Q3MtduJM60MkESka0ZBw9DerTUExEQRXltdNJL6AxJIT03Wi1qyQoOqjZ9v7jcvp6iZn80oi564onsTPpnKIyh46WAVipKv5K-I3cxEVcGQGglpnUdSUttU8ZLNrn5xapM_mxCTRGe5TihUYYU2JX86zuo3YyaqZTjaIHqT6_JF-_neZq2YsKhd16xVxwPRpIwjheFKUlNgp4XsYpDjhq_bLY3Y-cSyM4SCisLFLxadNlf_NOq5M2Aw5vyG_Qd8zh8yI5OtrszD4j64ErQwXkvwNsxRTdHKtHsQNKaxdx3"],
+        distance_meters: 94
+      },
+      {
+        category: "gym",
+        place_id: "ChIJYw-FXjyLGGARI-hEimca_Mk",
+        name: "Beat Pilates(ビートピラティス)麻布十番店",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: 4.9,
+        photos: ["places/ChIJYw-FXjyLGGARI-hEimca_Mk/photos/Ab43m-sYDs2_ynoxeWCCsHNkQ8WJ8guod4VzYPY1FFZINvKQAfY16K2uvlBflfQAmJXU3RaRLnfZaRLmvN03w1r3usKOkzO6bIxtsXKx2XTHKdeuZU-99OYklhfe4gNTtHPKkhquvG6ZJaMpSkO--4U6u1AHy21YOF98iQW4z_fjxJRyjdBn_zOypqis484Os2S876lFD2VUvNgLXSO3tCbtjPki6lQbjUPmwjad4VoGG2Vds-T_ipLiH_xL00h3u019kyyllM0d-VuzTQccyZKS_MdXJtPUG0_KxqC20ypc0jE416ZhpgV8U0pwxJlV5QkNvwJN3EM0Lailc94qciJ49VLAs6CVhC4xk-HmLpgGJD-mW9r_Rme5XA-bQpJJcS461ttO9XDwux3c3dLnOkM7llOHLjaU57N1EDneuI2VRfM-LLd1"],
+        distance_meters: 119
+      },
+      {
+        category: "gym",
+        place_id: "ChIJMeZOt1iLGGARKwvTl2GKWEY",
+        name: "Studio WELL_J",
+        latitude: 35.651087499999996,
+        longitude: 139.7338534,
+        rating: 4.3,
+        photos: ["places/ChIJMeZOt1iLGGARKwvTl2GKWEY/photos/Ab43m-uLOGElGnG6roq-tE-blgaIa0MUJsbgP9jGYYYWs4kHV0O-wZAdFEWy2qKnbTfEIolEd8GChkYe62ktUsWyyVDwImQXue14mhKvVki_pmJ59AzPbOVTUnOm204qtKrCQj6yBFKK8dUxRjze19aBgsc7qfEO8h3kM13dKm5XtKpXY1oFPKNVYcFjk97ZRXB1mw7RDEbkfKT9pS4cWiIbx9qNwm1gC2vVDltFBgMEhzsM9U7m_docQ3R67jHxw7J30KcsbeGbXkRevc3YV6unCoMfZQ38Sq4GhusGa2NxEPXNkMgNk0N6CUVE3yaACNO_u6JFvNSWgUtbafR8dmCJMtTm5ifbmAHcvM_EWluPdv7JAEuWczsVjpe98PsWJjNYJuEsoH2_WxKtNV_d-1rs5No1tvJPDXpFdRrlJLHLpm0VrQ"],
+        distance_meters: 119
+      },
+      {
+        category: "gym",
+        place_id: "ChIJzySoHGeLGGARdIBiCAOS4nU",
+        name: "private pilates ReStyle",
+        latitude: 35.649778999999995,
+        longitude: 139.7346499,
+        rating: 5.0,
+        photos: ["places/ChIJzySoHGeLGGARdIBiCAOS4nU/photos/Ab43m-uFhkbbm3c6_NhriHrF9u7H-krrlcuV0XTnQc-M_vRuse9j45PNdcMyfOdi7KzOvesVtrV1famdAIRVrS-u47PTXLRkamho0JFlnJgGX0ADE6D9b8T0359XrAJI5Sz4m-ivPIBjdI2JtV52wkPLVG3nQ9s-xoNgaMcPs2R8dOcCqyTBTsDJeS07NrYCZPizXiWP0xDDwbRXCJ0NLPl-h-9_j8tjvoZrac_A9bm6OIlfNPPyvkNUglqoTtYVrP9L8Bnum2EHzmVPugmq7f4692ih4J2MjkQrTXsR8r3TZtsd8MvZNISpApT0bJRfRur9Q8T7diAUjzCe8D4UBooMX-9YnHn0WEOMTK15bNv4174obi2fFgEzrq_nARoz84SLfD6Sv8_PicJ-s38Hlm_0qWEYQ-EydtMtR9Egr3h8vYFBaa5wlVWco5sjmTUZ6E6M"],
+        distance_meters: 132
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJP8qx4KCLGGARrA6QxMdha0E",
+        name: "Azabu Kokubisui Hot Spring Takenoyu",
+        latitude: 35.651451699999996,
+        longitude: 139.7342565,
+        rating: 4.2,
+        photos: ["places/ChIJP8qx4KCLGGARrA6QxMdha0E/photos/Ab43m-sVjADyN5tzkhGNQ2_gvXR5DJ7GV3gv_lCOH8Hu_tC6ggcTyYdydrZYVjoRP5woy4UBhNsc6OKHWNO9MQAEdaHibUUoPYuheqC-E1Y9tVxnFZHsMqQ3ec1ald1JyBRPrJK76myHl6U8USE1Zx0TmFK2phzkmb7YjSzCttjdHCxW4DZIpFtcX408_Pytoncel0p5AZNeuOIYq7CUNtgIhjRcQgkTGKHnG5Is_98vIGNytYQD74ZOcrapaC2bZ6uP5S7e36uUCjSsU2nzaqGqEKNi14zt5em_WtFkjj4rXmb49cwiuBkDpfjm74XWuIIQZo7zdNIK7N5u1LjQlPqV_5uBRN9CWL_wa74XxRyQlJ5PeuL1_7xWh7Un1A015hZtrbn-NS7_XW2kd71Iq79-pujJakqMXlysNltCJCuNd-qSBiQ2"],
+        distance_meters: 172
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJWT5qa6eLGGAR47h8mt7M-7c",
+        name: "Zekko-zaka Slope",
+        latitude: 35.6484563,
+        longitude: 139.7331843,
+        rating: 3.8,
+        photos: ["places/ChIJWT5qa6eLGGAR47h8mt7M-7c/photos/Ab43m-ssUgRvP7Zi59zxPdzCC8ICTXvzYirDvDgaPLw2JC1qdJxGWObxqJNg7YhLVGTAH27oXo20cPLDHuEtNuf2mICYyAZJmjRFevVw6B5NTa8w52s-opE7SDHLbbyQlNYnHPZ0Mzzu3GcoRkY3f3aBgrlwRA8eWFxstJpyoGu2uGHlw7k-ygUCJXzvumn2kyvXVW8KBTfvt-OlGwbAMbkuB7rGz7OSRPu6IY1m4hE7O4_PYG6omHFVxv9JNzZU6nW6BQvvqUMJMkEIu6_7XKhUYwOAbqgK44nfGY6n_aYrzrC1iGFBD3m5gTnQ8cf11ZcFUI8_oaXk1mVQvWBzSmyWZ88On4FDxV_KRHFIpDjqpw7WCKMCs_-PxBeCDGWjsy-MldOYXTVICitQwbnZGqPJj1jA-IPpOrlUOJonWnq47M50b5i0"],
+        distance_meters: 187
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJVeJuOACLGGARzVPTdSDJ2sw",
+        name: "釣堀坂",
+        latitude: 35.64915,
+        longitude: 139.7315542,
+        rating: nil,
+        photos: [],
+        distance_meters: 189
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ03J6awqLGGARn5gXwjG4uTs",
+        name: "Honmura Park",
+        latitude: 35.6502249,
+        longitude: 139.7309967,
+        rating: 3.8,
+        photos: ["places/ChIJ03J6awqLGGARn5gXwjG4uTs/photos/Ab43m-uo-cnLtL7fFvgxZdRNDuvbIEsCHLukuh9zGTFqff9R9895HyrnNB1-nrWwFyWpWjZAzAkNmbS24a6GRVe7O2cK9QGtGFrvHllaMyRqpFbBGOmfbFIBWshHImQedMf9pA6CJpxZuUDrRuwEh5Tr24fa6pnHAHyNDv68qQylt-VibzaYpTVU-yM8UuYAxs6uWLqPa4JJta_aj6wFSkKeW4ztBcAcH130f78wOpYOLJ0p5cro0yuCJyXre-t2O31vZh9VJI7-0X5_rHtHaYoGby8nZAYY8Q_Yiudczs4wmO-r0-knDTE4j96SCPZUvzQeYihYJW3J3gvvaKPEMlTPU--VzIcF23U49taEgeszyOrpksOlOI60oSc_rxF20s4xqBc6wIQL30uZeyYXGBUtsknNiTg5B58kAZhROGooTog5sQnZ"],
+        distance_meters: 204
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJF_EuXAqLGGARwnMrIR9Sgws",
+        name: "Minamiazabu Shinbori Children's Playground",
+        latitude: 35.6498614,
+        longitude: 139.7358051,
+        rating: 3.8,
+        photos: ["places/ChIJF_EuXAqLGGARwnMrIR9Sgws/photos/Ab43m-tYRn2xDtQuHPqiX1BUzbj6qesVpXGg1S_Nr5FmUQETx_-Pfb7P6qOd5Jog0_CV90hA2QR0gNEzP08LFLsULS2vJftNR8kvUbWncIemTYwrymvFsOQ5yZzwcezojMXGVe2qr2ep7RnMVkh8yRfQ55kyZQOrsj0YIxYi4EkOgHnKobwgll53zDtZiHALZ5tUG7eBycDroGboP3N4Q4XGKVtwDVrk5TA8W3aUAIjilGDESMR-b4ddzl3_wGVMCxjMrqZz5ZgPeq2G7rNJV57NF_4jQBY-TwVSqk11mNt2WWVdjT8qQ2fjeMmHsWczgxvgebgzLUmSHh7DqIia1ZAs3HeaIqvvQqmV2GaPom-vbuZ_DvdHFRhk53MNWiv-hV8EForKIA8p_gfYAL4ggb_Hbr5IC5a-9INwRuQcWw5wb2sdDpvXNRztAfIK9dViFyhk"],
+        distance_meters: 233
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJW1UkeKCLGGARGTHbDKgPNaE",
+        name: "Sendaizaka",
+        latitude: 35.651983,
+        longitude: 139.73064829999998,
+        rating: 3.4,
+        photos: ["places/ChIJW1UkeKCLGGARGTHbDKgPNaE/photos/Ab43m-v1WoXZb-j0YJaELGtnwF1kXxphmw1FMo5duncdieNVghQ7qqlCnLRapDkayAaBBibVXZvGL-N3EtEqxCya6L_4VpyfqygzFJib8Y0tk9O0OFwrvPu6rhg-W048e05RqSjXIku8-jOgR5edDYq9ciPa6CriDt3-Bfah855GCCk1ef_y_16SA9-CO8hCtR1INgpBj9u_SioI-V9IKMa1zvBjXHiasDjscjofIsQ4joahvyreMi1S2Sw0jNkx0zqkt6HIfPxag9WVNQxhRjzRPIICW0rNxT491CgAGcF7TCUxYlUozmCIIBjl73yx8PD7XCUdDwHfSZk5Xhpl6KLOpkSKI8Sp-MnaOqSNYNa2Fgz4v7atUuqRNs3sUfYjULcyooVs7L2vZPxwQWJRbouFuoU_JEMwlEPddGLkPbqgyxA3QJ4"],
+        distance_meters: 312
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJtxFmRqCLGGARP4T9Fd6pCUk",
+        name: "Yanagi-no-ido Well",
+        latitude: 35.6532878,
+        longitude: 139.73378530000002,
+        rating: 4.0,
+        photos: ["places/ChIJtxFmRqCLGGARP4T9Fd6pCUk/photos/Ab43m-vFcTHxcwsRtoG3ZjQqmDQPrP6Lz7MRtCHXHIJFGO3sVHTzr4cgLLz66buJZEa5iMthpEFgqbHaQjJdbM5lWC4AJPQBc399fpaK6HXY-9p-fEMiecuwiPDRifmyXAYz1Wb8nXrzGXlnp62UfXIDpP8Ah2-v3XhukFD4Pyc9xoz72ggX0_sw-8FRZyMT8ZRE849w_7PVReSTNmWR6XKrzbWx1IZgDqvpHt5ukYJO8Yzj106GIZNxJeQ6sERUwQFF3LXRMP-iUoCPsPN3WaEsLs5gfwBLgV1Bzg57gGPeo9ncB78l8sXpBEAc1EqQhTfeM5QbuPT8E_jtFETNTmq_UyEuFq6WMPKtaaNKVvDisDm5z4Xycs3J2cbWC1IzZ2qsU4yL8JnFf5tK59jMcmSt79iZQQYCustcHRCBdG1GQimTMfaw"],
+        distance_meters: 353
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ6YLNFKCLGGARYnXXyK2ubDo",
+        name: "Monument to Fubuki Koshiji",
+        latitude: 35.6533255,
+        longitude: 139.7331451,
+        rating: 3.0,
+        photos: ["places/ChIJ6YLNFKCLGGARYnXXyK2ubDo/photos/Ab43m-vcCHlCIC3FfUepkLVjg30f_PRY7HOzrnjnEZxAz2s9oyO9TfwGknqhmMRkryr98mQp1kue15E4-MdvYRZMYTH_igBI8l8k6WqrqZAtwfd0IRfkqbwpX0SmrkTzcYlGiHGj8jjd1xzbMXYZRVybzNDtfDFBLZTPB6GaVXJeQz9obcfvdpiKWnjWSP5A0QoSdVhcFVoS-KctCweOPmkB6c5Fl3pSnIacARKiWSByEHDtVYc8xzKtf3KBkT_WVRDH2Jqm3RsLMIT45_HNG0d9USNt_WnsnfZn1of1K3jtWPlUdA_RppJO3LgiZQi2PazTJw-U85X4L2OP95rCyXc2l2zKbf6X1U6JpjgJ2ZphueP0-RqqKDl7GRctH5eorLIMFPet6_o_xdJOI47dMw9JBFnbcaVUzbYwTGEPrDczkBcr4ueu"],
+        distance_meters: 354
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJjSVGvKeLGGARlNfb8wPMG08",
+        name: "Shinfurukawa Bridge",
+        latitude: 35.6468749,
+        longitude: 139.7334709,
+        rating: 3.2,
+        photos: ["places/ChIJjSVGvKeLGGARlNfb8wPMG08/photos/Ab43m-sYZGflpSYKXGKhQe8JVZc7DKEd4aN9BKpr_8CeHVuWT2M7CWFVN-QgNG9OgMUGVBV4Pk9p_JhdDh_XORjkSm51puHkIp9ZiCSiQUnkmzpXF1gLUWsYmfnd_WZ6L7GTgZcQGsP8IjoFd3vrXQRrG_mdPiknCwie9rNiE9KnOKPD8nERpCcEID6ShSNm5x6jTDGszBdqoAi9camZEFxBau092ak7r_ZnI7V8n5n_B9Om7uOKGUQd4tKgoLqRdP8L3_BSsdpI-HHQa4RxL3f6zRXdEPwsiZEPawqkiBcro2tomBBUsG5jKuqzYhEeCbgCjZNjRFz3E9tjOFni3OhnWcouOnLiU1m6bxYGwdvTqYsioL5My5BIPD40_bTJJE_pWMtrjld0h8fF2oXnid4PFOxPv5xXxFLsfT3thV1RVsgboaDr"],
+        distance_meters: 364
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJpVwzfgCLGGAR2-Qu3dt6uyc",
+        name: "阿衡坂",
+        latitude: 35.6500638,
+        longitude: 139.72918579999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 368
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJ31wWBZ-LGGARcminVE8c9Go",
+        name: "Azabu-Juban Station",
+        latitude: 35.656399,
+        longitude: 139.7366023,
+        rating: 3.7,
+        photos: [],
+        distance_meters: 759
+      },
+    ]
+  },
+  "unito SHIROKANE-TAKANAWA 401" => {
+    score_inputs: {"atm"=>{"nearest_m"=>178}, "bar"=>{"tenth_m"=>306}, "gym"=>{"nearest_m"=>92}, "cafe"=>{"tenth_m"=>449}, "park"=>{"fifth_m"=>411, "nearest_m"=>142}, "restaurant"=>{"tenth_m"=>63}, "supermarket"=>{"nearest_m"=>173}, "transit_station"=>{"station_name"=>"Shirokane-Takanawa Station", "time_to_station"=>10}, "convenience_store"=>{"nearest_m"=>179}, "peace_quiet_score"=>0.192, "tourist_attraction"=>{"tenth_m"=>480}},
+    places: [
+      {
+        category: "convenience_store",
+        place_id: "ChIJH_TWuAiLGGARBZReniXflHQ",
+        name: "Lawson",
+        latitude: 35.6441045,
+        longitude: 139.727835,
+        rating: 3.3,
+        photos: ["places/ChIJH_TWuAiLGGARBZReniXflHQ/photos/Ab43m-ts3ng1jcORt8uA-QME5GScHgOdEoBQzQlkG_WG9RQgbQvEtKGb9tn0d6KV4gVRPfaJ8wngf3RdS_fEfqZt5PeVVmYAAVhvLrk_XxOfiswo395KAnIYF3zWdHkNWHy-ZvKlbQ1rpO2oK25JQuE0vxdvVO0a1FagKtPg58psprYtUnTe6WuRqCSbiLs5ZxXx0aYQXKrszyQu7FyYS5uiWt5FuoL3Oc-KrUyb9PduWXeNYzfdULvIxLL2nMHscKqDjc_AGrWQyZ4kqJKIHHowg4icmeMgfOLr2P9xmsdmu7CiqXLRXQBaaB7UAV6HfQokUpMkccEkJxg-z2IVoo4Su0FaRei1wWDZIc93lL0EnC2lKcV9MHx3uy_ZJHeK97P5xajIwvwn_WufYSUu2DvXfRBSv53csPVJB-RpDiVN3irh3ho"],
+        distance_meters: 179
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJYf785auLGGARI2go7EjEW7M",
+        name: "7-Eleven",
+        latitude: 35.6455519,
+        longitude: 139.7261589,
+        rating: 4.2,
+        photos: ["places/ChIJYf785auLGGARI2go7EjEW7M/photos/Ab43m-sBHgw8il8kWHkrBzoKXJIMfwa_qHF-tVIAxAc7MwqfID-OVKIu8Hzy_UxPOfr6ybt8wkgK5ByEAc7tiG15kLPBAyicVJ5QwGA3bKdYPmvfj1cmJIxIx6LEFZuMZaaZl23z3tenRBAFqP9GgOEmUArV4frdRSiTVgZKz_e88o4eNNteuSJAHszPpOLWpe7Om9jQ4L1RIPuj_RX8kApf2qNxYs7xqSNw4doJyW7KI5LqO_Tz6zT5TN-JdZh7K1p0ip3wdtgJo7fpcWFWFCJtAOJarrXE9XWrSLqa96TDb56N4wGP6AD5RlFgRXQg2BHJOfXMJNH9YL63z60NIlIkuGmKZ3NQE8WdFa0ArizYY17xywD8cvxll_n4y6JktkEdhHRDvQ6ZyB7tmBec1Ie8cBynUz-GCv18t5yMir8XC-kXcw"],
+        distance_meters: 222
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJta48JrOLGGARdqkIwqS8ye8",
+        name: "Daily Yamazaki",
+        latitude: 35.645776399999995,
+        longitude: 139.72560389999998,
+        rating: 4.0,
+        photos: ["places/ChIJta48JrOLGGARdqkIwqS8ye8/photos/Ab43m-uxzoTbAolK3CqMGWfaY6kqzMDDiwy1ojUjVIL459YmiZap4IuRKxDzhqmEZb0Gwb96ISAVgukKEHXxF2U166XTEdpxnGZh2mD9jOn7x7F0RClYxNx74OUhuJmPUQWJXsEB8aajXsP9pWgf3o9PRWySGn01anba-W1UJuMtee3_GsbwTPCFp1-0jo7SqzaLRFIhtKAUFiVgmkSCl-mXgz18bpP7kCb31STY2lNxPNAB-hjKLC1dzMcIK7yiN_9Bmbw_wwCz1xZiOBJxGH7FZZKfLtiHv9p3D_11QX9DYZHjsosS9apTC31UbXWpNdKSAGoJp3D73uLUUtWuATNHTnLQXRFDTlvF94AgM5KWMM5R31lUuEV6oPbBKVzZ3VKz18qGUmXoIPaEjRgYLWQbGN9qQLamKklWcbke3e5Q7tVLyZWQ"],
+        distance_meters: 273
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJh25xIQ-LGGARsIIQQNGwPb8",
+        name: "Ministop",
+        latitude: 35.6443586,
+        longitude: 139.7257784,
+        rating: 2.4,
+        photos: ["places/ChIJh25xIQ-LGGARsIIQQNGwPb8/photos/Ab43m-vpDaVYisdjcpfjJX6D-kjOGlW1tflyFlKG51SkEjzqrIAXJXwGSHTOQSzgMHRecq07iVsGXszlU6kWIkDTNt3n6gqPzl40gjxQMJ0Ge_kf_AE_ygyfAMuUAx6GABy-IAhT0ds7PZSrv7m4X6NNaFn4rruST5GcWRMHGtP7GtEfgh2yXDkl7aFcNJHwYYgX_mjvn5jjJDh31dPaYQI3Idnio4ZNM4oMBC31uF9W-C5FH2eFgFquhq_ejbuGIy-w_LKNH55PjheFUND2ZFluqCW5FYCgTBs8wcZ50DQE3_Qz1Qw6h1ber6XEYPYxm01Go5kInjL3t-fLcYbNU-KG0si08FZa9isp8MHDfiTLhJNNhPImhe5kRdTP50XXtJw4g5S0ov9varJetLeN8b2KCfEXaz7a5k-OO-OiIz7CllfrUJk-"],
+        distance_meters: 291
+      },
+      {
+        category: "convenience_store",
+        place_id: "ChIJv7K8wwmLGGARjmkDr1W4nQ0",
+        name: "FamilyMart",
+        latitude: 35.647468700000005,
+        longitude: 139.73111620000003,
+        rating: 3.1,
+        photos: ["places/ChIJv7K8wwmLGGARjmkDr1W4nQ0/photos/Ab43m-t1oMdpa0fHKPy1XVAAyk8M65N_rCH-7Eo68cjfcwqXxwtDaggi7AJXJ9Wo78IxeKu0Ijkts3Ds7TM5mBucdNiy1gortPeaDsRKaaM1JZHxMo9s1x4bDqwsrQSKlcExFjHMOa4UVF487DXCAQ1pHIPxx5URWT8tSKk9qI47boJQ3v_J2cdrtAhOrM0wrfPMpDF67PTqVGTFnxilBKGhw9J3swJT1UCNteQSJ9o2WXNCeY-VFQ1XU46BVa6ZRKP4lBfODdvCSR082wuTkrC5u3se5BbSkDjZQukqgxBe1biRjst-1q0Y55w1xdKAb6UZrQzULTUFUENsThMG8d9g2-Zrx93KdqPFpJ-bXn-w8NiVR2YsBaYtrELlvDCpCIhZPI7TeEIh8vjB4rPCgb88cUFUQo7iYrbAuzhpi66bwrPhpw"],
+        distance_meters: 308
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJ6YTYaQmLGGAR-_3fdRDHFfA",
+        name: "Hanamasa PLUS Minami Azabu",
+        latitude: 35.647101899999996,
+        longitude: 139.7281997,
+        rating: 4.0,
+        photos: ["places/ChIJ6YTYaQmLGGAR-_3fdRDHFfA/photos/Ab43m-uVmXovhqQm6nPbA5ErWfzPVtUoPbPw5nZcNYBIcv-7qc9dr6zQqeuv0FXLm-eWbGUL-2lMvklbkunDsAUl-PCfEBVk_QiVshZAeIl7jMuAdp0eDkYyuKsacpBOuOS6WS1iUvsif_N6_kw3UX1Bi9m4RPZZtOo1KnilgMF6ZyZ7cIskbx5YJjDBCRwI1dqV01gSNsYek_pxFGL6y-7waVGaB1gJR79x0626PhGN3vwIOzlr0lP6lTvSRbLSCf7zd3qgfqwHbGQV8D4Qh1W7LTRYu2OmsZnAdAu5qy13muNuy6PGaSdWXi7nd2q-TOIPXvVQlhZsemhElcZPcKdoEOVLz6mx0Yxz9PVwYtQOQBE6RvVoF__ntoXUlGc6KUFM6Gte6D4TUwL_pn9KkTqGkszSdi77MKeLHiZbBofrge0"],
+        distance_meters: 173
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJO21xZAmLGGARvElZw5V76fk",
+        name: "Amano Food Shop",
+        latitude: 35.6476989,
+        longitude: 139.7286529,
+        rating: 4.4,
+        photos: ["places/ChIJO21xZAmLGGARvElZw5V76fk/photos/Ab43m-vvMFR7MOhKb7yMDxubrA_Q4RVtbra5W46q3YFUFUbrWQvxDcDonpuTuLnn07jLkIexA9xIq1GtStGK5Vw3TwQb0y7Zuc8N8XlRGdoR1SJqyiyHqSb0vFNJgCRPldtJl16Mre3D7x_9vBjSoG3pn6yDpPixXBx5uuM5IE-UlCUq-NgT8PaahIBkRGOaQMWUAwrWFYf3KxeE9LMLouAei21vNwrULmGcA1tRa2rA2MniiDUU2GcVMXQhdTC1KiHfc0kSErgRXtI6HV8gQngJSanwDntokH_jnBevHlpMWnzfH10eNMaOJ55TQHLycTj0jLZKpHhAFV-x_No2ougL1i0CZNcHgFWTxH5r96bF0qhOkuFJiHp-GeeoY1nlUscjvWT_Qa6fHZRRm5k2vE9HOQRK4qTFkDHnn5T8J_fRxjQCPgNE"],
+        distance_meters: 236
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJ7U7LZAGLGGARuVcZDGQMp8Q",
+        name: "My Basket",
+        latitude: 35.643948,
+        longitude: 139.7217071,
+        rating: 3.6,
+        photos: ["places/ChIJ7U7LZAGLGGARuVcZDGQMp8Q/photos/Ab43m-u3jLzxIIkR9QrnAxgPqRWLfh5jOW167B-G9oU2H_M4Q1LMUuMHbwKAyw3Sw6kv_IU1zln4olEea511VgJIzZfF5iaNVZIZ0y48lnws7TU1l5XvnanU09yf2idrSIHcvjRYRi8INeOwHOq4PQF3S-ioFTAcvipGsZXdWCNyHBiGT4nQU9pj_vzDQkwQkz2wQGZA0FMz034JqBvtM7FtBx5zzj3jxe8pCo-XTCzIMT4en16PybphySSK7IS6QiA5vF-81T4KRNxwk0XK5maBk-d8cWOok-_3tuGT-zduI3ZskxAO2F_fbF-kKtSdu1RcaAww17j7aE6ZlQ-_FuAUWY4nhwIuFdef3jsDSSoXpihP2y3e8SRH_NuWXe2H8mgPSmVTYoie4M5-qgJ_I3_gIm013afHxNrAK6s-6n7xs7erjUcD"],
+        distance_meters: 651
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJoWUL1nKLGGARksmuxkPoQfU",
+        name: "National Azabu",
+        latitude: 35.6512776,
+        longitude: 139.7241397,
+        rating: 4.2,
+        photos: ["places/ChIJoWUL1nKLGGARksmuxkPoQfU/photos/Ab43m-t3uRvOP1aHRjOD-EfdWmlHLsSkA8v6o8NP6etrUSICgrvsXu18rfFqNDZfRcHBa7LyypqsmCw6cyuhXFWVKg0Dr2i3n2Ol1HhVSVUlXP_E4Md_ae_qXiUWvyQNPHUyhbgnFDTy3EizdRkb271-gk0KfECvDmMGTbERqeZ0lvH9C524_acT95y9yK5GXikh7a95yMUt_GyqUFHXRAAHtxcEgPzZJsUV9oZPxwZcHJJgoaISNUAGXoj7_b07T9Sswr4bFAl1h50_18V4XMW1gmzhdxX--4oXo7w_6mF5GXX-gRGPPSxMCzqJ2AT4NL6C86Hux6ADot5AsmTZz9foUdlxaiFQjj7YTYcwiAXVxS--RKAd7b1iSuvF-PAn9box7HSw1YYoVckZl-WNLkytat1B8QcadRS20WdrE-L0lfr-YWh6"],
+        distance_meters: 752
+      },
+      {
+        category: "supermarket",
+        place_id: "ChIJmXquXACLGGARLP732kP-g1Y",
+        name: "Super extranjeros",
+        latitude: 35.651301800000006,
+        longitude: 139.72396709999998,
+        rating: nil,
+        photos: [],
+        distance_meters: 762
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ5Xy6RiWLGGARDqkcDz-CUPA",
+        name: "Lawson Bank ATM",
+        latitude: 35.644102,
+        longitude: 139.7278601,
+        rating: nil,
+        photos: ["places/ChIJ5Xy6RiWLGGARDqkcDz-CUPA/photos/Ab43m-sXgMcNIXAWwfRSc-2P0SHn6EqRjoL8fhhsDV90SqHa7PfRe_6F6oK7V0OSMHx_aCZe1xq280KeuEflMMYb4AXYd76OZBZM1K9W38ot_JAfxoEYHHDORFzExt9Zh7OBQcEtrtgV05Wrr6CQB9pozaJgttG30RwuvPo21jrmUpQH17d-CA2anynRHXGsNqUmSkdUZw72Fmw058-PXUk7ZrfCfZOTHJMsoVAgrzqV2jBZzjzzs1J04lJ3NsOF67LIHB8or1MRUu5hqtu-PPALOOJk-zp8W9_p_27cstjrWGvRrLWptYYY0HACbbtpIoqJNRTl9alHzygM10si4_4KDG6CIr8CcoxHmeBkI5UdVA_KZCzoIDnlQqDA6QqIN4OH1n3SV9pgZ3DtgAK9zazRL5A3rLfJCf59ggaPTr7PLesvLQ"],
+        distance_meters: 178
+      },
+      {
+        category: "atm",
+        place_id: "ChIJH_TWuAiLGGARBZReniXflHQ",
+        name: "Lawson",
+        latitude: 35.6441045,
+        longitude: 139.727835,
+        rating: 3.3,
+        photos: ["places/ChIJH_TWuAiLGGARBZReniXflHQ/photos/Ab43m-v4bd_TY3tz12uwb-gxclKEg6BRVCAhXnPLzbz63Sddu70emHx4IfuVt1VfN33-8-1c935OqXU0aemLeaLmjGLjn6ZvfqjCqNnZAaIcvVhXhzVH6zxtWadRqrW3zQ7P6-w27Z6TM6p7A0AQFRhAwLSQ1iaA7VX98dVdn_ny39XBsURvtX9HzD3t6-rd9TfP4EprA6WOY6VjAko4Co223v8OW2jZhNzcXUWX52cGx8fnEOPH46OJG0sGMdf51xZM3kiy6dkYOw0-uc46PaAJrIg3MMRhNnoPfS-R88ntZTBpZorSKHKX56VaHIdekuKq7-rX2RqA0ktE10hE90jsOITvpqyKy5ASg5gDPZsR4JCbcYXnrzA26rlnT5l9sWh4Zg1ATLkNsx-FRmoBL7U-yHQtenUpCYXXhaohMPRhStHAf-c"],
+        distance_meters: 179
+      },
+      {
+        category: "atm",
+        place_id: "ChIJt__6HQ-LGGARcC9a9srHKK8",
+        name: "Shiba Shinkin Bank Shirokane Branch",
+        latitude: 35.6442137,
+        longitude: 139.7273271,
+        rating: 3.5,
+        photos: ["places/ChIJt__6HQ-LGGARcC9a9srHKK8/photos/Ab43m-v5CdPQP5jt4WKNCyh7QnMGy0d4p9JscECT-VKYwL-k7KGPKBScTd4B-YCCpq7Ed8KV8K9R4mGhurgcXb7enSLv2VE_zrOKyHa0BrYNnfnzR6zOYafa0udsM4HdOu0eQxrGpE-rN6FlSsPeoqxhj8xP01zBp1vSJCA-7lOt_x9n_PfGIdZyvCkrlvbm5W_tDPcQbkQ1fS7bWioXjTh4D96L3o21Dh6W2_4MbpBrk-4nHpMbKSApP6WyK8hU-QPGEDDzXPrryH6FT2sZ3grIYI25VL9vuR7FHyQd-qRx18I9ecfMwoaion_X92vG5ClglNquO6eh_a_OvBWNCTI-mIaYPmI1DoFM5IWVhM1UXdADnn3zzMMiKwR1tFKS7_t2CgOnlDGQYVJGYkYozW3lK3x1N9LDAkegwv9jUBiGg75RfKjdQ8wVWN-HS_TEZ6sN"],
+        distance_meters: 192
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ4z0Yry6LGGARzjVkdXMTbmI",
+        name: "MUFG Bank ATM",
+        latitude: 35.6452044,
+        longitude: 139.726481,
+        rating: nil,
+        photos: ["places/ChIJ4z0Yry6LGGARzjVkdXMTbmI/photos/Ab43m-v0YQTnKwZVgMcEWDpkxfIRNFabv4zDeacz2uY_Vq_QLe2TXcnGTtHxx8lTVtrlqohSKqqa9CHoPZy9en1tdKLwCV0YhdjXczTYnCPPe-9DL2Iu3SfkCVF9-CfKrH5al1BMbdn_wJnRL8SMiUebHsu9qPq2WMaNqvzbnyyVmUqRkisflwZvevsQ9qXzdtEvBQAj3j9OZnsZBH00H_rB2iTD-djqH1S832ugm1gSD2hiuV74WYcxy7MKRnZY-o-R0ZQ4OPABOd99Iq5-aEqrhvGBdBKD6lxzmXBNIXp6ZbRGolsvD-9JCkObicOqk35-QNwqt7uvHihQPXbaXm5goRMgvQxzSdpf6XdztLA81SiS8dDREh0oA_H6wf7BPAhTPjBhyyHLJHlfo9W6PHsHc7cfK5qOan1Bg_Da8bs05pHaa4w"],
+        distance_meters: 198
+      },
+      {
+        category: "atm",
+        place_id: "ChIJ7zzKvPqLGGARQb-EjBgQRTU",
+        name: "Seven Bank ATM",
+        latitude: 35.645582,
+        longitude: 139.72628699999999,
+        rating: nil,
+        photos: ["places/ChIJ7zzKvPqLGGARQb-EjBgQRTU/photos/Ab43m-sYjBD1dCWVsYzEbA_CU0Rbuwo3QBvu5Pps1XNSZh-3jZ7ep2bwKMXx7tfODvyXqW76Clis3dL-oTQTxiOYFZ3HPOf51Jv-R65GRM8jlCD9A1guTckiymGljj4oOibQQZllgioHsM5sRiCU36JkMyUm9Cnj9_zhK-RliR4KEQ0UiFC-NPbXCWOiYnVQU-QMUPFBzR4ZbucJLavSJE48UrGVrL3dJzOlMXpwmGCPhp6os3gbGlWz3elAIM7-4cWNSPOF-WPCU352Ru3EyX2Jc7AMB4EpBZnB9aFR4p5169msXypTRGY20aVdJuN1HPuIdQLrdqBY0oVNPuBtVXfkQ_4LAVfxa-iMSyo2eVr64T71hatIxZWQPkz5XikhAOqFJMiiz25lC-ru_roQUJuVypldOZorNtfcdxSVxG-Vd1whZwdTBwAjf4h8InWqfAyT"],
+        distance_meters: 211
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ_ePZ4AiLGGARjkli6ISyc4w",
+        name: "Coffee Shop Candy",
+        latitude: 35.6453615,
+        longitude: 139.7282078,
+        rating: 4.4,
+        photos: ["places/ChIJ_ePZ4AiLGGARjkli6ISyc4w/photos/Ab43m-s9eD4XgdE75TnhcKT1Ime-2xXyonuSMrGjftalEHJAWtKiUM2wED7Y9LPP8Puh_Ua6lu2Occ4J_7TVQfiStvZTlUaTsUb1Whw0vRcO7jzicwK-xjclx_9Jw5pkquGvhqoFqyYpPLd_Xuu99CkvWacqdQJ5-YbdfWsjrG3YKao89Gv3uKpWUQyXHUOailJKPBYAFoN-Aa8Qbd742qlB4O5D7w1460inNYphXMojRNyElH-1gTorXUK0mOEefWvFOPn59YPsc5adYUAv8kp8MgeTApP4p2M_4A3PajUKzOzPPk46lbzuVGKHbWhAh_KDTq4IE5iMINY6YhDnzKSVJ6tQ_odT40muUdpNOHu22xIJbaBH3JwrPJlheFDYrhSG71SLVANFQm4YKHexxSzTNXVryIeXQDLjehkb_Z9vJGi1b4GIEALs_lwK7v8cGUP9"],
+        distance_meters: 45
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJAwn3kDSLGGAR0qRhx-pJZxA",
+        name: "サンドリアン",
+        latitude: 35.6445059,
+        longitude: 139.7263343,
+        rating: 4.5,
+        photos: ["places/ChIJAwn3kDSLGGAR0qRhx-pJZxA/photos/Ab43m-t9MZH7c19pVlfDROtPs1jEttJJTMAV9Cre4j-rX_ypqytm4OHOhHY4IqYspgEpuvRwibEp5JUn4_ldYpk7urraFwGuY6ypmdGyTCQYq-gPFudv9awIhKez6BLrwQ05FFNkPGwmrfBsamv5arVBYtINXiZcs3l8ixBMQrM9PTv5hv_0OuPBa-wYIwdj9-Ay78N1yhSSs_B3yomSaSxsbVIAXsHDbTdx-r10c7TiVoSqca8W67H-TzY26l3Ut3zakzXnsmRS6pH9rVeOISfpBf3xlT5UEl0pKyBIXGfM8JfdVz0Ft2YRdkSdNB1Mu2J2C79pKyOElLq_KP6_vPonTDjJFSslHWePcFX68QdHyoGWxbUXHu8opcTAn2RFML3fg6E9t58pMpL30uixevYLzlbZY5HInoNUVhxgIuEKQ3Zumgcx_FaGPi6GrPYMnTYw"],
+        distance_meters: 239
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJnWiMnPiLGGARzSI1H1MBlCQ",
+        name: "食堂酒場いさと家 白金本店(蕎麦研究所)",
+        latitude: 35.646387499999996,
+        longitude: 139.7318893,
+        rating: 4.4,
+        photos: ["places/ChIJnWiMnPiLGGARzSI1H1MBlCQ/photos/Ab43m-tymbER0ss6TX0_y0LMhBeQDavlL1JP0jpJncsOunL6dT7pjxFYq57ofhCEjxkkTBeomOIShb9h85WlRWXm95BBiLR4PtZzNxjCTaxB77rGl_khtf3NKDQDnHmc4iyg8jWKbQGb4I67p4O2o06zZUkVrntYU3Huuc24S6gBeYJnRvpcR9g45XcA3fpdAtcHGc_KRTKAJozT7RxKUgpfNU2kILGhnWTR5nkGzl2XskvPyffbJIgqa3E55_-VNjCoN0hFiW3YwbZnrzrNdjd_5Wt119uSDJMjJOSL-bMgIYFqFcNp9RIe6K7lAvdOVMo_Pr6zXISpfqYo7UnirUfgIBu5A2Ku1e-ciEGzzzoUr5u_78oPFXFWFh3aEE2z01-60wgWhV7k-zhc8xP2d-kKhqHVssVh1wgVBKZFYYHTtlofHvXHNxnoG7KV69riKQfz"],
+        distance_meters: 309
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJLYRw8geLGGARQvq0o2ngntU",
+        name: "Teas Üniwa 白金 & 斎庭 Salon de thé",
+        latitude: 35.6435451,
+        longitude: 139.73141379999998,
+        rating: 4.3,
+        photos: ["places/ChIJLYRw8geLGGARQvq0o2ngntU/photos/Ab43m-sfYPf_orBNMPticzfkRVR3rOnqjHsG1tzttFT6gAAc7WszJ3ae0poIwDGbZbAKFFKD8CJ4qTQDzuZfB7qS7I1_hrxW_0iIasbiEj7WlmS-PmAtV_Mc-M4Io2Eb1xQ7gR5sIMpQ4FmMHqZUaMhXuWkpXqaoCLu4BFp0WjX6gGdehZWm-W3K6Sj3jmL5iQBowZtixVOveYmos6qNIHQQwpSziGlgvuZDYO0rYu0_S99UR5OzsFJVL9WWsO2C8WUZJQGNnu_2Fa1b_p8PWYZjCV9ZMGDsaaaJjWeyZ32P1OqsV5h3q6griea8UZc6Ku4Unt4ryc6Vn8uJruM__8dveotu2L3WoG_GMSz6t0BhYOzyIpxQJPisnr4skZ_Lh5DgHQ6Nt68QDjTdUhi0B9w3r9qkBm32_uY6dMrIVKiFRso"],
+        distance_meters: 339
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJ_WbMKwyLGGARKwNjEK3BO0w",
+        name: "ALZE Hiroo",
+        latitude: 35.646571699999996,
+        longitude: 139.72454340000002,
+        rating: 4.0,
+        photos: ["places/ChIJ_WbMKwyLGGARKwNjEK3BO0w/photos/Ab43m-tC9jIvr3YxeaqsFWjgrzPUMxkMir-WEf2iL8N7PPWQuIdaofOELOTzWmQdVGlalU0_TESYMlR-sFCZSuj7XZzGLFvDd4TUovysHy2tNhANZer_VA9YVmda8OdjJierRy9LervuDCxtyGaG0Y7H2p-nof0NPpY5qGDzZdxjAJ5rE2w1x-Ancn5FT03yKCV6sw8fIZPwAojvVi1c6Ylhw_EQlFvajkLD13vjq9WFuW3F5K1Y_mLx6jCMiQNF0chS_YQvJN5PSQeiZzfq9R5Sn9SV3w-AnU7CIfDCnQ-82AXoGjbudQNTz-7XJ-XOMqirdlmdKQaFa-OkTGwsxP6lZpct_bq9wujmicQEv8drha70G9QPJsj_qr5N_MXF0kwZA_hUIXoep1IPfAZg42T3dcehPWRNGRSzDmdTomMUpxubY3w"],
+        distance_meters: 384
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJD3FQMQyLGGARSXLpZ5P1tqQ",
+        name: "Sunrise Cafe",
+        latitude: 35.647172399999995,
+        longitude: 139.72482119999998,
+        rating: 3.6,
+        photos: ["places/ChIJD3FQMQyLGGARSXLpZ5P1tqQ/photos/Ab43m-suF_Z0JcEhsRrlHlm5RUOgcBCdxykdU7yl_TZ0BBeeyMhLvVwZ0usVWmRBD20vumF7r4_VkiroWZMVjfD2r4zmpA4QtZUgI5aKW6U4umP4E23WDrdJgfljRGHtMU117ElMoszH12VblpQwz9BHi8GvqoLMsghrYz9qp2gMbKARLnAFIz5hAY64_yCdPjeLvB3fonCXx3I1pZHgTdJrRvTVPJlqvCnzUPKJinAeiFSs299BZVRRmJYClvf4T03b62rboLIRoOnkzU4rSZyxV37Jl-NmJUMZiVH5NAD5QeM3PkTw4pCedBFE8qvNOqQQ9q0mVyzkn64fPYdlJovuskIBt_w8MXNpgLzEs-Q_dNR4W1n0r1JxHKZBK1J_I2mbvTbi_C4VlvwJD3ig2YJItVVpEPwxz0VCMXIItRTDuQbhWc4AjBzrmFgP5v9zBaEV"],
+        distance_meters: 386
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJB316oxuLGGARTGHtKqcyfRY",
+        name: "muun cafe&gallery",
+        latitude: 35.647745,
+        longitude: 139.7247692,
+        rating: 4.4,
+        photos: ["places/ChIJB316oxuLGGARTGHtKqcyfRY/photos/Ab43m-uVBmG7SWNxEIbJiBQLQperpsnIM8PCGf12ZbzQtuqog-dFIZV-li1IIS0DlFWGv9W79Y2IGugdJvG0qavIOlW9AeaxttW_azdTYAH9ahmhc-KuxQtTt12TEArUI3vdQJQ4ZZ45xodzZ7PAIa6A3It27o7j529ut2DW-tImGjo0wKsBJvzRl59x6GW6tiD-tRaeDD49GN06BxknsuBX63plH3CHxipgE6LHmf91_raDamcGMnECaXfZUI9cy0KBXMK2aeaoxq8QBmQG6Xgf0yMOZP_Qr2y8acNjGj0xHKfFZWX2R2yB3qLRQZHY5idvJ-d7F5UZwGYLAacw60AFCCbCGBLgGbSMhnpNBA1tRiJLMY87VKVYoCGI8tD8cT80eDhTrpZoPb6AHCJNMpIFhu2Uy3_VRKU5fRvLmbK-MpvZjQ"],
+        distance_meters: 423
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJAQALXA6LGGARRjvzf-8lJY0",
+        name: "anea cafe 白金店",
+        latitude: 35.6446828,
+        longitude: 139.7239435,
+        rating: 4.1,
+        photos: ["places/ChIJAQALXA6LGGARRjvzf-8lJY0/photos/Ab43m-v-yp-KAJagKe-gmGnx501Y-yqs4qep2DY_sY6BnRGhYlinBXIsnV2SjCU3DQgk_gFSl-U0AbrSJm20dvD8qDeQHyFHoCrewtNS9jrnRb9i91ouuCqGo6AMftMTA-OIN7TjSpN_NxIdv_kySB2MEZLgy7onGXkKLuTWFzjgvN2VX2P2zYY-86kRjOGkENzSUAbk-sQAF-mvXCKEEOe36rkpc-Onc1nKdGiar5DrQyfj3ZTNU8vTq1fhx9Y2OyVwD4BSQNNyNMxxtx6oa0SetWhg1q7zX_tjyMGyDI5mdv-6pfgtTOeWXxVCWnecNazOjhGO8lTT7PGBndwFLl4ylrXczcVeLm0-pvgMcr__n6lRI8norxjiP9vSMjrMbcJuWmHf8shYHULFfE8F-ikMuMqpt_06culEpRfPWzK5DwO-znw-"],
+        distance_meters: 434
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJjY7NmhmLGGARVxDXQFQ_UCw",
+        name: "Drogheria Sancricca",
+        latitude: 35.6467308,
+        longitude: 139.7332214,
+        rating: 4.4,
+        photos: ["places/ChIJjY7NmhmLGGARVxDXQFQ_UCw/photos/Ab43m-vrK18IbFf3uts7nbuhLGDd2-QxGtwx2zwr9Vs-6bb3UPEvMrmorlG2Ln86MLZ0mQU3dTokjyNFAYoPf01nFt9E-jrSxDY950H3YIyGA1F42ijJXlR61dWjOXJJSWDS_pzKcXVaHscnv-BQ1LaROf7fsGRwtuJqeJclHVUxkHbbmuhReaWNjQtRxvPz_kRaPUAJnwDYgL_ssmdc02FCPxYYGIz2Lg9Ro8IDjiJNREV1iI-2el4wfy7UASss6jVq7wuvAA13Ghm-WD-Dn03YCyjwKcTeaugRV327884WS7BPETKZ96uRd1XJDX36KMAx1Rd6empoatdgD1k3T4Rt-MBH0oYOEiSDCOQCtrWtmOyc0d_O2DD6tK-s3HprJVoMjyGGMDTAbCS7jF4Tg-grlo-H6DEnpb_VyBvo5oShKiqe-Q"],
+        distance_meters: 435
+      },
+      {
+        category: "cafe",
+        place_id: "ChIJlYHrUA6LGGARpVOgawWGE7U",
+        name: "ジョージアンハウス",
+        latitude: 35.6443472,
+        longitude: 139.7238911,
+        rating: 4.0,
+        photos: ["places/ChIJlYHrUA6LGGARpVOgawWGE7U/photos/Ab43m-uwuFgTmB0bnauK5-U7kP2uDZORpjUCzER6VFwgkWMX9Cx7py0DM-arTWU6hwkqq3ho2azivOPYEHvTRIpTUtoHLtvZUT0WF5Qqg7-RAi2QL60gxidOMuLsPxRGv9Wowgfwpm8yseLxtZN4vkdUExiE3mumzNMeyyQv12uAlrUlLjJNskQXniUWHS7jb4eQSyo6o52DCuHRcrxv-tuTrMbkPZdiavB8EmPNvPzV9ohqGo-NGQ-Sj0S4faqOVIHpgjJgdPo3rieBkkpONw64GxGSRzmo7NOFaycoaSXDIq27Kvt9ue_YlgtIsYveWiRvZs4Ed2qWGT8yqcEvVlVEv3Sj03rkvvWoN-61p3jRSf1HYDJHT4ffpqFlwwg7swwktMfgr1bReOj1BY7ZbWthJSIgVEmigFcX1C2CCqodaMVK4OK11rp9aLBjxMlKpjrC"],
+        distance_meters: 449
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ_ePZ4AiLGGARHaUyRzvWWfk",
+        name: "Kinryūzan",
+        latitude: 35.645340999999995,
+        longitude: 139.72829099999998,
+        rating: 4.6,
+        photos: ["places/ChIJ_ePZ4AiLGGARHaUyRzvWWfk/photos/Ab43m-vtIFUuVDuVnXGRwceEP1pb2CLk0OnfyWR4YfQd0RtD8ucvlRbavsDC2IQk0q6rN3atzmjluoT1GtJt49YxsKwrgntApyivZs2pDQASE7rPmx6IxhpGECYCOcjKCOJ1g7y2BXhu1WI5vGL-mmNtHAeHulNDpKwASXUg_UVQzb0krRo_lc2jpESF6IeaAOCHRyvNIhcbLl1a6v4816pSLjcoHzN1HdEejiJD0CekzCT-DmMX2me99RUZO6K2mKxVrsnml8wbUSYpiErDOFYrg6CiLhsjVlizQxGlDGllglUGrWogEEgufTlq9pnQ12KzNQ7nSp5c6ohMaNdez2UWBxlJNGLtsTJrH5D9RKMUHo4p941Q8GJtJvslAIMP4v3wQmmAnFJ990fXUgpdQv5373r-8NrfoQ5RUc6N9PTfdvAi5i_ms0TBvwxLXOIAwDeJ"],
+        distance_meters: 40
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ_ePZ4AiLGGARRcFpvbFZLtI",
+        name: "Katsutei",
+        latitude: 35.645340999999995,
+        longitude: 139.72829099999998,
+        rating: 3.9,
+        photos: ["places/ChIJ_ePZ4AiLGGARRcFpvbFZLtI/photos/Ab43m-sDkeCC2zl6kBpTluqFiX1anQ1mYv1jjf_RJNT0bevv2hohvVh7mYUGoc6DFDIj0zxf0VyYiACVG_4unKieeZcbOLbDShbY7b4Wytpxvx-gee_NqQ0EgKK0wUf1HHcRarutH_mHZhnyzVmQGK2F9B9FgMwcGpD0i73WhU2_LQvnS-bluMQfT9cIPr5-TD_K7EutdCk0sMN_3c9N8faHQLdLHawUGqECtEN6lwlpkPVhf7gQfz1Q-CEyREzsVIPFH6oGpMNEPKQeYXoX00kx-tt3sDFzaMOnmBHfOd0EQw7X_7ghw4fRZY5G9JPtjRk_iO8jVSVZJ4cQTfvw3peAhEJdtr-fRmcgd4LaCgt6NTagiDcSqHteSjkit0hHI8Zt0NEb7_znOQVEkTKgUTS6vcMzGczMMi4Z4GUVsS0hvvZErc2lG3nCLqd6FJ3rdjmb"],
+        distance_meters: 40
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJRbA-JqaLGGARjj5q9H--MI8",
+        name: "Thai Food Station",
+        latitude: 35.6458724,
+        longitude: 139.728298,
+        rating: 4.5,
+        photos: ["places/ChIJRbA-JqaLGGARjj5q9H--MI8/photos/Ab43m-tHhXsvDb-Eb_Bd5d_fHb66UJTzqARJmG8WSR0JP67KLo-mr__Gah3yulyoluvrYuu4pFxuWL1tj7lx85VAcvyBTLJvVwKcGgI3yU98ceY5ehufghPCNhaEteNa7eKChFIS7sAEXDgLRp5YUVLebSfaA92BxppPZZ4xi61LBJR9AAStPR9n35m18JBlRdJDE0LT2KCLO_zNqIa8Rkx59HUfsCflJQdEO31uRlkjxFKvYfTVh0ffxGLanJ2cfC3AD4MhW2x24hfjm35hr1TXBML7QPYAuMVWC_sTZY8lmmv0C-H0jQnhJ0x-tckDE96CP_cGOg1mC4Ih9w--KQQkWlV3z85W9g74J12H-Ay-3onzeyIAYF99eSFIypegCkCQqnm7ThZTZyV8GuOFZsgvvsC5WByRhzl6eS0Ntrm9rEhjtYwlV2nGDtKwZQAhM5jN"],
+        distance_meters: 44
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJsSvLGAmLGGARWg1uYg5ObHI",
+        name: "芝松",
+        latitude: 35.6458465,
+        longitude: 139.728231,
+        rating: 4.3,
+        photos: ["places/ChIJsSvLGAmLGGARWg1uYg5ObHI/photos/Ab43m-u8Mf5qCVtynNhTDam_zGLuUj7rmuom_JIjOFaovQpRCj5IFAJqn4lM4UhdZtg-1W94_fGGmVUWS4xZOdUhQPFrIc2kwwW86MTLMIGXwVe6EV2uB-o3kYJk_KqjBJc9tBHSqgwMFZbtXk5jdjhD7ssbXxXFIIYkhQ5hV368J8bmbf45EC41FH4ESL0C3-EBk5GvXiXSvSxFTLsmczZANAAYjNpGeAHeHYHaNmNIAYzp360kRnZy04lXi8ZCeRrHykgbE1H8MBBQeI1TshvfNpckRaCXcgTPq2_0n8KM4kwgpWKGiBM-5hchVndNr4V9T6hrsz_ce6pUmCgQVv0ryRSc-xp7ZQtiUCREFLpRZ_3bm3XktbZ3MCyf-jtamVm6CzB7eEadtn8kugfL1dbFJotWdlSQFEJp6PGAwK0czkBGoe2hO3e3SHYfbRYmpQ"],
+        distance_meters: 46
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ19TOJhOLGGAR9Rh1nw-G-hs",
+        name: "TOKYO SPAGHETTI IBU SAN TOCO",
+        latitude: 35.645468,
+        longitude: 139.72805599999998,
+        rating: 4.3,
+        photos: ["places/ChIJ19TOJhOLGGAR9Rh1nw-G-hs/photos/Ab43m-vV8Eijy3mrCxWTRRVkChxe_o1DjtyWhcFVOQxfSCG7FvJWlxns2XzX8TF6qPel2AJR2nlBR9_a99fiCx_z50AwQBPLxrFzsSHloDxoQfK4s20usBs2PRumSkdA0rYWz-_ZPCi2FQw90wJEi23H2XGTATSNjwcdnRw8Hk5PCMicW6vosgJSenA1UtK56YEXGTEXLu8nU5o4lF3-dBx4c2mL85_ttXJWtOVSLcWciwNw4-Hc3tyv-5huO9m7PbZXnOWmNQI0SyX3WvnDSkWQ-2P1A4gSubJkzVZw-CVaFTlABCh6_qS9o_Ycq4c-KGxuMrOUszVhxE_D0sHMZq5RH5qYg9HE2gPwNrpKSJkyzzmba0G7jLZmwRTtK24Hy2hgKEZpWuxK-ra2WNA5oQGVFP_v6_IQbHDZ1hvSz_Y2Vw4"],
+        distance_meters: 53
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJx_GEGAmLGGAR9Oa-_omqyIU",
+        name: "Bellpot Shirokane",
+        latitude: 35.645938799999996,
+        longitude: 139.7281863,
+        rating: 4.2,
+        photos: ["places/ChIJx_GEGAmLGGAR9Oa-_omqyIU/photos/Ab43m-tj_uNV6aBPza1X7Ho2WOayUH4lRWwORXDbZhtbwgQyCIhxsHgRqTJd1IbaM9jOCDbvDmhHLxYjxOK717n-QcR0sGvPA-Gp0tKy05wEu2-L3-uwnXgK97SFL42qYqCOoQvC1m_nU-o3P_E4JTTT7nEKcqMNd8ym7j645KV8gg_m_0LGlbdZ9-5vxRfLjX_euZRZAj70iwaqI0pOuaNt8WAXKBfKM8_aiTdOMgEP_EXbsikp5fmcUFHkY6Dxlp0m7mZJKssbNqukTnclRJtcbQxgeDi_SehOJIkIcZqo1zsfuAnzF4OV3s32TQop69NhBhD1AqoZm3dq9xSlpypQcBEbOUP7ixJY_qjagT5Pr1wZXdxWtHUivXpcFSkVEg4H7c1pChBaiMmrysA2o-oyKfuxSxwNlpNYVGinxansZwA5qQ"],
+        distance_meters: 56
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ____vwiLGGARDfgH-g67g-U",
+        name: "タラゴン",
+        latitude: 35.6454995,
+        longitude: 139.7279965,
+        rating: nil,
+        photos: [],
+        distance_meters: 57
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJMUQK5wiLGGARWsSseVukVNM",
+        name: "Masa Sushi",
+        latitude: 35.645135599999996,
+        longitude: 139.7282545,
+        rating: 4.5,
+        photos: ["places/ChIJMUQK5wiLGGARWsSseVukVNM/photos/Ab43m-t3lnogzVTB2sPQ0PzlcWWnCJ1ROJknBQmEBcRWGThXuvB1EgC0RRqv-08JeJJA7hLS1GVmHnSGtqRpPoHlGX8UkDkralc4Kr6t2o_RDzXBRJie8y3kRk1GD5-REr5PqXGZOtmtHoHJKbmwDQhfuRqJAj53lFOC70mpA0_mWK6Waq0DJe_tEfrOvAYGhlLDpNfH_nQiK2_VBx8yVtIYk5PaNL-SFsxi7mNr1HFkkVsrbGhqRUH_trc6FgwRqlCXEHSdHUI7AE0k7_3U3ejyHfFHUdSagMkwuKw6vEo4-k0p2jzdnAyGQF87iUWL7l8xuiSenD1MlwIThdpscp5MTadj_wdVN4XpQVIqaIDUSXCs6KnRSDJ7KNLG1_kFDR8zmYfAtbmCAfM1JogAzA4zNpBLdWfWs2ynqbTTGjl0XFhx8Aw"],
+        distance_meters: 60
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJL-sRQBiLGGARWA4jtuyRows",
+        name: "飲茶スナックPAOZ(パオズ)",
+        latitude: 35.6460125,
+        longitude: 139.72819149999998,
+        rating: 3.7,
+        photos: ["places/ChIJL-sRQBiLGGARWA4jtuyRows/photos/Ab43m-vxH1A3yMAmxbXjnyBpbqa6Q5EO-lKpCQRsBGHfWoqaULM8kPLqBQ_VRFMTzWWQSEPv0Ynp5nS-GWwm5rIeYthpW7B-HtaNy8dJuXsvaqGcx0Jx3GKLukO2-wootY35I2NfXD8kcz50tqn9NKbHsfuFTh2i0u1aQV3fwPimcNAg8-gr1RHqmZQ-c8i780QgP6-cGSfZAAx2PFDyW_a662QG2xtTG4C6JE0IsgSVq3VOA1JyMx3us5Imhmuoq5Lqdkkb7dxpIa-wue9rfo86GBrHBazmnuIJcQi69X6SUKDx88KbecOX52lUfwV98e1WdVjypGBNHRl9Ep2e-LL2sJKoHKEzVJWQJZwpXGq-W81KV_IZOqFG0-rH5_QY8Em-WfkT_v7dz9c-x12uwCT0CpO3wEkSge2TQ7KKWJ08i88_kg"],
+        distance_meters: 62
+      },
+      {
+        category: "restaurant",
+        place_id: "ChIJ8TMO0pOLGGAR3Hg0jDI62b0",
+        name: "WAGYU UTOKA （Japanese beef dining restaurant）",
+        latitude: 35.6453517,
+        longitude: 139.7279843,
+        rating: 4.6,
+        photos: ["places/ChIJ8TMO0pOLGGAR3Hg0jDI62b0/photos/Ab43m-ta5ctLwxkvrEkum1i9boPjU1bUvqhojuSdBGCiO1SQvPLbSstbhwRR-VH8JS1ichLf-ZpkimjGI5UOJrXTAwHkPvU0Ti5knT7B0CAU09QnNL7VNL14S0q4-5HxhRRDhnoQcEWqJqVlLQCGV7ATIU0sZBSmlmQioM2p6YXa4bSs36kJAuq8UG10YY802fi8cxFTMSDLJa3ObaQer2D6Dt-zN6CcddDeaq3dYjvUB7RcGsFpXs54i1WAMzxa2ve_TzRmacSs9AofvOxowA4wRq0d6nz9PIictuPyYvPP37Rc2M8civPsqHlf8QJVoENnQ7810sEZ1cfvNZZKOJG3wGLWzoXswhkrY_CDpQ7xToTAUndbOwnQawxZC_MXxEK81IcCHUu9r5c8Ga8QxpQrrtRnebAoFKyxenjpZvyoGSl25w"],
+        distance_meters: 63
+      },
+      {
+        category: "bar",
+        place_id: "ChIJL-sRQBiLGGARWA4jtuyRows",
+        name: "飲茶スナックPAOZ(パオズ)",
+        latitude: 35.6460125,
+        longitude: 139.72819149999998,
+        rating: 3.7,
+        photos: ["places/ChIJL-sRQBiLGGARWA4jtuyRows/photos/Ab43m-u3maDebqQb6hGeGjnS5mWTqOAhFOOp6Az7IDL0fyftrxkVE-CadjUEdKEje-ZjQP6wvOMwn0m2tReQ55B6bbvK0K6PG43iRqVJbjpvgyfCjepQWjW8t5VTXspAl-pWsRNOe7FtXAuBfky-odCF49Ko93vFroRTnTZyHLPTUF-t6R7ddxy1k17vaIt1zVaseDT61YteMKWZnABHdGM-AlWzEbIYCTkyRTSX9qJYxooHJ4sB3KLgaWkDSkF4X1UB-bOY8mU1iiz-ZYHC2ZVJSTqRkrtf9fE4an0A38CgYKadri_8wdYF3fnQvEtsabxwd_o8eerxb8XM3OJNf8kb2iML8NwL7QySWQT4k5IaEMSpITJ3wQl-uiab0h0Af_369WKedswUXUnBvDVSu7EGvsMvDY5Es3S9lEzINLRZKOlFGg"],
+        distance_meters: 62
+      },
+      {
+        category: "bar",
+        place_id: "ChIJESaZX5WLGGAR9wJPqRBMnG8",
+        name: "Bar BLINDTIGER Shirogane Tokyo",
+        latitude: 35.6440816,
+        longitude: 139.7281013,
+        rating: 4.4,
+        photos: ["places/ChIJESaZX5WLGGAR9wJPqRBMnG8/photos/Ab43m-v5nPMweyViqqK2iE8m_elEofj53Q05SCwCQNr5MmJP1QT9P2Tfe3zhn2GQrXu6Fh60bzMMvuE_FCxJ-L3IyjRYw_6ub0oAVunoPnhKJ_WjE1HPRnAUGBi8imWvpc3_9wsCAm1ClrudQZz2V08SP4pmVXjtecdRq9YMHKIJV1UlzKtmRdg24nVdyQeLVg0ZBWIZhiJ19o-Byw-NwkjgYj8G8ZAaF548DFML5shfGdCwzZWAgBoZj8VC-B3GYanJwUDv-wHdHYJQPFSLfkfsV-dhZh-Nrv86s55FWp9_amt1dQ6AJ7bMCvlm0bMy6nzIzCFqNPkIXbBBkhU6EJDWd7WxHOKQ9TFCDo-tuFqG6eufXljh3pKizQAvxzgcM6alBOrIBGf2v1-3DbMhfuJIlJgFRvw04cXLdIZjXYmtVqQUVHwkSfdgDWEqDRz3WJeF"],
+        distance_meters: 173
+      },
+      {
+        category: "bar",
+        place_id: "ChIJFWEcpQ6LGGARF2HcV3mISbo",
+        name: "bar TOKAGE",
+        latitude: 35.6465402,
+        longitude: 139.7270754,
+        rating: 4.8,
+        photos: ["places/ChIJFWEcpQ6LGGARF2HcV3mISbo/photos/Ab43m-sx-rI9hc6mhkh_HjcGUSpPXlYplu-6nZ42FPRBzGC-LXTUsohYbt6pOHwcoWvbQrS1Wmi3sLoKYz2uP3-fRnxWl44u55dkz-fGjwlZPPuJe9DCi9WdxVsODApg0WPgCuxkUkvKNufU1cP-DIAp5ry-7LvikitVT1jm-40C8BeKC-5QQH2MwxLrMAaL-AZBiJvvF7cMSdvM8fluAhgtYQ5L9ig8q0XS7If4Ahi7ClpPOicMwORA0z9n4YJmse0kOzCc_9_EQUOU4RURwOiBbo91wZPZusUpSzTB8x8VWsSP69fDcfNJ8jWCZnUn7q5Yo65ZKztdjOuTINcbJH3sON1LY8Ia7JSko0avy3tBf2mbT1Svh1iz8UXrtud_NhdyAEgAtiP4U-xbwUm0E8MO8z1vjHx4tX3yUw68nnQByqzhqLsifEVzmHGleARZBEzL"],
+        distance_meters: 176
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ-3bqSNiLGGARZp46DMK3aiM",
+        name: "極太麻婆春雨 白金店",
+        latitude: 35.6466002,
+        longitude: 139.7301766,
+        rating: 4.3,
+        photos: ["places/ChIJ-3bqSNiLGGARZp46DMK3aiM/photos/Ab43m-sf4AIC0Fv3TZ8HDsTTXjnLCuuTJS4JScU2DucdhGsAO0C2iRzKBobHH6ica89yTmAKxyW8qxVnztLJHsBw6MNsfc6gjSpO4PbR4bozlR_lcWwfShM5FstIWVp9wkvt0LpoIIO6JHdIUjTv0AAkzIBFNuflQ20cXF_GC9XkqncgSIOXxNw71VUJ8jVp0dIQR9EIQgseLvXUcPJXG-oFhraTxYQIfkLEXuwKFc8ga_SaiIOc4mIvM47e3JII3b_VTrOTIZVcl4_7kTXLCLoPGpR4sSpmxg7UoOt2JbaZ1g2H1Etxd8N77swjA8sMVC8drZwpX_ySbpSdRJNXzsLTciC8ncItG9Z66NljzMShxNiB1hz2tGjZSU1KwFgzHrhWT8padTtdNtnGkX_vhRWy4e2oZWMKmsu8UNyhS3zuWnInOK-gcyddEqsKCwDJfygb"],
+        distance_meters: 181
+      },
+      {
+        category: "bar",
+        place_id: "ChIJ3zpFRQmLGGAR5eXRze5LBtc",
+        name: "Bar",
+        latitude: 35.6470401,
+        longitude: 139.7275625,
+        rating: 4.4,
+        photos: ["places/ChIJ3zpFRQmLGGAR5eXRze5LBtc/photos/Ab43m-tVoDKMqm1bIROFZ6No4VHIXWhAfTXZvIP8UGlwDmkK9y0AQDxqgUQueRi8jjbxmrLySDU3qXrFamPgYvAfNgx0xecLZlPSVhkskP7NlRk9GVHxwSj0wb7wf73xaYs1MobfXQY8UyL68xkqNotdPDEL9_cVMZjOFi6lbNlBqnV4_DSMpeoiEVeHEJFmHNP2dD6YOaPRB0vazG-CJPZ5BK0sWpwBKWTBvv9JAP0W5Fm9ssV_7duZWMKNUw-ijJKZ4qVemDF3J0Jx4IMw0VGbscbRvpzTBvNdT7qFYtlmFi9c9g4NJDkMZSJfg-dueAGQn6JeRzwdli2z8snT2sZmB4e4uj6WWRsS7tW3T4nQWEFw53f3qZf5bRQMnHB0Rp3yCTIfVvpfCgKtBlAkHJkmECm5A2JN0klbl20fjXOHlvI5V1PbcJg499TXK2eofCvw"],
+        distance_meters: 188
+      },
+      {
+        category: "bar",
+        place_id: "ChIJlfmVi_2LGGARTGhZcLNopVI",
+        name: "THE CELLAR No.4",
+        latitude: 35.644278299999996,
+        longitude: 139.7266247,
+        rating: 4.6,
+        photos: ["places/ChIJlfmVi_2LGGARTGhZcLNopVI/photos/Ab43m-sv_Efb40YouGLZjUFZLb5cZxhOQpVYiDplVa494jEbfH_UJVEoc_3IVGDMAaHFC33cuZqnrKgY7zlmRh5e13kjBSzVXOAvjEv4JXooJl5me5_VBuC6X20LA5hs8ixkD5db_LK6LzAI1quTcLTDzUQn7fK7if5WV548hdKWsgVejp9Ui6bO6-mcDv3-JQIk2CDYfN46CoCOcAKPK4vmGUCcs4KT95yqBmvApH_0yw5mSalhItBMf7jNfN4mpfKSuT0YLSUc7drFwo7q2q9MiJT4D7Ixte9VQfBJRbaVC9RzQTizhPh3_ymr95qITlDpC7Nzhb03gNQcurfKpFj4J2csP2gPogyFUdwU6klfYFgkhCW8vE-iSn1F6-dV9zLLfxuO6V5OjfW8TwtYTtyNRlZqKQZ_O3AQA-dtYRaziyc8j9bEy2yI-O6_M8EWiA"],
+        distance_meters: 231
+      },
+      {
+        category: "bar",
+        place_id: "ChIJN-1URwCLGGARe_JVZr3sZz0",
+        name: "Malecón （マレコン）",
+        latitude: 35.6456874,
+        longitude: 139.7313795,
+        rating: 5.0,
+        photos: ["places/ChIJN-1URwCLGGARe_JVZr3sZz0/photos/Ab43m-tpIlmMQ6mA5k-lU1dGlbBCaap4U5lgyWb22gmwtwmQZfCzHpq-ge9Oy_mJvQQS4OPOhowdJMg-j1dZnh2lFMFz1JRng_AcLxsFxMgJsJPmUYDCzJqU4GNlHl4SIdOgAyb42SABvfRXuzC4H3_hVBAp6mA-elAiiqu0rFF25BU6ZmoGxrWadjZ2l_9yc-OvcTyi_R2GiFCfT4jWHIR5uKtkuVkaErLK-YihojjOhKj0eCUCETk6dQOnIjHxfAaR_z2UeUrFzDQ603E8qMKuz_eNDZ7cNyJvFP-TaZVWYPG8beci8Vwgb_K78r3Sae-k5vTGGqflIqVRC9WfgV54zlMkERQyf9JpeO0_I9T5nHoIpoFTq_-xvicepzr0e24JcCbhFlGztEgCelUjwLPsZXTjW1-JMnMLWW3lsDNGahP8trbgtjWcN0RYwAURPpbV"],
+        distance_meters: 250
+      },
+      {
+        category: "bar",
+        place_id: "ChIJb0oe0cKLGGARnnK2A1W8mjE",
+        name: "hanabi",
+        latitude: 35.6452053,
+        longitude: 139.7314623,
+        rating: 3.8,
+        photos: ["places/ChIJb0oe0cKLGGARnnK2A1W8mjE/photos/Ab43m-snHNQnZbvOHmpDlp8HMJKwAeTERN6KFENQOwvphADjp3rgFXRE7boDl66yE0hFOIlNkYr9ypE4meSF_uYmrNaNtUD1GTjVa9wxHGyarkPzik1i1Emo_ziSp2AkqwPAej5u8Pcdn2kWm3s3yfyRO6N-hhF7PJhOzeIzccxk-8rsS8uAEiU8TK0tqrJAP1n34w25bXbrcMJbnv_CkWEHRehF4GysDiwW6rn6kmRRM3dPyET7WkXC0CFWDL0z2aWyVMg9qQnmyOOUHsnGnzH-lDxHMKt07FdxQi-JO_YRCJb6tSJTZpkIGURRh4_Dh2cbtkCkUIjxw389tgRHcW3LFMG0dHcxR0jkYtUVCSSQKJMrfwqoF42IahM7AdB5dTAidpVD7tDLXnxAveMNwhCOov9aSjy2BsEaKrrnlpFqtOGWkt3c"],
+        distance_meters: 260
+      },
+      {
+        category: "bar",
+        place_id: "ChIJWXYqwKqLGGARE1OONLQZp0Y",
+        name: "Shirokane Tios",
+        latitude: 35.6459405,
+        longitude: 139.7315693,
+        rating: 4.4,
+        photos: ["places/ChIJWXYqwKqLGGARE1OONLQZp0Y/photos/Ab43m-uyP--xOTwFkvkpPzmQ8BLM1nLfDy2x2mFPf1EZi93FI_Ee42K8JTqaOk_dKyGcVZkXgukYnJ1pTMlL7WRovlKZ4c8RzBTkPimhSTyBAyRUaWfWzh-9VVp89j5tu7I3uH8bjux0BXT_U7BEvpkSu3EfrXdv9vWhP62n5Zl5K1iYsas3Bursd_bH7i352eJy-FfO91ylVEVB3IF5O9QHjL56aGHRuAzMJA4cTbLhiqJz39NtkEMUwoNc2qWhWKe1ar_Xy1x_WNfrVEWJ2_ciwZjlJbV9YR1-LTa96CPkXCoCBdkpyvzHkaTERDMtA_w2Si5zX4Dzpy9xZtzK0g6IzXgwZIngQAaaqAfkAu0AlMbRSiS549tFZJxK80zUmQt7iLpubUoPEfT714k5O_Eb8zXVjtO_Rs0Qj90W3H2Rm0q61g"],
+        distance_meters: 269
+      },
+      {
+        category: "bar",
+        place_id: "ChIJkyIM9aeLGGAR-bQFFXNw0lc",
+        name: "Karoku",
+        latitude: 35.645773999999996,
+        longitude: 139.732003,
+        rating: 4.4,
+        photos: ["places/ChIJkyIM9aeLGGAR-bQFFXNw0lc/photos/Ab43m-s6MnPHMiiBwF28QZ2h_KrKlnwrvTEWNkDPpOQg19ZXKRDPAgZiFQe5jlBHCgiKINVDFuTGl6x7KDdJKA7YuRv0g8fYanLHdA_Lm0qOf2ydjQa9NQkGcZQktqHB07nMol13I6GBGHkkCv4KxPn75XEIwrw9GHv-KO3VfUwGgH3WSHUQxoYpQ56UNY56m7bfIVKHb7gvG8K6NIUDaZ5xGRdh6askjWnTKIZEoxPvSdiyZqogJDQ8ZfdXhsc13pPQ50oaP8zlY5Kd2WlMjkNwnQooCsgTjgRD3-24RG3BAvUtiLFWP2ORS5cj3gTiSxZsX4mFxFRjfBRxNOm16dk1T51z9Gno9lDaaC0N_I1JzwwlHa6gvh3u-Iaux3z1YbUdK3YKlz8r82iisJrzPuEF-n_iL-Kn1t1H2NR7RjbKRZAn6A"],
+        distance_meters: 306
+      },
+      {
+        category: "park",
+        place_id: "ChIJA30KCQmLGGARkIlnntrSxOA",
+        name: "Shirokane Park",
+        latitude: 35.6467552,
+        longitude: 139.7292377,
+        rating: 3.6,
+        photos: ["places/ChIJA30KCQmLGGARkIlnntrSxOA/photos/Ab43m-vkoBN0VwEmAGxXG5W4e9P60wW9jzPunRoIXacK1aMJj4NxARd830O5f3PORHPxpE0MCpxdlgL0rWWxB_BGIwVGXAIHOMVv5abu7BBt5M9ssYYlhsQaF5X6aq4YBrP-PPGeON3tkD6ef5SpDEXR1Zi6Xt_hP9NfoSMJKF3ttD4f1a_JHpMm-h2z9B1o18n86hrv7PZkuTLmq-ZSGsNPamsxNT50LOfuzAyIKjeAVx9mnOmm1egika6pg1Cbym-Bnt3r9hsyYgSsqpMC0o_Bm0WSM8JxPyLf_5TNrPcI8RmAn1ErZn6xMeOY7cXes_UaIlZwrJX2qfgUGEm7_NReDhcNcP6R-JSkLvqhTbwiiErk66PtYFyg6y72ugeb9RgSDxbFtSU1XE6YYHXQ4Is_xJlnPovf-qHBeZRxPBFF2bCaSw"],
+        distance_meters: 142
+      },
+      {
+        category: "park",
+        place_id: "ChIJF2ZM4weLGGARi3O8FSvAioo",
+        name: "Yonohashi-dōri Children's Playground",
+        latitude: 35.644283400000006,
+        longitude: 139.7311642,
+        rating: 3.2,
+        photos: ["places/ChIJF2ZM4weLGGARi3O8FSvAioo/photos/Ab43m-seaKsHKldegi81VDdILuJlwgwxw44DL6AH6ndnsmnpVl2nxIghV48X1p7GnA6EJO5xbd7GQA9W1ICoO5B2Yz6UE3zT5TY7N269EBpkZ4mjFryUns6Wph9P0VcbOI18rEdCB22wJ6QPoc5Clag93TVDJQIF1vDrjBzyxC1gbUN4j7jTzV7BGUSuORs1vnB4GXrnGEya1l33pGHdCcOtUUJSOLURWihLfAPgLyOfVNOcYIGIjo6sODR2acu02ntjqx1tX_2lwhCt-4l5qd8SJzy7X36gI-ftpVLbsfoLiTEcPrEMCT-mrUCgVIOgEg1uYwHhptMyZ6eYKVTZbO19j1RlgaH3gQp9naByICP7GQHXANBcvaKK4g3CC4NAO3pqm2MTNMvOkkcncddkYcbDgW4RXq793G1BGp7UF_0RAV-va7Ud"],
+        distance_meters: 271
+      },
+      {
+        category: "park",
+        place_id: "ChIJ5xbw_weLGGAR4w8Secc6mys",
+        name: "Shirokane 1 Chome Jido Yuen",
+        latitude: 35.644512399999996,
+        longitude: 139.731966,
+        rating: 3.8,
+        photos: ["places/ChIJ5xbw_weLGGAR4w8Secc6mys/photos/Ab43m-tLoicD91mkglU80-mDunivxbeXvTVxrGXFhovg3LG8TnoMKflLxDNBdojkMyFYEKNDFxWaTapxPO-P66Q1lAAzSeYZrduu9b9iMb30se6iVmixGFM89jZcKp0RlOrOIdo-7NK_Zgtr_It_BTOzjPoVIbmS6ZdfWCFxq945SKRwH9bmGlrhiYltl7eAdRXTgP9dAocstvJslht1z0zScsP9NEWJmCDgSxMabg6-EDuUZ0cKDiIDA-92LSMxHrd-_MWlsslyyx3dO302WDSjvm34x-_ZTG9azYuhT_CWfetLXz2y9Jjgi6CXkrMYWQHEpxmqTjYtZWkmBTSKFtvIpKLuLLEKhPU1v4qrVPcvHaqejR81hcrsxW_h_2tvs14Poa7IIxBSCmPHjXKeb495ztlAkG5smb177QDUtoMu5ozp8w"],
+        distance_meters: 325
+      },
+      {
+        category: "park",
+        place_id: "ChIJcXVphw6LGGARBmQ9tNMPX3Y",
+        name: "Sanko Children's Playground",
+        latitude: 35.6459354,
+        longitude: 139.7243854,
+        rating: 3.7,
+        photos: ["places/ChIJcXVphw6LGGARBmQ9tNMPX3Y/photos/Ab43m-vZuxbgfsIUBpsrisIXhOtiAjU9vTtCiYqXb609-0N9a6wN50VA0YNBpiZ_wHtP5yjdzFSH9RX291aC2zzOYX8CsE6dYU8wZRtbBBCmCwsmpnqu7p0pcW2hI1EnYyu4Mb5R40OQWXXilzyXsBuUOdRL0HmcHaklXmjgR1W1HvwBw8HFsYLxxkWELcRB72nmZl_I3WDXdQ3fJ5j9h741VNi3btAhcWrfV7EaryqRZPOEHhiNiYspWM6a9dcti6Uot7xVrRzfr5N48V8cWXhJfAr6wjtq1PidZKR7gHjUA9MUdn1Glx6BntPcqD--r9eClO21kURSaOLWnPfWuaMvYWeVqDiWF3Q2GNDOQPAphUhkm_-MZisxui3Xxa9NDEHEWycCOcpjopzBbYll4kdn2LbWlQJzSTZcG0N9gAHRvYvUQZA"],
+        distance_meters: 385
+      },
+      {
+        category: "park",
+        place_id: "ChIJ05ZDGQ-LGGARDfUKPa7O8m8",
+        name: "Raijin-yama Children's Playground",
+        latitude: 35.6440948,
+        longitude: 139.7244504,
+        rating: 3.9,
+        photos: ["places/ChIJ05ZDGQ-LGGARDfUKPa7O8m8/photos/Ab43m-vFj7bWtMsJaOSAG8ofXCrdUW9QewNeOsMbwPXD6mpZCdxLsw90TjD2xw_gyuNCmF3YBMURLeOf_o3-kRRfL4F6KQUbEj2LF07cJ1CT2r6zIb9whh7xzyFNek8DiDlzVUQjhTiXVMd05LoQzB2XQY8eV1u2JtFNDiXYKj5Ahswn4a-BtbGgJsx3CyEwhXH9TuCYMPiv9U-34vTgrtcu0y2sZO4iXDW6C7xLaIvmuoh3hvGU4jrubKKcNK2-_Gcu4H3Az_M3kj-qkezLTHhwETbyaNGVGzEupmygcZC6KNv7vB-hjRZw2XtkRNwYGeoYLylxXtO60V1Ehqf2SymuxcNVj3BhJk5KX7-TAtqKkPnWQhpcryAPW6lq-dNRATRHHqjpghMs9NjEBkeMAOleQ5AcPygo4_AqAzOJirwPccjLKUBC"],
+        distance_meters: 411
+      },
+      {
+        category: "gym",
+        place_id: "ChIJnYkPTLqLGGARPJYJyMLIdas",
+        name: "Spinel.GYM 白金高輪店",
+        latitude: 35.6458734,
+        longitude: 139.7276723,
+        rating: 4.8,
+        photos: ["places/ChIJnYkPTLqLGGARPJYJyMLIdas/photos/Ab43m-vT2NmaKiVC9Bae8e-ESLVb2VbD2kF8y9V7wtCunhLzI3WymuHvK475ER74Llu_XJlSSLuA11HmvbMF_8Qn88iQqnfV0FKmiMJ6amsJz_vQGzLmHXi2vl-Mi8vylx90y0Kt5s26SvBn3Ub7WOnXrcM6cRym9NBeMckxXDoIfdJZtBqARfHVLcvo-yyn_rh_Zt3b0jCCmJEGB0fKyjmGEWrTsfVu9hDZu8wPB02BA_dueCMVtwnPMqizWKRHHmGwZcquBef5CITa7CDuhK9Mg5Sn6KtgOhr9NDZ93zHqMgZukUYyMd3ZRMRCpDx2ydXZcpXAwyHQ0vf458Y-dpYjKTTjaEELc8QAErNJkopKNznOHZqTM41lkYI6eV1Fga99XmHtQZ4vZhWTxo6IEhWtP8Re4KZxL6Ct0tw6joq9YCpab-CrZRrU-O98I1zDDQ"],
+        distance_meters: 92
+      },
+      {
+        category: "gym",
+        place_id: "ChIJQ7VvUwiLGGARH5IdCNcK9hs",
+        name: "Classic Body Tuning Studio 白金高輪",
+        latitude: 35.646081300000006,
+        longitude: 139.7298368,
+        rating: nil,
+        photos: ["places/ChIJQ7VvUwiLGGARH5IdCNcK9hs/photos/Ab43m-ung9g3Xp-fqzVBqzyhGhsCgzAiC_lVU_zyrOTjQfK0JxkJPzRevG9s0eBVz2Y04bsHBYQMFn_vd4G3F-t7vcjw5Rx6UK8nyYxJ4jJlet5l2oKHOaORK50pGV3LQuz0aqSKy9E7qltGr9fx7MHroCPMqvx9_rne16JTjL6-SSbuRI2u5qLZfsrxMtylgZW7zjeGudp_meKzFDWkw8oF-eq1NH4PMJc1x3QLchlD2ll0wYPD7XzQrBUSWs60ZuvBtLfKyubuEwQzj_24IuHa0ZuRpN0cvKTovSabqMTfTLsI3UOg4Ezqv3QxUoL3hZG9Qj20nksuxlOCw4l2mNl04tBNAPv22JOTKc0aXxvPkTyciadQA2B9p2sp4zV4Vuw4O_f1tTpW4lSplsOj4-GNl1GA6Q2DbMeQwtHKhcgksg3JnPuw"],
+        distance_meters: 123
+      },
+      {
+        category: "gym",
+        place_id: "ChIJu3s1G7OLGGARcXg7yTkN6zs",
+        name: "NONVARBAL 白金高輪 ピラティス パーソナルトレーニング",
+        latitude: 35.645415299999996,
+        longitude: 139.7272233,
+        rating: 4.9,
+        photos: ["places/ChIJu3s1G7OLGGARcXg7yTkN6zs/photos/Ab43m-sBHNUicfKklXHdfEU1p4mUlgCNihh9Yy7sEGKQiIpjygJbGem636FDCh4dH1qAdKrN5LEf88jgNzj_wowU6X93AilGMvITnIaZvxGxwMqy60XK_DMTAIOrnbBmDbtaFaqf-OVbJ2dWrDwkgn1R9JlHz5r1rvqMQL8bnkH0JQggeGoP2dHMKTbRLCkiW7RKK8IxSkid63JbzmJwCSdGL41EtuuHnWMmBmqvzaTP8sNLhlP73kRCwZ8j5I1cTPMadhoWCHLYmAVaii13R31e8HCN21VFSarqCcX058JUwV7vIWO7FH3IDQJCQEpEQcJnrfd6n233nCwkxI1vWXY9VnvKPzhLJeS_dExeSquqzlbnPNlRuUAfOAXytMKUvlE3Pic0Hire5XTmcHz7UJr5DiXIxkH5r9zC3OjnHZLJ6NFMH9utacSPk013ru-4CSmP"],
+        distance_meters: 128
+      },
+      {
+        category: "gym",
+        place_id: "ChIJk1Hydp-LGGARkj7wKy7Zm0E",
+        name: "Stella Pilates style training 白金",
+        latitude: 35.6454561,
+        longitude: 139.7270488,
+        rating: 5.0,
+        photos: ["places/ChIJk1Hydp-LGGARkj7wKy7Zm0E/photos/Ab43m-uDWkFITcyNPfp19ofRyi9fMpFQ9f1jkzx-ihzyw5rprpZWUT5tTVs-sm561HOVJ71RCtzYDRAOuHm4SqCJaCIeqdTsWcPipiYMrwJ75tRteZhVkxzYwqGcpMIix_u9JMth--zIG5qxIrbSMoHN5GtQbQ-RF5IIRnXLobFD--HnxNrtIDpinuO9m-AXGBela5ZfGWhWl6PPGC-hQ9upj6D667SHtILl9yIjZ8ax6YZA47HabBZ0JAQH9pylkahRmdbl5Zq1pvtHkvsVD65i1SNcDcNFqM-HglnhZsSjW8uYQ71uS1uW7MKxd6QoTmb4QRt5bycjsGpvxuPhtBhQZaXatx_h0axNtzuK1coA_vVrDZjL4HYhBVGuEWj14AiTkGioUqZR2FD-AVxhrMEKXVAwUuOn1ypOx5Kq8PYqNPhO6Q"],
+        distance_meters: 143
+      },
+      {
+        category: "gym",
+        place_id: "ChIJjxy_-JGLGGARpoxpinfr85Y",
+        name: "B･B Personal GYM（白金バイオデザインラボ）",
+        latitude: 35.6451997,
+        longitude: 139.7302327,
+        rating: 4.9,
+        photos: ["places/ChIJjxy_-JGLGGARpoxpinfr85Y/photos/Ab43m-s1jK1Mde_VzIpm-Q8EuP-QluCRsRBrvH89g_iJ3SMQ8M6ZhWRNfnRSdRp5oB8bzk4OWEVUij2Vi9kg5T8U6zAXI5b7_DMunSvWJA8SpHhPgh3pjp3KMYM8dqJIlmj4Ha6P6dcaXbkK717b416QzNF0b3O448pGcYwu-5b0no1Q2TxkhgE1TxEJ-omN2VshFeueGErXZYb02LvNw6OChu7SVBkV2feOdjPShrFDyGfJ6bPjNb9-NKbKG1axT6G4RA2LBiJjdxbXcNtxVQVmO70RsDIqX7BsXBtsjdhbNCxFx6d8NldfXjwcrQ_Xnt5ypSOdKqRVO5eM4jkioV7jXxrtKExXg77yyk78VWAj9zCdiiQ2VWOH4rUlOPmZ627mZ6yNFnrywZORUMnwy6P4uYl_Ptc9kAXYAtNU8YVtfcsI_vti_6iL122dULck6KP0"],
+        distance_meters: 152
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJA30KCQmLGGARkIlnntrSxOA",
+        name: "Shirokane Park",
+        latitude: 35.6467552,
+        longitude: 139.7292377,
+        rating: 3.6,
+        photos: ["places/ChIJA30KCQmLGGARkIlnntrSxOA/photos/Ab43m-sMkJb-HwhDPTeIMIjteTLHXP7IMRf4m_D-LVhXTOmAbCotUD9DwwKl55oVzqwiqmutQSmWWJGc2DckrHxah0UvPmw_6btYOHBQiIXRf3lLRrz-PekZa10bGWmgcbiiqqMxPA4EPfbM2m43-4spZvRuYeZmKReg0glEFL0-9AtQQImV1S59QYJWlGQSaKRTA-0F1CR7Unn8SfX5BwxvM2Z2EdCsZiIC2kqL6VGfIpkh0WI0JU9FvmnrwkEuY5FKtqhFhPmbbp8XgffuRp4amdS0iL8eFzZPaQBgfzZwyf6LU69bVDvwQMqVA94IPmMU4La-LK8xCHd6Cu4r5t3KMR5Md6mPOcui_qTJXerRAP32bcW7nIbilKoXAZB3GsqaxupSJdT5BrW-qVLh8hW2hxLSZoPxj-cgqp0yCZ85WTWPnQ"],
+        distance_meters: 142
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJJz4NDAmLGGARvr9nGJtPEug",
+        name: "Shirogane Park Bridge",
+        latitude: 35.6468214,
+        longitude: 139.7290849,
+        rating: 4.7,
+        photos: ["places/ChIJJz4NDAmLGGARvr9nGJtPEug/photos/Ab43m-tgO1k_ql2B0uwQ3wwNAcELh7YDL6MC1d0tDTFZtlBAkejJZmHyl_ELSevYN9svVPQ0xv-O36RLzOmJ_m0qxwbipPQAyxEtMX9vMPOL38eAqd1qUt9genHIXcc72o-gRWpslM_RAZ8k1HU_iTZ7hIAXVkv6SM-K5dGHsiIFBcLOUyDnEOGX5HOtoPihFlhLOH7hVl4P-tI2kqv8yXA1hxFoJ_UurXe-TEZdHqKSt91JLC5SXF18EaoXUkpiMmyRbw-8qCVS0VJEQ6xVyHIY30m5H89KIl6WtoTfSTCwAKUYTMlB5C78UGi10ZUtc7guc6Hy_p6PoJ_cVKqiNs5o-EaDMkFVwC5CywnDDchV1TRG_Eg90H3TuisO1HSF7q3eS2ftb74mfkb3Pi6r0UqCOo_ryueBK_-QLy-jNeg2_oo"],
+        distance_meters: 144
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJGyeOGqGLGGARGL5jUTXneT0",
+        name: "Sankouzaka",
+        latitude: 35.643626,
+        longitude: 139.73037,
+        rating: 3.6,
+        photos: ["places/ChIJGyeOGqGLGGARGL5jUTXneT0/photos/Ab43m-tGS3-AvtRgh_3jxI_8sLGvecQ9sO1lBA0dHdTJcHkKVieib8ApxzkRFbYOzXhP6m9Z4ylQC51PDeM_70H6IZ5hSPHw44dV7poTPEZvA7y95owsz3aiw13rym9gZHRWIjMhDcHcGKYzUpD5tfYFAwIvbL8evXNxZpthCnt5DEU-rX_x3cKpwQyJPinQsotnC0D5R5kLCuZfT7L85I1yjsG0z6a5szbQvEm1MztpDio2Pmz3JpMzhy8XAtGAI-kWdW8XAptXAgi49TKMz0OmcMF4ooxdt8-OWnHFkUvXm7P29yeQSnqxDVmtbqcXVLZdvLqhcPVcyXvoi1WSOY4BoDvdG7TpAED6WLz_rNkCxNYr2tMWY_u18gjBqwLsbDAWNS60dpClD2le3XFWfevkQoPjdSyMhhrCSoh3CQ25C0RLGq3i"],
+        distance_meters: 269
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJWXpokgeLGGARRc7Blgtb41Y",
+        name: "Shirokane Hikawa-jinja Shrine",
+        latitude: 35.643153399999996,
+        longitude: 139.7312933,
+        rating: 4.3,
+        photos: ["places/ChIJWXpokgeLGGARRc7Blgtb41Y/photos/Ab43m-uhBzWMiOKqlOhE9-GxIEYLTE9Mok4swJpSVOSw7ZuPG7ycTMHlFmUwO3OhI3ufoUsAqJONKLke6QJf_IMkPi18Ph8dMD9_vZ5g49WfM-0ogxlyltSCKu-aPl1OxK1ZMEz22In-4gat3puc8FRS-3gBKK6HiiKAbxRiyy5n4aPVDho5BAQCbEB4lV6OX5LAPDUJakv6u91haECl-AVj49x1NlcN46P7gyZhKxuUjhEImB4gDyi989jnlsL9kQA3vbRuDS9Xim9gEuhuLi91HelYVOh8PZWPNy4ehHoSI5G3g4maOLNV4xsyelz2_nUlwvfrpyhY8G87-WPu78-GYcYmSDbGStentyWhqfU0tH3TkBplHWozzSRH22jkYC-wYTU_pEeHoyY-1Zo4Ff5VU8QfWWhege9WThJEji2k9jKeiXDCeZKKaD9MLT430W8e"],
+        distance_meters: 362
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJcXVphw6LGGARBmQ9tNMPX3Y",
+        name: "Sanko Children's Playground",
+        latitude: 35.6459354,
+        longitude: 139.7243854,
+        rating: 3.7,
+        photos: ["places/ChIJcXVphw6LGGARBmQ9tNMPX3Y/photos/Ab43m-t2pQJZuvrwoTLhr5q_YnIfTjoQ2M78pGhrGhm5aD3indTpisap84Wu8ZpbT8autkmT3D-uCto038wZPWXTbjhZIyuUR8eXHOPDup-e2uAUU9yzD4N88OFZS1eUpG04onMyYEE-LoQB-5s-5vLkLSlwbUd4nuNCmlqBIQFLUiONPbKUcctVd1sl-7PuqGfuM9mOuQugurjtkjBXxsFVTOlG4zjjLkSfwxhyXngMwcUoqhq_RgLFmfoDcJsYeoBVGaLHQBJSbPJ9tcf-3o7bMNAIrkGPt0sU5FCMRS5zRwTNCF28H5BdeYIxl_6xMbTDFUqpmT-5QGzgdinXWZIR8ECwxnVu13fb7qwPslX3TrN1s7sFC2InQY3tf1sjk0rt2mLRKQklEhLlmhFNlM9-xXq67loZI-bX10VszKcLtox416k"],
+        distance_meters: 385
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ05ZDGQ-LGGARDfUKPa7O8m8",
+        name: "Raijin-yama Children's Playground",
+        latitude: 35.6440948,
+        longitude: 139.7244504,
+        rating: 3.9,
+        photos: ["places/ChIJ05ZDGQ-LGGARDfUKPa7O8m8/photos/Ab43m-tKQqlPwyfnHADMI_EZsYpoOjeY-MuFbLq_UncZcnc3KnjNQdmj_Af_j2Cvyz08tRTEXRxceqwT1F6FpUV2VZPBQHh_T9nQHOJWW5BSTbySqJi1ufsOsm3Mht0Xn-YTLIy70vyC6qsFb_dF2P5n0FQa-VVN3ECVGVqPrXdJrGiMK0EH0l6W04ENM6xcC4M6oVGLzJwla5FDhzk0F_Iszwng1yCe9N2Ewy_dLHsXh93Y_ikQisgsEORXF8AX9eEoZdAf8D73-dJK9eJvacHj5YawiElAhNgm1YvhclncDpIBmogxeOpW4Zje_c0IHuxWLL3HFMxkLaND669egnz_FEQKe6ybqbHkAebFYHyalIlE_BmlyZ37NYbhCdbJzbPS99f3b01wm9ux2nORa8X2RCgPzD4CkLqcXbzGoQxb-EGRFTTA"],
+        distance_meters: 411
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJUeCOcaiLGGARyxxiFLKq7vI",
+        name: "Hakutaka Children's Playground",
+        latitude: 35.6450302,
+        longitude: 139.73348470000002,
+        rating: 3.4,
+        photos: ["places/ChIJUeCOcaiLGGARyxxiFLKq7vI/photos/Ab43m-tTnjJIYnTqe2o-7COdOJMmFifPz3J0X-_NTJ6rDJAHpvhNywEfMEemPPUq6-irj3swHennq1S0crW3scErYReAf_uw7oMNgXllkhv-kbkk4rRYEOpvfmMXYPQobj3crn0Jk7FfRSvPtzsrfu3_t6romPJOX8GZp-3s_vbTLFnSLW08TEulXDDx0RL2LVKdq2EMcZVpbiwz6h7k_W-hNqzYEQ-RedcNGlR3VP0BsmKia70J7MP4k6g3HbVG3C8ssYXVXMHnAUJSEJScL9EIDQZ0_YjEg7evFtJCHT2VySYr2j4YvUUvAKM8OjJ8t1D61JxWBia-0bAeAlczRq7gaQWav0OPcRjLQ0mFcAI-tRBmj2eGDZLNRC3KY4xVflOO-BFlnhKRLRJOW7qZc0DFx5TIAWWdAAXxtuaJAPsqHjIHrU2RjPtfRiPIKlqpN3_M"],
+        distance_meters: 444
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJjSVGvKeLGGARlNfb8wPMG08",
+        name: "Shinfurukawa Bridge",
+        latitude: 35.6468749,
+        longitude: 139.7334709,
+        rating: 3.2,
+        photos: ["places/ChIJjSVGvKeLGGARlNfb8wPMG08/photos/Ab43m-veGbG-5nXLX_9MF6SGCakkbG9a4BsmigHXD3ASD7sufjbhsSQrgxzcEI3KUfV9eOrVH2Qmxx17k2BGcuKifOeeWZFS5HAqj1pd_LRf7GLKLFrsVLWQhGhaP3SeCSVzHvfDylz0b_vd_rxgSQCE9CDFY5bvVb47aRAIVZdT3zgK-i2X_nuyNDu4XbsbSUz_NtO4wL320YcjguAAXjI9qND80dOdwCQcBv3jbS0c7zdWCEM5HzsLRdB8_g5ZHUXZMyF52rlBeaB99hURJ61w4khTHmdL6w-5S1LWLsNKrGviyfN7SOpWYXInbR0V7TLA814U3r-luEijuZ44WWcDSXP9wUTN0ZivXXZqKJKWKGkB91J1A4tgQ0XK-_5LafemUm45Yx1JMq3wlTDWQp3r5b4HoBPQnAplrQyKu71T7qIHaaVC"],
+        distance_meters: 461
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJVeJuOACLGGARzVPTdSDJ2sw",
+        name: "釣堀坂",
+        latitude: 35.64915,
+        longitude: 139.7315542,
+        rating: nil,
+        photos: [],
+        distance_meters: 477
+      },
+      {
+        category: "tourist_attraction",
+        place_id: "ChIJ0-FZXwyLGGAROaLjAUR_LNw",
+        name: "Shin-Fujimi-zaka Slope",
+        latitude: 35.648963099999996,
+        longitude: 139.7253278,
+        rating: 3.5,
+        photos: ["places/ChIJ0-FZXwyLGGAROaLjAUR_LNw/photos/Ab43m-uyVRyzvO2tpjl2ujzYkgBNRULsx2vMBc65hnefMqFpHlYiW1nyRo0BC8phAiFwl3Y5iFz1W-obFT1vsKBf0GdXVKLDW-SlJz-2u0-MwncewG3lb2h-hj2DFenVkMeIVt10OfXfZ6HEGvROzmckZQ6RyMK-5FnBQMSivMC3kfKowJIKDC6qPsBWY3cKLApmk1qx58CiQN63V_vGMAK12PjAVSZWN_1fSJA3ZMpDAjXmDk6xZLmsE-q_xku-yI8N9OrMyAm8k-KoK3_d4dcxHu8CZFCinmyOThBhbaGCb7nP1dEld4NxoDqY2Yo38Vm5zm-LYqSZKxoS3Yz6fbEmXfHd9-eCmJLvBJ7O-qc-BfOKHZ_x-9lE27w7kceES-fVbsvM7hi5GLsKF6963LY4DhP_lVJBygHbT9Me9gyRpiEkH2Af"],
+        distance_meters: 480
+      },
+      {
+        category: "transit_station",
+        place_id: "ChIJ0V77rqmLGGARVFqViwaI1Rc",
+        name: "Shirokane-Takanawa Station",
+        latitude: 35.643096299999996,
+        longitude: 139.7342256,
+        rating: 3.6,
+        photos: [],
+        distance_meters: 577
       },
     ]
   },

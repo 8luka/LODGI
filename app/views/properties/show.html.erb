@@ -54,13 +54,31 @@
           <p class="description" data-property-description-target="long" style="display: none;">
             <%= @property.description %>
           </p>
-          <% if @property.description.length > 200 %>
-            <button class="desc-toggle"
-                    data-property-description-target="button"
-                    data-action="click->property-description#toggle">
-              Show more ›
-            </button>
-          <% end %>
+          <div class="desc-meta">
+            <% if @property.description.length > 200 %>
+              <button class="desc-toggle"
+                      data-property-description-target="button"
+                      data-action="click->property-description#toggle">
+                Show more ›
+              </button>
+            <% end %>
+            <div class="info-pills">
+              <% if @property.neighborhood %>
+                <%= link_to neighborhood_path(@property.neighborhood), class: "info-pill info-pill--link" do %>
+                  <i class="fa-solid fa-location-dot"></i><%= @property.neighborhood.name %>
+                <% end %>
+              <% end %>
+              <% if @property.layout.present? %>
+                <span class="info-pill"><span class="info-pill__label">Layout:</span><%= @property.layout %></span>
+              <% end %>
+              <% if @property.size.present? %>
+                <span class="info-pill"><span class="info-pill__label">Size:</span><%= @property.size %> m²</span>
+              <% end %>
+              <% if @property.floors.present? %>
+                <span class="info-pill"><span class="info-pill__label">Floor:</span><%= @property.floors %></span>
+              <% end %>
+            </div>
+          </div>
         </div>
         <div class="divider"></div>
       <% end %>
@@ -122,6 +140,7 @@
             </div>
           <% end %>
         </div>
+        <div class="divider"></div>
       <% end %>
       <!-- DESCRIPTION -->
       <% if @property.rules.present? %>

@@ -17,6 +17,11 @@ require Rails.root.join("lib/distance_helper_v2_new")
 # Never raises into the caller: a missing key or API failure is logged and skipped so the user's
 # inquiry submit always succeeds.
 class AnchorTravelTimesService
+  # ── Formula switch ──────────────────────────────────────────────────────────
+  # true  → haversine walking estimate (straight_line ÷ 80 min); no API call is made.
+  # false → Google Routes API (WALK within WALK_RADIUS_M, DRIVE beyond).
+  USE_LOCAL_FORMULA = true
+
   COMPUTE_ROUTE_MATRIX_URL = "https://routes.googleapis.com/distanceMatrix/v2:computeRouteMatrix".freeze
   FIELD_MASK = "originIndex,destinationIndex,duration,condition".freeze
   # One origin (the anchor) × up to 100 destinations per call stays within the matrix element cap
@@ -40,6 +45,12 @@ class AnchorTravelTimesService
 
   def call
     return if @anchor.nil? || @anchor.latitude.nil? || @anchor.longitude.nil?
+
+    if USE_LOCAL_FORMULA
+      compute_local
+      refresh_seed_file
+      return
+    end
 
     routes_key = ENV.fetch("ROUTES_API", nil)
     if routes_key.blank?
@@ -111,6 +122,20 @@ class AnchorTravelTimesService
     Rails.logger.info("[AnchorTravelTimes] #{anchor_label}: borrowed #{rows.size} rows " \
                       "from CustomAnchor##{donor.id} (within #{NEARBY_BORROW_RADIUS_M}m)")
     true
+  end
+
+  # Haversine walking estimate: straight-line meters ÷ 80 m/min.
+  def compute_local
+    missing_properties.each do |property|
+      meters = DistanceHelperV2New.haversine_meters(
+        @anchor.latitude, @anchor.longitude,
+        property.latitude, property.longitude
+      )
+      walk_time = (meters / 80.0).round
+      TravelToAnchor.find_or_create_by!(anchor: @anchor, property: property) do |r|
+        r.travel_time = walk_time
+      end
+    end
   end
 
   # Properties that have coordinates but no cached travel time for this anchor yet.

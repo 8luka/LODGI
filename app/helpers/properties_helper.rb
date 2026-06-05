@@ -55,6 +55,25 @@ module PropertiesHelper
     end
   end
 
+  # { category => { icon:, text: } } for EVERY category the property has data for, in the fixed
+  # essentials -> food -> lifestyle order. Powers the favorites comparison card: the client decides
+  # which rows are "selected" (shown up top) vs tucked in the expandable, so we precompute all of
+  # them here. Works off the in-memory (eager-loaded) :places association — no per-card query.
+  def life_rows_by_category(property)
+    by_category = property.places
+                          .select { |p| p.distance_meters.present? }
+                          .sort_by(&:distance_meters)
+                          .group_by(&:category)
+
+    LIFE_CATEGORIES.each_with_object({}) do |(category, cfg), rows|
+      places = by_category[category]
+      next if places.blank?
+
+      text = cfg[:type] == :density ? density_text(places, cfg) : proximity_text(places.first, cfg)
+      rows[category] = { icon: cfg[:icon], text: text }
+    end
+  end
+
   private
 
   # "7-Eleven · 1 min walk" — nearest place's name (falling back to the category noun) + walk time.
