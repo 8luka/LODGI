@@ -17,6 +17,11 @@ const TOGGLE_CATEGORIES = [
   "bar", "park", "gym", "tourist_attraction",
 ]
 
+// Marker stacking order. AdvancedMarkers without an explicit zIndex stack by latitude
+// (further-south paints on top), so score pins would randomly hide behind POI pins.
+// Fixed order keeps score pins above POIs; anchor + dropped pin sit above everything.
+const MARKER_Z = { poi: 1, property: 10, anchor: 20, pin: 30 }
+
 export default class extends Controller {
   static values = {
     properties: Array,
@@ -291,6 +296,8 @@ export default class extends Controller {
           new google.maps.marker.AdvancedMarkerElement({
             map: this.map,
 
+            zIndex: MARKER_Z.property,
+
             position: {
               lat: property.latitude,
               lng: property.longitude
@@ -538,6 +545,8 @@ export default class extends Controller {
 
         map: this.map,
 
+        zIndex: MARKER_Z.anchor,
+
         position: {
           lat: this.anchorValue.latitude,
           lng: this.anchorValue.longitude
@@ -626,6 +635,7 @@ export default class extends Controller {
 
     const marker = new google.maps.marker.AdvancedMarkerElement({
       map: this.map,
+      zIndex: MARKER_Z.pin,
       position: { lat, lng },
       content,
       gmpDraggable: true
@@ -808,6 +818,7 @@ export default class extends Controller {
     const markers = places.map((place) => {
       const marker = new google.maps.marker.AdvancedMarkerElement({
         map: this.map,
+        zIndex: MARKER_Z.poi,
         position: { lat: place.latitude, lng: place.longitude },
         title: place.name,
         content: this.createPoiMarkerContent(this.getPoiIcon(category), "#556ea3")
