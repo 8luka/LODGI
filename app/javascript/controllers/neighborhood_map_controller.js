@@ -9,11 +9,13 @@ export default class extends Controller {
     if (!this.hasPropertiesValue || this.propertiesValue.length === 0) return
 
     const map = new google.maps.Map(this.element, {
+      mapId: "DEMO_MAP_ID",
       zoom: 14,
       center: {
         lat: Number(this.propertiesValue[0].latitude),
         lng: Number(this.propertiesValue[0].longitude)
-      }
+      },
+      disableDefaultUI: true
     })
 
     const bounds = new google.maps.LatLngBounds()
@@ -24,11 +26,14 @@ export default class extends Controller {
         lng: Number(property.longitude)
       }
 
-      new google.maps.Marker({
-        position,
-        map,
-        title: property.name
-      })
+      const marker = new google.maps.marker.AdvancedMarkerElement({
+    map,
+    position: position,
+    content: this.createMarkerContent(
+      "material-symbols-light:home-outline",
+      "#c2584a"
+        )
+    })
 
       bounds.extend(position)
     })
