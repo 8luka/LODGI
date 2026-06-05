@@ -24,8 +24,11 @@ load Rails.root.join("db/place_seeds.rb")
 load Rails.root.join("db/google_places_seeds_v2.rb")
 # load Rails.root.join("db/google_places_seeds.rb") original place calls. Not needed but saved.
 
-# Cached anchor travel times (rake travel_to_anchors:generate_seed). Optional: only present once
-# generated, so guarded — a fresh checkout without the file just skips it.
+# Cached anchor travel times. Two versions exist — rename the one you want active to
+# travel_to_anchors_seeds.rb before running db:seed:
+#   travel_to_anchors_seeds.rb     ← haversine walking formula (regenerate: rake travel_to_anchors:generate_seed_local)
+#   travel_to_anchors_seeds_old.rb ← API-derived times          (to restore: swap filenames)
+# To switch formula: flip USE_LOCAL_FORMULA in app/services/anchor_travel_times_service.rb
 travel_seed = Rails.root.join("db/travel_to_anchors_seeds.rb")
 load travel_seed if File.exist?(travel_seed)
 

@@ -115,7 +115,10 @@
                 <button type="button" class="anchor-tab" data-category="<%= cat %>"
                     data-trip-setup-target="anchorTab" data-action="trip-setup#selectTab"><%= label %></button>
               <% end %>
-              <button type="button" class="anchor-tab anchor-tab--pin" data-action="trip-setup#submitForPin">
+              <button type="button" class="anchor-tab anchor-tab--pin"
+                data-action="trip-setup#submitForPin mouseenter->tooltip#show mouseleave->tooltip#hide"
+                data-controller="tooltip"
+                data-tooltip-text-value="Do we not have where you're going? Just drop a pin there to tell us.">
                 <iconify-icon icon="mdi:map-marker-plus"></iconify-icon>
                 Drop a pin
               </button>

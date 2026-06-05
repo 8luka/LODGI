@@ -532,7 +532,7 @@ export default class extends Controller {
     }
     const content =
       this.createMarkerContent(
-        "mdi:anchor",
+        "si:pin-line",
         "#000000"
       )
 
@@ -630,7 +630,7 @@ export default class extends Controller {
     this.clearPinMarker()
     this.pinPosition = { lat, lng }
 
-    const content = this.createMarkerContent("mdi:anchor", "#000000")
+    const content = this.createMarkerContent("si:pin-line", "#000000")
     content.querySelector(".custom-marker").classList.add("anchor-marker")
 
     const marker = new google.maps.marker.AdvancedMarkerElement({

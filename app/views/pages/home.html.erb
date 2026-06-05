@@ -27,11 +27,17 @@
                   </span>
                 </div>
               <% end %>
+              <span class="hero-vendors__more">
+                and more...
+              </span>
             </div>
           </div>
         </div>
         <div class="hero__right">
-          <div class="hero__map" data-landing-target="map"></div>
+          <div class="hero__map">
+            <div class="hero__map-canvas" data-landing-target="map"></div>
+            <%= render "pages/hero_map_mockup" %>
+          </div>
           <div class="hero__map-legend">
             <span class="hero__legend-dot hero__legend-dot--green"></span> Great fit
             <span class="hero__legend-dot hero__legend-dot--amber"></span> Decent

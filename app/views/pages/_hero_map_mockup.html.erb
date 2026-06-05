@@ -1,0 +1,69 @@
+<%# Static, non-interactive showcase overlay for the home-page hero map. %>
+<%# Pins/panels live above a greyscale Google map backdrop (see _home.scss). %>
+<div class="hero__map-overlay" aria-hidden="true">
+
+  <%# active "Restaurants" POI layer — amber dots %>
+  <span class="hero-poi-dot" style="left: 51%; top: 40%;"></span>
+  <span class="hero-poi-dot" style="left: 43%; top: 50%;"></span>
+  <span class="hero-poi-dot" style="left: 61%; top: 60%;"></span>
+  <span class="hero-poi-dot" style="left: 22%; top: 61%;"></span>
+  <span class="hero-poi-dot" style="left: 35%; top: 47%;"></span>
+
+  <%# score-coloured property pins (reuse the workspace marker component) %>
+  <% pins = [
+       { score: 88, color: "#2e7d32", left: "43%", top: "32%" },
+       { score: 74, color: "#f5a623", left: "27%", top: "46%" },
+       { score: 69, color: "#f5a623", left: "67%", top: "43%" },
+       { score: 83, color: "#2e7d32", left: "53%", top: "57%" },
+       { score: 58, color: "#9e9e9e", left: "18%", top: "72%" },
+     ] %>
+  <% pins.each do |pin| %>
+    <div class="hero-score-pin" style="left: <%= pin[:left] %>; top: <%= pin[:top] %>;">
+      <div class="custom-marker custom-marker--score" style="background-color: <%= pin[:color] %>;">
+        <span class="marker-score"><%= pin[:score] %></span>
+      </div>
+    </div>
+  <% end %>
+
+  <%# "What matters most" mini-panel %>
+  <div class="hero-map-panel">
+    <div class="hero-map-panel__title">What matters most</div>
+    <% rows = [
+         { label: "Commute",       width: "90%" },
+         { label: "Peace & quiet",  width: "42%" },
+         { label: "Near a station", width: "55%" },
+       ] %>
+    <% rows.each do |row| %>
+      <div class="hero-map-panel__item">
+        <div class="hero-map-panel__label"><%= row[:label] %></div>
+        <div class="hero-map-panel__track">
+          <div class="hero-map-panel__bar" style="width: <%= row[:width] %>;"></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%# selected "Restaurants" filter pill %>
+  <div class="hero-map-filter">
+    <iconify-icon icon="tabler:tools-kitchen-2"></iconify-icon>
+    Restaurants
+  </div>
+
+  <%# "Top matches by fit score" list %>
+  <div class="hero-map-matches">
+    <div class="hero-map-matches__title">Top matches by fit score</div>
+    <% matches = [
+         { name: "Sora Shoto",        score: 88, color: "#2e7d32" },
+         { name: "Hmlet Tomigaya 204", score: 83, color: "#2e7d32" },
+         { name: "Aoyama Stay",       score: 74, color: "#f5a623" },
+         { name: "Shibuya Loft 9",    score: 69, color: "#f5a623" },
+       ] %>
+    <% matches.each do |match| %>
+      <div class="hero-map-matches__row">
+        <span class="hero-map-matches__name"><%= match[:name] %></span>
+        <span class="hero-map-matches__score" style="color: <%= match[:color] %>;"><%= match[:score] %></span>
+      </div>
+    <% end %>
+  </div>
+
+</div>
